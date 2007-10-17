@@ -15,13 +15,13 @@ def getRowTemplate(contents, start, end):
     newTemplate = ""
     matches = 1
     for line in template.split("\n"):
-        newLine, match = subn(">.*</P", ">$" + str(matches) + "</P", line)
+        newLine, match = subn(">.*</div", ">$" + str(matches) + "</div", line)
         matches += match
         newTemplate += newLine + "\n"
     return newTemplate.rstrip()
     
 def getTableStart(contents):
-    tStart = contents.find("<TBODY")
+    tStart = contents.find("<TABLE")
     afterRow = contents.find("</TR>", tStart)
     return contents.find("\n", afterRow)
 
@@ -33,11 +33,11 @@ def findLabels():
             fullPath = file
             if dir == "..":
                 fullPath = dir + "/" + file
-            if not file.endswith(".html"):
+            if not file.endswith(".php"):
                 continue
             for line in open(fullPath).readlines():
                 for label in getLabelsFromLine(line):
-                    labels[label] = fullPath + "#" + label
+                    labels[label] = "index.php?page=<?php echo $version ?>&n=" + fullPath[0:-4] + "#" + label
     return labels
 
 def getLabelsFromLine(line):
@@ -54,7 +54,7 @@ def getLabelsFromLine(line):
 def docOutput(doc, key, labels):
     keyTitle = key.split()[0]
     if labels.has_key(keyTitle):
-        return "<A HREF=\"" + labels[keyTitle] + "\">" + doc + "</A>"
+        return "<A class=\"Text_Link_Small\" HREF=\"" + labels[keyTitle] + "\">" + doc + "</A>"
     else:
         return doc
 

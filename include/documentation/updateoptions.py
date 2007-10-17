@@ -6,7 +6,7 @@ from tableshared import updateTable
 def makeConfigFile(configFileName):
     configFile = open(configFileName, "w")
     localName = os.path.basename(os.getcwd())
-    if localName != "docs":
+    if localName != "documentation":
         configFile.write("config_module:" + localName + "\n")
     configFile.write("[diagnostics]\nconfiguration_file:nonsense\ntrace_level_variable:nonsense\n[end]\n\n")
     configFile.write("slow_motion_replay_speed:3\n")

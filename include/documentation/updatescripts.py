@@ -17,4 +17,4 @@ def getScriptData():
         scriptRows.append(entries)
     return scriptRows
 
-updateTable("scripts.PHP", getScriptData())
+updateTable("scripts.php", getScriptData())
