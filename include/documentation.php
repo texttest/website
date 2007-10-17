@@ -1,6 +1,9 @@
 <?php
+  //Decides version of documents in $basePath
   $version = "documentation"; 
   //$version = "documentation_3_18";
+  
+  //Should be easy to autogenerate
   $basePath = "include/documentation/";
   $path = $basePath."main.php";
   
@@ -34,11 +37,11 @@
    <table border=0 bgcolor="#000000" cellspacing=1>
       <tr valign=top>
         <td bgcolor="#FFFFFF">
-          <table class="documentation_table">
+          <table border=0 class="documentation_table">
             <tr>
               <td width=150 ><div class="Table_Text_Header">Tutorials</div></td>
-              <td width=250><div class="Table_Text_Header">Guides</div></td>
-              <td width=200><div class="Table_Text_Header">References</div></td>
+              <td width=230><div class="Table_Text_Header">Guides</div></td>
+              <td width=250><div class="Table_Text_Header">References</div></td>
             </tr>
             <tr>
               <td><div class="Table_Text_Description">(beginners)</div></td>
@@ -48,7 +51,7 @@
 			<tr>
 			  <td>
 			  	<div class="Table_Text_Normal">
-			    	 <?php  printLI("install_texttest","Install Texttest"); ?>
+			    		 <?php  printLI("install_texttest","Install Texttest"); ?>
 					 <?php  printLI("getting_started","Getting Started"); ?>
 					 <?php  printLI("gui_tests","Testing a GUI"); ?>					 
 				</div>
@@ -67,9 +70,18 @@
 			    	 <?php  printLI("running_test_in_parallell","Running tests in parallell"); ?>
 			    	 <?php  printLI("writing_a_own_config_module","Write your own configuration"); ?>
 			
-				</div>
+		      </div>
 		      </td>
-			</tr>
+		      <td>
+		       <div class="Table_Text_Normal">
+			    	 <?php  printLI("options","Options when submitting test runs"); ?>
+				 <?php  printLI("configfile","Possible entries for config files"); ?>
+				 <?php  printLI("scripts","List of plugin scripts"); ?>
+
+		      </div>
+		      </td>
+		      
+		  </tr>
            </table>
             
          </td>
