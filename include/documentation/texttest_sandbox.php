@@ -109,7 +109,7 @@ potentially edit some files in it. Copying the whole structure
 for each test run is possible but time consuming. It's better to
 be able to copy just the parts that will be changed and link the
 rest. This is done with the &ldquo;partial_copy_test_path&rdquo;
-config file entry, in conjunction with the <A class="Text_Link" href="comparison.html#create_catalogues">catalogue
+config file entry, in conjunction with the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#create_catalogues">catalogue
 creation feature</A> (&ldquo;create_catalogues&rdquo; in the
 config file). The first time the test is run, all the files are
 copied, and the catalogue records which files are created,
@@ -137,7 +137,7 @@ using one of the test data config file settings described above
 (link_test_path, copy_test_path or partial_copy_test_path). For
 example, you could write</div>
 
-<div class="Text_Normal">copy_test_path:$MY_ENV_VAR</PRE><div class="Text_Normal">
+<div class="Text_Normal">copy_test_path:$MY_ENV_VAR</div><div class="Text_Normal">
 This would take the value of the environment variable MY_ENV_VAR
 as determined by the environment files and the external
 environment, identify if it refers to an existing file or
@@ -151,7 +151,7 @@ is a dictionary. For example</div>
 <div class="Text_Normal">copy_test_path:data
 
 [test_data_environment]
-data:MY_ENV_VAR</PRE><div class="Text_Normal">
+data:MY_ENV_VAR</div><div class="Text_Normal">
 For each name identified by link_test_path, copy_test_path or
 partial_copy_test_path, you can provide an entry which will be
 the name of an environment variable to set to the isolated
@@ -207,7 +207,7 @@ This means that you cannot run more than one instance of
 TextTest simultaneously on the same application with the same
 version in &ldquo;keeptmp&rdquo; mode, or they will delete each
 other's files.</div>
-<div class="Text_Normal">Running in <A class="Text_Link" href="batch.html">batch mode</A> automatically
+<div class="Text_Normal">Running in <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=running_texttest_unattended"; ?>">batch mode</A> automatically
 selects &ldquo;keeptmp&rdquo; mode for the temporary
 directories. It may also be requested explicitly using the
 &ldquo;-keeptmp&rdquo; option on the command line, or checking

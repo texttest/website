@@ -169,7 +169,7 @@ will, not surprisingly, take the old and new statistics, take
 the average and save that as the new result.</div>
 <div class="Text_Normal">Below is what you will see in the dynamic GUI when you run
 tests that fail in performance in this way.</div>
-<div class="Text_Normal"><IMG src="include/documentation/images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT WIDTH=769 HEIGHT=646 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 
 </div>
 <div class="Text_Normal">(As a footnote, there is also the possibility to plug in a

@@ -78,7 +78,7 @@ where &lt;source_file_path&gt; is some file your application
 writes and &lt;texttest_name&gt; is what you want it to be
 called by TextTest. 
 </div>
-<div class="Text_Normal">If you plan to do this, make sure you read the <A class="Text_Link" href="tempdir.html">document
+<div class="Text_Normal">If you plan to do this, make sure you read the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">document
 describing how the TextTest temporary directory works</A> first.
 &lt;source_file_path&gt; here should in principle never be an
 absolute path : it should be relative (implicitly to the
@@ -90,7 +90,7 @@ particularly if run more than once simultaneously.</div>
 <div class="Text_Normal">Note that this ordering can seem counter-intuitive, in effect
 you are asking TextTest to copy the text file located at
 &lt;source_file_path&gt; to &lt;texttest_name&gt;.&lt;app&gt; in
-the <A class="Text_Link" href="tempdir.html">temporary directory of that test</A>,
+the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory of that test</A>,
 where it will be picked up and compared. You might expect the
 source to be named before the target, but many different config
 dictionary entries use these TextTest names for result files as
@@ -154,7 +154,7 @@ many files in a directory structure (TextTest itself is one
 example!) Collecting and comparing every single file might be
 overkill. Instead, you have the possibility to create a
 catalogue file, which will essentially compare which files
-(under the test's <A class="Text_Link" href="tempdir.html">temporary directory</A>)
+(under the test's <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory</A>)
 are present before and after the test has run, and which files
 and directories that were present before have been edited during
 the test run. 
@@ -167,7 +167,7 @@ If no differences are found, this is noted briefly at the top of
 the file : catalogue files are always created from version 3.6
 and onwards.</div>
 
-<div class="Text_Normal">Note that this feature can be used to aid <A class="Text_Link" href="tempdir.html#copy_test_path">test
+<div class="Text_Normal">Note that this feature can be used to aid <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>#copy_test_path">test
 data isolation</A> also.</div>
 <div class="Text_Normal">In addition, you can request that the catalogue functionality
 checks for processes that were created (leaked!) by the test. If
@@ -336,5 +336,5 @@ severity 99.</div>
 which is a severity 2 file. If the output had also been
 different, the whole line on the left would be red and the
 details would report &ldquo;output different(+)&rdquo;.</div>
-<div class="Text_Normal"><IMG src="include/documentation/images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT WIDTH=564 HEIGHT=461 BORDER=0><BR CLEAR=LEFT><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>

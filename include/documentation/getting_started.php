@@ -36,7 +36,7 @@ run the TextTest GUI. You should now do this, with the command
 you don't need the -a option). You should see something like
 this. (texttest.py -a hello, after doing the above with a hello
 world program)</div>
-<div class="Text_Normal"><img src="include/documentation/images/notests.JPG" NAME="Graphic1" ALIGN=LEFT WIDTH=772 HEIGHT=643 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/notests.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">This is the static, or test management GUI. On the left you
 see a tree view of all tests and test suites that there are. The
@@ -60,7 +60,7 @@ brief description of what the test is for, and click the 'Add
 Test' button at the bottom. This creates a test and
 automatically views it:</div>
 
-<div class="Text_Normal"><img src="include/documentation/images/emptytest.JPG" NAME="Graphic3" ALIGN=LEFT WIDTH=774 HEIGHT=641 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/emptytest.JPG" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">We now have an 'empty test' under the root test suite (called
 'Basic' above). As can be seen, there are no 'standard files'
@@ -91,7 +91,7 @@ summary of which files are different in all tests that have run:
 useful when we have more! We click on the red test line to see
 the files it has produced. 
 </div>
-<div class="Text_Normal"><img src="include/documentation/images/newfiles.JPG" NAME="Graphic4" ALIGN=LEFT WIDTH=772 HEIGHT=670 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal">< src="include/documentation/images/newfiles.JPG" NAME="Graphic4" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">It collected the standard error and standard output of the
 process into 'errors.hello' and 'output.hello' files. These can
@@ -107,9 +107,9 @@ directory defaults to $HOME/texttesttmp on UNIX and to the value
 of TEMP on Windows. It can be altered via the environment
 variable TEXTTEST_TMP. When the test is saved, these files are
 copied to the test directory created above. For more details,
-see the <A class="Text_Link" HREF="tempdir.html">Guide to TextTest's Temporary
+see the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">Guide to TextTest's Temporary
 Directory</A>.</I></div>
-<div class="Text_Normal"><img src="include/documentation/images/saved.JPG" NAME="Graphic5" ALIGN=LEFT WIDTH=771 HEIGHT=601 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/saved.jpg" NAME="Graphic5" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">Now the test goes green and the produced files are saved as
 the standard versions. By default, TextTest assumes that
@@ -118,7 +118,7 @@ collapses the suite containing it and removes the Test tab
 again, returning to the selection view we had before. We can now
 exit the dynamic GUI, pressing 'Quit'. When we look in the
 static GUI, which has been there all along, we now see this.</div>
-<div class="Text_Normal"><img src="include/documentation/images/newtest.JPG" NAME="Graphic6" ALIGN=LEFT WIDTH=775 HEIGHT=653 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/newtest.JPG" NAME="Graphic6" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">The files produced by the dynamic GUI run have been saved as
 'Standard Files' and will now be used as comparison in the next
@@ -134,7 +134,7 @@ temporary file names, process IDs, times etc. TextTest allows
 you to define what such statements looks like in your program so
 that it can filter them out, avoiding false failures when only
 such information changes. To see how to do this, look at the
-<A class="Text_Link" HREF="comparison.html#run_dependent_text">section on
+<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">section on
 run-dependent text</A>.</div>
 <div class="Text_Normal">Another challenge is that real programs often read and write
 files other than standard error and output. As we saw above,
@@ -143,13 +143,13 @@ specifically for that test run, which is also used as current
 working directory for that test. You should therefore make sure
 that your program only creates files relative to this directory,
 and that all needed input files are available from it. See the
-<A class="Text_Link" HREF="tempdir.html">guide to TextTest's temporary directory
+<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">guide to TextTest's temporary directory
 </A>for details. 
 </div>
 
 <div class="Text_Normal">You may want also want TextTest to compare other created
 files in the same way as you do for standard output and error.
-See the <A class="Text_Link" HREF="comparison.html#collate_file">section on
+See the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#collate_file">section on
 collating files</A> for details.</div>
 <div class="Text_Normal">At this point you should be able to get going with building a
 test suite for your application. There is of course more to

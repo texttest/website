@@ -31,7 +31,7 @@ core files. It has been tested on quite a few flavours of UNIX :
 HPUX-11, powerpc, Sparc Solaris and Linux RHEL3, RHEL4 and seems
 to be quite portable (much more so than the old code that was
 part of TextTest until version 3.6) This script is plugged in by
-default via the default value of the <A class="Text_Link" href="comparison.html#collate_script">&ldquo;collate_script&rdquo;
+default via the default value of the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#collate_script">&ldquo;collate_script&rdquo;
 
 </A>entry on UNIX. 
 </div>
@@ -65,7 +65,7 @@ issue again.</div>
 static GUI. Select the test or testsuite where the bug should
 apply (for example, if it applies everywhere, select the root
 test suite) and go to the Bugs tab.</div>
-<div class="Text_Normal"><IMG src="include/documentation/images/reportbug.JPG" NAME="graphics1" ALIGN=LEFT WIDTH=754 HEIGHT=672 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/reportbug.JPG" NAME="graphics1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 
 </div>
 <div class="Text_Normal">Here we imagine that when our application logs &ldquo;after
@@ -83,7 +83,7 @@ differences. Note it has used our &ldquo;brief description&rdquo;
 given above in the Details column of the test tree view, while
 the full description appears in the Text Info window at the
 bottom right.</div>
-<div class="Text_Normal"><IMG src="include/documentation/images/knownbug.JPG" NAME="Graphic1" ALIGN=LEFT WIDTH=775 HEIGHT=643 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/knownbug.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Header">Extracting information from bug systems (e.g. Bugzilla)</div>
 <div class="Text_Normal">If you have a bug-tracking system with a command-line

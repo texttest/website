@@ -9,7 +9,7 @@ Console</div>
 <div class="Text_Header">Interactive Mode and Batch Mode</div>
 <div class="Text_Normal">TextTest can be operated in two modes: <I>interactive mode</I>
 which expects a user to be present and able to respond, and
-<I>batch mode</I> which does not. <A class="Text_Link" href="batch.html">Batch
+<I>batch mode</I> which does not. <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=running_texttest_unattended"; ?>">Batch
 mode</A> provides the test results in the form of an email
 and/or HTML report. This document aims to describe the various
 interactive modes. 
@@ -48,7 +48,7 @@ options -gx, -g or -con respectively.</div>
 <div class="Text_Normal">The dynamc GUI is selected on the command line via the &ldquo;-g&rdquo;
 option. Alternatively, it is started by clicking &ldquo;Run&rdquo;
 in the static GUI toolbar.</div>
-<div class="Text_Header"><IMG src="include/documentation/images/ttdyn.jpg" NAME="Graphic1"  BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Header"><img src="<?php print $basePath; ?>images/ttdyn.jpg" NAME="Graphic1"  BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 
 <div class="Text_Header"><A NAME="auto_collapse_successful"></A>The Test Tree View in
@@ -125,7 +125,7 @@ custom viewers if particular files produced by the system are
 more conveniently viewed that way.</div>
 <div class="Text_Normal">On the Text Info tab you will see a textual preview of all
 the file differences, along with a summary of what happened to
-the test. This textual preview is also used by the <A class="Text_Link" href="batch.html#batch_sender">batch
+the test. This textual preview is also used by the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_sender">batch
 mode email report</A>. The tool used to generate the diff can be
 configured via the config file entry &ldquo;text_diff_program&rdquo;
 (it defaults to &ldquo;diff&rdquo;, which is also used
@@ -185,12 +185,12 @@ will cause these versions not to appear in the list.</div>
 <div class="Text_Normal">You can also overwrite all the files, even if they were
 regarded as the same, via the option &ldquo;replace successfully
 compared files also&rdquo;: this is a way to re-generate the
-<A class="Text_Link" href="comparison.html#run_dependent_text">run-dependent text</A>
+<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run-dependent text</A>
 for a test.</div>
 <div class="Text_Header"><A NAME="-gx"></A>Using the Static GUI</div>
 <div class="Text_Normal">The static GUI is started by default unless you specified
 otherwise in your config file.</div>
-<div class="Text_Normal"><IMG src="include/documentation/images/static.JPG" NAME="Graphic3"  BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/static.JPG" NAME="Graphic3"  BORDER=0><BR CLEAR=LEFT><BR><BR>
 
 </div>
 <div class="Text_Normal">As can be seen, the structure of the static GUI is similar to
@@ -297,7 +297,7 @@ entry. If the &ldquo;Log file to search&rdquo; filter is also
 provided (-grepfile on the command line), that file will be
 searched instead. This allows selecting all tests that exercise
 a certain part of the system's functionality, for example.</div>
-<div class="Text_Normal">If <A class="Text_Link" href="sysresource.html">system resource usage testing
+<div class="Text_Normal">If <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">system resource usage testing
 is enabled for CPU time</A>, you can select tests based on how
 much CPU time they are expected to consume. This is done via the
 &ldquo;Execution Time&rdquo; filter (-r on the command line). A
@@ -530,7 +530,7 @@ quitting the GUI</div>
 <div class="Text_Normal">Naturally, when you press Quit in the GUI it will try to
 clean up everything it has created in terms of both files and
 processes. For what happens to the temporary files created, see
-the <A class="Text_Link" href="tempdir.html#-keeptmp">section on the temporary
+the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>#-keeptmp">section on the temporary
 directory</A>.</div>
 <div class="Text_Normal">As we've seen above, it is quite possible to start many
 different viewers and editors from TextTest and many different
@@ -578,7 +578,7 @@ will cause all files judged different to be overwritten (the
 equivalent of the GUI &ldquo;Save&rdquo; button applied to all
 tests, except you have to decide before the run starts). The
 &ldquo;-n&rdquo; option will cause all files regarded as the
-same to be updated: a way of updating the <A class="Text_Link" href="comparison.html#run_dependent_text">run
+same to be updated: a way of updating the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run
 dependent text</A> contained in them. Specifying both these
 options will cause all files to be updated, regardless of what
 happens.</div>

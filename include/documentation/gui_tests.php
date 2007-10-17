@@ -1,7 +1,10 @@
+<div class="Text_Main_Header">Testing a GUI with TextTest and a Use Case Recorder
+</div>
+
 <div class="Text_Normal">This is a step-by-step guide to testing a GUI with texttest.
 It assumes you have read and followed the instructions in the
-<A class="Text_Link" href="install.html">installation guide</A>. There is a fair
-amount of overlap with the <A class="Text_Link" href="getstarted.html">document
+<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=install_texttest\""; ?>>installation guide</A>. There is a fair
+amount of overlap with the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=getting_started\""; ?>>document
 for getting started testing a non-GUI program</A>, so it can be
 helpful to read that first.</div>
 
@@ -22,7 +25,7 @@ recorder and tell me about it!
 <div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A>
 Creating an Application</div>
 <div class="Text_Normal">First, create a directory and a config file as described in
-the <A class="Text_Link" href="getstarted.html">guide for testing &ldquo;hello
+the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=getting_started\""; ?>>guide for testing &ldquo;hello
 world&rdquo;</A>. 
 </div>
 <div class="Text_Normal">For testing GUIs, you need some further entries in the config
@@ -34,7 +37,7 @@ environment variables for its interface, so TextTest needs to
 know to generate these rather than set environment variables.</div>
 <div class="Text_Header">Creating a Test</div>
 
-<div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href="getstarted.html">&ldquo;hello
+<div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=getting_started\""; ?>>&ldquo;hello
 world&rdquo;</A>.</div>
 <div class="Text_Normal">However, command line options are
 not sufficient to define a GUI test. We also need to define the
@@ -53,7 +56,7 @@ By clicking this red-line in the test view we get the view
 below. The contents of the new files can be seen in textual
 format in the &ldquo;Text Info&rdquo; window, or viewed by
 double-clicking them if they are too large.</div>
-<div class="Text_Normal"><IMG src="include/documentation/images/guidyn.JPG" NAME="Graphic1" ALIGN=LEFT WIDTH=761 HEIGHT=685 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guidyn.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">If we made a mistake recording, we should simply quit the
 dynamic GUI at this point and repeat the procedure. If we are
@@ -72,7 +75,7 @@ Messages in the status bar at the very bottom of the static GUI
 keep you posted as to progress, anyway. When all is done, it
 should look like this:</div>
 
-<div class="Text_Normal"><IMG src="include/documentation/images/guitest.JPG" NAME="Graphic3" ALIGN=LEFT WIDTH=774 HEIGHT=634 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guitest.JPG" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">Note that the definition file is
 now the usecase file recorded by PyUseCase. Naturally there
@@ -117,6 +120,6 @@ run&rdquo; tab in the static GUI. This will force the GUI to pop
 up for this run, whatever is set in the virtual_display_machine
 entry.</div>
 <div class="Text_Normal">In summary, our config file should look something like this:</div>
-<div class="Text_Normal"><IMG src="include/documentation/images/guiconfig.JPG" NAME="Graphic4" ALIGN=LEFT WIDTH=497 HEIGHT=404 BORDER=0><BR CLEAR=LEFT><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guiconfig.JPG" NAME="Graphic4" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 
 </div>
