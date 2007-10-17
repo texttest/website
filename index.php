@@ -5,7 +5,6 @@
  <head>
   <title> Texttest.org </title>
     <link rel=STYLESHEET href="stylefile.css" TYPE="text/css">
-    <?php include("scriptfile.php"); ?>
   </head>                                                    
 
   <body background="images/back.png">
