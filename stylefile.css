@@ -130,7 +130,12 @@ table.documentation_table td
     FONT-FAMILY: Verdana;
     COLOR: #555599;  
 }
-
+.Text_Link_Small
+{
+    FONT-SIZE: 10px;
+    FONT-FAMILY: Verdana;
+    COLOR: #555599;  
+}
 /*This is special style elements for tables*/
 .Table_Text_Header
 {
@@ -145,6 +150,12 @@ table.documentation_table td
 .Table_Text_Normal
 {
     FONT-SIZE: 12px;
+    FONT-FAMILY: Verdana;
+    COLOR: #111100;  
+}
+.Table_Text_Small
+{
+    FONT-SIZE: 10px;
     FONT-FAMILY: Verdana;
     COLOR: #111100;  
 }
@@ -263,5 +274,4 @@ div.Footer A
 {
     COLOR: #000000;
     TEXT-DECORATION:none;       
-
 }
