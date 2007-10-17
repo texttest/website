@@ -53,7 +53,8 @@
 			  	<div class="Table_Text_Normal">
 			    		 <?php  printLI("install_texttest","Install Texttest"); ?>
 					 <?php  printLI("getting_started","Getting Started"); ?>
-					 <?php  printLI("gui_tests","Testing a GUI"); ?>					 
+					 <?php  printLI("gui_tests","Testing a GUI"); ?>
+					 <?php  printLI("kataminesweeper","Kata Mine Sweeper"); ?>
 				</div>
 		      </td>
 		      <td>
