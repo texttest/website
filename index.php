@@ -1,7 +1,7 @@
 <!-- Created by Henning Thornbad -->
-<!-- PHP -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
+ <script language="javascript" type="text/javascript" src="javascript.js"></script>
  <head>
   <title> Texttest.org </title>
     <link rel=STYLESHEET href="stylefile.css" TYPE="text/css">
@@ -46,7 +46,8 @@
     </tr>
     <tr valign=bottom>
       <td align=left>
-       <div class="Footer">Last updated 2007-08-10</div>
+       <div class="Footer">
+       <script language="JavaScript">  lastUpdated()   </script> </div>
       </td>     
            
       <td align=right>
