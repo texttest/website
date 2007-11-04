@@ -32,7 +32,7 @@
 		elseif ($_GET["page"]=="documentation")  include 'include/documentation.php';
 		elseif ($_GET["page"]=="download")       include 'include/download.htm';
 		elseif ($_GET["page"]=="contact")        include 'include/contact.htm';
-		elseif ($_GET["page"]=="publications")   include 'include/publications.htm';
+		elseif ($_GET["page"]=="publications")   include 'include/publications.php';
 		elseif ($_GET["page"]=="siteinfo")       include 'include/siteinfo.htm';
 		elseif ($_GET["page"]=="sitemap")        include 'include/sitemap.htm';
 		elseif ($_GET["page"]=="about")          include 'include/about.htm';
