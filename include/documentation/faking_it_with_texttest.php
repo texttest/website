@@ -18,7 +18,7 @@ disable some part of the system, or fake some behaviour that
 cannot easily be triggered for real in a repeatable way. This is
 referred to as &ldquo;mocking out&rdquo; a subsystem for testing
 purposes.</div>
-<div class="Text_Normal">(All the following mechanisms involve the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">test
+<div class="Text_Normal">(All the following mechanisms involve the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">test
 data mechanism</A>  : it's probably a good idea to read that
 document first if you aren't familiar with how it works)</div>
 
@@ -59,7 +59,7 @@ which TextTest offers direct help with 3:
 	while <A class="Text_Link" href="http://www.oracle.com/">Oracle</A> and
 	<A class="Text_Link" href="http://www.postgresql.org/">PostgreSQL</A> are less
 	good at this.Once you have the file defining the data based you
-	can simply define it as <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>#copy_test_path">editable
+	can simply define it as <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#copy_test_path">editable
 	test data</A> and TextTest doesn't need to know that a database
 	is present.</div>
 
@@ -73,12 +73,12 @@ which TextTest offers direct help with 3:
 	out.</div>
 </OL>
 <div class="Text_Header"><A NAME="test_data"></A>Executable and importable test data</div>
-<div class="Text_Normal">When TextTest creates the t<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">emporary
+<div class="Text_Normal">When TextTest creates the t<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">emporary
 write directory </A>on running the test, and populates it with
 test data, it also makes sure to insert that directory at the
 start of the PATH, PYTHONPATH and CLASSPATH variables. That
 makes it possible to provide executable programs that will be
-run instead of their real versions via the normal t<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>#link_test_path">est
+run instead of their real versions via the normal t<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#link_test_path">est
 data mechanism</A> (&ldquo;link_test_path&rdquo;). Likewise, you
 can provide a Python module or a Java class, which will then be
 imported instead of the real version at the appropriate moment.

@@ -31,7 +31,7 @@ core files. It has been tested on quite a few flavours of UNIX :
 HPUX-11, powerpc, Sparc Solaris and Linux RHEL3, RHEL4 and seems
 to be quite portable (much more so than the old code that was
 part of TextTest until version 3.6) This script is plugged in by
-default via the default value of the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#collate_script">&ldquo;collate_script&rdquo;
+default via the default value of the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#collate_script">&ldquo;collate_script&rdquo;
 
 </A>entry on UNIX. 
 </div>

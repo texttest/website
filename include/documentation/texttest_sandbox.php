@@ -33,7 +33,7 @@ created under this directory.</div>
 tests are actually being run. This means that, for every test
 being run, a temporary directory structure is created which
 essentially mirrors the permanent directories which represent
-the tests (see the <A class="Text_Link" href="dirstructure.html">guide to TextTest
+the tests (see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">guide to TextTest
 test suites</A>), so that each test is assigned a unique
 temporary directory. All temporary files corresponding to
 particular tests are then written to these directories. When the
@@ -66,7 +66,7 @@ Populating the temporary directory with test data files (for
 reading or editing)</div>
 <div class="Text_Normal">Sometimes the system under test needs to read some file
 relative to the current working directory. TextTest allows you
-to place such files in the <A class="Text_Link" href="dirstructure.html">permanent
+to place such files in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">permanent
 test directory structure</A>. You should then specify the
 &ldquo;link_test_path&rdquo; config file entry as the (local)
 file name of the file you want to provide. You can then refer to
@@ -109,7 +109,7 @@ potentially edit some files in it. Copying the whole structure
 for each test run is possible but time consuming. It's better to
 be able to copy just the parts that will be changed and link the
 rest. This is done with the &ldquo;partial_copy_test_path&rdquo;
-config file entry, in conjunction with the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#create_catalogues">catalogue
+config file entry, in conjunction with the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#create_catalogues">catalogue
 creation feature</A> (&ldquo;create_catalogues&rdquo; in the
 config file). The first time the test is run, all the files are
 copied, and the catalogue records which files are created,
@@ -207,7 +207,7 @@ This means that you cannot run more than one instance of
 TextTest simultaneously on the same application with the same
 version in &ldquo;keeptmp&rdquo; mode, or they will delete each
 other's files.</div>
-<div class="Text_Normal">Running in <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=running_texttest_unattended"; ?>">batch mode</A> automatically
+<div class="Text_Normal">Running in <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">batch mode</A> automatically
 selects &ldquo;keeptmp&rdquo; mode for the temporary
 directories. It may also be requested explicitly using the
 &ldquo;-keeptmp&rdquo; option on the command line, or checking

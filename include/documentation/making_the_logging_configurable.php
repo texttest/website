@@ -108,7 +108,7 @@ properties_file:log4jconf</PRE><div class="Text_Header">
 Configuring the logging in your test suite</div>
 <div class="Text_Normal">You simply name your logging framework configuration file
 &ldquo;logging.&lt;app&gt;&rdquo; and place it anywhere in the
-directory structure of the test suite (see the <A class="Text_Link" href="dirstructure.html">guide
+directory structure of the test suite (see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>">guide
 to TextTest's files and directories</A>). This will cause that
 logging configuration to apply by default to all tests under
 that point in the hierarchy. You will generally want to place at

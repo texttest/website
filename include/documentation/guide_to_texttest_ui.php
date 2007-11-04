@@ -9,7 +9,7 @@ Console</div>
 <div class="Text_Header">Interactive Mode and Batch Mode</div>
 <div class="Text_Normal">TextTest can be operated in two modes: <I>interactive mode</I>
 which expects a user to be present and able to respond, and
-<I>batch mode</I> which does not. <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=running_texttest_unattended"; ?>">Batch
+<I>batch mode</I> which does not. <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">Batch
 mode</A> provides the test results in the form of an email
 and/or HTML report. This document aims to describe the various
 interactive modes. 
@@ -92,7 +92,7 @@ configured using the config file list entry &ldquo;hide_test_category&rdquo;
 
 (a common usage is to hide all successful tests automatically).
 To see how to refer to various categories, use the keys from for
-example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="configfile.html">config
+example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">config
 file table</A>.</div>
 <div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>
 Viewing Tests in the Dynamic GUI</div>
@@ -125,7 +125,7 @@ custom viewers if particular files produced by the system are
 more conveniently viewed that way.</div>
 <div class="Text_Normal">On the Text Info tab you will see a textual preview of all
 the file differences, along with a summary of what happened to
-the test. This textual preview is also used by the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_sender">batch
+the test. This textual preview is also used by the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_sender">batch
 mode email report</A>. The tool used to generate the diff can be
 configured via the config file entry &ldquo;text_diff_program&rdquo;
 (it defaults to &ldquo;diff&rdquo;, which is also used
@@ -172,7 +172,7 @@ in the tree view window.</div>
 <div class="Text_Normal">Further configuration options are available under the
 &ldquo;Saving&rdquo; tab</div>
 <div class="Text_Normal">You can configure which version the results are saved as (see
-the <A class="Text_Link" href="dirstructure.html#-v">guide to files and
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-v">guide to files and
 directories</A> for a description of versions). By default, they
 will be saved as the version that you ran the dynamic GUI as.
 There is a drop-down list so that you can select other versions
@@ -185,7 +185,7 @@ will cause these versions not to appear in the list.</div>
 <div class="Text_Normal">You can also overwrite all the files, even if they were
 regarded as the same, via the option &ldquo;replace successfully
 compared files also&rdquo;: this is a way to re-generate the
-<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run-dependent text</A>
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run-dependent text</A>
 for a test.</div>
 <div class="Text_Header"><A NAME="-gx"></A>Using the Static GUI</div>
 <div class="Text_Normal">The static GUI is started by default unless you specified
@@ -262,7 +262,7 @@ test that were not already selected.
 <div class="Text_Normal">Note that the number of selected tests (and the total number
 of tests) is displayed in the column header of the test view at
 all times. The various selection criteria can also be tried out
-from the command line, using the <A class="Text_Link" href="dirstructure.html#-s">plugin
+from the command line, using the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-s">plugin
 script</A> &ldquo;default.CountTest&rdquo;.</div>
 <div class="Text_Header"><A NAME="-t"></A><A NAME="-ts"></A><A NAME="-vs"></A><A NAME="-grep"></A><A NAME="-grepfile"></A><A NAME="-r"></A>
 Description of all test selection filters</div>
@@ -281,7 +281,7 @@ search. Note that the string matched is the <U><I>whole path</I></U><SPAN STYLE=
 of the test suite : test suites can contain other test suites. </SPAN>
 </div>
 <div class="Text_Normal">Sometimes test suites contain different tests depending on
-the <A class="Text_Link" href="dirstructure.html#-v">version identifier</A>. In
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-v">version identifier</A>. In
 this case, fill in the &ldquo;Tests for Version&rdquo; filter to
 select the tests applicable to a particular version. This is
 filled automatically if the static GUI is itself started with a
@@ -297,7 +297,7 @@ entry. If the &ldquo;Log file to search&rdquo; filter is also
 provided (-grepfile on the command line), that file will be
 searched instead. This allows selecting all tests that exercise
 a certain part of the system's functionality, for example.</div>
-<div class="Text_Normal">If <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">system resource usage testing
+<div class="Text_Normal">If <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">system resource usage testing
 is enabled for CPU time</A>, you can select tests based on how
 much CPU time they are expected to consume. This is done via the
 &ldquo;Execution Time&rdquo; filter (-r on the command line). A
@@ -341,7 +341,7 @@ or replaced by defining the config file entry
 
 <div class="Text_Normal">The order of the test suites is primarily defined by the
 testsuite.&lt;app&gt; files, unless automatic sorting is enabled
-(see the <A class="Text_Link" href="dirstructure.html#auto_sort_test_suites">guide
+(see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#auto_sort_test_suites">guide
 to files and directories</A>) However, there are some quick ways
 to sort the tests after the fact. By simply clicking on the
 column header they can be sorted &ldquo;transiently&rdquo; (i.e.
@@ -439,7 +439,7 @@ at the far right indicates whether it is doing something:
 sometimes searching a large test suite for example may take a
 little time.</div>
 <div class="Text_Normal">All of these can be hidden by default using the
-&ldquo;hide_gui_element&rdquo; entry, as above, see the t<A class="Text_Link" href="configfile.html">able
+&ldquo;hide_gui_element&rdquo; entry, as above, see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">table
 of config file settings</A> for the key format. If you don't
 hide the menubar via this mechanism you can also show and hide
 them via the &ldquo;View&rdquo; menu.</div>
@@ -488,7 +488,7 @@ view (top right window under Test tab) can be configured via the
 GUI dictionary entries &ldquo;test_colours&rdquo; and
 &ldquo;file_colours&rdquo; respectively. These are keyed with
 particular pre-defined names for the different test states: to
-see what they are, look at the default values in the <A class="Text_Link" href="configfile.html">table
+see what they are, look at the default values in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">>table
 of config file settings</A>. The values should be text strings
 as recognised by RGB files.</div>
 
@@ -499,7 +499,7 @@ These can be configured via the &ldquo;gui_accelerators&rdquo;
 dictionary entry. The keys in this dictionary should correspond
 to the labels on the relevant buttons, and the values should be
 for example &ldquo;&lt;control&gt;&lt;alt&gt;r&rdquo; or &ldquo;F4&rdquo;.
-If in doubt, consult the format of the default ones in the <A class="Text_Link" href="configfile.html">table
+If in doubt, consult the format of the default ones in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">>table
 of config file settings</A>. The values should be text strings
 as recognised by RGB files.</div>
 
@@ -530,7 +530,7 @@ quitting the GUI</div>
 <div class="Text_Normal">Naturally, when you press Quit in the GUI it will try to
 clean up everything it has created in terms of both files and
 processes. For what happens to the temporary files created, see
-the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>#-keeptmp">section on the temporary
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#-keeptmp">section on the temporary
 directory</A>.</div>
 <div class="Text_Normal">As we've seen above, it is quite possible to start many
 different viewers and editors from TextTest and many different
@@ -578,7 +578,7 @@ will cause all files judged different to be overwritten (the
 equivalent of the GUI &ldquo;Save&rdquo; button applied to all
 tests, except you have to decide before the run starts). The
 &ldquo;-n&rdquo; option will cause all files regarded as the
-same to be updated: a way of updating the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run
+same to be updated: a way of updating the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run
 dependent text</A> contained in them. Specifying both these
 options will cause all files to be updated, regardless of what
 happens.</div>

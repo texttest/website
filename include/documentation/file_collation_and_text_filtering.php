@@ -18,7 +18,7 @@ be configured.
 <div class="Text_Normal">By default, the standard output of the system under test will
 be collected to a file called output.&lt;app&gt; and the
 standard error will be collected to a file called errors.&lt;app&gt;
-(see the <A class="Text_Link" href="dirstructure.html">guide to files and
+(see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">guide to files and
 directories</A>). These will then be compared exactly with any
 previously saved &ldquo;standard results&rdquo; and any
 difference at all will be reported as failure. 
@@ -78,7 +78,7 @@ where &lt;source_file_path&gt; is some file your application
 writes and &lt;texttest_name&gt; is what you want it to be
 called by TextTest. 
 </div>
-<div class="Text_Normal">If you plan to do this, make sure you read the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">document
+<div class="Text_Normal">If you plan to do this, make sure you read the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">document
 describing how the TextTest temporary directory works</A> first.
 &lt;source_file_path&gt; here should in principle never be an
 absolute path : it should be relative (implicitly to the
@@ -90,7 +90,7 @@ particularly if run more than once simultaneously.</div>
 <div class="Text_Normal">Note that this ordering can seem counter-intuitive, in effect
 you are asking TextTest to copy the text file located at
 &lt;source_file_path&gt; to &lt;texttest_name&gt;.&lt;app&gt; in
-the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory of that test</A>,
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory of that test</A>,
 where it will be picked up and compared. You might expect the
 source to be named before the target, but many different config
 dictionary entries use these TextTest names for result files as
@@ -154,7 +154,7 @@ many files in a directory structure (TextTest itself is one
 example!) Collecting and comparing every single file might be
 overkill. Instead, you have the possibility to create a
 catalogue file, which will essentially compare which files
-(under the test's <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory</A>)
+(under the test's <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory</A>)
 are present before and after the test has run, and which files
 and directories that were present before have been edited during
 the test run. 
@@ -167,7 +167,7 @@ If no differences are found, this is noted briefly at the top of
 the file : catalogue files are always created from version 3.6
 and onwards.</div>
 
-<div class="Text_Normal">Note that this feature can be used to aid <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>#copy_test_path">test
+<div class="Text_Normal">Note that this feature can be used to aid <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#copy_test_path">test
 data isolation</A> also.</div>
 <div class="Text_Normal">In addition, you can request that the catalogue functionality
 checks for processes that were created (leaked!) by the test. If
@@ -196,7 +196,7 @@ before comparing the files.</div>
 <div class="Text_Normal">This is controlled primarily by the config file dictionary
 entry 'run_dependent_text', whose keys corresponding to the
 TextTest name of the file : i.e. the stem of the file name. (See
-the <A class="Text_Link" href="dirstructure.html">file format documentation</A>
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">file format documentation</A>
 for more details of this). It should take this form:</div>
 
 <div class="Text_Normal">[run_dependent_text]

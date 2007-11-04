@@ -1,7 +1,7 @@
 <div class="Text_Header">Getting started with Texttest</div>
 <div class="Text_Normal">This is a basic guide to what the GUI looks like, and how to
 write your first test. It assumes you have read and followed the
-instructions in the <A class="Text_Link" HREF=<?php print "\"index.php?page=".$version."&n=install_texttest\""; ?>>installation guide</A>.
+instructions in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=install_texttest"; ?>">installation guide</A>.
 </div>
 <div class="Text_Normal">We will use a 'hello world' program as an example. Text in
 italics is background information only.</div>
@@ -77,7 +77,7 @@ created an &ldquo;options.hello&rdquo; file for these. It is
 thus building up a directory structure for us. It is useful to
 understand this and it can easily be edited independently of
 TextTest. It can also be useful to version control this test
-directory structure. See the <A class="Text_Link" HREF="dirstructure.html">Guide
+directory structure. See the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>">Guide
 to the Files and Directories in a TextTest test suite</A> for
 more details.</I></div>
 
@@ -107,7 +107,7 @@ directory defaults to $HOME/texttesttmp on UNIX and to the value
 of TEMP on Windows. It can be altered via the environment
 variable TEXTTEST_TMP. When the test is saved, these files are
 copied to the test directory created above. For more details,
-see the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">Guide to TextTest's Temporary
+see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">Guide to TextTest's Temporary
 Directory</A>.</I></div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/saved.jpg" NAME="Graphic5" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
@@ -134,7 +134,7 @@ temporary file names, process IDs, times etc. TextTest allows
 you to define what such statements looks like in your program so
 that it can filter them out, avoiding false failures when only
 such information changes. To see how to do this, look at the
-<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">section on
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">section on
 run-dependent text</A>.</div>
 <div class="Text_Normal">Another challenge is that real programs often read and write
 files other than standard error and output. As we saw above,
@@ -143,16 +143,16 @@ specifically for that test run, which is also used as current
 working directory for that test. You should therefore make sure
 that your program only creates files relative to this directory,
 and that all needed input files are available from it. See the
-<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=texttest_sandbox"; ?>">guide to TextTest's temporary directory
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">guide to TextTest's temporary directory
 </A>for details. 
 </div>
 
 <div class="Text_Normal">You may want also want TextTest to compare other created
 files in the same way as you do for standard output and error.
-See the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#collate_file">section on
+See the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#collate_file">section on
 collating files</A> for details.</div>
 <div class="Text_Normal">At this point you should be able to get going with building a
 test suite for your application. There is of course more to
 TextTest than this: look at the reference material available
-from <A class="Text_Link" HREF="index.html">Documentation Central</A>.</div>
+from <A class="Text_Link" HREF="<?php print "index.php?page=".$version?>">Documentation Central</A>.</div>
 	

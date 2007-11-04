@@ -3,8 +3,8 @@
 
 <div class="Text_Normal">This is a step-by-step guide to testing a GUI with texttest.
 It assumes you have read and followed the instructions in the
-<A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=install_texttest\""; ?>>installation guide</A>. There is a fair
-amount of overlap with the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=getting_started\""; ?>>document
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=install_texttest"; ?>">installation guide</A>. There is a fair
+amount of overlap with the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">document
 for getting started testing a non-GUI program</A>, so it can be
 helpful to read that first.</div>
 
@@ -25,7 +25,7 @@ recorder and tell me about it!
 <div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A>
 Creating an Application</div>
 <div class="Text_Normal">First, create a directory and a config file as described in
-the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=getting_started\""; ?>>guide for testing &ldquo;hello
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello
 world&rdquo;</A>. 
 </div>
 <div class="Text_Normal">For testing GUIs, you need some further entries in the config
@@ -37,7 +37,7 @@ environment variables for its interface, so TextTest needs to
 know to generate these rather than set environment variables.</div>
 <div class="Text_Header">Creating a Test</div>
 
-<div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=getting_started\""; ?>>&ldquo;hello
+<div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">&ldquo;hello
 world&rdquo;</A>.</div>
 <div class="Text_Normal">However, command line options are
 not sufficient to define a GUI test. We also need to define the

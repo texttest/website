@@ -97,7 +97,7 @@ TextTest's tests for itself (that come with the download).</div>
 <div class="Text_Normal">It is also possible to have a personalised config file which
 accepts all the same settings as the normal config file, and
 will override anything provided there. This is particularly
-useful for setting things like <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=guide_to_texttest_ui"; ?>#file_colours">GUI
+useful for setting things like <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>#file_colours">GUI
 preferences</A>. On UNIX, provide a file called &ldquo;.texttest&rdquo;
 in your home directory. On Windows, put a file called
 &ldquo;.texttest&rdquo; somewhere, and point the environment
@@ -172,7 +172,7 @@ for each test run. By default, the standard output of the system
 under test is redirected to <B><B>output.&lt;app&gt;</B></B>,
 while its standard error is redirected to <B><B>errors.&lt;app&gt;</B></B>.
 Other textual output files can also be collected, and the
-collection of these can be disabled: see the <A class="Text_Link" href=<?php print "\"index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>">guide
+collection of these can be disabled: see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>">guide
 to configuring the evaluation of test results</A>.</div>
 
 <div class="Text_Normal">TextTest assumes that high-level information of interest to
@@ -370,9 +370,9 @@ example, to call the default.ReplaceText script with appropriate
 arguments, you would call:</div>
 <div class="Text_Normal">texttest.py -s &ldquo;default.ReplaceText file=errors old=bad new=good&rdquo;</PRE><div class="Text_Normal">
 TextTest includes several such scripts which have been found to
-be generally useful, which are <A class="Text_Link" href="scripts.html">listed
+be generally useful, which are <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=scripts";?>">listed
 here</A>. To see how to write your own such scripts, consult the
-<A class="Text_Link" href="configmodule.html">guide to writing your own
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=writing_a_own_configmodule";?>">guide to writing your own
 configuration</A>. 
 </div>
 

@@ -35,7 +35,7 @@ provided, and if no configuration is recognised for that name
 default settings will be used. All of the performance config
 file settings that start with &ldquo;performance_&rdquo;
 (described below) are &ldquo;composite dictionary entries&rdquo;
-with the file stems as keys, it is recommended to read the <A class="Text_Link" href="dirstructure.html#Appendix - TextTest file formats">file
+with the file stems as keys, it is recommended to read the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#Appendix - TextTest file formats">file
 format documentation</A> for what this means. 
 </div>
 
@@ -131,7 +131,7 @@ you generally want to automatically extract the current values
 from your existing result files for all tests, creating the
 auto-generated system resource files. This avoids getting a lot
 of &ldquo;new file&rdquo; results first time around. There is a
-<A class="Text_Link" href="dirstructure.html#-s">plugin script</A> for this called
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-s">plugin script</A> for this called
 &ldquo;default.ExtractStandardPerformance&rdquo;. 
 </div>
 
@@ -184,7 +184,7 @@ configurations. See the guide to writing your own configuration)
 </div>
 <div class="Text_Header"><A NAME="performance.PerformanceStatistics"></A><A NAME="performance.ShowMemoryUsage"></A>
 Statistical reports on System Resource Usage</div>
-<div class="Text_Normal">There are two <A class="Text_Link" href="dirstructure.html#-s">plugin scripts</A>
+<div class="Text_Normal">There are two <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#Appendix%20-%20TextTest%20file%20formats">plugin scripts</A>
 
 for this. For CPU time, use the script
 &ldquo;performance.PerformanceStatistics&rdquo;. This will print
