@@ -9,8 +9,8 @@
 
   
   //Should be easy to autogenerate
-  $basePath = "include/documentation/";
-  $path = $basePath.$version."/main.php";
+  $basePath = "include/documentation/".$version."/";
+  $path = $basePath."main.php";
 
   function hideDocTable()
   {
@@ -27,27 +27,33 @@
     {
     	if ($_GET['n'] == $n) 
     	{ 
-	  		$doHide = true; 	  
+		$doHide = true; 	  
    	  	print " class=\"marked\""; 
-	  		$path = $basePath.$version."/".$n.".php"; 
+		$path = $basePath.$n.".php"; 
     	}
    }
 	print ">\n";
 	print "<a class=\"Text_Link\" title=\"".$realName."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>";  
-   if ($doHide) hideDocTable();
+   
   }
   //Check $_GET
   function checkGET()
   {
-    global $path;
+    global $path,$basePath,$doHide;
     if (isset($_GET['n']))
     {
     	if ($_GET['n'] == "old_versions") 
     	{
      		$path=$basePath."old_versions.php";
-     		hideDocTable();
+     		$doHide = true; 
+     	}
+	elseif ($_GET['n'] == "queuesystem") 
+    	{
+     		$path=$basePath."queuesystem.php";
+     		$doHide = true; 
      	}
     }
+    if ($doHide) hideDocTable();
   }
  
 
@@ -59,7 +65,7 @@
    <div class="Text_Main_Header">Documentation for <?php echo $texttest_version ?></div>
    <div class="Text_Normal">
    This is the documentation for the current version of Texttest, which is 3.9.1.
-   (Find documentation for older versions <a class="Text_Link" href="index.php?page=documentation&n=old_versions">here</a>)
+   (Find documentation for older versions <a class="Text_Link" href="index.php?page=<?php echo $version; ?>&n=old_versions">here</a>)
    </div>
    <div style="display:none" class="Text_Header" id="ControlTable">
    Documentation Table  <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Show)</a>
@@ -84,9 +90,9 @@
 			  <td>
 			  	<div class="Table_Text_Normal">
 			    		 <?php  printLI("install_texttest","Install TextTest","Tooltip title"); ?>
-						 <?php  printLI("getting_started","Getting Started","Tooltip title"); ?>
- 						 <?php  printLI("gui_tests","Testing a GUI","Tooltip title"); ?>
- 						 <?php  printLI("kataminesweeper","Screencast","Tooltip title"); ?>
+					 <?php  printLI("getting_started","Getting Started","Tooltip title"); ?>
+					 <?php  printLI("gui_tests","Testing a GUI","Tooltip title"); ?>
+ 				         <?php  printLI("kataminesweeper","Screencast","Tooltip title"); ?>
 				</div>
 		      </td>
 		      <td>
@@ -110,11 +116,11 @@
 
 				<?php  printLI("scripts","List of plugin scripts","Tooltip title"); ?>
 				<br><br>
-				<a class="Text_Link_Fat">Default Configuration:</a>
+				<a class="Text_Link">Default Configuration:</a>
 			    	 <?php  printLI("options_default","Options when submitting test runs","Tooltip title"); ?>
 				 <?php  printLI("configfile_default","Possible entries for config files","Tooltip title"); ?>
 				 <br><br>
-				 <a class="Text_Link_Fat">Queuesystem Configuration:</a>
+				 <a href="index.php?page=<?php echo $version; ?>&n=queuesystem" class="Text_Link">Queuesystem Configuration:</a>
 			         <?php  printLI("options_queuesystem","Options when submitting test runs","Tooltip title"); ?>
 				 <?php  printLI("configfile_queuesystem","Possible entries for config files","Tooltip title"); ?>
 				 

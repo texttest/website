@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=windows-1252"><title></title>
+	
+	<meta name="GENERATOR" content="OpenOffice.org 2.2  (Win32)">
+	<meta name="AUTHOR" content="Emily Bache">
+	<meta name="CREATED" content="20071004;15481477">
+	<meta name="CHANGEDBY" content="Emily Bache">
+	<meta name="CHANGED" content="20071025;15073950">
+	<style type="text/css">
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		H1 { margin-bottom: 0.21cm }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "MS Mincho"; font-size: 16pt }
+		H1.ctl { font-family: "Tahoma"; font-size: 16pt }
+		P { margin-bottom: 0.21cm }
+		H2 { margin-bottom: 0.21cm }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-family: "MS Mincho"; font-size: 14pt; font-style: italic }
+		H2.ctl { font-family: "Arial Unicode MS"; font-size: 14pt; font-style: italic }
+		H5.western { font-family: "Albany", sans-serif; font-size: 11pt }
+		H5.cjk { font-family: "HG Mincho Light J"; font-size: 11pt }
+		H5.ctl { font-family: "Arial Unicode MS"; font-size: 11pt }
+	-->
+	</style></head><body dir="ltr" lang="en-GB">
+<h1 class="western" align="center">KataMinesweeper</h1>
+<h1 class="western" align="center">An example solution using Python and
+TextTest 
+</h1>
+<h2 class="western">by <a href="http://www.linkedin.com/in/emilybache">Emily
+Bache</a></h2>
+<p><font face="Arial, sans-serif">Test Driven Development (TDD) is a
+way of programming where you start be specifying a (failing) test,
+write code until it passes, then refactor. Repeat. This technique has
+been hugely valuable and adopted widely since it was introduced to
+the world by <a href="http://www.amazon.com/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530">Kent
+Beck</a> and others. The classic way to perform TDD is to specify the
+tests using the same programming language as the code under test,
+with the help of a little framework called xUnit. (Replace “x”
+with the language of choice). But how would TDD look if you used
+another tool instead of xUnit? Is there a way of capturing the
+advantages of the approach, but using tests that are easier to write
+and maintain?</font></p>
+<h2 class="western"><font face="Arial, sans-serif">About TDD with
+TextTest</font></h2>
+<p><font face="Arial, sans-serif">I begain using xUnit in 2000 and
+have been improving my skill at TDD ever since. Recently though I
+have been working less and less with xUnit tests, and more and more
+with using TextTest tests to drive development. This approach seems
+to preserve the original spirit of TDD, ie the tests are still
+driving development, but there are some differences and advantages.  </font>
+</p>
+<p><font face="Arial, sans-serif">When you use TextTest to drive
+development, your tests all end up being written in a representation
+that is separate from your code, ie a kind of Domain Specific
+Language (DSL). Your tests can be read and understood by anybody who
+understands the domain of the system under test, that is, they don't
+have to be able to read or write program code. You typically don't
+write new code when you write a new test, you just specify new
+desired program behaviour using this DSL. This makes it quick to add
+new tests, and easy to refactor your code later, since the test
+doesn't place any demands on the internal structure of your program
+(its classes and methods).</font></p>
+<p><font face="Arial, sans-serif">With xUnit tests, each test is only
+working with a small section of code, whereas a TextTest typically
+drives a path through a whole system or subsystem. This means that
+you need to use another technique to get fine grained visibility of
+what your code is doing. Instead of turning to a debugger, the
+approach with TextTest is to insert log statements into your code.
+Having your application write a log is not a new idea and there are a
+number of excellent logging frameworks out there. TextTest allows you
+to not only specify the behaviour of your application in terms your
+customer will understand, but also control the application logging
+behaviour. When you make a code change, and your program no longer
+behaves the way the customer wants, (you introduce a bug), you can
+turn to the recorded application log to pinpoint exactly where
+program behaviour has deviated from previously. So a test case
+consists basically of program input, expected user-readable output,
+and an application log.</font></p>
+<p><font face="Arial, sans-serif">Another aspect of TDD with xUnit,
+is that it in some sense forces you to make good low level design
+decisions, and you don't generally get the same direct effect with
+TextTest. With xUnit, your code must exhibit loose coupling and high
+cohesion before you can extract units of code to test. This is
+desireable, and TextTest does not force you to do it, since it tests
+at a higher level of granularity. (On the other hand, if you are
+starting with poorly structured legacy code, where easily extractable
+units are hard to come by, you can get going with TextTest more or
+less immediately just by adding some (hopefully) harmless log
+statements. But I am not talking about legacy code in this article). </font>
+</p>
+<p><font face="Arial, sans-serif">The other thing that TDD with xUnit
+does to help with low level design, is that when you define your
+test, you are effectively designing the interface to your class. I'm
+talking about choice of method names, and what arguments you give
+them. This is useful because it forces you to think about the
+external interface to your class before you consider the internal
+implementation. TextTest doesn't help much with this either. It will
+force you to start defining the interface to your whole program or
+subsystem, but it won't help on the class level. So when developing
+with TextTest we suggest something called “usage first”
+design. Start with the external interface to your program, and write
+code as if the classes and methods you want are already there. Then
+fill in the implementations, always working top down, and defining
+the usage of a class or method before your implement it. This takes
+some discipline, but leads to a similar effect to using xUnit.</font></p>
+<h2 class="western"><font face="Arial, sans-serif">About Code Katas</font></h2>
+<p><font face="Arial, sans-serif">A <a href="http://www.codekata.com/">code
+Kata</a> is an idea introduced by Dave (Pragmatic) Thomas. He points
+out that specialists in other disciplines do a lot more practicing
+than programmers do, in order to improve their skills. Others have
+further developed this concept into the idea of a “Coding
+dojo”, or a place where programmers meet to practice code Kata
+together. The website <a href="http://www.codingdojo.org/">www.codingdojo.org</a>
+is a resource for these communities, and amongst other things has a
+<a href="http://www.codingdojo.org/cgi-bin/wiki.pl?KataCatalogue">catalogue</a>
+of various code Kata exercises various individuals and groups have
+worked on. </font>
+</p>
+<h2 class="western"><font face="Arial, sans-serif">About the
+KataMinesweeper screencast</font></h2>
+<p><font face="Arial, sans-serif">So that is all the theory, how does
+it work in practice? In this screencast, I demonstrate a Prepared
+Kata of <a href="http://www.codingdojo.org/cgi-bin/wiki.pl?KataMinesweeper">KataMinesweeper,</a>
+using TextTest to drive development, in python. During development, I
+aim to work in a Test Driven manner, and I want to develop top down,
+usage first, in small steps. The idea is that although in real life
+you may not be so strictly test driven, or exclusively top down, or
+use such small steps, that it is important to know how to do these
+things, and they are worth practicing on a toy problem like this. </font>
+</p>
+<p><font face="Arial, sans-serif">My aim is to demonstrate what it is
+like to do TDD with TextTest, and how you might solve this code Kata
+using the python programming language. If you would like to comment
+and give me constructive feedback on this screencast, I would love to
+hear from you. Please comment on <a href="http://www.codingdojo.org/">www.codingdojo.org</a>
+or the <a href="https://lists.sourceforge.net/lists/listinfo/texttest-users">TextTest
+mailing list,</a> or the <a href="http://groups.google.com/group/comp.lang.python/topics">python
+mailing list</a>.</font></p>
+<p><font face="Arial, sans-serif">The screencast is in four parts,
+and I estimate each part will take you about 10 – 15 minutes to
+view. </font>
+</p>
+<ul>
+	<ul>
+		<ul>
+			<ul>
+				<ul>
+					<li><h5 class="western"><a href="file:///C:/Documents%20and%20Settings/henning/Local%20Settings/Temporary%20Internet%20Files/OLK2/KataMinesweeperFirstBit.htm" target="_blank">KataMinesweeperPart1</a></h5>
+					</li><li><h5 class="western"><a href="file:///C:/Documents%20and%20Settings/henning/Local%20Settings/Temporary%20Internet%20Files/OLK2/KataMinesweeperSecondBit.htm" target="_blank">KataMinesweeperPart2</a></h5>
+					</li><li><h5 class="western"><a href="file:///C:/Documents%20and%20Settings/henning/Local%20Settings/Temporary%20Internet%20Files/OLK2/KataMinesweeperThirdBit.htm" target="_blank">KataMinesweeperPart3</a></h5>
+					</li><li><h5 class="western"><a href="file:///C:/Documents%20and%20Settings/henning/Local%20Settings/Temporary%20Internet%20Files/OLK2/KataMinesweeperFourthBit.htm" target="_blank">KataMinesweeperPart4</a></h5>
+				</li></ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+<p style="margin-bottom: 0cm;"><font face="Arial, sans-serif"><i>(Note:
+This screencast was created using <a href="http://www.debugmode.com/wink/">Wink</a>.
+In it I use Windows Vista Home Edition, <a href="http://www.easyeclipse.org/site/distributions/lamp.html">Easy
+Eclipse for LAMP</a> version 1.2.2 and <a href="http://texttest.org/">TextTest</a>
+version 3.9.1.)</i></font></p>
+<p style="margin-bottom: 0cm;"><font face="Arial, sans-serif">Here is
+the final code that I end up with:</font></p>
+<p style="margin-bottom: 0cm;" align="left"><img src="KataMinesweeper_htm_37bb559.jpg" name="graphics1" align="left" border="0" height="1250" width="800"><br clear="left"><br>
+</p>
+<p style="margin-bottom: 0cm;" align="left"><font face="Arial, sans-serif">And
+here is a <a href="file:///C:/Documents%20and%20Settings/henning/Local%20Settings/Temporary%20Internet%20Files/OLK2/minesweeper.zip">zip file</a>
+with all the tests and the code. (Before you can run the tests you will
+need to adjust the "binary" entry in config.minesweeper to point at the
+path to minesweeper.py on your system.)</font>
+</p>
+
+</body></html>
