@@ -7,7 +7,7 @@ def update(script, file, scriptDir=""):
     if scriptDir:
         script = os.path.join(scriptDir, script)
     newFile = file + ".new"
-    os.system(script + " > " + newFile)
+    os.system(script + " " + file + " > " + newFile)
     if not filecmp.cmp(file, newFile, 0):
         #os.system("tkdiff " + file + " " + newFile)
         os.remove(file) 
@@ -16,9 +16,15 @@ def update(script, file, scriptDir=""):
         os.remove(newFile)
 
 def makeTables(scriptDir=""):
-    update("updateoptions.py", "options.php", scriptDir)
-    update("updateconfig.py", "configfile.php", scriptDir)
-    update("updatescripts.py", "scripts.php", scriptDir)
+    update("updateoptions.py", "options_default.php", scriptDir)
+    update("updateconfig.py", "configfile_default.php", scriptDir)
+
+    update("updateoptions.py", "options_queuesystem.php", scriptDir)
+    update("updateconfig.py", "configfile_queuesystem.php", scriptDir)
+    
+     update("updatescripts.py", "scripts.php", scriptDir)
+
+   
 
 def makeAllTables():
     makeTables()
@@ -32,8 +38,11 @@ def makeAllTables():
 #os.system("website/alllinks.py")
 rootDir = os.getcwd()
 os.chdir("include/documentation/")
+print os.getcwd()
 #if len(sys.argv) > 1:
     #makeAllTables()
+    
+
 makeTables()
 #os.chdir("../../")
 #update("updatesitemap.py", "info.html")
