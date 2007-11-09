@@ -1,6 +1,6 @@
 <?php
   //Decides version of documents in $basePath
-  $version = "documentation"; 
+  $version = "documentation_3_9_1"; 
   $texttest_version = "3.9.1";
   //$version = "documentation_3_18";
   
@@ -10,7 +10,7 @@
   
   //Should be easy to autogenerate
   $basePath = "include/documentation/";
-  $path = $basePath."main.php";
+  $path = $basePath.$version."/main.php";
 
   function hideDocTable()
   {
@@ -21,7 +21,7 @@
    
   function printLI($n,$realName,$title)
   {
-    global $path,$basePath,$doHide;
+    global $path,$basePath,$doHide,$version;
     print "<li";
     if (isset($_GET['n']))
     {
@@ -29,11 +29,11 @@
     	{ 
 	  		$doHide = true; 	  
    	  	print " class=\"marked\""; 
-	  		$path = $basePath.$n.".php"; 
+	  		$path = $basePath.$version."/".$n.".php"; 
     	}
    }
 	print ">\n";
-	print "<a class=\"Text_Link\" title=\"".$realName."\" href=\"index.php?page=documentation&n=".$n."\">".$realName."</a>";  
+	print "<a class=\"Text_Link\" title=\"".$realName."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>";  
    if ($doHide) hideDocTable();
   }
   //Check $_GET
@@ -44,7 +44,7 @@
     {
     	if ($_GET['n'] == "old_versions") 
     	{
-     		$path="include/documentation/old_versions.php";
+     		$path=$basePath."old_versions.php";
      		hideDocTable();
      	}
     }
@@ -113,7 +113,6 @@
 				<a class="Text_Link_Fat">Default Configuration:</a>
 			    	 <?php  printLI("options_default","Options when submitting test runs","Tooltip title"); ?>
 				 <?php  printLI("configfile_default","Possible entries for config files","Tooltip title"); ?>
-				 <?php  printLI("scripts_default","List of plugin scripts","Tooltip title"); ?>
 				 <br><br>
 				 <a class="Text_Link_Fat">Queuesystem Configuration:</a>
 			         <?php  printLI("options_queuesystem","Options when submitting test runs","Tooltip title"); ?>
