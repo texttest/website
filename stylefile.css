@@ -5,7 +5,6 @@ BODY
     FONT-FAMILY: Verdana;
     BACKGROUND-COLOR:#FAFAFA
 
-10pt
 }
 A:hover
 {
@@ -60,9 +59,10 @@ table.documentation_table td
 /*The style elements for normal page text*/
 .Text_Main_Header
 {
-    FONT-SIZE: 18pt;
+    FONT-SIZE: 16pt;
     FONT-FAMILY: Verdana;
     COLOR: #111100;
+	 FONT-WEIGHT:bold;
 
     LETTER-SPACING:2;
 
@@ -79,7 +79,7 @@ table.documentation_table td
     COLOR: #111100;
 
      LETTER-SPACING:1;
-     FONT-WEIGHT:bold;
+     
 
     MARGIN-TOP: 10px;
     MARGIN-LEFT: 20px;
@@ -128,6 +128,8 @@ table.documentation_table td
     FONT-SIZE: 10pt;
     FONT-FAMILY: Verdana;
     COLOR: #555599;
+    
+    cursor:hand;
 }
 .Text_Link_Small
 {
