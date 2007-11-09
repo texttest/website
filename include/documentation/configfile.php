@@ -58,6 +58,20 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">batch_extra_version</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Versions to be run in addition to the one specified, for particular batch sessions</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">batch_filter_file</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -375,7 +389,7 @@
 			<div class="Table_Text_Small">environment, testsuite, options, usecase, traffic, input, knownbugs, logging</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_own_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -683,7 +697,7 @@
 			<div class="Table_Text_Small">default</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_own_config_module#interactive_action_module">Module to search for InteractiveActions for the GUI</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#interactive_action_module">Module to search for InteractiveActions for the GUI</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
