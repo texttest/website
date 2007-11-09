@@ -1,7 +1,12 @@
 <?php
   //Decides version of documents in $basePath
   $version = "documentation"; 
+  $texttest_version = "3.9.1";
   //$version = "documentation_3_18";
+  
+  //Internal varibles
+  $doHide  = false;
+
   
   //Should be easy to autogenerate
   $basePath = "include/documentation/";
@@ -10,31 +15,38 @@
   function hideDocTable()
   {
     print "<script language=\"javascript\">openClose('DocTable')</script>";
+    print "<script language=\"javascript\">openClose('ControlTable')</script>";
+
   }
    
   function printLI($n,$realName,$title)
   {
-    global $path,$basePath;
-    $doHide = false;
+    global $path,$basePath,$doHide;
     print "<li";
-    if ($_GET['n'] == $n) 
-    { 
-	  $doHide = true; 	  
-   	  print " class=\"marked\""; 
-	  $path = $basePath.$n.".php"; 
-    }
+    if (isset($_GET['n']))
+    {
+    	if ($_GET['n'] == $n) 
+    	{ 
+	  		$doHide = true; 	  
+   	  	print " class=\"marked\""; 
+	  		$path = $basePath.$n.".php"; 
+    	}
+   }
 	print ">\n";
 	print "<a class=\"Text_Link\" title=\"".$realName."\" href=\"index.php?page=documentation&n=".$n."\">".$realName."</a>";  
-	if ($doHide) hideDocTable(); 
+   if ($doHide) hideDocTable();
   }
   //Check $_GET
   function checkGET()
   {
     global $path;
-    if ($_GET['n'] == "old_versions") 
+    if (isset($_GET['n']))
     {
-     $path="include/documentation/old_versions.php";
-     hideDocTable();
+    	if ($_GET['n'] == "old_versions") 
+    	{
+     		$path="include/documentation/old_versions.php";
+     		hideDocTable();
+     	}
     }
   }
  
@@ -44,14 +56,19 @@
 <table class="Table_Normal">
  <tr>
   <td>
-   <div class="Text_Main_Header">Documentation</div>
+   <div class="Text_Main_Header">Documentation for <?php echo $texttest_version ?></div>
    <div class="Text_Normal">
    This is the documentation for the current version of Texttest, which is 3.9.1.
    (Find documentation for older versions <a class="Text_Link" href="index.php?page=documentation&n=old_versions">here</a>)
-   
    </div>
-  
-   <div class="Text_Normal" id="DocTable">  
+   <div style="display:none" class="Text_Header" id="ControlTable">
+   Documentation Table  <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Show)</a>
+   </div>
+   <div id="DocTable">
+   <div class="Text_Header" >  
+   Documentation Table  <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Hide)</a>
+   </div>
+   <div class="Text_Normal">
    <table border=0 bgcolor="#000000" cellspacing=1>
       <tr valign=top>
         <td bgcolor="#FFFFFF">
@@ -67,9 +84,9 @@
 			  <td>
 			  	<div class="Table_Text_Normal">
 			    		 <?php  printLI("install_texttest","Install TextTest","Tooltip title"); ?>
-					 <?php  printLI("getting_started","Getting Started","Tooltip title"); ?>
-					 <?php  printLI("gui_tests","Testing a GUI","Tooltip title"); ?>
-					 <?php  printLI("kataminesweeper","Screencast","Tooltip title"); ?>
+						 <?php  printLI("getting_started","Getting Started","Tooltip title"); ?>
+ 						 <?php  printLI("gui_tests","Testing a GUI","Tooltip title"); ?>
+ 						 <?php  printLI("kataminesweeper","Screencast","Tooltip title"); ?>
 				</div>
 		      </td>
 		      <td>
@@ -106,6 +123,8 @@
       </table>
   
       </div>
+      </div>
+
       <br>
 	<?php checkGET(); include $path; ?>                   
     </td>

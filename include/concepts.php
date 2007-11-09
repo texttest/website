@@ -1,24 +1,50 @@
-<?php 
-   $sign = "<li class=\"marked\">";
-   $concepts = $why = $others= "<li>";
-   if     ($_GET["n"]=="others")  {$n="others";   $others=$sign; }
-   elseif ($_GET["n"]=="why")     {$n="why";      $why=$sign; }
-   else                           {$n="concepts"; $concepts=$sign;}
+<?php
+
+	$basePath="include/concepts/";
+	$path = $basePath."concepts.htm"; 
+ 
+function printLI($n,$realName,$title)
+{
+  global $path,$basePath;
+  print "<li";
+  if (isset($_GET['n']))
+  {
+		if ($_GET['n'] == $n) 
+    		{ 
+	  	  		print " class=\"marked\""; 
+	  			$path = $basePath.$n.".htm"; 
+    		}
+   }
+   print ">\n";
+	print "<a class=\"Text_Link\" title=\"".$realName."\" href=\"index.php?page=concepts&n=".$n."\">".$realName."</a>";  
+   
+}
 ?>
 
 <table class="Table_Normal">
  <tr>
   <td>
    <div class="Text_Main_Header"> Acceptance Testing in theory and practice </div>		  
-     <div class="Text_Normal"></div>
-     <div class="Text_Normal">	
-      <A class="Text_Link" HREF="index.php?page=concepts">         <?php print($concepts); ?><I>What is Acceptance Testing?</I></A><br>
-      <A class="Text_Link" HREF="index.php?page=concepts&n=why">   <?php print($why);      ?><I>Why do I need Acceptance Tests?</I></A><br>
-      <A class="Text_Link" HREF="index.php?page=concepts&n=others"><?php print($others);   ?><I>Our approach compared to others</I></A><br>
-   </div>
-
+     <div class="Text_Header">About Acceptence Testing</div>
+     <div class="Text_Normal">	 			
+		 <?php  printLI("concepts","What is Acceptance Testing?","Tooltip title"); ?>
+		 <?php  printLI("why","Why do I need Acceptance Tests?","Tooltip title"); ?>
+		 <?php  printLI("others","Our approach compared to others","Tooltip title"); ?>
+	  </div>	
+	  <div class="Text_Header">Driving a GUI with a Use-Case Recorder</div>
+	  <div class="Text_Normal">
+		 <?php  printLI("xusecase","Driving a GUI with a Use-Case Recorder","Tooltip title"); ?> 
+		 <?php  printLI("appevents","Multi-threaded simulation with Application Events","Tooltip title"); ?>
+       <?php  printLI("shortcuts","Test refactoring and macro recording with GUI shortcuts","Tooltip title"); ?>
+       <?php  printLI("pyusecase","Driving a PyGTK Python GUI with PyUseCase","Tooltip title"); ?>
+       <li> <A class="Text_Link" href="http://jusecase.sourceforge.net">Driving a Java Swing GUI with JUseCase (separate homepage)</A>
+       <?php  printLI("webusecase","Driving a web application with WebUseCase","Tooltip title"); ?>
+       <?php  printLI("problems","Frequently raised objections to Use-case recording","Tooltip title"); ?>
+       <li> <A class="Text_Link" href="index.php?page=about"> About TextTest and how to verify application behaviours with it</A>
+    </div>       
+      
    <?php 
-     $path= "include/concepts/".$n.".htm";
+     
      include($path); 
    ?>
 				
