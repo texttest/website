@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os
+import sys,os
 from tableshared import updateTable
 
 
@@ -17,4 +17,4 @@ def getScriptData():
         scriptRows.append(entries)
     return scriptRows
 
-updateTable("scripts.php", getScriptData())
+updateTable(sys.argv[1], getScriptData())

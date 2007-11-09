@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
-import os, types, string
+import sys,os, types, string
 from tableshared import updateTable
 
 def makeConfigFile(configFileName):
     configFile = open(configFileName, "w")
-    localName = os.path.basename(os.getcwd())
+    #localName = os.path.basename(os.getcwd())
+    localName = sys.argv[2];
     if localName != "documentation":
         configFile.write("config_module:" + localName)
     configFile.write("\n")
@@ -115,4 +116,4 @@ unixData = getConfigRows("posix")
 windowsData = getConfigRows("nt")
 unifiedData = unifyData(windowsData, unixData)
 
-updateTable("configfile.php", unifiedData)
+updateTable(sys.argv[1], unifiedData)

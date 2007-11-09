@@ -34,14 +34,7 @@
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch.GenerateHistoricalReport">Generate reports based on the historical repository</A></div>
 		</TD>
 	</TR>
-	<TR VALIGN=TOP>
-		<TD  bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">comparetest.PrintObsoleteVersions</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Lists all files with version IDs that are equivalent to a non-versioned file</div>
-		</TD>
-	</TR>
+
 	<TR VALIGN=TOP>
 		<TD  bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">default.CountTest</div>

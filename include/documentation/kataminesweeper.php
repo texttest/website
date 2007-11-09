@@ -60,7 +60,7 @@ understood by anybody who understands the domain of the system under
 test, that is, they don't have to be able to read or write program
 code. TextTest is not unique in this, for example <A class="Text_Link" HREF="http://fit.c2.com/">FIT</A>
 tests are similarly readable to customers/end users. Geoff wrote this
-<A class="Text_Link" HREF="http://texttest.carmen.se/AcceptanceTesting/others.html">article</A>
+<A class="Text_Link" HREF="index.php?page=concepts&n=others">article</A>
 a little while ago giving his opinion on various different testing
 tools. 
 </div>

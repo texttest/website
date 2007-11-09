@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
-import os
+import sys,os
 from tableshared import updateTable
 
 def makeConfigFile(configFileName):
     configFile = open(configFileName, "w")
-    localName = os.path.basename(os.getcwd())
+    #localName = os.path.basename(os.getcwd())
+    localName = sys.argv[2];
     if localName != "documentation":
         configFile.write("config_module:" + localName + "\n")
     configFile.write("[diagnostics]\nconfiguration_file:nonsense\ntrace_level_variable:nonsense\n[end]\n\n")
@@ -31,4 +32,4 @@ def getOptionData():
     os.remove(configFileName)
     return optionRows
 
-updateTable("options.php", getOptionData())
+updateTable(sys.argv[1], getOptionData())
