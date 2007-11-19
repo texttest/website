@@ -29,7 +29,7 @@ array_push($all_releases, $current_release);
     </tr>
     <tr valign=top>
      <td colspan=2>
-      <?php include 'menu.htm'; ?>
+      <?php include 'menu.php'; ?>
      </td>
      <td>
     </tr>
