@@ -33,5 +33,3 @@ We did this for the first time in 2000. Since then, we have
 re-used and refined it in a number of other projects, until in
 2003 we decided it was generic enough to be released open
 source.</div>
-
-<div class="Text_Right">Next:<A class="Text_Link" HREF="index.php?page=concepts&n=others"><I>Our approach compared to others</I></A></div>

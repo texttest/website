@@ -1,7 +1,8 @@
 <?php
   //Decides version of documents in $basePath
-  $version = "documentation_3_9_1"; 
   $texttest_version = "3.9.1";
+  $version = convertToDocFormat($texttest_version);
+  
   //$version = "documentation_3_18";
   
   //Internal varibles
@@ -10,8 +11,10 @@
   
   //Should be easy to autogenerate
   $basePath = "include/documentation/".$version."/";
-  $path = $basePath."main.php";
+  if (isset($_GET['n'])) $path = "not_set";
+  else $path = "no_needed";
 
+  
   function hideDocTable()
   {
     print "<script language=\"javascript\">openClose('DocTable')</script>";
@@ -26,10 +29,9 @@
     if (isset($_GET['n']))
     {
     	if ($_GET['n'] == $n) 
-    	{ 
-		$doHide = true; 	  
+    	{  	  
    	  	print " class=\"marked\""; 
-		$path = $basePath.$n.".php"; 
+			$path = $basePath.$n.".php"; 
     	}
    }
 	print ">\n";
@@ -42,16 +44,10 @@
     global $path,$basePath,$doHide;
     if (isset($_GET['n']))
     {
-    	if ($_GET['n'] == "old_versions") 
-    	{
-     		$path=$basePath."old_versions.php";
-     		$doHide = true; 
-     	}
-	elseif ($_GET['n'] == "queuesystem") 
-    	{
-     		$path=$basePath."queuesystem.php";
-     		$doHide = true; 
-     	}
+    	$doHide = true;
+    	if ($_GET['n'] == "old_versions") $path=$basePath."old_versions.php";
+     	elseif ($_GET['n'] == "queuesystem") $path=$basePath."queuesystem.php";
+     
     }
     if ($doHide) hideDocTable();
   }
@@ -140,7 +136,14 @@
       </div>
 
       <br>
-	<?php checkGET(); include $path; ?>                   
+	<?php 
+	  checkGET();
+	
+	  if ($path == "not_set") include_404_page();
+     elseif  ($path == "no_needed") include $basePath."/main.php";
+     else include($path); 
+
+	?>                  
     </td>
   </tr>
 </table>

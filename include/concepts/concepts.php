@@ -85,4 +85,3 @@ scripts, so that simulation can have the power of a real
 programming language without loading down the tests with a
 programming language's syntax.</div>
 
-<div class="Text_Right"> Next:<A class="Text_Link" HREF="index.php?page=concepts&n=why"><I>Why do I need Acceptance Tests?</I></A></div>

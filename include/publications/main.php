@@ -1,19 +1,19 @@
 <div class="Text_Main_Header">Publications, Presentations & Events</div>
    <div class="Text_Normal">The following presentations and papers can be downloaded:</div>
    <UL>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="index.php?page=publications&n=best_practice">Best Practice Workshop discussion from XP2005 conference</A></div>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="ooffice.zip">XP2005 and Europython2005 presentations (OpenOffice format)</A></div>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="powerpoint.zip">Same presentations (Powerpoint format)</A></div> 
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="FurtherAT_XP2005.pdf">Poster from XP2005 (&ldquo;Further Adventures...&rdquo;)</A></div>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="GUITest_XP2004.pdf">Whitepaper from XP2004 (&ldquo;Adventures in GUI testing...&rdquo;)</A></div>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="ATDD_XP2003.pdf">Whitepaper from XP2003 (&ldquo;Acceptance Test Driven Development...&rdquo;)</A></div>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="one_suite.zip">Poster from XP2002 (&ldquo;One Suite of Automated Tests...&rdquo;)</A></div>	
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="index.php?page=publications&n=bestpractices">Best Practice Workshop discussion from XP2005 conference</A></div>
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/ooffice.zip">XP2005 and Europython2005 presentations (OpenOffice format)</A></div>
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/powerpoint.zip">Same presentations (Powerpoint format)</A></div> 
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/FurtherAT_XP2005.pdf">Poster from XP2005 (&ldquo;Further Adventures...&rdquo;)</A></div>
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/GUITest_XP2004.pdf">Whitepaper from XP2004 (&ldquo;Adventures in GUI testing...&rdquo;)</A></div>
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/ATDD_XP2003.pdf">Whitepaper from XP2003 (&ldquo;Acceptance Test Driven Development...&rdquo;)</A></div>
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/one_suite.zip">Poster from XP2002 (&ldquo;One Suite of Automated Tests...&rdquo;)</A></div>	
    </UL>
    
    <div class="Text_Main_Header">Detailed info : Printed publications</div>
    <div class="Text_Normal">                                       
      At <a class="Text_Link"  HREF="http://www.xp2005.org/">XP2005 in Sheffield, UK</A>,
-     we presented a poster <a class="Text_Link"  HREF="FurtherAT_XP2005.pdf"><I>&ldquo;Web
+     we presented a poster <a class="Text_Link"  HREF="files/FurtherAT_XP2005.pdf"><I>&ldquo;Web
      Applications, Multithreading, Parallel Testing and Multiple
      Components: Further Adventures in Acceptance Testing&rdquo; 
      </I></A>(Geoff Bache, Johan Andersson and Claes Verdoes),
@@ -25,7 +25,7 @@
    <div class="Text_Normal">
      At <a class="Text_Link"  HREF="http://www.xp2004.org/">XP2004 in Garmisch,
      Germany</A>, we presented our testing approach in a full paper
-     <a class="Text_Link"  HREF="GUITest_XP2004.pdf">&ldquo;<I>The Video Store Revisited
+     <a class="Text_Link"  HREF="files/GUITest_XP2004.pdf">&ldquo;<I>The Video Store Revisited
      Yet Again: Adventures in GUI Acceptance Testing&rdquo;</I></A>
      (Geoff Bache and Johan Andersson), particularly introducing the
      concept of a use case recorder and how the approach can be used
@@ -33,7 +33,7 @@
    </div>
    <div class="Text_Normal">
       At XP2003 in Genoa, Italy, we presented a full paper 
-     <a class="Text_Link"  HREF="ATDD_XP2003.pdf">&ldquo;<I>XP
+     <a class="Text_Link"  HREF="files/ATDD_XP2003.pdf">&ldquo;<I>XP
      with Acceptance Test Driven Development &ndash; A rewrite
      project for a resource optimization system&rdquo;</I></A> (Geoff
      Bache, Johan Andersson and Peter Sutton) outlining in more
@@ -44,7 +44,7 @@
 
   <div class="Text_Normal">
     At the XP2002 conference in Alghero, Sardinia, we presented a
-    poster <a class="Text_Link"  HREF="one_suite.zip">&ldquo;<I>One Suite of Automated
+    poster <a class="Text_Link"  HREF="files/one_suite.zip">&ldquo;<I>One Suite of Automated
     Tests &ndash; Examining the Unit/Functional Divide&rdquo;</I></A>
     (Geoff Bache and Emily Bache) exploring how to define acceptance
     testing and presenting our experiences in using acceptance
@@ -91,13 +91,13 @@
 
  <div class="Text_Normal">
     All four of these presentations are available (zipped) in
-    <a class="Text_Link"  HREF="ooffice.zip">OpenOffice</A> and 
-    <a class="Text_Link"  HREF="powerpoint.zip">Powerpoint</A>format. 
+    <a class="Text_Link"  HREF="files/ooffice.zip">OpenOffice</A> and 
+    <a class="Text_Link"  HREF="files/powerpoint.zip">Powerpoint</A>format. 
     They are all originally OpenOffice so they may be a
     bit mangled in Powerpoint...</div>
  <div class="Text_Main_Header">Best practice workshop XP2005</div>
  <div class="Text_Normal">This was a discussion-based workshop. A summary of the
-   discussion can be found <a class="Text_Link"  HREF="index.php?page=publications&n=best_practice">here</A>.</div>
+   discussion can be found <a class="Text_Link"  HREF="index.php?page=publications&n=bestpractices">here</A>.</div>
  </div>
   
    </div>

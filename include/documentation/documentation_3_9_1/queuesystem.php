@@ -43,11 +43,11 @@
 					default: 
 					</div>
 					<UL>
-						<LI><div class="Text_Normal"><A class="Text_Link" href="options.html">Full list of options when
+						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=options_queuesystem">Full list of options when
 						submitting test runs</A></div>
-						<LI><div class="Text_Normal"><A class="Text_Link" href="configfile.html">Full list of possible entries
+						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=config_queuesystem">Full list of possible entries
 						for config files</A></div>
-						<LI><div class="Text_Normal"><A class="Text_Link" href="scripts.html">Full list of plugin scripts (for
+						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=scripts">Full list of plugin scripts (for
 						use with -s option)</A></div>
 					</UL>
 					<div class="Text_Header"><A NAME="default_queue"></A><A NAME="-q"></A>Queues</div>
@@ -75,7 +75,7 @@
 						<LI><div class="Text_Normal">If neither, the default queue
 						of the queue system will be used, supposing it has one.</div>
 					</OL>
-					<div class="Text_Normal">It is often useful to <A class="Text_Link" href="../configmodule.html">write a
+					<div class="Text_Normal">It is often useful to <A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=writing_a_config_module">write a
 					derived configuration</A> to modify this logic, for example to
 					introduce some mechanism to select queues based on expected time
 					taken.</div>
@@ -118,9 +118,9 @@
 					<div class="Text_Header"><A NAME="performance_test_resource"></A><A NAME="min_time_for_performance_force"></A><A NAME="-perf"></A>
 					Collecting system resource usage with a grid engine</div>
 					<div class="Text_Normal">The queuesystem configuration also provides some improvements
-					in <A class="Text_Link" href="../sysresource.html">default configuration's
+					in <A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage">default configuration's
 					functionality for comparing system resource usage</A> in tests.
-					This is essentially in the area of the concept of a <A class="Text_Link" href="../sysresource.html#performance_test_machine">performance
+					This is essentially in the area of the concept of a <A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_test_machine">performance
 					test machine</A>. In the default configuration, tests are run
 					locally, so all we can do is see if our current machine is
 					enabled for performance testing. With a grid engine at our
@@ -149,7 +149,7 @@
 					</div>
 					<div class="Text_Header">Batch Mode with a grid engine</div>
 					<div class="Text_Normal">The queuesystem configuration also provides an improvement to
-					the <A class="Text_Link" href="../batch.html">batch mode</A> functionality for
+					the <A class="Text_Link" href="index.php?page=<?php echo $version?>&n=running_texttest_unattended">batch mode</A> functionality for
 					unattended runs. This basically involves adding a horizon when
 					all remaining tests are killed off and reported as unfinished.
 					This will be done if it receives the signal SIGUSR2 on UNIX.</div>

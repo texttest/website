@@ -44,7 +44,7 @@ there is a config file entry &ldquo;definition_file_stems&rdquo;
 to allow this to be configured.</div>
 <div class="Text_Normal">TextTest comes with 2 configurations to choose from -
 &quot;default&quot; which should work anywhere, and
-&quot;<A class="Text_Link" href="index.php?page=documentation&n=queuesystem">queuesystem</A>&quot;
+&quot;<A class="Text_Link" href="index.php?page=<?php echo $version; ?>&n=queuesystem">queuesystem</A>&quot;
 for use on UNIX with the <A class="Text_Link" href="http://gridengine.sunsource.net/">SGE</A>
 or <A class="Text_Link" href="http://www.platform.com/Products/Platform.LSF.Family/Platform.LSF/">LSF</A>
 

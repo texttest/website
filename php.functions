@@ -1,0 +1,14 @@
+<?php
+
+//Convert to documenation format
+function convertToDocFormat($release)
+{
+	$converted_release = str_replace(".","_",$release);
+	return "documentation_".$converted_release;
+}
+
+function include_404_page()
+{
+	include "404.htm";
+}
+?>

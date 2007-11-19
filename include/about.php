@@ -1,4 +1,3 @@
-<!--TITLE:About Texttest PAGEINFO:Read more about texttest and its background PATH:page=about-->
 <table class="Table_Normal">
  <tr>
   <td>
@@ -14,7 +13,8 @@
    </div>
    
    <div class="Text_Normal">
-     We are warm adherents of agile development practices, and practitioners of Extreme Programming. 
+     We are warm adherents of <a class="Text_Link" href="http://www.agilealliance.org/">Agile Development</a> practices, 
+     and practitioners of <a class="Text_Link" href="http://www.xprogramming.com/">Extreme Programming</a>. 
      We believe that the Agile movement has improved the software quality situation a great deal, 
      by moving testing to the centre of the development process and making developers 
      directly responsible for verifying the quality of their code.
@@ -63,7 +63,7 @@ provide, which can consist any or all of:</div>
 	should be set 
 	</div>
 	<LI><div class="Text_Normal">A sequence of 'use-case' actions to be performed on a GUI
-	(see <A class="Text_Link HREF="index.php?page=concepts&n=xusecase">Use-case Recorders</A>) 
+	(see <A class="Text_Link" HREF="index.php?page=concepts&n=xusecase">Use-case Recorders</A>) 
 	</div>
 </UL>
 <div class="Text_Normal">The application needs to write a log file describing what is
@@ -74,7 +74,7 @@ it.
 <div class="Text_Normal">For people wanting to test a GUI (custom or Web) you will need
 some scripting approach to that GUI so that tests can be run
 without needing somebody to click the buttons. We recommend
-<A class="Text_Link HREF="index.php?page=concepts&n=xusecase">Use-case Recorders</A> and have
+<A class="Text_Link" HREF="index.php?page=concepts&n=xusecase">Use-case Recorders</A> and have
 some tools that can help you... it's probably good to understand
 these before trying to understand TextTest in more detail.</div>
 

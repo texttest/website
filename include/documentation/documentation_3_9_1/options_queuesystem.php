@@ -1,4 +1,5 @@
 <div class="Text_Main_Header">List of options when submitting test runs</div>
+<div class="Text_Header"><i>(using the queuesystem configuration)</i></div>
 <div class="Text_Normal">
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
 	<TR VALIGN=TOP>

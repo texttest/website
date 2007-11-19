@@ -32,11 +32,11 @@ seemed to be the most browser-like framework that was also open
 source, so we decided to build on that and created 'WebUseCase'.
 So that, when recording a use case, the interaction looks like
 this:</div>
-<div class="Text_Normal"><img src="include/concepts/images/include/concepts/images/webusecaserec.JPG" NAME="Graphic1" ALIGN=LEFT WIDTH=500 HEIGHT=142 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="include/concepts/images/webusecaserec.JPG" NAME="Graphic1" ALIGN=LEFT WIDTH=500 HEIGHT=142 BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">and replaying works
 like this:</div>
-<div class="Text_Normal"><img src="include/concepts/images/include/concepts/images/webusecaserep.jpg" NAME="Graphic3" ALIGN=LEFT WIDTH=497 HEIGHT=49 BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="include/concepts/images/webusecaserep.jpg" NAME="Graphic3" ALIGN=LEFT WIDTH=497 HEIGHT=49 BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 
 <div class="Text_Normal">(Note that the Java

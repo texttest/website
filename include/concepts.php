@@ -1,7 +1,17 @@
 <?php
 
-	$basePath="include/concepts/";
-	$path = $basePath."concepts.htm"; 
+$basePath="include/concepts/";
+if (isset($_GET['n'])) $path = "not_set";
+else $path = "no_needed";
+
+if (isset($_GET['n']))
+{
+	$get = $_GET['n'];
+	if (  ($get == "calccomparison") ||  ($get == "guicomparison") || ($get == "webcomparison") )
+	{
+		$path = $basePath.$_GET['n'].".php";
+	} 
+}	
  
 function printLI($n,$realName,$title)
 {
@@ -12,7 +22,7 @@ function printLI($n,$realName,$title)
 		if ($_GET['n'] == $n) 
     		{ 
 	  	  		print " class=\"marked\""; 
-	  			$path = $basePath.$n.".htm"; 
+	  			$path = $basePath.$n.".php"; 
     		}
    }
    print ">\n";
@@ -45,7 +55,9 @@ function printLI($n,$realName,$title)
       
    <?php 
      
-     include($path); 
+     if ($path == "not_set") include_404_page();
+     elseif  ($path == "no_needed") include 'include/concepts/concepts.php';
+     else include($path); 
    ?>
 				
     </td>

@@ -4,13 +4,14 @@
   <td>
    <div class="Text_Main_Header">News</div>
    
+   <!--
    <div class="Text_Header">
-     xx Sep 2007
+     14 Nov 2007
    </div>
    <div class="Text_Normal">
-     First release of the new texttest site. Look it through... Find errors or missing links please report
+     This site is currently on trial
    </div>
-
+	-->
   
   </td>
  </tr>

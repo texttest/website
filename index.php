@@ -1,4 +1,15 @@
-<!-- Created by Henning Thornbad -->
+<?php
+include 'php.functions';
+
+//Current release here
+$current_release = "3.9.1";
+
+$all_releases = array();
+array_push($all_releases, $current_release);
+//New Releases here:
+//array_push($all_releases, $some_old_release);
+
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
  <script language="javascript" type="text/javascript" src="javascript.js"></script>
@@ -28,19 +39,38 @@
          <tr>
            <td bgcolor="#FFFFFF">
               <?php
-                  if (!(isset($_GET["page"])))            include 'include/main.htm';
-						elseif ($_GET["page"]=="news")                 include 'include/news.htm';
-						elseif ($_GET["page"]=="documentation_3_9_1")  include 'include/documentation/documentation_3_9_1.php';
-						elseif ($_GET["page"]=="download")             include 'include/download.htm';
-						elseif ($_GET["page"]=="contact")              include 'include/contact.htm';
-						elseif ($_GET["page"]=="publications")         include 'include/publications.php';
-						elseif ($_GET["page"]=="siteinfo")             include 'include/siteinfo.htm';
-						elseif ($_GET["page"]=="sitemap")              include 'include/sitemap.htm';
-						elseif ($_GET["page"]=="about")                include 'include/about.htm';
-						elseif ($_GET["page"]=="concepts")             include 'include/concepts.php';
-						else                                           include 'include/main.htm';
+              	
+              		
+                  if (!(isset($_GET["page"])))            		     include 'include/main.php';
+  						else
+  						{
+  							$pageFound = false;
+                  	foreach ($all_releases as $release)
+                  	{
+                  		$rel = convertToDocFormat($release);
+                  		if ($rel == $_GET["page"])                  
+                  		{
+                  			include 'include/documentation/'.$rel.'.php';
+                  			$pageFound = true;
+                  		}
+                  	}
+                  	if (! $pageFound)
+                  	{
+								if ($_GET["page"]=="main")                     include 'include/main.php';
+								elseif ($_GET["page"]=="news")                 include 'include/news.php';
+								elseif ($_GET["page"]=="download")             include 'include/download.php';
+								elseif ($_GET["page"]=="contact")              include 'include/contact.php';
+								elseif ($_GET["page"]=="publications")         include 'include/publications.php';
+								elseif ($_GET["page"]=="siteinfo")             include 'include/siteinfo.php';
+								elseif ($_GET["page"]=="sitemap")              include 'include/sitemap.php';
+								elseif ($_GET["page"]=="about")                include 'include/about.php';
+								elseif ($_GET["page"]=="concepts")             include 'include/concepts.php';
+								else                                           include_404_page();
+							}
+						}                                           
 	      ?>
-           </td>
+	         <br><br>
+	         </td>
          </tr>
         </table>
      </td>

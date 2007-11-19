@@ -9,10 +9,10 @@
    
    if (isset($_GET['n']))
    {
-   	if ($_GET['n'] == "best_practice") include 'include/publications/bestpractices.htm';
-   	else include 'include/publications/main.htm';
+   	if ($_GET['n'] == "bestpractices") include 'include/publications/bestpractices.php';
+   	else include 'include/publications/main.php';
    }
-   else include 'include/publications/main.htm';
+   else include 'include/publications/main.php';
 
   ?>
    </td>

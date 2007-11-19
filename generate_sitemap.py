@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 import os
 
-path="/users/henning/texttest_workspace/www/current/include"
+os.chdir("include/");
 
-sitemap = open("sitemap.htm","w")
+sitemap = open("sitemap.php","w")
 sitemap.write('<table class="Table_Normal"><tr><td>\n')
 sitemap.write('<div class="Text_Header">Site map</div>\n')
 sitemap.write('<table class="index">\n')
@@ -26,5 +26,6 @@ def findAndHTML(path):
                    phppath = row[(row.index("PATH:")+5):row.index("-->")]
                    towrite = '<tr valign=top><td width=100><div class="Text_Normal"><a href="index.php?' + phppath + '" class="Text_Link">' +title +'</a><div>\n</td><td><div class="Text_Normal">'+ pageinfo + '</div></td></tr>'
                    sitemap.write(towrite)
-findAndHTML(path)
+
+findAndHTML(os.getcwd)
 sitemap.write('</table></td></tr></table>\n')
