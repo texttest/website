@@ -1,36 +1,34 @@
-<table align=middle  border="0">
- <tr>
-  <td>
-      <div class="Menu_Header_Link"><a href="index.php?page=main">Home</a></div>
-  </td>
-  <td>
-      <div class="Menu_Header_Link"><a  href="index.php?page=about">About</a></div>
-  </td>
-  <td>
-      <div class="Menu_Header_Link"><a  href="index.php?page=concepts">Concepts</a></div>
-  </td>
-  <td >  
-     
-       <!--<div onmouseover="openMenu('doc')" onmouseout="closeMenuTime()" class="Menu_Header_Link"> <a href="index.php?page=documentation">Documentation<img src=images/small_down_arrow.gif></a></div>-->
-         <div class="Menu_Header_Link"> <a href="index.php?page=documentation_3_9_1">Documentation</a></div>
-         <!--<div id="doc"  class="Floater"  onmouseover="cancelCloseTime()" onmouseout="closeMenuTime()">
-         <a class="Menu_Link" href="index.php?page=documentation&at=tutorials">Tutorials</a><br>
-         <a class="Menu_Link" href="index.php?page=documentation&at=userguides">User Guides</a><br>
-         <a class="Menu_Link" href="index.php?page=documentation&at=references">References</a><br>
-     </div>-->
-  </td> 
-  <td>
-       <div class="Menu_Header_Link"> <a href="index.php?page=publications">Publications</a></div>
-     <!-- <div id="pub"  class="Floater"  onmouseover="cancelCloseTime()" onmouseout="closeMenuTime()">
-         <a class="Menu_Link" href="index.php?page=documentation">Item 1</a><br>
-         <a class="Menu_Link" href="index.php?page=documentation">Item 2</a><br>
-         <a class="Menu_Link" href="index.php?page=documentation">Item 3</a><br>
-         <a class="Menu_Link" href="index.php?page=documentation">Item 4</a><br>
-         <a class="Menu_Link" href="index.php?page=documentation">Item 5</a><br>
-     </div>-->
-  </td>
-  <td>
-     <div class="Menu_Header_Link"> <a href="index.php?page=download">Download</a></div>
-  </td> 
- </tr>
+<table border="0" class="Table_Normal_Header" background="images/logo.png">
+  <tr valign="top" height="50">
+	 <td>
+	 </td>
+  </tr>
+  <tr valign="bottom">   
+	 <td>
+      <table align=middle  border="0">
+       <tr>
+        <td>
+            <div class="Menu_Header_Link"><a href="index.php?page=main">Home</a></div>
+        </td>
+        <td>
+            <div class="Menu_Header_Link"><a  href="index.php?page=about">About</a></div>
+        </td>
+        <td>
+            <div class="Menu_Header_Link"><a  href="index.php?page=concepts">Concepts</a></div>
+        </td>
+        <td >  
+              <div class="Menu_Header_Link"> <a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>">Documentation</a></div>
+            
+        </td> 
+        <td>
+             <div class="Menu_Header_Link"> <a href="index.php?page=publications">Publications</a></div>
+          
+        </td>
+        <td>
+           <div class="Menu_Header_Link"> <a href="index.php?page=download">Download</a></div>
+        </td> 
+       </tr>
+      </table>
+    </td>
+  </tr>
 </table>

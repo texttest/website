@@ -40,6 +40,8 @@ function printLI($n,$realName,$title)
 		 <?php  printLI("concepts","What is Acceptance Testing?","Tooltip title"); ?>
 		 <?php  printLI("why","Why do I need Acceptance Tests?","Tooltip title"); ?>
 		 <?php  printLI("others","Our approach compared to others","Tooltip title"); ?>
+		 <?php  printLI("whylog","Why use logging for asserting behaviour in acceptance tests?","Tooltip title"); ?>
+		 <?php  printLI("logprobs","FAQ on problems with logs as tests","Tooltip title"); ?>
 	  </div>	
 	  <div class="Text_Header">Driving a GUI with a Use-Case Recorder</div>
 	  <div class="Text_Normal">

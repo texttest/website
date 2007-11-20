@@ -1,6 +1,6 @@
 <div class="Text_Header">Some Frequently Asked Questions on problems with logs as tests</div>		
 <OL>
-<LI><div class="Text_Normal"><I>Isn't it old-fashioned and low-level?</I>
+<div class="Text_Header"><li>Isn't it old-fashioned and low-level?</div><div class="Text_Normal">
 It probably is old-fashioned in some sense &ndash; it comes
 more naturally to test a program by comparing text files when
 text files are one of its major products anyway, which used to
@@ -14,9 +14,9 @@ prepared to create log files entirely for this purpose &ndash;
 
 don't just expect that the logs you already have will be
 adequate.</div>
-<LI><div class="Text_Normal"><I>You need
+<div class="Text_Header"><li>You need
 somebody to read the logs and check for errors at least once
-per test. Surely they miss things, leading to incorrect tests?</I>
+per test. Surely they miss things, leading to incorrect tests?</div><div class="Text_Normal">
 This can be a problem, so it's wise to take a few precautions.
 The advice above is very relevant: if the log file is too low
 level or too verbose, this will happen more. It is also good to
@@ -31,8 +31,8 @@ program reports errors in a predictable format, TextTest can
 help you find these errors via its <A class="Text_Link" href= "docs/autointerpret.html">automatic
 failure interpretation</A> mechanisms. 
 </div>
-<LI><div class="Text_Normal"><I>Won't it slow
-my program down to have it writing logs all the time?</I>
+<div class="Text_Header"><li>Won't it slow
+my program down to have it writing logs all the time?</div><div class="Text_Normal">
 Yes. So you should use a logging framework so that the logs can
 easily be disabled in production. They will then not have a
 noticeable effect on the speed (<A class="Text_Link" href= "http://logging.apache.org/log4j/docs/">log4j'</A>s
@@ -43,9 +43,9 @@ of log settings. (<A class="Text_Link" href= "http://logging.apache.org/log4j/do
 and <A class="Text_Link" href= "http://www.its4you.at/english/log4py.html">log4py</A>
 and a home-made version of <A class="Text_Link" href= "http://log4cpp.sourceforge.net/">log4cpp</A>
 equivalent are tested)</div>
-<LI><div class="Text_Normal"><I>Don't you end up with lots of peripheral
+<div class="Text_Header"><li>Don't you end up with lots of peripheral
 information in the tests, making it hard to see the wood for
-the trees?</I> A test
+the trees?</div><div class="Text_Normal"> A test
 script is specific for the test and so will not tell you about
 things that this test isn't looking for. Logs, in contrast, are
 created by the program for all conceivable tests and may well
@@ -61,8 +61,8 @@ and can even be a very useful source of extra testing (see the
 fifth reason on the <A class="Text_Link" href= "whylog.html">Five Reasons...</A>
 
 page)</div>
-<LI><div class="Text_Normal"><I>But I want to drive my
-high-level design with high-level tests.</I> You can still
+<div class="Text_Header"><li>But I want to drive my
+high-level design with high-level tests.</div><div class="Text_Normal"> You can still
 do this without difficulties and have your assertions done via
 logs. This potentially means you won't want to use <A class="Text_Link" href= "../xusecase/index.html">xUseCase</A>
 to test GUIs, but there is no reason not to use TextTest for
@@ -77,9 +77,9 @@ otherwise. See the <A class="Text_Link" href= "../xusecase/problems.html">Freque
 Asked Questions page for xUseCase</A> for further discussion of
 this issue.</div>
 
-<div class="Text_Normal"></div>
-<LI><div class="Text_Normal"><I>How can I write tests for functionality that
-doesn't exist yet?</I>
+<div class="Text_Header"></div>
+<div class="Text_Header"><li>How can I write tests for functionality that
+doesn't exist yet?</div><div class="Text_Normal">
 It is very useful to use acceptance tests as a means of driving
 development, allowing a customer representative to create a
 test for functionality that is still to be written. With logs,

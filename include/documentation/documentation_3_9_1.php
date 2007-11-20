@@ -61,7 +61,7 @@
    <div class="Text_Main_Header">Documentation for <?php echo $texttest_version ?></div>
    <div class="Text_Normal">
    This is the documentation for the current version of Texttest, which is 3.9.1.
-   (Find documentation for older versions <a class="Text_Link" href="index.php?page=<?php echo $version; ?>&n=old_versions">here</a>)
+   (Find documentation for older versions <a class="Text_Link" href="index.php?page=documentation&n=old_versions">here</a>)
    </div>
    <div style="display:none" class="Text_Header" id="ControlTable">
    Documentation Table  <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Show)</a>

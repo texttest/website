@@ -37,9 +37,10 @@ img
 {
    WIDTH:700;
    BACKGROUND-COLOR:#FFFFFF;
-   /*Fix stupid problem with non relative table height*/
-   HEIGHT:400;
-
+}
+.Table_Normal_Header
+{
+   WIDTH:700;
 }
 table.documentation_table
 {
@@ -86,7 +87,19 @@ table.documentation_table td
     MARGIN-RIGHT: 10px
 
 }
+/*Third Level Header*/
+.Text_Small_Header
+{
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: Verdana;
+    COLOR: #111100;
+    FONT-WEIGHT:bold;
 
+
+    MARGIN-TOP: 10px;
+    MARGIN-LEFT: 25px;
+    MARGIN-RIGHT: 20px
+}
 .Text_Normal
 {
     FONT-SIZE: 10pt;

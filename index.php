@@ -20,18 +20,16 @@ array_push($all_releases, $current_release);
 
   <body background="images/back.png">
    <!-- main table -->
-   <table cellspacing=5 align=center  border=0>
+   <table cellspacing=0 align=center  border=0>
     <tr>
-     <!-- header -->
-     <td colspan=2>
-      <?php include 'head.htm'; ?>
-     </td>
-    </tr>
-    <tr valign=top>
      <td colspan=2>
       <?php include 'menu.php'; ?>
      </td>
-     <td>
+    </tr>
+    <tr>
+     <td colspan=2>
+      <?php include 'nav.php'; ?>
+     </td>
     </tr>
     <tr>
       <td colspan=2>
@@ -65,6 +63,7 @@ array_push($all_releases, $current_release);
 								elseif ($_GET["page"]=="sitemap")              include 'include/sitemap.php';
 								elseif ($_GET["page"]=="about")                include 'include/about.php';
 								elseif ($_GET["page"]=="concepts")             include 'include/concepts.php';
+								elseif ($_GET["page"]=="documentation")             include 'include/documentation.php';
 								else                                           include_404_page();
 							}
 						}                                           
