@@ -4,7 +4,7 @@ TextTest Unattended</div><div class="Text_Description"> A Guide to Batch Mode</d
 <div class="Text_Normal"><BR>
 </div>
 
-<div class="Text_Header">Introduction</div>
+<div class="Text_Header"><A NAME="-b"></A>Introduction</div>
 <div class="Text_Normal">It can be very useful to have TextTest run lots of longer
 tests (say) overnight and provide the results in an email or
 HTML report rather than have one of the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>">interactive
