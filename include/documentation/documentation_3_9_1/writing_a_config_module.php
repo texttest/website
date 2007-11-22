@@ -4,7 +4,7 @@ TextTest as a Python Framework: Writing your own config module</div>
 <div class="Text_Normal"><BR>
 </div>
 				
-<div class="Text_Normal"><FONT COLOR="#ff0000">Right
+<div class="Text_Normal"><A NAME="-help"></A><A NAME="config_module"></A><FONT COLOR="#ff0000">Right
 now this is fairly restricted and is lifted and updated from the
 old user guide, which I've removed. This document will be
 improved and extended when I'm finished with higher priority

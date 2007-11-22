@@ -27,7 +27,7 @@ standalone tool, TextTest is also a framework written in the
 a Python programmer (or have access to one) it is probably worth
 browsing the framework documentation.</div>
 
-<div class="Text_Header"><A class="Text_Link"  NAME="-x"></A><A class="Text_Link"  NAME="-xr"></A><A class="Text_Link"  NAME="-xw"></A>Troubleshooting
+<div class="Text_Header"><A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A>Troubleshooting
 : using the self-diagnostics</div>
 <div class="Text_Normal">When TextTest doesn't do what you expect it to, the best way
 to find out why is usually to enable its own logging mechanism
