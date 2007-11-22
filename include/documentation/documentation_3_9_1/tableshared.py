@@ -74,4 +74,7 @@ def updateTable(file, dataMatrix):
     print contents[templateEnd + 1:].rstrip()
 
 
-#print findLabels()
+if __name__ == "__main__":
+    labels = findLabels()
+    for key in sorted(labels.keys()):
+        print key, labels[key]
