@@ -76,7 +76,7 @@ array_push($all_releases, $current_release);
     </tr>
     <tr valign=bottom>
       <td align=left>
-       <div class="Footer">
+  <div class="Footer">Last updated:
        <script language="JavaScript">  lastUpdated()   </script> </div>
       </td>     
            

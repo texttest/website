@@ -36,8 +36,10 @@ img
 .Table_Normal
 {
    WIDTH:700;
+   HEIGHT:400;
    BACKGROUND-COLOR:#FFFFFF;
 }
+
 .Table_Normal_Header
 {
    WIDTH:700;
@@ -141,8 +143,7 @@ table.documentation_table td
     FONT-SIZE: 10pt;
     FONT-FAMILY: Verdana;
     COLOR: #555599;
-    
-    cursor:hand;
+
 }
 .Text_Link_Small
 {
@@ -237,7 +238,7 @@ li.marked A:visited
 /* A style guide for the footer */
 div.Footer
 {
-    FONT-SIZE: 10pt;
+    FONT-SIZE: 8pt;
     FONT-FAMILY: Verdana;
     COLOR: #110000;
 }
