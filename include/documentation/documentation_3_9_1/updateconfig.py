@@ -3,23 +3,20 @@
 import sys,os, types, string
 from tableshared import updateTable
 
-def makeConfigFile(configFileName):
+def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
-    #localName = os.path.basename(os.getcwd())
-    localName = sys.argv[2];
-    if localName != "documentation":
-        configFile.write("config_module:" + localName)
+    configFile.write("config_module:" + configModule)
     configFile.write("\n")
     configFile.close()
 
-def getConfigData(osName):
+def getConfigData(texttestPath, configModule, osName):
     configData = {}
     configFileName = "config.appidentifier"
-    makeConfigFile(configFileName)
+    makeConfigFile(configFileName, configModule)
     os.environ["TEXTTEST_PERSONAL_CONFIG"] = "STOOPID"
     os.environ["FAKE_OS"] = osName
     os.environ["USER"] = "$USER"
-    ttCommand = "texttest -a appidentifier -d . -s default.DocumentConfig"
+    ttCommand = texttestPath + " -a appidentifier -d . -s default.DocumentConfig"
     for line in os.popen(ttCommand).readlines():
         if line.find("|") == -1:
             continue
@@ -71,9 +68,9 @@ def getOutputValue(val):
     else:
         return val
 
-def getConfigRows(osName):
+def getConfigRows(texttestPath, configModule, osName):
     configRows = []
-    configData = getConfigData(osName)
+    configData = getConfigData(texttestPath, configModule, osName)
     allEntries = configData.keys()
     allEntries.sort()
     allTypes = dir(types)
@@ -112,8 +109,13 @@ def getUnifiedEntry(winEntry, unixEntry):
     else:
         return unixEntry + " (UNIX)<BR>" + winEntry + " (Windows)"
 
-unixData = getConfigRows("posix")
-windowsData = getConfigRows("nt")
+
+origTable = sys.argv[1]
+texttestPath = sys.argv[2]
+configModule = sys.argv[3]
+
+unixData = getConfigRows(texttestPath, configModule, "posix")
+windowsData = getConfigRows(texttestPath, configModule, "nt")
 unifiedData = unifyData(windowsData, unixData)
 
-updateTable(sys.argv[1], unifiedData)
+updateTable(origTable, unifiedData)
