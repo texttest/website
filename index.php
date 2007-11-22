@@ -60,7 +60,7 @@ array_push($all_releases, $current_release);
 								elseif ($_GET["page"]=="contact")              include 'include/contact.php';
 								elseif ($_GET["page"]=="publications")         include 'include/publications.php';
 								elseif ($_GET["page"]=="siteinfo")             include 'include/siteinfo.php';
-								elseif ($_GET["page"]=="sitemap")              include 'include/sitemap.php';
+								//elseif ($_GET["page"]=="sitemap")              include 'include/sitemap.php';
 								elseif ($_GET["page"]=="about")                include 'include/about.php';
 								elseif ($_GET["page"]=="concepts")             include 'include/concepts.php';
 								elseif ($_GET["page"]=="documentation")             include 'include/documentation.php';
@@ -85,7 +85,7 @@ array_push($all_releases, $current_release);
            <a href=index.php?page=news>[news]</a>
            <a href=index.php?page=contact>[contact]</a>
           <a href=index.php?page=siteinfo>[site info]</a>
-          <a href=index.php?page=sitemap>[sitemap]</a>
+          <!--<a href=index.php?page=sitemap>[sitemap]</a>-->
         </div>
       </td>
     </tr>
