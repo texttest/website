@@ -3,12 +3,9 @@
 import sys,os
 from tableshared import updateTable
 
-def makeConfigFile(configFileName):
+def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
-    #localName = os.path.basename(os.getcwd())
-    localName = sys.argv[2];
-    if localName != "documentation":
-        configFile.write("config_module:" + localName + "\n")
+    configFile.write("config_module:" + configModule + "\n")
     configFile.write("[diagnostics]\nconfiguration_file:nonsense\ntrace_level_variable:nonsense\n[end]\n\n")
     configFile.write("slow_motion_replay_speed:3\n")
     configFile.write("create_catalogues:true\n")
@@ -19,11 +16,11 @@ def makeConfigFile(configFileName):
 def correctAngleBrackets(text):
     return text.replace("<", "&lt;").replace(">", "&gt;")
 
-def getOptionData():
+def getOptionData(texttestPath, configModule):
     optionRows = []
     configFileName = "config.app"
-    makeConfigFile(configFileName)
-    ttCommand = "texttest -a app -d . -s default.DocumentOptions"
+    makeConfigFile(configFileName, configModule)
+    ttCommand = texttestPath + " -a app -d . -s default.DocumentOptions"
     for line in os.popen(ttCommand).readlines():
         if line.find(";") == -1:
             continue
@@ -32,4 +29,7 @@ def getOptionData():
     os.remove(configFileName)
     return optionRows
 
-updateTable(sys.argv[1], getOptionData())
+origTable = sys.argv[1]
+texttestPath = sys.argv[2]
+configModule = sys.argv[3]
+updateTable(origTable, getOptionData(texttestPath, configModule))
