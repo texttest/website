@@ -219,19 +219,19 @@ div.Menu_Header_Link A:visited
 div.Menu_Header_Link A:hover
 {
     TEXT-DECORATION:none;
-    background-color:#666699;
+    background-color:#A43C3C;
     color:#FFFFFF;
 }
 
 /*Style class for marking links in <li> list*/
 li.marked
 {
-    color:FF5555;
+    color:#8F0707;
     font-weight:bold;
 }
 li.marked A:visited
 {
-    color:FF2222;
+    color:#8F0707;
     font-weight:bold;
 }
 
