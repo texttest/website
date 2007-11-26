@@ -30,7 +30,7 @@
 					and results will be presented. Unlike the default configuration,
 					the tests will not naturally finish in order. Here is a sample
 					screenshot, using SGE:</div>
-					<div class="Text_Normal"><IMG SRC="<?php echo $basePath; ?>parallel.JPG"> Some
+					<div class="Text_Normal"><IMG SRC="<?php echo $basePath; ?>images/parallel.JPG"> Some
 					tests have finished and gone green, but others are still running
 					and hence yellow. TextTest reports their state in the grid
 					engine (&ldquo;RUN&rdquo;) followed by the machine each is

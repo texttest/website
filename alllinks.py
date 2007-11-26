@@ -35,7 +35,7 @@ def checkCapitals(link):
         print "CHECK CAPITALS", link
 
 def getRelDir(link, file, fileRoot):
-    if link.find(".php?") != -1:
+    if link.find(".php?") != -1 or link.startswith("include"):
         return ""
     relDir = os.path.dirname(file).replace(fileRoot, "")
     if relDir.startswith("/"):
@@ -59,10 +59,10 @@ def printLink(link, curDir, file):
     localRoot = "http://paphos.carmen.se/ptsp/" + os.getenv("USER") + "dev/texttest"
     fileRoot = os.path.abspath(os.path.dirname(sys.argv[0]))
     relDir = getRelDir(link, file, fileRoot)
-    fullLink = os.path.join(localRoot, relDir, os.path.basename(link))
+    fullLink = os.path.join(localRoot, relDir, link)
     if not verifyLink(fullLink):
         print "BROKEN LINK", link
-
+        
 def verifyLink(link):    
     try:    
         info = urlopen(link).read()
