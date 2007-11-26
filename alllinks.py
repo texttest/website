@@ -8,7 +8,7 @@ def printLinks(dir):
         fullPath = os.path.join(dir, file)
         if file != "javadoc" and os.path.isdir(fullPath):
             printLinks(fullPath)
-        elif file.endswith(".php") or  file.endswith(".htm") :
+        elif file.endswith(".html") or file.endswith(".htm") or file.endswith(".php"):
             printFileLinks(fullPath)
 
 def printFileLinks(file):
@@ -30,16 +30,22 @@ def printLink(link, curDir, file):
             extLinks[link] = []
         extLinks[link].append(file)
         return
+    localRoot = "http://paphos.carmen.se/ptsp/" + os.getenv("USER") + "dev/texttest"
     localName = os.path.basename(link)
-    if localName.lower() != localName and localName.endswith(".html") and localName != "ScriptEngine.html":
+    if localName.lower() != localName and localName.endswith(".html") and localName != "ScriptEngine.html" and not localName.startswith("test_batch"):
         print "CHECK CAPITALS", link
-    cwd = os.getcwd()
-    os.chdir(curDir)
-    if not os.path.exists(link):
+    fullLink = os.path.join(localRoot, link)
+    if not verifyLink(fullLink):
         print "BROKEN LINK", link
-#    else:
-#        print link
-    os.chdir(cwd)
+
+def verifyLink(link):
+    try:    
+        urlopen(link)
+        print link
+        return True
+    except:
+        return False
+
 
 def printExternal():
     print "External sites linked to"
@@ -47,13 +53,11 @@ def printExternal():
         if link.startswith("https:"):
             print "CANNOT VERIFY", link
         else:
-            try:    
-                urlopen(link)
-                print link
-            except:
+            if not verifyLink(link):
                 print "BROKEN LINK (EXTERNAL)", link, "found in :"
                 for file in files:
                     print file
+
                     
 extLinks = {}
 printLinks(os.getcwd())
