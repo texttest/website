@@ -21,6 +21,20 @@ def printFileLinks(file):
                 if words[index].endswith("<a href=") or words[index].endswith("<A HREF="):
                     printLink(words[index + 1], curDir, file)
 
+def checkCapitals(link):
+    localName = os.path.basename(link)
+    if localName.lower() != localName and localName.endswith(".html") and localName != "ScriptEngine.html" and not localName.startswith("test_batch"):
+        print "CHECK CAPITALS", link
+
+def getRelDir(link, file, fileRoot):
+    if not link.endswith(".html") and not link.endswith(".htm") and not link.endswith(".zip"):
+        return ""
+    relDir = os.path.dirname(file).replace(fileRoot, "")
+    if relDir.startswith("/"):
+        return relDir[1:]
+    else:
+        return relDir
+
 def printLink(link, curDir, file):
     link = link.split("#")[0]
     if len(link) == 0:
@@ -30,17 +44,23 @@ def printLink(link, curDir, file):
             extLinks[link] = []
         extLinks[link].append(file)
         return
+    if link.find("?php") != -1:
+        print "CANNOT EXPAND", link
+        return
+    checkCapitals(link)
     localRoot = "http://paphos.carmen.se/ptsp/" + os.getenv("USER") + "dev/texttest"
-    localName = os.path.basename(link)
-    if localName.lower() != localName and localName.endswith(".html") and localName != "ScriptEngine.html" and not localName.startswith("test_batch"):
-        print "CHECK CAPITALS", link
-    fullLink = os.path.join(localRoot, link)
+    fileRoot = os.path.abspath(os.path.dirname(sys.argv[0]))
+    relDir = getRelDir(link, file, fileRoot)
+    fullLink = os.path.join(localRoot, relDir, os.path.basename(link))
     if not verifyLink(fullLink):
         print "BROKEN LINK", link
 
-def verifyLink(link):
+def verifyLink(link):    
     try:    
-        urlopen(link)
+        info = urlopen(link).read()
+        if info.find("page you requested was not found") != -1:
+            return False
+
         print link
         return True
     except:

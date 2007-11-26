@@ -35,13 +35,14 @@ function printLI($n,$realName,$title)
  <tr>
   <td>
    <div class="Text_Main_Header"> Acceptance Testing in theory and practice </div>		  
-     <div class="Text_Header">About Acceptence Testing</div>
+     <div class="Text_Header">About Acceptance Testing</div>
      <div class="Text_Normal">	 			
 		 <?php  printLI("concepts","What is Acceptance Testing?","Tooltip title"); ?>
 		 <?php  printLI("why","Why do I need Acceptance Tests?","Tooltip title"); ?>
-		 <?php  printLI("others","Our approach compared to others","Tooltip title"); ?>
-		 <?php  printLI("whylog","Why use logging for asserting behaviour in acceptance tests?","Tooltip title"); ?>
-		 <?php  printLI("logprobs","FAQ on problems with logs as tests","Tooltip title"); ?>
+                 <li> <A class="Text_Link" href="index.php?page=about">Text-based Acceptance Testing with TextTest</A>
+		 <?php  printLI("others","Other tools for Acceptance Testing","Tooltip title"); ?>
+		 <?php  printLI("whylog","The advantages of testing with textual comparison","Tooltip title"); ?>
+		 <?php  printLI("logprobs","FAQ on problems with testing by textual comparison","Tooltip title"); ?>
 	  </div>	
 	  <div class="Text_Header">Driving a GUI with a Use-Case Recorder</div>
 	  <div class="Text_Normal">
@@ -52,7 +53,6 @@ function printLI($n,$realName,$title)
        <li> <A class="Text_Link" href="http://jusecase.sourceforge.net">Driving a Java Swing GUI with JUseCase (separate homepage)</A>
        <?php  printLI("webusecase","Driving a web application with WebUseCase","Tooltip title"); ?>
        <?php  printLI("problems","Frequently raised objections to Use-case recording","Tooltip title"); ?>
-       <li> <A class="Text_Link" href="index.php?page=about"> About TextTest and how to verify application behaviours with it</A>
     </div>       
       
    <?php 
