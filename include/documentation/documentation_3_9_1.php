@@ -110,15 +110,16 @@
 		      <td>
 		       <div class="Table_Text_Normal">
 
-				<?php  printLI("scripts","List of plugin scripts","Tooltip title"); ?>
-				<br><br>
-				<a class="Text_Link">Default Configuration:</a>
+				<b>Default Configuration:</b>
 			    	 <?php  printLI("options_default","Options when submitting test runs","Tooltip title"); ?>
 				 <?php  printLI("configfile_default","Possible entries for config files","Tooltip title"); ?>
+				 <?php  printLI("scripts_default","List of plugin scripts","Tooltip title"); ?>
 				 <br><br>
-				 <a href="index.php?page=<?php echo $version; ?>&n=queuesystem" class="Text_Link">Queuesystem Configuration:</a>
+                                 <b>Queuesystem Configuration:</b>
+				 <a href="index.php?page=<?php echo $version; ?>&n=queuesystem" class="Text_Link">(description)</a>
 			         <?php  printLI("options_queuesystem","Options when submitting test runs","Tooltip title"); ?>
 				 <?php  printLI("configfile_queuesystem","Possible entries for config files","Tooltip title"); ?>
+				 <?php  printLI("scripts_queuesystem","List of plugin scripts","Tooltip title"); ?>
 				 
 
 		      </div>
