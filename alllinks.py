@@ -3,6 +3,8 @@
 import os, sys
 from urllib2 import urlopen
 
+linktags = [ "<a href", "<A HREF", "<img src", "<IMG SRC" ]
+
 def printLinks(dir):
     for file in os.listdir(dir):
         fullPath = os.path.join(dir, file)
@@ -11,15 +13,21 @@ def printLinks(dir):
         elif file.endswith(".html") or file.endswith(".htm") or file.endswith(".php"):
             printFileLinks(fullPath)
 
+def isLinkTag(word):
+    for linktag in linktags:
+        if word.endswith(linktag + "="):
+            return True
+    return False
+
+
 def printFileLinks(file):
     print "File", file.replace(os.getcwd(), ""), ":"
     curDir, local = os.path.split(file)
     for line in open(file).xreadlines():
-        if line.find("<a href") != -1 or line.find("<A HREF") != -1:
-            words = line.strip().split("\"")
-            for index in range(len(words)):
-                if words[index].endswith("<a href=") or words[index].endswith("<A HREF="):
-                    printLink(words[index + 1], curDir, file)
+        words = line.strip().split("\"")
+        for index, word in enumerate(words):
+            if isLinkTag(word):
+                printLink(words[index + 1], curDir, file)
 
 def checkCapitals(link):
     localName = os.path.basename(link)
@@ -27,7 +35,7 @@ def checkCapitals(link):
         print "CHECK CAPITALS", link
 
 def getRelDir(link, file, fileRoot):
-    if not link.endswith(".html") and not link.endswith(".htm") and not link.endswith(".zip"):
+    if link.find(".php?") != -1:
         return ""
     relDir = os.path.dirname(file).replace(fileRoot, "")
     if relDir.startswith("/"):
