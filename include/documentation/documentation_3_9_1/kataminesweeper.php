@@ -89,10 +89,10 @@ view.
 </div>
 <UL>
 	
-    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>/kataminesweeper/KataMinesweeperFirstBit.htm">KataMinesweeperPart1</A>
-    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>/kataminesweeper/KataMinesweeperSecondBit.htm">KataMinesweeperPart2</A>
-    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>/kataminesweeper/KataMinesweeperThirdBit.htm" >KataMinesweeperPart3</A>
-    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>/kataminesweeper/KataMinesweeperFourthBit.htm">KataMinesweeperPart4</A>
+    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFirstBit.htm">KataMinesweeperPart1</A>
+    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperSecondBit.htm">KataMinesweeperPart2</A>
+    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperThirdBit.htm" >KataMinesweeperPart3</A>
+    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFourthBit.htm">KataMinesweeperPart4</A>
 	
 </UL>
 <div class="Text_Normal"><I>(Note:
