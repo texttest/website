@@ -25,13 +25,13 @@ function show_kms(mylink, windowname)
 <div class="Text_Main_Header">An example solution using Python and
 TextTest 
 </div>
-<div class="Text_Description">by <A HREF="http://www.linkedin.com/in/emilybache">Emily
+<div class="Text_Description">by <A class="Text_Link" HREF="http://www.linkedin.com/in/emilybache">Emily
 Bache</A></div>
 <div class="Text_Normal">Test Driven Development (TDD) is a
 way of programming where you start be specifying a (failing) test,
 write code until it passes, then refactor. Repeat. This technique has
 been hugely valuable and adopted widely since it was introduced to
-the world by <A HREF="http://www.amazon.com/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530">Kent
+the world by <A class="Text_Link" HREF="http://www.amazon.com/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530">Kent
 Beck</A> and others. The classic way to perform TDD is to specify the
 tests using the same programming language as the code under test,
 with the help of a little framework called xUnit. (Replace &ldquo;x&rdquo;
@@ -103,15 +103,15 @@ fill in the implementations, always working top down, and defining
 the usage of a class or method before your implement it. This takes
 some discipline, but leads to a similar effect to using xUnit.</div>
 <div class="Text_Header">About Code Katas</div>
-<div class="Text_Normal">A <A HREF="http://www.codekata.com/">code
+<div class="Text_Normal">A <A class="Text_Link" HREF="http://www.codekata.com/">code
 Kata</A> is an idea introduced by Dave (Pragmatic) Thomas. He points
 out that specialists in other disciplines do a lot more practicing
 than programmers do, in order to improve their skills. Others have
 further developed this concept into the idea of a &ldquo;Coding
 dojo&rdquo;, or a place where programmers meet to practice code Kata
-together. The website <A HREF="http://www.codingdojo.org/">www.codingdojo.org</A>
+together. The website <A class="Text_Link" HREF="http://www.codingdojo.org/">www.codingdojo.org</A>
 is a resource for these communities, and amongst other things has a
-<A HREF="http://www.codingdojo.org/cgi-bin/wiki.pl?KataCatalogue">catalogue</A>
+<A class="Text_Link" HREF="http://www.codingdojo.org/cgi-bin/wiki.pl?KataCatalogue">catalogue</A>
 of various code Kata exercises various individuals and groups have
 worked on. 
 </div>
@@ -119,7 +119,7 @@ worked on.
 KataMinesweeper screencast</div>
 <div class="Text_Normal">So that is all the theory, how does
 it work in practice? In this screencast, I demonstrate a Prepared
-Kata of <A HREF="http://www.codingdojo.org/cgi-bin/wiki.pl?KataMinesweeper">KataMinesweeper,</A>
+Kata of <A class="Text_Link" HREF="http://www.codingdojo.org/cgi-bin/wiki.pl?KataMinesweeper">KataMinesweeper,</A>
 using TextTest to drive development, in python. During development, I
 aim to work in a Test Driven manner, and I want to develop top down,
 usage first, in small steps. The idea is that although in real life
@@ -131,9 +131,9 @@ things, and they are worth practicing on a toy problem like this.
 like to do TDD with TextTest, and how you might solve this code Kata
 using the python programming language. If you would like to comment
 and give me constructive feedback on this screencast, I would love to
-hear from you. Please comment on <A HREF="http://www.codingdojo.org/">www.codingdojo.org</A>
-or the <A HREF="https://lists.sourceforge.net/lists/listinfo/texttest-users">TextTest
-mailing list,</A> or the <A HREF="http://groups.google.com/group/comp.lang.python/topics">python
+hear from you. Please comment on <A class="Text_Link" HREF="http://www.codingdojo.org/">www.codingdojo.org</A>
+or the <A class="Text_Link" HREF="https://lists.sourceforge.net/lists/listinfo/texttest-users">TextTest
+mailing list,</A> or the <A class="Text_Link" HREF="http://groups.google.com/group/comp.lang.python/topics">python
 mailing list</A>.</div>
 <div class="Text_Normal">The screencast is in four parts,
 and I estimate each part will take you about 10 &ndash; 15 minutes to
@@ -142,20 +142,20 @@ view.
 <UL>
 
 
- <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFirstBit.htm">KataMinesweeperPart1</A>
-    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperSecondBit.htm">KataMinesweeperPart2</A>
-    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperThirdBit.htm" >KataMinesweeperPart3</A>
-    <LI><A class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFourthBit.htm">KataMinesweeperPart4</A>
+ <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFirstBit.htm">KataMinesweeperPart1</A>
+    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperSecondBit.htm">KataMinesweeperPart2</A>
+    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperThirdBit.htm" >KataMinesweeperPart3</A>
+    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFourthBit.htm">KataMinesweeperPart4</A>
 
 </UL>
 <div class="Text_Normal"><I>(Note:
-This screencast was created using <A HREF="http://www.debugmode.com/wink/">Wink</A>.
-In it I use Windows Vista Home Edition, <A HREF="http://www.easyeclipse.org/site/distributions/lamp.html">Easy
-Eclipse for LAMP</A> version 1.2.2 and <A HREF="http://texttest.org/">TextTest</A>
+This screencast was created using <A class="Text_Link" HREF="http://www.debugmode.com/wink/">Wink</A>.
+In it I use Windows Vista Home Edition, <A class="Text_Link" HREF="http://www.easyeclipse.org/site/distributions/lamp.html">Easy
+Eclipse for LAMP</A> version 1.2.2 and <A class="Text_Link" HREF="http://texttest.org/">TextTest</A>
 version 3.9.1.)</I></div>
 <div class="Text_Normal">Here is
                                                           the final code that I end up with: (Click to enlarge)</div>
-<A class="Text_Link" href="<?php echo $basePath; ?>kataminesweeper/KataMinesweeper_htm_37bb559.jpg">
+<A class="Text_Link" class="Text_Link" href="<?php echo $basePath; ?>kataminesweeper/KataMinesweeper_htm_37bb559.jpg">
 <IMG width="750" height="1100"  SRC="<?php echo $basePath; ?>kataminesweeper/KataMinesweeper_htm_37bb559.jpg" NAME="graphics1" border=0>
 </A>
                  
