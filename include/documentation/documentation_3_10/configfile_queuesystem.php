@@ -59,6 +59,20 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">batch_extra_version</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Versions to be run in addition to the one specified, for particular batch sessions</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">batch_filter_file</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -181,6 +195,20 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#binary">Full path to the System Under Test</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">binary_file</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Which output files are known to be binary, and hence should not be shown/diffed?</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -423,6 +451,20 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">extra_config_directory</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Directories containing shared configuration and environment files</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">extra_version</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -471,7 +513,7 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">success : green<BR>not_started : white<BR>failure : red<BR>running : yellow<BR>static : grey90<BR>pending : white</div>
+			<div class="Table_Text_Small">success : green<BR>not_started : white<BR>failure : red<BR>running : yellow<BR>static : grey90<BR>marked by user : orange<BR>pending : white</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#file_colours">Colours to use for each file state</A></div>
@@ -513,10 +555,52 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">reset : &lt;control&gt;e<BR>quit : &lt;control&gt;q<BR>save : &lt;control&gt;s<BR>run : &lt;control&gt;r<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>move_to_last : &lt;control&gt;End<BR>save_selection : &lt;control&gt;&lt;shift&gt;s<BR>rename : &lt;control&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_up : &lt;control&gt;Page_Up<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>move_to_first : &lt;control&gt;Home<BR>select : &lt;control&gt;s</div>
+			<div class="Table_Text_Small">reset : &lt;control&gt;e<BR>quit : &lt;control&gt;q<BR>cut : &lt;control&gt;x<BR>run : &lt;control&gt;r<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>copy : &lt;control&gt;c<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>rename : &lt;control&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_up : &lt;control&gt;Page_Up<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>unmark : &lt;control&gt;&lt;shift&gt;u<BR>save : &lt;control&gt;s<BR>paste : &lt;control&gt;v<BR>save_selection : &lt;control&gt;&lt;shift&gt;s<BR>select : &lt;control&gt;s</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_accelerators">Custom action accelerators.</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">gui_entry_completion_inline</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Int</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">0</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Automatically inline common completion prefix in entry.</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">gui_entry_completion_matching</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Int</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">1</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Which matching type to use for entry completion. 0 means turn entry completions off, 1 means match the start of possible completions, 2 means match any part of possible completions</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">gui_entry_completions</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Add these completions to the entry completion lists initially</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -689,20 +773,6 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">login_shell</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">String</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">sh</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#login_shell">Which shell to use when starting remote processes</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">max_width_text_difference</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -857,6 +927,20 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">queue_system_max_capacity</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Int</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">100000</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Maximum possible number of parallel similar jobs in the available grid</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">queue_system_module</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -947,7 +1031,7 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">success : green<BR>not_started : white<BR>failure : red<BR>running : yellow<BR>static : grey90<BR>pending : white</div>
+			<div class="Table_Text_Small">success : green<BR>not_started : white<BR>failure : red<BR>running : yellow<BR>static : grey90<BR>marked by user : orange<BR>pending : white</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#test_colours">Colours to use for each test state</A></div>
@@ -1143,24 +1227,10 @@
 			<div class="Table_Text_Small">List</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
+			<div class="Table_Text_Small">localhost</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#virtual_display_machine">(UNIX) List of machines to run virtual display server (Xvfb) on</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">virtual_display_number</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Int</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">42</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#virtual_display_number">(UNIX) Number to use for running virtual display server (Xvfb)</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
