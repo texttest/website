@@ -7,7 +7,7 @@ $current_release = "3.9.1";
 $all_releases = array();
 array_push($all_releases, $current_release);
 //New Releases here:
-//array_push($all_releases, $some_old_release);
+array_push($all_releases, "3.10");
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
