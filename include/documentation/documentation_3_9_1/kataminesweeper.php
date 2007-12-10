@@ -142,10 +142,10 @@ view.
 <UL>
 
 
- <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFirstBit.htm">KataMinesweeperPart1</A>
-    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperSecondBit.htm">KataMinesweeperPart2</A>
-    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperThirdBit.htm" >KataMinesweeperPart3</A>
-    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="<?php echo $basePath ?>kataminesweeper/KataMinesweeperFourthBit.htm">KataMinesweeperPart4</A>
+ <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="include/documentation/kataminesweeper/KataMinesweeperFirstBit.htm">KataMinesweeperPart1</A>
+    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="include/documentation/kataminesweeper/KataMinesweeperSecondBit.htm">KataMinesweeperPart2</A>
+    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="include/documentation/kataminesweeper/KataMinesweeperThirdBit.htm" >KataMinesweeperPart3</A>
+    <LI><A class="Text_Link" class="Text_Link" onclick="return show_kms(this, 'KataMineSweeper')" HREF="include/documentation/kataminesweeper/KataMinesweeperFourthBit.htm">KataMinesweeperPart4</A>
 
 </UL>
 <div class="Text_Normal"><I>(Note:
@@ -155,8 +155,8 @@ Eclipse for LAMP</A> version 1.2.2 and <A class="Text_Link" HREF="http://texttes
 version 3.9.1.)</I></div>
 <div class="Text_Normal">Here is
                                                           the final code that I end up with: (Click to enlarge)</div>
-<A class="Text_Link" class="Text_Link" href="<?php echo $basePath; ?>kataminesweeper/KataMinesweeper_htm_37bb559.jpg">
-<IMG width="750" height="1100"  SRC="<?php echo $basePath; ?>kataminesweeper/KataMinesweeper_htm_37bb559.jpg" NAME="graphics1" border=0>
+<A class="Text_Link" class="Text_Link" href="include/documentation/kataminesweeper/KataMinesweeper_htm_37bb559.jpg">
+<IMG width="750" height="1100"  SRC="include/documentation/kataminesweeper/KataMinesweeper_htm_37bb559.jpg" NAME="graphics1" border=0>
 </A>
                  
 <div class="Text_Normal">And
