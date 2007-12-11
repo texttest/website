@@ -63,7 +63,7 @@ alternatives, both that try to make use of the GUI and that
 bypass it and call into the system via an API instead. I have
 picked out four that I regard as especially interesting.</div>
 <UL>
-<div class="Text_Normal"><A class="Text_Link" HREF="http://marathonman.sourceforge.net/">MarathonMan</A>
+<div class="Text_Normal"><A class="Text_Link" HREF="http://www.marathontesting.com/">MarathonMan</A>
 
 &ndash; a record/playback tool for Java Swing GUIs that was
 originally built by two guys at Thoughtworks aiming to make
@@ -115,7 +115,7 @@ with WebUseCase</A>. What marks this out as unique in the field?
 It provides a mechanism for testing with a domain language and
 it allow you to record tests live, as with custom GUIs.</div>
 <div class="Text_Normal">For comparison, both Fit and Exactor have web testing
-mechanisms, <A class="Text_Link" HREF="http://fitnesse.org/FitNesse.HtmlFixture">&ldquo;HTMLFixture&rdquo;</A>
+mechanisms, <A class="Text_Link" HREF="http://fitnesse.org/FitNesse/HtmlFixture">&ldquo;HTMLFixture&rdquo;</A>
 and &ldquo;WebCommand&rdquo;. Neither of these provide support
 for use of a business domain language, though. There is also
 <A class="Text_Link" HREF="http://webtest.canoo.com/webtest/manual/WebTestHome.html">Canoo
@@ -126,7 +126,7 @@ while Exactor uses <A class="Text_Link" HREF="http://jwebunit.sourceforge.net/">
 
 <div class="Text_Normal">In contrast to these four, two tools are included which have
 the not inconsiderable advantage of using a real browser. <A class="Text_Link" HREF="http://wtr.rubyforge.org/">Watir</A>
-drives Internet Explorer via the DOM, while <A class="Text_Link" HREF="http://selenium.thoughtworks.com/">Selenium</A>
+drives Internet Explorer via the DOM, while <A class="Text_Link" HREF="http://www.openga.org">Selenium</A>
 has a testing engine written in javascript. Watir also has the
 advantage of being the only tool that generates a programming
 language (Ruby) - very useful for long-term refactoring, at

@@ -18,22 +18,22 @@
    <div class="Text_Header">Site index</div>
    <table class="index">
      <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=about" class="Text_Link">About</a><div></td><td><div class="Text_Normal">A short introduction to TextTest and its background</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=about" class="Text_Link">About</a></td><td><div class="Text_Normal">A short introduction to TextTest and its background</div></td>
       </tr>
       <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=concepts" class="Text_Link">Concepts</a><div></td><td><div class="Text_Normal">More about Acceptance Testing in general</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=concepts" class="Text_Link">Concepts</a></td><td><div class="Text_Normal">More about Acceptance Testing in general</div></td>
       </tr>
 
       <tr valign=top>
 
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>" class="Text_Link">Documentation</a><div></td><td><div class="Text_Normal">Tutorials, User Manual and Configuration Reference Manual</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>" class="Text_Link">Documentation</a></td><td><div class="Text_Normal">Tutorials, User Manual and Configuration Reference Manual</div></td>
 
       </tr>
       <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=publications"  class="Text_Link">Publications</a><div></td><td><div class="Text_Normal">Conference publications, presentations and workshop summaries</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=publications"  class="Text_Link">Publications</a></td><td><div class="Text_Normal">Conference publications, presentations and workshop summaries</div></td>
       </tr>
       <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=download" class="Text_Link">Download</a><div></td><td><div class="Text_Normal">Download TextTest from SourceForge</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=download" class="Text_Link">Download</a></td><td><div class="Text_Normal">Download TextTest from SourceForge</div></td>
      </tr>
 
    </table>

@@ -16,7 +16,7 @@
 				<div class="Table_Text_Normal"><A class="Text_Link" href= "http://fitnesse.org/FitNesse.HtmlFixture">Fit/HtmlFixture</A></div>
 			</TD>
 			<TD>
-				<div class="Table_Text_Normal"><A class="Text_Link" href= "http://selenium.thoughtworks.com/">Selenium</A></div>
+				<div class="Table_Text_Normal"><A class="Text_Link" href= "http://www.openga.com/">Selenium</A></div>
 			</TD>
 			<TD>
 				<div class="Table_Text_Normal"><A class="Text_Link" href= "http://wtr.rubyforge.org/">Watir</A></div>

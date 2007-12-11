@@ -6,7 +6,7 @@
 			</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal"><A class="Text_Link" href= "../index.html">TextTest</A></div>
+			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=about">TextTest</A></div>
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://fit.c2.com/">Fit/ColumnFixture</A></div>

@@ -10,10 +10,10 @@ old user guide, which I've removed. This document will be
 improved and extended when I'm finished with higher priority
 stuff.</FONT></div>
 <div class="Text_Header"><A NAME="definition_file_stems"></A>Configuration Modules</div>
-<div class="Text_Normal">TextTest (as a standalone tool) consists of a <I><U>core
-framework</U>, </I>which interprets a directory structure and
-the files in it a certain way, and the <U><I>default
-configuration module</I></U><SPAN STYLE="text-decoration: none">
+<div class="Text_Normal">TextTest (as a standalone tool) consists of a <I><B>core
+framework</B>, </I>which interprets a directory structure and
+the files in it a certain way, and the <B><I>default
+configuration module</I></B>
 
 , which is responsible for actually doing things (like running
 tests and evaluating the results). This default configuration
@@ -25,7 +25,7 @@ tools for your application, or to take advantage of locally
 installed software. It also provides a way for you to add your
 own experimental features to TextTest without making it
 difficult to upgrade. Naturally, doing this involves writing
-code in Python.</SPAN></div>
+code in Python.</div>
 <div class="Text_Normal">In order to use a configuration other than the default one,
 specify the &quot;config_module&quot; entry in your config file.
 What this configuration will do is of course up to the person

@@ -9,18 +9,25 @@ sitemap.write('<div class="Text_Header">Site map</div>\n')
 sitemap.write('<table class="index">\n')
 
 
-def findAndHTML(path):
+def findAndHTML(path,level):
     files = os.listdir(path)
+    sitemap.write('<div class="Text_Normal">\n')
     for file in files:
-        #print file
         current_file = os.path.join(path,file)
         if os.path.isdir(current_file):
-            towrite = "Current Directory: " + current_file + "<br>"
+            towrite = file + "<br>"
             sitemap.write(towrite)
-            findAndHTML(current_file)
+            findAndHTML(current_file,level+1)
         else :
-            towrite = "Current File:"  + current_file + "<br>"
-            sitemap.write(towrite)
+            if current_file[-3:] == "php":
+                if level == 1:
+                    towrite = '<a class="Text_Link" href="index.php?page=' + file[:-3] + '"><br>'
+                elif level == 2:
+                    towrite = '<a class="Text_Link" href="index.php?page=' + file[:-3] + '"><br>'
+                else:
+                    towite = file+'<br>'
+                sitemap.write(towrite)
+    sitemap.write('</div>\n')
 
-findAndHTML(os.getcwd)
+findAndHTML(os.getcwd(),1)
 sitemap.write('</table></td></tr></table>\n')

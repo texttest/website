@@ -1,7 +1,7 @@
 <div class="Text_Header">Driving a web application with WebUseCase</div>
 		
 <div class="Text_Normal">WebUseCase is not itself a use-case recorder library in the
-way that <a class="Text_Link" href="pyusecase.html">PyUseCase</A> and <a class="Text_Link" href="http://jusecase.sourceforge.net">JUseCase</A>
+way that <a class="Text_Link" href="index.php?page=concepts&n=pyusecase">PyUseCase</A> and <a class="Text_Link" href="http://jusecase.sourceforge.net">JUseCase</A>
 
 are. Both of those are designed as libraries for custom GUIs
 using their respective GUI libraries. WebUseCase is a simulation

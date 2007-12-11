@@ -28,15 +28,15 @@ test is asserting what it's meant to be asserting, even if
 there are other errors in the log file (which would not be
 caught even with an explicit assertion approach). Also, if your
 program reports errors in a predictable format, TextTest can
-help you find these errors via its <A class="Text_Link" href= "docs/autointerpret.html">automatic
+help you find these errors via its <A class="Text_Link" href= "index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=automatic_failure_interpretation">automatic
 failure interpretation</A> mechanisms. 
 </div>
-<div class="Text_Header"><li>Won't it slow
+<div class="Text_Headern="><li>Won't it slow
 my program down to have it writing logs all the time?</div><div class="Text_Normal">
 Yes. So you should use a logging framework so that the logs can
 easily be disabled in production. They will then not have a
 noticeable effect on the speed (<A class="Text_Link" href= "http://logging.apache.org/log4j/docs/">log4j'</A>s
-site claims a few nanoseconds). TextTest <A class="Text_Link" href= "docs/diagnostics.html">integrates
+site claims a few nanoseconds). TextTest <A class="Text_Link" href="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=making_the_logging_configurable">integrates
 with the log4x family of tools</A> to allow easy configuration
 of log settings. (<A class="Text_Link" href= "http://logging.apache.org/log4j/docs/">log4j</A>
 
@@ -58,13 +58,13 @@ backgrounds the rest. It is easy to update a lot of tests at
 once at the touch of a button if needed. Circumstantial
 information can be useful in understanding what is happening,
 and can even be a very useful source of extra testing (see the
-fifth reason on the <A class="Text_Link" href= "whylog.html">Five Reasons...</A>
+fifth reason on the <A class="Text_Link" href= "index.php?page=concepts&n=whylog">Five Reasons...</A>
 
 page)</div>
 <div class="Text_Header"><li>But I want to drive my
 high-level design with high-level tests.</div><div class="Text_Normal"> You can still
 do this without difficulties and have your assertions done via
-logs. This potentially means you won't want to use <A class="Text_Link" href= "../xusecase/index.html">xUseCase</A>
+logs. This potentially means you won't want to use <A class="Text_Link" href= "index.php?page=concepts&n=xusecase">xUseCase</A>
 to test GUIs, but there is no reason not to use TextTest for
 that reason. It has been shown (by Rick Mugridge) that
 acceptance tests can be used as a means to enable <A class="Text_Link" href= "http://domaindrivendesign.org/">domain-driven
@@ -73,7 +73,7 @@ into a design. However, the parts of the API that enable
 assertions to be written do not aid this process, they are
 simply extracting information from arbitrary parts of the
 system, very possibly making it available where it wouldn't be
-otherwise. See the <A class="Text_Link" href= "../xusecase/problems.html">Frequently
+otherwise. See the <A class="Text_Link" href= "index.php?page=concepts&n=problems">Frequently
 Asked Questions page for xUseCase</A> for further discussion of
 this issue.</div>
 

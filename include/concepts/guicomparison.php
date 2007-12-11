@@ -18,7 +18,7 @@
 			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://fit.c2.com/">Fit(core)</A></div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://marathonman.sourceforge.net/">Marathon</A></div>
+			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://www.marathontesting.com/">Marathon</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

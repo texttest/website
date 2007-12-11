@@ -5,7 +5,7 @@
   </tr>
   <tr valign="bottom">   
 	 <td>
-      <table align=middle  border="0">
+      <table align=center  border="0">
        <tr>
         <td>
             <div class="Menu_Header_Link"><a href="index.php?page=main">Home</a></div>

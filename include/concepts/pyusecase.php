@@ -75,7 +75,7 @@ aren't yet supported (I have implemented what I have needed
 myself and no more) - happy hacking!</div>
 </OL>
 <div class="Text_Header">Adding application events</div>
-<div class="Text_Normal">At places in the code where <a class="Text_Link" href=="index.php?page=concepts&n=appevents">application
+<div class="Text_Normal">At places in the code where <a class="Text_Link" href="index.php?page=concepts&n=appevents">application
 events</A> are important, a corresponding call to the
 &quot;applicationEvent&quot; method in ScriptEngine is required.
 The method takes one or two parameters: the name of the
@@ -85,7 +85,7 @@ that only the last application event in a given category is
 recorded before any other command. If the one parameter form of
 &quot;applicationEvent&quot; is used, the application events are
 considered to belong to the same &quot;default category&quot;.
-This works in exactly the same way as in <a class="Text_Link" href=="http://jusecase.sourceforge.net">JUseCase.</A></div>
+This works in exactly the same way as in <a class="Text_Link" href="http://jusecase.sourceforge.net">JUseCase.</A></div>
 
 <div class="Text_Header">Configuring PyUseCase</div>
 <div class="Text_Normal">In order to use PyUseCase, you probably want to do something
@@ -115,7 +115,7 @@ file to record information received on standard input to.
 </UL>
 
 <div class="Text_Normal">Note that these environment variables are set automatically
-by <a class="Text_Link" href=="index.php?page=about">TextTest</A> when using that
+by <a class="Text_Link" href="index.php?page=about">TextTest</A> when using that
 tool for testing. If none of the variables are set, PyUseCase is
 disabled. If both record and replay are enabled, the files must
 not be the same. 
@@ -138,7 +138,7 @@ tests. By default, the delay is disabled, but if you use the
 GUI) it will be set to however fast you have configured your
 slow motion to be (slow_motion_replay_speed config file entry)</div>
 <div class="Text_Header">Using the shortcut mechanism</div>
-<div class="Text_Normal">If you want to make <a class="Text_Link" href=="index.php?page=concepts&n=shortcuts">shortcuts</A>
+<div class="Text_Normal">If you want to make <a class="Text_Link" href="index.php?page=concepts&n=shortcuts">shortcuts</A>
 available to your users and test writers, you need to do two
 things. When you create your scriptEngine object (see above),
 provide the keyword argument enableShortcuts=1. Then you can
@@ -155,9 +155,9 @@ recorded as the shortcut name.</div>
 comes with the PyUseCase download.</div>
 
 <div class="Text_Header">PyUseCase and console applications</div>
-<div class="Text_Normal">Unlike <a class="Text_Link" href=="http://jusecase.sourceforge.net">JUseCase</A> which has only
+<div class="Text_Normal">Unlike <a class="Text_Link" href="http://jusecase.sourceforge.net">JUseCase</A> which has only
 been used on GUIs, PyUseCase has also been used to provide
-simulation around console applications (mainly <a class="Text_Link" href=="index.php?page=about">TextTest</A>
+simulation around console applications (mainly <a class="Text_Link" href="index.php?page=about">TextTest</A>
 in console mode). Here there are two features that count:
 standard input recording and recording received signals (UNIX
 only).</div>

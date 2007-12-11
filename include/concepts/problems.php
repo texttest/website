@@ -52,7 +52,7 @@ to do a fair bit of hand-hacking of the tests to make
 traditionally record/playback tests work. At best there will be
 some means of hand-inserting a statement that waits for the GUI
 to change appearance. At worst, you will have to hand-insert
-'sleep' statements. Our <a class="Text_Link" href=="index.php?page=concepts&n=appevents">application
+'sleep' statements. Our <a class="Text_Link" href="index.php?page=concepts&n=appevents">application
 events</A> mean waiting is just something else that is
 recorded.</div>
 
@@ -66,7 +66,7 @@ test issue), and that these aims can easily come into conflict.
 We are of the view that the pain of design-dependent acceptance
 tests is worse than the gain of being able to use the tests as
 a means to get domain concepts into the design (see the fourth
-reason on the <a class="Text_Link" href=="index.php?page=about#whylog">TextTest
+reason on the <a class="Text_Link" href="index.php?page=concepts&n=whylog">TextTest
 justification</A> page). In general, the less coupling there is
 between acceptance tests and design, the more freedom you have
 to get both right without worrying about the other (just like
@@ -75,7 +75,7 @@ design)</div>
 <div class="Text_Normal"></div>
 <LI><div class="Text_Normal"><B><I>How can I write tests for functionality that
 doesn't exist yet?</I></B><BR>
-See the equivalent question on the <a class="Text_Link" href=="../TextTest/logprobs.html">Frequently-raised
+See the equivalent question on the <a class="Text_Link" href="index.php?page=concepts&n=logprobs">Frequently-raised
 objections to TextTest </A>page. In a similar way, recorded
 scripts can have free text added to them to express what the
 user wanted to do with the GUI but couldn't yet. As with
@@ -85,7 +85,7 @@ discussion between customer and developer, in the expectation
 that both code and test will need refining before a working
 test can be added to the test suite.</div>
 
-<LI><div class="Text_Normal"><B><I><a class="Text_Link" href=="index.php?page=concepts&n=shortcuts">GUI
+<LI><div class="Text_Normal"><B><I><a class="Text_Link" href="index.php?page=concepts&n=shortcuts">GUI
 shortcuts</A> are a pretty basic refactoring tool. I can't pass
 arguments to them, for example.</I></B><BR> Use-case recording is
 not a fully-fledged scripting engine. It's meant to be a GUI
