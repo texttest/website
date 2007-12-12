@@ -39,7 +39,7 @@ function printLI($n,$realName,$title)
      <div class="Text_Normal">	 			
 		 <?php  printLI("concepts","What is Acceptance Testing?","Tooltip title"); ?>
 		 <?php  printLI("why","Why do I need Acceptance Tests?","Tooltip title"); ?>
-                 <li> <A class="Text_Link" href="index.php?page=about">Text-based Acceptance Testing with TextTest</A>
+                 <li> <A class="Text_Link" href="index.php?page=about">Text-based Acceptance Testing with TextTest (About Texttest)</A>
 		 <?php  printLI("others","Other tools for Acceptance Testing","Tooltip title"); ?>
 		 <?php  printLI("whylog","The advantages of testing with textual comparison","Tooltip title"); ?>
 		 <?php  printLI("logprobs","FAQ on problems with testing by textual comparison","Tooltip title"); ?>
