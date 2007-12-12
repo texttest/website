@@ -42,9 +42,16 @@
     global $path,$basePath,$doHide;
     if (isset($_GET['n']))
     {
-    	$doHide = true;
-    	if ($_GET['n'] == "old_versions") $path=$basePath."old_versions.php";
-     	elseif ($_GET['n'] == "queuesystem") $path=$basePath."queuesystem.php";
+    	if ($_GET['n'] == "main") 
+    	{	
+    		$path=$basePath."main.php";
+    	}
+    	else
+    	{
+    		$doHide = true;
+    		if ($_GET['n'] == "old_versions") $path=$basePath."old_versions.php";
+     		elseif ($_GET['n'] == "queuesystem") $path=$basePath."queuesystem.php";
+     	}
      
     }
     if ($doHide) hideDocTable();
