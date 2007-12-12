@@ -37,7 +37,7 @@ check box under &ldquo;Running&rdquo; and &ldquo;Advanced&rdquo;
 
 tabs in the static GUI (-x option from the command line). 
 </div>
-<div class="Text_Normal">TextTest uses <A class="Text_Link"  HREF="http://www.its4you.at/english/log4py.html">log4py</A>
+<div class="Text_Normal">TextTest uses <A class="Text_Link"  HREF="http://www.sourceforge.net/projects/log4py">log4py</A>
 for its own logging. To configure which loggers will output and
 where they will do so, you will need to edit the log4py
 configuration file. The location of this is set by the field
