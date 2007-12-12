@@ -226,12 +226,12 @@ div.Menu_Header_Link A:hover
 /*Style class for marking links in <li> list*/
 li.marked
 {
-    color:#8F0707;
+    color:#040854;
     font-weight:bold;
 }
 li.marked A:visited
 {
-    color:#8F0707;
+    color:#040854;
     font-weight:bold;
 }
 
