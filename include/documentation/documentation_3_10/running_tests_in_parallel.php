@@ -1,5 +1,4 @@
-<div class="Text_Main_Header">Running
-tests in parallel on a grid</div>
+<div class="Text_Main_Header">Running tests in parallel on a grid</div>
 <div class="Text_Description">  The &ldquo;queuesystem&rdquo;
 configuration</div>
 

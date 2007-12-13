@@ -40,7 +40,7 @@ site claims a few nanoseconds). TextTest <A class="Text_Link" href="index.php?pa
 with the log4x family of tools</A> to allow easy configuration
 of log settings. (<A class="Text_Link" href= "http://logging.apache.org/log4j/docs/">log4j</A>
 
-and <A class="Text_Link" href= "http://www.its4you.at/english/log4py.html">log4py</A>
+and <A class="Text_Link" href= "http://www.sourceforge.net/projects/log4py">log4py</A>
 and a home-made version of <A class="Text_Link" href= "http://log4cpp.sourceforge.net/">log4cpp</A>
 equivalent are tested)</div>
 <div class="Text_Header"><li>Don't you end up with lots of peripheral

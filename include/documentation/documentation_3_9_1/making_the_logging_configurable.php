@@ -1,5 +1,4 @@
-<div class="Text_Main_Header">Making
-the logging configurable</div>
+<div class="Text_Main_Header">Making the logging configurable</div>
 <div class="Text_Description">integration with log frameworks
 gram
 	behaviour with TextTest</div>

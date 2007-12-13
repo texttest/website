@@ -1,5 +1,5 @@
-<div class="Text_Main_Header">Running
-TextTest Unattended</div><div class="Text_Description"> A Guide to Batch Mode</div>
+<div class="Text_Main_Header">Running TextTest Unattended</div>
+<div class="Text_Description"> A Guide to Batch Mode</div>
 
 <div class="Text_Normal"><BR>
 </div>

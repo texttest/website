@@ -22,8 +22,7 @@ function show_kms(mylink, windowname)
 
 
 
-<div class="Text_Main_Header">An example solution using Python and
-TextTest 
+<div class="Text_Main_Header">An example solution using Python and TextTest 
 </div>
 <div class="Text_Description">by <A class="Text_Link" HREF="http://www.linkedin.com/in/emilybache">Emily
 Bache</A></div>

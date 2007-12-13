@@ -1,5 +1,4 @@
-<div class="Text_Main_Header">Using
-TextTest as a Python Framework: Writing your own config module</div>
+<div class="Text_Main_Header">Using TextTest as a Python Framework: Writing your own config module</div>
 
 <div class="Text_Normal"><BR>
 </div>

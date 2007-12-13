@@ -1,5 +1,4 @@
-<div class="Text_Main_Header">Measuring
-system resource usage </div>
+<div class="Text_Main_Header">Measuring system resource usage </div>
 <div class="Text_Description">  CPU time and memory consumption</div>
 
 

@@ -1,5 +1,4 @@
-<div class="Text_Main_Header">Understanding
-TextTest Test Suites</div>
+<div class="Text_Main_Header">Understanding TextTest Test Suites</div>
 <div class="Text_Description"> A Guide to the Files and
 Directories</div>
 <div class="Text_Header">Glossary</div>

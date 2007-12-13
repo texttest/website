@@ -126,7 +126,7 @@ while Exactor uses <A class="Text_Link" HREF="http://jwebunit.sourceforge.net/">
 
 <div class="Text_Normal">In contrast to these four, two tools are included which have
 the not inconsiderable advantage of using a real browser. <A class="Text_Link" HREF="http://wtr.rubyforge.org/">Watir</A>
-drives Internet Explorer via the DOM, while <A class="Text_Link" HREF="http://www.openga.org">Selenium</A>
+drives Internet Explorer via the DOM, while <A class="Text_Link" HREF="http://www.openqa.org">Selenium</A>
 has a testing engine written in javascript. Watir also has the
 advantage of being the only tool that generates a programming
 language (Ruby) - very useful for long-term refactoring, at

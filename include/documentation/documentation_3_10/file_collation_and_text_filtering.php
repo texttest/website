@@ -1,6 +1,5 @@
-<div class="Text_Main_Header">File
-Collation and Text Filtering</div><div class="Text_Description">  Configuring the Test Result
-Evaluation </div>
+<div class="Text_Main_Header">File Collation and Text Filtering</div>
+<div class="Text_Description">  Configuring the Test Result Evaluation </div>
 
 <div class="Text_Normal"><BR>
 </div>

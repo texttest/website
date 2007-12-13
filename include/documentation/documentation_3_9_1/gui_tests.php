@@ -1,5 +1,4 @@
-<div class="Text_Main_Header">Testing a GUI with TextTest and a Use Case Recorder
-</div>
+<div class="Text_Main_Header">Testing a GUI with TextTest and a Use Case Recorder</div>
 
 <div class="Text_Normal">This is a step-by-step guide to testing a GUI with texttest.
 It assumes you have read and followed the instructions in the

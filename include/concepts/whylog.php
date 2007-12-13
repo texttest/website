@@ -1,5 +1,4 @@
-<div class="Text_Header">Five good reasons to use logging for asserting behaviour in
-acceptance tests</div>
+<div class="Text_Header">Five good reasons to use logging for asserting behaviour in acceptance tests</div>
 
 <OL>
 <div class="Text_Header"><li>Writing a test

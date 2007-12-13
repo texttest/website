@@ -1,7 +1,5 @@
-<div class="Text_Main_Header">The
-TextTest Sandbox</div>
-<div class="Text_Description"> handling test data and avoiding global side
-effects</div>
+<div class="Text_Main_Header">The TextTest Sandbox</div>
+<div class="Text_Description"> handling test data and avoiding global side effects</div>
 
 <div class="Text_Normal">
 

@@ -1,7 +1,5 @@
-<div class="Text_Main_Header">Faking
-it with TextTest </div>
-<div class="Text_Description"> How to avoid running your whole system for
-real</div>
+<div class="Text_Main_Header">Faking it with TextTest</div>
+<div class="Text_Description"> How to avoid running your whole system for real</div>
 
 <div class="Text_Normal"><BR>
 

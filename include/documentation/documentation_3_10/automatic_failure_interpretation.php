@@ -1,5 +1,4 @@
-<div class="Text_Main_Header">Automatic
-Failure Interpretation in TextTest</div>
+<div class="Text_Main_Header">Automatic Failure Interpretation in TextTest</div>
 
 <div class="Text_Normal"><BR>
 </div>

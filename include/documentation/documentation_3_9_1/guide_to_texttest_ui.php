@@ -1,5 +1,5 @@
-<div class="Text_Main_Header">Guide
-to TextTest's User Interfaces</div><div class="Text_Description"> Static GUI, Dynamic GUI and
+<div class="Text_Main_Header">Guide to TextTest's User Interfaces</div>
+<div class="Text_Description"> Static GUI, Dynamic GUI and
 Console</div>
 
 <div class="Text_Normal"><BR>

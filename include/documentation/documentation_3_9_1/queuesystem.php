@@ -1,6 +1,4 @@
-<div class="Text_Header" >Running
-					tests in parallel on a grid: The &ldquo;queuesystem&rdquo;
-					configuration </div>
+<div class="Text_Header" >Running tests in parallel on a grid: The &ldquo;queuesystem&rdquo; configuration </div>
 		
 					<div class="Text_Normal">When you have more than one machine at your disposal for
 					testing purposes, it is very beneficial to be able to utilise
