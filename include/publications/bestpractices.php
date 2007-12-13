@@ -1,5 +1,4 @@
-<div class="Text_Header"> Exploring Best Practice for
-XP Acceptance Testing</div>
+<div class="Text_Header"> Exploring Best Practice for XP Acceptance Testing</div>
 <div class="Text_Description">Workshop discussion at XP2005</div>
 <div class="Text_Header">Introduction</div>
 <div class="Text_Normal">The aim of the workshop was to discuss
