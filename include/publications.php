@@ -1,5 +1,4 @@
-<!--TITLE:Publications PAGEINFO:Here you will find publications and presenstions about texttest and read about events PATH:page=publications-->
-
+<!-- <div class="Text_Header">Publications</div>-->
  <table class="Table_Normal">
  <tr>
   <td>
