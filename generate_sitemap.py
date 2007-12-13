@@ -4,7 +4,7 @@ import os,sys
 os.chdir("include/");
 
 sitemap = open("sitemap.php","w")
-sitemap.write('<table class="Table_Normal"><tr><td>\n')
+sitemap.write('<table width="500" class="Table_Normal"><tr><td>\n')
 sitemap.write('<div class="Text_Header">Site map</div>\n')
 sitemap.write('<table class="index">\n')
 
@@ -13,12 +13,14 @@ unwantedDirs = ["CVS","images","kataminesweeper","htmlreport_example"]
 
 def findTitle(path):
     headers = ['<div class="Text_Main_Header">','<div class="Text_Header">']
-    end = '</end>'
+    end = '</div>'
     file = open(path,"r")
     for line in file.readlines():
         for head in headers:
             if head in line:
-                return line[:]
+                print line
+                print path
+                return line[(line.index(head)+len(head)):line.index(end)]
         
     return "No Header Found"
 
@@ -44,7 +46,10 @@ def sortFiles(files,path):
 
 def findAndHTML(path,level=""):
     files = os.listdir(path)
+    
     sitemap.write('<div class="Text_Normal">\n')
+    if level=="": sitemap.write('<B>Main Pages</B><br><br>\n') 
+
     files = sortFiles(files,path)
     for file in files:
         current_file = os.path.join(path,file)
@@ -56,13 +61,18 @@ def findAndHTML(path,level=""):
         else :
             if current_file[-3:] == "php":
                 if level == "" :
-                    towrite = '<a class="Text_Link" href="index.php?page=' + file[:-4] + '">' + findTitle(current_file) + '</a><br>\n'
+                    if file == "sitemap.php":
+                        towrite = '<a class="Text_Link" href="index.php?page=' + file[:-4] + '">Site map (this page)</a><br>\n'
+                    else:
+                        towrite = '<a class="Text_Link" href="index.php?page=' + file[:-4] + '">' + findTitle(current_file) + '</a><br>\n'
                 else:
-                    towrite = '<a class="Text_Link" href="index.php?page=' + level + '&n=' + file[:-4] + '">' + file[:-4] + '</a><br>\n'
+                    towrite = '<a class="Text_Link" href="index.php?page=' + level + '&n=' + file[:-4] + '">' + findTitle(current_file) + '</a><br>\n'
                 #else:
                 #    towite = file + '<br>\n'
                 sitemap.write(towrite)
     sitemap.write('</div>\n')
+
+
 
 findAndHTML(os.getcwd())
 sitemap.write('</table></td></tr></table>\n')
