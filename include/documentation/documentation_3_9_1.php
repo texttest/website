@@ -81,7 +81,7 @@
 	
           <table border=0 class="documentation_table">
             <tr>
-              <td width=150 ><div class="Table_Text_Header">Tutorials</div></td>
+              <td width=150 ><div class="Table_Text_Header">General</div></td>
               <td width=230><div class="Table_Text_Header">User Guide</div></td>
               <td width=250><div class="Table_Text_Header">Configuration Reference</div></td>
             </tr>
@@ -89,7 +89,10 @@
 			<tr>
 			  <td>
 			  	<div class="Table_Text_Normal">
-			    		 <?php  printLI("install_texttest","Install TextTest","Tooltip title"); ?>
+			    		 <?php  printLI("main","Overview of docs","Tooltip title"); ?> 
+                                         <?php  printLI("install_texttest","Installation guide","Tooltip title"); ?> 
+                                         <?php  printLI("troubleshooting","Troubleshooting","Tooltip title"); ?> 
+                                         <br><br><div class="Table_Text_Header">Tutorials</div>
 					 <?php  printLI("getting_started","Getting Started","Tooltip title"); ?>
 					 <?php  printLI("gui_tests","Testing a GUI","Tooltip title"); ?>
  				         <?php  printLI("kataminesweeper","Screencast","Tooltip title"); ?>

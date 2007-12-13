@@ -373,7 +373,7 @@
 			<div class="Table_Text_Small">Advanced</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=main#-x">Enable self-diagnostics</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#-x">Enable self-diagnostics</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -384,7 +384,7 @@
 			<div class="Table_Text_Small">Advanced</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=main#-xr">Configure self-diagnostics from &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#-xr">Configure self-diagnostics from &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -395,7 +395,7 @@
 			<div class="Table_Text_Small">Advanced</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=main#-xw">Write self-diagnostics to &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#-xw">Write self-diagnostics to &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 </TABLE>
