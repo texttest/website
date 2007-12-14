@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os,sys
 
-os.chdir("include/");
+os.chdir("../include/");
 
 sitemap = open("sitemap.php","w")
 sitemap.write('<table width="500" class="Table_Normal"><tr><td>\n')
