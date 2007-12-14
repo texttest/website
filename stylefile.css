@@ -89,6 +89,21 @@ table.documentation_table td
     MARGIN-RIGHT: 10px
 
 }
+.Text_Small_Header
+{
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: Verdana;
+    COLOR: #111100;
+
+	 FONT-WEIGHT:bold;
+    LETTER-SPACING:1;
+     
+
+    MARGIN-TOP: 3px;
+    MARGIN-LEFT: 20px;
+    MARGIN-RIGHT: 10px
+
+}
 /*Third Level Header*/
 .Text_Small_Header
 {
