@@ -32,8 +32,8 @@
 </div>
 <br><B>Pages under documentation</B>
 <div class="Text_Normal">
-<a class="Text_Link" href="index.php?page=documentation&n=documentation_3_10">Documentation for <?php echo $texttest_version ?></a><br>
-<a class="Text_Link" href="index.php?page=documentation&n=documentation_3_9_1">Documentation for <?php echo $texttest_version ?></a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_10">Documentation for 3.10</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_9_1">Documentation for 3.9.1</a><br>
 <a class="Text_Link" href="index.php?page=documentation&n=old_versions">Older Versions of the Documentation</a><br>
 <br><B>Pages under documentation_3_10</B>
 <div class="Text_Normal">
