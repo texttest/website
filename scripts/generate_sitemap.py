@@ -18,8 +18,6 @@ def findTitle(path):
     for line in file.readlines():
         for head in headers:
             if head in line:
-                print line
-                print path
                 return line[(line.index(head)+len(head)):line.index(end)]
         
     return "No Header Found"
@@ -63,15 +61,21 @@ def findAndHTML(path,level=""):
                 if level == "" :
                     if file == "sitemap.php":
                         towrite = '<a class="Text_Link" href="index.php?page=' + file[:-4] + '">Site map (this page)</a><br>\n'
+                    
                     else:
                         towrite = '<a class="Text_Link" href="index.php?page=' + file[:-4] + '">' + findTitle(current_file) + '</a><br>\n'
                 else:
-                    towrite = '<a class="Text_Link" href="index.php?page=' + level + '&n=' + file[:-4] + '">' + findTitle(current_file) + '</a><br>\n'
+                    if file[0:14] == "documentation_":
+                        doc_title = file.replace("documentation_","")
+                        doc_title = doc_title.replace(".php","")
+                        doc_title = doc_title.replace("_",".")
+                        towrite = '<a class="Text_Link" href="index.php?page=' + file[:-4] + '">Documentation for ' + doc_title + '</a><br>\n'
+                    else:
+                        towrite = '<a class="Text_Link" href="index.php?page=' + level + '&n=' + file[:-4] + '">' + findTitle(current_file) + '</a><br>\n'
                 #else:
                 #    towite = file + '<br>\n'
                 sitemap.write(towrite)
     sitemap.write('</div>\n')
-
 
 
 findAndHTML(os.getcwd())
