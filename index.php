@@ -86,7 +86,7 @@ array_push($all_releases, "3.10");
            <a href="index.php?page=news">[news]</a>
            <a href="index.php?page=contact">[contact]</a>
           <a href="index.php?page=siteinfo">[site info]</a>
-          <!--<a href="index.php?page=sitemap">[sitemap]</a>-->
+          <a href="index.php?page=sitemap">[sitemap]</a>
         </div>
       </td>
     </tr>
