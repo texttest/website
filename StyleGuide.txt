@@ -1,0 +1,31 @@
+Style Guide for writing On Texttest.org
+
+
+All <div class="xxx"> should end with </div>
+
+
+Text DIVs have a own Intendation
+wich is specified in the CSS file
+All these can be nested
+
+Normal Text
+<div class="Text_Normal">   
+
+Headers
+<div class="Text_Main_Header"> 
+<div class="Text_Header">
+<div class="Text_Small_Header">
+
+Description (Small italic text that glues to last div)
+<div class="Text_Description"> 
+
+
+For Bold Text use standard tag
+<B></B>
+
+For Italic use
+<I></I>
+
+For Underline
+<U></U> (Should never be user, use <B> or <I> if you wan't to point out something
+  to the reader)
