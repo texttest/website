@@ -2,7 +2,7 @@
 
 #Created by Henning Thornblad
 
-#This scripts recursivly checks all internal links as defined by linkIsInternal()
+#This scripts recursivly checks all images
 
 #Requirments
 # *  PHP naturally. must be reacheable from anywhere
@@ -21,15 +21,11 @@
 #    (It will catch and save all $_GET)
 
 #Restrictions
-#  Can't handle links created by JavaScript code (java is not parsed)
-#  Assumes all links are embedded with "" (which is WC3 Standard anyway)
-#  That all pages is defined in linkIsInternal()
+#  Can't handle IMG tags created by JavaScript code (java is not parsed)
+#  Assumes all image files are embedded with "" (which is WC3 Standard anyway)
 
 
 import os,sys
-
-#This should be a string only found on your 404 page
-ERROR_STRING = "<!--404_PAGE_NOT_FOUND-->"
 
 #List of links already checked
 #Used to avoid dead loops
@@ -37,14 +33,14 @@ ERROR_STRING = "<!--404_PAGE_NOT_FOUND-->"
 checkedLinks = list()
 
 #This list stores all known incorrect links
-knownIncorrectLinks  = list()
+knownIncorrectImagePaths  = list()
 
 #Counting for statistics
-multiLineLinks = 0
-incorrectLinks = 0
+multiLineImages = 0
+incorrectImages = 0
 
-def print404(URL,targetURL,onLine):
-    global incorrectLinks
+def printError(URL,targetURL,onLine):
+    global incorrectImages
     incorrectLinks += 1
     print "404!!!"
     print "  Link:" + URL
@@ -81,19 +77,14 @@ def splitURL(URL):
         
 
 def check(URL,targetURL):
-    global ERROR_STRING, multiLineLinks, checkedLinks, knownIncorrectLinks
+    global multiLineImages, checkedLinks, knownIncorrectImages
     #print "Check:", URL
     file, getLine = splitURL(URL)
     parsedFile = os.popen("php " + file + " " + getLine +  " r")
     nr=0
     for line in parsedFile.readlines():
-        nr += 1
-        if ERROR_STRING in line:
-            print404(URL,targetURL,nr)
-            return False
-
         currentLine = line
-        while 'href="' in currentLine:
+        while '<IMG>' in currentLine:
             currentLine = currentLine[currentLine.index('href="') + 6:]
             if '"' in currentLine:
                 link = currentLine[0:currentLine.index('"')]
@@ -119,12 +110,12 @@ def check(URL,targetURL):
     return True
 
 
-print "Checking Internal PHP links"
+print "Checking PHP Images"
 print ""
 os.chdir("..");
 check("index.php","index.php")
 
 print "Complete..."
-print "  * Found: ", incorrectLinks, "incorrect links"
-print "  * Found: ", multiLineLinks, "multiline links"
+print "  * Found: ", incorrectLinks, "incorrect images"
+print "  * Found: ", multiLineLinks, "multiline images"
 #print repr(checkedLinks)
