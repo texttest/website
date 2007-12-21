@@ -106,7 +106,7 @@ results correspond to a column, while each test has a row. The
 results can be explored by clicking around.</div>
 <div class="Text_Normal">The colours in the site are also configurable: use the config
 file dictionary setting &ldquo;testoverview_colours&rdquo;. To
-see how to set this, look at the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">config
+see how to set this, look at the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A> and pattern match on the default value.</div>
 <div class="Text_Normal">After a while, very old test results in the repository cease
 to be interesting and can safely be archived. This is done via

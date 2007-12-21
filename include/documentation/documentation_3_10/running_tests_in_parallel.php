@@ -51,12 +51,12 @@ support scripts are available, over and above those provided by
 default: 
 </div>
 <UL>
-	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=option";?>">Full list of options when
+	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=options_default";?>">Full list of options when
 	submitting test runs</A></div>
 
-	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">Full list of possible entries
+	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">Full list of possible entries
 	for config files</A></div>
-	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=scripts";?>">Full list of plugin scripts (for
+	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=scripts_default";?>">Full list of plugin scripts (for
 	use with -s option)</A></div>
 </UL>
 <div class="Text_Header"><A NAME="default_queue"></A><A NAME="-q"></A>Queues</div>
@@ -86,7 +86,7 @@ is as follows:</div>
 	of the queue system will be used, supposing it has one.</div>
 
 </OL>
-<div class="Text_Normal">It is often useful to <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=writing_a_own_configmodule";?>">write a
+<div class="Text_Normal">It is often useful to <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=writing_a_config_module";?>">write a
 derived configuration</A> to modify this logic, for example to
 introduce some mechanism to select queues based on expected time
 taken.</div>

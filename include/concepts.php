@@ -54,12 +54,11 @@ function printLI($n,$realName,$title)
        <?php  printLI("webusecase","Driving a web application with WebUseCase","Tooltip title"); ?>
        <?php  printLI("problems","Frequently raised objections to Use-case recording","Tooltip title"); ?>
     </div>       
-      
+   
    <?php 
-     
      if ($path == "not_set") include_404_page();
-     elseif  ($path == "no_needed") include 'include/concepts/concepts.php';
-     else include($path); 
+     elseif  ($path == "no_needed") include_file ('include/concepts/concepts.php');
+     else include_file($path); 
    ?>
 				
     </td>

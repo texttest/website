@@ -367,11 +367,17 @@ is the name of the script. In order to pass arguments to such
 scripts, a form with &lt;option&gt;=&lt;value&gt; is used. For
 example, to call the default.ReplaceText script with appropriate
 arguments, you would call:</div>
-<div class="Text_Normal">texttest.py -s &ldquo;default.ReplaceText file=errors old=bad new=good&rdquo;</PRE><div class="Text_Normal">
+
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+texttest.py -s &ldquo;default.ReplaceText file=errors old=bad new=good&rdquo;
+<?php codeSampleEnd() ?>
+</div>
+<div class="Text_Normal">
 TextTest includes several such scripts which have been found to
-be generally useful, which are <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=scripts";?>">listed
+be generally useful, which are <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=scripts_default";?>">listed
 here</A>. To see how to write your own such scripts, consult the
-<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=writing_a_own_configmodule";?>">guide to writing your own
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=writing_a_config_module";?>">guide to writing your own
 configuration</A>. 
 </div>
 

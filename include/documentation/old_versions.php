@@ -11,6 +11,7 @@
         <div class="Table_Text_Normal">
         <?php
         
+        
         foreach ($all_releases as $release)
         {
            $rel = convertToDocFormat($release);

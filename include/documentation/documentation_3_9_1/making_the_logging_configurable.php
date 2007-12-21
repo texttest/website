@@ -1,7 +1,5 @@
 <div class="Text_Main_Header">Making the logging configurable</div>
-<div class="Text_Description">integration with log frameworks
-gram
-	behaviour with TextTest</div>
+<div class="Text_Description">integration with log frameworks</div>
 
 
 <div class="Text_Normal"><BR>
@@ -93,11 +91,11 @@ determined by $DIAG_INPUT_FILE, and all its files are written to
 the directory $DIAG_OUTPUT.</div>
 <div class="Text_Normal">
 
-<PRE>
+<?php codeSampleBegin() ?>
 [diagnostics]
 configuration_file_variable:DIAG_INPUT
 write_directory_variable:DIAG_OUTPUT
-</PRE>
+<?php codeSampleEnd() ?>
 
 </div>
 <div class="Text_Small_Header">Example 2 (log4j)</div>
@@ -110,12 +108,12 @@ directory determined by the &ldquo;diag_output&rdquo; property.</div>
 
 <div class="Text_Normal">
 
-<PRE>
+<?php codeSampleBegin() ?>
 [diagnostics]
 configuration_file_variable:diag_input
 write_directory_variable:diag_output
 properties_file:log4jconf
-</PRE>
+<?php codeSampleEnd() ?>
 
 </div>
 <div class="Text_Header">

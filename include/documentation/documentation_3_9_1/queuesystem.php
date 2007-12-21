@@ -43,9 +43,9 @@
 					<UL>
 						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=options_queuesystem">Full list of options when
 						submitting test runs</A></div>
-						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=config_queuesystem">Full list of possible entries
+						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=configfile_queuesystem">Full list of possible entries
 						for config files</A></div>
-						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=scripts">Full list of plugin scripts (for
+						<LI><div class="Text_Normal"><A class="Text_Link" href="index.php?page=<?php echo $version ?>&n=scripts_queuesystem">Full list of plugin scripts (for
 						use with -s option)</A></div>
 					</UL>
 					<div class="Text_Header"><A NAME="default_queue"></A><A NAME="-q"></A>Queues</div>

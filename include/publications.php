@@ -8,10 +8,10 @@
    
    if (isset($_GET['n']))
    {
-   	if ($_GET['n'] == "bestpractices") include 'include/publications/bestpractices.php';
-   	else include 'include/publications/main.php';
+   	if ($_GET['n'] == "bestpractices") include_file ('include/publications/bestpractices.php');
+   	else include_file ('include/publications/main.php');
    }
-   else include 'include/publications/main.php';
+   else include_file ('include/publications/main.php');
 
   ?>
    </td>

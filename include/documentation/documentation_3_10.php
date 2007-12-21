@@ -15,8 +15,9 @@
   
   function hideDocTable()
   {
-    print "<script language=\"javascript\">openClose('DocTable')</script>";
-    print "<script language=\"javascript\">openClose('ControlTable')</script>";
+  	 
+    //print "<script language=\"javascript\">openClose('DocTable')</script>";
+    //print "<script language=\"javascript\">openClose('ControlTable')</script>";
 
   }
    
@@ -72,7 +73,7 @@
    </div>
    <div id="DocTable">
    <div class="Text_Header" >  
-   Index <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Hide)</a>
+   Index <!--<a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Hide)</a>-->
    </div>
    <div class="Text_Normal">
    <table border=0 bgcolor="#000000" cellspacing=1>
@@ -148,8 +149,8 @@
 	  checkGET();
 	
 	  if ($path == "not_set") include_404_page();
-     elseif  ($path == "no_needed") include $basePath."/main.php";
-     else include($path); 
+     elseif  ($path == "no_needed") include_file($basePath."/main.php");
+     else include_file($path); 
 
 	?>                  
     </td>

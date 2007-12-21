@@ -71,12 +71,24 @@ Telling TextTest to collect additional files</div>
 takes the following form : 
 </div>
 
-<div class="Text_Normal">[collate_file]
+<div class="Text_Normal">
+
+<?php codeSampleBegin() ?>
+[collate_file]
 &lt;texttest_name&gt;:&lt;source_file_path&gt;
-where &lt;source_file_path&gt; is some file your application
+
+<?php codeSampleEnd() ?>
+
+
+</div>
+
+<div class="Text_Normal">
+where &lt;source_file_path&gt;</i> is some file your application
 writes and &lt;texttest_name&gt; is what you want it to be
 called by TextTest. 
 </div>
+
+
 <div class="Text_Normal">If you plan to do this, make sure you read the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">document
 describing how the TextTest temporary directory works</A> first.
 &lt;source_file_path&gt; here should in principle never be an
@@ -129,8 +141,14 @@ previously saved files that match this &ldquo;target pattern&rdquo;
 and all files written by the test that match the &ldquo;source
 pattern&rdquo; become collated files. E.g. suppose we have the
 following entry in the config file:</div>
-<div class="Text_Normal">[collate_file]
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+[collate_file]
 data*:data*.dump
+<?php codeSampleEnd() ?>
+
+</div>
+<div class="Text_Normal">
 Suppose also that an earlier saved run had produced data1.&lt;app&gt;
 
 and data2.&lt;app&gt; and the latest run produced data1.dump and
@@ -198,17 +216,33 @@ TextTest name of the file : i.e. the stem of the file name. (See
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">file format documentation</A>
 for more details of this). It should take this form:</div>
 
-<div class="Text_Normal">[run_dependent_text]
+<div class="Text_Normal">
+
+<?php codeSampleBegin() ?>
+[run_dependent_text]
 &lt;texttest_name&gt;:&lt;run_dependent_pattern1&gt;
 &lt;texttest_name&gt;:&lt;run_dependent_pattern2&gt;
+<?php codeSampleEnd() ?>
+</div>
+
+<div class="Text_Normal">
+
 The patterns provided may contain regular expressions. Any line
 in the file which matches the expression, or contains the text
 provided, will be filtered out in its entirety from the
 comparison. For example:</div>
-<div class="Text_Normal">[run_dependent_text]
+<div class="Text_Normal">
+
+<?php codeSampleBegin() ?>
+[run_dependent_text]
 output:Process ID
 output:[0-9][0-9]:[0-9][0-9]
 my_file:Machine name
+<?php codeSampleEnd() ?>
+
+
+</div>
+<div class="Text_Normal">
 This will cause all lines that contain the string &ldquo;Process
 ID&rdquo; or match the given regular expression to be filtered
 out from the standard output. Likewise, the collated file
@@ -222,7 +256,7 @@ specific to this entry. This is defined as follows:
 </div>
 <UL>
 	<div class="Text_Normal"><li><SPAN STYLE="text-decoration: none"><b><I>&lt;pattern&gt;{LINES
-	&lt;number_of_lines&gt;}</I></b></SPAN> - On encountering a
+	&lt;number_of_lines&gt;}</b></SPAN> - On encountering a
 	match with &lt;pattern&gt;, instead of removing the single line
 	containing the pattern, remove &lt;number_of_lines&gt;. The
 	count includes the line matched, so {LINES 1} has no effect.</div>
@@ -266,12 +300,16 @@ specific to this entry. This is defined as follows:
 
 </UL>
 <div class="Text_Normal">For example:</div>
-<div class="Text_Normal">[run_dependent_text]
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+[run_dependent_text]
 output:Process ID{WORD 3}
 output:[0-9][0-9]:[0-9][0-9]{LINES 3}
 errors:{LINE 1}
 my_file:Machine name{-&gt;}End of Machines Section
 my_file:{INTERNAL writedir}{REPLACE &lt;texttest write dir}
+<?php codeSampleEnd() ?>
+
 </div><div class="Text_Header">
 <A NAME="unordered_text"></A>Filtering the order of certain
 lines</div>
@@ -311,8 +349,15 @@ in particular Files</div>
 <div class="Text_Normal">This is controlled by the dictionary entry
 &ldquo;failure_severity&rdquo;, and takes the form:</div>
 
-<div class="Text_Normal">[failure_severity]
+<div class="Text_Normal">
+
+<?php codeSampleBegin() ?>
+[failure_severity]
 &lt;texttest_name&gt;:&lt;severity&gt;
+<?php codeSamplEnd() ?>
+</div>
+
+<div class="Text_Normal">
 &lt;severity&gt; here is a number, where 1 is the most severe
 and increasing the number means decreasing the severity. If the
 entry is not present, both &ldquo;output&rdquo; and &ldquo;errors&rdquo;

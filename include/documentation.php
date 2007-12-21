@@ -1,4 +1,3 @@
-<!--TITLE:News PAGEINFO:Latest news about texttest and it's development PATH:page=news-->
 <table class="Table_Normal">
  <tr>
   <td>

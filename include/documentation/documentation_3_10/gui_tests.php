@@ -15,7 +15,7 @@ though. Text in italics is background information only.</div>
 <div class="Text_Normal">The first step is to get your program using the <A class="Text_Link" ">use
 case recorder </A>of your choice, at least enough to be able to
 create some simple scripts. If you have a PyGTK GUI, use
-<A class="Text_Link" href="index.php?page=concepts&n=xusecase>PyUseCase</A>. If you
+<A class="Text_Link" href="index.php?page=concepts&n=xusecase">PyUseCase</A>. If you
 have a Java Swing GUI, use <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>.
 If you use another GUI toolkit &ndash; write your own use case
 recorder and tell me about it! 

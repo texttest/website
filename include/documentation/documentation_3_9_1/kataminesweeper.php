@@ -163,7 +163,7 @@ here it is again in plain text in case you can't read that
 screenshot:</div>
 <div class="Text_Normal"><BR>
 </div>
-<PRE>
+<?php codeSampleBegin() ?>
      import sys
      def log(message):
          print &gt;&gt; sys.stderr, message
@@ -227,6 +227,7 @@ screenshot:</div>
      if __name__ == &quot;__main__&quot;:
          inputfile = sys.stdin
          outputfile = sys.stdout
-         main(inputfile, outputfile)</PRE>
+         main(inputfile, outputfile)
+<?php codeSampleEnd() ?>
 </BODY>
 </HTML>

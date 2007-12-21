@@ -92,7 +92,7 @@ configured using the config file list entry &ldquo;hide_test_category&rdquo;
 
 (a common usage is to hide all successful tests automatically).
 To see how to refer to various categories, use the keys from for
-example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">config
+example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A>.</div>
 <div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>
 Viewing Tests in the Dynamic GUI</div>
@@ -439,7 +439,7 @@ at the far right indicates whether it is doing something:
 sometimes searching a large test suite for example may take a
 little time.</div>
 <div class="Text_Normal">All of these can be hidden by default using the
-&ldquo;hide_gui_element&rdquo; entry, as above, see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">table
+&ldquo;hide_gui_element&rdquo; entry, as above, see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">table
 of config file settings</A> for the key format. If you don't
 hide the menubar via this mechanism you can also show and hide
 them via the &ldquo;View&rdquo; menu.</div>
@@ -465,13 +465,19 @@ selected, and providing &ldquo;1&rdquo; also.</div>
 in drop-down lists to the user, in the case of the text boxes.
 This is done via the &ldquo;gui_entry_options&rdquo; config file
 entry, which is keyed in the same way. For example:</div>
-<div class="Text_Normal">[gui_entry_overrides]
+<div class="Text_Normal">
+
+<?php codeSampleBegin() ?>
+[gui_entry_overrides]
 show_differences_where_present:0
 current_selection_refine:1
 run_this_version:sparc
 
 [gui_entry_options]
 run_this_version:linux
+<?php codeSampleEnd() ?>
+</div>
+<div class="Text_Normal">
 This will cause the dynamic GUI saving tab not to automatically
 check the box for &quot;Show differences where present&quot;, as
 in the example above. It will also cause the static GUI to
@@ -488,7 +494,7 @@ view (top right window under Test tab) can be configured via the
 GUI dictionary entries &ldquo;test_colours&rdquo; and
 &ldquo;file_colours&rdquo; respectively. These are keyed with
 particular pre-defined names for the different test states: to
-see what they are, look at the default values in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">>table
+see what they are, look at the default values in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">>table
 of config file settings</A>. The values should be text strings
 as recognised by RGB files.</div>
 
@@ -499,7 +505,7 @@ These can be configured via the &ldquo;gui_accelerators&rdquo;
 dictionary entry. The keys in this dictionary should correspond
 to the labels on the relevant buttons, and the values should be
 for example &ldquo;&lt;control&gt;&lt;alt&gt;r&rdquo; or &ldquo;F4&rdquo;.
-If in doubt, consult the format of the default ones in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile";?>">>table
+If in doubt, consult the format of the default ones in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">>table
 of config file settings</A>. The values should be text strings
 as recognised by RGB files.</div>
 
@@ -551,10 +557,15 @@ entry. This is a composite dictionary whose keys are &ldquo;static&rdquo;,
 both static and dynamic GUIs) and the values are patterns of
 &ldquo;process names&rdquo;: i.e. names of editors, viewers, the
 dynamic GUI etc. For eaxmple:</div>
-<div class="Text_Normal">[query_kill_processes]
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+[query_kill_processes]
 default:.*emacs
 static:tkdiff
-dynamic:texttest.*</div><div class="Text_Header">
+dynamic:texttest.*
+<?php codeSampleEnd() ?>
+
+</div><div class="Text_Header">
 
 <A NAME="-con"></A><A NAME="-n"></A><A NAME="-o"></A>The Console
 Interface</div>
