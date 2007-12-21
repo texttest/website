@@ -2,6 +2,16 @@
 <?php
 include 'php.functions';
 
+//Used for testing internal links (scripts/check_php_links.py)
+
+if (isset ($argv))
+	for ($i=1;$i<count($argv);$i++)
+	{
+		print "-----------------INTERNAL-TESTNING-----------------------";
+		$it = split("=",$argv[$i]);
+		$_GET[$it[0]] = $it[1];
+	}
+
 //Current release here
 $current_release = "3.9.1";
 
@@ -55,16 +65,16 @@ array_push($all_releases, "3.10");
                   	}
                   	if (! $pageFound)
                   	{
-								if ($_GET["page"]=="main")                     include 'include/main.php';
-								elseif ($_GET["page"]=="news")                 include 'include/news.php';
-								elseif ($_GET["page"]=="download")             include 'include/download.php';
-								elseif ($_GET["page"]=="contact")              include 'include/contact.php';
-								elseif ($_GET["page"]=="publications")         include 'include/publications.php';
-								elseif ($_GET["page"]=="siteinfo")             include 'include/siteinfo.php';
-								elseif ($_GET["page"]=="sitemap")              include 'include/sitemap.php';
-								elseif ($_GET["page"]=="about")                include 'include/about.php';
-								elseif ($_GET["page"]=="concepts")             include 'include/concepts.php';
-								elseif ($_GET["page"]=="documentation")             include 'include/documentation.php';
+								if ($_GET["page"]=="main")                     include_file ('include/main.php');
+								elseif ($_GET["page"]=="news")                 include_file('include/news.php');
+								elseif ($_GET["page"]=="download")             include_file('include/download.php');
+								elseif ($_GET["page"]=="contact")              include_file('include/contact.php');
+								elseif ($_GET["page"]=="publications")         include_file('include/publications.php');
+								elseif ($_GET["page"]=="siteinfo")             include_file('include/siteinfo.php');
+								elseif ($_GET["page"]=="sitemap")              include_file('include/sitemap.php');
+								elseif ($_GET["page"]=="about")                include_file('include/about.php');
+								elseif ($_GET["page"]=="concepts")             include     ('include/concepts.php');
+								elseif ($_GET["page"]=="documentation")        include_file('include/documentation.php');
 								else                                           include_404_page();
 							}
 						}                                           
