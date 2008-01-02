@@ -28,29 +28,20 @@
 
 import os,sys
 
-#This should be a string only found on your 404 page
-ERROR_STRING = "<!--404_PAGE_NOT_FOUND-->"
+#Since HTML isn't case sensitive (and string compare is)
+#we need to eliminate variations
+def easyParse(line):
+    newLine = line.replace("Href=","href=")
+    newLine = newLine.replace("HREF=","href=")
+    newLine = newLine.replace("HRef=","href=")
 
-#List of links already checked
-#Used to avoid dead loops
-#and redundant checks
-checkedLinks = list()
+    newLine = newLine.replace("<IMG","<img")
+    newLine = newLine.replace("<Img","<img")
 
-#This list stores all known incorrect links
-knownIncorrectLinks  = list()
-
-#Counting for statistics
-multiLineLinks = 0
-incorrectLinks = 0
-
-def print404(URL,targetURL,onLine):
-    global incorrectLinks
-    incorrectLinks += 1
-    print "404!!!"
-    print "  Link:" + URL
-    print "  Found in:" + targetURL
-    print "  On line:" ,onLine
-    print ""
+    newLine = newLine.replace("SRC=","src=")
+    newLine = newLine.replace("Src=","src=")
+    return newLine
+    
 
 def linkIsInternal(link):
     if "index.php" in link:
@@ -78,10 +69,37 @@ def splitURL(URL):
         getLine = getLine.replace("&"," ")
         
     return url, getLine
-        
+
+
+#This should be a string only found on your 404 page
+ERROR_STRING = "<!--404_PAGE_NOT_FOUND-->"
+
+#List of links already checked
+#Used to avoid dead loops
+#and redundant checks
+checkedLinks = list()
+
+#This list stores all known incorrect links
+knownIncorrectLinks  = list()
+
+#Counting for statistics
+multiLineLinks = 0
+incorrectLinks = 0
+incorrectImgTags = 0
+missingImgFile = 0
+
+def print404(URL,targetURL,onLine):
+    global incorrectLinks
+    incorrectLinks += 1
+    print "404!!!"
+    print "  Link:" + URL
+    print "  Found in:" + targetURL
+    print "  On line:" ,onLine
+    print ""
+
 
 def check(URL,targetURL):
-    global ERROR_STRING, multiLineLinks, checkedLinks, knownIncorrectLinks
+    global ERROR_STRING,incorrectImgTags, missingImgFile ,multiLineLinks, checkedLinks, knownIncorrectLinks
     #print "Check:", URL
     file, getLine = splitURL(URL)
     parsedFile = os.popen("php " + file + " " + getLine +  " r")
@@ -92,7 +110,36 @@ def check(URL,targetURL):
             print404(URL,targetURL,nr)
             return False
 
-        currentLine = line
+        currentLine = easyParse(line)
+
+        #Search and check images
+        while '<img' in currentLine:
+            if 'src="' in currentLine and '>' in currentLine and '"' in currentLine[currentLine.index('src="') + 5 :]:
+                currentLine = currentLine[currentLine.index('src="') + 5 :]
+                imgFile = currentLine[:currentLine.index('"')]
+                if not os.path.exists(imgFile):
+                    print "Found missing image"
+                    print "  File Path:" + imgFile
+                    print "  Located in: " + URL
+                    print "  Found on line:" + line
+                    print ("  (line number:" + str(nr) + ")")
+                    print ""
+                    missingImgFile += 1
+                currentLine = currentLine[currentLine.index('>') + 1 :]
+            else:
+                print "Found incomplete image tag"
+                print "  Located in: " + URL
+                print "  Starting on line:" + line
+                print ("  (line number:" + str(nr) + ")")
+                print ""
+                incorrectImgTags += 1
+
+                #Stops while loop (else unpredictable future)
+                currentLine = ""
+                
+        currentLine = easyParse(line)
+        
+        #Search and check links
         while 'href="' in currentLine:
             currentLine = currentLine[currentLine.index('href="') + 6:]
             if '"' in currentLine:
@@ -119,12 +166,16 @@ def check(URL,targetURL):
     return True
 
 
-print "Checking Internal PHP links"
+print "Checking Internal PHP links and images"
 print ""
 os.chdir("..");
 check("index.php","index.php")
 
 print "Complete..."
-print "  * Found: ", incorrectLinks, "incorrect links"
-print "  * Found: ", multiLineLinks, "multiline links"
+print "  * Found:", incorrectLinks,   "incorrect links"
+print "  * Found:", multiLineLinks,   "multiline links"
+print ""
+print "  * Found:", incorrectImgTags, "incorrect image tags"
+print "  * Found:", missingImgFile,   "missing images"
+ 
 #print repr(checkedLinks)
