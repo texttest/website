@@ -354,7 +354,7 @@ in particular Files</div>
 <?php codeSampleBegin() ?>
 [failure_severity]
 &lt;texttest_name&gt;:&lt;severity&gt;
-<?php codeSamplEnd() ?>
+<?php codeSampleEnd() ?>
 </div>
 
 <div class="Text_Normal">

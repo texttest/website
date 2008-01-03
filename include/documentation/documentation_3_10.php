@@ -34,7 +34,7 @@
     	}
    }
 	print ">\n";
-	print "<a class=\"Text_Link\" title=\"".$realName."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>";  
+	print "<a class=\"Text_Link\" title=\"".$title."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>";  
    
   }
   //Check $_GET
@@ -90,28 +90,28 @@
 			<tr>
 			  <td>
 			  	<div class="Table_Text_Normal">
-			    		 <?php  printLI("main","Overview of docs","Tooltip title"); ?> 
-                                         <?php  printLI("install_texttest","Installation guide","Tooltip title"); ?> 
-                                         <?php  printLI("troubleshooting","Troubleshooting","Tooltip title"); ?> 
+			    		 <?php  printLI("main","Overview of docs","The top-level documentation page, showing how to use the docs"); ?> 
+                                         <?php  printLI("install_texttest","Installation guide","Step-by-step what you need to install"); ?> 
+                                         <?php  printLI("troubleshooting","Troubleshooting","Diagnosing problems using TextTest's internal logging"); ?> 
                                          <br><br><div class="Table_Text_Header">Tutorials</div>
-					 <?php  printLI("getting_started","Getting Started","Tooltip title"); ?>
-					 <?php  printLI("gui_tests","Testing a GUI","Tooltip title"); ?>
- 				         <?php  printLI("kataminesweeper","Screencast","Tooltip title"); ?>
+					 <?php  printLI("getting_started","Getting Started","A walk-through of how to test a hello-world program with TextTest"); ?>
+					 <?php  printLI("gui_tests","Testing a GUI","How to test a simple GUI. Assumes you have read the simpler tutorial above"); ?>
+ 				         <?php  printLI("kataminesweeper","Screencast","Solving Kata Minesweeper with test-driven development using TextTest"); ?>
 				</div>
 		      </td>
 		      <td>
 		      <div class="Table_Text_Normal">
-			    	 <?php  printLI("about_testsuites","Understanding Test Suites","Tooltip title"); ?>
-			    	 <?php  printLI("texttest_sandbox","Managing test data","Tooltip title"); ?>
-			    	 <?php  printLI("file_collation_and_text_filtering","Configuring the textual comparison","Tooltip title"); ?>
-			    	 <?php  printLI("guide_to_texttest_ui","Guide to TextTest UI","Tooltip title"); ?>
-			    	 <?php  printLI("running_texttest_unattended","Running TextTest unattended","Tooltip title"); ?>
-			    	 <?php  printLI("faking_it_with_texttest","Mocking out external programs","Tooltip title"); ?>
-			    	 <?php  printLI("making_the_logging_configurable","Making the logging configurable","Tooltip title"); ?>
-			    	 <?php  printLI("measuring_system_resource_usage","Performance and memory checking","Tooltip title"); ?>
-			    	 <?php  printLI("automatic_failure_interpretation","Automatic failure interpretation","Tooltip title"); ?>
-			    	 <?php  printLI("running_tests_in_parallel","Running tests in parallel","Tooltip title"); ?>
-			    	 <?php  printLI("writing_a_config_module","Write your own configuration","Tooltip title"); ?>
+			    	 <?php  printLI("about_testsuites","Understanding Test Suites","The files and directories that make up a TextTest suite"); ?>
+			    	 <?php  printLI("texttest_sandbox","Managing test data","The TextTest sandbox : providing test data and avoiding global effects"); ?>
+			    	 <?php  printLI("file_collation_and_text_filtering","Collating and Filtering","Configuring which files are compared and how they are compared"); ?>
+			    	 <?php  printLI("guide_to_texttest_ui","The User Interfaces","A walk-through the user interfaces and how to use and configure them"); ?>
+			    	 <?php  printLI("running_texttest_unattended","Running unattended","Guide to Batch Mode. Produces plain text and HTML reports of unattended runs "); ?>
+			    	 <?php  printLI("faking_it_with_texttest","Mocking things out","How to 'mock out' external programs and subsystems for determinism, speed, etc."); ?>
+			    	 <?php  printLI("making_the_logging_configurable","Configuring the logging","Configuring your test logging using log4x-style configuration files"); ?>
+			    	 <?php  printLI("measuring_system_resource_usage","CPU time and memory","Checking that your tests stay within certain bounds for CPU time or memory usage"); ?>
+			    	 <?php  printLI("automatic_failure_interpretation","Automatic failure interpretation","Associating certain textual patterns with problem descriptions, or reported bugs"); ?>
+			    	 <?php  printLI("running_tests_in_parallel","Running tests in parallel","Using Sun Grid Engine or LSF to run all your tests in parallel"); ?>
+			    	 <?php  printLI("writing_a_config_module","Write your own configuration","Using the Python-framework aspect of Texttest to override parts of its behaviour"); ?>
 			
 		      </div>
 		      </td>
@@ -119,15 +119,15 @@
 		       <div class="Table_Text_Normal">
 
 				<b>Default Configuration:</b>
-			    	 <?php  printLI("options_default","Options when submitting test runs","Tooltip title"); ?>
-				 <?php  printLI("configfile_default","Possible entries for config files","Tooltip title"); ?>
-				 <?php  printLI("scripts_default","List of plugin scripts","Tooltip title"); ?>
+			    	 <?php  printLI("configfile_default","Config files","Table of all possible entries for application and personal config files"); ?>
+				 <?php  printLI("options_default","Running/selecting options","Table of all options used when running or selecting tests"); ?>
+				 <?php  printLI("scripts_default","Plugin scripts","Table of all provided scripts for analysing or updating test suites"); ?>
 				 <br><br>
                                  <b>Queuesystem Configuration:</b>
 				 <a href="index.php?page=<?php echo $version; ?>&n=queuesystem" class="Text_Link">(description)</a>
-			         <?php  printLI("options_queuesystem","Options when submitting test runs","Tooltip title"); ?>
-				 <?php  printLI("configfile_queuesystem","Possible entries for config files","Tooltip title"); ?>
-				 <?php  printLI("scripts_queuesystem","List of plugin scripts","Tooltip title"); ?>
+			         <?php  printLI("configfile_queuesystem","Config files","Table of all possible entries for application and personal config files"); ?>
+				 <?php  printLI("options_queuesystem","Running/selecting options","Table of all options used when running or selecting tests"); ?>
+				 <?php  printLI("scripts_queuesystem","Plugin scripts","Table of all provided scripts for analysing or updating test suites"); ?>
 				 
 
 		      </div>
