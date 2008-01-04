@@ -1,7 +1,7 @@
 <div class="Text_Header">Older Versions of the Documentation</div>
 
 <!--Only work when connected to tha Internet-->
-<?php $pathToOldDocs="http://texttest.carmen.se/TextTest/docs"; ?>
+<?php $pathToOldDocs="http://texttest.carmen.se/old_version/TextTest/docs"; ?>
 
 <div class="Text_Normal">
 <table border="0">
