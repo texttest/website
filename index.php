@@ -87,16 +87,16 @@ array_push($all_releases, "3.10");
     </tr>
     <tr valign=bottom>
       <td align=left>
-  <div class="Footer">Last updated:
-       <script language="JavaScript" type="text/javascript">  lastUpdated()   </script> </div>
+  		<div class="Footer"><?php echo "Last updated: " . date ("d F Y", getlastmod()); ?></div>
+  	   <!-- date ("d F Y H:i:s.", getlastmod()); -->
       </td>     
            
       <td align=right>
         <div class="Footer">
            <a href="index.php?page=news">[news]</a>
            <a href="index.php?page=contact">[contact]</a>
-          <a href="index.php?page=siteinfo">[site info]</a>
-          <a href="index.php?page=sitemap">[sitemap]</a>
+           <a href="index.php?page=siteinfo">[site info]</a>
+           <a href="index.php?page=sitemap">[sitemap]</a>
         </div>
       </td>
     </tr>
