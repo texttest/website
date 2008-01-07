@@ -155,7 +155,7 @@ version 3.9.1.)</I></div>
 <div class="Text_Normal">Here is
                                                           the final code that I end up with: (Click to enlarge)</div>
 <A class="Text_Link" class="Text_Link" href="include/documentation/kataminesweeper/KataMinesweeper_htm_37bb559.jpg">
-<IMG width="750" height="1100"  SRC="include/documentation/kataminesweeper/KataMinesweeper_htm_37bb559.jpg" NAME="graphics1" border=0>
+<IMG SRC="include/documentation/kataminesweeper/KataMinesweeper_htm_37bb559.png" NAME="graphics1" border=0>
 </A>
                  
 <div class="Text_Normal">And
