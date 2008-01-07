@@ -35,10 +35,10 @@
 					<div class="Text_Normal">So, xUseCase recording with application events looks like
 					this:</div>
 					<div class="Text_Normal"><img src="include/concepts/images/xusecaserec.jpg" NAME="Graphic1" ALIGN=LEFT WIDTH=500 HEIGHT=152 BORDER=0><BR CLEAR=LEFT>Replaying,
-					with application events, looks like this:</div>
+					with application events, looks like this:
 					<img src="include/concepts/images/xusecaserep.jpg" NAME="Graphic4" ALIGN=LEFT WIDTH=498 HEIGHT=110 BORDER=0><BR CLEAR=LEFT>
-
-					<HR>
+  
+					</div><HR>
 					<div class="Text_Normal">Now for an example. Assume we have the following use case
 					script from a Swing App, using JUseCase:</div><div class="Text_Normal">
 					<?php codeSampleBegin(); ?><I>load movie data into list</I>
