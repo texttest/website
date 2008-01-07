@@ -18,7 +18,11 @@ def findTitle(path):
     for line in file.readlines():
         for head in headers:
             if head in line:
-                return line[(line.index(head)+len(head)):line.index(end)]
+                if end in line:
+                    return line[(line.index(head)+len(head)):line.index(end)]
+                else:
+                    return line[(line.index(head)+len(head)):-1]
+                
         
     return "No Header Found"
 
@@ -50,6 +54,7 @@ def findAndHTML(path,level=""):
 
     files = sortFiles(files,path)
     for file in files:
+        print file
         current_file = os.path.join(path,file)
         if os.path.isdir(current_file):
             towrite = "<br><B>Pages under " + file + "</B>\n"
