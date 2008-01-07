@@ -1,6 +1,5 @@
 
-<div class="Text_Header"><A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A>Troubleshooting
-: using the self-diagnostics</div>
+<div class="Text_Header"><A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A>Troubleshooting: using the self-diagnostics</div>
 <div class="Text_Normal">When TextTest doesn't do what you expect it to, the best way
 to find out why is usually to enable its own logging mechanism
 for the relevant aspect of the functionality. This is enabled
