@@ -40,9 +40,9 @@
 
 					<HR>
 					<div class="Text_Normal">Now for an example. Assume we have the following use case
-					script from a Swing App, using JUseCase:</div>
-					<PRE STYLE="border: 1.00pt solid #000000; padding: 0.02in; text-align: left"><I>load movie data into list</I>
-<I>select movie Die Hard</I></PRE><div class="Text_Normal">
+					script from a Swing App, using JUseCase:</div><div class="Text_Normal">
+					<?php codeSampleBegin(); ?><I>load movie data into list</I>
+<I>select movie Die Hard</I><?php codeSampleEnd(); ?></div><div class="Text_Normal">
 					Also assume that the first command starts a separate thread that
 					loads a large amount of data from a database and displays it on
 					the screen. Unless there is a way of telling the replayer when
@@ -53,10 +53,14 @@
 					loaded');</I></div>
 					<div class="Text_Normal">in his application at the point directly after the loading is
 					completed. The recorded use case will now look like this:</div>
-
-					<PRE STYLE="border: 1.00pt solid #000000; padding: 0.02in"><I>load movie data into list</I>
+					<div class="Text_Normal">
+					<?php codeSampleBegin(); ?>
+<I>load movie data into list</I>
 <I>wait for data to be loaded</I>
-<I>select movie Die Hard</I></PRE><div class="Text_Normal">
+<I>select movie Die Hard</I>
+<?php codeSampleEnd(); ?>
+					</div>
+					<div class="Text_Normal">
 					In record mode the applicationEvent method just records the
 					'wait for' command to the script file when it is called, as
 					shown here: 

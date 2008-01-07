@@ -38,11 +38,17 @@ a test username and a test password. This is annoying, so a
 shortcut can be created for it, which will both save time and
 increase the expressiveness and maintainability of the test.
 Where before all tests started with:</div>
-<PRE STYLE="border: 1px solid #000000; padding: 0.02in">set username to test
+<div class="Text_Normal">
+<?php codeSampleBegin(); ?>
+set username to test
 set password to testpass
-perform login</PRE><div class="Text_Normal">
-They can now just begin with:</div>
-<PRE STYLE="margin-bottom: 0.2in; border: 1px solid #000000; padding: 0.02in">login as test</PRE><div class="Text_Normal">
+perform login<?php codeSampleEnd(); ?></div><div class="Text_Normal">
+
+They can now just begin with:</div><div class="Text_Normal">
+<?php codeSampleBegin(); ?>
+login as test
+<?php codeSampleEnd(); ?>
+</div><div class="Text_Normal">
 
 This can also be used even if a lot of pre-existing tests start
 with the first sequence. When running GUI tests, TextTest always

@@ -3,7 +3,7 @@
 		
 				
 <OL>
-<LI><div class="Text_Normal"><B><I>Surely record/playback has been discredited by
+<div class="Text_Normal"><B><li><I>Surely record/playback has been discredited by
 now?</I></B><BR> Traditional
 record/replay tools have generally not been popular in the
 Agile community. This with good reason: they don't generally
@@ -27,7 +27,7 @@ from scratch, as you need to do in an API-driven approach. When
 you want to create tests that are pretty similar to existing
 tests, it will also probably be faster to copy and tweak than
 to record from scratch.</div>
-<LI><div class="Text_Normal"><B><I>OK, but all
+<div class="Text_Normal"><B><li><I>OK, but all
 this changing code to monitor components seems very laborious.
 Surely that can be automated?</I></B><BR> Yes it can, but
 then you revert to some of the weaknesses of more traditional
@@ -56,7 +56,7 @@ to change appearance. At worst, you will have to hand-insert
 events</A> mean waiting is just something else that is
 recorded.</div>
 
-<LI><div class="Text_Normal"><B><I>But I want to drive my
+<div class="Text_Normal"><B><li><I>But I want to drive my
 high-level design with high-level tests.</I></B><BR> In this
 case, there is no question but that you will need an API-driven
 approach to driving your GUI. Do bear in mind, though, that
@@ -73,7 +73,7 @@ to get both right without worrying about the other (just like
 too much coupling between objects is a bad thing for software
 design)</div>
 <div class="Text_Normal"></div>
-<LI><div class="Text_Normal"><B><I>How can I write tests for functionality that
+<div class="Text_Normal"><B><li><I>How can I write tests for functionality that
 doesn't exist yet?</I></B><BR>
 See the equivalent question on the <a class="Text_Link" href="index.php?page=concepts&n=logprobs">Frequently-raised
 objections to TextTest </A>page. In a similar way, recorded
@@ -85,7 +85,7 @@ discussion between customer and developer, in the expectation
 that both code and test will need refining before a working
 test can be added to the test suite.</div>
 
-<LI><div class="Text_Normal"><B><I><a class="Text_Link" href="index.php?page=concepts&n=shortcuts">GUI
+<div class="Text_Normal"><B><li><I><a class="Text_Link" href="index.php?page=concepts&n=shortcuts">GUI
 shortcuts</A> are a pretty basic refactoring tool. I can't pass
 arguments to them, for example.</I></B><BR> Use-case recording is
 not a fully-fledged scripting engine. It's meant to be a GUI

@@ -31,7 +31,7 @@ program reports errors in a predictable format, TextTest can
 help you find these errors via its <A class="Text_Link" href= "index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=automatic_failure_interpretation">automatic
 failure interpretation</A> mechanisms. 
 </div>
-<div class="Text_Headern="><li>Won't it slow
+<div class="Text_Header"><li>Won't it slow
 my program down to have it writing logs all the time?</div><div class="Text_Normal">
 Yes. So you should use a logging framework so that the logs can
 easily be disabled in production. They will then not have a

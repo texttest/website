@@ -17,7 +17,7 @@ useful for any Python GUI library.</div>
 the interface to PyUseCase. 
 </div>
 <OL>
-<LI><div class="Text_Normal">For user actions such as clicking a button, selecting a
+<div class="Text_Normal"><li>For user actions such as clicking a button, selecting a
 list item etc., the general idea is to add an extra argument to
 the call to 'connect', so that instead of writing</div>
 
@@ -38,19 +38,24 @@ button, effectively clicking it programatically.</div>
 changes&quot;, I can redesign the GUI totally, making the user
 choose to do this via a totally different widget, but all my
 scripts wiill remain unchanged.</div>
-<LI><div class="Text_Normal">Some GUI widgets have &quot;state&quot; rather than
+<div class="Text_Normal"><li>Some GUI widgets have &quot;state&quot; rather than
 relying on signals (for example text entries, toggle buttons),
 so that the GUI itself may not necessarily make any calls to
 'connect'. But you still want to generate script commands when
 they change state, and be able to change them programatically.
 I have done this by providing a 'register' method, so that an
 extra call is made to scriptEngine</div>
-<PRE STYLE="border: 1px solid #000000; padding: 0.02in">entry = gtk.Entry()
-scriptEngine.registerEntry(entry, &quot;enter file name = &quot;)</PRE><div class="Text_Normal">
+<div class="Text_Normal">
+<?php codeSampleBegin(); ?>
+entry = gtk.Entry()
+scriptEngine.registerEntry(entry, &quot;enter file name = &quot;)
+<?php codeSampleEnd(); ?>
+</div>
+<div class="Text_Normal">
 which would record whenever the contents of the Entry was
 changed.</div>
 
-<LI><div class="Text_Normal">There are also composite widgets like the TreeView where
+<div class="Text_Normal"><li>There are also composite widgets like the TreeView where
 you need to be able to specify an argument. In this case the
 application has to provide extra information as to how the text
 is to be translated into selecting an item in the tree. So, for
@@ -68,7 +73,7 @@ file foobar.txt&quot; will search the tree's column &lt;column&gt;
 and data index &lt;dataIndex&gt; for the text &quot;foobar.txt&quot;
 and select that row accordingly.</div>
 
-<LI><div class="Text_Normal">There are other widgets supported too, it's probably
+<div class="Text_Normal"><li>There are other widgets supported too, it's probably
 easiest just to read the code for the API to these, they're
 fairly self-explanatory. But there are also many widgets that
 aren't yet supported (I have implemented what I have needed
@@ -91,25 +96,29 @@ This works in exactly the same way as in <a class="Text_Link" href="http://jusec
 <div class="Text_Normal">In order to use PyUseCase, you probably want to do something
 like this at the top of your script. Global access is useful as
 every widget used will need to connect via the script engine:</div>
-<PRE STYLE="border: 1px solid #000000; padding: 0.02in">from gtkusecase import ScriptEngine
+<div class="Text_Normal">
+<?php codeSampleBegin(); ?>
+from gtkusecase import ScriptEngine
 global scriptEngine
-scriptEngine = ScriptEngine()</PRE><div class="Text_Normal">
+scriptEngine = ScriptEngine()
+<?php codeSampleEnd(); ?>
+</div><div class="Text_Normal">
 PyUseCase is configured using the following environment
 variables:</div>
 <UL>
-<LI><div class="Text_Normal"><I>USECASE_RECORD_SCRIPT </I>-
+<div class="Text_Normal"><li><I>USECASE_RECORD_SCRIPT </I>-
 states the name of the use case script file to record to 
 </div>
 
-<LI><div class="Text_Normal"><I>USECASE_REPLAY_SCRIPT</I>
+<div class="Text_Normal"><li><I>USECASE_REPLAY_SCRIPT</I>
 - states the name of the use case script file from which to
 perform simulation 
 </div>
-<LI><div class="Text_Normal"><I>USECASE_REPLAY_DELAY</I> -
+<div class="Text_Normal"><li><I>USECASE_REPLAY_DELAY</I> -
 states the delay to insert between each simulated use case
 command 
 </div>
-<LI><div class="Text_Normal"><I>USECASE_RECORD_STDIN</I> - states the name of the
+<div class="Text_Normal"><li><I>USECASE_RECORD_STDIN</I> - states the name of the
 file to record information received on standard input to. 
 </div>
 </UL>
