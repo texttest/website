@@ -34,7 +34,7 @@ application API.</div>
 <div class="Text_Normal">So, when your test fails and you click on it to see what went
 wrong, you might see this (Click to Enlarge):</div>
 
-<div class="Text_Normal"><A class="Text_Link" href="images/tkdiff.JPG"><IMG width="650" SRC="images/tkdiff.JPG"></A>
+<div class="Text_Normal"><A class="Text_Link" href="images/tkdiff.JPG"><IMG SRC="images/tkdiff.png"></A>
 </div>
 <div class="Text_Normal">On the left you see what we wanted the program to produce. On
 the right we see what actually happened. This is testing a small
