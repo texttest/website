@@ -24,8 +24,6 @@
 <a class="Text_Link" href="index.php?page=concepts&n=problems">Frequently raised objections to Use-case Recording</a><br>
 <a class="Text_Link" href="index.php?page=concepts&n=pyusecase">Using the PyUseCase library</a><br>
 <a class="Text_Link" href="index.php?page=concepts&n=shortcuts">Test Refactoring and Macro Recording with GUI shortcuts </a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=webcomparison">Comparing tools for acceptance testing of web apps</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=webusecase">Driving a web application with WebUseCase</a><br>
 <a class="Text_Link" href="index.php?page=concepts&n=why"> Why do I need Acceptance Tests as well as Unit Tests?</a><br>
 <a class="Text_Link" href="index.php?page=concepts&n=whylog">Five good reasons to use logging for asserting behaviour in acceptance tests</a><br>
 <a class="Text_Link" href="index.php?page=concepts&n=xusecase">Using	a Use-case recorder</a><br>

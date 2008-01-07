@@ -51,7 +51,6 @@ function printLI($n,$realName,$title)
        <?php  printLI("shortcuts","Test refactoring and macro recording with GUI shortcuts","Tooltip title"); ?>
        <?php  printLI("pyusecase","Driving a PyGTK Python GUI with PyUseCase","Tooltip title"); ?>
        <li> <A class="Text_Link" href="http://jusecase.sourceforge.net">Driving a Java Swing GUI with JUseCase (separate homepage)</A>
-       <?php  printLI("webusecase","Driving a web application with WebUseCase","Tooltip title"); ?>
        <?php  printLI("problems","Frequently raised objections to Use-case recording","Tooltip title"); ?>
     </div>       
    

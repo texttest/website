@@ -10,25 +10,23 @@ available here.
 types, which have different considerations and in some cases
 different tools.</div>
 
-  <div class="Text_Normal"><A href="index.php?page=concepts&n=others#non-interactive_calculators">Non-interactive calculators.</a> Here I mean a tool
-      which essentially takes some input, performs some calculation
+  <div class="Text_Normal"><A href="index.php?page=concepts&n=others#non-interactive_calculators">Batch programs.</a> Here I mean a tool
+which essentially takes some input, performs some calculation
 and produces some output without any interaction from a user
 other than starting it. Such tools may not have a GUI, or the
 GUI may be entirely focussed on setting up the input and
 displaying the output, and as such testing the GUI can be
 considered as a separate problem.</div>
-<div class="Text_Normal"><A href="index.php?page=concepts&n=others#interactive_tools">Interactive tools with a custom GUI.</a>Here I
+<div class="Text_Normal"><A href="index.php?page=concepts&n=others#interactive_tools">Rich-client GUIs.</a>Here I
 include anything using a standard GUI toolkit, and also
 interactive console programs controlled via standard input
 responses. Acceptance Testing them is viewed as testing their
 &ldquo;use cases&rdquo; - modelling a series of GUI actions
 from a user (workflow).</div>
 <div class="Text_Normal"><A href="index.php?page=concepts&n=others#web_applications">Web applications.</a> Anything run over HTTP in a
-standard web browser - not including Flash, ActiveX and things
-like that.</div>
+standard web browser.</div>
 
-
-<div class="Text_Header"><a name="non-interactive_calculators"></a>Non-interactive calculators</div>
+<div class="Text_Header"><a name="non-interactive_calculators"></a>Batch programs</div>
 <div class="Text_Normal">Here our candidate tool is <A class="Text_Link" HREF="index.php?page=about">TextTest</A>
 alone, with no need for simulating user input. The main
 alternative I have come across is <A class="Text_Link" HREF="http://fit.c2.com/">Fit</A>
@@ -56,7 +54,7 @@ this way.</div>
 
 <div class="Text_Normal">Here is a <A class="Text_Link" HREF="index.php?page=concepts&n=calccomparison">table</A> comparing
 the tools.</div>
-<div class="Text_Header"><a name="interactive_tools"></a>Custom GUIs</div>
+<div class="Text_Header"><a name="interactive_tools"></a>Rich-client GUIs</div>
 <div class="Text_Normal">Here our candidate tool is <A class="Text_Link" HREF="index.php?page=concepts&n=xusecase">TextTest
 with PyUseCase or JUseCase</A>. Suddenly there are more
 alternatives, both that try to make use of the GUI and that
@@ -108,31 +106,24 @@ shortcuts</A></div>
 
 comparing the features of these tools for workflow testing of
 GUIs.</div>
+
 <div class="Text_Header"><a name="web_applications"></a>Web Applications</div>
-<div class="Text_Normal">Again there are many tools, reflecting the proliferation of
-this kind of application. Our own candidate is now <A class="Text_Link" HREF="index.php?page=concepts&n=webusecase">TextTest
-with WebUseCase</A>. What marks this out as unique in the field?
-It provides a mechanism for testing with a domain language and
-it allow you to record tests live, as with custom GUIs.</div>
-<div class="Text_Normal">For comparison, both Fit and Exactor have web testing
-mechanisms, <A class="Text_Link" HREF="http://fitnesse.org/FitNesse/HtmlFixture">&ldquo;HTMLFixture&rdquo;</A>
-and &ldquo;WebCommand&rdquo;. Neither of these provide support
-for use of a business domain language, though. There is also
-<A class="Text_Link" HREF="http://webtest.canoo.com/webtest/manual/WebTestHome.html">Canoo
-WebTest</A>, which has been around for longest. What all of
-these share, and also share with WebUseCase, is the use of a
-browser simulator. WebUseCase, Canoo and Fit all use <A class="Text_Link" HREF="http://htmlunit.sourceforge.net/">HtmlUnit</A>,
-while Exactor uses <A class="Text_Link" HREF="http://jwebunit.sourceforge.net/">JWebUnit</A>.</div>
 
-<div class="Text_Normal">In contrast to these four, two tools are included which have
-the not inconsiderable advantage of using a real browser. <A class="Text_Link" HREF="http://wtr.rubyforge.org/">Watir</A>
-drives Internet Explorer via the DOM, while <A class="Text_Link" HREF="http://www.openqa.org">Selenium</A>
-has a testing engine written in javascript. Watir also has the
-advantage of being the only tool that generates a programming
-language (Ruby) - very useful for long-term refactoring, at
-least compared to the tool-defined languages in most of the
-others.</div>
-<div class="Text_Normal">There is also a <A class="Text_Link" HREF="index.php?page=concepts&n=webcomparison">table</A>
-comparing these tools.</div>
+<div class="Text_Normal">It's now several years since we tried to test a web application 
+and it's become very clear that the state of the art has moved on hugely since then.
+The previous advice, and our proposed approach with WebUseCase, have now been removed.
+It might be possible to involve TextTest in web-testing somehow, in combination with
+one of today's web simulators, but as far as I know nobody has attempted to do this.
+</div>
 
+<div class="Text_Normal">Anyone trying to test a web application today needs to take a long
+hard look at <A class="Text_Link" HREF="http://www.openqa.org">Selenium</A> which seems to have
+evolved into the tool of choice. Its javascript engine was a major leap forward in allowing
+web-testing to actually make use of real browsers rather than bypass them. The biggest drawback
+is the back-end, as there is no support for creation of a domain language for use-case style
+scripts, which was our biggest aim with WebUseCase - although that was built on <A class="Text_Link" 
+HREF="http://htmlunit.sourceforge.net/">HtmlUnit</A>. It seems like there is now a tool with
+a similar aim, <A class="Text_Link" HREF="http://storytestiq.solutionsiq.com">STIQ</A>, built
+as a domain language layer on top of Selenium.
+</div>
 
