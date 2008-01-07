@@ -1,4 +1,7 @@
 <?php
+  //Include all common doc functions
+  include 'include/documentation/common_for_doc';
+
   //Decides version of documents in $basePath
   $texttest_version = "3.9.1";
   $version = convertToDocFormat($texttest_version);
@@ -12,50 +15,7 @@
   if (isset($_GET['n'])) $path = "not_set";
   else $path = "no_needed";
 
-  
-  function hideDocTable()
-  {
-    //print "<script language=\"javascript\">openClose('DocTable')</script>";
-    //print "<script language=\"javascript\">openClose('ControlTable')</script>";
 
-  }
-   
-  function printLI($n,$realName,$title)
-  {
-    global $path,$basePath,$doHide,$version;
-    print "<li";
-    if (isset($_GET['n']))
-    {
-    	if ($_GET['n'] == $n) 
-    	{  	  
-   	  	print " class=\"marked\""; 
-			$path = $basePath.$n.".php"; 
-    	}
-   }
-	print ">\n";
-	print "<a class=\"Text_Link\" title=\"".$title."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>";  
-   
-  }
-  //Check $_GET
-  function checkGET()
-  {
-    global $path,$basePath,$doHide;
-    if (isset($_GET['n']))
-    {
-    	if ($_GET['n'] == "main") 
-    	{	
-    		$path=$basePath."main.php";
-    	}
-    	else
-    	{
-    		$doHide = true;
-    		if ($_GET['n'] == "old_versions") $path=$basePath."old_versions.php";
-     		elseif ($_GET['n'] == "queuesystem") $path=$basePath."queuesystem.php";
-     	}
-     
-    }
-    if ($doHide) hideDocTable();
-  }
  
 
 ?>
