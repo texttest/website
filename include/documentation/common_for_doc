@@ -20,7 +20,7 @@
     	}
    }
 	print "></td><td>\n";
-	print "<a class=\"Text_Link\" title=\"".$realName."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>\n";  
+	print "<a class=\"Text_Link\" title=\"".$title."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>\n";  
   	print "</td></tr></table>\n";
   }
  
