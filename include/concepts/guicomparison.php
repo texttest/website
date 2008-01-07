@@ -1,4 +1,4 @@
-<div class="Text_Header">Comparing tools for acceptance testing of custom GUIs</div>
+<div class="Text_Header">Comparing tools for acceptance testing of rich-client GUIs</div>
 <TABLE border=1>
 	<TR VALIGN=TOP>
 		<TD>
@@ -48,7 +48,7 @@
 			<div class="Table_Text_Normal">Test Persistence Format</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal">plain text usecase script plain text logs</div>
+			<div class="Table_Text_Normal">plain text 'usecase', plain text logs</div>
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal">plain text script</div>
@@ -129,7 +129,7 @@
 			<div class="Table_Text_Normal">Code changes required to get started</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal">calls to xUseCase logging of relevant behaviour</div>
+			<div class="Table_Text_Normal">calls to xUseCase, logging of relevant behaviour</div>
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal">creation of a test API</div>
@@ -175,7 +175,7 @@
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://jusecase.sourceforge.net">Java (Swing
-			only) </A><A class="Text_Link" href= "index.php?page=concepts&n=pyusecase">Python (PyGTK
+			only) </A>, <A class="Text_Link" href= "index.php?page=concepts&n=pyusecase">Python (PyGTK
 			only)</A></div>
 		</TD>
 		<TD>
@@ -220,7 +220,7 @@
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal">Parallel testing on grid (<A class="Text_Link" href= "http://gridengine.sunsource.net/">SGE</A>
-			or <A class="Text_Link" href= "http://www.platform.com/Products/Platform.LSF.Family/Platform.LSF/">LSF</A>)
+			or <A class="Text_Link" href= "http://www.platform.com/Products/Platform.LSF.Family/Platform.LSF/">LSF</A>), 
 			Bug-reporting (<A class="Text_Link" href= "http://www.bugzilla.org/">Bugzilla</A>) 
 			</div>
 		</TD>
