@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+
+#Usage:
+#  Must be runned from it's folder (Texttest_site/include)
+
+
 import os,sys
 
 os.chdir("../include/");
@@ -54,7 +59,6 @@ def findAndHTML(path,level=""):
 
     files = sortFiles(files,path)
     for file in files:
-        print file
         current_file = os.path.join(path,file)
         if os.path.isdir(current_file):
             towrite = "<br><B>Pages under " + file + "</B>\n"
@@ -82,6 +86,8 @@ def findAndHTML(path,level=""):
                 sitemap.write(towrite)
     sitemap.write('</div>\n')
 
-
+print "Running Generate Sitemap Script..."
+print ""
 findAndHTML(os.getcwd())
+print "Finished, Please check the generated sitemap at: index.php?page=sitemap"
 sitemap.write('</table></td></tr></table>\n')
