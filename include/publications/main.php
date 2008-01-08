@@ -10,7 +10,7 @@
      <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/one_suite.zip">Poster from XP2002 (&ldquo;One Suite of Automated Tests...&rdquo;)</A></div>	
    </UL>
    
-   <div class="Text_Main_Header">Detailed info : Printed publications</div>
+   <div class="Text_Header">Detailed info : Printed publications</div>
    <div class="Text_Normal">                                       
      At <a class="Text_Link"  HREF="http://www.xp2005.org/">XP2005 in Sheffield, UK</A>,
      we presented a poster <a class="Text_Link"  HREF="files/FurtherAT_XP2005.pdf"><I>&ldquo;Web
@@ -50,7 +50,7 @@
     testing and presenting our experiences in using acceptance
     testing rather than unit testing to support XP-style
     development.</div>
- <div class="Text_Main_Header">Detailed info: Workshops and tutorials</div>
+ <div class="Text_Header">Detailed info: Workshops and tutorials</div>
  <div class="Text_Normal">In 2007 we plan to run a <a class="Text_Link"  HREF="http://www.xp2005.org/workshops/W01.pdf">&ldquo;Coder's
     Dojo&rdquo;</A> based around a little exercise in Python using
     the testing techniques described on this site. The basic aim is
@@ -94,10 +94,5 @@
     <a class="Text_Link"  HREF="files/ooffice.zip">OpenOffice</A> and 
     <a class="Text_Link"  HREF="files/powerpoint.zip">Powerpoint</A>format. 
     They are all originally OpenOffice so they may be a
-    bit mangled in Powerpoint...</div>
- <div class="Text_Main_Header">Best practice workshop XP2005</div>
- <div class="Text_Normal">This was a discussion-based workshop. A summary of the
-   discussion can be found <a class="Text_Link"  HREF="index.php?page=publications&n=bestpractices">here</A>.</div>
- </div>
-  
+    bit mangled in Powerpoint...</div>  
    </div>
