@@ -13,12 +13,12 @@ if (isset ($argv))
 	}
 
 //Current release here
-$current_release = "3.9.1";
+$current_release = "3.10";
 
 $all_releases = array();
 array_push($all_releases, $current_release);
 //New Releases here:
-array_push($all_releases, "3.10");
+array_push($all_releases, "3.9.1");
 
 ?>
 
