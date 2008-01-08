@@ -1,6 +1,6 @@
 <div class="Text_Header">Some Frequently Asked Questions on problems with logs as tests</div>		
 <OL>
-<div class="Text_Header"><li>Isn't it old-fashioned and low-level?</div><div class="Text_Normal">
+<div class="Text_Small_Header"><li>Isn't it old-fashioned and low-level?</div><div class="Text_Normal">
 It probably is old-fashioned in some sense &ndash; it comes
 more naturally to test a program by comparing text files when
 text files are one of its major products anyway, which used to
@@ -14,7 +14,7 @@ prepared to create log files entirely for this purpose &ndash;
 
 don't just expect that the logs you already have will be
 adequate.</div>
-<div class="Text_Header"><li>You need
+<div class="Text_Small_Header"><li>You need
 somebody to read the logs and check for errors at least once
 per test. Surely they miss things, leading to incorrect tests?</div><div class="Text_Normal">
 This can be a problem, so it's wise to take a few precautions.
@@ -31,7 +31,7 @@ program reports errors in a predictable format, TextTest can
 help you find these errors via its <A class="Text_Link" href= "index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=automatic_failure_interpretation">automatic
 failure interpretation</A> mechanisms. 
 </div>
-<div class="Text_Header"><li>Won't it slow
+<div class="Text_Small_Header"><li>Won't it slow
 my program down to have it writing logs all the time?</div><div class="Text_Normal">
 Yes. So you should use a logging framework so that the logs can
 easily be disabled in production. They will then not have a
@@ -43,7 +43,7 @@ of log settings. (<A class="Text_Link" href= "http://logging.apache.org/log4j/do
 and <A class="Text_Link" href= "http://www.sourceforge.net/projects/log4py">log4py</A>
 and a home-made version of <A class="Text_Link" href= "http://log4cpp.sourceforge.net/">log4cpp</A>
 equivalent are tested)</div>
-<div class="Text_Header"><li>Don't you end up with lots of peripheral
+<div class="Text_Small_Header"><li>Don't you end up with lots of peripheral
 information in the tests, making it hard to see the wood for
 the trees?</div><div class="Text_Normal"> A test
 script is specific for the test and so will not tell you about
@@ -61,7 +61,7 @@ and can even be a very useful source of extra testing (see the
 fifth reason on the <A class="Text_Link" href= "index.php?page=concepts&n=whylog">Five Reasons...</A>
 
 page)</div>
-<div class="Text_Header"><li>But I want to drive my
+<div class="Text_Small_Header"><li>But I want to drive my
 high-level design with high-level tests.</div><div class="Text_Normal"> You can still
 do this without difficulties and have your assertions done via
 logs. This potentially means you won't want to use <A class="Text_Link" href= "index.php?page=concepts&n=xusecase">xUseCase</A>
@@ -78,7 +78,7 @@ Asked Questions page for xUseCase</A> for further discussion of
 this issue.</div>
 
 <div class="Text_Header"></div>
-<div class="Text_Header"><li>How can I write tests for functionality that
+<div class="Text_Small_Header"><li>How can I write tests for functionality that
 doesn't exist yet?</div><div class="Text_Normal">
 It is very useful to use acceptance tests as a means of driving
 development, allowing a customer representative to create a
