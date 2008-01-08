@@ -111,7 +111,7 @@ following form:</div>
 <?php codeSampleBegin() ?>
 [performance_logfile_extractor]
 &lt;system_resource_id&gt;:&lt;text_identifier&gt;
-<?php codeSampleBegin() ?>
+<?php codeSampleEnd() ?>
 </div><div class="Text_Normal">
 The &lt;text_identifier&gt; here is a string to be found in the
 file to be searched. When TextTest finds that string, it will
