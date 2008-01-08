@@ -18,7 +18,7 @@ tool for understanding features by example.
 <div class="Text_Normal"><LI>TextTest is written in Python, and the GUIs are written
 with the GUI library PyGTK. It follows that you need both of
 these installed. You should make sure you have at least Python
-2.4 and at least PyGTK 2.6.</div>
+2.4 and at least PyGTK 2.10.</div>
 <div class="Text_Normal">On Windows, there is now an <A class="Text_Link" HREF="http://osl.ulpgc.es/~arc/gnome/pygtk-setup.exe">all-in-one
 installer</A> available for Python and PyGTK together. This is
 new and a bit experimental but will probably save you time. Try

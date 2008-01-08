@@ -115,7 +115,7 @@ the script batch.ArchiveRepository, with arguments 'after' and
 batch session to do it on, defaults to all known sessions). The
 dates should be in the same format as the dates on the pages,
 e.g. 21Jan2005.</div>
-<div class="Text_Header"><A NAME="batch_timelimit"></A><A NAME="batch_filter_file"></A><A NAME="batch_use_version_filtering"></A><A NAME="batch_version"></A>
+<div class="Text_Header"><A NAME="batch_timelimit"></A><A NAME="batch_filter_file"></A><A NAME="batch_use_version_filtering"></A><A NAME="batch_version"></A><A NAME="batch_extra_version"></A>
 
 Configuring what tests are run by batch mode sessions</div>
 <div class="Text_Normal">The config file entry &ldquo;batch_timelimit&rdquo;, if
@@ -133,7 +133,13 @@ note that such filter files can contain application and
 version-specific suffices in case similar criteria imply
 different tests for different applications: this allows the same
 entry for batch_filter_file to indicate different tests for
-different applications and versions. 
+different applications and versions.
+</div>
+<div class="Text_Normal">
+If certain versions should be run automatically as part of a batch
+mode run without needing to explicitly specify them on the command line,
+the entry &ldquo;batch_extra_version&rdquo; can be used for this purpose. This
+is a more specialised version of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#extra_version">the &ldquo;extra_version&rdquo; setting</A>.
 </div>
 <div class="Text_Normal">If the entry &ldquo;batch_use_version_filtering&rdquo; is set
 to &ldquo;true&rdquo;, all versions are assumed to be disabled

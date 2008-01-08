@@ -187,6 +187,13 @@ regarded as the same, via the option &ldquo;replace successfully
 compared files also&rdquo;: this is a way to re-generate the
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run-dependent text</A>
 for a test.</div>
+<div class="Text_Header">Marking tests in the dynamic GUI</div>
+<div class="Text_Normal">Sometimes you have a lot of tests failing for different reasons.
+It can be helpful to be able to manually classify these tests as you discover what caused individual failures, so that
+you can see which tests still need to be checked. You can therefore &quot;mark&quot; tests
+with a particular text, which will cause them to be classified differently and be easy
+to hide as a group from the Status view. This is achieved by right-clicking on the test
+and selecting the relevant item from the popup menu.</div>
 <div class="Text_Header"><A NAME="-gx"></A>Using the Static GUI</div>
 <div class="Text_Normal">The static GUI is started by default unless you specified
 otherwise in your config file.</div>
@@ -443,7 +450,8 @@ little time.</div>
 of config file settings</A> for the key format. If you don't
 hide the menubar via this mechanism you can also show and hide
 them via the &ldquo;View&rdquo; menu.</div>
-<div class="Text_Header"><A NAME="gui_entry_overrides"></A><A NAME="gui_entry_options"></A>
+<div class="Text_Header"><A NAME="gui_entry_overrides"></A><A NAME="gui_entry_options"></A><A NAME="gui_entry_completion_inline"></A>
+<A NAME="gui_entry_completion_matching"></A><A NAME="gui_entry_completions"></A>
 
 Configuring the default values of text boxes, check boxes and
 radio buttons, and the contents of drop-down lists</div>
@@ -487,6 +495,20 @@ the &quot;Run this version&quot; text box and to set it to
 the &ldquo;Select Tests&rdquo; tab will select &ldquo;Refine&rdquo;
 
 instead of the default &ldquo;Discard&rdquo;</div>
+<div class="Text_Normal">There is also the possibility to enable
+and configure GTK's entry completion functionality. This is separate
+from the drop-down boxes and works by guessing what you're typing
+based on what has been typed before. It is enabled by default, and will
+by default match based on the beginning of what has been typed. To
+disable it, set &ldquo;gui_entry_completion_matching&rdquo; to 0. To
+cause the matching to occur on any part of what has been typed, set the
+same entry to 2. If you want previous matching text to be automatically
+inlined into what you're typing, set the &ldquo;gui_entry_completion_inline&rdquo;
+entry to 1. Note that this can be confusing if you aren't used to it!
+</div><div class="Text_Normal">Additionally, you can &ldquo;hardcode&rdquo;
+completions that should always be present, by adding to the config file list entry 
+&ldquo;gui_entry_completions&rdquo;.
+</div>
 <div class="Text_Header"><A NAME="test_colours"></A><A NAME="file_colours"></A>GUI
 Colours</div>
 <div class="Text_Normal">The colours for the test tree view (left window) and the file
@@ -543,11 +565,11 @@ different viewers and editors from TextTest and many different
 dynamic GUI runs from the static GUI. If all of these had to be
 closed by hand it would probably be cumbersome &ndash; so the
 default operation of TextTest is to find all of these processes
-and kill them. On UNIX; they will be sent SIGINT, SIGTERM and
+and kill them. On UNIX, they will be sent SIGINT, SIGTERM and
 SIGKILL with a pause in between. On Windows, they will be
-terminated with &ldquo;pskill&rdquo; which tends to be fairly
-final. (If you don't have administrator rights on Windows they
-will all be leaked because pskill requires such rights!)</div>
+terminated with &ldquo;taskkill&rdquo; which tends to be fairly
+final. If for any reason the tests don't terminate as rapidly
+as they should, pressing Quit a second time is recommended.</div>
 
 <div class="Text_Normal">It can be useful to configure a questioning dialog such that
 TextTest will ask you before killing such processes. This is the

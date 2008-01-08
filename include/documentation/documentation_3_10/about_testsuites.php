@@ -69,7 +69,7 @@ look for just one particular application, specify &quot;-a
 &lt;app&gt;&quot; on the command line.</div>
 
 <div class="Text_Header"><A NAME="binary"></A><A NAME="interpreter"></A><A NAME="import_config_file"></A>
-The Config File for a Test Application</div>
+<A NAME="extra_config_directory"></A>The Config File for a Test Application</div>
 <div class="Text_Normal">This file basically consists of key, value pairs, where the
 keys are &ldquo;properties&rdquo; with names predefined by
 TextTest. The most important of these is the entry &quot;binary&quot;,
@@ -107,7 +107,9 @@ can use the &ldquo;import_config_file&rdquo; entry to identify
 files of the same format whose settings should be included. The
 file should be found under TEXTTEST_HOME, in the same way as
 described in the above paragraph for the config files
-themselves. Such a file doesn't need to have a particular name.</div>
+themselves. By setting the entry &ldquo;extra_config_directory&rdquo;
+it can also be placed in the arbitrary location indicated.
+Such a file doesn't need to have a particular name.</div>
 
 <div class="Text_Header"><A NAME="auto_sort_test_suites"></A>Test Suites</div>
 <div class="Text_Normal">A Test Suite is a recursive collection of test cases arranged
@@ -263,29 +265,47 @@ config file. Thus if config.&lt;app&gt;.v1 contains the line
 &quot;base_version:v2&quot; then all the files for v1 are also
 read as well as those for v2. 
 </div>
-<div class="Text_Header"><A NAME="extra_version"></A>Running Multiple versions</div>
+<div class="Text_Header"><A NAME="extra_version"></A><A NAME="-cp"></A>Running Multiple versions</div>
 
 <div class="Text_Normal">Note that the syntax -v &lt;version1&gt;,&lt;version2&gt; is
 similar to -a &lt;app1&gt;,&lt;app2&gt;: i.e. it will first run
 everything with version1 and then run everything with version2.
 It can be useful to start another version all the time when
-running tests, so that -v v1 behaves like - v v1,v2 at all times
+running tests, so that -v v1 behaves like -v v1,v2 at all times
 (or no option behaves like -v ,v2). This is achieved by adding
 the line &quot;extra_version:v2&quot; to the relevant config
-file.</div>
-<div class="Text_Header"><A NAME="comparetest.RemoveObsoleteVersions"></A>Managing
+file.
+</div><div class="Text_Normal">
+It can also be useful to specify that certain additional versions should only be run in particular
+batch sessions, if they are likely to consume a lot of resources. This is done via the config file
+entry &quot;batch_extra_version:v2&quot;, which is keyed on batch session like most other batch settings.
+For more details on batch mode see <A class="Text_Link" href="<?php print "index.php?page=
+".$version."&n=running_texttest_unattended";?>">plugin
+script</A>
+</div>
+</div><div class="Text_Normal">
+Sometimes you may want to run multiple copies of the same test, for example in order to try
+and track down a race condition or other indeterminism. Here, you can use the &quot;-cp&quot;
+option from the command line (&quot;Times to Run&quot; entry on the Running/Basic tab in the static GUI).
+This is essentially just syntactic sugar for running multiple versions whose names are generated on the fly:
+i.e. -cp 3 is the same thing as -v ,copy_1,copy_2.
+</div>
+<div class="Text_Header"><A NAME="comparetest.PrintObsoleteVersions"></A>Managing
 versioned results</div>
 
 <div class="Text_Normal">Such versioned results are easy to create but tend to be hard
 to remove, you can end up with a lot of identical files with
 different version IDs. To help solve this, the <A class="Text_Link" href="#-s">plugin
-script</A> &ldquo;comparetest.RemoveObsoleteVersions&rdquo; will
-identify such redundancy and remove the versioned files. It will
+script</A> &ldquo;comparetest.PrintObsoleteVersions&rdquo; will
+identify such redundancy for you so that you can remove the files. It will
 also warn where versions are equivalent but not redundant. For
 example, if the files output.myapp and output.myapp.2 are
-identical, then output.myapp.2 will be removed. If
+identical, then output.myapp.2 will be suggested for removal. If
 output.myapp.2 and output.myapp.3 are the same, then only a
-warning is printed.</div>
+warning is printed. Previous to TextTest 3.10 this script was called RemoveObsoleteVersions,
+assumed the tests were in CVS and actually performed removals itself. The new version
+is better tested, more generic and less easy to misuse hopefully.
+</div>
 <div class="Text_Header"><A NAME="-c"></A><A NAME="checkout_location"></A><A NAME="default_checkout"></A>
 Version-controlling the Test Suite and Using Checkouts</div>
 <div class="Text_Normal">All of the files and directories discussed here can amount to

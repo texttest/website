@@ -90,23 +90,23 @@ Currently, if we run the test, the GUI will pop up and the
 actions will be performed as fast as possible. 
 </div>
 
-<div class="Text_Normal">On UNIX, we can prevent the target GUIs popping up by
-default, using the virtual display server Xvfb (a standard UNIX
-tool). We simply set the config file entry
-&ldquo;virtual_display_machine:&lt;machine_name&gt;&rdquo; where
-&lt;machine_name&gt; is some machine where we would like to run
-Xvfb. TextTest will then start an Xvfb server on that machine
-and use it as the DISPLAY variable for each test GUI, by
-default. It will also restart the server automatically if it
-becomes unusable. 
+<div class="Text_Normal">On UNIX, TextTest will try to stop
+the SUT's GUIs from popping up, by using the virtual display server Xvfb 
+(a standard UNIX tool). For each run of the tests it will start such
+a server, point the SUT's DISPLAY variable at it and close the server
+at the end of the test. It will use its own process ID (modulo 32768)
+as the display number to guarantee uniqueness.
 </div>
-<div class="Text_Normal">The display number to be used for the Xvfb server is
-determined by the config file entry &ldquo;virtual_display_number&rdquo;.
-For no good reason this defaults to 42.</div>
-<div class="Text_Normal">On Windows, target GUIs are hidden automatically without the
-need to configure. However, note that this operation is not
-recursive, so any dialogs, extra windows etc. that get started
-will (unfortunately) appear. 
+<div class="Text_Normal">
+If you only have Xvfb installed remotely, you can specify machines
+via the config entry &ldquo;virtual_display_machine&rdquo;. This will
+cause TextTest to start the Xvfb process on that machine if it isn't
+possible to do so locally.
+</div>
+<div class="Text_Normal">On Windows, target GUIs are started with
+the Windows flag to hide them, so a similar effect occurs. However, note 
+that this operation is not recursive, so any dialogs, extra windows etc. 
+that get started will (unfortunately) appear anyway. 
 </div>
 
 <div class="Text_Normal">We might want to examine the behaviour of the GUI for a test.

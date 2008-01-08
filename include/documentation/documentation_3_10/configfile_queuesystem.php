@@ -68,7 +68,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Versions to be run in addition to the one specified, for particular batch sessions</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_extra_version">Versions to be run in addition to the one specified, for particular batch sessions</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -208,7 +208,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Which output files are known to be binary, and hence should not be shown/diffed?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#binary_file">Which output files are known to be binary, and hence should not be shown/diffed?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -460,7 +460,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Directories containing shared configuration and environment files</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#extra_config_directory">Directories containing shared configuration and environment files</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -572,7 +572,7 @@
 			<div class="Table_Text_Small">0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Automatically inline common completion prefix in entry.</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_completion_inline">Automatically inline common completion prefix in entry.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -586,7 +586,7 @@
 			<div class="Table_Text_Small">1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Which matching type to use for entry completion. 0 means turn entry completions off, 1 means match the start of possible completions, 2 means match any part of possible completions</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_completion_matching">Which matching type to use for entry completion. 0 means turn entry completions off, 1 means match the start of possible completions, 2 means match any part of possible completions</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -600,7 +600,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Add these completions to the entry completion lists initially</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_completions">Add these completions to the entry completion lists initially</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -936,7 +936,7 @@
 			<div class="Table_Text_Small">100000</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Maximum possible number of parallel similar jobs in the available grid</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_max_capacity">Maximum possible number of parallel similar jobs in the available grid</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

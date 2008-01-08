@@ -56,7 +56,7 @@ which TextTest offers direct help with 3:
 	</A>and <A class="Text_Link" href="http://www.mysql.com/">MySQL</A> for example,
 	while <A class="Text_Link" href="http://www.oracle.com/">Oracle</A> and
 	<A class="Text_Link" href="http://www.postgresql.org/">PostgreSQL</A> are less
-	good at this.Once you have the file defining the data based you
+	good at this. Once you have the file defining the database you
 	can simply define it as <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#copy_test_path">editable
 	test data</A> and TextTest doesn't need to know that a database
 	is present.</div>

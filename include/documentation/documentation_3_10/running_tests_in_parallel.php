@@ -115,20 +115,33 @@ to request <U>all</U> of the resources as specified below:</div>
 	below).</div>
 
 </OL>
-<div class="Text_Header"><A NAME="login_shell"></A>Multi-platform testing and
-environment transfer (UNIX)</div>
-<div class="Text_Normal">TextTest will transfer the environment it has read from its
-environment files to the slave processes it starts. This can
-cause a problem if the remote machine is running on a different
-platform. In this case it is necessary to ensure a full correct
-login remotely. It has been found useful to support the start of
-a subshell remotely to make this happen: correct logins are
-often ensured in shell start-up scripts.</div>
-<div class="Text_Normal">To this end, the &ldquo;login_shell&rdquo; entry is provided.
-This defaults to &ldquo;sh&rdquo; (Bourne Shell) but can be
-configured to be whichever shell startup contains your
-configuration.</div>
-
+<div class="Text_Header"><A NAME="queue_system_max_capacity"></A>Throughput and capacity</div>
+<div class="Text_Normal">When tests complete, TextTest will keep the remote test process
+alive and try to reuse it for a test with compatible resource requirements. This bypasses
+the time needed to submit tests to the queue system and wait for them to be scheduled,
+and reduces network traffic. This improvement in TextTest 3.10 should be able to
+improve throughput considerably, particularly where a large number of short tests need to
+be run.
+</div><div class="Text_Normal">By default, until all tests have been dispatched, TextTest
+will reuse remote jobs in this way, but will also continually submit new jobs at the same time. 
+You can probably improve the throughput further by telling it the maximum number of parallel 
+processes it can reasonably expect from your grid. To do this, set the config file entry 
+&ldquo;queue_system_max_capacity&rdquo; to this number. It's generally better for this number to be 
+a bit too high than too low so be conservative! Once it has submitted this number of jobs it 
+will then stop submitting and rely on reusing existing jobs.
+</div>
+<div class="Text_Header"><A NAME="-keepslave"></A>Cleaning of temporary files</div>
+<div class="Text_Normal">As the queuesystem configuration is often used for very
+large test suites, from TextTest 3.10 it will start to try and clean up temporary
+files before the GUI is closed. Otherwise closing the GUI can appear to take a very
+long time. </div>
+<div class="Text_Normal">
+The default behaviour is now therefore to remove all test data and files belonging to
+successful tests remotely, i.e. as soon as they complete. This can be overridden by
+providing the &quot;-keepslave&quot; option on the command line, or the equivalent
+switch from the Running/Advanced tab in the static GUI, in case you want to examine
+the filtering of a succesful test for example.
+</div>
 <div class="Text_Header"><A NAME="performance_test_resource"></A><A NAME="min_time_for_performance_force"></A><A NAME="-perf"></A>
 Collecting system resource usage with a grid engine</div>
 <div class="Text_Normal">The queuesystem configuration also provides some improvements
@@ -189,6 +202,12 @@ report accordingly. SIGXCPU is always assumed to mean a CPU
 limit has been reached. SIGUSR2 is interpret to mean a kill
 notification in SGE and a maximum wallclock time in LSF, while
 SIGUSR1 is used the other way round in the two grid engines.</div>
+<div class="Text_Normal">TextTest will also install signal handlers
+for these three signals to the SUT process, such that they will be ignored
+unless the SUT decides otherwise. This is mostly to prevent unnecessary core
+files from SIGXCPU and to allow TextTest to receive the signals itself and terminate 
+the SUT when it's ready to.
+</div>
 <div class="Text_Normal">To configure SGE to play nicely with this, it's useful to set
 a notify period of about 60 seconds when jobs are killed
 (TextTest submits all jobs with the -notify flag). By default,

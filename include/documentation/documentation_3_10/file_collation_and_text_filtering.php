@@ -36,7 +36,7 @@ and expected in the standard results, these will be reported
 under &ldquo;Missing Results&rdquo; and the test will fail.
 Saving such a result will cause the missing files to be removed
 from the standard results.</div>
-<div class="Text_Normal">There are four types of things that can be configured here: 
+<div class="Text_Normal"><A NAME="binary_file"></A>This will almost certainly need configuration, as described below: 
 </div>
 <OL>
 
@@ -62,7 +62,12 @@ from the standard results.</div>
 	can help you spot more serious errors quickly. A difference in
 	the final file output by the system is probably more serious
 	than a difference in a file listing the memory consumption, for
-	example.</div>
+	example.</div>	
+        <div class="Text_Normal"><li>Binary files should be identified as such by listing them
+        in the &ldquo;binary_file&rdquo; config file entry - this ensures that TextTest will check
+        whether they are identical but no attempt will be made to filter them or run a difference tool on them. 
+        It's then up to the user to examine both files using whatever tools they have available to them.
+        </div>
 </OL>
 <div class="Text_Header"><A NAME="collate_file"></A><A NAME="discard_file"></A><A NAME="collate_script"></A>
 Telling TextTest to collect additional files</div>
