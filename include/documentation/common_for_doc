@@ -10,7 +10,8 @@
   function printLI($n,$realName,$title)
   {
     global $path,$basePath,$doHide,$version;
-    print "<table cellspacing=\"0\" cellpadding=\"0\"><tr><td>\n<li";
+    //print "<table cellspacing=\"0\" cellpadding=\"0\"><tr><td>\n<li";
+    print "<li";    
     if (isset($_GET['n']))
     {
     	if ($_GET['n'] == $n) 
@@ -19,9 +20,10 @@
 			$path = $basePath.$n.".php"; 
     	}
    }
-	print "></td><td>\n";
+        print ">";
+	//print "></td><td>\n";
 	print "<a class=\"Text_Link\" title=\"".$title."\" href=\"index.php?page=".$version."&n=".$n."\">".$realName."</a>\n";  
-  	print "</td></tr></table>\n";
+  	//print "</td></tr></table>\n";
   }
  
 
