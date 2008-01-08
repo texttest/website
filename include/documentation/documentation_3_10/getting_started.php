@@ -91,7 +91,7 @@ summary of which files are different in all tests that have run:
 useful when we have more! We click on the red test line to see
 the files it has produced. 
 </div>
-<div class="Text_Normal">< src="include/documentation/images/newfiles.JPG" NAME="Graphic4" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><IMG src="<?php print $basePath; ?>images/newfiles.JPG"><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">It collected the standard error and standard output of the
 process into 'errors.hello' and 'output.hello' files. These can
