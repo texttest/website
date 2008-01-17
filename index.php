@@ -87,12 +87,12 @@ array_push($all_releases, "3.9.1");
     </tr>
     <tr valign=bottom>
       <td align=left>
-  		<div class="Footer"><?php echo "Last updated: " . date ("d F Y", getlastmod()); ?></div>
+  		<div class="Steel"><?php echo "Last updated: " . date ("d F Y", getlastmod()); ?></div>
   	   <!-- date ("d F Y H:i:s.", getlastmod()); -->
       </td>     
            
       <td align=right>
-        <div class="Footer">
+        <div class="Steel">
            <a href="index.php?page=news">[news]</a>
            <a href="index.php?page=contact">[contact]</a>
            <a href="index.php?page=siteinfo">[site info]</a>
