@@ -251,20 +251,20 @@ li.marked A:visited
 }
 
 /* A style guide for the footer */
-div.Footer
+div.Steel
 {
     FONT-SIZE: 8pt;
     FONT-FAMILY: Verdana;
     COLOR: #996666;
 }
-div.Footer A
+div.Steel A
 {
     COLOR: #996666;
     TEXT-DECORATION:none;
     MARGIN-LEFT: 3px;
     MARGIN-RIGHT: 3px
 }
-.Footer A:hover
+.Steel A:hover
 {
     COLOR: #000000;
     TEXT-DECORATION:none;
