@@ -19,7 +19,7 @@
    <div class="Text_Normal">
       The TextTest tool is distributed under the LGPL license. All material on this site
       falls under Swedish copyright law, although this will not be enforced as long as you
-      do not try to make a profit from the material and credit the authors where appropriate.  
+      do not try to make a profit from it and credit the authors where appropriate.  
    </div>
 
    <div class="Text_Header">Cookies</div>
