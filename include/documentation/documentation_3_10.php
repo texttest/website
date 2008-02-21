@@ -23,15 +23,15 @@
  <tr>
   <td>
    <div class="Text_Main_Header">Documentation for <?php echo $texttest_version ?></div>
-   <div class="Text_Normal">
-   Find documentation for other versions <a class="Text_Link" href="index.php?page=documentation&n=old_versions">here</a>
-   </div>
-   <div style="display:none" class="Text_Header" id="ControlTable">
-   Index <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Show)</a>
+
+   
+
+   <div style="display:none" id="ControlTable">
+   <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Show)</a>
    </div>
    <div id="DocTable">
-   <div class="Text_Header" >  
-   Index <!--<a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Hide)</a>-->
+   <div>  
+   <!--<a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Hide)</a>-->
    </div>
    <div class="Text_Normal">
    <table border=0 bgcolor="#000000" cellspacing=1>
@@ -99,9 +99,10 @@
         </tr>
       </table>
   
+  
       </div>
       </div>
-
+           <?php printOldVersions($texttest_version,$all_releases); ?>  
       <br>
 	<?php 
 	  checkGET();
