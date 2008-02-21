@@ -1,15 +1,15 @@
 BODY
 {
-    FONT-SIZE: 11px;
-    COLOR: #000000;
-    FONT-FAMILY: Verdana;
-    BACKGROUND-COLOR:#FAFAFA
+    font-size: 11px;
+    color: #000000;
+    font-family: Verdana;
+    background-color:#FAFAFA
 
 }
 A:hover
 {
-    COLOR:#000000;
-    TEXT-DECORATION:underline
+    color:#000000;
+    text-decoration:underline
 }
 A:active
 {
@@ -18,12 +18,12 @@ A:active
 }
 A:visited
 {
-    COLOR:purple;
+    color:purple;
 }
 
 TR
 {
-   VERTICAL-ALIGN:top;
+   vertical-align:top;
 }
 
 
@@ -35,18 +35,18 @@ img
 
 .Table_Normal
 {
-   WIDTH:700;
-   HEIGHT:400;
-   BACKGROUND-COLOR:#FFFFFF;
+   width:700;
+   height:400;
+   background-color:#FFFFFF;
 }
 
 .Table_Normal_Header
 {
-   WIDTH:700;
+   width:700;
 }
 table.documentation_table
 {
-   BACKGROUND-COLOR:#FFFFFF;
+   background-color:#FFFFFF;
 }
 table.documentation_table td
 {
@@ -62,139 +62,138 @@ table.documentation_table td
 /*The style elements for normal page text*/
 .Text_Main_Header
 {
-    FONT-SIZE: 16pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
-	 FONT-WEIGHT:bold;
+    font-size: 16pt;
+    font-family: Verdana;
+    color: #111100;
+	font-WEIGHT:bold;
 
-    LETTER-SPACING:2;
+    letter-spacing:2;
 
-    MARGIN-TOP: 10px;
-    MARGIN-LEFT: 15px;
-    MARGIN-RIGHT: 20px
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 20px
 
 }
 
 .Text_Header
 {
-    FONT-SIZE: 14pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 14pt;
+    font-family: Verdana;
+    color: #111100;
 
-     LETTER-SPACING:1;
+    letter-spacing:1;
      
-
-    MARGIN-TOP: 10px;
-    MARGIN-LEFT: 20px;
-    MARGIN-RIGHT: 10px
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px
 
 }
 .Text_Small_Header
 {
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #111100;
 
-	 FONT-WEIGHT:bold;
-    LETTER-SPACING:1;
+	 font-WEIGHT:bold;
+    letter-spacing:1;
      
 
-    MARGIN-TOP: 3px;
-    MARGIN-LEFT: 20px;
-    MARGIN-RIGHT: 10px
+    margin-top: 3px;
+    margin-left: 20px;
+    margin-right: 10px
 
 }
 /*Third Level Header*/
 .Text_Small_Header
 {
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
-    FONT-WEIGHT:bold;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #111100;
+    font-WEIGHT:bold;
 
 
-    MARGIN-TOP: 10px;
-    MARGIN-LEFT: 25px;
-    MARGIN-RIGHT: 20px
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 20px
 }
 .Text_Normal
 {
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #111100;
 
 
-    MARGIN-TOP: 10px;
-    MARGIN-LEFT: 25px;
-    MARGIN-RIGHT: 20px
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 20px
 }
 
 .Text_Description
 {
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    FONT-STYLE: italic;
+    font-size: 10pt;
+    font-family: Verdana;
+    font-STYLE: italic;
 
-    COLOR: #111100;
+    color: #111100;
 
-    MARGIN-LEFT: 25px;
-    MARGIN-RIGHT: 20px
+    margin-left: 25px;
+    margin-right: 20px
 }
 
-.Text_Right
+.Text_right
 {
-    TEXT-ALIGN:right;
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    text-align:right;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #111100;
 
 
-    MARGIN-TOP: 10px;
-    MARGIN-LEFT: 25px;
-    MARGIN-RIGHT: 20px
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 20px
 }
 .Text_Link
 {
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #555599;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #555599;
 
 }
 .Text_Link_Small
 {
-    FONT-SIZE: 8pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #555599;
+    font-size: 8pt;
+    font-family: Verdana;
+    color: #555599;
 }
 /*This is special style elements for tables*/
 .Table_Text_Header
 {
-    FONT-SIZE: 12pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 12pt;
+    font-family: Verdana;
+    color: #111100;
 
-     LETTER-SPACING:1;
-     FONT-WEIGHT:bold;
+     letter-spacing:1;
+     font-weight:bold;
 }
 
 .Table_Text_Normal
 {
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #111100;
 }
 .Table_Text_Small
 {
-    FONT-SIZE: 8pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 8pt;
+    font-family: Verdana;
+    color: #111100;
 }
 
 .Table_Text_Description
 {
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    FONT-STYLE: italic;
+    font-size: 10pt;
+    font-family: Verdana;
+    font-style: italic;
 }
 
 
@@ -211,29 +210,29 @@ div.Menu_Header_Link A
 {
     border: 1px solid #000000;
     background:#FFFFFF;
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #111100;
     padding:2px 10px;
 
-    TEXT-DECORATION:none;
+    text-decoration:none;
 
 }
 div.Menu_Header_Link A:visited
 {
     border: 1px solid #000000;
     background:#FFFFFF;
-    FONT-SIZE: 10pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #111100;
+    font-size: 10pt;
+    font-family: Verdana;
+    color: #111100;
     padding:2px 10px;
 
-    TEXT-DECORATION:none;
+    text-decoration:none;
 
 }
 div.Menu_Header_Link A:hover
 {
-    TEXT-DECORATION:none;
+    text-decoration:none;
     background-color:#A43C3C;
     color:#FFFFFF;
 }
@@ -253,19 +252,19 @@ li.marked A:visited
 /* A style guide for the footer */
 div.Steel
 {
-    FONT-SIZE: 8pt;
-    FONT-FAMILY: Verdana;
-    COLOR: #996666;
+    font-size: 8pt;
+    font-family: Verdana;
+    color: #996666;
 }
 div.Steel A
 {
-    COLOR: #996666;
-    TEXT-DECORATION:none;
-    MARGIN-LEFT: 3px;
-    MARGIN-RIGHT: 3px
+    color: #996666;
+    text-decoration:none;
+    margin-left: 3px;
+    margin-right: 3px
 }
 .Steel A:hover
 {
-    COLOR: #000000;
-    TEXT-DECORATION:none;
+    color: #000000;
+    text-decoration:none;
 }
