@@ -1,9 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <?php
-include 'php.functions';
+include 'settings.php';
+include 'functions.php';
+
 
 //Used for testing internal links (scripts/check_php_links.py)
-
 if (isset ($argv))
 	for ($i=1;$i<count($argv);$i++)
 	{
@@ -12,14 +13,6 @@ if (isset ($argv))
 		$_GET[$it[0]] = $it[1];
 	}
 
-//Current release here
-$current_release = "3.10";
-
-$all_releases = array();
-array_push($all_releases, $current_release);
-//New Releases here:
-array_push($all_releases, "3.9.1");
-
 ?>
 
 <html>
@@ -27,6 +20,7 @@ array_push($all_releases, "3.9.1");
  <head>
   <title> Texttest.org </title>
     <link rel=STYLESHEET href="stylefile.css" TYPE="text/css">
+    <link href="images/logo.ico" type="image/ico" rel="icon">
   </head>                                                    
 
   <body background="images/back.png">
