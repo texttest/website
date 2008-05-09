@@ -72,9 +72,8 @@ test suite) and go to the Bugs tab.</div>
 that isn't appropriate. So we fill in the Bugs tab appropriately
 with the text to match, and some description information, a full
 text to give and a short description. This creates a special
-file &ldquo;<div class="Text_Main_Header"><U>knownbugs.&lt;app&gt;</U></div>&rdquo; in the
-test or suite's directory, which has a format that is easy to
-edit in a normal editor.</div>
+file <B><B>knownbugs.&lt;app&gt;</B></B> in the test or suite's 
+directory, which has a format that is easy to edit in a normal editor.</div>
 <div class="Text_Normal">If we then run the test and it produces the indicated text,
 we then get a nice summary instead of the usual complete file
 differences. Note it has used our &ldquo;brief description&rdquo;
@@ -83,6 +82,20 @@ given above in the Details column of the test tree view, while
 the full description appears in the Text Info window at the
 bottom right.</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/knownbug.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+</div>
+<div class="Text_Normal">
+Ordinarily, you will search for some text that will be produced in a certain file, as
+given by the "file to search in" entry. This will search the unfiltered version of the file
+(not the diff produced in the Text Info window). This can be inverted via the check box at the bottom,
+so that the bug is triggered when the text is not present.
+</div>
+<div class="Text_Normal">
+There is also a special entry 'free_text' in the "file to search in" drop-down list. This
+works by checking the actual result, more or less what appears in the Text Info window.
+Note however that it isn't generally possible to match on the first line of this text,
+which is an additional explanatory line added by the GUI and not part of the state of the
+test. This line will be different in the case of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">running in batch mode</A>, which is why it isn't a good idea for TextTest
+to use it for matching. 
 </div>
 <div class="Text_Header">Extracting information from bug systems (e.g. Bugzilla)</div>
 <div class="Text_Normal">If you have a bug-tracking system with a command-line
