@@ -208,7 +208,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#binary_file">Which output files are known to be binary, and hence should not be shown/diffed?</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#binary_file">Which output files are known to be binary, and hence should not be shown/diffed?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -222,7 +222,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#catalogue_process_string">String for catalogue functionality to identify processes created</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#catalogue_process_string">String for catalogue functionality to identify processes created</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -250,7 +250,7 @@
 			<div class="Table_Text_Small">stacktrace : core* (UNIX)<BR>&lt;empty&gt; (Windows)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#collate_file">Mapping of result file names to paths to collect them from</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#collate_file">Mapping of result file names to paths to collect them from</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -264,7 +264,7 @@
 			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>stacktrace : interpretcore.py (UNIX)<BR>&lt;empty&gt; (Windows)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#collate_script">Mapping of result file names to scripts which turn them into suitable text</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#collate_script">Mapping of result file names to scripts which turn them into suitable text</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -348,7 +348,7 @@
 			<div class="Table_Text_Small">false</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#create_catalogues">Do we create a listing of files created/removed by tests</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#create_catalogues">Do we create a listing of files created/removed by tests</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -432,7 +432,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#discard_file">List of generated result files which should not be compared</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#discard_file">List of generated result files which should not be compared</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -488,7 +488,7 @@
 			<div class="Table_Text_Small">catalogue : 2<BR>default : 99<BR>errors : 1<BR>output : 1<BR>performance : 2<BR>traffic : 1<BR>usecase : 1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#failure_severity">Mapping of result files to how serious diffs in them are</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#failure_severity">Mapping of result files to how serious diffs in them are</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -670,7 +670,7 @@
 			<div class="Table_Text_Small">any</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#home_operating_system">Which OS the test results were originally collected on</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=run_dependent_text#home_operating_system">Which OS the test results were originally collected on</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -880,7 +880,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#run_dependent_text">Mapping of patterns to remove from result files</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=run_dependent_text#run_dependent_text">Mapping of patterns to remove from result files</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1062,7 +1062,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#unordered_text">Mapping of patterns to extract and sort from result files</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=run_dependent_text#unordered_text">Mapping of patterns to extract and sort from result files</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
