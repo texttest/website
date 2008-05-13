@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys,os, types, string
+import sys,os, types
 from tableshared import updateTable
 
 def makeConfigFile(configFileName, configModule):
@@ -49,7 +49,7 @@ def getOutputValue(val):
         pass
 
     if type(val) == types.ListType:
-        return string.join(val, ", ")
+        return ", ".join(val)
 
     if type(val) == types.DictType:
         if len(val) == 1:
@@ -60,7 +60,8 @@ def getOutputValue(val):
         retVals = []
         for key, val in val.items():
             retVals.append(key + " : " + str(getOutputValue(val)))
-        return string.join(retVals, "<BR>")
+        retVals.sort()
+        return "<BR>".join(retVals)
     if val == "APPIDENTIFIER":
         return "&lt;app&gt; (capitalised)"
     if type(val) == types.StringType:
