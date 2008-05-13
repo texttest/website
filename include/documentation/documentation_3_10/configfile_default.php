@@ -54,7 +54,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#base_version">Versions to inherit settings from</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#base_version">Versions to inherit settings from</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -236,7 +236,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#checkout_location">Absolute paths to look for checkouts under</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#checkout_location">Absolute paths to look for checkouts under</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -362,7 +362,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#default_checkout">Default checkout, relative to the checkout location</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#default_checkout">Default checkout, relative to the checkout location</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -460,7 +460,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#extra_version">Versions to be run in addition to the one specified</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#extra_version">Versions to be run in addition to the one specified</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1118,7 +1118,7 @@
 			<div class="Table_Text_Small">99</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#version_priority">Mapping of version names to a priority order in case of conflict.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#version_priority">Mapping of version names to a priority order in case of conflict.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

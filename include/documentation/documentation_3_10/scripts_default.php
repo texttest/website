@@ -39,7 +39,7 @@
 			<div class="Table_Text_Small">comparetest.PrintObsoleteVersions</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#comparetest.PrintObsoleteVersions">Lists all files with version IDs that are equivalent to a non-versioned file</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#comparetest.PrintObsoleteVersions">Lists all files with version IDs that are equivalent to a non-versioned file</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
