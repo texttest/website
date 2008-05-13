@@ -109,7 +109,7 @@
 			<div class="Table_Text_Small">Select Tests</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-f">Select tests listed in file &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-f">Select tests listed in file &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -120,7 +120,7 @@
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-g">use dynamic GUI</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#-g">use dynamic GUI</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -131,7 +131,7 @@
 			<div class="Table_Text_Small">Select Tests</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-grep">Select result files containing &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-grep">Select result files containing &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -142,7 +142,7 @@
 			<div class="Table_Text_Small">Select Tests</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-grepfile">Select result file to search &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-grepfile">Select result file to search &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -153,7 +153,7 @@
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-gx">use static GUI</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-gx">use static GUI</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -230,7 +230,7 @@
 			<div class="Table_Text_Small">Select Tests</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-r">Select execution time</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-r">Select execution time</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -285,7 +285,7 @@
 			<div class="Table_Text_Small">Select Tests</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-t">Select test names containing &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-t">Select test names containing &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -307,7 +307,7 @@
 			<div class="Table_Text_Small">Select Tests</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#-ts">Select suite names containing &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-ts">Select suite names containing &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

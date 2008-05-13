@@ -26,7 +26,7 @@
 			<div class="Table_Text_Small">1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#auto_collapse_successful">Automatically collapse successful test suites?</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#auto_collapse_successful">Automatically collapse successful test suites?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -432,7 +432,7 @@
 			<div class="Table_Text_Small">tkdiff</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#diff_program">External program to use for graphical file comparison</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#diff_program">External program to use for graphical file comparison</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -488,7 +488,7 @@
 			<div class="Table_Text_Small">99</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#failure_display_priority">Mapping of result files to which order they should be shown in the text info window.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#failure_display_priority">Mapping of result files to which order they should be shown in the text info window.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -530,7 +530,7 @@
 			<div class="Table_Text_Small">tail -f (UNIX)<BR>baretail (Windows)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#follow_program">External program to use for following progress of a file</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#follow_program">External program to use for following progress of a file</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -656,7 +656,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#hide_test_category">Categories of tests which should not appear in the dynamic GUI test view</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#hide_test_category">Categories of tests which should not appear in the dynamic GUI test view</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -740,7 +740,7 @@
 			<div class="Table_Text_Small">30</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#lines_of_text_difference">How many lines to present in textual previews of file diffs</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#lines_of_text_difference">How many lines to present in textual previews of file diffs</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1006,7 +1006,7 @@
 			<div class="Table_Text_Small">1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#sort_test_suites_recursively">Sort subsuites when sorting test suites</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#sort_test_suites_recursively">Sort subsuites when sorting test suites</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1090,7 +1090,7 @@
 			<div class="Table_Text_Small">filter_files</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#test_list_files_directory">Default directories for test filter files, relative to an application directory.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#test_list_files_directory">Default directories for test filter files, relative to an application directory.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1118,7 +1118,7 @@
 			<div class="Table_Text_Small">diff</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#text_diff_program">External program to use for textual comparison of files</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#text_diff_program">External program to use for textual comparison of files</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1132,7 +1132,7 @@
 			<div class="Table_Text_Small">-1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#text_diff_program_max_file_size">The maximum file size to use the text_diff_program, in bytes. -1 means no limit.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#text_diff_program_max_file_size">The maximum file size to use the text_diff_program, in bytes. -1 means no limit.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1160,7 +1160,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#unsaveable_version">Versions which should not have results saved for them</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#unsaveable_version">Versions which should not have results saved for them</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1216,7 +1216,7 @@
 			<div class="Table_Text_Small">emacs (UNIX)<BR>notepad (Windows)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#view_program">External program(s) to use for viewing and editing text files</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#view_program">External program(s) to use for viewing and editing text files</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

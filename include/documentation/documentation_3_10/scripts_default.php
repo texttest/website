@@ -47,7 +47,7 @@
 			<div class="Table_Text_Small">default.CountTest</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#default.CountTest">report on the number of tests selected, by application</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#default.CountTest">report on the number of tests selected, by application</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
