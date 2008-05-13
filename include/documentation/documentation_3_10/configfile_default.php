@@ -485,7 +485,7 @@
 			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">errors : 1<BR>default : 99<BR>usecase : 2<BR>catalogue : 2<BR>output : 1<BR>performance : 2</div>
+			<div class="Table_Text_Small">catalogue : 2<BR>default : 99<BR>errors : 1<BR>output : 1<BR>performance : 2<BR>traffic : 1<BR>usecase : 1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=file_collation_and_text_filtering#failure_severity">Mapping of result files to how serious diffs in them are</A></div>
@@ -499,10 +499,10 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">success : green<BR>not_started : white<BR>failure : red<BR>running : yellow<BR>static : grey90<BR>marked by user : orange<BR>pending : white</div>
+			<div class="Table_Text_Small">failure : red<BR>marked by user : orange<BR>not_started : white<BR>pending : white<BR>running : yellow<BR>static : grey90<BR>success : green</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#file_colours">Colours to use for each file state</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#file_colours">Colours to use for each file state</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -541,10 +541,10 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">reset : &lt;control&gt;e<BR>quit : &lt;control&gt;q<BR>cut : &lt;control&gt;x<BR>run : &lt;control&gt;r<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>copy : &lt;control&gt;c<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>rename : &lt;control&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_up : &lt;control&gt;Page_Up<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>unmark : &lt;control&gt;&lt;shift&gt;u<BR>save : &lt;control&gt;s<BR>paste : &lt;control&gt;v<BR>save_selection : &lt;control&gt;&lt;shift&gt;s<BR>select : &lt;control&gt;s</div>
+			<div class="Table_Text_Small">copy : &lt;control&gt;c<BR>cut : &lt;control&gt;x<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>move_up : &lt;control&gt;Page_Up<BR>paste : &lt;control&gt;v<BR>quit : &lt;control&gt;q<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>rename : &lt;control&gt;m<BR>reset : &lt;control&gt;e<BR>run : &lt;control&gt;r<BR>save : &lt;control&gt;s<BR>save_selection : &lt;control&gt;&lt;shift&gt;s<BR>select : &lt;control&gt;s<BR>unmark : &lt;control&gt;&lt;shift&gt;u</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_accelerators">Custom action accelerators.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_accelerators">Custom action accelerators.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -558,7 +558,7 @@
 			<div class="Table_Text_Small">0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_completion_inline">Automatically inline common completion prefix in entry.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_entry_completion_inline">Automatically inline common completion prefix in entry.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -572,7 +572,7 @@
 			<div class="Table_Text_Small">1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_completion_matching">Which matching type to use for entry completion. 0 means turn entry completions off, 1 means match the start of possible completions, 2 means match any part of possible completions</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_entry_completion_matching">Which matching type to use for entry completion. 0 means turn entry completions off, 1 means match the start of possible completions, 2 means match any part of possible completions</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -586,7 +586,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_completions">Add these completions to the entry completion lists initially</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_entry_completions">Add these completions to the entry completion lists initially</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -600,7 +600,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_options">Default drop-down box options for GUI entries</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_entry_options">Default drop-down box options for GUI entries</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -614,7 +614,7 @@
 			<div class="Table_Text_Small">&lt;not set&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#gui_entry_overrides">Default settings for entries in the GUI</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_entry_overrides">Default settings for entries in the GUI</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -625,10 +625,10 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">status_bar : 0<BR>shortcut_bar : 0<BR>toolbar : 0</div>
+			<div class="Table_Text_Small">shortcut_bar : 0<BR>status_bar : 0<BR>toolbar : 0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#hide_gui_element">List of widgets to hide by default</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#hide_gui_element">List of widgets to hide by default</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -866,7 +866,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#query_kill_processes">Ask about whether to kill these processes when exiting texttest.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#query_kill_processes">Ask about whether to kill these processes when exiting texttest.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -936,7 +936,7 @@
 			<div class="Table_Text_Small">0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#static_collapse_suites">Whether or not the static GUI will show everything collapsed</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#static_collapse_suites">Whether or not the static GUI will show everything collapsed</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -947,10 +947,10 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">success : green<BR>not_started : white<BR>failure : red<BR>running : yellow<BR>static : grey90<BR>marked by user : orange<BR>pending : white</div>
+			<div class="Table_Text_Small">failure : red<BR>marked by user : orange<BR>not_started : white<BR>pending : white<BR>running : yellow<BR>static : grey90<BR>success : green</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#test_colours">Colours to use for each test state</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#test_colours">Colours to use for each test state</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1017,7 +1017,7 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">performance_bg : #FFC6A5<BR>row_header_bg : #FFFFCC<BR>test_default_fg : black<BR>column_header_bg : gray1<BR>success_bg : #CEEFBD<BR>column_header_fg : black<BR>failure_bg : #FF3118<BR>no_results_bg : gray2<BR>memory_bg : pink<BR>performance_fg : red6</div>
+			<div class="Table_Text_Small">column_header_bg : gray1<BR>column_header_fg : black<BR>failure_bg : #FF3118<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#testoverview_colours">Colours to use for historical batch HTML reports</A></div>
@@ -1157,10 +1157,10 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">height_pixels : &lt;not set&gt;<BR>width_screen : 0.6<BR>width_pixels : &lt;not set&gt;<BR>vertical_separator_position : 0.5<BR>height_screen : 0.833333333333<BR>maximize : 0<BR>horizontal_separator_position : 0.46</div>
+			<div class="Table_Text_Small">height_pixels : &lt;not set&gt;<BR>height_screen : 0.833333333333<BR>horizontal_separator_position : 0.46<BR>maximize : 0<BR>vertical_separator_position : 0.5<BR>width_pixels : &lt;not set&gt;<BR>width_screen : 0.6</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=guide_to_texttest_ui#window_size">To set the initial size of the dynamic/static GUI.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#window_size">To set the initial size of the dynamic/static GUI.</A></div>
 		</TD>
 	</TR>
 </TABLE>
