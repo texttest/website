@@ -97,7 +97,7 @@ which is an additional explanatory line added by the GUI and not part of the sta
 test. This line will be different in the case of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">running in batch mode</A>, which is why it isn't a good idea for TextTest
 to use it for matching. 
 </div>
-<div class="Text_Header">Extracting information from bug systems (e.g. Bugzilla)</div>
+<div class="Text_Header"><A NAME="bug_system_script"></A>Extracting information from bug systems (e.g. Bugzilla)</div>
 <div class="Text_Normal">If you have a bug-tracking system with a command-line
 interface, you can probably get it to talk to TextTest without
 very much effort. Instead of providing textual descriptions you
@@ -115,7 +115,17 @@ with TextTest. For this to work, you also need to install the
 &ldquo;<A class="Text_Link" href="http://search.cpan.org/~reflog/BugCli-0.2/">bugcli</A>&rdquo;
 program. This is essentially a CGI script that runs on the
 bugzilla server and provides information about bugs via system
-calls rather than as usual via the browser.</div>
+calls rather than as usual via the browser. From TextTest 3.11 the command line
+perl program 'bugcli' is no longer used, only the cli.cgi program. You therefore
+now need to give TextTest the URL to this program, using the config file entry "bug_system_script", but
+you no longer need perl to be installed on your machine. For example, you might add this in your config file:</div>
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+[bug_system_script]
+bugzilla:http://www.mysite.com/bugzilla/cli.cgi
+[end]
+<?php codeSampleEnd() ?>
+</div>
 <div class="Text_Normal">If you don't, or want to use something other than &ldquo;bugcli&rdquo;,
 copy the &ldquo;bugzilla.py&rdquo; module from the TextTest
 source and change it to provide the relevant methods for your

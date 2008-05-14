@@ -208,7 +208,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">The location of the script used to extract information from the bug system.</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=automatic_failure_interpretation#bug_system_script">The location of the script used to extract information from the bug system.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
