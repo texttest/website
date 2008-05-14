@@ -40,8 +40,8 @@
 	
           <table border=0 class="documentation_table">
             <tr>
-              <td width=150 ><div class="Table_Text_Header">General</div></td>
-              <td width=230><div class="Table_Text_Header">User Guide</div></td>
+              <td width=160 ><div class="Table_Text_Header">General</div></td>
+              <td width=220><div class="Table_Text_Header">Interfaces</div></td>
               <td width=250><div class="Table_Text_Header">Configuration Reference</div></td>
             </tr>
             
@@ -55,15 +55,23 @@
 					 <?php  printLI("getting_started","Getting Started","A walk-through of how to test a hello-world program with TextTest"); ?>
 					 <?php  printLI("gui_tests","Testing a GUI","How to test a simple GUI. Assumes you have read the simpler tutorial above"); ?>
  				         <?php  printLI("kataminesweeper","Screencast","Solving Kata Minesweeper with test-driven development using TextTest"); ?>
+                                         <br><br><div class="Table_Text_Header">Basic Setup</div>
+                                         <?php  printLI("about_testsuites","Test Suite Guide","The files and directories that make up a TextTest suite"); ?>
+			    	         <?php  printLI("texttest_sandbox","Managing test data","The TextTest sandbox : providing test data and avoiding global effects"); ?>
+                                         <?php  printLI("run_dependent_text","Filtering the output","How to filter out run-dependent text from the output of your application, so that the compared result is deterministic"); ?>
+			    	         <?php  printLI("extra_files","Tests that write files","Description of the various ways to monitor files that are written as part of the tests"); ?>
+                                         
 				</div>
 		      </td>
 		      <td>
 		      <div class="Table_Text_Normal">
-			    	 <?php  printLI("about_testsuites","Understanding Test Suites","The files and directories that make up a TextTest suite"); ?>
-			    	 <?php  printLI("texttest_sandbox","Managing test data","The TextTest sandbox : providing test data and avoiding global effects"); ?>
-			    	 <?php  printLI("file_collation_and_text_filtering","Collating and Filtering","Configuring which files are compared and how they are compared"); ?>
-			    	 <?php  printLI("guide_to_texttest_ui","The User Interfaces","A walk-through the user interfaces and how to use and configure them"); ?>
-			    	 <?php  printLI("running_texttest_unattended","Running unattended","Guide to Batch Mode. Produces plain text and HTML reports of unattended runs "); ?>
+			    	 <?php  printLI("guide_to_texttest_ui","Interface overview","A walk-through the various ways TextTest can be run and how to choose between them"); ?>
+                                 <?php  printLI("static_gui","The Static GUI","Complete description of how to use the main test management user interface"); ?>
+                                 <?php  printLI("dynamic_gui","The Dynamic GUI","Complete description of how to use the interface for handling particular test runs"); ?>
+			    	 <?php  printLI("personalising_ui","Personalising the GUIs","How to set up the appearance and default values in the GUIs to suit your personal preferences"); ?>
+			    	 <?php  printLI("running_texttest_unattended","Batch Mode","Guide to Batch Mode. Produces plain text and HTML reports of unattended runs "); ?>
+                                 <br><br><div class="Table_Text_Header">Additional Features</div>
+                                 <?php  printLI("versions_and_version_control","Versions and Version Control","How to manage different versions and instances of the system under test"); ?>
 			    	 <?php  printLI("faking_it_with_texttest","Mocking things out","How to 'mock out' external programs and subsystems for determinism, speed, etc."); ?>
 			    	 <?php  printLI("making_the_logging_configurable","Configuring the logging","Configuring your test logging using log4x-style configuration files"); ?>
 			    	 <?php  printLI("measuring_system_resource_usage","CPU time and memory","Checking that your tests stay within certain bounds for CPU time or memory usage"); ?>
