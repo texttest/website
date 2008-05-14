@@ -96,7 +96,7 @@ TextTest's tests for itself (that come with the download).</div>
 <div class="Text_Normal">It is also possible to have a personalised config file which
 accepts all the same settings as the normal config file, and
 will override anything provided there. This is particularly
-useful for setting things like <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>#file_colours">GUI
+useful for setting things like <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>">GUI
 preferences</A>. On UNIX, provide a file called &ldquo;.texttest&rdquo;
 in your home directory. On Windows, put a file called
 &ldquo;.texttest&rdquo; somewhere, and point the environment
@@ -173,8 +173,7 @@ for each test run. By default, the standard output of the system
 under test is redirected to <B><B>output.&lt;app&gt;</B></B>,
 while its standard error is redirected to <B><B>errors.&lt;app&gt;</B></B>.
 Other textual output files can also be collected, and the
-collection of these can be disabled: see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>">guide
-to configuring the evaluation of test results</A>.</div>
+collection of these can be disabled: look <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files"; ?>">here</A> for details of how.</div>
 
 <div class="Text_Normal">TextTest assumes that high-level information of interest to
 it will be logged to one particular result file. This file is

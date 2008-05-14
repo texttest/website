@@ -125,9 +125,9 @@ files by selecting the files you wish to save from the file view
 in the tree view window.</div>
 <div class="Text_Normal">Further configuration options are available under the
 &ldquo;Saving&rdquo; tab</div>
-<div class="Text_Normal">You can configure which version the results are saved as (see
-the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-v">guide to files and
-directories</A> for a description of versions). By default, they
+<div class="Text_Normal">You can configure which version the results are saved as (look
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>">here
+</A> for a description of versions). By default, they
 will be saved as the version that you ran the dynamic GUI as.
 There is a drop-down list so that you can select other versions
 if you want to, which will generally include the current version
@@ -139,7 +139,7 @@ will cause these versions not to appear in the list.</div>
 <div class="Text_Normal">You can also overwrite all the files, even if they were
 regarded as the same, via the option &ldquo;replace successfully
 compared files also&rdquo;: this is a way to re-generate the
-<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run-dependent text</A>
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">run-dependent text</A>
 for a test.</div>
 <div class="Text_Header">Marking tests</div>
 <div class="Text_Normal">Sometimes you have a lot of tests failing for different reasons.

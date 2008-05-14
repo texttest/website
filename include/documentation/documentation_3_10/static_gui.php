@@ -95,7 +95,7 @@ search. Note that the string matched is the <U><I>whole path</I></U><SPAN STYLE=
 of the test suite : test suites can contain other test suites. </SPAN>
 </div>
 <div class="Text_Normal">Sometimes test suites contain different tests depending on
-the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-v">version identifier</A>. In
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>">version identifier</A>. In
 this case, fill in the &ldquo;Tests for Version&rdquo; filter to
 select the tests applicable to a particular version. This is
 filled automatically if the static GUI is itself started with a

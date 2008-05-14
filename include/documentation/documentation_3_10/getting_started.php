@@ -134,7 +134,7 @@ temporary file names, process IDs, times etc. TextTest allows
 you to define what such statements looks like in your program so
 that it can filter them out, avoiding false failures when only
 such information changes. To see how to do this, look at the
-<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">section on
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">section on
 run-dependent text</A>.</div>
 <div class="Text_Normal">Another challenge is that real programs often read and write
 files other than standard error and output. As we saw above,
@@ -149,7 +149,7 @@ and that all needed input files are available from it. See the
 
 <div class="Text_Normal">You may want also want TextTest to compare other created
 files in the same way as you do for standard output and error.
-See the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#collate_file">section on
+See the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files"; ?>">section on
 collating files</A> for details.</div>
 <div class="Text_Normal">At this point you should be able to get going with building a
 test suite for your application. There is of course more to

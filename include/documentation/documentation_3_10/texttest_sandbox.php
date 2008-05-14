@@ -107,7 +107,7 @@ potentially edit some files in it. Copying the whole structure
 for each test run is possible but time consuming. It's better to
 be able to copy just the parts that will be changed and link the
 rest. This is done with the &ldquo;partial_copy_test_path&rdquo;
-config file entry, in conjunction with the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#create_catalogues">catalogue
+config file entry, in conjunction with the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files"; ?>#create_catalogues">catalogue
 creation feature</A> (&ldquo;create_catalogues&rdquo; in the
 config file). The first time the test is run, all the files are
 copied, and the catalogue records which files are created,
@@ -142,7 +142,7 @@ copy_test_path:$MY_ENV_VAR
 
 <?php codeSampleEnd() ?>
 </div>
-This would take the value of the environment variable MY_ENV_VAR
+<div class="Text_Normal">This would take the value of the environment variable MY_ENV_VAR
 as determined by the environment files and the external
 environment, identify if it refers to an existing file or
 directory, and if so, copy that as test data. The environment

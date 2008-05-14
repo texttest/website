@@ -67,7 +67,7 @@ will cause all files judged different to be overwritten (the
 equivalent of the GUI &ldquo;Save&rdquo; button applied to all
 tests, except you have to decide before the run starts). The
 &ldquo;-n&rdquo; option will cause all files regarded as the
-same to be updated: a way of updating the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_collation_and_text_filtering"; ?>#run_dependent_text">run
+same to be updated: a way of updating the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">run
 dependent text</A> contained in them. Specifying both these
 options will cause all files to be updated, regardless of what
 happens.</div>

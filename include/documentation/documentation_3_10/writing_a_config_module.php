@@ -52,7 +52,7 @@ grid engine installed.
 <div class="Text_Header"><A NAME="interactive_action_module"></A>Interactive Action
 Modules</div>
 <div class="Text_Normal">It is also possible that configurations can add new
-<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>#gui_entry_overrides">Interactive
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>#gui_entry_overrides">Interactive
 Actions</A> to the GUI (static or dynamic). It has been found
 occasionally useful to allow this module to be different from
 the module indicated by config_module so that configuring the
