@@ -726,7 +726,7 @@
 			<div class="Table_Text_Small">&lt;app&gt; (capitalised)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Header for page on which this application should appear</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_page_name">Header for page on which this application should appear</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
