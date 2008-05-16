@@ -558,7 +558,7 @@
 			<div class="Table_Text_Small">0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">When double-clicking running files, should we follow progress or just view them?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#follow_file_by_default">When double-clicking running files, should we follow progress or just view them?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

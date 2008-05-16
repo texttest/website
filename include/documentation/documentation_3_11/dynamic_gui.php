@@ -49,7 +49,7 @@ configured using the config file list entry &ldquo;hide_test_category&rdquo;
 To see how to refer to various categories, use the keys from for
 example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A>.</div>
-<div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>
+<div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>
 Viewing Tests</div>
 <div class="Text_Normal">When tests are selected via either of the above means, a new
 &ldquo;Test&rdquo; tab is created on the right, containing the
@@ -70,11 +70,12 @@ viewing a static file. These default to &ldquo;tkdiff&rdquo;,
 UNIX systems, &ldquo;tkdiff&rdquo;, &ldquo;baretail&rdquo; and
 &ldquo;notepad&rdquo; on Windows. By default differences will be
 shown if they are thought to exist (red files) otherwise the
-file is simply viewed. To select other ways to view the files,
+file is simply viewed. You can make following running tests the
+default by setting "follow_file_by_default" to 1. To select other ways to view the files,
 right-click and select a viewer from the popup menu.</div>
 
-<div class="Text_Normal">Note that &ldquo;view_program&rdquo; is a &ldquo;composite
-dictionary&rdquo; entry and can thus be configured per file
+<div class="Text_Normal">Note the config entries described above are all &ldquo;composite
+dictionary&rdquo; entries and can thus be configured per file
 type, using just the stems as keys. It is thus easy to plugin
 custom viewers if particular files produced by the system are
 more conveniently viewed that way.</div>
