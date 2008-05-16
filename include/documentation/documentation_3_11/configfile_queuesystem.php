@@ -194,7 +194,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#binary">Alias. See entry for 'executable'</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'executable'</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -390,7 +390,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Filter file to use by default, generally only useful for versions</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#default_filter_file">Filter file to use by default, generally only useful for versions</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -474,7 +474,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Full path to the System Under Test</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#executable">Full path to the System Under Test</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

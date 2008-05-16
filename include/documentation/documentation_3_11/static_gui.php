@@ -123,8 +123,8 @@ times into a fraction of a minute, and can also use the
 operators &lt;,&gt;,&lt;= and &gt;= to specify ranges of times
 to include.</div>
 
-<div class="Text_Header"><A NAME="-f"></A><A NAME="test_list_files_directory"></A>Reusing
-such selections : &ldquo;filter files&rdquo;</div>
+<div class="Text_Header"><A NAME="-f"></A><A NAME="default_filter_file"></A>
+<A NAME="test_list_files_directory"></A>Reusing such selections : &ldquo;filter files&rdquo;</div>
 <div class="Text_Normal">Sometimes it may be useful to define such a subselection of
 the tests that you may wish to reuse. To do this, select &ldquo;Save
 Selection&rdquo; from the &ldquo;File&rdquo; menu, which brings
@@ -151,6 +151,16 @@ listed in file&rdquo; option, and are also those searched if -f
 is provided on the command line. These locations can be extended
 or replaced by defining the config file entry
 &ldquo;test_list_files_directory&rdquo;.</div>
+<div class="Text_Normal">It is also possible to define which tests
+to run by default based on such filter files. The config file setting
+"default_filter_file" will make sure that only the tests that match
+the criteria in the given file (found via the path mechanism described above)
+are included in the run. This is primarily useful for defining a 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control";?>">version</A> 
+of the test suite. A closely related concept is also available in 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended";?>#batch_filter_file">batch mode</A> via the setting "batch_filter_file".
+</div>
+
 <div class="Text_Header"><A NAME="sort_test_suites_recursively"></A>Sorting the test suites</div>
 
 <div class="Text_Normal">The order of the test suites is primarily defined by the

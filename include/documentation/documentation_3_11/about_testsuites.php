@@ -68,11 +68,11 @@ look for and use all config files it can find. To tell it to
 look for just one particular application, specify &quot;-a
 &lt;app&gt;&quot; on the command line.</div>
 
-<div class="Text_Header"><A NAME="binary"></A><A NAME="interpreter"></A><A NAME="import_config_file"></A>
+<div class="Text_Header"><A NAME="executable"></A><A NAME="interpreter"></A><A NAME="import_config_file"></A>
 <A NAME="extra_config_directory"></A>The Config File for a Test Application</div>
 <div class="Text_Normal">This file basically consists of key, value pairs, where the
 keys are &ldquo;properties&rdquo; with names predefined by
-TextTest. The most important of these is the entry &quot;binary&quot;,
+TextTest. The most important of these is the entry &quot;executable&quot; (formerly known as &quot;binary&quot),
 which defines the path to the SUT and without which nothing much
 will happen. This should be an absolute path, although
 environment variables may be included. It can be any executable
