@@ -866,7 +866,7 @@
 			<div class="Table_Text_Small">cputime : faster, faster, ran faster<BR>default : &lt;empty&gt;<BR>memory : smaller, memory-, used less memory</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Descriptions to be used when the numbers decrease in a performance file</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_descriptor_decrease">Descriptions to be used when the numbers decrease in a performance file</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -880,7 +880,7 @@
 			<div class="Table_Text_Small">cputime : slower, slower, ran slower<BR>default : &lt;empty&gt;<BR>memory : larger, memory+, used more memory</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Descriptions to be used when the numbers increase in a performance file</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_descriptor_increase">Descriptions to be used when the numbers increase in a performance file</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1048,7 +1048,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">List of patterns which, if written on stderr, should not produce a warning popup</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#suppress_stderr_popup">List of patterns which, if written on stderr, should not produce a warning popup</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

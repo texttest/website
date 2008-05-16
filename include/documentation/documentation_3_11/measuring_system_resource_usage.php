@@ -95,7 +95,7 @@ via the mechanism described below.</div>
 <div class="Text_Normal">By default, only the user time is collected. You can include
 the system time also by setting the config file entry
 &ldquo;cputime_include_system_time&rdquo;.</div>
-<div class="Text_Header"><A NAME="performance_logfile_extractor"></A><A NAME="performance_logfile"></A><A NAME="default.ExtractStandardPerformance"></A>
+<div class="Text_Header"><A NAME="performance_logfile_extractor"></A><A NAME="performance_logfile"></A><A NAME="performance_descriptor_increase"></A><A NAME="performance_descriptor_decrease"></A><A NAME="default.ExtractStandardPerformance"></A>
 Extracting other system resource usage from logged files</div>
 
 <div class="Text_Normal">Any information present in any TextTest result file can be
@@ -130,15 +130,23 @@ different files for different entries, in which case the entry
 &ldquo;performance_logfile&rdquo; is of use. This has the same
 form as above, except that the value is the file stem of the
 file you wish to extract the information from.</div>
-<div class="Text_Normal">The number, once identified, is assumed to be a time (in
-seconds or hh:mm:ss) and will be displayed accordingly. To
-override this, choose a system_resource_id containing the
-substring &ldquo;mem&rdquo; and it will be interpreted as a
-memory value in MB (!). The special system resource id &ldquo;memory&rdquo;
-
-will cause performance_test_machine to be set to &ldquo;any&rdquo;
+<div class="Text_Normal">If you choose the
+ system_resource_id &ldquo;memory&rdquo;, the number will be interpreted as a
+memory value in megabytes. This special system resource ID will also cause 
+"performance_test_machine" to be set to &ldquo;any&rdquo;
 by default, as memory is assumed to be less dependent on what
 machine is used.</div>
+<div class="Text_Normal">
+If you chose some other name for system_resource_id the number is assumed to be a time (in
+seconds or hh:mm:ss) and will be displayed accordingly. If it decreases
+the change will be reported as "faster(&lt;system_resource_id&gt;)". This
+reporting can however be configured, via the config file entries "performance_descriptor_decrease"
+and "performance_descriptor_increase". These should be a comma-separated 3-tuple
+of &lt;name&gt;, &lt;brief_description&gt;, &lt;full_description&gt;. (The easiest thing
+is probably to look in the <A class="Text_Link" href="<?php print "index.php?page=
+".$version."&n=configfile_default";?>">table of config file settings</A> and examine
+the default values for "cputime" and "memory").
+</div>
 <div class="Text_Normal">When you have just enabled such resource usage extraction,
 you generally want to automatically extract the current values
 from your existing result files for all tests, creating the
