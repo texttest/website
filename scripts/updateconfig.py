@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys,os, types
+from glob import glob
 from tableshared import updateTable
 
 def makeConfigFile(configFileName, configModule):
@@ -11,8 +12,7 @@ def makeConfigFile(configFileName, configModule):
 
 def getConfigData(texttestPath, configModule, osName):
     configData = {}
-    configFileName = "config.appidentifier"
-    makeConfigFile(configFileName, configModule)
+    makeConfigFile("config.appidentifier", configModule)
     os.environ["TEXTTEST_PERSONAL_CONFIG"] = "STOOPID"
     os.environ["FAKE_OS"] = osName
     os.environ["USER"] = "$USER"
@@ -23,7 +23,8 @@ def getConfigData(texttestPath, configModule, osName):
 
         key, value, doc = line.strip().split("|")
         configData[key] = getValue(value), doc
-    os.remove(configFileName)
+    for fileName in glob("*.appidentifier"):
+        os.remove(fileName)
     return configData
 
 def getValue(val):
