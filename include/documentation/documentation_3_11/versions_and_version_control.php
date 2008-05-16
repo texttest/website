@@ -24,9 +24,17 @@ files). In the case of Standard Dictionary Format (i.e. the
 config and environment files), however, they are interpreted as
 overriding particular entries in the dictionary, so that entries
 not present in &lt;root&gt;.&lt;app&gt;.&lt;version&gt; are read
-from &lt;root&gt;.&lt;app&gt;.
+from &lt;root&gt;.&lt;app&gt;.</div>
+<div class="Text_Normal">
+The presence of versioned files also affect the <A class="Text_Link" href="<?php print "index.php?page=
+".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
+and prioritising files in the hierarchy</A>. In this case the search path is essentially
+processed in order once per version present. This means that a data file or environment file
+in a test suite which has a relevant version suffix will be preferred to a file that 
+has no such suffix but is found in the test case. (In TextTest 3.10 and earlier
+test-specific files were preferred to version-specific files). 
 </div>
-<div class="Text_Normal">In a similar way, it is possible to save 
+<div class="Text_Normal">It is possible to save 
 test results with a version identifier, so that they will be used for 
 comparison next time that version is run. So particular tests can
 have version-specific results while others are shared between all versions.

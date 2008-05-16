@@ -69,7 +69,7 @@ look for just one particular application, specify &quot;-a
 &lt;app&gt;&quot; on the command line.</div>
 
 <div class="Text_Header"><A NAME="executable"></A><A NAME="interpreter"></A><A NAME="import_config_file"></A>
-<A NAME="extra_config_directory"></A>The Config File for a Test Application</div>
+The Config File for a Test Application</div>
 <div class="Text_Normal">This file basically consists of key, value pairs, where the
 keys are &ldquo;properties&rdquo; with names predefined by
 TextTest. The most important of these is the entry &quot;executable&quot; (formerly known as &quot;binary&quot),
@@ -107,9 +107,9 @@ can use the &ldquo;import_config_file&rdquo; entry to identify
 files of the same format whose settings should be included. The
 file should be found under TEXTTEST_HOME, in the same way as
 described in the above paragraph for the config files
-themselves. By setting the entry &ldquo;extra_config_directory&rdquo;
-it can also be placed in the arbitrary location indicated.
-Such a file doesn't need to have a particular name.</div>
+themselves. Such a file doesn't need to have a particular name.
+It can also be stored in an arbitrary location, see below for
+a description of how TextTest searches for files.</div>
 
 <div class="Text_Header"><A NAME="auto_sort_test_suites"></A>Test Suites</div>
 <div class="Text_Normal">A Test Suite is a recursive collection of test cases arranged
@@ -185,6 +185,29 @@ information to extract of one sort or another.
 <div class="Text_Normal">All of these files are in whatever format is expected or
 produced by the SUT: TextTest does not itself look at their
 contents.</div>
+<div class="Text_Header"><A NAME="extra_search_directory"></A>Finding and prioritising files in a test suite</div>
+<div class="Text_Normal">By now the idea should be emerging that TextTest
+follows the principle of "Convention over Configuration", and uses particular names
+to indicate files for particular purposes. A TextTest test suite therefore
+consists of such a hierarchical directory structure, where many such files may be
+found. </div>
+<div class="Text_Normal">
+There arise many situations where TextTest has to find a particular file in this structure.
+Files containing environment variable settings (described below), files containing <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">test data</A>, and files containing
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">failure interpretation information</A> all need to be organised in some hierarchical way. The
+basic idea is that the position a file is stored indicates which tests it should apply to, so
+that a file in a test suite applies to all tests contained in that test suite.
+</div>
+<div class="Text_Normal">
+So if TextTest needs to find a particular file, it will first look in the test, then in the
+parent test suite, and recursively repeat up to the root test suite. The config file entry
+"extra_search_directory" can then be used to extend this search path further to look for
+additional files outside the test structure. As this is a dictionary it can be keyed on
+the type of file search for, so that different search paths can be provided for different file
+types. The &ldquo;default&rdquo; key can be specified to make the same search path apply to all files.
+This setting can also apply to the "imported config files" described above, so that
+they can also be stored outside the given test suite structure.</div> 
+
 <div class="Text_Header">Using Environment Files to Set Environment Variables</div>
 <div class="Text_Normal">Any test suite or test case can tell TextTest to set
 environment variables by providing an environment file. This is
@@ -193,17 +216,11 @@ a file called <B><B>environment.&lt;app&gt;</B></B> or just
 often need to share environment variables). This file is in
 <A class="Text_Link" href="#Appendix - TextTest file formats">Standard Dictionary
 Format</A> , with the environment variable names as keys and
-their values as entries. If the environment file is provided in
-a test case these variables will be set just for that test case.
-If in a test suite it will be set for all test suites and test
-cases containing in that test suite, operating recursively. 
+their values as entries. These environment files are found and prioritised
+via the mechanism described above: all such files are considered and all variables
+will be set, although if the same variable is set by several files the most
+specific one in the hierarchy will of course be chosen. 
 </div>
-
-<div class="Text_Normal">When exiting the test suite, attempts will be made to unset
-the environment variables, however be aware that not all
-versions of Python/operating systems support this. Therefore you
-may need to set dummy values in other test suites to prevent
-unintended effects.</div>
 <div class="Text_Normal">The values of the variables may themselves contain
 environment variables: if so, this should be done UNIX-style
 using $&lt;var_name&gt;.</div>

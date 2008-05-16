@@ -488,7 +488,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#extra_config_directory">Alias. See entry for 'extra_search_directory'</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'extra_search_directory'</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -502,7 +502,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Additional directories to search for settings besides the test structure</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#extra_search_directory">Additional directories to search for TextTest files</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1202,7 +1202,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#test_data_searchpath">Alias. See entry for 'extra_search_directory'</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'extra_search_directory'</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

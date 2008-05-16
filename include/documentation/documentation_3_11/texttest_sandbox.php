@@ -59,7 +59,7 @@ that is started. When the dynamic GUI is closed, the contents of
 whatever it wrote on standard error will be displayed in a
 message box by the static GUI, as well as in a file in this
 directory.</div>
-<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A><A NAME="test_data_searchpath"></A>
+<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
 Populating the temporary directory with test data files (for
 reading or editing)</div>
 <div class="Text_Normal">Sometimes the system under test needs to read some file
@@ -71,27 +71,20 @@ file name of the file you want to provide. You can then refer to
 a local file of the appropriate name in your <I>options</I> file
 in that test case, for example.</div>
 
-<div class="Text_Normal">TextTest will look for the file name you specify, first in
-the permanent directory of the test case, then in the parent
-test suite and so on up to the root. If it finds such a file (or
+<div class="Text_Normal">TextTest will look for the file name you specify, 
+using its <A class="Text_Link" href="<?php print "index.php?page=
+".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
+and prioritising files in the hierarchy</A>. If it finds such a file (or
 directory), it will create a symbolic link to it from the
 temporary directory (UNIX) or copy it (Windows). If it doesn't,
-it will silently continue, as it is regaded as a normal
+it will silently continue, as it is regarded as a normal
 situation to need test data files for some tests but not others.</div>
 <div class="Text_Normal">The files can be given any name at all (unless the system
-under test requires a particular name), but beware! For those
-who have got used to TextTest's naming scheme by now, it can be
-tempting to add .&lt;app&gt; endings. However, the naming scheme
-used by files interpreted or compared by TextTest doesn't apply
-to data files, and such naming isn't generally a good idea as it
-will convince TextTest that these are files that should be
-compared.</div>
-<div class="Text_Normal">This search path can also be extended as desired, use the
-&ldquo;test_data_searchpath&rdquo; config file entry. This is a
-dictionary whose keys are the names given in (for example)
-&ldquo;link_test_path&rdquo; and whose values are directories to
-look further for test data. The &ldquo;default&rdquo; key can be
-specified to make the same search path apply to all test data.</div>
+under test requires a particular name), and the normal extensions
+of application and/or version identifiers can be applied to them as with
+other files. (TextTest 3.10 and earlier did not allow this). These identifiers
+will be stripped from the copied or linked file name in the sandbox, which will be
+as given in the config file.</div>
 
 <div class="Text_Normal">Sometimes the system under test will itself edit existing
 files. In this case, you will want to copy to the temporary
