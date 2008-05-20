@@ -130,6 +130,18 @@ processes it can reasonably expect from your grid. To do this, set the config fi
 a bit too high than too low so be conservative! Once it has submitted this number of jobs it 
 will then stop submitting and rely on reusing existing jobs.
 </div>
+<div class="Text_Header"><A NAME="view_file_on_remote_machine"></A>Viewing files locally and remotely</div>
+<div class="Text_Normal">
+The dynamic GUI has a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui";?>#view_program">number of ways</A> to view the files produced by the tests. With the tests being run remotely via the grid, it can become
+an interesting question whether the viewing programs should be started on the remote machine or the local machine.
+On the one hand interesting files may be written to paths that are only accessible from the remote machine where
+the test ran, but on the other hand viewing programs may not be installed on all nodes in the grid.
+</div><div class="Text_Normal">
+When <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui";?>#follow_program">following files</A> produced by remotely run tests, TextTest will always run the "follow_program" ("tail" on UNIX or "baretail" on Windows) by default on the remote machine, as this is supposed to respond quickly to changes and it is therefore better if it doesn't have to wait for the file server
+before responding. When viewing files normally, it will by default run the viewer on the local machine. This can however be
+configured, for example for files which can only be viewed remotely, using the config file setting "view_file_on_remote_machine",
+which can be keyed on file types in a similar way to "view_program" which it configures.
+</div>
 <div class="Text_Header"><A NAME="-keepslave"></A>Cleaning of temporary files</div>
 <div class="Text_Normal">As the queuesystem configuration is often used for very
 large test suites, from TextTest 3.10 it will start to try and clean up temporary

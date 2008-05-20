@@ -1356,7 +1356,7 @@
 			<div class="Table_Text_Small">0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Do we try to start viewing programs on the test execution machine?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#view_file_on_remote_machine">Do we try to start viewing programs on the test execution machine?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
