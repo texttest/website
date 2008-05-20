@@ -47,7 +47,7 @@
 			<div class="Table_Text_Small">default.ExportTests</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Export the selected tests to a different test suite</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#default.ExportTests">Export the selected tests to a different test suite</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
