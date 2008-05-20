@@ -1258,7 +1258,7 @@
 			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>diff : ^<, ^></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Filters that should be applied for particular diff tools to aid with grouping in dynamic GUI</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#text_diff_program_filters">Filters that should be applied for particular diff tools to aid with grouping in dynamic GUI</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

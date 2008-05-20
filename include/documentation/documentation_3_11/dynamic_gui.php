@@ -22,15 +22,26 @@ number of tests that were successful. This aids the user in
 seeing which tests need his attention. If this behaviour is
 found to be undesirable for any reason, it can be disabled by
 setting the config file value 'auto_collapse_successful' to 0.</div>
-<div class="Text_Header"><A NAME="hide_test_category"></A>The Status tab</div>
+<div class="Text_Header"><A NAME="hide_test_category"></A><A NAME="text_diff_program_filters"></A>The Status tab</div>
 <div class="Text_Normal">The initial right window is a summary of how many tests are
 in a given state and is continually updated as they change. When
 they complete, if they fail they are sorted into categories of
 which files differed underneath the &ldquo;Failed&rdquo;. Note
 that as several files can differ in the same test this doesn't
 necessarily add up to the total number of failed tests.</div>
-
-<div class="Text_Normal">It also doubles as a way of selecting and hiding whole
+<div class="Text_Normal">
+For each file which has differences, subgroups will then appear (labelled
+Group 1, Group 2 etc.) for tests which have failed with an identical
+difference in that file. Tests which have a unique diff will not appear
+in any such group. "Identical" here is configurable: by default the "diff"
+tool is used and TextTest will only compare using the lines beginning with '&lt;'
+or '&gt;', filtering out the lines that indicate which line numbers were different.
+So tests will be grouped together if they gain the same line at different points in the file,
+for example. This can be configured using the config file dictionary setting 
+"text_diff_program_filters", which is keyed on diff programs and identifies lines from
+their output that should be <I>preserved</I> in the output.
+</div>
+<div class="Text_Normal">The status tab also doubles as a way of selecting and hiding whole
 categories of tests at once. Clicking the lines will select all
 such tests in the test tree view. Unchecking the check boxes on
 the right will cause all tests in that category to be hidden in
