@@ -1356,7 +1356,7 @@
 			<div class="Table_Text_Small">0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">If tests are run remotely, do we try to start viewing programs on that machine?</div>
+			<div class="Table_Text_Small">Do we try to start viewing programs on the test execution machine?</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

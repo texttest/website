@@ -1263,20 +1263,6 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">view_file_on_remote_machine</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">0</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">If tests are run remotely, do we try to start viewing programs on that machine?</div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">view_program</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
