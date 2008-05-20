@@ -611,7 +611,7 @@
 			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">add_test : &lt;control&gt;n<BR>copy : &lt;control&gt;c<BR>cut : &lt;control&gt;x<BR>enter_failure_information : &lt;control&gt;i<BR>filter : &lt;control&gt;f<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>move_up : &lt;control&gt;Page_Up<BR>paste : &lt;control&gt;v<BR>quit : &lt;control&gt;q<BR>recompute_status : F5<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>refresh : F5<BR>rename : &lt;control&gt;m<BR>reset : &lt;control&gt;e<BR>run : &lt;control&gt;r<BR>save : &lt;control&gt;s<BR>save_selection : &lt;control&gt;&lt;shift&gt;s<BR>select : &lt;control&gt;s<BR>unmark : &lt;control&gt;&lt;shift&gt;u</div>
+			<div class="Table_Text_Small">add_test : &lt;control&gt;n<BR>copy : &lt;control&gt;c<BR>cut : &lt;control&gt;x<BR>enter_failure_information : &lt;control&gt;i<BR>filter : &lt;control&gt;f<BR>kill : &lt;control&gt;Delete<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>move_up : &lt;control&gt;Page_Up<BR>paste : &lt;control&gt;v<BR>quit : &lt;control&gt;q<BR>recompute_status : F5<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>record_use-case : F9<BR>refresh : F5<BR>remove : &lt;control&gt;Delete<BR>rename : &lt;control&gt;m<BR>reset : &lt;control&gt;e<BR>run : &lt;control&gt;r<BR>save : &lt;control&gt;s<BR>save_as : &lt;control&gt;&lt;alt&gt;s<BR>save_selection : &lt;control&gt;&lt;shift&gt;s<BR>select : &lt;control&gt;s<BR>unmark : &lt;control&gt;&lt;shift&gt;u</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_accelerators">Custom action accelerators.</A></div>
@@ -1188,7 +1188,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Write the contents of test_data_environment to the given Java properties file</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#test_data_properties">Write the contents of test_data_environment to the given Java properties file</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
