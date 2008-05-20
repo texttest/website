@@ -78,7 +78,7 @@ of tests) is displayed in the column header of the test view at
 all times. The various selection criteria can also be tried out
 from the command line, using the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-s">plugin
 script</A> &ldquo;default.CountTest&rdquo;.</div>
-<div class="Text_Header"><A NAME="-t"></A><A NAME="-ts"></A><A NAME="-vs"></A><A NAME="-grep"></A><A NAME="-grepfile"></A><A NAME="-r"></A>
+<div class="Text_Header"><A NAME="-t"></A><A NAME="-ts"></A><A NAME="-vs"></A><A NAME="-grep"></A><A NAME="-desc"></A><A NAME="-grepfile"></A><A NAME="-r"></A>
 Description of all test selection filters</div>
 <div class="Text_Normal">The simplest filters focus on matching the names of tests and
 the test suites they are in. The &ldquo;Test Names Containing&rdquo;
@@ -93,6 +93,11 @@ field (-ts on the command line) provides a way to select entire
 test suites based on a similar substring/regular expression
 search. Note that the string matched is the <U><I>whole path</I></U><SPAN STYLE="text-decoration: none">
 of the test suite : test suites can contain other test suites. </SPAN>
+</div>
+<div class="Text_Normal">Likewise it is possible to match on the name of the application,
+which can be useful if several different ones are loaded into the GUI at the same time,
+or also on the description of the test, using a similar substring/regular expression matching
+to that described above. This can also be done on the command line via "-a" and "-desc" respectively.
 </div>
 <div class="Text_Normal">Sometimes test suites contain different tests depending on
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>">version identifier</A>. In
