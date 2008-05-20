@@ -262,6 +262,25 @@ you can select tests in the normal ways and the files relevant
 to the testsuite will be chosen for you. The above example will
 naturally replace all instances of &ldquo;bad&rdquo; with &ldquo;good&rdquo;
 in all &ldquo;errors&rdquo; result files.</div>
+
+<div class="Text_Header"><A NAME="default.ExportTests"></A>Transferring tests between
+different test suites</div><div class="Text_Normal">
+As another example of the above plugin script mechanism, it is possible
+to have several different test suites that are based on testing broadly the same
+application. For example you might have one master test suite with many different
+possible functionalities, where other projects want to take a part of it to
+adapt. You can achieve this with the "default.ExportTests" plugin script. This is used as follows:
+</div>
+
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+texttest.py &lt;options&gt; -s &ldquo;default.ExportTests dest=/path/to/destination/suite&rdquo;
+<?php codeSampleEnd() ?>
+</div>
+<div class="Text_Normal">
+The tests chosen via &lt;options&gt; will then be copied to an equivalent position in the destination
+suite. If they existed there already they will not be updated currently.
+</div>
 <div class="Text_Header"><A NAME="Appendix - TextTest file formats"></A>TextTest file
 formats</div>
 <div class="Text_Normal">TextTest reads two file formats - Standard List Format (for
