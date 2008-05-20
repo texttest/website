@@ -7,7 +7,6 @@ from tableshared import updateTable
 def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
     configFile.write("config_module:" + configModule + "\n")
-    configFile.write("trace_level_variable:nonsense\n")
     configFile.write("use_case_record_mode:GUI\n")
     configFile.write("create_catalogues:true\n")
     configFile.write("partial_copy_test_path:nonsense\n")

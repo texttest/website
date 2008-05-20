@@ -312,17 +312,6 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-trace &lt;value&gt;</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Basic</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=making_the_logging_configurable#-trace">Target application trace level &lt;value&gt;</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">-ts &lt;value&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">

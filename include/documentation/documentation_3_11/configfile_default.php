@@ -1193,20 +1193,6 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">trace_level_variable</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">String</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Environment variable that sets a simple trace-log level</div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">unordered_text</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
