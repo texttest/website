@@ -77,7 +77,7 @@ config file. The relevant entries are &quot;diff_program&quot;
 for viewing differences, &quot;follow_program&quot; for
 following a running test and &quot;view_program&quot; for
 viewing a static file. These default to &ldquo;tkdiff&rdquo;,
-&ldquo;tail -f&rdquo; and &ldquo;xemacs&rdquo; respectively on
+&ldquo;tail -f&rdquo; and &ldquo;emacs&rdquo; respectively on
 UNIX systems, &ldquo;tkdiff&rdquo;, &ldquo;baretail&rdquo; and
 &ldquo;notepad&rdquo; on Windows. By default differences will be
 shown if they are thought to exist (red files) otherwise the
@@ -89,7 +89,13 @@ right-click and select a viewer from the popup menu.</div>
 dictionary&rdquo; entries and can thus be configured per file
 type, using just the stems as keys. It is thus easy to plugin
 custom viewers if particular files produced by the system are
-more conveniently viewed that way.</div>
+more conveniently viewed that way. For example, this will cause the "output"
+files to be viewed with "xemacs" rather than the default "emacs":
+<?php codeSampleBegin() ?>
+[view_program]
+output:xemacs
+<?php codeSampleEnd() ?>
+</div>
 <div class="Text_Normal">On the Text Info tab you will see a textual preview of all
 the file differences, along with a summary of what happened to
 the test. This textual preview is also used by the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_sender">batch

@@ -17,7 +17,10 @@ as previously being viewed in the static GUI. The files can be
 double clicked in a similar way, here they will invariably be
 viewed with &ldquo;view_program&rdquo; (xemacs/notepad by
 default). Note this setting can also be configured per result
-type as described above.</div>
+type as described <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui"; ?>#view_program">here</A>.
+In addition, you can use this view to create new files of either of the three types,
+use "Create File" from the popup menu and select the type of file you wish to create.
+</div>
 <div class="Text_Normal">The static GUI can be used to creating new tests or test
 suites. By right-clicking a test suite, and selecting "Add Test" or "Add Suite" from
 the popup menu, you get a dialog that can be filled in and will result in a new test
