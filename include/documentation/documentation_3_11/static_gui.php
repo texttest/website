@@ -51,35 +51,47 @@ options that can be given to the dynamic GUI)
 the toolbar or in one of the above tabs). This will start the
 dynamic GUI on the selected tests. 
 </div>
-<div class="Text_Header"><A NAME="default.CountTest"></A>Selecting tests via search
-criteria: the static GUI &ldquo;Selection&rdquo; tab</div>
-<div class="Text_Normal">On the right there is a &ldquo;Selection&rdquo; tab which has
-a sub-tab &ldquo;Select Tests&rdquo; (it should be visible when
-you start TextTest). This provides a simple search mechanism for
+<div class="Text_Header"><A NAME="default.CountTest"></A>Selecting and filtering
+tests via search criteria: the static GUI &ldquo;Selection&rdquo; tab</div>
+<div class="Text_Normal">On the right there is a &ldquo;Selection&rdquo; tab(it should be 
+visible when you start TextTest). This provides a simple search mechanism for
 finding tests, useful when the test suite grows too large to
 always select comfortably which tests you want to run via the
-GUI alone. When the &ldquo;Select&rdquo; button is pressed, all
+test tree view alone. When the &ldquo;Select&rdquo; button is pressed, all
 tests will be selected which fulfil <U>all</U> of the criteria
 specified by the text boxes in the &ldquo;Select&rdquo; tab. It
 follows that if no filters are provided and &ldquo;Select&rdquo;
+pressed, all tests will be selected.
+</div>
 
-pressed, all tests will be selected.</div>
-<div class="Text_Normal">There are four &ldquo;modes&rdquo; for selection represented
-by radio buttons at the bottom. &ldquo;Discard&rdquo;, the
-default, will ignore what is already selected. &ldquo;Extend&rdquo;
-will keep the current selection and add to it. &ldquo;Refine&rdquo;
-will match only tests that were already selected and match the
+<div class="Text_Normal">Using the same criteria on the same tab, it is also
+possible to filter the tests, so that instead of selecting tests that match
+the criteria, TextTest will hide those that do not match the criteria. This
+is often useful when you want to work with a subset of the test suite for some time.
+In addition, the View menu contains actions to turn a selection into a filtering
+by hiding all tests that aren't currently selected.
+</div>
+
+<div class="Text_Normal">The respective frames for selection and filtering
+contain various &ldquo;modes&rdquo; represented by radio buttons. These operate
+independently of each other. &ldquo;Discard&rdquo;, the default, will ignore the current
+selection or filtering. &ldquo;Extend&rdquo;
+will keep the current selection or filtering and add to it. &ldquo;Refine&rdquo;
+will match only tests that were already selected or shown and match the
 search criteria, while &ldquo;Exclude&rdquo; will match only
-test that were not already selected. 
+test that were not already selected (and isn't currently implemented for filtering). 
 </div>
 
 <div class="Text_Normal">Note that the number of selected tests (and the total number
-of tests) is displayed in the column header of the test view at
+of tests, and the number of hidden tests) is displayed in the column header of the test view at
 all times. The various selection criteria can also be tried out
 from the command line, using the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#-s">plugin
 script</A> &ldquo;default.CountTest&rdquo;.</div>
-<div class="Text_Header"><A NAME="-t"></A><A NAME="-ts"></A><A NAME="-vs"></A><A NAME="-grep"></A><A NAME="-desc"></A><A NAME="-grepfile"></A><A NAME="-r"></A>
+
+<div class="Text_Header">
+<A NAME="-t"></A><A NAME="-ts"></A><A NAME="-vs"></A><A NAME="-grep"></A><A NAME="-desc"></A><A NAME="-grepfile"></A><A NAME="-r"></A>
 Description of all test selection filters</div>
+
 <div class="Text_Normal">The simplest filters focus on matching the names of tests and
 the test suites they are in. The &ldquo;Test Names Containing&rdquo;
 field (-t on the command line) will select all test cases which
