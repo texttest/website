@@ -156,7 +156,7 @@ of &ldquo;new file&rdquo; results first time around. There is a
 &ldquo;default.ExtractStandardPerformance&rdquo;. 
 </div>
 
-<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A><A NAME="cputime_slowdown_variation_%"></A>
+<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A>
 Comparing and Saving System Resource Usage Files</div>
 <div class="Text_Normal">The files for comparison are not compared exactly. Part of
 the point of testing things like this is that it is never
@@ -180,28 +180,17 @@ immediately intuitive way of defining decreases as a percentage
 of the current value leads to the situation where a 100%
 slowdown today is counterbalanced by a 50% speedup tomorrow,
 which can also become hard to follow.</div>
-<div class="Text_Normal">When differences in performance are reported, you are given
-the option to save as described below. An extra dialogue appears
-as to whether you want to save &ldquo;Exact Performance&rdquo;
 
-or &ldquo;Average Performance&rdquo;. &ldquo;Exact Performance&rdquo;
-will just overwrite the old file with the new one. &ldquo;Average&rdquo;
-will, not surprisingly, take the old and new statistics, take
-the average and save that as the new result.</div>
+<div class="Text_Normal">When saving tests where differences in performance
+have been reported, it is possible to save an average of the old performance
+figure and the new one, to prevent too much oscillation. To do this, fire up 
+the "Save As..." dialog, and select &ldquo;Average Performance&rdquo; from
+the radio button at the bottom of the dialog. 
+</div>
 <div class="Text_Normal">Below is what you will see in the dynamic GUI when you run
 tests that fail in performance in this way.</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 
-</div>
-<div class="Text_Normal">(As a footnote, there is also the possibility to plug in a
-mechanism to test the execution machine for processes which
-might interfere with the performance of the system under test.
-If such interference is detected, a larger tolerance can be
-used, indicated by the config file entry
-&ldquo;cputime_slowdown_variation_%&rdquo; (only for CPU time
-measurement, as indicated). This does not have any effect in the
-default configuration, but can be implemented in derived
-configurations. See the guide to writing your own configuration)
 </div>
 <div class="Text_Header"><A NAME="performance.PerformanceStatistics"></A><A NAME="performance.ShowMemoryUsage"></A>
 Statistical reports on System Resource Usage</div>

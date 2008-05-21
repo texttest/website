@@ -19,13 +19,9 @@ viewed with &ldquo;view_program&rdquo; (xemacs/notepad by
 default). Note this setting can also be configured per result
 type as described above.</div>
 <div class="Text_Normal">The static GUI can be used to creating new tests or test
-suites. By clicking a test suite, and filling in the forms
-marked &quot;Adding Suite&quot; and &quot;Adding Test&quot; (and
-pressing the corresponding button when complete), the test suite
-can be extended without the need to create directories and edit
-files by hand. Note that you can also edit the test suite file
-from this view, and re-ordering of the tests performed this way
-will show up in the GUI without needing to restart it.</div>
+suites. By right-clicking a test suite, and selecting "Add Test" or "Add Suite" from
+the popup menu, you get a dialog that can be filled in and will result in a new test
+under the chosen suite. </div>
 
 <div class="Text_Header">Running Tests from the Static GUI</div>
 <div class="Text_Normal">In order to run tests, you first need to select some tests to
@@ -121,10 +117,10 @@ command line - simply running with a version will have the same
 effect.</div>
 
 <div class="Text_Normal">You can also search for certain logged text in the result
-files. This is done via the &ldquo;Log files containing&rdquo;
+files. This is done via the &ldquo;Test-files containing&rdquo;
 filter (-grep on the command line). By default, this will search
 in the file identified by the &ldquo;log_file&rdquo; config file
-entry. If the &ldquo;Log file to search&rdquo; filter is also
+entry. If the &ldquo;Test-file to search&rdquo; filter is also
 provided (-grepfile on the command line), that file will be
 searched instead. This allows selecting all tests that exercise
 a certain part of the system's functionality, for example.</div>
@@ -206,7 +202,11 @@ submenu in the popup menu for the test window.</div>
 recursively (i.e. all contained test suites will also be
 sorted). To disable this behaviour, set the config file entry
 &ldquo;sort_test_suites_recursively&rdquo; to 0.</div>
-
+<div class="Text_Normal">
+Note that you can also simply edit the testsuite file via the file view, and 
+re-ordering of the tests performed this way
+will show up in the GUI without needing to restart it.
+</div>
 <div class="Text_Header"><A NAME="suppress_stderr_popup"></A>Handling Dynamic GUI errors</div>
 
 <div class="Text_Normal">Anything that is written on standard error by a dynamic GUI run will

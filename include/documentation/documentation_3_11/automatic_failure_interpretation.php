@@ -42,11 +42,6 @@ but the reason for failure will be given in the &ldquo;Text
 Info&rdquo; window instead.</div>
 <div class="Text_Header">Known Bugs : associating logged text patterns with a summary
 description</div>
-<div class="Text_Normal">(<FONT COLOR="#ff0000">Note that the &ldquo;internal error&rdquo;
-
-mechanism used in TextTest 3.7 and earlier is now removed. The
-known bugs mechanism now supports everything needed. For
-migration help, see the migration notes in the download</FONT>)</div>
 <div class="Text_Normal">It can be useful to associate a succinct problem description
 with the appearance of certain logged text. For example, your
 application may well report &ldquo;Internal Error!!!&rdquo; when
@@ -61,15 +56,17 @@ case, telling TextTest about it can prevent lots of people
 examining lots of failed tests in order to discover the same
 issue again.</div>
 <div class="Text_Normal">The easiest way to do this is by using the dialog in the
-static GUI. Select the test or testsuite where the bug should
+static GUI. Right-click the test or testsuite where the bug should
 apply (for example, if it applies everywhere, select the root
-test suite) and go to the Bugs tab.</div>
+test suite) and select "Enter Failure Information". (The screenshot
+below is from an earlier version of TextTest but the contents of the old Bugs
+tab is the same as what the dialog will show)</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/reportbug.JPG" NAME="graphics1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 
 </div>
 <div class="Text_Normal">Here we imagine that when our application logs &ldquo;after
 &lt;n&gt; seconds&rdquo; this implies it has gone into a delay
-that isn't appropriate. So we fill in the Bugs tab appropriately
+that isn't appropriate. So we fill in the dialog appropriately
 with the text to match, and some description information, a full
 text to give and a short description. This creates a special
 file <B><B>knownbugs.&lt;app&gt;</B></B> in the test or suite's 

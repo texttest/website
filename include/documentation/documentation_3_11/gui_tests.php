@@ -41,10 +41,11 @@ world&rdquo;</A>.</div>
 <div class="Text_Normal">However, command line options are
 not sufficient to define a GUI test. We also need to define the
 use case that will be performed with the GUI. To do this, we go
-to the &ldquo;Recording&rdquo; tab at the bottom right and then
-click the &ldquo;Record Use-Case&rdquo; button. This will start
-an instance of the dynamic GUI, as with running tests. This in
-turn fires up our Video Store GUI in record mode. We simply
+to the &ldquo;Running&rdquo; tab and then the &ldquo;Recording&rdquo; 
+subtab, and then click the &ldquo;Record Use-Case&rdquo; button
+(or we just press F9 and don't bother with the tabs, as we aren't changing
+any settings). This will start an instance of the dynamic GUI, as with running tests. 
+This in turn fires up our Video Store GUI in record mode. We simply
 perform the actions that constitute the use case, and then close
 this GUI. 
 </div>
