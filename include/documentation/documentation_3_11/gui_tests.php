@@ -33,7 +33,9 @@ file. In particular, you should add the line
 you also need to set 'use_case_recorder:jusecase'. This is
 because JUseCase uses Java Properties files rather than
 environment variables for its interface, so TextTest needs to
-know to generate these rather than set environment variables.</div>
+know to generate these rather than set environment variables. Setting 'use_case_recorder:none' is a
+useful trick if you want to enable the virtual display functionality described here but don't want
+to use a use-case recorder.</div>
 <div class="Text_Header">Creating a Test</div>
 
 <div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">&ldquo;hello
