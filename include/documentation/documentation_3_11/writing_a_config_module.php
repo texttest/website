@@ -51,16 +51,21 @@ grid engine installed.
 </div>
 <div class="Text_Header"><A NAME="interactive_action_module"></A>Interactive Action
 Modules</div>
-<div class="Text_Normal">It is also possible that configurations can add new
-<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>#gui_entry_overrides">Interactive
-Actions</A> to the GUI (static or dynamic). It has been found
-occasionally useful to allow this module to be different from
-the module indicated by config_module so that configuring the
-GUI can be done independently of configuring the procedure for
-selecting and running tests. This is done via the config file
-entry &ldquo;interactive_action_module&rdquo;, which will
-default to the value of &ldquo;config_module&rdquo; if not
-explicitly defined.</div>
+<div class="Text_Normal">There is a similar mechanism for the GUIs, whereby new configurations
+can extend the user interface to interface with some particular tool or environment. This is
+controlled by the config file entry &ldquo;interactive_action_module&rdquo;, which will
+default to the value of &ldquo;config_module&rdquo; with a "_gui" suffix added, if it is not 
+explicitly defined. Your starting point for these modules is therefore the default_gui.py module.
+</div>
+<div class="Text_Normal">
+The CVS plugin is the only such module provided with the download apart from the default, this 
+can be enabled by setting
+
+<?php codeSampleBegin() ?>
+interactive_action_module:cvs
+<?php codeSampleEnd() ?>
+which will provide an extra menu for checking CVS information for your tests.
+</div>
 
 <div class="Text_Normal"><FONT COLOR="#ff0000">To be continued: with documentation of
 the configuration module API...</FONT></div>

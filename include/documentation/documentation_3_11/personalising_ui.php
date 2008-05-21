@@ -27,23 +27,24 @@ homepage</A>.</div>
 
 <div class="Text_Normal">You can also configure the contents of the toolbar via XML
 files placed in this directory. Such an XML file should be named
-to indicate to TextTest when it should kick in. For example:</div>
+to indicate to TextTest when it should kick in. (Note this naming scheme
+has changed since version 3.10) For example:</div>
 <UL>
 	<LI><div class="Text_Normal">&ldquo;default_gui.xml&rdquo;
 	(affect every time you start TextTest) 
 	</div>
-	<LI><div class="Text_Normal">&ldquo;default_dynamic_gui.xml&rdquo;
+	<LI><div class="Text_Normal">&ldquo;default_gui-dynamic.xml&rdquo;
 	(affect the dynamic GUI only) 
 	</div>
 
-	<LI><div class="Text_Normal">&ldquo;queuesystem_static_gui.xml&rdquo; (affect the
-	static GUI only when running the queuesystem configuration) 
+	<LI><div class="Text_Normal">&ldquo;cvs_gui-static.xml&rdquo; (affect the
+	static GUI only when running the CVS configuration) 
 	</div>
 </UL>
-<div class="Text_Normal">The first element indicates the configuration module run (and
-any parent modules). The second should be &quot;static&quot;,
+<div class="Text_Normal">The first element (before the dash) indicates that the file should only be loaded when the indicated
+ <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=writing_a_config_module";?>#interactive_action_module">GUI configuration module</A> is being run. The second should be &quot;static&quot;,
 &quot;dynamic&quot; or absent. The file name should always end
-in _gui.xml.<BR><BR>As for the contents, the easiest thing is to
+in .xml.</div><div class="Text_Normal">As for the contents, the easiest thing is to
 look at the files in the source/layout directory and
 pattern-match. Note you only need to add extra XML sections, you
 don't need to copy these files, though they give you the names
