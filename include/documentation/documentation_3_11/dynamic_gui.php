@@ -123,8 +123,8 @@ permanent &ldquo;standard&rdquo; files with the &ldquo;temporary&rdquo;
 files produced by this run. 
 </div>
 <div class="Text_Normal">To achieve this, the dynamic GUI has a &ldquo;Save&rdquo;
-button in the toolbar and a corresponding &ldquo;Saving&rdquo;
-option tab at the bottom right. Select the tests you wish to
+button in the toolbar and the File menu, and also a &ldquo;Save As...&rdquo; action
+in the File menu. Select the tests you wish to
 save from the left-hand test window by single-clicking, and
 using Ctrl+left click to select further tests. (Press Ctrl-A to
 select all tests) On pressing &ldquo;Save&rdquo; (or Ctrl+S),
@@ -135,9 +135,8 @@ different will be saved. You can however save only some of the
 files by selecting the files you wish to save from the file view
 (under the Test tab) in much the way you select multiple tests
 in the tree view window.</div>
-<div class="Text_Normal">Further configuration options are available under the
-&ldquo;Saving&rdquo; tab</div>
-<div class="Text_Normal">You can configure which version the results are saved as (look
+<div class="Text_Normal">By doing "Save As...", you get a dialog up with
+further configuration options. You can configure which version the results are saved as (look
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>">here
 </A> for a description of versions). By default, they
 will be saved as the version that you ran the dynamic GUI as.
@@ -146,13 +145,31 @@ if you want to, which will generally include the current version
 and all versions more general than it. Sometimes you don't want
 results to be saved for particular versions, this can be
 configured via the &ldquo;unsaveable_version&rdquo; entry which
-will cause these versions not to appear in the list.</div>
+will cause these versions not to appear in the list or be selected as default in future.</div>
 
 <div class="Text_Normal">You can also overwrite all the files, even if they were
 regarded as the same, via the option &ldquo;replace successfully
 compared files also&rdquo;: this is a way to re-generate the
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">run-dependent text</A>
 for a test.</div>
+<div class="Text_Header">Recomputing Test Results</div>
+<div class="Text_Normal">There are several occasions on which it can be useful to trigger a recomputation
+of the test results. Sometimes other versions of the tests are simply saved, which changes files shared between several
+versions. Sometimes the standard files for the tests are changed externally, via something like
+a version control update. The filtering settings in the config files might also be changed, and hence
+a recomputation could be triggered to see if the test now succeeds with the new filtering rules. For
+these reasons there exists a "Recompute Status" action in the Actions menu.
+</div>
+<div class="Text_Normal">Each time tests are selected or saved in the dynamic GUI, TextTest will
+check the file modification times to see if a recomputation seems to be necessary. If it is, a small refresh
+icon will be shown to the right of that test in the test tree view. It isn't necessary for such an icon
+to be shown in order to perform "Recompute Status" but in most cases it won't have any effect.
+</div>
+<div class="Text_Normal">It's also possible to run this action on a test that has not yet completed. In this
+case it will perform a filtering on the test files produced so far, which gives you the possibility to view them
+and check if the test is clearly going to fail. It will also attempt to estimate how far the test has progressed,
+by comparing the size of the standard files to the size of the temporary files produced so far.
+</div>
 <div class="Text_Header">Marking tests</div>
 <div class="Text_Normal">Sometimes you have a lot of tests failing for different reasons.
 It can be helpful to be able to manually classify these tests as you discover what caused individual failures, so that
