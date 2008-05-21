@@ -83,7 +83,16 @@ running tests, so that -v v1 behaves like -v v1,v2 at all times
 (or no option behaves like -v ,v2). This is achieved by adding
 the line &quot;extra_version:v2&quot; to the relevant config
 file.
-</div><div class="Text_Normal">
+</div>
+<div class="Text_Normal">
+When multiple versions are given to the static GUI in this way, only one line will appear
+in the test tree view for each test, irrespective of how many versions it is present for.
+A separate count is then kept of the number of tests and the number of distinct tests: the
+latter is a count of how many rows are being shown. Actions such as copying and pasting
+will apply to all versions of the test. In the dynamic GUI however a separate tree will be produced
+for each version so that the results can be viewed separately.
+</div>
+<div class="Text_Normal">
 It can also be useful to specify that certain additional versions should only be run in particular
 batch sessions, if they are likely to consume a lot of resources. This is done via the config file
 entry &quot;batch_extra_version:v2&quot;, which is keyed on batch session like most other batch settings.
