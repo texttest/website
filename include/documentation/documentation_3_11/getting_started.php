@@ -22,13 +22,13 @@ do as follows:</div>
 	<div class="Text_Normal"><li>In the new directory, create a file called
 	'config.&lt;app&gt;', where &lt;app&gt; is the extension you
 	just chose. In this file, write the single line
-	'binary:&lt;full_path&gt;', where &lt;full_path&gt; is the
+	'executable:&lt;full_path&gt;', where &lt;full_path&gt; is the
 	absolute path to the program you wish to test.</div>
 
 </OL>
 <div class="Text_Normal"><I>All information about an application and how to test it
 will be placed in the 'config file' which we just created. The
-entry 'binary' is the only one which is compulsory, everything
+entry 'executable' is the only one which is compulsory, everything
 else has default values.</I></div>
 <div class="Text_Normal">You now have an application with no tests and are ready to
 run the TextTest GUI. You should now do this, with the command
@@ -53,12 +53,11 @@ we wish to add it, by single-clicking that line on the left.
 This brings up a &ldquo;Test&rdquo; tab on the right, which in
 turn shows us the files contained in the viewed test/suite
 (currently suite). There is just one, &ldquo;testsuite.hello&rdquo;,
-which defines which tests are contained in the suite. At the
-bottom are more tabs which are specific to the test we are
-viewing. We go to the 'Adding Test' tab, enter a test name and a
-brief description of what the test is for, and click the 'Add
-Test' button at the bottom. This creates a test and
-automatically views it:</div>
+which defines which tests are contained in the suite. We can then
+bring up the popup menu by right clicking the same line, and select "Add Test",
+which brings up a dialog for adding a new test. We enter a test name and a
+brief description of what the test is for, and click the 'OK' button at the bottom. 
+This creates a test and automatically views it:</div>
 
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/emptytest.JPG" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
@@ -136,23 +135,24 @@ that it can filter them out, avoiding false failures when only
 such information changes. To see how to do this, look at the
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">section on
 run-dependent text</A>.</div>
-<div class="Text_Normal">Another challenge is that real programs often read and write
-files other than standard error and output. As we saw above,
-TextTest runs all tests in a temporary directory created
-specifically for that test run, which is also used as current
-working directory for that test. You should therefore make sure
-that your program only creates files relative to this directory,
-and that all needed input files are available from it. See the
-<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">guide to TextTest's temporary directory
-</A>for details. 
+<div class="Text_Normal">Another challenge is that you may well need to provide
+test data to your application, which may also be changed by the tests.
+As we saw above, TextTest creates a specific temporary directory for each test run, 
+and its model is that all needed data files are provided there and the application is
+configured so that it only writes files there. This directory is known as the 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">TextTest sandbox</A>. 
+One very common usage of this mechanism is to configure your application's logging for the tests,
+by providing log4x-style configuration files as test data : this is documented as an example on the
+same page.
 </div>
 
-<div class="Text_Normal">You may want also want TextTest to compare other created
-files in the same way as you do for standard output and error.
+<div class="Text_Normal">
+It's also the case that real programs often read and write files other than standard error and output.
+You may want also want TextTest to keep track of this, and maybe also to compare them in the same way 
+as you do for standard output and error.
 See the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files"; ?>">section on
 collating files</A> for details.</div>
 <div class="Text_Normal">At this point you should be able to get going with building a
 test suite for your application. There is of course more to
-TextTest than this: look at the reference material available
-from <A class="Text_Link" HREF="<?php print "index.php?page=".$version?>">Documentation Central</A>.</div>
+TextTest than this, other features are linked from the table provided above.</div>
 	

@@ -73,7 +73,6 @@
                                  <br><br><div class="Table_Text_Header">Additional Features</div>
                                  <?php  printLI("versions_and_version_control","Versions and Version Control","How to manage different versions and instances of the system under test"); ?>
 			    	 <?php  printLI("faking_it_with_texttest","Mocking things out","How to 'mock out' external programs and subsystems for determinism, speed, etc."); ?>
-			    	 <?php  printLI("making_the_logging_configurable","Configuring the logging","Configuring your test logging using log4x-style configuration files"); ?>
 			    	 <?php  printLI("measuring_system_resource_usage","CPU time and memory","Checking that your tests stay within certain bounds for CPU time or memory usage"); ?>
 			    	 <?php  printLI("automatic_failure_interpretation","Automatic failure interpretation","Associating certain textual patterns with problem descriptions, or reported bugs"); ?>
 			    	 <?php  printLI("running_tests_in_parallel","Running tests in parallel","Using Sun Grid Engine or LSF to run all your tests in parallel"); ?>

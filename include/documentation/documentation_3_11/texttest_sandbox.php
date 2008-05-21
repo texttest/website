@@ -200,7 +200,7 @@ conjunction with partially copied structures, if there is any
 chance of a write-conflict between several tests, or if files
 will be created (and not deleted) by test runs in that place. In
 the last case the directory would grow without limit.</div>
-<div class="Text_Header"><A NAME="-keeptmp"></A>What happens to these directories
+<div class="Text_Header"><A NAME="-keeptmp"></A>What happens to the sandbox
 when TextTest terminates?</div>
 <div class="Text_Normal">When you quit the GUI (or the console interface terminates),
 the temporary directory associated with the run is by default
@@ -223,3 +223,101 @@ directories. It may also be requested explicitly using the
 &ldquo;-keeptmp&rdquo; option on the command line, or checking
 the &ldquo;keep temporary write directories&rdquo; box in the
 &ldquo;side effects&rdquo; tab from the static GUI.</div>
+<div class="Text_Header">Example: configuring application logging by using log4x-style configuration files as test data</div>
+<div class="Text_Normal">Up to TextTest 3.10 there was a separate mechanism for plugging in
+log4x-style configuration files. As TextTest 3.11 can handle application and version-specific suffices
+for test data this became redundant: so it now reduces to a special case of the test data mechanism.
+As this is a very common usage of the mechanism it's documented here for completeness. If you don't
+know what a logging framework is, see the appendix below.
+</div>
+<div class="Text_Normal">We start by deciding on a name for our logging
+configuration files. For consistency with TextTest 3.10 we will choose "logging".
+So we need to tell TextTest to treat these files as readonly test data:
+
+<?php codeSampleBegin() ?>
+link_test_path:logging
+<?php codeSampleEnd() ?>
+
+We should then place a file called "logging" in the root test suite of
+our application, with only those logs enabled that we want turned on for
+all tests, which is probably not many of them. We can then create test-specific
+logging files for particular tests, by selecting that test, right-clicking
+on "Data Files" in the file view, and selecting "create file" from the popup menu.
+TextTest will then choose a logging file via its <A class="Text_Link" href="<?php print "index.php?page=
+".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
+and prioritising data files</A>.
+</div>
+<div class="Text_Normal">
+The system under test can then be configured to read a local file called "logging"
+from the current working directory for its log configuration. In practice though,
+this is likely to be inconvenient for uses other than testing, so you'll probably want
+to use an environment variable or Java property to point it out. This is done as follows:
+</div>
+<div class="Text_Small_Header">Example configuration (log4py)</div> 
+<div class="Text_Normal">Assumes the SUT
+locates the log4py configuration file via the environment variable
+ $DIAG_INPUT_FILE.</div>
+<div class="Text_Normal">
+
+<?php codeSampleBegin() ?>
+[test_data_environment]
+logging:DIAG_INPUT_FILE
+[end]
+<?php codeSampleEnd() ?>
+
+</div>
+<div class="Text_Small_Header">Example 2 (log4j)</div>
+<div class="Text_Normal"> Assumes the SUT reads the local
+properties file log4jconf.properties, which will contain the
+property &ldquo;diag_input&rdquo;.
+This in turn will be used to determine where to read the actual
+log4j properties file.</div>
+
+<div class="Text_Normal">
+
+<?php codeSampleBegin() ?>
+[test_data_environment]
+logging:diag_input
+
+[test_data_properties]
+logging:log4j.properties
+<?php codeSampleEnd() ?>
+
+</div>
+<div class="Text_Normal">
+In a similar way you can make sure your "logging" file writes all the logs to
+the current working directory, and names them with the appropriate suffix that your
+config file also has. Then you won't need to do anything further. Sometimes
+this leads to problems if your application changes directory internally, when
+it can be a good idea to identify the absolute path. The easiest
+way to do this is via the environment variable $TEXTTEST_SANDBOX described above
+(or a proxy variable that is set to be the same as it in the tests)
+</div>
+<div class="Text_Header">Appendix - what is a logging framework and why do I care?</div>
+<div class="Text_Normal">It is naturally possible to conduct all your logging for
+TextTest by writing just to standard output. However, there are
+drawbacks to doing this. 
+</div>
+
+<OL>
+	<div class="Text_Normal"><li>It isn't possible to have some log statements present
+	for some tests and absent for others.</div>
+	<div class="Text_Normal"><li>Where logs cannot be easily disabled, they can slow down
+	the system in production. 
+	</div>
+	<div class="Text_Normal"><li>You are compelled to log at one level only: it isn't
+	possible to separate high-level domain-relevant logs from
+	lower-level debug logs that will only be understood by the
+	developers.</div>
+</OL>
+<div class="Text_Normal">Logging frameworks exist to solve these problems. TextTest
+aims to handle their configuration smoothely and seamlessly to
+make it easy to use them in your program when testing it.</div>
+<div class="Text_Normal">We recommend you look at the log4x family of tools, for
+example <A class="Text_Link" href="http://logging.apache.org/log4j/docs/">log4j</A>
+
+(Java) <A class="Text_Link" href="http://www.its4you.at/english/log4py.html">log4py</A>
+(Python) and <A class="Text_Link" href="http://log4cpp.sourceforge.net/">log4cpp</A>
+(C++). However, it should be possible to plug in a wide variety
+of logging frameworks, provided they support the features that
+TextTest assumes, as described above.</div>
