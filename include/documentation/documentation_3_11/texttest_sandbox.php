@@ -20,7 +20,7 @@ the value of the TEMP environment variable on Windows. This is
 hereafter referred to as the &ldquo;root temporary directory&rdquo;.</div>
 
 <div class="Text_Normal">Each time TextTest is started, it is assigned a unique
-identifier based on the version and the time stamp at which the
+identifier based on the version, the process ID and the time stamp at which the
 run was submitted (the string &ldquo;static_gui&rdquo; is
 prepended in the case of the static GUI). A subdirectory of the
 root temporary directory is then created with this name. All
@@ -211,14 +211,9 @@ results that you wish to use again, either as the default result
 or as a version.</div>
 <div class="Text_Normal">It is also possible to run TextTest in &ldquo;keeptmp&rdquo;
 mode. This means that the temporary directory structure of the
-run is not removed when texttest exits. <U>However, beware!</U>
-
-In this mode it will clean up the run directories of previous
-runs that it finds which had the same application and version.
-This means that you cannot run more than one instance of
-TextTest simultaneously on the same application with the same
-version in &ldquo;keeptmp&rdquo; mode, or they will delete each
-other's files.</div>
+run is not removed when texttest exits. This does not try to
+clean up previous runs, as it did up until version 3.10.
+</div>
 <div class="Text_Normal">Running in <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">batch mode</A> automatically
 selects &ldquo;keeptmp&rdquo; mode for the temporary
 directories. It may also be requested explicitly using the
