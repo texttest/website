@@ -55,9 +55,9 @@ example there is only one file anyway.
 </div>
 <div class="Text_Normal">Note that whether categories are visible by default can be
 configured using the config file list entry &ldquo;hide_test_category&rdquo;
-
 (a common usage is to hide all successful tests automatically).
-To see how to refer to various categories, use the keys from for
+To refer to the various categories, you can use any name that appears in the status tab,
+or you can use the keys from for
 example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A>.</div>
 <div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>

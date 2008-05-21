@@ -15,7 +15,7 @@ test suite.
 <div class="Text_Normal">The above example shows the same test suite and the same test
 as previously being viewed in the static GUI. The files can be
 double clicked in a similar way, here they will invariably be
-viewed with &ldquo;view_program&rdquo; (xemacs/notepad by
+viewed with &ldquo;view_program&rdquo; (emacs/notepad by
 default). Note this setting can also be configured per result
 type as described <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui"; ?>#view_program">here</A>.
 In addition, you can use this view to create new files of either of the three types,

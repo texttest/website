@@ -153,9 +153,24 @@ view (top right window under Test tab) can be configured via the
 GUI dictionary entries &ldquo;test_colours&rdquo; and
 &ldquo;file_colours&rdquo; respectively. These are keyed with
 particular pre-defined names for the different test states: to
-see what they are, look at the default values in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">>table
-of config file settings</A>. The values should be text strings
-as recognised by RGB files.</div>
+see what they are, look at the default values in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">table
+of config file settings</A>. Any name that appears in the Status tab in the dynamic GUI can also be used 
+as a key here, so you can also for example say:
+
+
+<?php codeSampleBegin() ?>
+[test_colours]
+success:pale green
+output different:pink
+[end]
+<?php codeSampleEnd() ?>
+
+The values should be text strings as recognised by RGB files.</div>
+<div class="Text_Normal">
+The static GUI uses the special key "static" which defaults to a pale grey,
+and colours are less important there. However it is possible to set the different
+types of files in the file view to be different colours if desired, use the keys
+static_data, static_standard and static_definition for this purpose.</div>
 
 <div class="Text_Header"><A NAME="gui_accelerators"></A>Keyboard accelerators</div>
 <div class="Text_Normal">The toolbar actions generally have keyboard accelerators,
