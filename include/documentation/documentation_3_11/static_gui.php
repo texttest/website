@@ -177,6 +177,16 @@ are included in the run. This is primarily useful for defining a
 of the test suite. A closely related concept is also available in 
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended";?>#batch_filter_file">batch mode</A> via the setting "batch_filter_file".
 </div>
+<div class="Text_Header">Refreshing the test suite from files</div>
+
+<div class="Text_Normal">It's fairly common that the files in a test suite
+get changed outside of the static GUI, for example if they are version-controlled
+and you update them (which cannot be done from the GUI - yet...). As they
+are all plain text it is also easy to edit them in a text editor independently
+of the GUI. There is therefore a "refresh" action in the Actions menu, which
+will re-read the whole test suite, including the config file settings, from the files.
+It doesn't take account of which tests are selected so it isn't possible to refresh
+just individual tests right now.</div>
 
 <div class="Text_Header"><A NAME="sort_test_suites_recursively"></A>Sorting the test suites</div>
 
