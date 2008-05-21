@@ -38,7 +38,9 @@ particular tests are then written to these directories. When the
 tests are run, each test starts the system under test with the
 corresponding temporary directory as current working directory,
 with its standard output and standard error redirected to local
-files.</div>
+files. It will also set the environment variable TEXTTEST_SANDBOX to
+point out this directory, to aid in providing correct absolute paths
+to programs that insist on them, or change current working directory internally.</div>
 <div class="Text_Normal">It is imperative that you ensure any other files created by
 the system under test are created relative to this temporary
 directory, to avoid global side effects and to aid TextTest in
