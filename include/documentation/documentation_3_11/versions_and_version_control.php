@@ -154,8 +154,7 @@ development work.</div>
 TEXTTEST_CHECKOUT. Any setting in the <I>config</I> or
 <I>environment</I> files can be made to depend on this variable:
 you can insert it as you would with other environment
-variables.. A very common usage is the compulsory &ldquo;binary&rdquo;
-
+variables.. A very common usage is the compulsory &ldquo;executable&rdquo;
 setting in the config file. 
 </div>
 <div class="Text_Normal">How does TextTest detemine its value? A default value is
