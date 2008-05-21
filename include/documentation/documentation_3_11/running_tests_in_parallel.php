@@ -29,20 +29,28 @@ to &ldquo;SGE&rdquo; or &ldquo;LSF&rdquo;: it defaults to &ldquo;SGE&rdquo;.</di
 <div class="Text_Normal">By default, it will submit all tests to the grid engine. It
 is still possible to run tests locally as with the default
 configuration, you need to select the option &ldquo;Run Tests
-Locally&rdquo; (-l on the command line). Internally, TextTest in
-fact submits itself to the grid engine and runs a slave process
-remotely, which runs the test in question and communicates the
-result back to the master process via a socket.</div>
+Locally&rdquo; (-l on the command line).</div>
 
 <div class="Text_Normal">As soon as each test finishes, the test will go green or red,
 and results will be presented. Unlike the default configuration,
 the tests will not naturally finish in order. Here is a sample
-screenshot, using SGE:</div>
+screenshot, from a very old version of TextTest using SGE:</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/parallel.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>Some
 tests have finished and gone green, but others are still running
 and hence yellow. TextTest reports their state in the grid
 engine (&ldquo;RUN&rdquo;) followed by the machine each is
 running on in brackets. 
+</div><div class="Text_Normal">
+Internally, TextTest submits itself to the grid engine and runs a slave process
+remotely, which runs the test in question and communicates the
+result back to the master process via a socket. It does not ordinarily do
+any polling of the grid engine to see what is happening. This means that
+if the slave process crashes remotely without reporting in (for example
+because of hardware trouble, or because its files aren't mounted on the remote
+machine) the test will still be regarded as pending and no error message will be shown.
+If there is no active grid engine job and TextTest is still showing "PEND", it's
+a good idea to kill the test, which will then poll the grid engine and search for
+error log files from the job concerned, and can probably establish what happened to it.
 </div>
 <div class="Text_Header">Tables for the queuesystem module</div>
 <div class="Text_Normal">As this functionality works with a different configuration
