@@ -27,7 +27,7 @@ with the batch session names as keys, it is recommended to read
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#Appendix - TextTest file formats">file
 format documentation</A> for what this means.</div>
 
-<div class="Text_Header"><A NAME="-name"></A><A NAME="batch_recipients"></A><A NAME="batch_sender"></A><A NAME="smtp_server"></A><A NAME="max_width_text_difference"></A><A NAME="full_name"></A>
+<div class="Text_Header"><A NAME="-name"></A><A NAME="batch_recipients"></A><A NAME="batch_mail_on_failure_only"></A><A NAME="batch_sender"></A><A NAME="smtp_server"></A><A NAME="max_width_text_difference"></A><A NAME="full_name"></A>
 The email report and where it is sent</div>
 <div class="Text_Normal">TextTest batch mode generates an email report. For a
 multiple-developer project it is often useful to direct such
@@ -63,7 +63,10 @@ In addition, it can be useful to configure the maximum width of
 lines allowed: some newsgroups have maximum line length limits
 and you don't want test reports bouncing. This can be done via
 the config file entry &ldquo;max_width_text_difference&rdquo;.</div>
-
+<div class="Text_Normal">You can also configured it so that mail is only sent
+if at least one test fails, set the config file entry &ldquo;batch_mail_on_failure_only&rdquo;
+to "true". By default mail will always be sent irrespective of what happens.
+</div>
 <div class="Text_Normal">Where the mail is sent to is controlled by the config file
 entry &ldquo;batch_recipients&rdquo;. This can be configured per
 batch session, and may be a comma-separated list for multiple
