@@ -182,12 +182,14 @@ happening.
 to &quot;true&quot; for the batch session in question. This will
 ignore the email-sending settings and send the batch report to
 an intermediate file. When all tests have been run in this way,
-the collection script can be run via &ldquo;texttest.py -s
-batch.CollectFiles&rdquo;. Alternatively, the -coll flag can be
-provided, which will perform both the scripts
-batch.GenerateHistoricalReport and batch.CollectFiles (i.e. it
-will generate the HTML report described above as well). The
-collection script will search for all such intermediate files
+run the collection script by providing the "-coll" argument on the command
+line. This will also build the HTML report described above, if that
+is enabled. To build only the email report or only the HTML report,
+you can also run with "-coll mail" or "-coll web" respectively. (The older
+plugin script "batch.CollectFiles" will still work but is now deprecated)
+</div>
+<div class="Text_Normal">
+TextTest will then search for all such intermediate files
 and amalgamate them into a single mail per application. If a
 version is provided to this script via -v &lt;version&gt;, only
 runs which ran with that version identifier will be collected.
