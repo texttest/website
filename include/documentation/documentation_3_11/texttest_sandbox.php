@@ -290,7 +290,7 @@ it can be a good idea to identify the absolute path. The easiest
 way to do this is via the environment variable $TEXTTEST_SANDBOX described above
 (or a proxy variable that is set to be the same as it in the tests)
 </div>
-<div class="Text_Header">Appendix - what is a logging framework and why do I care?</div>
+<div class="Text_Header">Appendix - what is a logging framework and why do I care?</div><A name="make_logging_configurable">
 <div class="Text_Normal">It is naturally possible to conduct all your logging for
 TextTest by writing just to standard output. However, there are
 drawbacks to doing this. 
