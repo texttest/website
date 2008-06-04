@@ -81,7 +81,7 @@ if (isset ($argv))
     </tr>
     <tr valign=bottom>
       <td align=left>
-  		<div class="Steel"><?php echo "Last updated: " . date ("d F Y", getlastmod()); ?></div>
+  		<div class="Steel"><?php print_last_updated(); ?></div>
   	   <!-- date ("d F Y H:i:s.", getlastmod()); -->
       </td>     
            
