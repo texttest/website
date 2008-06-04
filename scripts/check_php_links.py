@@ -21,7 +21,7 @@
 #    (It will catch and save all $_GET)
 
 #Restrictions
-#  Can't handle links created by JavaScript code (java is not parsed)
+#  Can't handle links created by JavaScript code (java is not parsed on teh server side)
 #  Assumes all links are embedded with "" (which is WC3 Standard anyway)
 #  That all pages is defined in linkIsInternal()
 
@@ -74,6 +74,9 @@ def splitURL(URL):
 #This should be a string only found on your 404 page
 ERROR_STRING = "<!--404_PAGE_NOT_FOUND-->"
 
+#This should be a string found when the last updated mechanism did not work
+ERROR_IN_LAST_UPDATED = "<!--FUNCTION_LAST_UPDATED_DID_NOT_WORK-->"
+
 #List of links already checked
 #Used to avoid dead loops
 #and redundant checks
@@ -87,6 +90,7 @@ multiLineLinks = 0
 incorrectLinks = 0
 incorrectImgTags = 0
 missingImgFile = 0
+missingLastUpdated = 0
 
 def print404(URL,targetURL,onLine):
     global incorrectLinks
@@ -97,10 +101,19 @@ def print404(URL,targetURL,onLine):
     print "  On line:" ,onLine
     print ""
 
+def printLastUpdatedError(targetURL,onLine,line):
+    global ERROR_IN_LAST_UPDATED,missingLastUpdated
+    missingLastUpdated += 1
+    print "Error in Last update function!!!"
+    print "  Found in:" + targetURL
+    print "  On line:" ,onLine
+    #Remove Error string and the comment tags sorrunding the reason (the "<!--" and "-->")
+    print "  Reason:", line.replace(ERROR_IN_LAST_UPDATED,"").replace("-->","").replace("<!--","")
+    print ""
 
 def check(URL,targetURL):
-    global ERROR_STRING,incorrectImgTags, missingImgFile ,multiLineLinks, checkedLinks, knownIncorrectLinks
-    #print "Check:", URL
+    global ERROR_STRING, ERROR_IN_LAST_UPDATED, incorrectImgTags, missingImgFile ,multiLineLinks, checkedLinks, knownIncorrectLinks
+    #print "Checking:", URL
     file, getLine = splitURL(URL)
     parsedFile = os.popen("php " + file + " " + getLine +  " r")
     nr=0
@@ -109,7 +122,10 @@ def check(URL,targetURL):
         if ERROR_STRING in line:
             print404(URL,targetURL,nr)
             return False
-
+        if ERROR_IN_LAST_UPDATED in line:
+            printLastUpdatedError(targetURL,nr,line)
+            
+        
         currentLine = easyParse(line)
 
         #Search and check images
@@ -166,16 +182,20 @@ def check(URL,targetURL):
     return True
 
 
-print "Checking Internal PHP links and images"
+print "Checking Internal PHP links, images and key functions"
 print ""
 os.chdir("..");
 check("index.php","index.php")
 
 print "Complete..."
+print "  * Found:", missingLastUpdated ,   "error in last updated"
+print "  * Found:", incorrectImgTags, "incorrect image tags"
+print "  * Found:", missingImgFile,   "missing images"
+print ""
 print "  * Found:", incorrectLinks,   "incorrect links"
 print "  * Found:", multiLineLinks,   "multiline links"
 print ""
-print "  * Found:", incorrectImgTags, "incorrect image tags"
-print "  * Found:", missingImgFile,   "missing images"
+
+
  
 #print repr(checkedLinks)
