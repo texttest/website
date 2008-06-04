@@ -36,7 +36,7 @@ my program down to have it writing logs all the time?</div><div class="Text_Norm
 Yes. So you should use a logging framework so that the logs can
 easily be disabled in production. They will then not have a
 noticeable effect on the speed (<A class="Text_Link" href= "http://logging.apache.org/log4j/docs/">log4j'</A>s
-site claims a few nanoseconds). TextTest <A class="Text_Link" href="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=making_the_logging_configurable">integrates
+site claims a few nanoseconds). TextTest <A class="Text_Link" href="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=texttest_sandbox#make_logging_configurable">integrates
 with the log4x family of tools</A> to allow easy configuration
 of log settings. (<A class="Text_Link" href= "http://logging.apache.org/log4j/docs/">log4j</A>
 
