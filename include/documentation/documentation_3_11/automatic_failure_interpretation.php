@@ -95,8 +95,7 @@ test. This line will be different in the case of <A class="Text_Link" href="<?ph
 to use it for matching. 
 </div><div class="Text_Normal">
 When the tests are run, TextTest wll then find all such "knownbugs" files, using its 
-<A class="Text_Link" href="<?php print "index.php?page=
-".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
 and prioritising files in the hierarchy</A>. All information from all such files will be used,
 the files do not overwrite each other as versioned files used to up to version 3.10.</A>
 </div>

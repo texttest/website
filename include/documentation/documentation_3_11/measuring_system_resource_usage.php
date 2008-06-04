@@ -143,8 +143,9 @@ the change will be reported as "faster(&lt;system_resource_id&gt;)". This
 reporting can however be configured, via the config file entries "performance_descriptor_decrease"
 and "performance_descriptor_increase". These should be a comma-separated 3-tuple
 of &lt;name&gt;, &lt;brief_description&gt;, &lt;full_description&gt;. (The easiest thing
-is probably to look in the <A class="Text_Link" href="<?php print "index.php?page=
-".$version."&n=configfile_default";?>">table of config file settings</A> and examine
+is probably to look in the 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">
+table of config file settings</A> and examine
 the default values for "cputime" and "memory").
 </div>
 <div class="Text_Normal">When you have just enabled such resource usage extraction,

@@ -11,8 +11,8 @@ schemas, but are similar enough to want to share most of the test suite.
 </div>
 <div class="Text_Normal">
 A version is simply identified by a name. For each TextTest file type
-(see the <A class="Text_Link" href="<?php print "index.php?page=
-".$version."&n=about_testsuites";?>">guide to TextTest test suites</A>), the framework will then
+(see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">
+guide to TextTest test suites</A>), the framework will then
 look also for files called &lt;root&gt;.&lt;app&gt;.&lt;version&gt;
 where &lt;root&gt; is &ldquo;environment&rdquo;, &ldquo;config&rdquo;,
 &ldquo;testsuite&rdquo; etc. in each case. If such a file does
@@ -79,9 +79,9 @@ file.
 It can also be useful to specify that certain additional versions should only be run in particular
 batch sessions, if they are likely to consume a lot of resources. This is done via the config file
 entry &quot;batch_extra_version:v2&quot;, which is keyed on batch session like most other batch settings.
-For more details on batch mode see <A class="Text_Link" href="<?php print "index.php?page=
-".$version."&n=running_texttest_unattended";?>">plugin
-script</A>
+For more details on batch mode see 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended";?>">
+plugin script</A>
 </div>
 </div><div class="Text_Normal">
 Sometimes you may want to run multiple copies of the same test, for example in order to try

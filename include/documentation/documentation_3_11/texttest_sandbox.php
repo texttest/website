@@ -30,6 +30,7 @@ created under this directory.</div>
 <div class="Text_Normal">In the case of the dynamic GUI or the console interface,
 tests are actually being run. This means that, for every test
 being run, a temporary directory structure is created which
+being run, a temporary directory structure is created which
 essentially mirrors the permanent directories which represent
 the tests (see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">guide to TextTest
 test suites</A>), so that each test is assigned a unique
@@ -73,9 +74,8 @@ file name of the file you want to provide. You can then refer to
 a local file of the appropriate name in your <I>options</I> file
 in that test case, for example.</div>
 
-<div class="Text_Normal">TextTest will look for the file name you specify, 
-using its <A class="Text_Link" href="<?php print "index.php?page=
-".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
+<div class="Text_Normal">TextTest will look for the file name you specify, using its 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
 and prioritising files in the hierarchy</A>. If it finds such a file (or
 directory), it will create a symbolic link to it from the
 temporary directory (UNIX) or copy it (Windows). If it doesn't,
@@ -240,8 +240,8 @@ our application, with only those logs enabled that we want turned on for
 all tests, which is probably not many of them. We can then create test-specific
 logging files for particular tests, by selecting that test, right-clicking
 on "Data Files" in the file view, and selecting "create file" from the popup menu.
-TextTest will then choose a logging file via its <A class="Text_Link" href="<?php print "index.php?page=
-".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
+TextTest will then choose a logging file via its 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
 and prioritising data files</A>.
 </div>
 <div class="Text_Normal">
