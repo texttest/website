@@ -3,7 +3,7 @@
   include 'include/documentation/common_for_doc';
 
   //Decides version of documents in $basePath
-  $texttest_version = "3.11.1";
+  $texttest_version = "3.11";
   $version = convertToDocFormat($texttest_version);
     
   //Internal varibles

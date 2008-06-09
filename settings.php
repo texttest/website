@@ -11,6 +11,7 @@ $all_releases = array();
 array_push($all_releases, $current_release);
 
 //Older versions of the documentation found in ttwebsite ver_2
+array_push($all_releases, "3.11");
 array_push($all_releases, "3.10");
 array_push($all_releases, "3.9.1");
 

@@ -31,6 +31,7 @@
 <br><B>Pages under documentation</B>
 <div class="Text_Normal">
 <a class="Text_Link" href="index.php?page=documentation_3_10">Documentation for 3.10</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11">Documentation for 3.11</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_11_1">Documentation for 3.11.1</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_9_1">Documentation for 3.9.1</a><br>
 <a class="Text_Link" href="index.php?page=documentation&n=old_versions">Older Versions of the Documentation</a><br>
@@ -94,6 +95,36 @@
 <a class="Text_Link" href="index.php?page=documentation_3_11&n=troubleshooting">Troubleshooting: using the self-diagnostics</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_11&n=versions_and_version_control">Using TextTest Versions and Checkouts</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_11&n=writing_a_config_module">Using TextTest as a Python Framework: Writing your own config module</a><br>
+</div>
+<br><B>Pages under documentation_3_11_1</B>
+<div class="Text_Normal">
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=main">Overview of the Documentation</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=automatic_failure_interpretation">Automatic Failure Interpretation in TextTest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=configfile_default">List of possible entries for config files:</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=configfile_queuesystem">List of possible entries for config files</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=dynamic_gui">Guide to the TextTest Dynamic GUI</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=extra_files">Files written by the System Under Test</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=faking_it_with_texttest">Faking it with TextTest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=getting_started">Getting started with Texttest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=gui_tests">Testing a GUI with TextTest and a Use Case Recorder</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=guide_to_texttest_ui">Guide to TextTest's Interfaces</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=install_texttest">Install Texttest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=kataminesweeper">KataMinesweeper</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=about_testsuites">Understanding TextTest Test Suites</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=measuring_system_resource_usage">Measuring system resource usage </a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=options_default">List of options when submitting test runs</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=options_queuesystem">List of options when submitting test runs</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=personalising_ui">Personalising TextTest's User Interfaces</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=run_dependent_text">Filtering the Output from the System Under Test</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=running_tests_in_parallel">Running tests in parallel on a grid</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=running_texttest_unattended">Running TextTest Unattended</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=scripts_default">Full list of provided pluginscripts</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=scripts_queuesystem">Full list of provided pluginscripts</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=static_gui">Guide to the TextTest Static GUI</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=texttest_sandbox">The TextTest Sandbox</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=troubleshooting">Troubleshooting: using the self-diagnostics</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=versions_and_version_control">Using TextTest Versions and Checkouts</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_11_1&n=writing_a_config_module">Using TextTest as a Python Framework: Writing your own config module</a><br>
 </div>
 <br><B>Pages under documentation_3_9_1</B>
 <div class="Text_Normal">
