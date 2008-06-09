@@ -4,7 +4,7 @@
 $pathToOldDocs="http://texttest.carmen.se/old_version/TextTest/docs";
 
 //Current release here
-$current_release = "3.11";
+$current_release = "3.11.1";
 
 //List of all versions
 $all_releases = array();

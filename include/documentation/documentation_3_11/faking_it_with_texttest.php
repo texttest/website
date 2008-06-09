@@ -107,6 +107,13 @@ it, and record to a new definition file called &ldquo;traffic.&lt;app&gt;&rdquo;
 what the command line given was, what was returned on standard
 output and standard error and what the exit status was. 
 </div>
+<div class="Text_Normal">
+Additionally,
+TextTest will scan the command line for arguments that appear to be files or directories (it will
+take anything that is an absolute path or a pre-existing relative path) and will store any
+changes to those files made while the process runs. If the test is saved these will then
+appear in the test file view under "Externally Edited Files".
+</div>
 <div class="Text_Normal">When the test is next run without the above box checked, this
 traffic file will be used instead of the real program. As
 before, the command line is captured and sent to TextTest via a
@@ -114,7 +121,8 @@ socket. This time, however, it will look up the given command in
 the traffic file, and for the closest matching command line
 recorded, will return the standard output, standard error and
 exit status via the socket, which in turn will be relayed back
-to your system as if the real program had run.</div>
+to your system as if the real program had run. Any file edits that were
+stored will also be reproduced at this point.</div>
 <div class="Text_Normal">It's then easy to fake certain conditions by simply editing
 this traffic file by hand, if desired</div>
 <div class="Text_Header"><A NAME="collect_traffic_environment"></A>Providing environment variables for intercepted programs</div>

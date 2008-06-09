@@ -95,7 +95,7 @@ via the mechanism described below.</div>
 <div class="Text_Normal">By default, only the user time is collected. You can include
 the system time also by setting the config file entry
 &ldquo;cputime_include_system_time&rdquo;.</div>
-<div class="Text_Header"><A NAME="performance_logfile_extractor"></A><A NAME="performance_logfile"></A><A NAME="performance_descriptor_increase"></A><A NAME="performance_descriptor_decrease"></A><A NAME="default.ExtractStandardPerformance"></A>
+<div class="Text_Header"><A NAME="performance_logfile_extractor"></A><A NAME="performance_logfile"></A><A NAME="performance_unit"></A><A NAME="performance_descriptor_increase"></A><A NAME="performance_descriptor_decrease"></A><A NAME="default.ExtractStandardPerformance"></A>
 Extracting other system resource usage from logged files</div>
 
 <div class="Text_Normal">Any information present in any TextTest result file can be
@@ -132,7 +132,12 @@ form as above, except that the value is the file stem of the
 file you wish to extract the information from.</div>
 <div class="Text_Normal">If you choose the
  system_resource_id &ldquo;memory&rdquo;, the number will be interpreted as a
-memory value in megabytes. This special system resource ID will also cause 
+memory value in megabytes. Otherwise it will be assumed to be a time in seconds. These
+units can be configured by setting the config file entry "performance_unit" to whatever
+you want reported for your particular resource.</div>
+
+<div class="Text_Normal">
+This special system resource ID "memory" will also cause 
 "performance_test_machine" to be set to &ldquo;any&rdquo;
 by default, as memory is assumed to be less dependent on what
 machine is used.</div>

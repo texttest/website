@@ -3,7 +3,7 @@
   include 'include/documentation/common_for_doc';
 
   //Decides version of documents in $basePath
-  $texttest_version = "3.11";
+  $texttest_version = "3.11.1";
   $version = convertToDocFormat($texttest_version);
     
   //Internal varibles
@@ -11,7 +11,7 @@
 
   
   //Should be easy to autogenerate
-  $basePath = "include/documentation/".$version."/";
+  $basePath = "include/documentation/documentation_3_11/";
   if (isset($_GET['n'])) $path = "not_set";
   else $path = "no_needed";
 

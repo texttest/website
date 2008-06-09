@@ -26,7 +26,8 @@
 #  That all pages is defined in linkIsInternal()
 
 
-import os,sys
+
+import os, sys
 
 #Since HTML isn't case sensitive (and string compare is)
 #we need to eliminate variations
@@ -69,28 +70,6 @@ def splitURL(URL):
         getLine = getLine.replace("&"," ")
         
     return url, getLine
-
-
-#This should be a string only found on your 404 page
-ERROR_STRING = "<!--404_PAGE_NOT_FOUND-->"
-
-#This should be a string found when the last updated mechanism did not work
-ERROR_IN_LAST_UPDATED = "<!--FUNCTION_LAST_UPDATED_DID_NOT_WORK-->"
-
-#List of links already checked
-#Used to avoid dead loops
-#and redundant checks
-checkedLinks = list()
-
-#This list stores all known incorrect links
-knownIncorrectLinks  = list()
-
-#Counting for statistics
-multiLineLinks = 0
-incorrectLinks = 0
-incorrectImgTags = 0
-missingImgFile = 0
-missingLastUpdated = 0
 
 def print404(URL,targetURL,onLine):
     global incorrectLinks
@@ -181,9 +160,31 @@ def check(URL,targetURL):
                 print ""
     return True
 
+print "Checking Internal PHP links, images and key functions\n"
+sys.stdout.flush()
 
-print "Checking Internal PHP links, images and key functions"
-print ""
+#This should be a string only found on your 404 page
+ERROR_STRING = "<!--404_PAGE_NOT_FOUND-->"
+
+#This should be a string found when the last updated mechanism did not work
+ERROR_IN_LAST_UPDATED = "<!--FUNCTION_LAST_UPDATED_DID_NOT_WORK-->"
+
+#List of links already checked
+#Used to avoid dead loops
+#and redundant checks
+checkedLinks = list()
+
+#This list stores all known incorrect links
+knownIncorrectLinks  = list()
+
+#Counting for statistics
+multiLineLinks = 0
+incorrectLinks = 0
+incorrectImgTags = 0
+missingImgFile = 0
+missingLastUpdated = 0
+
+
 os.chdir("..");
 check("index.php","index.php")
 
