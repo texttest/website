@@ -8,34 +8,26 @@ italics is background information only.</div>
 <div class="Text_Header">Creating an Application</div>
 
 <div class="Text_Normal">For each executable program to be tested, a 'TextTest
-application' needs to be created. To do this for the first time,
-do as follows:</div>
-<OL>
-	<div class="Text_Normal"><li>Create a suitably named
-	subdirectory under the TEXTTEST_HOME root directory as decided
-	in the last stage of installation (or reuse an existing one for
-	similar applications). 
-	</div>
-	<div class="Text_Normal"><li>Choose a file extension to be
-	used for all files relevant to that application. 
-	</div>
-	<div class="Text_Normal"><li>In the new directory, create a file called
-	'config.&lt;app&gt;', where &lt;app&gt; is the extension you
-	just chose. In this file, write the single line
-	'executable:&lt;full_path&gt;', where &lt;full_path&gt; is the
-	absolute path to the program you wish to test.</div>
-
-</OL>
+application' needs to be created to tell it what to run. To do this for the first time,
+just run texttest.py, providing the --new option if there are already tests existing
+in the place you've designated as TEXTTEST_HOME (for example if it's pointing to the tests
+directory in the download)
+</div>
+<div class="Text_Normal">
+A dialog will then come up where you can tell it about your application. You need to pick
+a full name for use in reports, and also a short file extension which will be
+used by TextTest for all files relevant to that application. It can be useful to select
+a subdirectory (if you write a non-existent name it will be created) to aid with organising
+tests for different applications in the future. Finally, of course, browse your file system and identify
+the executable program that will be tested (your hello world program).</div>
 <div class="Text_Normal"><I>All information about an application and how to test it
-will be placed in the 'config file' which we just created. The
-entry 'executable' is the only one which is compulsory, everything
-else has default values.</I></div>
-<div class="Text_Normal">You now have an application with no tests and are ready to
-run the TextTest GUI. You should now do this, with the command
-'texttest.py -a &lt;app&gt;' (if this is your first application
-you don't need the -a option). You should see something like
-this. (texttest.py -a hello, after doing the above with a hello
-world program)</div>
+will be placed in the 'config file' which TextTest has just created for us behind the scenes. For the
+most part we will need to do further configuration by editing it in a text editor, which can be done
+from the "Config" tab on the right hand side. In future, you can pick out this application by running
+texttest.py -a &lt;extension&gt;, where &lt;extension&gt is the one you choose above.
+</I></div>
+<div class="Text_Normal">You now have an application with no tests. You should see something like
+this. (I chose the extension "hello" here and the rather cryptic HELLO as full name)</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/notests.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
 </div>
 <div class="Text_Normal">This is the static, or test management GUI. On the left you
@@ -86,9 +78,7 @@ button on the toolbar to run the selected tests. This starts the
 dynamic GUI in a new window, which performs test runs. The test
 fails, because no standard results are yet defined. On the left
 we see a tree view similar to the one above, on the right a
-summary of which files are different in all tests that have run:
-useful when we have more! We click on the red test line to see
-the files it has produced. 
+summary of which files are different in the test.
 </div>
 <div class="Text_Normal"><IMG src="<?php print $basePath; ?>images/newfiles.JPG"><BR CLEAR=LEFT><BR><BR>
 </div>
