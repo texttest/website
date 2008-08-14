@@ -8,6 +8,7 @@ $current_release = "3.11.1";
 
 //List of all versions
 $all_releases = array();
+array_push($all_releases, "3.12");
 array_push($all_releases, $current_release);
 
 //Older versions of the documentation found in ttwebsite ver_2
