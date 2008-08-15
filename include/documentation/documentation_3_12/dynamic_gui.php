@@ -183,3 +183,15 @@ you can see which tests still need to be checked. You can therefore &quot;mark&q
 with a particular text, which will cause them to be classified differently and be easy
 to hide as a group from the Status view. This is achieved by right-clicking on the test
 and selecting the relevant item from the popup menu.</div>
+<div class="Text_Header">Run Info and Annotation</div>
+<div class="Text_Normal">
+On the right hand side of the dynamic GUI there is a tab called Run Info. It contains two textual displays.
+The top half shows information about the TextTest run itself, what arguments were given and when it started etc.
+The bottom half shows information about the run of the currently select test(s), including the exact command line
+and environment it was started with. The purpose is twofold: to aid with identifying different dynamic GUI windows 
+if many runs are started simultaneously on longer-running tests, and to help with debugging if TextTest appears not to be running
+the system under test in the way you expect.</div><div class="Text_Normal">
+For especially important longer runs it's possible to provide an additional annotation, which is a way
+of providing a succinct description and a guard against accidental closure at the same time. This is done via
+View /Annotate from the menus. The window header will be changed, the Run Info updated and when you try
+to quit a warning dialog will appear to make sure you haven't made a mistake.</div>
