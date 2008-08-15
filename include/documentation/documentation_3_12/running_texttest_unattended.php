@@ -231,20 +231,20 @@ the User Interfaces to batch results</div>
 doesn't give you the power of the GUI to view results in detail
 or to save them if that would be appropriate. It can be very
 useful to &ldquo;reconnect&rdquo; the GUI as if a batch run had
-been run using it. To do this, go to the &ldquo;Reconnect&rdquo;
-tab under &ldquo;Running&rdquo; in the static GUI (or provide
-the &ldquo;-reconnect &lt;directory&gt;&rdquo; option on the
-command line). 
+been run using it. To do this, select &ldquo;Reconnect&rdquo;
+from the Actions menu in the Static GUI, which will bring up a 
+dialog where you can browse your file system to find the files 
+for the run (or provide the &ldquo;-reconnect &lt;directory&gt;&rdquo; 
+option on the command line to the dynamic GUI or console interface). 
 </div>
-
-<div class="Text_Normal">In &ldquo;Temporary results directory&rdquo; you should enter
-the full path to wherever the run would have written its
-results. This defaults to whre your own normal runs will do so.
-(For backwards compatibility, on UNIX you can also enter a user
-name, which will use the directory where that person would
-normally do so) Any version identifiers provided in the original
-run should also be provided in this reconnect run, in the
-&ldquo;Version to Reconnect to&rdquo; field..</div>
+<div class="Text_Normal">There are essentially two ways to select previous runs. Either
+you explicitly select the run directory (it will be called something like "hello.version.13Aug171624.9856"),
+or you leave the parent directory selected and provide a version filter in the &ldquo;Version to Reconnect to&rdquo;
+ field. This last possibility will then load in all runs that were run with that version identifier,
+or some more specific version identifier: i.e. if you provide "foo" it will load runs for "foo.bar" and "foo.blah"
+also if they exist. Not selecting either will load in every previous run that has left files in the relevant temporary
+space.
+</div>
 <div class="Text_Normal">There is a switch at the bottom which allows you to choose
 between a quick re-display of what was displayed in the original
 batch email report, and an option to recalculate the results
