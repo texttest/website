@@ -10,13 +10,13 @@ def makeConfigFile(configFileName, configModule):
     configFile.write("\n")
     configFile.close()
 
-def getConfigData(texttestPath, configModule, osName):
+def getConfigData(texttestPath, configModule, osName, script):
     configData = {}
     makeConfigFile("config.appidentifier", configModule)
     os.environ["TEXTTEST_PERSONAL_CONFIG"] = "STOOPID"
     os.environ["FAKE_OS"] = osName
     os.environ["USER"] = "$USER"
-    ttCommand = texttestPath + " -a appidentifier -d . -s default.DocumentConfig"
+    ttCommand = texttestPath + " -a appidentifier -d . -s " + script
     for line in os.popen(ttCommand).readlines():
         if line.find("|") == -1:
             continue
@@ -35,7 +35,7 @@ def getValue(val):
 
 def getType(val, allTypes):
     for typeName in allTypes:
-        exec "typeObj = types." + typeName
+        typeObj = eval("types." + typeName)
         if type(val) == typeObj:
             if typeName == "DictionaryType" and val.has_key("default"):
                 return "CompositeDictionary"
@@ -70,9 +70,9 @@ def getOutputValue(val):
     else:
         return val
 
-def getConfigRows(texttestPath, configModule, osName):
+def getConfigRows(*args):
     configRows = []
-    configData = getConfigData(texttestPath, configModule, osName)
+    configData = getConfigData(*args)
     allEntries = configData.keys()
     allEntries.sort()
     allTypes = dir(types)
@@ -115,9 +115,10 @@ def getUnifiedEntry(winEntry, unixEntry):
 origTable = sys.argv[1]
 texttestPath = sys.argv[2]
 configModule = sys.argv[3]
+script = sys.argv[4]
 
-unixData = getConfigRows(texttestPath, configModule, "posix")
-windowsData = getConfigRows(texttestPath, configModule, "nt")
+unixData = getConfigRows(texttestPath, configModule, "posix", script)
+windowsData = getConfigRows(texttestPath, configModule, "nt", script)
 unifiedData = unifyData(windowsData, unixData)
 
 updateTable(origTable, unifiedData)
