@@ -1,27 +1,30 @@
 <div class="Text_Main_Header">Guide to the TextTest Static GUI</div>
 <div class="Text_Description">Examining and maintaining the test suites</div>
 
-<div class="Text_Header"><A NAME="-gx"></A>How to start the Static GUI</div>
+<div class="Text_Header"><A NAME="-gx"></A><A NAME="-new"></A>How to start the Static GUI</div>
 <div class="Text_Normal">The static GUI is started by default unless you specified
 otherwise in your config file. If you did, it can be started via the command line option "-gx".</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/static.JPG" NAME="Graphic3"  BORDER=0><BR CLEAR=LEFT><BR><BR>
 
 </div>
-<div class="Text_Normal">As can be seen, the structure of the static GUI is similar to
-that of the dynamic GUI, and tests can be viewed in much the
-same way. On the left is a colour-coded tree view of the whole
-test suite. 
+<div class="Text_Normal">The initial left window is a tree view of all the tests in the test suite. 
+These will be default by grey, this screenshot is taken on an older version of TextTest. This view
+can be manipulated either with the mouse or via the Selection tab on the right: many actions apply
+to the currently selected tests.
 </div>
-<div class="Text_Normal">The above example shows the same test suite and the same test
-as previously being viewed in the static GUI. The files can be
-double clicked in a similar way, here they will invariably be
-viewed with &ldquo;view_program&rdquo; (emacs/notepad by
-default). Note this setting can also be configured per result
-type as described <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui"; ?>#view_program">here</A>.
+<div class="Text_Normal">If you select a test, the right window shows the files
+for that test and the textual description. The files can be
+double clicked to view them in a viewer, which is controlled by the
+ &ldquo;view_program&rdquo; entry (by default, emacs on UNIX and notepad on Windows). 
+Note this setting can be configured per file "type" as described <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui"; ?>#view_program">here</A>.
 In addition, you can use this view to create new files of either of the three types,
 use "Create File" from the popup menu and select the type of file you wish to create.
 </div>
-<div class="Text_Normal">The static GUI can be used to creating new tests or test
+<div class="Text_Normal">If the static GUI is started with no pre-existing test applications, or if 
+the -new flag is given on the command line, you will initially be given a dialog to define
+a new application for TextTest to test. You can also do this later on by selecting "Add Application"
+from the Edit menu.</div>
+<div class="Text_Normal">The static GUI can also be used to create new tests or test
 suites. By right-clicking a test suite, and selecting "Add Test" or "Add Suite" from
 the popup menu, you get a dialog that can be filled in and will result in a new test
 under the chosen suite. </div>

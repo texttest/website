@@ -274,7 +274,7 @@
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Start static GUI with no applications loaded</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-new">Start static GUI with no applications loaded</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
