@@ -77,7 +77,7 @@ config file. The relevant entries are &quot;diff_program&quot;
 for viewing differences, &quot;follow_program&quot; for
 following a running test and &quot;view_program&quot; for
 viewing a static file. These default to &ldquo;tkdiff&rdquo;,
-&ldquo;tail -f&rdquo; and &ldquo;emacs&rdquo; respectively on
+&ldquo;xterm -e tail -f&rdquo; and &ldquo;emacs&rdquo; respectively on
 UNIX systems, &ldquo;tkdiff&rdquo;, &ldquo;baretail&rdquo; and
 &ldquo;notepad&rdquo; on Windows. By default differences will be
 shown if they are thought to exist (red files) otherwise the
