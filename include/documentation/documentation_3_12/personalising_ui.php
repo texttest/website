@@ -3,9 +3,11 @@
 <div class="Text_Normal">There are many things which can be configured about the
 TextTest GUIs, some of which are mostly a matter of personal
 taste. To this end, it is possible to have a personal config
-file where you place any entries that are supported by the
-config files (although it is advisable to stick to GUI
-appearance). This file should be called &ldquo;config&rdquo; and
+file where you place any <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">entries that are supported by the
+config files</A> (although it is advisable to stick to GUI
+appearance). Additionally, there are some settings that will only be accepted in such a personal
+configuration file, these are listed in a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile";?>">separate table</A>.
+</div><div class="Text_Normal">This file should be called &ldquo;config&rdquo; and
 placed in a subdirectory of your home directory called
 &ldquo;.texttest&rdquo;. You can also place it anywhere at all
 and identify the directory with the environment variable

@@ -93,7 +93,9 @@
 			         <?php  printLI("configfile_queuesystem","Config files","Table of all possible entries for application and personal config files"); ?>
 				 <?php  printLI("options_queuesystem","Running/selecting options","Table of all options used when running or selecting tests"); ?>
 				 <?php  printLI("scripts_queuesystem","Plugin scripts","Table of all provided scripts for analysing or updating test suites"); ?>
-				 
+                                 <br><br>
+				 <b>Personal Preferences:</b>
+			    	 <?php  printLI("personalpreffile","Personal GUI settings","Table of all configuration entries only relevant for personal config files"); ?>
 
 		      </div>
 		      </td>

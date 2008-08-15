@@ -1,4 +1,4 @@
-<div class="Text_Main_Header">List of possible entries for config files</div>
+<div class="Text_Main_Header">Possible entries for config files (application or personal)</div>
 <div class="Text_Header"><i>(using the queuesystem configuration)</i></div>
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
 	<TR VALIGN=TOP>
