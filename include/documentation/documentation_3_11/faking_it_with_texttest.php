@@ -71,12 +71,12 @@ which TextTest offers direct help with 3:
 	out.</div>
 </OL>
 <div class="Text_Header"><A NAME="test_data"></A>Executable and importable test data</div>
-<div class="Text_Normal">When TextTest creates the t<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">emporary
+<div class="Text_Normal">When TextTest creates the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary
 write directory </A>on running the test, and populates it with
 test data, it also makes sure to insert that directory at the
 start of the PATH, PYTHONPATH and CLASSPATH variables. That
 makes it possible to provide executable programs that will be
-run instead of their real versions via the normal t<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#link_test_path">est
+run instead of their real versions via the normal <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#link_test_path">test
 data mechanism</A> (&ldquo;link_test_path&rdquo;). Likewise, you
 can provide a Python module or a Java class, which will then be
 imported instead of the real version at the appropriate moment.

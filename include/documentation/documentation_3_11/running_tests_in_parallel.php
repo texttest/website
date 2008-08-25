@@ -59,12 +59,12 @@ support scripts are available, over and above those provided by
 default: 
 </div>
 <UL>
-	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=options_default";?>">Full list of options when
+	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=options_queuesystem";?>">Full list of options when
 	submitting test runs</A></div>
 
-	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">Full list of possible entries
+	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_queuesystem";?>">Full list of possible entries
 	for config files</A></div>
-	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=scripts_default";?>">Full list of plugin scripts (for
+	<div class="Text_Normal"><li><A class="Text_Link" href="<?php print "index.php?page=".$version."&n=scripts_queuesystem";?>">Full list of plugin scripts (for
 	use with -s option)</A></div>
 </UL>
 <div class="Text_Header"><A NAME="default_queue"></A><A NAME="-q"></A>Queues</div>
