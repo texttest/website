@@ -1,6 +1,8 @@
 <div class="Text_Main_Header">Publications, Presentations & Events</div>
    <div class="Text_Normal">The following presentations and papers can be downloaded:</div>
    <UL>
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/textbased_testing.pdf">TextTest presentation from Agile2008 (&ldquo;Text-based Acceptance Testing...&rdquo;)</A></div>
+     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/usecase_recording.pdf">UI testing presentation from Agile2008 (&ldquo;Use-case recording...&rdquo;)</A></div>
      <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="index.php?page=publications&n=bestpractices">Best Practice Workshop discussion from XP2005 conference</A></div>
      <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/ooffice.zip">XP2005 and Europython2005 presentations (OpenOffice format)</A></div>
      <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/powerpoint.zip">Same presentations (Powerpoint format)</A></div> 
@@ -12,7 +14,7 @@
    
    <div class="Text_Header">Detailed info : Printed publications</div>
    <div class="Text_Normal">                                       
-     At <a class="Text_Link"  HREF="http://www.xp2005.org/">XP2005 in Sheffield, UK</A>,
+     At XP2005 in Sheffield, UK,
      we presented a poster <a class="Text_Link"  HREF="files/FurtherAT_XP2005.pdf"><I>&ldquo;Web
      Applications, Multithreading, Parallel Testing and Multiple
      Components: Further Adventures in Acceptance Testing&rdquo; 
@@ -23,8 +25,7 @@
      testing and how to test multi-component systems. 
    </div>
    <div class="Text_Normal">
-     At <a class="Text_Link"  HREF="http://www.xp2004.org/">XP2004 in Garmisch,
-     Germany</A>, we presented our testing approach in a full paper
+     At XP2004 in Garmisch, we presented our testing approach in a full paper
      <a class="Text_Link"  HREF="files/GUITest_XP2004.pdf">&ldquo;<I>The Video Store Revisited
      Yet Again: Adventures in GUI Acceptance Testing&rdquo;</I></A>
      (Geoff Bache and Johan Andersson), particularly introducing the
@@ -51,11 +52,19 @@
     testing rather than unit testing to support XP-style
     development.</div>
  <div class="Text_Header">Detailed info: Workshops and tutorials</div>
- <div class="Text_Normal">In 2007 we plan to run a <a class="Text_Link"  HREF="http://www.xp2005.org/workshops/W01.pdf">&ldquo;Coder's
-    Dojo&rdquo;</A> based around a little exercise in Python using
+ <div class="Text_Normal">At <a class="Text_Link"  HREF="http://www.agile2008.org/">Agile2008
+    in Toronto, Canada</A> we ran two sessions : <a class="Text_Link"  HREF="files/textbased_testing.pdf">&ldquo;
+    <I>Text-based Acceptance Testing with TextTest&rdquo;</I></A>, which included a lengthy
+    demonstration of how to do test-driven development with TextTest, and <a class="Text_Link" HREF="files/usecase_recording.pdf">&ldquo;
+    <I>Use-Case Recording: Testing a rich client UI by recording in a domain-specific language&rdquo;</I></A>,
+    which was a talk and brief demo around how to test user interfaces by recording 'use cases' in a domain-specific language.
+   </div>
+
+ <div class="Text_Normal">In 2007 we ran a &ldquo;Coder's
+    Dojo&rdquo; based around a little exercise in Python using
     the testing techniques described on this site. The basic aim is
     to showcase how to drive development from acceptance tests
-    rather than unit tests. This has been accepted for both <a class="Text_Link"  HREF="http://www.xp2007.org/">XP2007
+    rather than unit tests. This was then run at both <a class="Text_Link"  HREF="http://www.xp2007.org/">XP2007
     in Como, Italy</A>, and <a class="Text_Link"  HREF="http://www.agile2007.org/">Agile2007
     in Washington DC.</A></div>
 
@@ -66,11 +75,11 @@
     working against a database. Unfortunately the site for XP2006
     seems to have been removed, while those for 2005 and 2004 are
     still active.</div>
- <div class="Text_Normal">At <a class="Text_Link"  HREF="http://www.xp2005.org/">XP2005</A>, I ran two
-    workshops <a class="Text_Link"  HREF="http://www.xp2005.org/workshops/W11.pdf">&ldquo;<I>Hands
+ <div class="Text_Normal">At XP2005, I ran two
+    workshops &ldquo;<I>Hands
     on Domain-driven Acceptance Testing using TextTest, FitLibrary
-    and Exactor&rdquo;</I></A> and <a class="Text_Link"  HREF="http://www.xp2005.org/workshops/W13.pdf">&ldquo;<I>Exploring
-    Best Practice for XP Acceptance Testing&rdquo;</I></A>, jointly
+    and Exactor&rdquo;</I> and &ldquo;<I>Exploring
+    Best Practice for XP Acceptance Testing&rdquo;</I>, jointly
     with Rick Mugridge, author of FitLibrary and Brian Swan, author
     of Exactor. As part of the first one I presented TextTest and
     xUseCase, essentially summarising the material on this site. As
@@ -79,20 +88,19 @@
  </div>
  <div class="Text_Normal">
     At <a class="Text_Link"  HREF="http://www.europython.org/">Europython 2005</A> a
-    week later, I ran a <a class="Text_Link"  HREF="http://www.python-in-business.org/ep2005/talk.chtml?talk=2017&amp;track=690">tutorial
-    on TextTest</A> jointly with Emily Bache. She presented an
+    week later, I ran a tutorial jointly with Emily Bache. She presented an
     introduction to TextTest based on how she has used it in her
     team, and I presented some of its more &ldquo;advanced
     features&rdquo;. These presentations are aimed more at Python
     developers than the general audience. Johan Andersson also
-    presented a session on <a class="Text_Link"  HREF="http://www.python-in-business.org/ep2005/talk.chtml?talk=2300&amp;track=770">&ldquo;<I>Using 
-    tests for team motivation&rdquo;</I></A>, highlighting the use
+    presented a session on <I>Using 
+    tests for team motivation&rdquo;</I>, highlighting the use
     of TextTest for acceptance testing.</div>
 
  <div class="Text_Normal">
     All four of these presentations are available (zipped) in
     <a class="Text_Link"  HREF="files/ooffice.zip">OpenOffice</A> and 
-    <a class="Text_Link"  HREF="files/powerpoint.zip">Powerpoint</A>format. 
+    <a class="Text_Link"  HREF="files/powerpoint.zip">Powerpoint</A> format. 
     They are all originally OpenOffice so they may be a
     bit mangled in Powerpoint...</div>  
    </div>
