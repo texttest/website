@@ -177,7 +177,7 @@ CPU-seconds before it is worth comparing it.</div>
 <div class="Text_Normal">Note that TextTest's policy with percentages is to always
 usage the &ldquo;percentage increase&rdquo; (defined as &lt;<I>larger&gt;
 
-&ndash; &lt;smaller&gt; / &lt;larger&gt;)</I> which can be
+&ndash; &lt;smaller&gt; / &lt;smaller&gt;)</I> which can be
 surprising at first, especially if your test shows &ldquo;100%
 faster&rdquo; as below! It was found to be easier to set the
 tolerances this way because it leads to a symmetric situation:
