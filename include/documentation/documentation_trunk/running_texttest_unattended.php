@@ -168,7 +168,7 @@ selection filters</A> selected on the command line or from the
 static GUI. As described there, only tests which satisfy <b>all</b>
 
 filters present will be selected.</div>
-<div class="Text_Header"><A NAME="batch_use_collection"></A><A NAME="batch.CollectFiles"></A><A NAME="-coll"></A>
+<div class="Text_Header"><A NAME="batch_use_collection"></A><A NAME="batch_collect_compulsory_version"></A><A NAME="batch_collect_max_age_days"></A><A NAME="batch.CollectFiles"></A><A NAME="-coll"></A>
 Collecting multiple emails into a single one</div>
 <div class="Text_Normal">When many versions of the system under test are active, and
 many different hardware platforms are used, you may want to test
@@ -194,7 +194,23 @@ and amalgamate them into a single mail per application. If a
 version is provided to this script via -v &lt;version&gt;, only
 runs which ran with that version identifier will be collected.
 This applies to the HTML report as well.</div>
-
+<div class="Text_Normal">
+By default this collection procedure will find all batch runs that have currently 
+stored their results under the root temporary directory. There are two ways in
+which this can be configured to handle errors in the processes that are supposed to
+create these runs. </div>
+<div class="Text_Normal">
+For a start, you can set the config entry "batch_collect_max_age_days"
+which will ensure that no batch run older than the given number of days will be picked up
+and reported. This is useful in case the expected batch run has not been run for some reason,
+otherwise the results of the previous run may be picked up and lead to confusion.
+</div>
+<div class="Text_Normal">
+Also, you can tell it what it should expect to find. By providing the entry "batch_collect_compulsory_version"
+(which is a list), you can tell it to report an error if a batch run for a certain version was not found, thus making
+it clearer if something has not run when it was supposed to. Both these settings are keyed on
+batch session names as described above.
+</div>
 <div class="Text_Header">Example config file</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/batchconfig.JPG" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>

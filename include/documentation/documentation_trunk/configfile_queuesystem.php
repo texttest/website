@@ -54,7 +54,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">When collecting multiple messages, which versions should be expected and give an error if not present?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_collect_compulsory_version">When collecting multiple messages, which versions should be expected and give an error if not present?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -68,7 +68,7 @@
 			<div class="Table_Text_Small">100000</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">When collecting multiple messages, what is the maximum age of run that we should accept?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_collect_max_age_days">When collecting multiple messages, what is the maximum age of run that we should accept?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -692,10 +692,10 @@
 			<div class="Table_Text_Small">home_operating_system</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">BuiltinMethod</div>
+			<div class="Table_Text_Small">String</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small"><built-in function any></div>
+			<div class="Table_Text_Small">any</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=run_dependent_text#home_operating_system">Which OS the test results were originally collected on</A></div>
