@@ -39,7 +39,21 @@ for more details of this). It should take this form:</div>
 The patterns provided may contain regular expressions. Any line
 in the file which matches the expression, or contains the text
 provided, will be filtered out in its entirety from the
-comparison. For example:</div>
+comparison. The regular expressions used are those used by Python,
+and their format is documented <A class="Text_Link" HREF="http://docs.python.org/library/re.html#regular-expression-syntax">here</A>.</div>
+<div class="Text_Normal"> 
+TextTest tries to judge whether a regular expression is intended or not, and it does this by looking for the presence of
+any of the characters "^$[]{}\*?|+". If one is found, it will attempt to compile the regular expression, and failure will
+result in using the string as a literal string to search for. If none is found the string will be interpreted this way to
+start with.</div>
+<div class="Text_Normal"> 
+Therefore a regular expression containing only "." characters,
+such as "..." to mean any three characters, will not be recognised by TextTest and will be interpreted
+as three literal dots.
+</div>
+<div class="Text_Normal">
+
+For example:</div>
 <div class="Text_Normal">
 
 <?php codeSampleBegin() ?>
