@@ -162,7 +162,7 @@ of &ldquo;new file&rdquo; results first time around. There is a
 &ldquo;default.ExtractStandardPerformance&rdquo;. 
 </div>
 
-<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A>
+<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A><A NAME="performance_use_normalised_%"></A>
 Comparing and Saving System Resource Usage Files</div>
 <div class="Text_Normal">The files for comparison are not compared exactly. Part of
 the point of testing things like this is that it is never
@@ -175,7 +175,7 @@ is no more than a certain figure. There is also an entry
 say, for example, that a test must run for at least 5
 CPU-seconds before it is worth comparing it.</div>
 <div class="Text_Normal">Note that TextTest's policy with percentages is to always
-usage the &ldquo;percentage increase&rdquo; (defined as &lt;<I>larger&gt;
+usage the &ldquo;percentage increase&rdquo; (defined as <I>&lt;larger&gt;
 
 &ndash; &lt;smaller&gt; / &lt;smaller&gt;)</I> which can be
 surprising at first, especially if your test shows &ldquo;100%
@@ -186,7 +186,13 @@ immediately intuitive way of defining decreases as a percentage
 of the current value leads to the situation where a 100%
 slowdown today is counterbalanced by a 50% speedup tomorrow,
 which can also become hard to follow.</div>
-
+<div class="Text_Normal">
+This can now be overridden by setting the config file setting "performance_use_normalised_%" to "false".
+This means that percentages will use the more immediately intuitive "percentage change" (defined as <I>abs(&lt;newer&gt;
+&ndash; &lt;older&gt;) / &lt;older&gt;</I>) Note that this has the effect that changes are no longer symmetric
+and "performance_variation_%" is also interpreted in this way, which means that a test can succeed when making
+a change but fail when reverting it. This setting should therefore be used with care.
+</div>
 <div class="Text_Normal">When saving tests where differences in performance
 have been reported, it is possible to save an average of the old performance
 figure and the new one, to prevent too much oscillation. To do this, fire up 

@@ -964,7 +964,7 @@
 			<div class="Table_Text_Small">true</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Do we interpret performance percentage changes as normalised (symmetric) values?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_use_normalised_%">Do we interpret performance percentage changes as normalised (symmetric) values?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
