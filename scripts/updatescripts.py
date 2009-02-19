@@ -9,7 +9,7 @@ def correctAngleBrackets(text):
 
 def getScriptData(texttestPath, configModule):
     scriptRows = []
-    ttCommand = texttestPath + " -a texttest -v sge -s default.DocumentScripts"
+    ttCommand = texttestPath + " -a texttest --vanilla -v sge -s default.DocumentScripts"
     for line in os.popen(ttCommand).readlines():
         if line.find("|") == -1:
             continue

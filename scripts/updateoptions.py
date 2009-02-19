@@ -20,7 +20,7 @@ def correctAngleBrackets(text):
 def getOptionData(texttestPath, configModule):
     optionRows = []
     makeConfigFile("config.app", configModule)
-    ttCommand = texttestPath + " -a app -d . -s default.DocumentOptions"
+    ttCommand = texttestPath + " --vanilla -a app -d . -s default.DocumentOptions"
     for line in os.popen(ttCommand).readlines():
         if line.find(";") == -1:
             continue

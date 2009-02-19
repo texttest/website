@@ -16,7 +16,7 @@ def getConfigData(texttestPath, configModule, osName, script):
     os.environ["TEXTTEST_PERSONAL_CONFIG"] = "STOOPID"
     os.environ["FAKE_OS"] = osName
     os.environ["USER"] = "$USER"
-    ttCommand = texttestPath + " -a appidentifier -d . -s " + script
+    ttCommand = texttestPath + " --vanilla -a appidentifier -d . -s " + script
     for line in os.popen(ttCommand).readlines():
         if line.find("|") == -1:
             continue
@@ -28,6 +28,8 @@ def getConfigData(texttestPath, configModule, osName, script):
     return configData
 
 def getValue(val):
+    if val == "any": # This is a built-in function in Python 2.5 and a standard name in TextTest!
+        return val
     try:
         return eval(val)
     except:
