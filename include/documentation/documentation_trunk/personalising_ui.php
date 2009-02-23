@@ -2,33 +2,24 @@
 
 <div class="Text_Normal">There are many things which can be configured about the
 TextTest GUIs, some of which are mostly a matter of personal
-taste. To this end, it is possible to have a personal config
-file where you place any <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">entries that are supported by the
-config files</A> (although it is advisable to stick to GUI
-appearance). Additionally, there are some settings that will only be accepted in such a personal
-configuration file, these are listed in a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile";?>">separate table</A>.
-</div><div class="Text_Normal">This file should be called &ldquo;config&rdquo; and
-placed in a subdirectory of your home directory called
-&ldquo;.texttest&rdquo;. You can also place it anywhere at all
-and identify the directory with the environment variable
-$TEXTTEST_PERSONAL_CONFIG. (&ldquo;Home directories&rdquo; on
+taste. All of them involve placing files in your personal TextTest configuration
+directory. This directory is located by default in a subdirectory of your home directory called
+&ldquo;.texttest&rdquo;.(&ldquo;Home directories&rdquo; on
 Windows are formed either from the $HOME variable or a
-combination of the variables $HOMEDRIVE and $HOMEPATH)</div>
+combination of the variables $HOMEDRIVE and $HOMEPATH). You can also place it anywhere at all
+and identify the directory with the environment variable $TEXTTEST_PERSONAL_CONFIG.</div>
 
-<div class="Text_Normal">You can edit and view these files by going to the &ldquo;Config&rdquo;
-tab in the static GUI, where you will also see the config files
-for the applications you're currently running on.</div>
+<div class="Text_Header">Configuring the appearance of the GTK widgets</div>
 <div class="Text_Normal">The look and feel of the GUI widgets themselves can be
 configured by providing a GTK configuration file. This file
 should be called &ldquo;.gtkrc-2.0&rdquo; and should be placed
-in the same directory the above &ldquo;config&rdquo; file, if
-you want it to only affect TextTest, or in your home directory
+in the directory described above, if you want it to only affect TextTest, or in your home directory
 if you want it to affect all GTK GUIs you might run. The syntax
 of these files is described, for example, at the <A class="Text_Link" href="http://www.pygtk.org/pygtktutorial/sec-gtksrcfileformat.html">PyGTK
 homepage</A>.</div>
-
-<div class="Text_Normal">You can also configure the contents of the toolbar via XML
-files placed in this directory. Such an XML file should be named
+<div class="Text_Header">Configuring the contents of the toolbar</div>
+<div class="Text_Normal">This can be done by placing XML files in your personal TextTest
+configuration directory. Such an XML file should be named
 to indicate to TextTest when it should kick in. (Note this naming scheme
 has changed since version 3.10) For example:</div>
 <UL>
@@ -47,12 +38,27 @@ has changed since version 3.10) For example:</div>
  <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=writing_a_config_module";?>#interactive_action_module">GUI configuration module</A> is being run. The second should be &quot;static&quot;,
 &quot;dynamic&quot; or absent. The file name should always end
 in .xml.</div><div class="Text_Normal">As for the contents, the easiest thing is to
-look at the files in the source/layout directory and
+look at the files in the "etc" subdirectory of the source tree and
 pattern-match. Note you only need to add extra XML sections, you
 don't need to copy these files, though they give you the names
 of all possible elements. For an example which extends the
 standard toolbar, look in the self-tests under
 GUI/Appearance/UserDefinedGUIDescription/personaldir.</div>
+<div class="Text_Header"><A NAME="-vanilla"></A>Configuring everything else</div>
+<div class="Text_Normal">
+This is done via "personal config files", which are also placed in your personal TextTest configuration directory. They should be named "config" to apply to all TextTest test suites you might run, and may also have application and version-specific suffices so that they only apply in certain cases. They work much like the application config files, in that you can place any <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">entries that are supported by the
+config files</A> in them (although it is advisable to stick to GUI
+appearance). Additionally, there are some settings that will only be accepted in such a personal
+configuration file, these are listed in a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile";?>">separate table</A>.
+</div><div class="Text_Normal">It is also possible to have site-specific config files in the same way, which should be placed
+in a subdirectory "site/etc" of the source code tree. In some cases (for example when troubleshooting) it is useful to disable
+reading of personal and site-specific configuration: in this case the "--vanilla" command line option should be used.
+</div>
+
+<div class="Text_Normal">You can edit and view these files by going to the &ldquo;Config&rdquo;
+tab in the static GUI, where you will also see the config files
+for the applications you're currently running on.</div>
+
 <div class="Text_Header"><A NAME="static_collapse_suites"></A>Automatically collapsing the subsuites on startup in the
 static GUI</div>
 <div class="Text_Normal">By default the whole test suite will be expanded on starting

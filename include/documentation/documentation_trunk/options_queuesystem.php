@@ -439,7 +439,7 @@
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Ignore site-specific and personal configuration</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#-vanilla">Ignore site-specific and personal configuration</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
