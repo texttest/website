@@ -142,7 +142,7 @@ times into a fraction of a minute, and can also use the
 operators &lt;,&gt;,&lt;= and &gt;= to specify ranges of times
 to include.</div>
 
-<div class="Text_Header"><A NAME="-f"></A><A NAME="default_filter_file"></A>
+<div class="Text_Header"><A NAME="-f"></A><A NAME="-fintersect"></A><A NAME="-funion"></A><A NAME="-finverse"></A><A NAME="default_filter_file"></A>
 <A NAME="filter_file_directory"></A>Reusing such selections : &ldquo;filter files&rdquo;</div>
 <div class="Text_Normal">Sometimes it may be useful to define such a subselection of
 the tests that you may wish to reuse. To do this, select &ldquo;Save
@@ -165,11 +165,21 @@ was saved, it will naturally not pick up these tests.</div>
 called &ldquo;filter_files&rdquo; under the directory where your
 config file is. The dynamic GUI will save them in a temporary
 location which is removed when the static GUI is closed. These
-locations are used to generate the drop-down list for the &ldquo;Tests
-listed in file&rdquo; option, and are also those searched if -f
-is provided on the command line. These locations can be extended
-or replaced by defining the config file entry
+locations are used to generate the shortcut list for locations to
+search when doing "Load Selection" or "Save Selection" in the GUI,
+or filling in the &ldquo;Tests listed in file&rdquo; option, and are 
+also those searched if -f is provided on the command line. These 
+locations can be extended or replaced by defining the config file entry
 &ldquo;filter_file_directory&rdquo;.</div>
+<div class="Text_Normal">
+These files may refer to each other, though you will need to create them
+by hand for this to happen. This can be used to combine stored selections
+into other selections, using the command-line options -funion,-fintersect and -finverse
+to create intersections,unions and inverses of selections specified in pre-existing filter
+files. In most cases these options will be most useful in other filter files, for example
+TextTest's self-tests contain a filter file called "gui" which contains the string 
+"--funion static_gui,dynamic_gui".
+</div>
 <div class="Text_Normal">It is also possible to define which tests
 to run by default based on such filter files. The config file setting
 "default_filter_file" will make sure that only the tests that match

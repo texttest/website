@@ -142,7 +142,7 @@
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Tests in all files &lt;value&gt;</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-fintersect">Tests in all files &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -153,7 +153,7 @@
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Tests not listed in file &lt;value&gt;</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-finverse">Tests not listed in file &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -164,7 +164,7 @@
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Tests in any of files &lt;value&gt;</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-funion">Tests in any of files &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
