@@ -563,6 +563,20 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">filter_file_directory</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">filter_files</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#filter_file_directory">Default directories for test filter files, relative to an application directory.</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">follow_file_by_default</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -1104,7 +1118,7 @@
 			<div class="Table_Text_Small">filter_files</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#test_list_files_directory">Default directories for test filter files, relative to an application directory.</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'filter_file_directory'</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

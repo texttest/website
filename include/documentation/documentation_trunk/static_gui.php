@@ -143,7 +143,7 @@ operators &lt;,&gt;,&lt;= and &gt;= to specify ranges of times
 to include.</div>
 
 <div class="Text_Header"><A NAME="-f"></A><A NAME="default_filter_file"></A>
-<A NAME="test_list_files_directory"></A>Reusing such selections : &ldquo;filter files&rdquo;</div>
+<A NAME="filter_file_directory"></A>Reusing such selections : &ldquo;filter files&rdquo;</div>
 <div class="Text_Normal">Sometimes it may be useful to define such a subselection of
 the tests that you may wish to reuse. To do this, select &ldquo;Save
 Selection&rdquo; from the &ldquo;File&rdquo; menu, which brings
@@ -169,7 +169,7 @@ locations are used to generate the drop-down list for the &ldquo;Tests
 listed in file&rdquo; option, and are also those searched if -f
 is provided on the command line. These locations can be extended
 or replaced by defining the config file entry
-&ldquo;test_list_files_directory&rdquo;.</div>
+&ldquo;filter_file_directory&rdquo;.</div>
 <div class="Text_Normal">It is also possible to define which tests
 to run by default based on such filter files. The config file setting
 "default_filter_file" will make sure that only the tests that match
