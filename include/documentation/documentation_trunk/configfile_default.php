@@ -684,7 +684,7 @@
 			<div class="Table_Text_Small">Last six runs : 6<BR>default : 100000</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">How many runs should the subpage show, starting from the most recent?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_subpage_cutoff">How many runs should the subpage show, starting from the most recent?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -698,7 +698,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Which weekdays should the subpage apply to (empty implies all)?</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_subpage_weekdays">Which weekdays should the subpage apply to (empty implies all)?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -712,7 +712,7 @@
 			<div class="Table_Text_Small">Last six runs</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Names of subselection pages to generate as part of historical report</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_subpages">Names of subselection pages to generate as part of historical report</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -978,7 +978,7 @@
 			<div class="Table_Text_Small">0.0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Additional cutoff to performance_variation_% for extra highlighting</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_variation_serious_%">Additional cutoff to performance_variation_% for extra highlighting</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

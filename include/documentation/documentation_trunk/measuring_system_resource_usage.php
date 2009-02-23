@@ -162,7 +162,7 @@ of &ldquo;new file&rdquo; results first time around. There is a
 &ldquo;default.ExtractStandardPerformance&rdquo;. 
 </div>
 
-<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A><A NAME="performance_use_normalised_%"></A>
+<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A><A NAME="performance_variation_serious_%"></A><A NAME="performance_use_normalised_%"></A>
 Comparing and Saving System Resource Usage Files</div>
 <div class="Text_Normal">The files for comparison are not compared exactly. Part of
 the point of testing things like this is that it is never
@@ -202,7 +202,9 @@ the radio button at the bottom of the dialog.
 <div class="Text_Normal">Below is what you will see in the dynamic GUI when you run
 tests that fail in performance in this way.</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
-
+</div>
+<div class="Text_Normal">
+(There is also a setting "performance_variation_serious_%", which acts in the same way as "performance_variation_%" as described above. If set to a larger value that "performance_variation_%" it indicates that performance exceeding this value should be treated as full failure of the test and not just marked as a performance failure. Currently it will only affect the colouring in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended";?>#historical_report_location">historical HTML batch report</A> but at some point this will be applied in the GUI also)
 </div>
 <div class="Text_Header"><A NAME="performance.PerformanceStatistics"></A><A NAME="performance.ShowMemoryUsage"></A>
 Statistical reports on System Resource Usage</div>
