@@ -152,7 +152,11 @@ and all versions more general than it. Sometimes you don't want
 results to be saved for particular versions, this can be
 configured via the &ldquo;unsaveable_version&rdquo; entry which
 will cause these versions not to appear in the list or be selected as default in future.</div>
-
+<div class="Text_Normal">
+You can also specify a version identifier to back up the old results as, for which there
+is a text field in the "Save As..." dialog. This is particularly useful when your project
+has made a release and you have a separate version of the tests for that release.
+</div>
 <div class="Text_Normal">You can also overwrite all the files, even if they were
 regarded as the same, via the option &ldquo;replace successfully
 compared files also&rdquo;: this is a way to re-generate the
