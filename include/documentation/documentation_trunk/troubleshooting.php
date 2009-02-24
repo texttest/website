@@ -1,11 +1,10 @@
 
-<A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A><div class="Text_Header">Troubleshooting: using the self-diagnostics</div>
+<A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A><div class="Text_Header">Troubleshooting: using TextTest's internal logging</div>
 <div class="Text_Normal">When TextTest doesn't do what you expect it to, the best way
-to find out why is usually to enable its own logging mechanism
+to find out why is usually to enable its own internal logging mechanism
 for the relevant aspect of the functionality. This is enabled
 primarily by using the &ldquo;Write TextTest diagnostics&rdquo;
 check box under &ldquo;Running&rdquo; and &ldquo;Advanced&rdquo;
-
 tabs in the static GUI (-x option from the command line). 
 </div>
 <div class="Text_Normal">TextTest uses <A class="Text_Link"  HREF="http://www.sourceforge.net/projects/log4py">log4py</A>
@@ -13,17 +12,16 @@ for its own logging. To configure which loggers will output and
 where they will do so, you will need to edit the log4py
 configuration file. The location of this is set by the field
 &ldquo;Configure self-diagnostics from&rdquo;, in the same
-location as above (-xr on command line). It defaults to
-$TEXTTEST_HOME/Diagnostics/log4py.conf, and an initial file with
-everything disabled is provided with the TextTest download in
-this location (where the &ldquo;tests&rdquo; subdirectory is set
-as $TEXTTEST_HOME.) 
+location as above (-xr on command line). It defaults to 
+&lt;your personal configuration directory&gt;/log/log4py.conf (see <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>">here</A> for where to find your personal configuration directory).
+An initial file with everything disabled is provided with the TextTest source in
+the "log" subdirectory, so you should start by copying this file to the above location.
 </div>
 <div class="Text_Normal">You can then open this file and look at the various loggers
 in that file and enable any that seem to be related to your
 problem, generally by changing the &ldquo;LogLevel&rdquo; to
-&ldquo;Normal&rdquo; for it. Most loggers by default  write a
-file to $TEXTTEST_HOME/Diagnostics, but of course you can
+&ldquo;Normal&rdquo; for it. Most loggers by default write a
+file alongside the log4py.conf file in the location above, but of course you can
 configure it to write anywhere you like, either via the file
 itself or from the static GUI tab given above. 
 </div>
