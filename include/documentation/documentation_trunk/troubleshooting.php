@@ -40,6 +40,13 @@ itself or from the static GUI tab given above.
 	<LI><div class="Text_Normal">&ldquo;<I>I want to see the
 	generated command line</I>&rdquo; : enable &ldquo;run test&rdquo;</div>
 </UL>
+<div class="Text_Header">Getting a Python stack out if TextTest is hanging (on UNIX)</div>
+<div class="Text_Normal">
+Unfortunately Python doesn't have a native way to do this, and "pstack" and "strace" are
+rather limited when it comes to Python. TextTest has its own mechanism, whereby
+sending it SIGQUIT will cause it to write out the current stack.
+</div>
+
 <div class="Text_Header">If you're still stuck...</div>
 
 <div class="Text_Normal">It's time to mail the <A class="Text_Link"  HREF="https://lists.sourceforge.net/lists/listinfo/texttest-users">TextTest mailing list at sourceforge</A>. We should be able to respond within a day or so.</div>
