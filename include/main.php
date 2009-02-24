@@ -33,7 +33,7 @@
        <td width=50><div class="Text_Normal" ><a href="index.php?page=publications"  class="Text_Link">Publications</a></td><td><div class="Text_Normal">Conference publications, presentations and workshop summaries</div></td>
       </tr>
       <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=download" class="Text_Link">Download</a></td><td><div class="Text_Normal">Download TextTest from SourceForge</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=download" class="Text_Link">Download</a></td><td><div class="Text_Normal">Download a TextTest release or the latest version from source control</div></td>
      </tr>
 
    </table>
