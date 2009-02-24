@@ -42,7 +42,7 @@ have version-specific results while others are shared between all versions.
 </div>
 <div class="Text_Normal">
 To specify a version to run, fill in the &ldquo;run this version&rdquo; field 
-under Running/What to Run tabs on the static GUI, or use -v &lt;version&gt; on the command
+under the Running/Basic tabs on the static GUI, or use -v &lt;version&gt; on the command
 line. Note that there is a similar field in the Recording tab in
 case you are testing GUIs.</div>
 
@@ -180,12 +180,14 @@ backwards compatibility is still the behaviour if the
 checkout_location doesn't depend on $TEXTTEST_CHECKOUT_NAME.</div>
 <div class="Text_Normal">To change the checkout on the command line, use the -c
 option, or from the static GUI, fill in the &ldquo;Use checkout&rdquo;
-text box under the &ldquo;What to Run&rdquo; tab. If the value
+text box under the &ldquo;Running/Basic&rdquo; tabs. If the value
 provided is a relative path, it will be used as the &ldquo;short
 name&rdquo; and combined with the corresponding value of
 &quot;checkout_location&quot; as described above. If it is an
 absolute path, it will be used as is and the config file
-settings ignored.</div>
+settings ignored. You can also provide a comma-separated list of checkouts,
+which will run several system instances against the same tests, much
+as if they were separate versions.</div>
 <div class="Text_Header">Basic CVS integration</div>
 <div class="Text_Normal">If you use CVS to version-control your tests,
 you can view log, diff, status and annotation information directly
