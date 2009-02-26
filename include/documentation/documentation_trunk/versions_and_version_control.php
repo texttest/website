@@ -191,6 +191,6 @@ as if they were separate versions.</div>
 <div class="Text_Header">Basic CVS integration</div>
 <div class="Text_Normal">If you use CVS to version-control your tests,
 you can view log, diff, status and annotation information directly
-from the TextTest GUI. To enable this, simply set "interactive_action_module:cvs"
-in your config file, which will result in a new menu called CVS with
-this functionality in.</div>
+from the TextTest GUI. A CVS menu and drop-down menus will just appear,
+you don't need to do anything to enable it (which you did up to version 3.12).
+Hopefully 3.14 will support more version control systems.</div>
