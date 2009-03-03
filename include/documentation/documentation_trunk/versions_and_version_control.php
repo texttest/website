@@ -188,9 +188,9 @@ absolute path, it will be used as is and the config file
 settings ignored. You can also provide a comma-separated list of checkouts,
 which will run several system instances against the same tests, much
 as if they were separate versions.</div>
-<div class="Text_Header">Basic CVS integration</div>
-<div class="Text_Normal">If you use CVS to version-control your tests,
+<div class="Text_Header">Basic version control integration (CVS/BZR)</div>
+<div class="Text_Normal">If you use CVS or Bazaar to version-control your tests,
 you can view log, diff, status and annotation information directly
-from the TextTest GUI. A CVS menu and drop-down menus will just appear,
+from the TextTest GUI. An appropriate menu and drop-down menus will just appear,
 you don't need to do anything to enable it (which you did up to version 3.12).
-Hopefully 3.14 will support more version control systems.</div>
+Hopefully more support for version control systems will follow.</div>

@@ -307,15 +307,34 @@ TextTest in the case of the <I>config</I> file.</div>
 have the value be a list itself. This is achieved by adding
 several entries for the same &lt;key&gt;. So if we want to set
 the key &ldquo;my_key&rdquo; to a list containing A and B,, this
-is done by <BR>my_key:A<BR>my_key:B</div>
-<div class="Text_Normal">Providing the entry<BR>my_key:{CLEAR LIST}</div>
-
-<div class="Text_Normal">allows overriding files to remove entries added in a parent
-version file.</div>
+is done by 
+<?php codeSampleBegin() ?>
+my_key:A
+my_key:B
+<?php codeSampleEnd() ?>
+</div>
+<div class="Text_Normal">When writing versioned files that override settings in
+a parent config file, it is sometimes useful to be able to remove some of those settings
+from such a list. Here
+<?php codeSampleBegin() ?>
+my_key:{CLEAR LIST}
+<?php codeSampleEnd() ?>
+</div>
+<div class="Text_Normal">will wipe all the entries from the list associated with my_key,
+while
+<?php codeSampleBegin() ?>
+my_key:{CLEAR &lt;my_item&gt;}
+<?php codeSampleEnd() ?>
+</div>
+<div class="Text_Normal">allows you to remove single items without needing to reset the whole list.</div>
 <div class="Text_Normal">It can also be useful to have the value be a dictionary. This
 is achieved by the &quot;section header&quot; format,
-i.e.<BR>[my_dictionary]<BR>first_key:first_value<BR>second_key:second_value</div>
-<div class="Text_Normal">Entries within section headers can also use the list format
+i.e.<?php codeSampleBegin() ?>
+[my_dictionary]
+first_key:first_value
+second_key:second_value
+<?php codeSampleEnd() ?>
+Entries within section headers can also use the list format
 described above.</div>
 <div class="Text_Normal">In a few cases the value is essentially a dictionary, but
 with two keys (a &ldquo;composite dictionary entry&rdquo;). This
@@ -323,17 +342,21 @@ is used for the batch mode and performance-related settings. The
 format does not look very different to the above, but because
 anything can appear in the dictionary rather than predefined key
 names, it is necessary to have a mechanism to share values. This
-is achieved by the special predefined key name &ldquo;default&rdquo;.</div>
+is achieved by the special predefined key name &ldquo;default&rdquo;.
 
-<div class="Text_Normal">[my_composite_dictionary]<BR>first_key:first_value<BR>default:default_value</div>
-<div class="Text_Normal">Here a lookup of first_key in my_composite_dictionary will
+<?php codeSampleBegin() ?>
+[my_composite_dictionary]
+first_key:first_value
+default:default_value
+<?php codeSampleEnd() ?>
+Here a lookup of first_key in my_composite_dictionary will
 produce &ldquo;first_value&rdquo;. A lookup of &ldquo;second_key&rdquo;
 (or anything else) will produce &ldquo;default_value&rdquo;.</div>
 <div class="Text_Normal">If you only wish to override the default value of such a
 dictionary, it is acceptable to use the format for
-non-dictionary entries, i.e. simply</div>
-
-<div class="Text_Normal">my_composite_dictionary:default_value</div>
+non-dictionary entries, i.e. simply <?php codeSampleBegin() ?>
+my_composite_dictionary:default_value
+<?php codeSampleEnd() ?></div>
 <div class="Text_Header">Examples</div>
 <div class="Text_Normal">The TextTest download includes a test suite for itself. It is
 recommended that you look around this (or any other example you
