@@ -194,3 +194,9 @@ you can view log, diff, status and annotation information directly
 from the TextTest GUI. An appropriate menu and drop-down menus will just appear,
 you don't need to do anything to enable it (which you did up to version 3.12).
 Hopefully more support for version control systems will follow.</div>
+<div class="Text_Normal">Additionally, normal bookkeeping of tests is now sensitive
+to the version control system. So renaming, moving and removing of tests that
+are in CVS or Bazaar will also do so in the appropriate version control system.
+It is also possible to add tests or individual files to version control from
+the appropriate menu: this is a separate action to actually adding the test. All
+new or copied tests will not be added to version control automatically.</div>

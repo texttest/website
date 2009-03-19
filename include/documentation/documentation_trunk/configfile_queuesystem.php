@@ -17,6 +17,20 @@
 	</TR>	
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">asynchronous_file_edits</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#asynchronous_file_edits">List of intercepted command-line programs that may edit files asynchronously</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">auto_sort_test_suites</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -1020,7 +1034,7 @@
 			<div class="Table_Text_Small">true</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_use_normalised_%">Do we interpret performance percentage changes as normalised (symmetric) values?</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'use_normalised_percentage_change'</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1315,6 +1329,20 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#use_case_recorder">Which Use-case recorder is being used</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">use_normalised_percentage_change</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">true</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#use_normalised_percentage_change">Do we interpret performance percentage changes as normalised (symmetric) values?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

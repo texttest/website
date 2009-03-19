@@ -162,7 +162,7 @@ of &ldquo;new file&rdquo; results first time around. There is a
 &ldquo;default.ExtractStandardPerformance&rdquo;. 
 </div>
 
-<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A><A NAME="performance_variation_serious_%"></A><A NAME="performance_use_normalised_%"></A>
+<div class="Text_Header"><A NAME="performance_test_minimum"></A><A NAME="performance_variation_%"></A><A NAME="performance_variation_serious_%"></A><A NAME="use_normalised_percentage_change"></A>
 Comparing and Saving System Resource Usage Files</div>
 <div class="Text_Normal">The files for comparison are not compared exactly. Part of
 the point of testing things like this is that it is never
@@ -187,7 +187,7 @@ of the current value leads to the situation where a 100%
 slowdown today is counterbalanced by a 50% speedup tomorrow,
 which can also become hard to follow.</div>
 <div class="Text_Normal">
-This can now be overridden by setting the config file setting "performance_use_normalised_%" to "false".
+This can now be overridden by setting the config file setting "use_normalised_percentage_change" to "false".
 This means that percentages will use the more immediately intuitive "percentage change" (defined as <I>abs(&lt;newer&gt;
 &ndash; &lt;older&gt;) / &lt;older&gt;</I>) Note that this has the effect that changes are no longer symmetric
 and "performance_variation_%" is also interpreted in this way, which means that a test can succeed when making
