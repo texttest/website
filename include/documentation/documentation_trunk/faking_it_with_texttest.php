@@ -84,7 +84,7 @@ Then you just need to place such executable/importable test data
 in the appropriate place in the permanent test structure, just
 as you would with more passive test data.</div>
 
-<div class="Text_Header"><A NAME="collect_traffic"></A><A NAME="asynchronous_file_edits"></A><A NAME="-rectraffic"></A>
+<div class="Text_Header"><A NAME="collect_traffic"></A><A NAME="-rectraffic"></A>
 Intercepting and replaying command line programs</div>
 <div class="Text_Normal">The above mechanism for executable programs is powerful but
 can be overkill. It's also not very easy to steer in the case
@@ -94,7 +94,7 @@ simply ask TextTest to take over and &ldquo;record&rdquo; what
 the program does. This is known as the command-line traffic
 interception mechanism.</div>
 <div class="Text_Normal">To enable this, add the name of the program concerned to the
-config file list entry &ldquo;collect_traffic&rdquo;. For each
+config file entry &ldquo;collect_traffic&rdquo;. For each
 test for which you want to mock out this program, go to the
 Advanced tab under &ldquo;Running&rdquo; and check the &ldquo;(Re-)
 record command-line traffic&rdquo; box. TextTest will then
@@ -113,10 +113,11 @@ TextTest will scan the command line for arguments that appear to be files or dir
 take anything that is an absolute path or a pre-existing relative path) and will store any
 changes to those files made while the process runs. If the test is saved these will then
 appear in the test file view under "Externally Edited Files". By default it will only monitor
-these files while the program in question is running: however you can use the "asynchronous_file_edits" config
-file setting to inform TextTest of any programs (also listed in "collect_traffic") that may start
-background processes that will edit the files. In this case it will check the files before and
-after every subsequent received command.
+these files while the program in question is running: however you can tell TextTest that it
+may start background processes that will edit the files, and in this case it will check the 
+files before and after every subsequent received command. To do this, use the "asynchronous" key
+when adding it to "collect_traffic", which is in fact a dictionary although you don't need to
+know that unless using this feature. 
 </div>
 <div class="Text_Normal">When the test is next run without the above box checked, this
 traffic file will be used instead of the real program. As

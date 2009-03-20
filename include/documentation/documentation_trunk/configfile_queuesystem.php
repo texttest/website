@@ -17,20 +17,6 @@
 	</TR>	
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">asynchronous_file_edits</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">List</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#asynchronous_file_edits">List of intercepted command-line programs that may edit files asynchronously</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">auto_sort_test_suites</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -328,10 +314,10 @@
 			<div class="Table_Text_Small">collect_traffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">List</div>
+			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
+			<div class="Table_Text_Small">asynchronous : &lt;empty&gt;<BR>default : &lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic">List of command-line programs to intercept</A></div>
@@ -468,10 +454,10 @@
 			<div class="Table_Text_Small">definition_file_stems</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">List</div>
+			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">environment, testsuite, options, usecase, traffic, input, knownbugs</div>
+			<div class="Table_Text_Small">builtin : environment, testsuite, options, input, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>

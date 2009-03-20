@@ -39,8 +39,8 @@ sorts of files that define test cases and test suites, besides
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#log_file">the usual ones</A>. It can
 then be useful to have the static GUI display them as such, so
 there is a config file entry &ldquo;definition_file_stems&rdquo;
-
-to allow this to be configured.</div>
+to allow this to be configured. They can be keyed with "regenerate" if they
+will also be produced by the program, like the default configuration's traffic and usecase files.</div>
 <div class="Text_Normal">TextTest comes with 2 configurations to choose from -
 &quot;default&quot; which should work anywhere, and
 &quot;<A class="Text_Link" href="index.php?page=<?php echo $version; ?>&n=running_tests_in_parallel">queuesystem</A>&quot;
