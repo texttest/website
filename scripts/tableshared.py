@@ -1,6 +1,6 @@
 #!/usr/local/bin/python
 
-import os
+import os, sys
 from re import subn
 
 def findTemplate(contents):
@@ -21,8 +21,7 @@ def getRowTemplate(contents, start, end):
     return newTemplate.rstrip()
     
 def getTableStart(contents):
-    tStart = contents.find("<TABLE")
-    afterRow = contents.find("</TR>", tStart)
+    afterRow = contents.find("</TR>")
     return contents.find("\n", afterRow)
 
 def findLabels():
@@ -58,21 +57,39 @@ def docOutput(doc, key, labels):
     else:
         return doc
 
-def updateTable(file, dataMatrix):
-    contents = open(file).read()
+def handleTable(contents, dataMatrix):
     templateStart, templateEnd = findTemplate(contents)
     rowTemplate = getRowTemplate(contents, templateStart, templateEnd)
     tableStart = getTableStart(contents)
     labels = findLabels()
     print contents[:tableStart]
-    for row in dataMatrix:
+    rowSize = rowTemplate.count("<TD")
+    for index, row in enumerate(dataMatrix):
+        if len(row) != rowSize:
+            break
+
         row[-1] = docOutput(row[-1], row[0], labels)
         thisRow = rowTemplate
         for colId in range(len(row)):
             thisRow = thisRow.replace("$" + str(colId + 1), row[colId])
         print thisRow
-    print contents[templateEnd + 1:].rstrip()
+    sys.stdout.write(contents[templateEnd + 1:])
+    return dataMatrix[index:]
 
+def updateTable(file, dataMatrix):
+    contents = open(file).read()
+    currPos = 0
+    currData = dataMatrix
+    while True:
+        tableStart = contents.find("<TABLE", currPos)
+        if tableStart == -1:
+            break
+        sys.stdout.write(contents[currPos:tableStart])
+        tableEnd = contents.find("</TABLE", tableStart)
+        currData = handleTable(contents[tableStart:tableEnd], currData)
+        currPos = tableEnd
+        
+    sys.stdout.write(contents[currPos:])
 
 if __name__ == "__main__":
     labels = findLabels()

@@ -86,12 +86,14 @@
 				<b>Default Configuration:</b>
 			    	 <?php  printLI("configfile_default","Config files","Table of all possible entries for application and personal config files"); ?>
 				 <?php  printLI("options_default","Running/selecting options","Table of all options used when running or selecting tests"); ?>
-				 <?php  printLI("scripts_default","Plugin scripts","Table of all provided scripts for analysing or updating test suites"); ?>
+				 <?php  printLI("environment_default","Environment variables","Table of all TextTest-specific environment variables"); ?>
+                                 <?php  printLI("scripts_default","Plugin scripts","Table of all provided scripts for analysing or updating test suites"); ?>
 				 <br><br>
                                  <b>Queuesystem Configuration:</b>
 				 <a href="index.php?page=<?php echo $version; ?>&n=running_tests_in_parallel" class="Text_Link">(description)</a>
 			         <?php  printLI("configfile_queuesystem","Config files","Table of all possible entries for application and personal config files"); ?>
 				 <?php  printLI("options_queuesystem","Running/selecting options","Table of all options used when running or selecting tests"); ?>
+                                 <?php  printLI("environment_queuesystem","Environment variables","Table of all TextTest-specific environment variables"); ?>
 				 <?php  printLI("scripts_queuesystem","Plugin scripts","Table of all provided scripts for analysing or updating test suites"); ?>
                                  <br><br>
 				 <b>Personal Preferences:</b>
