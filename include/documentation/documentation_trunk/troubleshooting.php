@@ -1,5 +1,5 @@
 
-<A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A><div class="Text_Header">Troubleshooting: using TextTest's internal logging</div>
+<A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A><A NAME="TEXTTEST_LOGCONFIG"></A><A NAME="TEXTTEST_DIAGDIR"></A><div class="Text_Header">Troubleshooting: using TextTest's internal logging</div>
 <div class="Text_Normal">When TextTest doesn't do what you expect it to, the best way
 to find out why is usually to enable its own internal logging mechanism
 for the relevant aspect of the functionality. This is enabled
@@ -23,7 +23,11 @@ problem, generally by changing the &ldquo;LogLevel&rdquo; to
 &ldquo;Normal&rdquo; for it. Most loggers by default write a
 file alongside the log4py.conf file in the location above, but of course you can
 configure it to write anywhere you like, either via the file
-itself or from the static GUI tab given above. 
+itself or from the static GUI tab given above. </div>
+<div class="Text_Normal">
+(If the above options are not set, TextTest will find the configuration file from
+the variable TEXTTEST_LOGCONFIG and the directory to write to from TEXTTEST_DIAGDIR,
+but you probably won't need to set these variables, they're mainly for the self-tests)
 </div>
 
 <div class="Text_Normal">Some hints / examples:</div>

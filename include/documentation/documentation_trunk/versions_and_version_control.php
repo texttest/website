@@ -124,6 +124,7 @@ assumed the tests were in CVS and actually performed removals itself. The new ve
 is better tested, more generic and less easy to misuse hopefully.
 </div>
 <div class="Text_Header"><A NAME="-c"></A><A NAME="checkout_location"></A><A NAME="default_checkout"></A>
+<A NAME="TEXTTEST_CHECKOUT"></A><A NAME="TEXTTEST_CHECKOUT_NAME"></A>
 Version-controlling the Test Suite and Using Checkouts</div>
 <div class="Text_Normal">All of the files and directories discussed here can amount to
 a substantial structure once you have a few tests. These will

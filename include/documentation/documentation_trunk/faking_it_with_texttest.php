@@ -142,7 +142,7 @@ setting, with the keys being the program names as provided for
 the environment variables. In this case these environment
 variables with their values will also be sent to TextTest and
 will be part of the information recorded.</div>
-<div class="Text_Header"><A NAME="distributed"></A>Intercepting and replaying plain-text network messages</div>
+<div class="Text_Header"><A NAME="distributed"></A><A NAME="TEXTTEST_MIM_SERVER"></A>Intercepting and replaying plain-text network messages</div>
 <div class="Text_Normal">The &ldquo;traffic interception&rdquo; mechanism can also be
 used for this purpose. Here it is less a matter of configuring
 TextTest and more of configuring your own application. As above,

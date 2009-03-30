@@ -1,4 +1,4 @@
-<div class="Text_Main_Header">Personalising TextTest's User Interfaces</div>
+<div class="Text_Main_Header"><A NAME="TEXTTEST_PERSONAL_CONFIG"></A>Personalising TextTest's User Interfaces</div>
 
 <div class="Text_Normal">There are many things which can be configured about the
 TextTest GUIs, some of which are mostly a matter of personal

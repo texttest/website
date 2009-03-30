@@ -5,7 +5,7 @@
 
 </div>
 <div class="Text_Header">Introduction</div>
-<div class="Text_Normal">When TextTest tests are run, it will try to write the output
+<div class="Text_Normal"><A NAME="TEXTTEST_TMP"></A>When TextTest tests are run, it will try to write the output
 of the system under test to a temporary directory structure
 created specifically for this purpose. This is known as the
 &ldquo;TextTest sandbox&rdquo;: its purpose is to provide a
@@ -26,7 +26,7 @@ prepended in the case of the static GUI). A subdirectory of the
 root temporary directory is then created with this name. All
 temporary files and directories created by this run will then be
 created under this directory.</div>
-<div class="Text_Header">What it looks like, and what it is used for</div>
+<div class="Text_Header"><A NAME="TEXTTEST_SANDBOX"></A>What it looks like, and what it is used for</div>
 <div class="Text_Normal">In the case of the dynamic GUI or the console interface,
 tests are actually being run. This means that, for every test
 being run, a temporary directory structure is created which

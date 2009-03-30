@@ -22,7 +22,7 @@ to be expected.
 </div>
 
 </UL>
-<div class="Text_Header"><A NAME="-d"></A>The Root Directory</div>
+<div class="Text_Header"><A NAME="-d"></A><A NAME="TEXTTEST_HOME"></A>The Root Directory</div>
 <div class="Text_Normal">This is the first thing determined by TextTest on being
 called, and is where in your file system it will start to look
 for tests. All test files are placed in subdirectories of this

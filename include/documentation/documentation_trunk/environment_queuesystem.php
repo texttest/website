@@ -20,7 +20,7 @@
 			<div class="Table_Text_Small">$TEXTTEST_PERSONAL_CONFIG/log</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Location to write TextTest's internal logs</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#TEXTTEST_DIAGDIR">Location to write TextTest's internal logs</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -42,7 +42,7 @@
 			<div class="Table_Text_Small">.</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Root directory of the test suite</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#TEXTTEST_HOME">Root directory of the test suite</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -53,7 +53,7 @@
 			<div class="Table_Text_Small">$TEXTTEST_DIAGDIR/log4py.conf</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Configuration file for TextTest's internal logs</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#TEXTTEST_LOGCONFIG">Configuration file for TextTest's internal logs</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -64,7 +64,7 @@
 			<div class="Table_Text_Small">~/.texttest</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Location of personal configuration</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#TEXTTEST_PERSONAL_CONFIG">Location of personal configuration</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -97,7 +97,7 @@
 			<div class="Table_Text_Small">$TEXTTEST_PERSONAL_CONFIG/tmp</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Location of temporary files from test runs</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#TEXTTEST_TMP">Location of temporary files from test runs</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -139,7 +139,7 @@
 			<div class="Table_Text_Small">TEXTTEST_CHECKOUT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Full path to the checkout directory</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#TEXTTEST_CHECKOUT">Full path to the checkout directory</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -147,7 +147,7 @@
 			<div class="Table_Text_Small">TEXTTEST_CHECKOUT_NAME</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Local name of the checkout directory</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#TEXTTEST_CHECKOUT_NAME">Local name of the checkout directory</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -163,7 +163,7 @@
 			<div class="Table_Text_Small">TEXTTEST_MIM_SERVER</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Address of TextTest's server for recording client/server traffic</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#TEXTTEST_MIM_SERVER">Address of TextTest's server for recording client/server traffic</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -171,7 +171,7 @@
 			<div class="Table_Text_Small">TEXTTEST_SANDBOX</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Full path to the sandbox directory</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#TEXTTEST_SANDBOX">Full path to the sandbox directory</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
