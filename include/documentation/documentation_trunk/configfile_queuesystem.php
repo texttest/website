@@ -457,7 +457,7 @@
 			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">builtin : environment, testsuite, options, input, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
+			<div class="Table_Text_Small">builtin : environment, properties, testsuite, options, input, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
