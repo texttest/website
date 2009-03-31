@@ -207,7 +207,7 @@ types. The &ldquo;default&rdquo; key can be specified to make the same search pa
 This setting can also apply to the "imported config files" described above, so that
 they can also be stored outside the given test suite structure.</div> 
 
-<div class="Text_Header">Using Environment Files to Set Environment Variables</div>
+<div class="Text_Header">Using Environment Files to set Environment Variables</div>
 <div class="Text_Normal">Any test suite or test case can tell TextTest to set
 environment variables by providing an environment file. This is
 a file called <B><B>environment.&lt;app&gt;</B></B> or just
@@ -223,7 +223,33 @@ specific one in the hierarchy will of course be chosen.
 <div class="Text_Normal">The values of the variables may themselves contain
 environment variables: if so, this should be done UNIX-style
 using $&lt;var_name&gt;.</div>
+<div class="Text_Header">Using Properties Files to set Java Properties</div>
+<div class="Text_Normal">In Java, environment variables are not used so much and
+instead applications are generally configured via properties files. You can provide
+these files in much the same way as environment files described above. This is
+a file called <B>properties.&lt;app&gt;</B> or just
+<B>properties</B>. This file is also in
+<A class="Text_Link" href="#Appendix - TextTest file formats">Standard Dictionary
+Format</A> , with the section names identifying names of individual properties files,
+the keys as the names of the properties and the values as entries. Naturally these files
+are also found and prioritised via the mechanism described above, and settings will be
+overridden appropriately: it should never be necessary to repeat anything. For example: 
+<?php codeSampleBegin() ?>
+[myprops]
+prop1:val1
+prop2:val2
+[end]
+<?php codeSampleEnd() ?>
 
+This will create a file "myprops.properties" in the sandbox directory (which will be the
+current working directory when the test runs), containing 
+
+<?php codeSampleBegin() ?>
+prop1 = val1
+prop2 = val2
+<?php codeSampleEnd() ?>
+
+</div>
 <div class="Text_Header"><A NAME="-s"></A><A NAME="default.ReplaceText"></A>Analysing and updating the test suite
 directory structure</div>
 <div class="Text_Normal">When a large test suite has been created, you often want to
