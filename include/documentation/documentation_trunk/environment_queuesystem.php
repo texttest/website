@@ -75,7 +75,7 @@
 			<div class="Table_Text_Small">&lt;source directory&gt;/bin/texttest.py</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">TextTest executable to call for the grid engine slave process</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_SLAVE_CMD">TextTest executable to call for the grid engine slave process</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -86,7 +86,7 @@
 			<div class="Table_Text_Small">$TEXTTEST_DIAGDIR/&lt;slave job name&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Internal log directory to use in the grid engine slave process</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_SLAVE_DIAGDIR">Internal log directory to use in the grid engine slave process</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -221,7 +221,7 @@
 			<div class="Table_Text_Small">1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Number of processes the test needs to run</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#QUEUE_SYSTEM_PROCESSES">Number of processes the test needs to run</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -232,7 +232,7 @@
 			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Grid engine resources required for the test</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#QUEUE_SYSTEM_RESOURCE">Grid engine resources required for the test</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -243,7 +243,7 @@
 			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Extra arguments to provide on submission to grid engine</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#QUEUE_SYSTEM_SUBMIT_ARGS">Extra arguments to provide on submission to grid engine</A></div>
 		</TD>
 	</TR>
 </TABLE>

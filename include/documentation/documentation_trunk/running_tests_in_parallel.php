@@ -98,7 +98,7 @@ is as follows:</div>
 derived configuration</A> to modify this logic, for example to
 introduce some mechanism to select queues based on expected time
 taken.</div>
-<div class="Text_Header"><A NAME="-R"></A>Resources</div>
+<div class="Text_Header"><A NAME="-R"></A><A NAME="QUEUE_SYSTEM_RESOURCE"></A>Resources</div>
 <div class="Text_Normal"><I>Resources </I>are used to specify properties of machines
 where you wish your job to run. For example, you might want to
 request a machine running a particular flavour of linux, or you
@@ -236,7 +236,7 @@ which TextTest does not expect or handle. It's therefore
 important to disable the NOTIFY_SUSP parameter in SGE if you
 aren't going to get tests spuriously failing with RUNLIMIT
 whenever they would be suspended:</div>
-<div class="Text_Header"><A NAME="parallel_environment_name"></A>When the system
+<div class="Text_Header"><A NAME="parallel_environment_name"></A><A NAME="QUEUE_SYSTEM_PROCESSES"></A>When the system
 under test takes more than one CPU</div>
 <div class="Text_Normal">Both grid engines have functionality for testing systems
 which are themselves parallel, setting aside several CPUs for
@@ -254,3 +254,11 @@ works here. In this case TextTest will ask the queue system for
 all machines that have been used, and only if they are all
 performance machines will performance be compared.</div>
 				
+<div class="Text_Header"><A NAME="QUEUE_SYSTEM_SUBMIT_ARGS"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_SLAVE_DIAGDIR"></A>Additional environment variables for the slave process </div>
+<div class="Text_Normal">
+You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "QUEUE_SYSTEM_SUBMIT_ARGS" in your environment file. </div>
+<div class="Text_Normal">
+You can configure the TextTest program that is run by the slave process via the environment variable "TEXTTEST_SLAVE_CMD", which defaults to just running "texttest.py". The main point of this is if you need a startup script to find the right version of Python on the remote machine, for example, or if you want to plug in developer tools like profilers and coverage analysers. </div>
+<div class="Text_Normal">
+You can also separately configure where the slave process will write its internal logs. By default, it will put them in a subdirectory of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=troubleshooting";?>#xr">where the master process puts them</A>, named after the job concerned. There is an environment variable "TEXTTEST_SLAVE_DIAGDIR" which will allow you to point them somewhere else if desired. This mostly exists for the self-tests. 
+</div>
