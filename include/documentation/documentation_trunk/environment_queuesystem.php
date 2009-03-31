@@ -31,7 +31,7 @@
 			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Additional python arguments for dynamic GUI : mostly useful for coverage</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#TEXTTEST_DYNAMIC_GUI_PYARGS">Additional python arguments for dynamic GUI : mostly useful for coverage</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -108,7 +108,7 @@
 			<div class="Table_Text_Small">30</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Time to wait for Xvfb to set up connections</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#TEXTTEST_XVFB_WAIT">Time to wait for Xvfb to set up connections</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -119,7 +119,7 @@
 			<div class="Table_Text_Small">$TEXTTEST_HOME/usecases</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Location to store shortcuts from the GUI</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#USECASE_HOME">Location to store shortcuts from the GUI</A></div>
 		</TD>
 	</TR>
 </TABLE>
@@ -155,7 +155,7 @@
 			<div class="Table_Text_Small">TEXTTEST_FOLLOW_FILE_TITLE</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Title of the window when following file progress</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#TEXTTEST_FOLLOW_FILE_TITLE">Title of the window when following file progress</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -179,7 +179,7 @@
 			<div class="Table_Text_Small">USECASE_RECORD_SCRIPT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Full path to the script to record in GUI tests</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#USECASE_RECORD_SCRIPT">Full path to the script to record in GUI tests</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -187,7 +187,7 @@
 			<div class="Table_Text_Small">USECASE_REPLAY_DELAY</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Time to wait between each action in GUI tests</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#USECASE_REPLAY_DELAY">Time to wait between each action in GUI tests</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -195,7 +195,7 @@
 			<div class="Table_Text_Small">USECASE_REPLAY_SCRIPT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Full path to the script to replay in GUI tests</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#USECASE_REPLAY_SCRIPT">Full path to the script to replay in GUI tests</A></div>
 		</TD>
 	</TR>
 </TABLE>

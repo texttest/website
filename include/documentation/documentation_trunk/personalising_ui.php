@@ -70,23 +70,30 @@ they can just view the parts that matter to them.</div>
 This should be set to 1 to disable the automatic expand of the
 test suite. Instead, it will only expand the first level of
 suites/tests.</div>
-<div class="Text_Header"><A NAME="hide_gui_element"></A>The various &ldquo;bars&rdquo;
-
-and how to hide them</div>
-<div class="Text_Normal">TextTest comes by default with four bars: all of which are
-optional: a menubar and toolbar at the top and a shortcut bar
-and status bar at the bottom. The menubar and toolbar are fairly
-standard and generally provide access to the same functionality.</div>
-<div class="Text_Normal">The shortcut bar at the bottom allows you to create GUI
+<div class="Text_Header"><A NAME="USECASE_HOME"></A>Creating personalised UI "shortcuts" (macros) </div>
+<div class="Text_Normal">
+The shortcut bar at the bottom allows you to create GUI
 shortcuts for sequences of clicks that you do regularly. This is
 the <A class="Text_Link" href="index.php?page=concepts&n=shortcuts">GUI shortcut
 functionality</A> as provided by <A class="Text_Link" href="index.php?page=concepts&n=xusecase">PyUseCase</A>,
 which TextTest itself relies on, primarily for its own testing,
 but also to allow for this customisation possibility. 
 </div>
-<div class="Text_Normal">The status bar at the very bottom tries to indicate what
+<div class="Text_Normal">
+To create such a shortcut, you click the "New" button on the "shortcut bar", and then perform the clicks
+you want recorded. When you have finished, you enter a name at the bottom and press "Stop". A new button
+then appears which will reproduce the clicks on demand. The shortcut is stored in the directory indicated
+by the variable USECASE_HOME, which will default to $TEXTTEST_HOME/usecases. It is in a very high-level
+plain text format and it should be possible to edit them by hand if necessary.
+</div>
+<div class="Text_Header"><A NAME="hide_gui_element"></A>The various &ldquo;bars&rdquo;
+and how to hide them</div>
+<div class="Text_Normal">TextTest comes by default with four bars: all of which are
+optional: a menubar and toolbar at the top and a shortcut bar
+and status bar at the bottom. The menubar and toolbar are fairly
+standard and generally provide access to the same functionality. The shortcut
+bar is described above. The status bar at the very bottom tries to indicate what
 TextTest is doing right now or has just done. The &ldquo;throbber&rdquo;
-
 at the far right indicates whether it is doing something:
 sometimes searching a large test suite for example may take a
 little time.</div>

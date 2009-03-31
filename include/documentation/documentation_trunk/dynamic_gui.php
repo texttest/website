@@ -60,7 +60,7 @@ To refer to the various categories, you can use any name that appears in the sta
 or you can use the keys from for
 example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A>.</div>
-<div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>
+<div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="TEXTTEST_FOLLOW_FILE_TITLE"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>
 Viewing Tests</div>
 <div class="Text_Normal">When tests are selected via either of the above means, a new
 &ldquo;Test&rdquo; tab is created on the right, containing the
@@ -81,9 +81,16 @@ viewing a static file. These default to &ldquo;tkdiff&rdquo;,
 UNIX systems, &ldquo;tkdiff&rdquo;, &ldquo;baretail&rdquo; and
 &ldquo;notepad&rdquo; on Windows. By default differences will be
 shown if they are thought to exist (red files) otherwise the
-file is simply viewed. You can make following running tests the
-default by setting "follow_file_by_default" to 1. To select other ways to view the files,
+file is simply viewed. To select other ways to view the files,
 right-click and select a viewer from the popup menu.</div>
+<div class="Text_Normal">
+"follow_program" is used for monitoring the progress of a running test. Ordinarily it
+is only available from the popup menu, but you can make it come up when double clicking 
+a file in a running test by setting "follow_file_by_default" to 1. When starting this viewer, 
+TextTest will set the environment variable TEXTTEST_FOLLOW_FILE_TITLE to an appropriate name 
+for the window title, which can then be referred to in your "follow_program" setting, as indeed 
+the default setting on UNIX does.
+</div>
 
 <div class="Text_Normal">Note the config entries described above are all &ldquo;composite
 dictionary&rdquo; entries and can thus be configured per file
@@ -199,3 +206,9 @@ For especially important longer runs it's possible to provide an additional anno
 of providing a succinct description and a guard against accidental closure at the same time. This is done via
 View /Annotate from the menus. The window header will be changed, the Run Info updated and when you try
 to quit a warning dialog will appear to make sure you haven't made a mistake.</div>
+<div class="Text_Header"><A NAME="TEXTTEST_DYNAMIC_GUI_PYARGS"></A>Plugging in python developer tools</div>
+<div class="Text_Normal">
+There is an environment variable TEXTTEST_DYNAMIC_GUI_PYARGS which is a hook to provide additional arguments
+to Python when starting the dynamic GUI from the static GUI. This is mostly useful for development, for
+example to plug in a coverage tool or profiler.
+</div>

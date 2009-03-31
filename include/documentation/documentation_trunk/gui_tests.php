@@ -21,7 +21,7 @@ If you use another GUI toolkit &ndash; write your own use case
 recorder and tell me about it! 
 </div>
 
-<div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A>
+<div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A><A NAME="USECASE_RECORD_SCRIPT"></A><A NAME="USECASE_REPLAY_SCRIPT"></A>
 Creating an Application</div>
 <div class="Text_Normal">First, create a directory and a config file as described in
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello
@@ -33,9 +33,15 @@ file. In particular, you should add the line
 you also need to set 'use_case_recorder:jusecase'. This is
 because JUseCase uses Java Properties files rather than
 environment variables for its interface, so TextTest needs to
-know to generate these rather than set environment variables. Setting 'use_case_recorder:none' is a
-useful trick if you want to enable the virtual display functionality described here but don't want
-to use a use-case recorder.</div>
+know to generate these. If it isn't set, it will set the environment
+variables USECASE_RECORD_SCRIPT and USECASE_REPLAY_SCRIPT, which are
+the variables PyUseCase reads from when deciding the relevant files to read and write. 
+Other GUI simulation tools can of course easily be wrapped by a script that would read
+the above variables and translate them into the format the simulation tool
+expects.</div>
+<div class="Text_Normal">
+Setting 'use_case_recorder:none' is a useful trick if you want to enable the virtual display 
+functionality described here but don't want to use a use-case recorder.</div>
 <div class="Text_Header">Creating a Test</div>
 
 <div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">&ldquo;hello
@@ -84,7 +90,7 @@ now the usecase file recorded by PyUseCase. Naturally there
 could be command line options as well if desired. This is much
 the same as the final result of the &ldquo;hello world&rdquo;
 set up.</div>
-<div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_number"></A>
+<div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="USECASE_REPLAY_DELAY"></A><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_number"></A>
 Running a Test</div>
 <div class="Text_Normal">Clearly, there is no need to run it once in order to collect
 the output as we did with &ldquo;hello world&rdquo;: this is
@@ -97,8 +103,14 @@ actions will be performed as fast as possible.
 the SUT's GUIs from popping up, by using the virtual display server Xvfb 
 (a standard UNIX tool). For each run of the tests it will start such
 a server, point the SUT's DISPLAY variable at it and close the server
-at the end of the test. It will use its own process ID (modulo 32768)
-as the display number to guarantee uniqueness.
+at the end of the test. </div>
+<div class="Text_Normal">
+It will use its own process ID (modulo 32768) as the display number to guarantee 
+uniqueness. After starting Xvfb, it will wait the number of seconds
+specified by the environment variable "TEXTTEST_XVFB_WAIT" (30 by default) 
+for Xvfb to report that it's ready to receive connections. If that doesn't happen,
+for example because the display is in use, it will kill it and try again with
+another display number.
 </div>
 <div class="Text_Normal">
 If you only have Xvfb installed remotely, you can specify machines
@@ -116,7 +128,9 @@ that get started will (unfortunately) appear anyway.
 To do this, we set a default speed in the config file, using the
 config file setting 'slow_motion_replay_speed:&lt;delay&gt;',
 where &lt;delay&gt; is the number of seconds we want it to pause
-between each GUI action. For a particular run, we then select
+between each GUI action. (This is translated to the environment variable
+USECASE_REPLAY_DELAY which is forwarded to the system under test, or
+the "delay" property if JUseCase is being used). For a particular run, we then select
 &ldquo;slow motion replay mode&rdquo;, from the &ldquo;how to
 run&rdquo; tab in the static GUI. This will force the GUI to pop
 up for this run, whatever is set in the virtual_display_machine
