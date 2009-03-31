@@ -15,8 +15,8 @@ and also an environment where test data can be provided in an
 easily accessed way.</div>
 <div class="Text_Normal">There is one created for each run of each test. It is created
 under the directory indicated by the environment variable
-TEXTTEST_TMP. It defaults to ~/texttesttmp on UNIX systems and
-the value of the TEMP environment variable on Windows. This is
+TEXTTEST_TMP. It defaults to the value of $HOME/.texttest/tmp (on Windows $HOME
+is formed from $HOMEDRIVE and $HOMEPATH). This is
 hereafter referred to as the &ldquo;root temporary directory&rdquo;.</div>
 
 <div class="Text_Normal">Each time TextTest is started, it is assigned a unique

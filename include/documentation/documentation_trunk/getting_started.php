@@ -92,8 +92,8 @@ written to standard error. We like this behaviour, so we click
 
 <div class="Text_Normal"><I>The temporary files have been written to a directory
 underneath the 'texttest temporary directory'. This root
-directory defaults to $HOME/texttesttmp on UNIX and to the value
-of TEMP on Windows. It can be altered via the environment
+directory defaults to the value of $HOME/.texttest/tmp (on Windows $HOME is formed
+from a combination of $HOMEDRIVE and $HOMEPATH). It can be altered via the environment
 variable TEXTTEST_TMP. When the test is saved, these files are
 copied to the test directory created above. For more details,
 see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">Guide to TextTest's Temporary
