@@ -167,3 +167,29 @@ system, TextTest will perform the filter operation on all result
 files even if no filters are defined for them. This makes sure
 that all files are generated for the target platform and avoids
 false failures on line endings.</div>
+
+<div class="Text_Header">
+<A NAME="floating_point_tolerance"></A>Filtering floating point differences</div>
+<div class="Text_Normal">If the output contains floating point values
+setting up the tests can be messy because the &ldquo;exact&rdquo; values
+change depending on compiler, os, optimization level, ...
+Thus there is the config file dictionary entry ldquo;floating_point_tolerance&rdquo;
+which works in a similar way andtries to filter these changes by detecting
+floating point data in your input and only report them as a difference if
+they exceed the tolernce specified, e.g.
+<?php codeSampleBegin() ?>
+[floating_point_tolerance]
+output:0.0101
+<?php codeSampleEnd() ?>
+will report differences only if the two floating point values to compare differ
+by more than 0.0101, thus 6.00 will be &ldquo;equal&rdquo; to 6.01.
+This filtering step is applied after the run_dependent_text
+step. Please keep in mind that this filtering might not always work as expected,
+because it operates based on a textual diff. This means if the numbers
+you want to be compared are not at the same location in the file this filtering
+will not work. Furthermore the detection of floating point values is not very
+elaborate, it supports scientific notation though.
+If you happen to see unexpected bevavior concerning this option, try to compare
+the files using texttest/lib/default/fpdiff.py as a command line tool
+and report the results back to the texttest mailing list.
+</div>
