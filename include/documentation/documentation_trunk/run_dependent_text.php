@@ -173,10 +173,10 @@ false failures on line endings.</div>
 <div class="Text_Normal">If the output contains floating point values
 setting up the tests can be messy because the &ldquo;exact&rdquo; values
 change depending on compiler, os, optimization level, ...
-Thus there is the config file dictionary entry ldquo;floating_point_tolerance&rdquo;
-which works in a similar way andtries to filter these changes by detecting
+Thus there is the config file dictionary entry &ldquo;floating_point_tolerance&rdquo;
+which works in a similar way and tries to filter these changes by detecting
 floating point data in your input and only report them as a difference if
-they exceed the tolernce specified, e.g.
+they exceed the tolerance specified, e.g.
 <?php codeSampleBegin() ?>
 [floating_point_tolerance]
 output:0.0101
