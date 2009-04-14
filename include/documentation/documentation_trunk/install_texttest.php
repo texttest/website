@@ -29,7 +29,7 @@ On Windows, the summary for how to install is that you should get the GTK 2.12 b
 </div>
 <div class="Text_Normal"><LI><B><U>Tkdiff and diff</U></B>. You will need a decent graphical difference tool on your
 PATH, along with a textual version for reports. We recommend 'tkdiff' and 'diff' respectively which are present on most UNIX
-systems and are TextTest's defaults. If you're on UNIX and tkdiff isn't there, download from from <A class="Text_Link" HREF="http://sourceforge.net/projects/tkdiff/">tkdiff's
+systems and are TextTest's defaults. If you're on UNIX and tkdiff isn't there, download from <A class="Text_Link" HREF="http://sourceforge.net/projects/tkdiff/">tkdiff's
 project page on sourceforge</A>.</div>
 <div class="Text_Normal">On Windows, Patrick Finnegan sent me a very nice <A class="Text_Link" HREF="files/tkdiffInstall.zip">Windows
 installer for tkdiff and diff </A>and kindly agreed that I
