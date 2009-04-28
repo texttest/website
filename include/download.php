@@ -30,6 +30,9 @@ On UNIX, you probably want to make sure you have Xvfb installed, otherwise you'l
 The self-tests also assume that the TextTest source to be tested can be found in the same location as in the release tarball, i.e. $TEXTTEST_HOME/../source. If you put them somewhere else you'll need to tell it this. This is controlled by the setting in the file default_site/site_configfile in the self-tests: you can either edit this locally or preferably, copy the file to site/siteconfig/site_configfile and edit it there, where it will be read instead of the default_site location. This also means it won't show up as a change when you check status in Bazaar. You can also make other locally-relevant configuration changes for the self-tests in that file.
 </div>
 <div class="Text_Normal">
+We make every effort to ensure that the self-tests are always green, but there are nearly 1000 of them now and there are many different combinations of platforms, python versions, GTK versions etc, which can of course lead to problems. They are run on the current trunk every night on Linux, (Red Hat 4 and 5), Intel Solaris and Windows XP. The results are posted <a class="Text_Link" href="http://www.texttest.org/nightjob/texttest/test_default.html">here</A>, so if you get failures, you can see if they've been failing also in the nightjob. This also helps to track indeterminism : there are a handful of tests that contain race conditions and fail about one time in ten. You can check in the nightjob history to see if a test has failed there in the past.
+</div>
+<div class="Text_Normal">
  The source for this website can also be retrieved from "lp:~geoff.bache/texttest/website-trunk" if you find errors in the documentation, or your changes require extra documentation.
    </div>
   
