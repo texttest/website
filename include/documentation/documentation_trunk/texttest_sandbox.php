@@ -62,7 +62,7 @@ that is started. When the dynamic GUI is closed, the contents of
 whatever it wrote on standard error will be displayed in a
 message box by the static GUI, as well as in a file in this
 directory.</div>
-<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
+<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="partial_copy_test_path"></A><A NAME="copy_test_path_merge"></A><A NAME="-ignorecat"></A>
 Populating the temporary directory with test data files (for
 reading or editing)</div>
 <div class="Text_Normal">Sometimes the system under test needs to read some file
@@ -84,8 +84,7 @@ situation to need test data files for some tests but not others.</div>
 <div class="Text_Normal">The files can be given any name at all (unless the system
 under test requires a particular name), and the normal extensions
 of application and/or version identifiers can be applied to them as with
-other files. (TextTest 3.10 and earlier did not allow this). These identifiers
-will be stripped from the copied or linked file name in the sandbox, which will be
+other files. These identifiers will be stripped from the copied or linked file name in the sandbox, which will be
 as given in the config file.</div>
 
 <div class="Text_Normal">Sometimes the system under test will itself edit existing
@@ -96,7 +95,15 @@ side effects. You can do this using the &ldquo;copy_test_path&rdquo;
 config file entry, which will find files or directories to copy
 in the same way as link_test_path, and indeed is equivalent to
 link_test_path on Windows.</div>
-<div class="Text_Normal">On UNIX, there is a third option. Sometimes an application
+<div class="Text_Normal">
+If the test data is a directory, copy_test_path will treat each directory as a separate
+unit, i.e. it will take the entire directory from the most specific place in the hierarchy.
+By specifying "copy_test_path_merge" instead, you can cause it to form an amalgamated directory
+from all the ones on its path, picking the files from the most specific directory in case they
+appear in several of them. This is useful in case most of the directories contain
+the same files but you need to make small tweaks to individual files in the directory structure.
+</div>
+<div class="Text_Normal">On UNIX, there is another option. Sometimes an application
 may need to read from a very large directory structure, and
 potentially edit some files in it. Copying the whole structure
 for each test run is possible but time consuming. It's better to
