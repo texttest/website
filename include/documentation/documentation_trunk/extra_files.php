@@ -23,14 +23,11 @@ takes the following form :
 </div>
 
 <div class="Text_Normal">
-
 <?php codeSampleBegin() ?>
 [collate_file]
 &lt;texttest_name&gt;:&lt;source_file_path&gt;
-
+&lt;texttest_name&gt;:&lt;another_source_file&gt;
 <?php codeSampleEnd() ?>
-
-
 </div>
 
 <div class="Text_Normal">
@@ -58,14 +55,17 @@ source to be named before the target, but many different config
 dictionary entries use these TextTest names for result files as
 keys so this one works the same for consistency. 
 </div>
-<div class="Text_Normal">Standard UNIX file pattern matching is allowed in both
+<div class="Text_Normal">Standard UNIX file pattern matching (globbing) is allowed in both
 &lt;texttest_name&gt; and &lt;source_file_path&gt;. Where this
 is used in the path to the source file it simply means that the
 exact name of the file that will be produced may vary, but
 whatever file matches the pattern will be copied and given the
 same name each time by TextTest, provided it was created or
 modified by the test run (unchanged files will not be collected
-in this way).</div>
+in this way). It's also possible to provide multiple patterns or
+names to look in for this situation, where the names of
+the produced files vary in such a way that writing a pattern isn't
+possible.</div>
 
 <div class="Text_Normal">If comparison of a collected file is not desired for any
 reason, it can be added to the config file list entry
