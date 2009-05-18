@@ -460,7 +460,7 @@
 			<div class="Table_Text_Small">localhost</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Default machine to run tests on</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#default_machine">Default machine to run tests on</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1048,7 +1048,7 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">(UNIX) Program to use for copying files remotely, in case of non-shared file systems</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_copy_program">(UNIX) Program to use for copying files remotely, in case of non-shared file systems</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1062,7 +1062,7 @@
 			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -az<BR>scp : -Cr -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Default options to use for particular remote shell programs</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_program_options">Default options to use for particular remote shell programs</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1076,7 +1076,7 @@
 			<div class="Table_Text_Small">rsh</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Program to use for running commands remotely</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_shell_program">Program to use for running commands remotely</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

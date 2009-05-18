@@ -75,6 +75,7 @@
 			    	 <?php  printLI("faking_it_with_texttest","Mocking things out","How to 'mock out' external programs and subsystems for determinism, speed, etc."); ?>
 			    	 <?php  printLI("measuring_system_resource_usage","CPU time and memory","Checking that your tests stay within certain bounds for CPU time or memory usage"); ?>
 			    	 <?php  printLI("automatic_failure_interpretation","Automatic failure interpretation","Associating certain textual patterns with problem descriptions, or reported bugs"); ?>
+			    	 <?php  printLI("running_tests_remotely","Running tests remotely","Running tests on remote machines without the aid of a grid engine"); ?>
 			    	 <?php  printLI("running_tests_in_parallel","Running tests in parallel","Using Sun Grid Engine or LSF to run all your tests in parallel"); ?>
 			    	 <?php  printLI("writing_a_config_module","Write your own configuration","Using the Python-framework aspect of Texttest to override parts of its behaviour"); ?>
 			
