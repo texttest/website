@@ -50,7 +50,7 @@
 			<div class="Table_Text_Small">TEXTTEST_LOGCONFIG</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">$TEXTTEST_DIAGDIR/log4py.conf</div>
+			<div class="Table_Text_Small">$TEXTTEST_DIAGDIR/logging.debug</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#TEXTTEST_LOGCONFIG">Configuration file for TextTest's internal logs</A></div>

@@ -13,7 +13,7 @@ where they will do so, you will need to edit the log4py
 configuration file. The location of this is set by the field
 &ldquo;Configure self-diagnostics from&rdquo;, in the same
 location as above (-xr on command line). It defaults to 
-&lt;your personal configuration directory&gt;/log/log4py.conf (see <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>">here</A> for where to find your personal configuration directory).
+&lt;your personal configuration directory&gt;/log/logging.debug (see <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>">here</A> for where to find your personal configuration directory).
 An initial file with everything disabled is provided with the TextTest source in
 the "log" subdirectory, so you should start by copying this file to the above location.
 </div>
@@ -21,9 +21,15 @@ the "log" subdirectory, so you should start by copying this file to the above lo
 in that file and enable any that seem to be related to your
 problem, generally by changing the &ldquo;LogLevel&rdquo; to
 &ldquo;Normal&rdquo; for it. Most loggers by default write a
-file alongside the log4py.conf file in the location above, but of course you can
+file alongside the logging.debug file in the location above, but of course you can
 configure it to write anywhere you like, either via the file
 itself or from the static GUI tab given above. </div>
+<div class="Text_Normal">
+There also exist default files for batch mode, the console interface and the GUI.
+If you wish to enable different logging for any of these modes "permanently", you
+can just do the same thing, i.e. copy them to your personal configuration directory
+and edit the copy there.
+</div>
 <div class="Text_Normal">
 (If the above options are not set, TextTest will find the configuration file from
 the variable TEXTTEST_LOGCONFIG and the directory to write to from TEXTTEST_DIAGDIR,
