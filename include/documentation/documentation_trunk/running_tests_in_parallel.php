@@ -254,11 +254,9 @@ works here. In this case TextTest will ask the queue system for
 all machines that have been used, and only if they are all
 performance machines will performance be compared.</div>
 				
-<div class="Text_Header"><A NAME="QUEUE_SYSTEM_SUBMIT_ARGS"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_SLAVE_DIAGDIR"></A>Additional environment variables for the slave process </div>
+<div class="Text_Header"><A NAME="QUEUE_SYSTEM_SUBMIT_ARGS"></A><A NAME="TEXTTEST_SLAVE_CMD"></A>Additional environment variables for the slave process </div>
 <div class="Text_Normal">
 You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "QUEUE_SYSTEM_SUBMIT_ARGS" in your environment file. </div>
 <div class="Text_Normal">
 You can configure the TextTest program that is run by the slave process via the environment variable "TEXTTEST_SLAVE_CMD", which defaults to just running "texttest.py". The main point of this is if you need a startup script to find the right version of Python on the remote machine, for example, or if you want to plug in developer tools like profilers and coverage analysers. </div>
-<div class="Text_Normal">
-You can also separately configure where the slave process will write its internal logs. By default, it will put them in a subdirectory of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=troubleshooting";?>#xr">where the master process puts them</A>, named after the job concerned. There is an environment variable "TEXTTEST_SLAVE_DIAGDIR" which will allow you to point them somewhere else if desired. This mostly exists for the self-tests. 
-</div>
+

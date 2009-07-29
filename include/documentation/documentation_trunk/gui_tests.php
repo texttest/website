@@ -17,31 +17,32 @@ case recorder </A>of your choice, at least enough to be able to
 create some simple scripts. If you have a PyGTK GUI, use
 <A class="Text_Link" href="index.php?page=concepts&n=pyusecase">PyUseCase</A>. If you
 have a Java Swing GUI, use <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>.
+If you are using Microsoft's .net, use <A class="Text_Link" href="http://nusecase.sourceforge.net/">NUseCase</A>.
 If you use another GUI toolkit &ndash; write your own use case
 recorder and tell me about it! 
 </div>
 
 <div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A><A NAME="USECASE_RECORD_SCRIPT"></A><A NAME="USECASE_REPLAY_SCRIPT"></A>
 Creating an Application</div>
-<div class="Text_Normal">First, create a directory and a config file as described in
+<div class="Text_Normal">First, create an initial application as described in
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello
-world&rdquo;</A>. 
+world&rdquo;</A>. The main difference is that you should check the box for enabling GUI-testing operations!
 </div>
-<div class="Text_Normal">For testing GUIs, you need some further entries in the config
-file. In particular, you should add the line
-'use_case_record_mode:GUI'. If you are using <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>,
-you also need to set 'use_case_recorder:jusecase'. This is
+<div class="Text_Normal">If you are using <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>,
+you also need to set 'use_case_recorder:jusecase' in your config file. This is
 because JUseCase uses Java Properties files rather than
 environment variables for its interface, so TextTest needs to
-know to generate these. If it isn't set, it will set the environment
-variables USECASE_RECORD_SCRIPT and USECASE_REPLAY_SCRIPT, which are
-the variables PyUseCase reads from when deciding the relevant files to read and write. 
-Other GUI simulation tools can of course easily be wrapped by a script that would read
-the above variables and translate them into the format the simulation tool
-expects.</div>
+know to generate these. </div>
 <div class="Text_Normal">
 Setting 'use_case_recorder:none' is a useful trick if you want to enable the virtual display 
 functionality described here but don't want to use a use-case recorder.</div>
+<div class="Text_Normal"><I>(If 'use_case_recorder' isn't set, TextTest will set the environment
+variables USECASE_RECORD_SCRIPT and USECASE_REPLAY_SCRIPT to the relevant locations, which are
+the variables PyUseCase reads from when deciding the relevant files to read and write. 
+Other GUI simulation tools can of course easily be wrapped by a script that would read
+the above variables and translate them into the format the simulation tool
+expects.)</I>
+</div>
 <div class="Text_Header">Creating a Test</div>
 
 <div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">&ldquo;hello

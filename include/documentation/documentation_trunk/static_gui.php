@@ -129,7 +129,10 @@ in the file identified by the &ldquo;log_file&rdquo; config file
 entry. If the &ldquo;Test-file to search&rdquo; filter is also
 provided (-grepfile on the command line), that file will be
 searched instead. This allows selecting all tests that exercise
-a certain part of the system's functionality, for example.</div>
+a certain part of the system's functionality, for example. Regular expressions
+may be used in the text string to search for, while UNIX-style file expansions
+may be used for the file name (note, these are different syntaxes!)
+</div>
 <div class="Text_Normal">If <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">system resource usage testing
 is enabled for CPU time</A>, you can select tests based on how
 much CPU time they are expected to consume. This is done via the

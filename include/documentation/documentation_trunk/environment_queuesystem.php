@@ -14,17 +14,6 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">TEXTTEST_DIAGDIR</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">$TEXTTEST_PERSONAL_CONFIG/log</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#TEXTTEST_DIAGDIR">Location to write TextTest's internal logs</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_DYNAMIC_GUI_PYARGS</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -47,17 +36,6 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">TEXTTEST_LOGCONFIG</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">$TEXTTEST_DIAGDIR/logging.debug</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#TEXTTEST_LOGCONFIG">Configuration file for TextTest's internal logs</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_PERSONAL_CONFIG</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -69,6 +47,17 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_PERSONAL_LOG</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">$TEXTTEST_PERSONAL_CONFIG/log</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#TEXTTEST_PERSONAL_LOG">Location to write TextTest's internal logs</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_SLAVE_CMD</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -76,17 +65,6 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_SLAVE_CMD">TextTest executable to call for the grid engine slave process</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">TEXTTEST_SLAVE_DIAGDIR</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">$TEXTTEST_DIAGDIR/&lt;slave job name&gt;</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_SLAVE_DIAGDIR">Internal log directory to use in the grid engine slave process</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

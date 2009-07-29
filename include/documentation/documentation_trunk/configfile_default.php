@@ -961,7 +961,7 @@
 			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>memory : any</div>
+			<div class="Table_Text_Small">*mem* : any<BR>default : &lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_test_machine">List of machines where performance can be collected</A></div>
@@ -989,7 +989,7 @@
 			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : seconds<BR>memory : MB</div>
+			<div class="Table_Text_Small">*mem* : MB<BR>default : seconds</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#performance_unit">Name to be used to identify the units in a performance file</A></div>

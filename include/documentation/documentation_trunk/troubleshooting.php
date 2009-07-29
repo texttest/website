@@ -1,5 +1,5 @@
 
-<A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A><A NAME="TEXTTEST_LOGCONFIG"></A><A NAME="TEXTTEST_DIAGDIR"></A><div class="Text_Header">Troubleshooting: using TextTest's internal logging</div>
+<A NAME="-x"></A><A NAME="-xr"></A><A NAME="-xw"></A><A NAME="TEXTTEST_PERSONAL_LOG"></A><div class="Text_Header">Troubleshooting: using TextTest's internal logging</div>
 <div class="Text_Normal">When TextTest doesn't do what you expect it to, the best way
 to find out why is usually to enable its own internal logging mechanism
 for the relevant aspect of the functionality. This is enabled
@@ -7,9 +7,9 @@ primarily by using the &ldquo;Write TextTest diagnostics&rdquo;
 check box under &ldquo;Running&rdquo; and &ldquo;Advanced&rdquo;
 tabs in the static GUI (-x option from the command line). 
 </div>
-<div class="Text_Normal">TextTest uses <A class="Text_Link"  HREF="http://www.sourceforge.net/projects/log4py">log4py</A>
-for its own logging. To configure which loggers will output and
-where they will do so, you will need to edit the log4py
+<div class="Text_Normal">TextTest now uses the standard Python logging module
+for its internal logging. To configure which loggers will output and
+where they will do so, you will need to edit the logging
 configuration file. The location of this is set by the field
 &ldquo;Configure self-diagnostics from&rdquo;, in the same
 location as above (-xr on command line). It defaults to 
@@ -19,10 +19,9 @@ the "log" subdirectory, so you should start by copying this file to the above lo
 </div>
 <div class="Text_Normal">You can then open this file and look at the various loggers
 in that file and enable any that seem to be related to your
-problem, generally by changing the &ldquo;LogLevel&rdquo; to
-&ldquo;Normal&rdquo; for it. Most loggers by default write a
-file alongside the logging.debug file in the location above, but of course you can
-configure it to write anywhere you like, either via the file
+problem, generally by uncommenting the "level" and "args" lines in the relevant section. 
+Most loggers by default write a file alongside the logging.debug file in the location above, 
+but of course you can configure it to write anywhere you like, either via the file
 itself or from the static GUI tab given above. </div>
 <div class="Text_Normal">
 There also exist default files for batch mode, the console interface and the GUI.
@@ -31,9 +30,9 @@ can just do the same thing, i.e. copy them to your personal configuration direct
 and edit the copy there.
 </div>
 <div class="Text_Normal">
-(If the above options are not set, TextTest will find the configuration file from
-the variable TEXTTEST_LOGCONFIG and the directory to write to from TEXTTEST_DIAGDIR,
-but you probably won't need to set these variables, they're mainly for the self-tests)
+(If the above options are not set, TextTest will find the personal logging directory
+from the environment variable TEXTTEST_PERSONAL_LOG,
+but you probably won't need to set this variable, it's mainly for the self-tests)
 </div>
 
 <div class="Text_Normal">Some hints / examples:</div>
