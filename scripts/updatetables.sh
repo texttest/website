@@ -2,7 +2,7 @@
 
 PATH=`dirname $0`:$PATH
 
-updateconfig.py personalpreffile.php $1 default default.gtkgui.default_gui.DocumentGUIConfig > tmpfile
+updateconfig.py personalpreffile.php $1 default default.gtkgui.DocumentGUIConfig > tmpfile
 mv tmpfile personalpreffile.php
 
 updateconfig.py configfile_default.php $1 default default.DocumentConfig > tmpfile
