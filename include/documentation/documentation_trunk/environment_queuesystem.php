@@ -72,7 +72,7 @@
 			<div class="Table_Text_Small">TEXTTEST_TMP</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">$TEXTTEST_PERSONAL_CONFIG/tmp</div>
+			<div class="Table_Text_Small">Config value 'default_texttest_tmp'</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#TEXTTEST_TMP">Location of temporary files from test runs</A></div>

@@ -5,7 +5,7 @@
 
 </div>
 <div class="Text_Header">Introduction</div>
-<div class="Text_Normal"><A NAME="TEXTTEST_TMP"></A>When TextTest tests are run, it will try to write the output
+<div class="Text_Normal"><A NAME="TEXTTEST_TMP"></A><A NAME="default_texttest_tmp"></A>When TextTest tests are run, it will try to write the output
 of the system under test to a temporary directory structure
 created specifically for this purpose. This is known as the
 &ldquo;TextTest sandbox&rdquo;: its purpose is to provide a
@@ -15,7 +15,8 @@ and also an environment where test data can be provided in an
 easily accessed way.</div>
 <div class="Text_Normal">There is one created for each run of each test. It is created
 under the directory indicated by the environment variable
-TEXTTEST_TMP. It defaults to the value of $HOME/.texttest/tmp (on Windows $HOME
+TEXTTEST_TMP. If this variable is not set then the config file entry "default_texttest_tmp" will
+be read, which in turn defaults to the value of $HOME/.texttest/tmp (on Windows $HOME
 is formed from $HOMEDRIVE and $HOMEPATH). This is
 hereafter referred to as the &ldquo;root temporary directory&rdquo;.</div>
 

@@ -119,7 +119,7 @@ in the order in which they should be considered. These
 subdirectories may correspond to test cases or may themselves be
 test suites. The file is in <A class="Text_Link" href="#Appendix - TextTest file formats">Standard
 List Format</A>. Having found a test application by finding
-<B><B>config.&lt;app&gt;</B></B>, will then look at
+<B><B>config.&lt;app&gt;</B></B>, TextTest will then look at
 <B><B>testsuite.&lt;app&gt;</B></B> in the same directory to
 determine what the full test suite consists of. It will then
 look, in the order given, at all the subdirectories specified,
@@ -146,15 +146,17 @@ test cases presented in alphabetical order.</div>
 <div class="Text_Normal">A test case is represented in TextTest by a particular
 directory in the file system, and the name of the test case is
 always the same as the name of the directory. Many test
-applications may share the same test case if desired. To define
-a test case for a test application, at least one test definition
-file must be present. Definition files tell TextTest how to run
+applications may share the same test case if desired. Any directory referred to
+by a "testsuite" file as described above which does not itself contain a testsuite
+file will be considered to be a test case. "Definition files" may also be placed in the
+test case directory and tell TextTest how to run
 the SUT for this test case. The following files will be taken as
 test definition files:</div>
 <UL>
 <div class="Text_Normal"><li><B><B>options.&lt;app&gt;</B></B>
 - This will be interpreted as command line options to be given
-to the system under test. 
+to the system under test. They may now also be used in test suites, see
+section below.
 </div>
 <div class="Text_Normal"><li><B><B>input.&lt;app&gt;</B></B>
 - This will be redirected to the system under test as standard
@@ -206,7 +208,23 @@ the type of file search for, so that different search paths can be provided for 
 types. The &ldquo;default&rdquo; key can be specified to make the same search path apply to all files.
 This setting can also apply to the "imported config files" described above, so that
 they can also be stored outside the given test suite structure.</div> 
-
+<div class="Text_Header">Using Options Files to set Command-line Options</div>
+<div class="Text_Normal">Any test suite or test case can tell TextTest to pass
+command-line options to the SUT by providing an options file. This is
+a file called <B><B>options.&lt;app&gt;</B></B>. The contents should just be the
+options as the SUT understands them on a single line. These options files are found 
+and prioritised via the mechanism described above, and may also contain references to environment variables. 
+All such files are considered and all options found will be set. This means that such files do not override 
+each other: the options provided will be the union of everything found along the way. It is however possible 
+to clear options set higher up: this is done via the syntax {CLEAR ...} as in the config file. For example, if a test suite contains 
+"options.app" with the contents "-foo 1" and a test in it has "options.app" containing "-bar 2", then the
+application will be run with "-foo 1 -bar 2". It is however possible to override this : the test options
+file can instead contain
+<?php codeSampleBegin() ?>
+{CLEAR -foo 1} -bar 2 
+<?php codeSampleEnd() ?>
+which will instead cause it to be run with options "-bar 2".
+</div>
 <div class="Text_Header">Using Environment Files to set Environment Variables</div>
 <div class="Text_Normal">Any test suite or test case can tell TextTest to set
 environment variables by providing an environment file. This is
@@ -280,11 +298,13 @@ here</A>. To see how to write your own such scripts, consult the
 configuration</A>. 
 </div>
 
-<div class="Text_Normal">The above example (default.ReplaceText) is a particularly
+<div class="Text_Normal">The above example (default.ReplaceText) now has a version
+available from the static GUI (Replace Text in Files) which will probably be a more
+convenient way to run it than from the command-line as above. It is a particularly
 useful way to update lots of results in a predictable way. It is
 basically a search-and-replace mechanism with the advantage that
-you can select tests in the normal ways and the files relevant
-to the testsuite will be chosen for you. The above example will
+you can select tests in the normal ways (in the static GUI or via the command line) 
+and the files relevant to the testsuite will be chosen for you. The above example will
 naturally replace all instances of &ldquo;bad&rdquo; with &ldquo;good&rdquo;
 in all &ldquo;errors&rdquo; result files.</div>
 

@@ -135,7 +135,7 @@
 			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
+			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>static : Dynamic GUI</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#query_kill_processes">Ask about whether to kill these processes when exiting texttest.</A></div>

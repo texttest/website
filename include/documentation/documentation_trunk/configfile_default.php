@@ -465,6 +465,20 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">default_texttest_tmp</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">$TEXTTEST_PERSONAL_CONFIG/tmp</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#default_texttest_tmp">Default value for $TEXTTEST_TMP, if it is not set</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">definition_file_stems</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">

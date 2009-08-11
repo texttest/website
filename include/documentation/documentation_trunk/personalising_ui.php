@@ -52,7 +52,7 @@ appearance). Additionally, there are some settings that will only be accepted in
 configuration file, these are listed in a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile";?>">separate table</A>.
 </div><div class="Text_Normal">It is also possible to have site-specific config files in the same way, which should be placed
 in a subdirectory "site/etc" of the source code tree. In some cases (for example when troubleshooting) it is useful to disable
-reading of personal and site-specific configuration: in this case the "--vanilla" command line option should be used.
+reading of personal and site-specific configuration: in this case the "--vanilla" command line option should be used. You can provide "--vanilla site" to disable the site configuration, "--vanilla personal" to disable personal configuration, while any other argument (or no argument) after "--vanilla" will disable both.
 </div>
 
 <div class="Text_Normal">You can edit and view these files by going to the &ldquo;Config&rdquo;
@@ -239,7 +239,8 @@ final. If for any reason the tests don't terminate as rapidly
 as they should, pressing Quit a second time is recommended.</div>
 
 <div class="Text_Normal">It can be useful to configure a questioning dialog such that
-TextTest will ask you before killing such processes. This is the
+TextTest will ask you before killing such processes. (By default it will always
+ask you before killing dynamic GUI processes on terminating the static GUI). This is the
 purpose of the &ldquo;query_kill_processes&rdquo; config file
 entry. This is a composite dictionary whose keys are &ldquo;static&rdquo;,
 &ldquo;dynamic&rdquo; or &ldquo;default&rdquo; (this last for
