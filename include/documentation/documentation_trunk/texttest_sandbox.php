@@ -27,10 +27,9 @@ prepended in the case of the static GUI). A subdirectory of the
 root temporary directory is then created with this name. All
 temporary files and directories created by this run will then be
 created under this directory.</div>
-<div class="Text_Header"><A NAME="TEXTTEST_SANDBOX"></A>What it looks like, and what it is used for</div>
+<div class="Text_Header"><A NAME="TEXTTEST_SANDBOX"></A><A NAME="TEXTTEST_SANDBOX_ROOT"></A>What it looks like, and what it is used for</div>
 <div class="Text_Normal">In the case of the dynamic GUI or the console interface,
 tests are actually being run. This means that, for every test
-being run, a temporary directory structure is created which
 being run, a temporary directory structure is created which
 essentially mirrors the permanent directories which represent
 the tests (see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">guide to TextTest
@@ -40,9 +39,15 @@ particular tests are then written to these directories. When the
 tests are run, each test starts the system under test with the
 corresponding temporary directory as current working directory,
 with its standard output and standard error redirected to local
-files. It will also set the environment variable TEXTTEST_SANDBOX to
+files. </div>
+<div class="Text_Normal">It will set the environment variable TEXTTEST_SANDBOX to
 point out this directory, to aid in providing correct absolute paths
-to programs that insist on them, or change current working directory internally.</div>
+to programs that insist on them, or change current working directory internally. In
+addition it will set the environment variable TEXTTEST_SANDBOX_ROOT which points to 
+the root of this structure (which in 
+turn will be a subdirectory of TEXTTEST_TMP). This will live for as long as the whole test run,
+and can be used for temporary storage which needs to be shared between multiple tests.
+</div>
 <div class="Text_Normal">It is imperative that you ensure any other files created by
 the system under test are created relative to this temporary
 directory, to avoid global side effects and to aid TextTest in
