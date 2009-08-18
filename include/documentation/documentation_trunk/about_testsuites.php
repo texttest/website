@@ -223,7 +223,14 @@ file can instead contain
 <?php codeSampleBegin() ?>
 {CLEAR -foo 1} -bar 2 
 <?php codeSampleEnd() ?>
-which will instead cause it to be run with options "-bar 2".
+which will instead cause it to be run with options "-bar 2". It is also possible to simply write "{CLEAR}",
+in which case all more general options files will be ignored.</div>
+<div class="Text_Normal">
+For the most part options files will be combined in order, so care is needed in case the SUT is sensitive
+to the order of the arguments. TextTest will however attempt to insert optional arguments (beginning with "-")
+before positional arguments as best it can, but it isn't always possible to tell which is which as TextTest
+has no understanding of what arguments the SUT actually accepts. In the case of "-foo 1", the "1" could be an argument
+to the "-foo" option or it could be a separate positional argument. TextTest will assume the former in this case.
 </div>
 <div class="Text_Header">Using Environment Files to set Environment Variables</div>
 <div class="Text_Normal">Any test suite or test case can tell TextTest to set

@@ -1157,7 +1157,7 @@
 			<div class="Table_Text_Small">CompositeDictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -azL<BR>scp : -Cr -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
+			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -azLp<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_program_options">Default options to use for particular remote shell programs</A></div>
