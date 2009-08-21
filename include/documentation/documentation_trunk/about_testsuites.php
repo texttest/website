@@ -22,7 +22,7 @@ to be expected.
 </div>
 
 </UL>
-<div class="Text_Header"><A NAME="-d"></A><A NAME="TEXTTEST_HOME"></A>The Root Directory</div>
+<div class="Text_Header"><A NAME="-d"></A><A NAME="TEXTTEST_HOME"></A><A NAME="TEXTTEST_PATH"></A>The Root Directory</div>
 <div class="Text_Normal">This is the first thing determined by TextTest on being
 called, and is where in your file system it will start to look
 for tests. All test files are placed in subdirectories of this
@@ -33,10 +33,12 @@ directory. It is determined as follows:
 &quot;-d&quot; has been set, use the value of that. 
 </div>
 <div class="Text_Normal"><li>If not, but the environment
-variable &quot;TEXTTEST_HOME&quot; is set, use that. 
+variable "TEXTTEST_PATH" is set, use that. 
 </div>
-
-<div class="Text_Normal"><li>If neither of the above, use the current working
+<div class="Text_Normal"><li>If not, but the environment
+variable "TEXTTEST_HOME" is set, use that. 
+</div>
+<div class="Text_Normal"><li>If none of the above, use the current working
 directory. 
 </div>
 </OL>
@@ -45,6 +47,12 @@ normal usage, you should set TEXTTEST_HOME to an appropriate
 value. It is always set internally by TextTest, however its
 value is initially determined, so its value may be used in the
 configuration files that are described below.</div>
+<div class="Text_Normal">
+It is possible to have multiple roots, as the name TEXTTEST_PATH suggests. TEXTTEST_PATH and TEXTTEST_HOME
+are essentially aliases of each other, and both can be set in a similar way to PATH, i.e. on POSIX-based systems
+a colon-separated list can be provided, or on Windows a semicolon-separated list. This means
+that tests from disparate locations can be loaded into the same TextTest run.
+</div>
 <div class="Text_Header"><A NAME="-a"></A>Test Applications</div>
 <div class="Text_Normal">To test a system with TextTest, the first thing to do is to
 choose a unique identifier to be used as an extension for all
