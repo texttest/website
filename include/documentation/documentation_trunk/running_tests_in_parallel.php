@@ -6,7 +6,7 @@ configuration</div>
 </div>
 				
 				
-<div class="Text_Header"><A NAME="queue_system_module"></A><A NAME="-l"></A>Introduction</div>
+<div class="Text_Header"><A NAME="queue_system_module"></A><A NAME="-l"></A><A NAME="queue_system_min_test_count"></A>Introduction</div>
 
 <div class="Text_Normal">When you have more than one machine at your disposal for
 testing purposes, it is very beneficial to be able to utilise
@@ -28,8 +28,13 @@ setting the config file entry &ldquo;queue_system_module&rdquo;
 to &ldquo;SGE&rdquo; or &ldquo;LSF&rdquo;: it defaults to &ldquo;SGE&rdquo;.</div>
 <div class="Text_Normal">By default, it will submit all tests to the grid engine. It
 is still possible to run tests locally as with the default
-configuration, you need to select the option &ldquo;Run Tests
-Locally&rdquo; (-l on the command line).</div>
+configuration, from the command line you can provide "-l".</div>
+<div class="Text_Normal">
+From the Static GUI there are 3 options for the "Use grid" option. "Always" and "Never" speak for themselves.
+The default is however to have some threshold based on the number of tests to submit: if more tests are used,
+the grid will be used, otherwise they will be run locally. This is configured via the config file setting 
+"queue_system_min_test_count", which defaults to 0 and hence the same as the "Always" option.
+</div>
 
 <div class="Text_Normal">As soon as each test finishes, the test will go green or red,
 and results will be presented. Unlike the default configuration,

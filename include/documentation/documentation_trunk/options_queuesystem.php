@@ -274,7 +274,7 @@
 			<div class="Table_Text_Small">Basic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#-l">Run tests directly (bypass grid)</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#-l">Use grid=Never</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
