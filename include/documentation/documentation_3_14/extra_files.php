@@ -15,7 +15,7 @@ or deleted by the system under test (a "catalogue" file), in case comparing ever
 <div class="Text_Normal">
 </div>
 
-<div class="Text_Header"><A NAME="collate_file"></A><A NAME="discard_file"></A><A NAME="collate_script"></A>
+<div class="Text_Header"><A NAME="collate_file"></A><A NAME="discard_file"></A>
 Telling TextTest to collect additional files</div>
 <div class="Text_Normal">This can be done by specifying the config file entry
 &ldquo;collate_file&rdquo;. This entry is a dictionary and so
@@ -74,16 +74,32 @@ disable the collection of standard output and/or standard error
 (i.e. by adding &ldquo;errors&rdquo; or &ldquo;output&rdquo; to
 the list).
 </div>
-<div class="Text_Normal">If the file is not plain-text or needs to be pre-processed
+<div class="Text_Header"><A NAME="collate_script"></A>
+Running an arbitrary script on the collected files</div>
+<div class="Text_Normal">If the file you refer to via "collate_file"
+is not plain-text or needs to be pre-processed
 before it can easily be compared, you can tell TextTest to run
 an arbitrary script on the file. This script should take a
 single argument (the file name to read) and should write its
 output to the standard output. You do this by specifying the
 composite dictionary entry &ldquo;collate_script&rdquo;, which
 has the same form as &ldquo;collate_file&rdquo; except the value
-should be the name of the script to run. The script should be
-placed somewhere on your PATH or identified via an absolute
-path.</div>
+should be the name of the script to run. &ldquo;collate_script&rdquo; has
+no effect unless &ldquo;collate_file&rdquo; is also specified for the
+same file.</div>
+<div class="Text_Normal">
+There are several ways that TextTest can find the script. Obviously
+a full absolute path will work. If a relative path is given, TextTest will also look in its
+own "libexec" directories where its standard collate scripts live : to avoid
+mixing your scripts with the standard ones you can create a directory
+"site/libexec" and scripts in there will be found also. The scripts can often just be
+placed somewhere on your PATH, which will work with any file type on UNIX
+but only with .exe files on Windows (the shell is not used).</div>
+<div class="Text_Normal">
+If the script fails it will write a file at $TEXTTEST_SANDBOX/framework_tmp/&lt;stem&gt;.collate_errs,
+which you can then go and look at. Hopefully in future releases this information will be more
+readily available.
+</div>
 
 <div class="Text_Header">Collecting multiple related files at the same time
 (advanced)</div>
