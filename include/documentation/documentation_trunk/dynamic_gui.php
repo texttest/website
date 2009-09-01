@@ -126,7 +126,7 @@ you can specify a maximum file size for this, using the
 &ldquo;text_diff_program_max_file_size&rdquo; config file entry.
 (Otherwise difference programs can hang forever trying to
 compare the files)</div>
-<div class="Text_Header"><A NAME="unsaveable_version"></A>Saving Test Results</div>
+<div class="Text_Header"><A NAME="unsaveable_version"></A><A NAME="save_filtered_file_stems"></A>Saving Test Results</div>
 <div class="Text_Normal">When tests fail, you can examine the differences as above,
 and sometimes you will decide that the change in behaviour is in
 fact desirable. In this case, you should &ldquo;Save&rdquo; the
@@ -148,6 +148,22 @@ different will be saved. You can however save only some of the
 files by selecting the files you wish to save from the file view
 (under the Test tab) in much the way you select multiple tests
 in the tree view window.</div>
+
+<div class="Text_Normal">TextTest will normally save the files exactly as the system
+under test created them, and then perform its <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">filtering</A> on them again before each test run. You can however tell it to save the filtered output as the new standard result,
+by setting the configuration setting "save_filtered_file_stems".
+This is mainly useful when
+<OL>
+<LI>the information filtered away isn't interesting and
+<LI>the filtering is much simpler to do on the present run than on an arbitrary one
+</OL>
+To enable this for e.g. "output" and "myfile", you set
+<?php codeSampleBegin() ?>
+save_filtered_file_stems:output
+save_filtered_file_stems:myfile
+<?php codeSampleEnd() ?>
+</div>
+
 <div class="Text_Normal">By doing "Save As...", you get a dialog up with
 further configuration options. You can configure which version the results are saved as (look
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>">here
