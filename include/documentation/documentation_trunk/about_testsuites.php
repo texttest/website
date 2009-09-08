@@ -83,7 +83,11 @@ keys are &ldquo;properties&rdquo; with names predefined by
 TextTest. The most important of these is the entry &quot;executable&quot; (formerly known as &quot;binary&quot),
 which defines the path to the SUT and without which nothing much
 will happen. This should be an absolute path, although
-environment variables may be included. It can also be the name of a Java
+environment variables may be included. </div>
+<div class="Text_Normal">
+There are a couple of circumstances under which relative paths will be accepted. One is
+if the same name is also included as a data file using one of the "*_test_path" settings: this
+allows you to vary the executable used. It can also be the name of a Java
 class that will be found on the Java class path, provided you
 set &ldquo;interpreter&rdquo; to &ldquo;java&rdquo; (below). 
 </div>
