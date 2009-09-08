@@ -226,7 +226,7 @@ Note that you can also simply edit the testsuite file via the file view, and
 re-ordering of the tests performed this way
 will show up in the GUI without needing to restart it.
 </div>
-<div class="Text_Header"><A NAME="suppress_stderr_popup"></A>Handling Dynamic GUI errors</div>
+<div class="Text_Header"><A NAME="suppress_stderr_text"></A>Handling Dynamic GUI errors</div>
 
 <div class="Text_Normal">Anything that is written on standard error by a dynamic GUI run will
 be placed in a popup dialog in the static GUI when the dynamic GUI is closed down. These usually
@@ -234,8 +234,7 @@ indicate a bug in TextTest but they can also indicate environmental problems, fo
 GTK issues or shell startup problems. Hopefully these can usually be fixed but occasionally you
 end up with environmental issues that cannot easily be fixed.
 </div><div class="Text_Normal">These popups can therefore be suppressed if desired. Simply
-add a config file entry "suppress_stderr_popup" followed by a substring or regular expression
+add a config file entry "suppress_stderr_text" followed by a substring or regular expression
 that matches the line that is being repeatedly printed. All lines that match these entries
 will be filtered out before displaying a dialog, and of course if no lines are left no dialog
-will be displayed.
-</div>
+will be displayed.</div>

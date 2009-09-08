@@ -304,10 +304,10 @@
 			<div class="Table_Text_Small">-name &lt;value&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">N/A</div>
+			<div class="Table_Text_Small">Advanced</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#-name">Batch run not identified by date, but by name &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#-name">Name this run &lt;value&gt;</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

@@ -41,8 +41,10 @@ of the date and a summary of what tests were run and what
 happened to them (for the application &ldquo;Tail&rdquo;, in
 this case). If the -name option is provided to the run on the
 command line, that name is used to define the run instead of the
-date. (In general, use -name to test actual named releases, and
-the default date-functionality with nightjobs) 
+date. In general, use -name to test actual named releases, and
+the default date-functionality with nightjobs. (Note that "-name" also affects
+runs done via the GUI, see <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui"; ?>#-name">here</A>
+for information about this.)
 </div>
 
 <div class="Text_Normal">The body of the mail contains two further sections, one which

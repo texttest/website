@@ -1272,7 +1272,21 @@
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#suppress_stderr_popup">List of patterns which, if written on stderr, should not produce a warning popup</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'suppress_stderr_text'</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">suppress_stderr_text</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#suppress_stderr_text">List of patterns which, if written on TextTest's own stderr, should not be propagated to popups and further logfiles</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

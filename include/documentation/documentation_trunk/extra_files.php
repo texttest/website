@@ -96,9 +96,10 @@ mixing your scripts with the standard ones you can create a directory
 placed somewhere on your PATH, which will work with any file type on UNIX
 but only with .exe files on Windows (the shell is not used).</div>
 <div class="Text_Normal">
-If the script fails it will write a file at $TEXTTEST_SANDBOX/framework_tmp/&lt;stem&gt;.collate_errs,
-which you can then go and look at. Hopefully in future releases this information will be more
-readily available.
+Anything written on standard error by the script will appear in a popup window. To avoid
+unnecessary popups you should either ensure it writes nothing there, or if this is not
+possible, use the "suppress_stderr_text" setting which allows you to filter out particular
+messages as normal.
 </div>
 
 <div class="Text_Header">Collecting multiple related files at the same time
