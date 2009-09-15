@@ -74,7 +74,8 @@ applications can easily be grouped together in subdirectories of
 the root directory. When TextTest is started, it will by default
 look for and use all config files it can find. To tell it to
 look for just one particular application, specify &quot;-a
-&lt;app&gt;&quot; on the command line.</div>
+&lt;app&gt;&quot; on the command line. You can also specify several
+applications by using a comma-separated list, i.e. "-a &lt;app1&gt;,&lt;app2&gt;"</div>
 
 <div class="Text_Header"><A NAME="executable"></A><A NAME="interpreter"></A><A NAME="import_config_file"></A>
 The Config File for a Test Application</div>
