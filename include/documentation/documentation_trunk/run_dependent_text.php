@@ -169,21 +169,33 @@ that all files are generated for the target platform and avoids
 false failures on line endings.</div>
 
 <div class="Text_Header">
-<A NAME="floating_point_tolerance"></A>Filtering floating point differences</div>
-<div class="Text_Normal">If the output contains floating point values
-setting up the tests can be messy because the &ldquo;exact&rdquo; values
-change depending on compiler, os, optimization level, ...
-Thus there is the config file dictionary entry &ldquo;floating_point_tolerance&rdquo;
-which works in a similar way and tries to filter these changes by detecting
+<A NAME="floating_point_tolerance"></A><A NAME="relative_float_tolerance"></A>Filtering floating point differences</div>
+<div class="Text_Normal">If the output contains floating point values,
+setting up the tests can be messy because the &ldquo;exact&rdquo; values may
+change depending on compiler, operating system, optimization level, and so on.
+To cope with this, there is the config file dictionary entry &ldquo;floating_point_tolerance&rdquo;
+and &ldquo;relative_float_tolerance&rdquo; which work similar to &ldquo;run_dependent_text&rdquo;
+and try to filter these changes by detecting
 floating point data in your input and only report them as a difference if
 they exceed the tolerance specified, e.g.
 <?php codeSampleBegin() ?>
 [floating_point_tolerance]
 output:0.0101
 <?php codeSampleEnd() ?>
-will report differences only if the two floating point values to compare differ
+will report differences only if two floating point values in the standard output differ
 by more than 0.0101, thus 6.00 will be &ldquo;equal&rdquo; to 6.01.
-This filtering step is applied after the run_dependent_text
+The following setting
+<?php codeSampleBegin() ?>
+[relative_float_tolerance]
+output:0.01
+<?php codeSampleEnd() ?>
+will allow for deviations up to 1%, which means 6.00 is still &ldquo;equal&rdquo;
+to 6.01 but 0.51 against 0.52 does not match (which would be tolerated with
+the absolute tolerance setting). Both filtering mechanisms can be applied on the same
+file. The former is often useful to cope with rounding errors, the latter to check
+for deficiencies coming from different floatng point precisions.
+</div>
+<div class="Text_Normal">This filtering step is applied after the run_dependent_text
 step. Please keep in mind that this filtering might not always work as expected,
 because it operates based on a textual diff. This means if the numbers
 you want to be compared are not at the same location in the file this filtering
