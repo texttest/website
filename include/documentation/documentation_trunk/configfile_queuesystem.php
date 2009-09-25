@@ -244,7 +244,7 @@
 			<div class="Table_Text_Small">bug_system_location</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">Dictionary</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
