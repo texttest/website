@@ -92,9 +92,13 @@ There are several ways that TextTest can find the script. Obviously
 a full absolute path will work. If a relative path is given, TextTest will also look in its
 own "libexec" directories where its standard collate scripts live : to avoid
 mixing your scripts with the standard ones you can create a directory
-"site/libexec" and scripts in there will be found also. The scripts can often just be
-placed somewhere on your PATH, which will work with any file type on UNIX
-but only with .exe files on Windows (the shell is not used).</div>
+"site/libexec" and scripts in there will be found also. The scripts can also just be
+placed somewhere on your PATH, which will now work on all platforms. </div>
+<div class="Text_Normal">
+Note also that you can specify several scripts in a list, in which case they will be chained
+together using a pipe. On Windows, this chaining will however not work with scripts
+found only via PATH as the Windows shell cannot handle this piping.
+</div>
 <div class="Text_Normal">
 Anything written on standard error by the script will appear in a popup window. To avoid
 unnecessary popups you should either ensure it writes nothing there, or if this is not
