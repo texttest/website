@@ -30,9 +30,7 @@ core files. It has been tested on quite a few flavours of UNIX :
 HPUX-11, powerpc, Sparc Solaris and Linux RHEL3, RHEL4 and seems
 to be quite portable (much more so than the old code that was
 part of TextTest until version 3.6) This script is plugged in by
-default via the default value of the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files"; ?>#collate_script">&ldquo;collate_script&rdquo;
-
-</A>entry on UNIX. 
+default via the default value of the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files"; ?>#collate_script">&ldquo;collate_script&rdquo;</A>entry on UNIX. 
 </div>
 <div class="Text_Normal">It is provided as standard with TextTest, but can clearly
 also be used externally to TextTest. It works by using the
@@ -99,7 +97,7 @@ When the tests are run, TextTest wll then find all such "knownbugs" files, using
 and prioritising files in the hierarchy</A>. All information from all such files will be used,
 the files do not overwrite each other as versioned files used to up to version 3.10.</A>
 </div>
-<div class="Text_Header"><A NAME="bug_system_location"></A>Extracting information from bug systems (particularly Bugzilla)</div>
+<div class="Text_Header"><A NAME="bug_system_location"></A>Extracting information from bug systems (particularly Bugzilla or Jira)</div>
 <div class="Text_Normal">If you have a bug-tracking system with an API of some sort, 
 you can probably get it to talk to TextTest without
 very much effort. Instead of providing textual descriptions you
@@ -110,12 +108,11 @@ bugsystem) and if so it will be reported as &ldquo;internal
 error&rdquo; rather than as &ldquo;known bug&rdquo;, as it is
 expected the bug text would not continue to occur if the bug had
 been closed.</div>
-
-<div class="Text_Normal">If you use <A class="Text_Link" href="http://www.bugzilla.org/">Bugzilla</A> to
-track your bugs, there are two plugins already written and bundled
-with TextTest. To use these, you need to give TextTest the URL to your bugzilla installation, 
-using the config file entry "bug_system_location". For example, for bugzilla version 3 you might 
-add this in your config file:</div>
+<div class="Text_Normal">
+To set this up, you need to give TextTest the URL to your bug system, 
+using the config file entry "bug_system_location". The key should be the name of
+the bug system, currently one of "bugzilla", "bugzillav2" or "jira". For example, if you use 
+bugzilla version 3 and later you might add this in your config file:</div>
 <div class="Text_Normal">
 <?php codeSampleBegin() ?>
 [bug_system_location]
@@ -123,20 +120,47 @@ bugzilla:http://www.mysite.com/bugzilla
 [end]
 <?php codeSampleEnd() ?>
 </div>
-
-<div class="Text_Normal">For bugzilla version 3 there is a plugin called "bugzilla" that calls bugzilla's native
-web service API to extract the relevant information. This should work against any bugzilla installation out of the box.
+<div class="Text_Header">Extracting information from Bugzilla</div>
+<div class="Text_Normal">If you use <A class="Text_Link" href="http://www.bugzilla.org/">Bugzilla</A> to
+track your bugs, there are two plugins already written and bundled
+with TextTest. For bugzilla version 3 and onwards there is a plugin called "bugzilla" that calls bugzilla's native
+web service API to extract the relevant information. This should work against any bugzilla installation out of the box.</div>
+<div class="Text_Normal">
 There is also a plugin called "bugzillav2" that can interface with the older versions of bugzilla that don't
 have a web service, however for this to work, you also need to install the
 &ldquo;<A class="Text_Link" href="http://search.cpan.org/~reflog/BugCli-0.2/">bugcli</A>&rdquo;
 program. This is essentially an additional open source CGI script that runs on the
-bugzilla server. From TextTest 3.11 the command line perl program 'bugcli' is no longer used, only the cli.cgi program. Note that bugcli is not supported by anyone any more: if you find problems you'll just need to upgrade Bugzilla.
+bugzilla server. Note that bugcli is not supported by anyone any more: if you find problems you'll 
+just need to upgrade Bugzilla.
 </div>
+<div class="Text_Header"><A NAME="bug_system_username"></A><A NAME="bug_system_password"></A>Extracting information from Atlassian's Jira</div>
+<div class="Text_Normal">If you use <A class="Text_Link" href="http://www.atlassian.com/software/jira/">Jira</A> to
+track your bugs, help is also at hand. Simply set the location of your Jira installation as below. Note that it has 
+been found necessary to include the port number (8443 is Jira's default) to make
+this work in some circumstances. Jira's webservice also requires a login before it will release information, so you need to also provide the settings "bug_system_username" and "bug_system_password" to TextTest in a similar way. A sample config file might therefore
+look like this:
+</div>
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+[bug_system_location]
+jira:https://jira.blah.com:8443
+
+[bug_system_username]
+jira:texttest
+
+[bug_system_password]
+jira:the_password
+[end]
+<?php codeSampleEnd() ?></div>
+<div class="Text_Normal">
+These kind of settings are often useful to put in a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>#-vanilla">site-specific config file</A>.
+</div>
+<div class="Text_Header">Extracting information from other bug systems</div>
 <div class="Text_Normal">If you use some other bug tracker with an API, 
-it should be fairly easy to copy the &ldquo;bugzilla.py&rdquo; module from the TextTest
-source and change it to provide the 'findBugInfo' method as appropriate for your
+it should be fairly easy to copy the "bugzilla.py" or "jira.py" module from the TextTest
+source (under default/knownbugs) and change it to implement the 'findBugInfo' method as appropriate for your
 bug system. By providing the name of the module in the bug
 system field when reporting the bug, it will load this module
-and extract the relevant information.</div>
-
-	
+and extract the relevant information. Naturally it's appreciated if you submit your changes
+back to the project if you do this.
+</div>
