@@ -53,16 +53,20 @@ the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=textte
 where it will be picked up and compared. You might expect the
 source to be named before the target, but many different config
 dictionary entries use these TextTest names for result files as
-keys so this one works the same for consistency. 
+keys so this one works the same for consistency. </div>
+<div class="Text_Normal">
+Note also that TextTest will only collate files that were created or
+modified by the test run. Unchanged files will not be picked up even if they
+match a source pattern.
 </div>
-<div class="Text_Normal">Standard UNIX file pattern matching (globbing) is allowed in both
-&lt;texttest_name&gt; and &lt;source_file_path&gt;. Where this
-is used in the path to the source file it simply means that the
+<div class="Text_Normal">Standard UNIX file pattern matching (globbing)
+may be used in the path to the source file. This simply means that the
 exact name of the file that will be produced may vary, but
 whatever file matches the pattern will be copied and given the
-same name each time by TextTest, provided it was created or
-modified by the test run (unchanged files will not be collected
-in this way). It's also possible to provide multiple patterns or
+same name each time by TextTest. If multiple files are found by this method, the first one
+alphabetically will be used. See below for how to collate multiple files at once.</div>
+<div class="Text_Normal">
+It's also possible to provide multiple patterns or
 names to look in for this situation, where the names of
 the produced files vary in such a way that writing a pattern isn't
 possible.</div>
@@ -74,6 +78,41 @@ disable the collection of standard output and/or standard error
 (i.e. by adding &ldquo;errors&rdquo; or &ldquo;output&rdquo; to
 the list).
 </div>
+
+<div class="Text_Header">Collecting multiple related files at the same time</div>
+<div class="Text_Normal">This can be done by using asterisks ("*") in the TextTest name (or "target pattern").
+No other types of UNIX-style file pattern matching are allowed here. All files written by the test that match the &ldquo;source
+pattern&rdquo; will be collated. E.g. suppose we have the following entry in the config file:</div>
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+[collate_file]
+dumped_data*:data*.dump
+<?php codeSampleEnd() ?>
+
+</div>
+<div class="Text_Normal">
+Suppose also that the latest run produced data1.dump and
+data2.dump. These files will then both be collated, to 
+dumped_data1.&lt;app&gt; and dumped_data2.&lt;app&gt; respectively.</div>
+<div class="Text_Normal">
+This works in general by replacing the asterisks in the target pattern with whatever was matched by the corresponding
+pattern element in the source pattern. In this case the "*" on the right hand side was matched by "1", so that string
+replaces the "*" on the left-hand side to form the new name. If patterns appear in both file names and directory
+names in the source pattern, those from the file names will be used before those in the parent directory names.</div>
+<div class="Text_Normal">
+Any left-over matches will simply be thrown away. If there are more asterisks on the left hand side than there are
+patterns on the right-hand-side, any remaining ones will be replaced by the string "WILDCARD", which is intended
+as a warning that the pattern isn't quite right.
+</div>
+<div class="Text_Normal">The restrictions on patterns and the assumptions of common stems which were present in TextTest
+versions up to 3.15 have now been removed. Pretty much any (sensible) pattern should now work. The following
+is for example a quick way to collate all files and preserve their names:
+<?php codeSampleBegin() ?>
+[collate_file]
+*:*
+<?php codeSampleEnd() ?>
+</div>
+
 <div class="Text_Header"><A NAME="collate_script"></A>
 Running an arbitrary script on the collected files</div>
 <div class="Text_Normal">If the file you refer to via "collate_file"
@@ -105,36 +144,6 @@ unnecessary popups you should either ensure it writes nothing there, or if this 
 possible, use the "suppress_stderr_text" setting which allows you to filter out particular
 messages as normal.
 </div>
-
-<div class="Text_Header">Collecting multiple related files at the same time
-(advanced)</div>
-<div class="Text_Normal">When patterns are used in the TextTest name it means that all
-previously saved files that match this &ldquo;target pattern&rdquo;
-and all files written by the test that match the &ldquo;source
-pattern&rdquo; become collated files. E.g. suppose we have the
-following entry in the config file:</div>
-<div class="Text_Normal">
-<?php codeSampleBegin() ?>
-[collate_file]
-data*:data*.dump
-<?php codeSampleEnd() ?>
-
-</div>
-<div class="Text_Normal">
-Suppose also that an earlier saved run had produced data1.&lt;app&gt;
-
-and data2.&lt;app&gt; and the latest run produced data1.dump and
-data3.dump. Then the list of collated files becomes: data1,
-data2, data3. This means that the latest run's data1 will be
-compared against the file saved in data1.&lt;app&gt;, data2 will
-be flagged as missing and data3 flagged as new result. 
-</div>
-<div class="Text_Normal">Some care is required in writing collate patterns. Completely
-general patters like &ldquo;*:* &ldquo; would cause confusion
-since anything could relate to anything, in theory. The current
-implementation assumes that files have a common stem, i.e.: it
-can handle stems like the example above, but not unrelated stems
-like &ldquo;*good* : *bad*&rdquo;</div>
 
 <div class="Text_Header"><A NAME="binary_file"></A>Binary Files</div>
 <div class="Text_Normal">Binary files should be identified as such by listing them
