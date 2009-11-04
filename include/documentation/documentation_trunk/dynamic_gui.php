@@ -60,7 +60,7 @@ To refer to the various categories, you can use any name that appears in the sta
 or you can use the keys from for
 example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A>.</div>
-<div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="TEXTTEST_FOLLOW_FILE_TITLE"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="text_diff_program_max_file_size"></A>
+<div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="TEXTTEST_FOLLOW_FILE_TITLE"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="max_file_size"></A>
 Viewing Tests</div>
 <div class="Text_Normal">When tests are selected via either of the above means, a new
 &ldquo;Test&rdquo; tab is created on the right, containing the
@@ -121,11 +121,20 @@ use the config file dictionary setting
 ensure the most informative file comes at the top. Low numbers
 imply display first. 
 </div>
-<div class="Text_Normal">To protect from very large files being compared with diff,
+<div class="Text_Normal">To protect from very large files being compared (or viewed),
+which may result in using all the machine memory,
 you can specify a maximum file size for this, using the
-&ldquo;text_diff_program_max_file_size&rdquo; config file entry.
-(Otherwise difference programs can hang forever trying to
-compare the files)</div>
+&ldquo;max_file_size&rdquo; config file entry. It defaults to "-1" which means no limit.
+For example:
+<?php codeSampleBegin() ?>
+[max_file_size]
+diff:1GB
+emacs:500MB
+<?php codeSampleEnd() ?>
+I.e. the keys are the various programs. "default" can be used as normal to set a fallback
+limit for tools not explicitly listed. If a file exceeds 
+this size for "diff", no diff report will be displayed in the Text Info tab, and if you try and view such a file
+from the GUI you will get a warning that the file is very large before it will be loaded.</div>
 <div class="Text_Header"><A NAME="unsaveable_version"></A><A NAME="save_filtered_file_stems"></A>Saving Test Results</div>
 <div class="Text_Normal">When tests fail, you can examine the differences as above,
 and sometimes you will decide that the change in behaviour is in

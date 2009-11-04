@@ -235,6 +235,8 @@ GTK issues or shell startup problems. Hopefully these can usually be fixed but o
 end up with environmental issues that cannot easily be fixed.
 </div><div class="Text_Normal">These popups can therefore be suppressed if desired. Simply
 add a config file entry "suppress_stderr_text" followed by a substring or regular expression
-that matches the line that is being repeatedly printed. All lines that match these entries
+that matches the line that is being repeatedly printed. You can now (3.16 onwards) in fact write 
+anything that you can use for <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text";?>#run_dependent_text">"run_dependent_text"</A> in this entry, which for example makes it easier to filter several
+lines at once. All lines that match these entries
 will be filtered out before displaying a dialog, and of course if no lines are left no dialog
 will be displayed.</div>
