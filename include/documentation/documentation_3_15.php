@@ -60,7 +60,7 @@
 			    	         <?php  printLI("texttest_sandbox","Managing test data","The TextTest sandbox : providing test data and avoiding global effects"); ?>
                                          <?php  printLI("run_dependent_text","Filtering the output","How to filter out run-dependent text from the output of your application, so that the compared result is deterministic"); ?>
 			    	         <?php  printLI("extra_files","Tests that write files","Description of the various ways to monitor files that are written as part of the tests"); ?>
-                                         
+                                         <?php  printLI("file_formats","File formats","Full reference for the formats of all TextTest configuration files"); ?>
 				</div>
 		      </td>
 		      <td>

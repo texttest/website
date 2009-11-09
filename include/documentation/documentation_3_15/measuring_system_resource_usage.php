@@ -40,8 +40,7 @@ provided, and if no configuration is recognised for that name
 default settings will be used. All of the performance config
 file settings that start with &ldquo;performance_&rdquo;
 (described below) are &ldquo;composite dictionary entries&rdquo;
-with the file stems as keys, it is recommended to read the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#Appendix - TextTest file formats">file
-format documentation</A> for what this means. 
+with the file stems as keys, it is recommended to read the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file format documentation</A> for what this means. 
 </div>
 
 <div class="Text_Header"><A NAME="-noperf"></A><A NAME="performance_test_machine"></A>
@@ -216,9 +215,7 @@ tests that fail in performance in this way.</div>
 </div>
 <div class="Text_Header"><A NAME="performance.PerformanceStatistics"></A><A NAME="performance.ShowMemoryUsage"></A>
 Statistical reports on System Resource Usage</div>
-<div class="Text_Normal">There are two <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#Appendix%20-%20TextTest%20file%20formats">plugin scripts</A>
-
-for this. For CPU time, use the script
+<div class="Text_Normal">There are two <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#-s">plugin scripts</A> for this. For CPU time, use the script
 &ldquo;performance.PerformanceStatistics&rdquo;. This will print
 the amount of CPU time used by each test to standard output. Use
 the option &ldquo;file=&lt;sys_resource_id&gt;&rdquo; to control

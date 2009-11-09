@@ -39,9 +39,18 @@ def getType(val, allTypes):
     for typeName in allTypes:
         typeObj = eval("types." + typeName)
         if type(val) == typeObj:
-            if typeName == "DictionaryType" and val.has_key("default"):
-                return "CompositeDictionary"
-            return typeName.replace("Type", "")
+            typeToUse = typeName.replace("Type", "")
+            if typeToUse == "Dictionary":
+                if val.has_key("default"):
+                    typeToUse = "CompositeDictionary"
+                    subType = getType(val["default"], allTypes)
+                elif len(val) > 0:
+                    subType = getType(val.values()[0], allTypes)
+                else:
+                    subType = "String"
+                return typeToUse + " (" + subType + ")"
+            else:
+                return typeToUse
 
 def getOutputValue(val):
     empty = "&lt;empty&gt;"

@@ -24,7 +24,7 @@ that session name default settings will be used. All of the
 batch mode config file settings that start with &ldquo;batch_&rdquo;
 (described below) are &ldquo;composite dictionary entries&rdquo;
 with the batch session names as keys, it is recommended to read
-the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#Appendix - TextTest file formats">file
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file
 format documentation</A> for what this means.</div>
 
 <div class="Text_Header"><A NAME="-name"></A><A NAME="batch_recipients"></A><A NAME="batch_mail_on_failure_only"></A><A NAME="batch_sender"></A><A NAME="smtp_server"></A><A NAME="max_width_text_difference"></A><A NAME="full_name"></A>

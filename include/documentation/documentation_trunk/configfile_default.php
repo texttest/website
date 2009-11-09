@@ -1,5 +1,10 @@
 <div class="Text_Main_Header">Possible entries for config files (application or personal)</div>
 <div class="Text_Header"><i>(using the default configuration)</i></div>
+<div class="Text_Normal">
+The <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file
+format documentation</A> shows you how to change these entries in your config files, and explains the meaning
+of the "Type" column in this table.
+</div><br>
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
@@ -48,7 +53,7 @@
 			<div class="Table_Text_Small">batch_collect_compulsory_version</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -62,7 +67,7 @@
 			<div class="Table_Text_Small">batch_collect_max_age_days</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">100000</div>
@@ -76,7 +81,7 @@
 			<div class="Table_Text_Small">batch_extra_version</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -90,7 +95,7 @@
 			<div class="Table_Text_Small">batch_filter_file</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -104,7 +109,7 @@
 			<div class="Table_Text_Small">batch_mail_on_failure_only</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">false</div>
@@ -118,7 +123,7 @@
 			<div class="Table_Text_Small">batch_recipients</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">$USER@localhost</div>
@@ -132,7 +137,7 @@
 			<div class="Table_Text_Small">batch_result_repository</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -146,7 +151,7 @@
 			<div class="Table_Text_Small">batch_sender</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">$USER@localhost</div>
@@ -160,7 +165,7 @@
 			<div class="Table_Text_Small">batch_timelimit</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -174,7 +179,7 @@
 			<div class="Table_Text_Small">batch_use_collection</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">false</div>
@@ -188,7 +193,7 @@
 			<div class="Table_Text_Small">batch_use_version_filtering</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">false</div>
@@ -202,7 +207,7 @@
 			<div class="Table_Text_Small">batch_version</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -244,7 +249,7 @@
 			<div class="Table_Text_Small">bug_system_location</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -258,7 +263,7 @@
 			<div class="Table_Text_Small">bug_system_password</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -272,7 +277,7 @@
 			<div class="Table_Text_Small">bug_system_username</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -300,7 +305,7 @@
 			<div class="Table_Text_Small">checkout_location</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -314,7 +319,7 @@
 			<div class="Table_Text_Small">collate_file</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">stacktrace : core* (UNIX)<BR>&lt;empty&gt; (Windows)</div>
@@ -328,7 +333,7 @@
 			<div class="Table_Text_Small">collate_script</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>stacktrace : interpretcore.py (UNIX)<BR>&lt;empty&gt; (Windows)</div>
@@ -342,7 +347,7 @@
 			<div class="Table_Text_Small">collect_traffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">asynchronous : &lt;empty&gt;<BR>default : &lt;empty&gt;</div>
@@ -356,7 +361,7 @@
 			<div class="Table_Text_Small">collect_traffic_environment</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -510,7 +515,7 @@
 			<div class="Table_Text_Small">definition_file_stems</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">builtin : environment, properties, testsuite, options, input, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
@@ -524,7 +529,7 @@
 			<div class="Table_Text_Small">diff_program</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">tkdiff</div>
@@ -566,7 +571,7 @@
 			<div class="Table_Text_Small">extra_config_directory</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -580,7 +585,7 @@
 			<div class="Table_Text_Small">extra_search_directory</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -608,7 +613,7 @@
 			<div class="Table_Text_Small">failure_display_priority</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">99</div>
@@ -622,7 +627,7 @@
 			<div class="Table_Text_Small">failure_severity</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">catalogue : 2<BR>default : 99<BR>errors : 1<BR>output : 1<BR>performance : 2<BR>traffic : 1<BR>usecase : 1</div>
@@ -650,7 +655,7 @@
 			<div class="Table_Text_Small">floating_point_tolerance</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Float)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">0.0</div>
@@ -678,7 +683,7 @@
 			<div class="Table_Text_Small">follow_program</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">xterm -bg white -T $TEXTTEST_FOLLOW_FILE_TITLE -e tail -f (UNIX)<BR>baretail (Windows)</div>
@@ -706,7 +711,7 @@
 			<div class="Table_Text_Small">gui_entry_options</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -720,7 +725,7 @@
 			<div class="Table_Text_Small">gui_entry_overrides</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;not set&gt;</div>
@@ -734,7 +739,7 @@
 			<div class="Table_Text_Small">historical_report_colours</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
@@ -748,7 +753,7 @@
 			<div class="Table_Text_Small">historical_report_location</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -762,7 +767,7 @@
 			<div class="Table_Text_Small">historical_report_page_name</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;app&gt; (capitalised)</div>
@@ -776,7 +781,7 @@
 			<div class="Table_Text_Small">historical_report_resource_page_tables</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -790,7 +795,7 @@
 			<div class="Table_Text_Small">historical_report_resource_pages</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small"></div>
@@ -804,7 +809,7 @@
 			<div class="Table_Text_Small">historical_report_subpage_cutoff</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">Last six runs : 6<BR>default : 100000</div>
@@ -818,7 +823,7 @@
 			<div class="Table_Text_Small">historical_report_subpage_weekdays</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -832,7 +837,7 @@
 			<div class="Table_Text_Small">historical_report_subpages</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">Last six runs</div>
@@ -944,7 +949,7 @@
 			<div class="Table_Text_Small">max_file_size</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">-1</div>
@@ -986,7 +991,7 @@
 			<div class="Table_Text_Small">performance_descriptor_decrease</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">cputime : faster, faster, ran faster<BR>default : &lt;empty&gt;<BR>memory : smaller, memory-, used less memory</div>
@@ -1000,7 +1005,7 @@
 			<div class="Table_Text_Small">performance_descriptor_increase</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">cputime : slower, slower, ran slower<BR>default : &lt;empty&gt;<BR>memory : larger, memory+, used more memory</div>
@@ -1014,7 +1019,7 @@
 			<div class="Table_Text_Small">performance_ignore_improvements</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">false</div>
@@ -1028,7 +1033,7 @@
 			<div class="Table_Text_Small">performance_logfile</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1042,7 +1047,7 @@
 			<div class="Table_Text_Small">performance_logfile_extractor</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1056,7 +1061,7 @@
 			<div class="Table_Text_Small">performance_test_machine</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">*mem* : any<BR>default : &lt;empty&gt;</div>
@@ -1070,7 +1075,7 @@
 			<div class="Table_Text_Small">performance_test_minimum</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Float)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">0.0</div>
@@ -1084,7 +1089,7 @@
 			<div class="Table_Text_Small">performance_unit</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">*mem* : MB<BR>default : seconds</div>
@@ -1098,7 +1103,7 @@
 			<div class="Table_Text_Small">performance_use_normalised_%</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">true</div>
@@ -1112,7 +1117,7 @@
 			<div class="Table_Text_Small">performance_variation_%</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Float)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">10.0</div>
@@ -1126,7 +1131,7 @@
 			<div class="Table_Text_Small">performance_variation_serious_%</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Float)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">0.0</div>
@@ -1140,7 +1145,7 @@
 			<div class="Table_Text_Small">relative_float_tolerance</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Float)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">0.0</div>
@@ -1168,7 +1173,7 @@
 			<div class="Table_Text_Small">remote_program_options</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -azLp<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
@@ -1196,7 +1201,7 @@
 			<div class="Table_Text_Small">run_dependent_text</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1280,7 +1285,7 @@
 			<div class="Table_Text_Small">test_data_environment</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1294,7 +1299,7 @@
 			<div class="Table_Text_Small">test_data_ignore</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1308,7 +1313,7 @@
 			<div class="Table_Text_Small">test_data_properties</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1322,7 +1327,7 @@
 			<div class="Table_Text_Small">test_data_searchpath</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1350,7 +1355,7 @@
 			<div class="Table_Text_Small">testoverview_colours</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
@@ -1378,7 +1383,7 @@
 			<div class="Table_Text_Small">text_diff_program_filters</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>diff : ^<, ^></div>
@@ -1392,7 +1397,7 @@
 			<div class="Table_Text_Small">text_diff_program_max_file_size</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">-1</div>
@@ -1406,7 +1411,7 @@
 			<div class="Table_Text_Small">unordered_text</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -1462,7 +1467,7 @@
 			<div class="Table_Text_Small">use_normalised_percentage_change</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">true</div>
@@ -1476,7 +1481,7 @@
 			<div class="Table_Text_Small">version_priority</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">99</div>
@@ -1490,7 +1495,7 @@
 			<div class="Table_Text_Small">view_program</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">emacs (UNIX)<BR>notepad (Windows)</div>

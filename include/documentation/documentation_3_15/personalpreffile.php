@@ -1,5 +1,10 @@
 <div class="Text_Main_Header">List of possible entries for personal config files:</div>
 <div class="Text_Header"><i>(these will be rejected if entered into application config files)</i></div>
+<div class="Text_Normal">
+The <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file
+format documentation</A> shows you how to change these entries in your config files, and explains the meaning
+of the "Type" column in this table.
+</div><br>
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
@@ -34,7 +39,7 @@
 			<div class="Table_Text_Small">file_colours</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">default : red<BR>failure : red<BR>marked : orange<BR>not_started : white<BR>pending : white<BR>running : yellow<BR>static : grey90<BR>success : green</div>
@@ -48,7 +53,7 @@
 			<div class="Table_Text_Small">gui_accelerators</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">add_test : &lt;control&gt;n<BR>copy : &lt;control&gt;c<BR>cut : &lt;control&gt;x<BR>enter_failure_information : &lt;control&gt;i<BR>filter : &lt;control&gt;f<BR>kill : &lt;control&gt;Delete<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>move_up : &lt;control&gt;Page_Up<BR>paste : &lt;control&gt;v<BR>quit : &lt;control&gt;q<BR>recompute_status : F5<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>record_use-case : F9<BR>refresh : F5<BR>remove : &lt;control&gt;Delete<BR>rename : &lt;control&gt;m<BR>rerun : &lt;control&gt;r<BR>reset : &lt;control&gt;e<BR>run : &lt;control&gt;r<BR>save : &lt;control&gt;s<BR>save_as : &lt;control&gt;&lt;alt&gt;s<BR>save_selection : &lt;control&gt;d<BR>select : &lt;control&gt;s<BR>unmark : &lt;control&gt;&lt;shift&gt;u</div>
@@ -90,7 +95,7 @@
 			<div class="Table_Text_Small">gui_entry_completions</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -104,7 +109,7 @@
 			<div class="Table_Text_Small">hide_gui_element</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">shortcut_bar : 0<BR>status_bar : 0<BR>toolbar : 0</div>
@@ -132,7 +137,7 @@
 			<div class="Table_Text_Small">query_kill_processes</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>static : Dynamic GUI</div>
@@ -174,7 +179,7 @@
 			<div class="Table_Text_Small">test_colours</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary</div>
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">default : red<BR>failure : red<BR>marked : orange<BR>not_started : white<BR>pending : white<BR>running : yellow<BR>static : grey90<BR>success : green</div>
@@ -188,7 +193,7 @@
 			<div class="Table_Text_Small">window_size</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary</div>
+			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">height_pixels : &lt;not set&gt;<BR>height_screen : 0.833333333333<BR>horizontal_separator_position : 0.46<BR>maximize : 0<BR>vertical_separator_position : 0.5<BR>width_pixels : &lt;not set&gt;<BR>width_screen : 0.6</div>
