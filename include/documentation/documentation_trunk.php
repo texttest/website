@@ -54,6 +54,7 @@
                                          <br><br><div class="Table_Text_Header">Tutorials</div>
 					 <?php  printLI("getting_started","Getting Started","A walk-through of how to test a hello-world program with TextTest"); ?>
 					 <?php  printLI("gui_tests","Testing a GUI","How to test a simple GUI. Assumes you have read the simpler tutorial above"); ?>
+                                         <?php  printLI("course_material","Course material","More advanced exercises than Hello World as used on TextTest courses."); ?>
  				         <?php  printLI("kataminesweeper","Screencast","Solving Kata Minesweeper with test-driven development using TextTest"); ?>
                                          <br><br><div class="Table_Text_Header">Basic Setup</div>
                                          <?php  printLI("about_testsuites","Test Suite Guide","The files and directories that make up a TextTest suite"); ?>

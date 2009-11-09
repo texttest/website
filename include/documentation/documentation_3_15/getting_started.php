@@ -3,8 +3,7 @@
 write your first test. It assumes you have read and followed the
 instructions in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=install_texttest"; ?>">installation guide</A>.
 </div>
-<div class="Text_Normal">We will use a 'hello world' program as an example. Text in
-italics is background information only.</div>
+<div class="Text_Normal">We will use a 'hello world' program as an example. Note that this tutorial is also Exercise 1 in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=course_material"; ?>">course material</A> below, if you actually plan to do this for real you might find it easier within that context. Text in italics is background information only.</div>
 <div class="Text_Header">Creating an Application</div>
 
 <div class="Text_Normal">For each executable program to be tested, a 'TextTest
@@ -117,6 +116,9 @@ test run (which we would expect to go green immediately).</div>
 <div class="Text_Normal">So there it is: your first working, repeatable test for
 &ldquo;hello world&rdquo;. Now for testing a real program: what
 do I still need to know?</div>
+<div class="Text_Normal">
+One option is of course to work through the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=course_material"; ?>">course material</A> which gives you a series of increasingly complicated programs to try and test. Failing that, a potted summary of the most basic TextTest features follows.
+</div>
 <div class="Text_Normal">One of the most immediate challenges is often that real
 programs write output that changes from run to run, such as
 temporary file names, process IDs, times etc. TextTest allows
