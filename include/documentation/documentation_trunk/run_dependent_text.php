@@ -95,14 +95,6 @@ specific to this entry. This is defined as follows:
 	can also specify to remove every word after a certain number,
 	for example {WORD 4+} will remove word 4 and the rest of the
 	line after this.</div>
-
-	<div class="Text_Normal"><li><SPAN STYLE="text-decoration: none"><b><I>&lt;pattern1&gt;{-&gt;}&lt;pattern2&gt;</I></b></SPAN>
-	- On encountering a match with &lt;pattern1&gt;, all lines are
-	filtered out until &lt;pattern2&gt; is matched. Neither the
-	line matching &lt;pattern1&gt; nor the line matching &lt;pattern2&gt;
-
-	are themselves filtered. 
-	</div>
 	<div class="Text_Normal"><li><SPAN STYLE="text-decoration: none"><b><I>&lt;pattern&gt;{REPLACE
 	&lt;text&gt;}</I></b></SPAN>- On encountering a match with the
 	pattern, instead of removing the whole line, replace just the
@@ -112,6 +104,18 @@ specific to this entry. This is defined as follows:
 	matched. If &lt;pattern&gt; is a regular expression, it can
 	include groups (indicated by parantheses) which can then be
 	referred to in the REPLACE text as \1, \2 etc.</div>
+
+	<div class="Text_Normal"><li><b><I>&lt;pattern1&gt;{-&gt;}&lt;pattern2&gt;</I></b>
+	- On encountering a match with &lt;pattern1&gt;, all lines are
+	filtered out until &lt;pattern2&gt; is matched. Neither the
+	start line matching &lt;pattern1&gt; nor the end line matching &lt;pattern2&gt;
+	are themselves filtered (but see below). 
+	</div><div class="Text_Normal"><li><b><I>&lt;pattern1&gt;{[-&gt;]}&lt;pattern2&gt;</I></b>
+	- As above except also filter away both the start and end lines. 
+	</div><div class="Text_Normal"><li><b><I>&lt;pattern1&gt;{[-&gt;}&lt;pattern2&gt;</I></b>
+	- As above except also filter away just the start line. 
+	</div><div class="Text_Normal"><li><b><I>&lt;pattern1&gt;{-&gt;]}&lt;pattern2&gt;</I></b>
+	- As above except also filter away just the end line.</div>
 	<div class="Text_Normal"><li><b><I>{INTERNAL writedir}</I></b> &ndash; This is a
 	special pattern that will match TextTest's own temporary paths
 	for the test. Sometimes your application will write out
