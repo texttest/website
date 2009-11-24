@@ -24,15 +24,7 @@
   <td>
    <div class="Text_Main_Header">Documentation for <?php echo $texttest_version ?></div>
 
-   
-
-   <div style="display:none" id="ControlTable">
-   <a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Show)</a>
-   </div>
    <div id="DocTable">
-   <div>  
-   <!--<a class="Text_Link" onclick="openClose('ControlTable');openClose('DocTable')">(Hide)</a>-->
-   </div>
    <div class="Text_Normal">
    <table border=0 bgcolor="#000000" cellspacing=1>
       <tr valign=top>
@@ -40,7 +32,7 @@
 	
           <table border=0 class="documentation_table">
             <tr>
-              <td width=160 ><div class="Table_Text_Header">General</div></td>
+              <td width=160><div class="Table_Text_Header">General</div></td>
               <td width=220><div class="Table_Text_Header">Interfaces</div></td>
               <td width=250><div class="Table_Text_Header">Configuration Reference</div></td>
             </tr>
