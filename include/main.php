@@ -18,16 +18,14 @@
    <div class="Text_Header">Site index</div>
    <table class="index">
      <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=about" class="Text_Link">About</a></td><td><div class="Text_Normal">A short introduction to TextTest and its background</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=about" class="Text_Link">About</a></td><td><div class="Text_Normal">Introducing TextTest and Acceptance Testing</div></td>
       </tr>
       <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=concepts" class="Text_Link">Concepts</a></td><td><div class="Text_Normal">More about Acceptance Testing in general</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>" class="Text_Link">Documentation</a></td><td><div class="Text_Normal">TextTest Tutorials and Reference</div></td>
+
       </tr>
-
-      <tr valign=top>
-
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>" class="Text_Link">Documentation</a></td><td><div class="Text_Normal">Tutorials, User Manual and Configuration Reference Manual</div></td>
-
+     <tr valign=top>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=ui_testing" class="Text_Link">GUIs/xUseCase</a></td><td><div class="Text_Normal">Testing GUIs with TextTest and the xUseCase tools</div></td>
       </tr>
       <tr valign=top>
        <td width=50><div class="Text_Normal" ><a href="index.php?page=publications"  class="Text_Link">Publications</a></td><td><div class="Text_Normal">Conference publications, presentations and workshop summaries</div></td>

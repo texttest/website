@@ -67,7 +67,7 @@ if (isset ($argv))
 								elseif ($_GET["page"]=="siteinfo")             include_file('include/siteinfo.php');
 								elseif ($_GET["page"]=="sitemap")              include_file('include/sitemap.php');
 								elseif ($_GET["page"]=="about")                include_file('include/about.php');
-								elseif ($_GET["page"]=="concepts")             include     ('include/concepts.php');
+								elseif ($_GET["page"]=="ui_testing")           include_file('include/ui_testing.php');
 								elseif ($_GET["page"]=="documentation")        include_file('include/documentation.php');
 								else                                           include_404_page();
 							}
