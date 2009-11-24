@@ -14,13 +14,13 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">TEXTTEST_DYNAMIC_GUI_PYARGS</div>
+			<div class="Table_Text_Small">TEXTTEST_DYNAMIC_GUI_INTERPRETER</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#TEXTTEST_DYNAMIC_GUI_PYARGS">Additional python arguments for dynamic GUI : mostly useful for coverage</A></div>
+			<div class="Table_Text_Small">Alternative interpreter for the dynamic GUI : mostly useful for coverage / testing</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
