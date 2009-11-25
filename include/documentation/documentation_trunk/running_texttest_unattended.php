@@ -120,8 +120,8 @@ page will be generated.
 </div>
 <div class="Text_Normal">The easiest way to get a handle on what this looks like is to
 look at this <A class="Text_Link" target="_blank" href="include/documentation/<?php echo $version; ?>/htmlreport_example/test_normal.html">small example</A>. Each day's results correspond to a column, while each test has a row. The
-results can be explored by clicking around. For a real such site in active use,
-check out the <a class="Text_Link" href="http://www.texttest.org/nightjob/index.html">nightly runs of TextTest's self tests</A> page, which is updated every day with the latest status.</div>
+results can be explored by clicking around. For a real such page in active use,
+check out the <a href="index.php?page=nightjob" class="Text_Link">nightly runs of TextTest's self tests</A> page, which is updated every day with the latest status.</div>
 <div class="Text_Normal">The colours in the site are also configurable: use the config
 file dictionary setting &ldquo;historical_report_colours&rdquo;. To
 see how to set this, look at the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config

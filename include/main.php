@@ -31,9 +31,11 @@
        <td width=50><div class="Text_Normal" ><a href="index.php?page=publications"  class="Text_Link">Publications</a></td><td><div class="Text_Normal">Conference publications, presentations and workshop summaries</div></td>
       </tr>
       <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=download" class="Text_Link">Download</a></td><td><div class="Text_Normal">Download a TextTest release or the latest version from source control</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=download" class="Text_Link">Download</a></td><td><div class="Text_Normal">Download a TextTest release or the latest source</div></td>
+      </tr>
+      <tr valign=top>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=nightjob" class="Text_Link">Nightjob</a></td><td><div class="Text_Normal">Live test results and coverage for the self-tests</div></td>
      </tr>
-
    </table>
    </div>
   </td>

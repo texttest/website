@@ -42,36 +42,35 @@ if (isset ($argv))
          <tr>
            <td bgcolor="#FFFFFF">
               <?php
-              	
-              		
-                  if (!(isset($_GET["page"])))            		     include 'include/main.php';
-  						else
-  						{
-  							$pageFound = false;
-                  	foreach ($all_releases as $release)
-                  	{
-                  		$rel = convertToDocFormat($release);
-                  		if ($rel == $_GET["page"])                  
-                  		{
-                  			include 'include/documentation/'.$rel.'.php';
-                  			$pageFound = true;
-                  		}
-                  	}
-                  	if (! $pageFound)
-                  	{
-								if ($_GET["page"]=="main")                     include_file ('include/main.php');
-								elseif ($_GET["page"]=="news")                 include_file('include/news.php');
-								elseif ($_GET["page"]=="download")             include_file('include/download.php');
-								elseif ($_GET["page"]=="contact")              include_file('include/contact.php');
-								elseif ($_GET["page"]=="publications")         include_file('include/publications.php');
-								elseif ($_GET["page"]=="siteinfo")             include_file('include/siteinfo.php');
-								elseif ($_GET["page"]=="sitemap")              include_file('include/sitemap.php');
-								elseif ($_GET["page"]=="about")                include_file('include/about.php');
-								elseif ($_GET["page"]=="ui_testing")           include_file('include/ui_testing.php');
-								elseif ($_GET["page"]=="documentation")        include_file('include/documentation.php');
-								else                                           include_404_page();
-							}
-						}                                           
+                 if (!(isset($_GET["page"]))) include 'include/main.php';
+  		 else
+  		 {
+  		   $pageFound = false;
+                   foreach ($all_releases as $release)
+                   { 
+                     $rel = convertToDocFormat($release);
+                     if ($rel == $_GET["page"])                  
+                     {
+                  	include 'include/documentation/'.$rel.'.php';
+                        $pageFound = true;
+                     }
+                   }
+                   if (! $pageFound)
+                   {
+		     if ($_GET["page"]=="main")  include_file ('include/main.php');
+		     elseif ($_GET["page"]=="news")  include_file('include/news.php');
+		     elseif ($_GET["page"]=="download")  include_file('include/download.php');
+		     elseif ($_GET["page"]=="contact")              include_file('include/contact.php');
+		     elseif ($_GET["page"]=="publications")         include_file('include/publications.php');
+		     elseif ($_GET["page"]=="siteinfo")             include_file('include/siteinfo.php');
+		     elseif ($_GET["page"]=="sitemap")              include_file('include/sitemap.php');
+		     elseif ($_GET["page"]=="about")                include_file('include/about.php');
+		     elseif ($_GET["page"]=="ui_testing")           include_file('include/ui_testing.php');
+                     elseif ($_GET["page"]=="nightjob")             include_file('nightjob/index.html');
+		     elseif ($_GET["page"]=="documentation")        include_file('include/documentation.php');
+		     else                                           include_404_page();
+		   }
+		 }                                           
 	      ?>
 	         <br><br>
 	         </td>

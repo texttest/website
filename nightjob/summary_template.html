@@ -1,40 +1,71 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<html>
-  <title>Texttest Batch Result Summary</title>
-  <style type="text/css">
+<style type="text/css">
       <!--
-      body,td,th {
-      color: #000000;
-      font-size: 11px;
-      font-family: Helvetica;
-      }
-      h1 {
-      font-family: Helvetica;
-      margin-bottom: 0;
-      margin-top: 10;
-      padding-bottom: 0;
-      padding-top: 0;
-      bottom: 0%;
-      }
-      -->
-  </style>
+         table.version_link h3 {
+         font-weight: bold;
+         margin-bottom: 0;
+         margin-top: 0;
+         padding-bottom: 0;
+         padding-top: 0;
+         bottom: 0%;
+         }
+         table.version_link {
+         border-width: 0;
+         }
+        -->
+    </style>
 
-  <!--App order=TextTest-->
-  <!--Version order=unix,windows-->
-  <body>
-    <h1 align="center">Test results</h1>
-      <center>
-	<br>
-        <table border="1" frame="void">
-          <tr>
-	    <td valign="top">
-	      <table border="0">
+<table class="Table_Normal">
+  <tr>
+    <td>
+      <div class="Text_Main_Header">Nightjob results for TextTest and PyUseCase</div>
+      <div class="Text_Normal">
+      <table border="1" frame="void">
+        <tr>
+          <td>
+            <!--App order=TextTest-->
+            <!--Version order=unix,windows-->
+            <table border="0">
               <!--Insert table here-->
-              </table>
-            </td>
-          </tr>
-        </table>
-	<br>
-      </center>
-    </body>
-</html>
+            </table>
+          </td>
+        </tr>
+      </table>
+      
+      </div>
+      <div class="Text_Normal">
+        The above table shows the current status of the self-tests. Currently all the TextTest tests are run every night using GTK+ 2.12 on Red Hat Enterprise Linux 5 and also on Windows XP. An additional run of the basic GUI tests is made using GTK+ 2.10 on RHEL5, which is the default version you get with RHEL5.
+      </div>
+      <div class="Text_Normal"> 
+        Naturally we make every effort to ensure that these are always green, but there are currently a small number that contain race conditions and fail about one time in ten. By following the links above, you can check in the nightjob history to see how frequently a test has failed in the past and hence how indeterministic it is.  
+      </div>
+      <div class="Text_Main_Header">Coverage status</div> 
+      <div class="Text_Normal"> 
+      <table border="1" frame="void">
+        <tr>
+          <td>
+            <!--App order=TextTest-->
+            <!--Version order=unix,windows-->
+            <table border="0">
+              <!--Insert table here-->
+              <tr>
+                <td><h3>TextTest</h3></td>
+                <td><table border="1" class="version_link"><tr>
+                      <td><h3><a href="coverage/index.html">Public Tests</a></h3></td>
+                      <td bgcolor="#CEEFBD"><h3>98.0%</h3></td>
+                </tr></table></td>
+                <td><table border="1" class="version_link"><tr>
+                      <td><h3><a href="coverage_with_jeppesen_tests/index.html">+Private Tests</a></h3></td>
+                      <td bgcolor="#CEEFBD"><h3>98.5%</h3></td>
+                </tr></table></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      </div> 
+      <div class="Text_Normal">
+        Additionally, we also measure code coverage on these tests. As well as the public tests for TextTest whose results are listed there are about 200 private tests that make use of domain-specific configuration modules, and we also measure coverage of the core modules with these tests included, which is of course generally a bit higher. This allows you to tell the difference between untested code and code which can't be tested outside Jeppesen. (Jeppesen fund development of TextTest if you hadn't gathered...)
+      </div>
+    </td>
+  </tr>
+</table>
