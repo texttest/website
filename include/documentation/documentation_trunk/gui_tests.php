@@ -6,7 +6,7 @@ It assumes you have read and followed the instructions in the
 helpful to read that first.</div>
 
 <div class="Text_Normal">We will use a simple PyGTK GUI as an
-example. This comes with the course material so if you want to follow this it's 
+example. This is also Exercise 4 in the course material so if you want to follow this it's 
 suggested you download it from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>. 
 Unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory. Much
 of what is said here should apply to any use case recorder,

@@ -3,37 +3,41 @@
 write your first test. It assumes you have read and followed the
 instructions in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=install_texttest"; ?>">installation guide</A>.
 </div>
-<div class="Text_Normal">We will use a 'hello world' program as an example. Note that this tutorial is also Exercise 1 in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=course_material"; ?>">course material</A> below, if you actually plan to do this for real you might find it easier within that context. Text in italics is background information only.</div>
+<div class="Text_Normal">We will use a 'hello world' program as an example. Note that this tutorial is also Exercise 1 in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=course_material"; ?>">course material</A>, 
+so if you want to work through it yourself it's suggested you download it from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>, unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory.
+</div>
+<div class="Text_Normal">
+Text in italics is background information only.</div>
 <div class="Text_Header">Creating an Application</div>
 
 <div class="Text_Normal">For each executable program to be tested, a 'TextTest
 application' needs to be created to tell it what to run. To do this for the first time,
 just run texttest.py, providing the --new option if there are already tests existing
-in the place you've designated as TEXTTEST_HOME (for example if it's pointing to the tests
-directory in the download)
+in the place you've designated as TEXTTEST_HOME. If it's set up as above you can just run
+"texttest.py".
 </div>
 <div class="Text_Normal">
 A dialog will then come up where you can tell it about your application. You need to pick
 a full name for use in reports, and also a short file extension which will be
 used by TextTest for all files relevant to that application. It can be useful to select
 a subdirectory (if you write a non-existent name it will be created) to aid with organising
-tests for different applications in the future. Finally, of course, browse your file system and identify
-the executable program that will be tested (your hello world program).</div>
+tests for different applications in the future. In the case of the course material it's useful
+to do this so that the tests end up with the program we're testing. Finally, of course, 
+browse your file system and identify the executable program that will be tested (your hello world program),
+which is under "ex1_hello" for the course material. The dialog should look like this just before
+you OK it:</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/createapp.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+</div>
 <div class="Text_Normal"><I>All information about an application and how to test it
 will be placed in the 'config file' which TextTest has just created for us behind the scenes. For the
 most part we will need to do further configuration by editing it in a text editor, which can be done
 from the "Config" tab on the right hand side. In future, you can pick out this application by running
-texttest.py -a &lt;extension&gt;, where &lt;extension&gt is the one you choose above.
+texttest.py -a &lt;extension&gt;, where &lt;extension&gt is the one you choose above ("hello") in my case.
 </I></div>
-<div class="Text_Normal">You now have an application with no tests. You should see something like
-this. (I chose the extension "hello" here and the rather cryptic HELLO as full name)</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/notests.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
-</div>
-<div class="Text_Normal">This is the static, or test management GUI. On the left you
-see a tree view of all tests and test suites that there are. The
+<div class="Text_Normal">You now have an application with no tests. This is the static, or test management 
+GUI. On the left you see a tree view of all tests and test suites that there are. The
 single line shown is the 'root test suite for the application',
 created by default, currently containing no tests.</div>
-
 <div class="Text_Normal">On the right, we have a couple of tabs. The one shown has
 various options for selecting tests: not very useful when we
 don't have any. The other &ldquo;Config&rdquo; will allow us to
@@ -45,12 +49,16 @@ This brings up a &ldquo;Test&rdquo; tab on the right, which in
 turn shows us the files contained in the viewed test/suite
 (currently suite). There is just one, &ldquo;testsuite.hello&rdquo;,
 which defines which tests are contained in the suite. We can then
-bring up the popup menu by right clicking the same line, and select "Add Test",
-which brings up a dialog for adding a new test. We enter a test name and a
+bring up the popup menu by right clicking the same line, which should look
+like this:</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/createtest.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+</div>
+<div class="Text_Normal">
+We then select "Add Test", which brings up a dialog for adding a new test. We enter a test name and a
 brief description of what the test is for, and click the 'OK' button at the bottom. 
 This creates a test and automatically views it:</div>
 
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/emptytest.JPG" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/emptytest.png" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">We now have an 'empty test' under the root test suite (called
 'Basic' above). As can be seen, there are no 'standard files'
@@ -74,12 +82,12 @@ more details.</I></div>
 <div class="Text_Header">Running a Test</div>
 <div class="Text_Normal"> We click the &ldquo;Run&rdquo;
 button on the toolbar to run the selected tests. This starts the
-dynamic GUI in a new window, which performs test runs. The test
+"dynamic GUI" in a new window, which performs test runs. The test
 fails, because no standard results are yet defined. On the left
 we see a tree view similar to the one above, on the right a
 summary of which files are different in the test.
 </div>
-<div class="Text_Normal"><IMG src="<?php print $basePath; ?>images/newfiles.JPG"><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><IMG src="<?php print $basePath; ?>images/newfiles.png"><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">It collected the standard error and standard output of the
 process into 'errors.hello' and 'output.hello' files. These can
@@ -97,16 +105,16 @@ variable TEXTTEST_TMP. When the test is saved, these files are
 copied to the test directory created above. For more details,
 see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">Guide to TextTest's Temporary
 Directory</A>.</I></div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/saved.jpg" NAME="Graphic5" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/saved.png" NAME="Graphic5" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">Now the test goes green and the produced files are saved as
 the standard versions. By default, TextTest assumes that
 succeeded and saved tests are not interesting and hence
 collapses the suite containing it and removes the Test tab
-again, returning to the selection view we had before. We can now
+again, showing instead the Status tab which summarises the status of all the tests. We can now
 exit the dynamic GUI, pressing 'Quit'. When we look in the
 static GUI, which has been there all along, we now see this.</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/newtest.JPG" NAME="Graphic6" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/newtest.png" NAME="Graphic6" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">The files produced by the dynamic GUI run have been saved as
 'Standard Files' and will now be used as comparison in the next
