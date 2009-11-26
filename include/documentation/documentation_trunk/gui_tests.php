@@ -2,48 +2,37 @@
 
 <div class="Text_Normal">This is a step-by-step guide to testing a GUI with texttest.
 It assumes you have read and followed the instructions in the
-<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=install_texttest"; ?>">installation guide</A>. There is a fair
-amount of overlap with the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">document
-for getting started testing a non-GUI program</A>, so it can be
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=install_texttest"; ?>">installation guide</A>. There is a fair amount of overlap with the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">document for getting started testing a non-GUI program</A>, so it can be
 helpful to read that first.</div>
 
-<div class="Text_Normal">We will use a simple PyGTK 'video store' program as an
-example &ndash; which comes with the download of PyUseCase. Most
+<div class="Text_Normal">We will use a simple PyGTK GUI as an
+example. This comes with the course material so if you want to follow this it's 
+suggested you download it from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>. 
+Unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory. Much
 of what is said here should apply to any use case recorder,
-though. Text in italics is background information only.</div>
-<div class="Text_Header">Getting a Use Case Recorder working</div>
-<div class="Text_Normal">The first step is to get your program using the <A class="Text_Link" href="index.php?page=concepts&n=xusecase">use
-case recorder </A>of your choice, at least enough to be able to
-create some simple scripts. If you have a PyGTK GUI, use
-<A class="Text_Link" href="index.php?page=concepts&n=pyusecase">PyUseCase</A>. If you
-have a Java Swing GUI, use <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>.
-If you are using Microsoft's .net, use <A class="Text_Link" href="http://nusecase.sourceforge.net/">NUseCase</A>.
-If you use another GUI toolkit &ndash; write your own use case
-recorder and tell me about it! 
+though. Text in italics is background information only. Naturally you need to install PyUseCase 3.x
+or newer from <A class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge</A> also
+before this will work.
+</div>
+<div class="Text_Normal"><I>For Java GUIs, look at <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>. If you are using Microsoft's .net, use <A class="Text_Link" href="http://nusecase.sourceforge.net/">NUseCase</A>.
+If you use another GUI toolkit &ndash; write your own use case recorder and tell me about it!</I>
 </div>
 
 <div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A><A NAME="USECASE_RECORD_SCRIPT"></A><A NAME="USECASE_REPLAY_SCRIPT"></A>
 Creating an Application</div>
-<div class="Text_Normal">First, create an initial application as described in
-the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello
-world&rdquo;</A>. The main difference is that you should check the box for enabling GUI-testing operations!
+<div class="Text_Normal">First, create an initial application by running "texttest.py --new" as described in
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello world&rdquo;</A>. The main difference is that you should select "PyUseCase 3.x" from the GUI testing options! The application creation dialog should look something like this just before you press "OK":
 </div>
-<div class="Text_Normal">If you are using <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>,
-you also need to set 'use_case_recorder:jusecase' in your config file. This is
-because JUseCase uses Java Properties files rather than
-environment variables for its interface, so TextTest needs to
-know to generate these. </div>
-<div class="Text_Normal">
-Setting 'use_case_recorder:none' is a useful trick if you want to enable the virtual display 
-functionality described here but don't want to use a use-case recorder.</div>
-<div class="Text_Normal"><I>(If 'use_case_recorder' isn't set, TextTest will set the environment
-variables USECASE_RECORD_SCRIPT and USECASE_REPLAY_SCRIPT to the relevant locations, which are
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/createguiapp.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+</div>
+<div class="Text_Normal"><I>
+The GUI-testing options drop-down list tries to cover all the bases, and will set the "use_case_record_mode" and "use_case_recorder" config file settings in your config file as necessary. If you choose "Other embedded use-case recorder", TextTest will set the environment variables USECASE_RECORD_SCRIPT and USECASE_REPLAY_SCRIPT to the relevant locations, which are
 the variables PyUseCase reads from when deciding the relevant files to read and write. 
 Other GUI simulation tools can of course easily be wrapped by a script that would read
 the above variables and translate them into the format the simulation tool
-expects.)</I>
+expects.</I>
 </div>
-<div class="Text_Header">Creating a Test</div>
+<div class="Text_Header">Creating and Recording a Test</div>
 
 <div class="Text_Normal">First, we create an &ldquo;empty test&rdquo; as for <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">&ldquo;hello
 world&rdquo;</A>.</div>
@@ -52,24 +41,33 @@ not sufficient to define a GUI test. We also need to define the
 use case that will be performed with the GUI. To do this, we go
 to the &ldquo;Running&rdquo; tab and then the &ldquo;Recording&rdquo; 
 subtab, and then click the &ldquo;Record Use-Case&rdquo; button
-(or we just press F9 and don't bother with the tabs, as we aren't changing
-any settings). This will start an instance of the dynamic GUI, as with running tests. 
-This in turn fires up our Video Store GUI in record mode. We simply
-perform the actions that constitute the use case, and then close
-this GUI. 
+(or we just choose it from the Actions menu or press "F9" and don't bother with the tabs, 
+as we aren't changing any settings). This will start an instance of the dynamic GUI, as with running tests. 
+This in turn fires up our PyGTK bug system GUI with PyUseCase in record mode. We simply
+perform the actions that constitute the use case (in this case select some rows, click some of
+the toggle buttons at the bottom and sort some columns), and then close
+this GUI.</div>
+<div class="Text_Normal">
+When we close the GUI, PyUseCase informs us that we have performed some actions it does not yet have names for. So it produces a dialog for us to fill in with appropriate names. We try to decipher which rows correspond to which things we did based on the widget types, identifiers and "signal names" that it gives us. This information then goes into our "UI map file", while the names themselves form the "usecase" on which the test is based. For example, we might choose some names something like this.<I>
+(If you leave any item blank, PyUseCase concludes that you are not interested in this event and will not record it in the future)</I>
 </div>
-
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/pyusecase_dialog.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+</div>
+<div class="Text_Normal"></div>
 <div class="Text_Normal">The dynamic GUI will then turn the
 test red and highlight that it has collected new files for us.
 By clicking this red-line in the test view we get the view
 below. The contents of the new files can be seen in textual
-format in the &ldquo;Text Info&rdquo; window, or viewed by
-double-clicking them if they are too large.</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guidyn.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+format in the &ldquo;Text Info&rdquo; window by single-clicking them (as shown), 
+or viewed by double-clicking them if they are too large. The "usecase.bugs" file provides
+a description of what we did, while the "output.bugs" file provides PyUseCase's
+auto-generated description of what the GUI looked like while we were doing it.
+</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guitest.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">If we made a mistake recording, we should simply quit the
-dynamic GUI at this point and repeat the procedure. If we are
-happy with the recording we should save the results: press the
+dynamic GUI at this point and repeat the procedure (the names we entered for PyUseCase
+will still be kept). If we are happy with the recording we should save the results: press the
 save button with the test selected.</div>
 <div class="Text_Normal">Unless we disabled this from the
 &ldquo;Record&rdquo; dialog at the start, TextTest will then
@@ -84,13 +82,24 @@ Messages in the status bar at the very bottom of the static GUI
 keep you posted as to progress, anyway. When all is done, it
 should look like this:</div>
 
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guitest.JPG" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guitest_static.png" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
-<div class="Text_Normal">Note that the definition file is
+<div class="Text_Normal">Note that the "definition file" is
 now the usecase file recorded by PyUseCase. Naturally there
 could be command line options as well if desired. This is much
 the same as the final result of the &ldquo;hello world&rdquo;
 set up.</div>
+<div class="Text_Normal">
+If we visit the "Config" tab to the right we will now found both
+a TextTest config file and a PyUseCase config file "ui_map.conf",
+under "pyusecase_files". If you fire this up by double-clicking it,
+you can see that it essentially contains the information you entered
+before. When the GUI changes we will need to edit this file, but hopefully
+we can minimise changes in the tests themselves.</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/uimap.png" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+</div><div class="Text_Normal"><I>
+PyUseCase identifies widgets by name, title, label and type, in that order. Obviously here we are identfiying the main tree view by its type alone, which will break down as soon as the UI contains another one. Likewise, the title of our window might vary from run to run. For robustness it's therefore often necessary to assign widget names in your code, at which point this file should be updated with "Name=Bug tree view" instead of "Type=TreeView".</I>
+</div>
 <div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="USECASE_REPLAY_DELAY"></A><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_number"></A>
 Running a Test</div>
 <div class="Text_Normal">Clearly, there is no need to run it once in order to collect
@@ -137,6 +146,6 @@ run&rdquo; tab in the static GUI. This will force the GUI to pop
 up for this run, whatever is set in the virtual_display_machine
 entry.</div>
 <div class="Text_Normal">In summary, our config file should look something like this:</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guiconfig.JPG" NAME="Graphic4" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guiconfig.png" NAME="Graphic4" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 
 </div>

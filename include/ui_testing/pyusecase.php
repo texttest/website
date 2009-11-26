@@ -1,5 +1,4 @@
-<div class="Text_Header">Using the PyUseCase library</div>
-
+<div class="Text_Header">Recording a basic usecase</div>
 <div class="Text_Normal">To use PyUseCase for use case recording and simulation you
 need to do the following: add use-case command names as extra
 arguments everywhere you connect to widget signals for which

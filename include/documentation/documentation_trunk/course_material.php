@@ -50,7 +50,7 @@ view_program:gedit
         <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise4">Exercise 4: The PyGTK GUI</A> <i>(Difficulty: Easy)</i></div>
           <div class="Text_Normal">
             There is a simple PyGTK GUI you can test here. This is probably not very hard but is an opportunity for those who
-            are interested to explore how TextTest "ideally" would interact with a GUI. It is intended for after the break.
+            are interested to explore how TextTest "ideally" would interact with a GUI. 
             This will teach you
             <UL>
               <li>how to use TextTest's record facilities</li>
@@ -260,28 +260,7 @@ is not "primed" for PyUseCase or anything. Fire it up and click around it a bit,
 the bugs in various categories and also sort the columns by clicking them, but you can't do much else...</div>
 <div class="Text_Header">4.2 Create a test with the help of PyUseCase</div>
 <div class="Text_Normal">
-Import the application as done for previous exercises, but remember to check the button to
-enable GUI-testing actions! Its default is still to rely on instrumentation, which we don't have or need here,
-so we also need to fire up the config file and add the single line
-<?php codeSampleBegin() ?>
-interpreter:pyusecase
-<?php codeSampleEnd() ?>
-From this point you can pretty much follow the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=gui_tests"; ?>">GUI-testing tutorial</A> provided above. The main difference is that on closing the "bug system" GUI when you've recorded your test, you will be presented with the new PyUseCase dialog, which presents you with a table detailing what actions you did that it doesn't yet have names for. Try to decipher the "signal names" and enter appropriate names for the actions, that are preferably independent of the way the UI looks right now. (Naturally when you record more tests it will only demand new names for actions you haven't done before.)
-</div>
-<div class="Text_Header">4.3 Examine the files PyUseCase has created for you</div>
-<div class="Text_Normal">
-Save the result from the dynamic GUI and examine it in the static GUI. The test is defined by the "usecase" file which uses the terms you just entered to describe what you did. For example, my usecase looked like this:
-<?php codeSampleBegin() ?>
-hide resolved bugs
-hide verified bugs
-sort bugs by description
-hide bugs that need info
-close bug system
-<?php codeSampleEnd() ?>
-Take a look in the "output" file also. You will find that PyUseCase has generated you a log of what the GUI looked like initially, all the actions that were made and what the GUI looked like after each stage. This will now be compared in the way TextTest normally does.
-</div>
-<div class="Text_Normal">
-It has also saved you a "UI map" file which contains the information you entered at the end of the test. This can be found under "usecases/ui_map.conf" in your tests directory. As you can see it looks much like TextTest's config file and is fairly easy to edit after the fact, for example to tweak the names you entered if you didn't get it quite right.
+From this point you can pretty much follow the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=gui_tests"; ?>">GUI-testing tutorial</A>, which is designed to work with this example. Try to create some different tests and examine the "usecase" files and the "output" files in each one, and also the UI map file as it develops. 
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise5"></A>Exercise 5: The Continuous Integration Script</div>
 <div class="Text_Header">5.0 Install Mercurial and GCC if necessary</div>
