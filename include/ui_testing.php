@@ -56,7 +56,8 @@ function printLI($n,$realName,$title)
 	        <div class="Table_Text_Normal">
                   <?php  printLI("pyusecase_download","Download and install","Get the latest stable release of PyUseCase from SourceForge, or the latest code from Launchpad"); ?>
                   <?php  printLI("pyusecase_intro","Basic command-line usage","Using PyUseCase on the command line"); ?>
-	          <li> <A class="Text_Link" href="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=gui_tests">Usage with TextTest</A>
+	          <?php  printLI("pyusecase_texttest","Usage with TextTest", "Using PyUseCase together with TextTest to create tests"); ?>
+                  <?php  printLI("pyusecase_additional","Additional Features", "How to do Application Events, GUI shortcuts and signal recording in PyUseCase"); ?>
                 </div>
 	      </td>
 	      <td>
