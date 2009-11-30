@@ -27,7 +27,7 @@ with the batch session names as keys, it is recommended to read
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file
 format documentation</A> for what this means.</div>
 
-<div class="Text_Header"><A NAME="-name"></A><A NAME="batch_recipients"></A><A NAME="batch_mail_on_failure_only"></A><A NAME="batch_sender"></A><A NAME="smtp_server"></A><A NAME="max_width_text_difference"></A><A NAME="full_name"></A>
+<div class="Text_Header"><A NAME="-name"></A><A NAME="batch_recipients"></A><A NAME="batch_mail_on_failure_only"></A><A NAME="batch_sender"></A><A NAME="smtp_server"></A><A NAME="smtp_server_username"></A><A NAME="smtp_server_password"></A><A NAME="max_width_text_difference"></A><A NAME="full_name"></A>
 The email report and where it is sent</div>
 <div class="Text_Normal">TextTest batch mode generates an email report. For a
 multiple-developer project it is often useful to direct such
@@ -73,9 +73,13 @@ to "true". By default mail will always be sent irrespective of what happens.
 entry &ldquo;batch_recipients&rdquo;. This can be configured per
 batch session, and may be a comma-separated list for multiple
 recipients. The sender address can be controlled by the
-&ldquo;batch_sender&rdquo; config file entry, while the SMTP
-server to use for sending mail can also be configured via
-&ldquo;smtp_server&rdquo;.</div>
+&ldquo;batch_sender&rdquo; config file entry</div>
+<div class="Text_Normal">The SMTP server to use for sending mail 
+can also be configured via &ldquo;smtp_server&rdquo;. By default
+it will assume that no authentication is required, unless the
+"smtp_server_username" setting is defined. If so, it will attempt
+to login with that username and the password defined by "smtp_server_password"
+before attempting to send mail.</div>
 <div class="Text_Normal">All of these will need to be configured on Windows as no
 defaults are provided. On UNIX, the SMTP server defaults to
 &ldquo;localhost&rdquo; and both sender and recipient addresses
