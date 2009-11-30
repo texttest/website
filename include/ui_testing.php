@@ -58,6 +58,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("pyusecase_intro","Basic command-line usage","Using PyUseCase on the command line"); ?>
 	          <?php  printLI("pyusecase_texttest","Usage with TextTest", "Using PyUseCase together with TextTest to create tests"); ?>
                   <?php  printLI("pyusecase_additional","Additional Features", "How to do Application Events, GUI shortcuts and signal recording in PyUseCase"); ?>
+                  <?php  printLI("pyusecase_supported","Supported Widgets", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
                 </div>
 	      </td>
 	      <td>

@@ -45,7 +45,7 @@ wait for hell to freeze over, the cows to come home
 and both calls will need to be made before replay will proceed.
 </div>
 <div class="Text_Normal">
-The "supercedeCategories" parameter is essential an even finer-grained control
+The "supercedeCategories" parameter is essentially an even finer-grained control
 over the same overriding mechanism and provides a list of categories of application event 
 that will cause this event to be superceded (NOTE: not a list of categories that this
 event will supercede). This should only be needed in rare circumstances.
