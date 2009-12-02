@@ -1,18 +1,11 @@
 <?php
   function printOldVersions($current_release,$all_releases)
   {
-  	 print "<div class=\"Text_Normal\"><i>Other versions: ";
+    print "<div class=\"Text_Normal\"><i>Other versions: ";
     foreach ($all_releases as $release)
       if ($release != $current_release) 
         print "<a class=\"Text_Link\" href=\"index.php?page=".convertToDocFormat($release)."\">".$release."</a>&nbsp; ";
       	 
-  	 //Print all older version found on ttwesite ver_1
-  	 global $pathToOldDocs; 
-  	 print " <a class=\"Text_Link\" href=\"".$pathToOldDocs."/3.8/\"   >3.8</a>&nbsp; ";
-    print " <a class=\"Text_Link\" href=\"".$pathToOldDocs."/3.7.1/\" >3.7.1</a>&nbsp; ";
-    print " <a class=\"Text_Link\" href=\"".$pathToOldDocs."/3.7/\"   >3.7</a>&nbsp; ";
-    print " <a class=\"Text_Link\" href=\"".$pathToOldDocs."/3.6/\"   >3.6</a>&nbsp; ";
-    print " <a class=\"Text_Link\" href=\"".$pathToOldDocs."/3.5.3/\" >3.5.3</a>&nbsp; ";
     
     print "<a class=\"Text_Link\" href=\"index.php?page=documentation&n=old_versions\">Older...</a>";
     print "</I></div>";
