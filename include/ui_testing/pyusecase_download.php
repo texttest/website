@@ -6,7 +6,7 @@
    <div class="Text_Header">Latest release</div>
    <div class="Text_Normal">
      Releases may be downloaded from the
-    <a class="Text_Link" href="http://sourceforge.net/project/pyusecase">SourceForge project pages</a>. We aim to make a couple of releases a year here, with attendant bugfix releases when required.
+    <a class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge project pages</a>. We aim to make a couple of releases a year here, with attendant bugfix releases when required.
    </div>
    <div class="Text_Header">Installation</div>
    <div class="Text_Normal">
