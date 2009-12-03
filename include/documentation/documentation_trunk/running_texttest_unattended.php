@@ -363,3 +363,19 @@ applied correctly. It is, of course, a good deal slower than
 simply re-reporting what was present before, as occurs by
 default. 
 </div>
+<div class="Text_Header"><A NAME="kill_timeout"></A>Killing Tests automatically</div>
+<div class="Text_Normal">It is always hard to tell whether a test
+is just about to finish or whether there is a neverending loop in the
+code preventing it from doing so. In order to fix such cases one may specify a
+&ldquo;kill_timeout&rdquo; (in seconds) in the configuration file,
+in order to kill such test instances after a specified time. Please note
+that it is wall clock time not CPU usage which is measured here.
+</div>
+<div class="Text_Normal">One further use case for this option are programs which pop up
+some &ldquo;send bug report&rdquo; window on crashing (this is often the case with executables
+on Windows) and do not exit until the window has been clicked away.
+With a &ldquo;kill_timeout&rdquo; at least the tests can continue although
+you still may have to click away the window manually.
+This option applies to the interactive modes as well but in batch mode
+it is most useful. 
+</div>
