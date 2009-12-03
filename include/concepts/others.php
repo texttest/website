@@ -10,20 +10,20 @@ available here.
 types, which have different considerations and in some cases
 different tools.</div>
 
-  <div class="Text_Normal"><A href="index.php?page=concepts&n=others#non-interactive_calculators">Batch programs.</a> Here I mean a tool
+  <div class="Text_Normal"><A href="index.php?page=about&n=others#non-interactive_calculators">Batch programs.</a> Here I mean a tool
 which essentially takes some input, performs some calculation
 and produces some output without any interaction from a user
 other than starting it. Such tools may not have a GUI, or the
 GUI may be entirely focussed on setting up the input and
 displaying the output, and as such testing the GUI can be
 considered as a separate problem.</div>
-<div class="Text_Normal"><A href="index.php?page=concepts&n=others#interactive_tools">Rich-client GUIs.</a>Here I
+<div class="Text_Normal"><A href="index.php?page=about&n=others#interactive_tools">Rich-client GUIs.</a>Here I
 include anything using a standard GUI toolkit, and also
 interactive console programs controlled via standard input
 responses. Acceptance Testing them is viewed as testing their
 &ldquo;use cases&rdquo; - modelling a series of GUI actions
 from a user (workflow).</div>
-<div class="Text_Normal"><A href="index.php?page=concepts&n=others#web_applications">Web applications.</a> Anything run over HTTP in a
+<div class="Text_Normal"><A href="index.php?page=about&n=others#web_applications">Web applications.</a> Anything run over HTTP in a
 standard web browser.</div>
 
 <div class="Text_Header"><a name="non-interactive_calculators"></a>Batch programs</div>
@@ -52,10 +52,10 @@ of this form, it is much more common that parts of it are. It
 can be very useful to identify them and test them separately in
 this way.</div>
 
-<div class="Text_Normal">Here is a <A class="Text_Link" HREF="index.php?page=concepts&n=calccomparison">table</A> comparing
+<div class="Text_Normal">Here is a <A class="Text_Link" HREF="index.php?page=about&n=calccomparison">table</A> comparing
 the tools.</div>
 <div class="Text_Header"><a name="interactive_tools"></a>Rich-client GUIs</div>
-<div class="Text_Normal">Here our candidate tool is <A class="Text_Link" HREF="index.php?page=concepts&n=xusecase">TextTest
+<div class="Text_Normal">Here our candidate tool is <A class="Text_Link" HREF="index.php?page=ui_testing&n=xusecase">TextTest
 with PyUseCase or JUseCase</A>. Suddenly there are more
 alternatives, both that try to make use of the GUI and that
 bypass it and call into the system via an API instead. I have
@@ -99,10 +99,10 @@ in the way for workflow. Additionally provides &ldquo;standard
 commands&rdquo; that define a language for driving the GUI
 directly. Some other interesting features lacked by both
 variants of Fit, notably a means of refactoring the tests at
-the customer level, pretty similar to our own <A class="Text_Link" HREF="index.php?page=concepts&n=shortcuts">GUI
+the customer level, pretty similar to our own <A class="Text_Link" HREF="index.php?page=ui_testing&n=shortcuts">GUI
 shortcuts</A></div>
 </UL>
-<div class="Text_Normal">There is also a <A class="Text_Link" HREF="index.php?page=concepts&n=guicomparison">table</A>
+<div class="Text_Normal">There is also a <A class="Text_Link" HREF="index.php?page=about&n=guicomparison">table</A>
 
 comparing the features of these tools for workflow testing of
 GUIs.</div>

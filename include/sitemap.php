@@ -4,29 +4,25 @@
 <div class="Text_Normal">
 <B>Main Pages</B><br><br>
 <a class="Text_Link" href="index.php?page=main">Welcome to the home of Texttest</a><br>
-<a class="Text_Link" href="index.php?page=concepts"> Acceptance Testing in theory and practice </a><br>
 <a class="Text_Link" href="index.php?page=contact">Contact and support</a><br>
 <a class="Text_Link" href="index.php?page=documentation">Documentation</a><br>
 <a class="Text_Link" href="index.php?page=download">Downloading TextTest</a><br>
-<a class="Text_Link" href="index.php?page=about">About Texttest</a><br>
+<a class="Text_Link" href="index.php?page=about">Introducing TextTest and Acceptance Testing</a><br>
 <a class="Text_Link" href="index.php?page=news">News</a><br>
 <a class="Text_Link" href="index.php?page=publications">Publications</a><br>
 <a class="Text_Link" href="index.php?page=siteinfo">Site info</a><br>
 <a class="Text_Link" href="index.php?page=sitemap">Site map (this page)</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing">Testing GUIs with TextTest and xUseCase</a><br>
 <br><B>Pages under concepts</B>
 <div class="Text_Normal">
-<a class="Text_Link" href="index.php?page=concepts&n=appevents">Multi-threaded simulation using Application Events</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=calccomparison">Comparing tools for acceptance testing of non-interactive calculators</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=concepts">What is Acceptence Testing?</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=guicomparison">Comparing tools for acceptance testing of rich-client GUIs</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=logprobs">Some Frequently Asked Questions on problems with logs as tests</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=others">Other tools for Acceptance Testing</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=problems">Frequently raised objections to Use-case Recording</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=pyusecase">Using the PyUseCase library</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=shortcuts">Test Refactoring and Macro Recording with GUI shortcuts </a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=why"> Why do I need Acceptance Tests as well as Unit Tests?</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=whylog">Five good reasons to use logging for asserting behaviour in acceptance tests</a><br>
-<a class="Text_Link" href="index.php?page=concepts&n=xusecase">Using	a Use-case recorder</a><br>
+<a class="Text_Link" href="index.php?page=about&n=about_acceptance_testing">What is Acceptance Testing?</a><br>
+<a class="Text_Link" href="index.php?page=about&n=about_texttest">About Texttest</a><br>
+<a class="Text_Link" href="index.php?page=about&n=calccomparison">Comparing tools for acceptance testing of non-interactive calculators</a><br>
+<a class="Text_Link" href="index.php?page=about&n=guicomparison">Comparing tools for acceptance testing of rich-client GUIs</a><br>
+<a class="Text_Link" href="index.php?page=about&n=logprobs">Some Frequently Asked Questions on problems with logs as tests</a><br>
+<a class="Text_Link" href="index.php?page=about&n=others">Other tools for Acceptance Testing</a><br>
+<a class="Text_Link" href="index.php?page=about&n=why"> Why do I need Acceptance Tests as well as Unit Tests?</a><br>
+<a class="Text_Link" href="index.php?page=about&n=whylog">Five good reasons to use logging for asserting behaviour in acceptance tests</a><br>
 </div>
 <br><B>Pages under documentation</B>
 <div class="Text_Normal">
@@ -36,6 +32,7 @@
 <a class="Text_Link" href="index.php?page=documentation_3_12">Documentation for 3.12</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_13">Documentation for 3.13</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14">Documentation for 3.14</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15">Documentation for 3.15</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_9_1">Documentation for 3.9.1</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk">Documentation for trunk</a><br>
 <a class="Text_Link" href="index.php?page=documentation&n=old_versions">Older Versions of the Documentation</a><br>
@@ -212,7 +209,7 @@
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=measuring_system_resource_usage">Measuring system resource usage </a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=options_default">List of options when submitting test runs</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=options_queuesystem">List of options when submitting test runs</a><br>
-<a class="Text_Link" href="index.php?page=documentation_3_14&n=personalising_ui">Personalising TextTest's User Interfaces</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_14&n=personalising_ui"><A NAME="TEXTTEST_PERSONAL_CONFIG"></A>Personalising TextTest's User Interfaces</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=personalpreffile">List of possible entries for personal config files:</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=run_dependent_text">Filtering the Output from the System Under Test</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=running_tests_in_parallel">Running tests in parallel on a grid</a><br>
@@ -225,6 +222,42 @@
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=troubleshooting">Troubleshooting: using TextTest's internal logging</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=versions_and_version_control">Using TextTest Versions and Checkouts</a><br>
 <a class="Text_Link" href="index.php?page=documentation_3_14&n=writing_a_config_module">Using TextTest as a Python Framework: Writing your own config module</a><br>
+</div>
+<br><B>Pages under documentation_3_15</B>
+<div class="Text_Normal">
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=main">Overview of the Documentation</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=automatic_failure_interpretation">Automatic Failure Interpretation in TextTest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=configfile_default">Possible entries for config files (application or personal)</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=configfile_queuesystem">Possible entries for config files (application or personal)</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=course_material">TextTest Course Material</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=dynamic_gui">Guide to the TextTest Dynamic GUI</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=environment_default">Environment variables that the user may set</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=environment_queuesystem">Environment variables that the user may set</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=extra_files">Files written by the System Under Test</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=faking_it_with_texttest">Faking it with TextTest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=file_formats">TextTest file formats</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=getting_started">Getting started with Texttest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=gui_tests">Testing a GUI with TextTest and a Use Case Recorder</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=guide_to_texttest_ui">Guide to TextTest's Interfaces</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=install_texttest">Install Texttest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=kataminesweeper">KataMinesweeper</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=about_testsuites">Understanding TextTest Test Suites</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=measuring_system_resource_usage">Measuring system resource usage </a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=options_default">List of options when submitting test runs</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=options_queuesystem">List of options when submitting test runs</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=personalising_ui"><A NAME="TEXTTEST_PERSONAL_CONFIG"></A>Personalising TextTest's User Interfaces</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=personalpreffile">List of possible entries for personal config files:</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=run_dependent_text">Filtering the Output from the System Under Test</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=running_tests_in_parallel">Running tests in parallel on a grid</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=running_tests_remotely">Running tests on a remote machine</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=running_texttest_unattended">Running TextTest Unattended</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=scripts_default">Full list of provided pluginscripts</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=scripts_queuesystem">Full list of provided pluginscripts</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=static_gui">Guide to the TextTest Static GUI</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=texttest_sandbox">The TextTest Sandbox</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=troubleshooting">Troubleshooting: using TextTest's internal logging</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=versions_and_version_control">Using TextTest Versions and Checkouts</a><br>
+<a class="Text_Link" href="index.php?page=documentation_3_15&n=writing_a_config_module">Using TextTest as a Python Framework: Writing your own config module</a><br>
 </div>
 <br><B>Pages under documentation_3_9_1</B>
 <div class="Text_Normal">
@@ -258,11 +291,13 @@
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=automatic_failure_interpretation">Automatic Failure Interpretation in TextTest</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=configfile_default">Possible entries for config files (application or personal)</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=configfile_queuesystem">Possible entries for config files (application or personal)</a><br>
+<a class="Text_Link" href="index.php?page=documentation_trunk&n=course_material">TextTest Course Material</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=dynamic_gui">Guide to the TextTest Dynamic GUI</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=environment_default">Environment variables that the user may set</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=environment_queuesystem">Environment variables that the user may set</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=extra_files">Files written by the System Under Test</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=faking_it_with_texttest">Faking it with TextTest</a><br>
+<a class="Text_Link" href="index.php?page=documentation_trunk&n=file_formats">TextTest file formats</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=getting_started">Getting started with Texttest</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=gui_tests">Testing a GUI with TextTest and a Use Case Recorder</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=guide_to_texttest_ui">Guide to TextTest's Interfaces</a><br>
@@ -272,7 +307,7 @@
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=measuring_system_resource_usage">Measuring system resource usage </a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=options_default">List of options when submitting test runs</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=options_queuesystem">List of options when submitting test runs</a><br>
-<a class="Text_Link" href="index.php?page=documentation_trunk&n=personalising_ui">Personalising TextTest's User Interfaces</a><br>
+<a class="Text_Link" href="index.php?page=documentation_trunk&n=personalising_ui"><A NAME="TEXTTEST_PERSONAL_CONFIG"></A>Personalising TextTest's User Interfaces</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=personalpreffile">List of possible entries for personal config files:</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=run_dependent_text">Filtering the Output from the System Under Test</a><br>
 <a class="Text_Link" href="index.php?page=documentation_trunk&n=running_tests_in_parallel">Running tests in parallel on a grid</a><br>
@@ -291,6 +326,18 @@
 <div class="Text_Normal">
 <a class="Text_Link" href="index.php?page=publications&n=main">Publications, Presentations & Events</a><br>
 <a class="Text_Link" href="index.php?page=publications&n=bestpractices"> Exploring Best Practice for XP Acceptance Testing</a><br>
+</div>
+<br><B>Pages under ui_testing</B>
+<div class="Text_Normal">
+<a class="Text_Link" href="index.php?page=ui_testing&n=appevents">Multi-threaded simulation using Application Events</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=problems">Frequently raised objections to Use-case Recording</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_additional">Adding application events for synchronisation</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_download">Downloading and installing PyUseCase</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_intro">Recording a basic usecase</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_supported">PyGTK Widgets and signals supported for record/replay</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_texttest">Using PyUseCase for testing, together with TextTest</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=shortcuts">Test Refactoring and Macro Recording with GUI shortcuts </a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=xusecase">Maintainable GUI testing with a Use Case Recorder</a><br>
 </div>
 </div>
 </table></td></tr></table>

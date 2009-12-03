@@ -1,5 +1,4 @@
-<!--TITLE:What is Acceptence testing? PAGEINFO: Read more about what Acceptance Tests isPATH:page=concepts&n=main-->
-<div class="Text_Header">What is Acceptence Testing?</div>
+<div class="Text_Header">What is Acceptance Testing?</div>
 <div class="Text_Normal"> Even within XP and Agile circles there can be some
 uncertainty about what is meant by Acceptance Testing and how it
 differs from unit testing. There can be a tendency to define it

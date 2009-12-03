@@ -6,7 +6,7 @@
 			</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?Page=concepts&n=xusecase">TextTest/xUseCase</A></div>
+			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=ui_testing">TextTest/xUseCase</A></div>
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://exactor.sourceforge.net/">Exactor</A></div>
@@ -150,7 +150,7 @@
 			<div class="Table_Text_Normal">Support for refactoring of test scripts</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=concepts&n=shortcuts">Domain
+			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=ui_testing&n=shortcuts">Domain
 			language composite files </A>(cannot pass arguments)</div>
 		</TD>
 		<TD>
@@ -175,7 +175,7 @@
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://jusecase.sourceforge.net">Java (Swing
-			only) </A>, <A class="Text_Link" href= "index.php?page=concepts&n=pyusecase">Python (PyGTK
+			only) </A>, <A class="Text_Link" href= "index.php?page=ui_testing&n=pyusecase">Python (PyGTK
 			only)</A></div>
 		</TD>
 		<TD>
@@ -196,7 +196,7 @@
 			<div class="Table_Text_Normal">Support for multithread synchronisation</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=concepts&n=appevents">Application
+			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=ui_testing&n=appevents">Application
 			Events</A></div>
 		</TD>
 		<TD>

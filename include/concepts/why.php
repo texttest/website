@@ -1,4 +1,3 @@
-<!--TITLE:why need them? PAGEINFO: Read more about why Acceptance Tests is a needed compliment to Unit Tests?PATH:page=concepts&n=why-->
 <div class="Text_Header"> Why do I need Acceptance Tests as well as Unit Tests?</div>
 <div class="Text_Normal">Much has been written about Unit Testing, and <A class="Text_Link" HREF="http://www.junit.org/">JUnit
 </A>and its translations continue to gain in popularity. This is
