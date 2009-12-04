@@ -22,12 +22,11 @@ idea for now.
 </div>
 <div class="Text_Normal">
 Note that most Linux installations include a PyGTK package and some (e.g. Ubuntu) have it installed by default.
-To test whether your Python installation already includes PyGTK, type 'import gtk' into a python prompt. No response means you do. 
-However, this can be a curse as well as a blessing, because if you have an older "enterprise" linux platform
+To test whether your Python installation already includes PyGTK, type 'import gtk' into a python prompt. No response means you do. However, this can be a curse as well as a blessing, because if you have an older "enterprise" linux platform
 such as Red Hat or SuSE, it's difficult to put a newer GTK in place than the default. In this case you should
 refer to the instructions under doc/Upgrade_PyGTK_Enterprise_Linux in the TextTest download. </div>
 <div class="Text_Normal">
-On Windows, the summary for how to install is that you should get the GTK 2.12 bundle from <A class="Text_Link" HREF="http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.12/gtk+-bundle-2.12.11-20080720.zip">here</A>, unzip it somewhere, add its "bin" subdirectory to your PATH and then run the three installers at the top of the <A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK downloads</A> page.
+On <u>Windows</u>, the summary for how to install is that you should get the GTK 2.12 bundle from <A class="Text_Link" HREF="http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.12/gtk+-bundle-2.12.11-20080720.zip">here</A>, unzip it somewhere (avoid locations with spaces in their names, I find "C:\Gtk" works just fine for me!), add its "bin" subdirectory to your PATH and then run the three installers at the top of the <A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK downloads</A> page. In general neither TextTest nor PyGTK handle paths with spaces in their names well: both are ports of software written on UNIX so you're well advised to steer clear of "Program Files" and "Documents and Settings", whatever your Windows best-practice manual may tell you...
 </div>
 <div class="Text_Normal"><LI><B><U>Tkdiff and diff</U></B>. You will need a decent graphical difference tool on your
 PATH, along with a textual version for reports. We recommend 'tkdiff' and 'diff' respectively which are present on most UNIX
