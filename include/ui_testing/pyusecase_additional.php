@@ -1,6 +1,6 @@
 <div class="Text_Header">Adding application events for synchronisation</div>
 <div class="Text_Normal"><I>
-(See <A class="Text_Link" href="index.php?page=ui_testing&n=app_events">here</A>
+(See <A class="Text_Link" href="index.php?page=ui_testing&n=appevents">here</A>
 for an explanation of what an Application Event is: the basic idea is to support
 synchronisation by recording and reading of "waits")></I>
 </div>
