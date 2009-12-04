@@ -98,8 +98,7 @@ at the far right indicates whether it is doing something:
 sometimes searching a large test suite for example may take a
 little time.</div>
 <div class="Text_Normal">All of these can be hidden by default using the
-&ldquo;hide_gui_element&rdquo; entry, as above, see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">table
-of config file settings</A> for the key format. If you don't
+&ldquo;hide_gui_element&rdquo; entry, as above, see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile";?>">table of personal config file settings</A> for the key format. If you don't
 hide the menubar via this mechanism you can also show and hide
 them via the &ldquo;View&rdquo; menu.</div>
 <div class="Text_Header"><A NAME="gui_entry_overrides"></A><A NAME="gui_entry_options"></A><A NAME="gui_entry_completion_inline"></A>
