@@ -79,8 +79,8 @@ and status bar at the bottom. The menubar and toolbar are fairly
 standard and generally provide access to the same functionality.</div>
 <div class="Text_Normal">The shortcut bar at the bottom allows you to create GUI
 shortcuts for sequences of clicks that you do regularly. This is
-the <A class="Text_Link" href="index.php?page=concepts&n=shortcuts">GUI shortcut
-functionality</A> as provided by <A class="Text_Link" href="index.php?page=concepts&n=xusecase">PyUseCase</A>,
+the <A class="Text_Link" href="index.php?page=ui_testing&n=shortcuts">GUI shortcut
+functionality</A> as provided by <A class="Text_Link" href="index.php?page=ui_testing&n=xusecase">PyUseCase</A>,
 which TextTest itself relies on, primarily for its own testing,
 but also to allow for this customisation possibility. 
 </div>
