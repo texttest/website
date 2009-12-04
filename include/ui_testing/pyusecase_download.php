@@ -10,7 +10,7 @@
    </div>
    <div class="Text_Header">Installation</div>
    <div class="Text_Normal">
-     There are two possibilities: either you can go to the "lib" directory and run "python setup.py install", or you can leave it where it is, in which case you'll probably want to add its "bin" directory to your PATH for convenience.
+     There are two possibilities: either you can go to the "lib" directory and run "python setup.py install". On Windows this will probably install it somewhere like "C:\Python26\Scripts", which you should then add to your PATH variable. On UNIX you can also leave it where it is, in which case you'll probably want to add its "bin" directory to your PATH for convenience.
    </div>
    <div class="Text_Header">Latest development version from source control</div>
    <div class="Text_Normal">
