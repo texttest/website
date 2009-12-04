@@ -1,6 +1,6 @@
 <?php
 
-$basePath="include/concepts/";
+$basePath="include/about/";
 if (isset($_GET['n'])) $path = "not_set";
 else $path = "no_needed";
 
@@ -44,7 +44,7 @@ function printLI($n,$realName,$title)
    
    <?php 
      if ($path == "not_set") include_404_page();
-     elseif  ($path == "no_needed") include_file ('include/concepts/about_texttest.php');
+     elseif  ($path == "no_needed") include_file ('include/about/about_texttest.php');
      else include_file($path); 
    ?>
 				
