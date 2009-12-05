@@ -38,8 +38,8 @@ function printLI($n,$realName,$title)
           
           <table border=0 class="documentation_table">
             <tr>
-              <td width=250><div class="Table_Text_Header">Introduction</div></td>
-              <td width=220><div class="Table_Text_Header">PyUseCase Docs</div></td>
+              <td width=220><div class="Table_Text_Header">Introduction</div></td>
+              <td width=250><div class="Table_Text_Header">PyUseCase Docs</div></td>
               <td width=160><div class="Table_Text_Header">Other Tools</div></td>
             </tr>
             
@@ -59,6 +59,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("pyusecase_intro","Basic command-line usage","Using PyUseCase on the command line"); ?>
 	          <?php  printLI("pyusecase_texttest","Usage with TextTest", "Using PyUseCase together with TextTest to create tests"); ?>
                   <?php  printLI("pyusecase_additional","Additional Features", "How to do Application Events, GUI shortcuts and signal recording in PyUseCase"); ?>
+                  <?php  printLI("pyusecase_friendly_coding","PyUseCase-friendly coding", "Tips to developers for how to write code that will create nice tests with PyUseCase"); ?>
                   <?php  printLI("pyusecase_supported","Supported Widgets", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
                 </div>
 	      </td>
