@@ -24,7 +24,7 @@ For Pixbufs, it's used to improve the descriptions of images in the autogenerate
 PyUseCase's replayer works via an idle handler, which is not called during gtk.Dialog.run. This method is therefore not currently supported, even though gtk.Dialog is in general. (There may exist circuitous ways to get around this, and it may be supported in the future.) But right now, the PyUseCase-friendly way to handle dialogs is to connect to the "response" signal (or the "clicked" signal on its buttons, if you prefer) when it should work just fine.</div>
 <div class="Text_Header">Causing default signal handlers not to be called</div>
 <div class="Text_Normal">
-PyUseCase offers you several ways to block the default handling of a signal. Care is needed in this area to avoid also blocking PyUseCase from recording that signal, as PyUseCase's recorder is in a signal handler which is added after your application's handler. </div>
+PyGTK offers you several ways to block the default handling of a signal. Care is needed in this area to avoid also blocking PyUseCase from recording that signal, as PyUseCase's recorder is in a signal handler which is added after your application's handler. </div>
 <div class="Text_Normal">
 Returning False from your handler will therefore not work, as it will also cause the recorder not to be called. Instead, you should call one of the equivalent methods "stop_emission" or "emit_stop_by_name", which PyUseCase will intercept and call itself from its own recorder handler, thus preserving the effect yet still being able to do its recording. Unfortunately it isn't possible to intercept "return False", so the only thing to do there is replace it with one of the above calls.
 </div>
