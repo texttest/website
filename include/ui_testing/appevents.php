@@ -30,9 +30,9 @@
   can therefore be used for both purposes.</div>
 <div class="Text_Normal">So, xUseCase recording with application events looks like
   this:</div>
-<div class="Text_Normal"><img src="include/concepts/images/xusecaserec.jpg" NAME="Graphic1" ALIGN=LEFT WIDTH=500 HEIGHT=152 BORDER=0><BR CLEAR=LEFT>Replaying,
+<div class="Text_Normal"><img src="include/ui_testing/images/xusecaserec.jpg" NAME="Graphic1" ALIGN=LEFT WIDTH=500 HEIGHT=152 BORDER=0><BR CLEAR=LEFT>Replaying,
 					with application events, looks like this:
-  <img src="include/concepts/images/xusecaserep.jpg" NAME="Graphic4" ALIGN=LEFT WIDTH=498 HEIGHT=110 BORDER=0><BR CLEAR=LEFT>
+  <img src="include/ui_testing/images/xusecaserep.jpg" NAME="Graphic4" ALIGN=LEFT WIDTH=498 HEIGHT=110 BORDER=0><BR CLEAR=LEFT>
   
 </div><HR>
 <div class="Text_Normal">Now for an example. Assume we have the following use case
@@ -74,11 +74,11 @@ if he is writing a Java GUI and using JUseCase. Either way, the recorded use cas
 </div>
 <div class="Text_Normal"><BR><BR>
 </div>
-<div class="Text_Normal"><img src="include/concepts/images/appeventrec.jpg" NAME="Graphic3" ALIGN=LEFT WIDTH=500 HEIGHT=205 BORDER=0><BR CLEAR=LEFT>In
+<div class="Text_Normal"><img src="include/ui_testing/images/appeventrec.jpg" NAME="Graphic3" ALIGN=LEFT WIDTH=500 HEIGHT=205 BORDER=0><BR CLEAR=LEFT>In
   replay mode, the simulator (or replayer) halts replaying on
   reading this 'wait for' command, and the applicationEvent call
   then acts as a notifier to tell it to resume when the data has
   been loaded.</div>
 
-<div class="Text_Normal"><img src="include/concepts/images/appeventrep.JPG" NAME="Graphic5" ALIGN=LEFT WIDTH=495 HEIGHT=249 BORDER=0><BR CLEAR=LEFT><BR>
+<div class="Text_Normal"><img src="include/ui_testing/images/appeventrep.JPG" NAME="Graphic5" ALIGN=LEFT WIDTH=495 HEIGHT=249 BORDER=0><BR CLEAR=LEFT><BR>
 </div>
