@@ -8,9 +8,14 @@ include 'functions.php';
 if (isset ($argv))
 	for ($i=1;$i<count($argv);$i++)
 	{
-		print "-----------------INTERNAL-TESTNING-----------------------";
+		print "-----------------INTERNAL-TESTNING-----------------------\n";
 		$it = split("=",$argv[$i]);
-		$_GET[$it[0]] = $it[1];
+
+                if (count($it) == 2)
+                  {
+                    $_GET[$it[0]] = $it[1];
+                  }
+                
 	}
 
 ?>
