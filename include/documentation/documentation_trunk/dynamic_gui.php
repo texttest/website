@@ -135,13 +135,13 @@ I.e. the keys are the various programs. "default" can be used as normal to set a
 limit for tools not explicitly listed. If a file exceeds 
 this size for "diff", no diff report will be displayed in the Text Info tab, and if you try and view such a file
 from the GUI you will get a warning that the file is very large before it will be loaded.</div>
-<div class="Text_Header"><A NAME="unsaveable_version"></A><A NAME="save_filtered_file_stems"></A>Saving Test Results</div>
+<div class="Text_Header"><A NAME="unsaveable_version"></A><A NAME="save_filtered_file_stems"></A><A NAME="-ignorefilters"></A>
+Saving Test Results</div>
 <div class="Text_Normal">When tests fail, you can examine the differences as above,
 and sometimes you will decide that the change in behaviour is in
 fact desirable. In this case, you should &ldquo;Save&rdquo; the
 test, or group of tests. This operation will overwrite the
 permanent &ldquo;standard&rdquo; files with the &ldquo;temporary&rdquo;
-
 files produced by this run. 
 </div>
 <div class="Text_Normal">To achieve this, the dynamic GUI has a &ldquo;Save&rdquo;
@@ -193,7 +193,10 @@ has made a release and you have a separate version of the tests for that release
 regarded as the same, via the option &ldquo;replace successfully
 compared files also&rdquo;: this is a way to re-generate the
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">run-dependent text</A>
-for a test.</div>
+for all files in a failing test. Note that this only works on tests where at least some files were different, it won't work on tests that
+are considered to have succeeded. To systematically regenerate run-dependent text, run with the "--ignorefilters" flag
+(or check the box in the Advanced tab in the static GUI) which will cause tests to fail and hence make the process of saving
+run-dependent text much more visible.</div>
 <div class="Text_Header">Recomputing Test Results</div>
 <div class="Text_Normal">There are several occasions on which it can be useful to trigger a recomputation
 of the test results. Sometimes other versions of the tests are simply saved, which changes files shared between several
