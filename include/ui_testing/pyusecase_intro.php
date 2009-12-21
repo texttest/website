@@ -12,30 +12,64 @@ pyusecase -r usecase.txt videostore.py
 <?php codeSampleEnd() ?>
 This brings up the Video Store in record mode and PyUseCase
 writes its auto-generated log of what the GUI looks like to the console
-as you go along. As a suggestion, add a movie called "Star Wars"
+as you go along. As a suggestion, add a movie called "Star Wars" like this :</div>
+<div class="Text_Normal"><img src="include/ui_testing/images/videostore.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT>
+</div>
+<div class="Text_Normal">
 and then exit. This results in PyUseCase's own dialog coming
 up and requesting that you enter "usecase names" for the things
-you just did. By looking at the widget types, identifiers and 
-"PyGTK signal names" it provides, you can hopefully figure
-out which row corresponds to which action you did. Here is the dialog as 
-it might be filled out just before you accept it:
+you just did. It gives you the type of the widget, how it identifies it
+and a description of the action that was performed on it, and 
+you can hopefully figure out which row corresponds to which action you did
+and name the actions in a suitably high-level language. The current usecase 
+that will be recorded is previewed in the window at the
+bottom as you type to assist you in this process. </div>
+<div class="Text_Normal">
+Any actions that we don't name will be treated as uninteresting and will
+not be recorded. Here is the dialog as it might be filled out just before 
+you accept it:
 </div>
 <div class="Text_Normal"><img src="include/ui_testing/images/choosenames.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT>
 </div>
 <div class="Text_Normal">
-Now we are done, and something like this can be seen in our "usecase.txt" file:
-<?php codeSampleBegin() ?>
-set movie name to Star Wars
-add movie
-close
-<?php codeSampleEnd() ?>
-We can now play this back via:
+Now we are done, and the usecase as shown in the preview window is saved to our "usecase.txt" file.
+We can now play it back via:
 <?php codeSampleBegin() ?>
 pyusecase -p usecase.txt videostore.py
 <?php codeSampleEnd() ?>
 which goes by extremely fast but helpfully describes the GUI changes on the console for us,
-somewhat more compactly than when we were recording as it e.g. makes text edits in one go.
-To see it at a more sensible pace, set a delay like this:
+somewhat more compactly than when we were recording as it e.g. makes text edits in one go. It
+will look something like this:
+<?php codeSampleBegin() ?>
+
+---------- Window 'The Video Store' ----------
+Focus widget is 'Movie Name'
+
+Menu Bar : 'File' (+)
+'New Movie Name  ' , Text entry , Button 'Add' , Button 'Delete' , 
+    Button 'Sort' , Button 'Clear'
+
+Showing Notebook with tabs: text info , video view
+Viewing page 'video view'
+
+Showing Movie Tree with columns: Movie Name
+'Shortcuts:' , Button '_New'
+----------------------------------------------
+
+'set movie name to' event created with arguments 'Star Wars'
+Edited 'Movie Name' Text entry (set to 'Star Wars')
+
+'add movie' event created with arguments ''
+
+Updated : Movie Tree with columns: Movie Name
+-> Star Wars
+
+'close' event created with arguments ''
+<?php codeSampleEnd() ?>
+As you can see, this consists of an initial description of the window appearance
+(compare with the screenshot above) and then a series of "event created with arguments"
+lines which indicate what PyUseCase has done, followed by the updates to the UI that resulted.
+To see the usecase executing at a more sensible pace so you watch the UI changes, set a delay like this:
 <?php codeSampleBegin() ?>
 pyusecase -p usecase.txt -d 2 videostore.py
 <?php codeSampleEnd() ?>

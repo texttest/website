@@ -48,7 +48,7 @@ perform the actions that constitute the use case (in this case select some rows,
 the toggle buttons at the bottom and sort some columns), and then close
 this GUI.</div>
 <div class="Text_Normal">
-When we close the GUI, PyUseCase informs us that we have performed some actions it does not yet have names for. So it produces a dialog for us to fill in with appropriate names. We try to decipher which rows correspond to which things we did based on the widget types, identifiers and "signal names" that it gives us. This information then goes into our "UI map file", while the names themselves form the "usecase" on which the test is based. For example, we might choose some names something like this.<I>
+When we close the GUI, PyUseCase informs us that we have performed some actions it does not yet have names for. So it produces a dialog for us to fill in with appropriate names. We try to decipher which rows correspond to which things we did based on the widget types, identifiers and descriptions of the actions performed that it gives us. This information then goes into our "UI map file", while the names themselves form the "usecase" on which the test is based, which you can see previewed in the lower window as you type. For example, we might choose some names something like this.<I>
 (If you leave any item blank, PyUseCase concludes that you are not interested in this event and will not record it in the future)</I>
 </div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/pyusecase_dialog.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
