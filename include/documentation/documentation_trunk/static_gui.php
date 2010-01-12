@@ -102,11 +102,13 @@ instead a standard regular expression is used, all tests whose
 name matches that expression will be selected.. 
 </div>
 
-<div class="Text_Normal">In a similar way, the &ldquo;Suite Names Containing&rdquo;
-field (-ts on the command line) provides a way to select entire
-test suites based on a similar substring/regular expression
-search. Note that the string matched is the <U><I>whole path</I></U><SPAN STYLE="text-decoration: none">
-of the test suite : test suites can contain other test suites. </SPAN>
+<div class="Text_Normal">In a similar way, the &ldquo;Test Paths Containing&rdquo;
+field (-ts on the command line) provides a way to select tests based on their
+full path relative to the root, i.e. including all parent suite names. The components
+may be separated either with "/" or " ". As above, substrings and regular expression
+matching may also be used. This replaces the previous "Test Suites Containing" and can
+of course be used for that purpose also as the test suite full path is a substring of
+the test's full path.
 </div>
 <div class="Text_Normal">Likewise it is possible to match on the name of the application,
 which can be useful if several different ones are loaded into the GUI at the same time,
