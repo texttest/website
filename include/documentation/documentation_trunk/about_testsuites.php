@@ -22,7 +22,8 @@ to be expected.
 </div>
 
 </UL>
-<div class="Text_Header"><A NAME="-d"></A><A NAME="TEXTTEST_HOME"></A><A NAME="TEXTTEST_PATH"></A>The Root Directory</div>
+<div class="Text_Header"><A NAME="-d"></A><A NAME="TEXTTEST_HOME"></A><A NAME="TEXTTEST_PATH"></A><A NAME="TEXTTEST_ROOT"></A>
+The Root Directory</div>
 <div class="Text_Normal">This is the first thing determined by TextTest on being
 called, and is where in your file system it will start to look
 for tests. All test files are placed in subdirectories of this
@@ -52,6 +53,11 @@ It is possible to have multiple roots, as the name TEXTTEST_PATH suggests. TEXTT
 are essentially aliases of each other, and both can be set in a similar way to PATH, i.e. on POSIX-based systems
 a colon-separated list can be provided, or on Windows a semicolon-separated list. This means
 that tests from disparate locations can be loaded into the same TextTest run.
+</div>
+<div class="Text_Normal">
+For this reason TextTest also sets the additional variable TEXTTEST_ROOT which refers to the root of the test tree
+for the application concerned. This is to avoid referring to TEXTTEST_HOME in configuration files which is problematic
+both because it might refer to multiple roots, and because of the subdirectory searching described in the next paragraph.
 </div>
 <div class="Text_Header"><A NAME="-a"></A>Test Applications</div>
 <div class="Text_Normal">To test a system with TextTest, the first thing to do is to

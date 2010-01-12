@@ -20,7 +20,7 @@
 			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Alternative interpreter for the dynamic GUI : mostly useful for coverage / testing</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#TEXTTEST_DYNAMIC_GUI_INTERPRETER">Alternative interpreter for the dynamic GUI : mostly useful for coverage / testing</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -142,6 +142,14 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#TEXTTEST_MIM_SERVER">Address of TextTest's server for recording client/server traffic</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_ROOT</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#TEXTTEST_ROOT">Full path to the root directory for each test application</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

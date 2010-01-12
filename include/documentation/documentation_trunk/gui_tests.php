@@ -100,7 +100,7 @@ we can minimise changes in the tests themselves.</div>
 </div><div class="Text_Normal"><I>
 PyUseCase identifies widgets by name, title, label and type, in that order. Obviously here we are identfiying the main tree view by its type alone, which will break down as soon as the UI contains another one. Likewise, the title of our window might vary from run to run. For robustness it's therefore often necessary to assign widget names in your code, at which point this file should be updated with "Name=Bug tree view" instead of "Type=TreeView".</I>
 </div>
-<div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="USECASE_REPLAY_DELAY"></A><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_number"></A>
+<div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="USECASE_REPLAY_DELAY"></A><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_extra_args"></A>
 Running a Test</div>
 <div class="Text_Normal">Clearly, there is no need to run it once in order to collect
 the output as we did with &ldquo;hello world&rdquo;: this is
@@ -113,7 +113,13 @@ actions will be performed as fast as possible.
 the SUT's GUIs from popping up, by using the virtual display server Xvfb 
 (a standard UNIX tool). For each run of the tests it will start such
 a server, point the SUT's DISPLAY variable at it and close the server
-at the end of the test. </div>
+at the end of the test. Ordinarily, it will run it like this
+<?php codeSampleBegin() ?>
+Xvfb -ac -audit 2 :&lt;display number&gt;
+<?php codeSampleEnd() ?>
+but you can supply additional arguments via the setting "virtual_display_extra_args"
+which will appended before the display number.
+</div>
 <div class="Text_Normal">
 It will use its own process ID (modulo 32768) as the display number to guarantee 
 uniqueness. After starting Xvfb, it will wait the number of seconds
