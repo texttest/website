@@ -250,8 +250,7 @@ separate file and "import" it into your config files. Look at "import_config_fil
 <div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The PyGTK GUI</div>
 <div class="Text_Header">4.0 Download and install PyUseCase version 3 or newer if you don't have it yet</div>
 <div class="Text_Normal">
-This will be released on SourceForge sometime before Christmas 2009. A beta-ish version is already available 
-internally at Jeppesen Göteborg and present in the PATH by default. 
+Instructions for how to do this can be found <A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_download">here</A>.
 </div>
 <div class="Text_Header">4.1 Try out an amazing new bug system</div>
 <div class="Text_Normal">
