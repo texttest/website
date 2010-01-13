@@ -120,7 +120,7 @@ World. You should get some kind of "Usage" error from the script. Save this beha
 <div class="Text_Header">2.4 Create a test with the right number of arguments</div>
 <div class="Text_Normal">
 This time enter e.g. "foo bar file.txt" (if you changed the file as in my example above)
-in the "Add Test" dialog box. (Or copy the test,
+in the "Command Line Options" field in the "Add Test" dialog box. (Or copy the test,
 right click "Definition" files and add an "options" file with the same contents). Either
 way, you get a test containing an "options" file. If you run it you will get different
 text, probably the first two lines of the "trial" output from above. It won't actually
@@ -133,7 +133,7 @@ moved on. We need to tell TextTest to ignore this difference.
 <div class="Text_Normal">
 To rectify this you'll need to edit your "config file", which you do by selecting the "config" tab 
 (top right in the "static GUI"). In this tab you will find a file "config.&lt;extension&gt;" under "Files For &lt;your application name&gt;".
-If you have defined a personal configuration file it will also be present at the top: don't edit that 
+If you have defined a personal configuration file it will also be present: don't edit that 
 as it is specific to your user. Double-click the application file described, which will open it in the editor described in the introduction. A lot of what's hard about TextTest is editing this
 file correctly and most of the exercises involve doing so.
 </div>
