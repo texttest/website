@@ -313,7 +313,7 @@ to provide part of the name also.
 There is one problem still: the test still relies on the Mercurial
 checkout ("source") being up to date. You should capture this state somehow so that 
 the test doesn't fail if further checkins are made using Mercurial. Read the
-documentation on "mocking" for guidance: the "intercepting and
+<A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>">documentation on "mocking"</A> for guidance: the "intercepting and
 replaying..." mechanism is probably most appropriate here. Record the interaction 
 with the "hg" program and check it looks sensible. You'll need to filter the
 sandbox directory too, but we did that in exercise 2 also.</div>
@@ -360,7 +360,7 @@ we can't see it being sent at all...
 </div>
 <div class="Text_Normal">
 Try creating an "smtplib" module as "importable test data", again as
-described in the document on "mocking" above. You probably want to read
+described in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>">documentation on "mocking"</A>. You probably want to read
 the automatic_build.py code to see how it will be used. Make it write out
 as much useful information as possible so we really test what email would
 be sent.
