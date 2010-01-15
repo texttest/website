@@ -266,6 +266,14 @@ specific one in the hierarchy will of course be chosen.
 <div class="Text_Normal">The values of the variables may themselves contain
 environment variables: if so, this should be done UNIX-style
 using $&lt;var_name&gt;.</div>
+<div class="Text_Normal">
+In a similar way to above, the value may also be unset using the following syntax:
+<?php codeSampleBegin() ?>
+MY_ENV_VAR:{CLEAR}
+<?php codeSampleEnd() ?>
+which will remove any setting of MY_ENV_VAR set by suites higher up the hierarchy,
+or from the shell from which TextTest was started. 
+</div>
 <div class="Text_Header">Using Properties Files to set Java Properties</div>
 <div class="Text_Normal">In Java, environment variables are not used so much and
 instead applications are generally configured via properties files. You can provide
