@@ -1,5 +1,8 @@
 <div class="Text_Main_Header">Running tests on a remote machine</div>
 <div class="Text_Description">(Without the aid of a grid engine)</div>				
+<div class="Text_Normal">
+<B><U>Note</U></B> : This functionality does not currently work on Windows. Most of the description below applies in principle but at the moment it generates a UNIX Bourne-shell script which is executed on the remote machine. 
+</div>
 <div class="Text_Header"><A NAME="-m"></A><A NAME="default_machine"></A><A NAME="remote_shell_program"></A><A NAME="remote_program_options"></A>Basic set-up</div>
 <div class="Text_Normal">
 On the Running/Basic tab in the static GUI, there is an entry "Run on machine".
