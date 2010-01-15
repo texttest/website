@@ -69,6 +69,17 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_SLAVE_CMD</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">&lt;source directory&gt;/bin/texttest.py</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_SLAVE_CMD">TextTest start-script for starting subsequent processes</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_TMP</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -83,7 +94,7 @@
 			<div class="Table_Text_Small">TEXTTEST_XVFB_WAIT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">30</div>
+			<div class="Table_Text_Small">15</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#TEXTTEST_XVFB_WAIT">Time to wait for Xvfb to set up connections</A></div>
