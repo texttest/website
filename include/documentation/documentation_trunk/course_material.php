@@ -153,8 +153,11 @@ The test is running in TextTest's temporary "sandbox" environment where there is
 such file.
 </div>
 <div class="Text_Normal">
-We should rectify this by populating that environment with suitable test
-data. Look at "copy_test_path" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A>
+We should rectify this by ensuring the sandbox environment gets populated with the file. TextTest identifies test data via local file names (in this case "file.txt") and searches the test and then each parent suite in turn for such a file. So you can tell it to pick up this file just by adding
+<?php codeSampleBegin() ?>
+copy_test_path:file.txt
+<?php codeSampleEnd() ?>
+to your config file as above. To understand better what is happening here you can look up "copy_test_path" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A>
 for help (or the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">page on "Test Data"</A> for a wider overview). 
 </div>
 <div class="Text_Normal">
