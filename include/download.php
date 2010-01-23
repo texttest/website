@@ -15,13 +15,13 @@
      are almost always quite usable. Anyone wishing to make changes should obviously get hold of this version also.
      The code is hosted on Launchpad and can be browsed online <a class="Text_Link" href="https://code.launchpad.net/~geoff.bache/texttest/trunk">here</A>. </div>
 <div class="Text_Normal">
-  To get hold of the latest version, you will need to install the <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>, as well as the other dependencies listed in the <A class="Text_Link" HREF="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=install_texttest">installation guide</A>. For ordinary installation, PyUseCase is bundled with TextTest but it is a separate Bazaar repository, so you need to check it out also. Start by doing "bzr checkout lp:pyusecase" and then running "python setup.py install" in the "lib" subdirectory of the checked out location. You can then just do "bzr checkout lp:texttest" to get the latest code and run "texttest.py" from the relevant "bin" directory.</A></div>
+  To get hold of the latest version, you will need to install the <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>, as well as the other dependencies listed in the <A class="Text_Link" HREF="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=install_texttest">installation guide</A>. For ordinary installation, PyUseCase is bundled with TextTest but it is a separate Bazaar repository, so you need to check it out also. Start by doing "bzr branch lp:pyusecase" and then running "python setup.py install" in the "lib" subdirectory of the checked out location. You can then just do "bzr branch lp:texttest" to get the latest code and run "texttest.py" from the relevant "bin" directory.</A></div>
 <div class="Text_Header">Contributing to TextTest: the self-tests and documentation</div>
 <div class="Text_Normal">
-Adding functionality isn't just a matter of writing code: new code also needs to be tested and documented before it's complete. You should therefore get the latest version of the self-tests also, this is done via "bzr checkout lp:/~geoff.bache/texttest/selftest-trunk". You can then run your changes against these tests and add new tests if you add new functionality.
+Adding functionality isn't just a matter of writing code: new code also needs to be tested and documented before it's complete. You should therefore get the latest version of the self-tests also, this is done via "bzr branch lp:/~geoff.bache/texttest/selftest-trunk". You can then run your changes against these tests and add new tests if you add new functionality.
 </div>
 <div class="Text_Normal">
-The self-tests expect you to set TEXTTEST_HOME to the parent directory of your checkout, they can then live alongside other tests you write in a single directory structure if you want to set it up like that. 
+The self-tests expect you to set TEXTTEST_HOME to the parent directory of your branch, they can then live alongside other tests you write in a single directory structure if you want to set it up like that. 
 </div>
 <div class="Text_Normal">
 On UNIX, you probably want to make sure you have Xvfb installed, otherwise you'll get lots of TextTest GUIs popping up on your screen when you run the GUI self-tests. 

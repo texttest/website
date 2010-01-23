@@ -19,14 +19,14 @@
      should obviously get hold of this version also.
      The code is hosted on Launchpad and can be browsed online <a class="Text_Link" href="https://code.launchpad.net/~geoff.bache/pyusecase/trunk">here</A>. </div>
    <div class="Text_Normal">
-     To get hold of the latest version, you will need to install the <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>. You can then just do "bzr checkout lp:pyusecase" to get the latest code.
+     To get hold of the latest version, you will need to install the <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>. You can then just do "bzr branch lp:pyusecase" to get the latest code.
    </div>
    <div class="Text_Header">Contributing to PyUseCase: the tests and documentation</div>
    <div class="Text_Normal">
-     PyUseCase is a work in progress and it doesn't support everything you could ever do in PyGTK. It supports what its users have needed so far, and there is a complete list of what is currently supported <a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_supported">here</A>. You are therefore reasonably likely to find that some widget in your application isn't supported, and you are of course encouraged to submit any changes you make back here. Adding functionality isn't just a matter of writing code: new code also needs to be tested and documented before it's complete. You should therefore get the latest version of the tests also, this is done via "bzr checkout lp:/~geoff.bache/pyusecase/selftest-trunk". You can then run your changes against these tests and add new tests if you add new functionality.
+     PyUseCase is a work in progress and it doesn't support everything you could ever do in PyGTK. It supports what its users have needed so far, and there is a complete list of what is currently supported <a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_supported">here</A>. You are therefore reasonably likely to find that some widget in your application isn't supported, and you are of course encouraged to submit any changes you make back here. Adding functionality isn't just a matter of writing code: new code also needs to be tested and documented before it's complete. You should therefore get the latest version of the tests also, this is done via "bzr branch lp:/~geoff.bache/pyusecase/selftest-trunk". You can then run your changes against these tests and add new tests if you add new functionality.
    </div>
    <div class="Text_Normal">
-     The self-tests expect you to set TEXTTEST_HOME to the parent directory of your checkout, they can then live alongside other tests you write in a single directory structure if you want to set it up like that. 
+     The self-tests expect you to set TEXTTEST_HOME to the parent directory of your branch, they can then live alongside other tests you write in a single directory structure if you want to set it up like that. 
    </div>
    <div class="Text_Normal">
      On UNIX, you probably want to make sure you have Xvfb installed, otherwise you'll get lots of GUIs popping up on your screen. 
