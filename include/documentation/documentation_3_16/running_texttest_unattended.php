@@ -39,7 +39,12 @@ look something like this (example newsgroup viewed in mozilla):</div>
 <div class="Text_Normal">As you see from this example, the title of the mail consists
 of the date and a summary of what tests were run and what
 happened to them (for the application &ldquo;Tail&rdquo;, in
-this case). If the -name option is provided to the run on the
+this case). Note that the date provided may not be quite what you expect as it changes at 8am local time,
+so runs before this time will be assigned the previous day's date. This is because the functionality is often
+used for "nightjobs" which may start either side of midnight, which would cause confusion if the date used
+was the actual local date.</div>
+<div class="Text_Normal">
+If the -name option is provided to the run on the
 command line, that name is used to define the run instead of the
 date. In general, use -name to test actual named releases, and
 the default date-functionality with nightjobs. (Note that "-name" also affects
