@@ -120,6 +120,7 @@ default. For check boxes provide &ldquo;0&rdquo; or &ldquo;1&rdquo;
 as appropriate. For radio buttons form the key by concatenating
 the label with the label for the specific button you want
 selected, and providing &ldquo;1&rdquo; also.</div>
+
 <div class="Text_Normal">In a similar way you can configure what options are presented
 in drop-down lists to the user, in the case of the text boxes.
 This is done via the &ldquo;gui_entry_options&rdquo; config file
@@ -144,8 +145,14 @@ include the version &quot;linux&quot; in a drop-down list for
 the &quot;Run this version&quot; text box and to set it to
 &ldquo;sparc&rdquo; by default. And finally the radio button on
 the &ldquo;Select Tests&rdquo; tab will select &ldquo;Refine&rdquo;
-
 instead of the default &ldquo;Discard&rdquo;</div>
+<div class="Text_Normal">
+As a special case, the "Test-file to search" box often contains a very long
+drop-down list if your application has a few different files, as it searches
+the test tree for all possible test-files. By making use of [gui_entry_options]
+in the same way for this box, you can cause these to appear at the top of the list.
+In this way you can identify files that you often want to search for.
+</div>
 <div class="Text_Normal">There is also the possibility to enable
 and configure GTK's entry completion functionality. This is separate
 from the drop-down boxes and works by guessing what you're typing
