@@ -45,8 +45,10 @@ which TextTest offers direct help with 3:
 	print a warning if the GUI library has too old a version. You
 	don't want to have to install an old version of in order to
 	test this. If you've written your program in Python or Java
-	<A class="Text_Link" href="#test_data">help is at hand:</A> you can simply write
-	your own version of the module (Python) or class (Java)</div>
+	help is at hand: you can simply <A class="Text_Link" href="#test_data">write
+	your own version</A> of the module (Python) or class (Java). If you're in Python,
+        you can also use a close relative of the mechanism above to <A class="Text_Link" href="#collect_traffic_py_module">
+        observing and reproduce what the Python module actually does </A>once, and then re-create those conditions for you later on.</div>
 	<div class="Text_Normal"><li><U>Databases</U>. These are good at global side effects
 	and changes in them are hard to reverse. The recommended
 	approach here is to find and use a file-based database which
@@ -142,6 +144,25 @@ setting, with the keys being the program names as provided for
 the environment variables. In this case these environment
 variables with their values will also be sent to TextTest and
 will be part of the information recorded.</div>
+
+<div class="Text_Header"><A NAME="collect_traffic_py_module"></A>
+Intercepting and replaying Python modules</div>
+<div class="Text_Normal">
+If your system under test is written in Python you can make use of a variation
+of this mechanism to intercept and replay the interaction with particular
+modules in a similar way to that described above. Examples would be things like
+"smtplib", "xmlrpclib" or "urllib" which may refer to resources that aren't
+always available where you want to run the tests, or which may cause undesirable
+global side effects.</div>
+<div class="Text_Normal">To enable this, add the name of the module concerned to the
+config file entry &ldquo;collect_traffic_py_module&rdquo;. For each
+test for which you want to mock out this program, go to the
+Advanced tab under &ldquo;Running&rdquo; and check the &ldquo;(Re-)
+record command-line traffic&rdquo; box in the same way as above. TextTest will then
+create its own fake version of the module and place it in the
+sandbox directory as if it were test data, whilst making sure this directory comes
+first in the PYTHONPATH environment variable.
+</div>
 <div class="Text_Header"><A NAME="distributed"></A><A NAME="TEXTTEST_MIM_SERVER"></A>Intercepting and replaying plain-text network messages</div>
 <div class="Text_Normal">The &ldquo;traffic interception&rdquo; mechanism can also be
 used for this purpose. Here it is less a matter of configuring
