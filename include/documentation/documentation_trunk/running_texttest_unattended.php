@@ -91,7 +91,7 @@ defaults are provided. On UNIX, the SMTP server defaults to
 default to &ldquo;$USER@localhost&rdquo;, so it is generally
 only necessary to configure the recipients.</div>
 
-<div class="Text_Header"><A NAME="batch_result_repository"></A><A NAME="historical_report_location"></A><A NAME="historical_report_page_name"></A><A NAME="historical_report_colours"></A><A NAME="batch.GenerateSummaryPage"></A>
+<div class="Text_Header"><A NAME="batch_result_repository"></A><A NAME="historical_report_location"></A><A NAME="historical_report_page_name"></A><A NAME="historical_report_colours"></A><A NAME="batch.GenerateSummaryPage"></A><A NAME="batch.GenerateGraphs"></A>
 Generating HTML reports</div>
 <div class="Text_Normal">For more flexibility in viewing and analysing a lot of
 results, as well as being able to easily monitor the behaviour
@@ -111,6 +111,11 @@ above so both can be varied per batch session. In order to
 actually generate the report, run with the -coll flag (see below)
 which will rebuild all the reports from scratch based on what is in the repository. 
 </div>
+<div class="Text_Normal">The easiest way to get a handle on what this looks like is to
+look at this <A class="Text_Link" target="_blank" href="include/documentation/<?php echo $version; ?>/htmlreport_example/index.html">small example</A>. Each day's results correspond to a column, while each test has a row. The
+results can be explored by clicking around. 
+For a real such page in active use,
+check out the <a href="index.php?page=nightjob" class="Text_Link">nightly runs of TextTest's self tests</A> page, which is updated every day with the latest status.</div>
 <div class="Text_Normal">
 By default, each application will be shown on a separate page named after that application.
 An index page ("dashboard") will be created at the top level which will link to all the application
@@ -120,6 +125,11 @@ alone : using "-s batch.GenerateSummaryPage batch=&lt;batch_session&gt;". The fo
 is determined by the file "summary_template.html" which will be copied to your repository
 the first time you build the pages. This can then be edited to e.g. add other relevant information
 and links to your dashboard page.</div>
+<div class="Text_Normal">
+At the top of each application page is a clickable graph that shows a summary of the test behaviour 
+over time. These graphs can also be generated alone by using "-s batch.GenerateGraphs batch=&lt;batch_session&gt;".
+Graphs generated in this way will currently include all runs which exist in the HTML pages.
+</div>
 <div class="Text_Normal"> 
 Sometimes though it can be useful to have several applications directly on the same page, especially
 if they don't have so many tests each. In this case you can set the config file entry 
@@ -127,10 +137,6 @@ if they don't have so many tests each. In this case you can set the config file 
 and all applications with the same value will appear on the same page. In this case no index/dashboard
 page will be generated.
 </div>
-<div class="Text_Normal">The easiest way to get a handle on what this looks like is to
-look at this <A class="Text_Link" target="_blank" href="include/documentation/<?php echo $version; ?>/htmlreport_example/test_normal.html">small example</A>. Each day's results correspond to a column, while each test has a row. The
-results can be explored by clicking around. For a real such page in active use,
-check out the <a href="index.php?page=nightjob" class="Text_Link">nightly runs of TextTest's self tests</A> page, which is updated every day with the latest status.</div>
 <div class="Text_Normal">The colours in the site are also configurable: use the config
 file dictionary setting &ldquo;historical_report_colours&rdquo;. To
 see how to set this, look at the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
