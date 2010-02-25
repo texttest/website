@@ -251,7 +251,7 @@ before positional arguments as best it can, but it isn't always possible to tell
 has no understanding of what arguments the SUT actually accepts. In the case of "-foo 1", the "1" could be an argument
 to the "-foo" option or it could be a separate positional argument. TextTest will assume the former in this case.
 </div>
-<div class="Text_Header">Using Environment Files to set Environment Variables</div>
+<div class="Text_Header"><A name="environment files"></A>Using Environment Files to set Environment Variables</div>
 <div class="Text_Normal">Any test suite or test case can tell TextTest to set
 environment variables by providing an environment file. This is
 a file called <B><B>environment.&lt;app&gt;</B></B> or just
@@ -274,7 +274,7 @@ MY_ENV_VAR:{CLEAR}
 which will remove any setting of MY_ENV_VAR set by suites higher up the hierarchy,
 or from the shell from which TextTest was started. 
 </div>
-<div class="Text_Header">Using Properties Files to set Java Properties</div>
+<div class="Text_Header"><A name="properties files"></A>Using Properties Files to set Java Properties</div>
 <div class="Text_Normal">In Java, environment variables are not used so much and
 instead applications are generally configured via properties files. You can provide
 these files in much the same way as environment files described above. This is

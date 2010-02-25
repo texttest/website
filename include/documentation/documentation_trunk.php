@@ -53,7 +53,7 @@
 			    	         <?php  printLI("texttest_sandbox","Managing test data","The TextTest sandbox : providing test data and avoiding global effects"); ?>
                                          <?php  printLI("run_dependent_text","Filtering the output","How to filter out run-dependent text from the output of your application, so that the compared result is deterministic"); ?>
 			    	         <?php  printLI("extra_files","Tests that write files","Description of the various ways to monitor files that are written as part of the tests"); ?>
-                                         <?php  printLI("file_formats","File formats","Full reference for the formats of all TextTest configuration files"); ?>
+                                         <?php  printLI("file_formats","File formats","Full reference for the formats of all TextTest configuration files"); ?> 
 				</div>
 		      </td>
 		      <td>
@@ -71,7 +71,7 @@
 			    	 <?php  printLI("running_tests_remotely","Running tests remotely","Running tests on remote machines without the aid of a grid engine"); ?>
 			    	 <?php  printLI("running_tests_in_parallel","Running tests in parallel","Using Sun Grid Engine or LSF to run all your tests in parallel"); ?>
 			    	 <?php  printLI("writing_a_config_module","Write your own configuration","Using the Python-framework aspect of Texttest to override parts of its behaviour"); ?>
-			
+                                 <?php  printLI("testing_java_with_texttest","Tips for testing Java","Ragbag of Java-specific information and hints"); ?>
 		      </div>
 		      </td>
 		      <td>
