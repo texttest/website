@@ -7,14 +7,17 @@
 <div class="Text_Header"><A NAME="-b"></A>Introduction</div>
 <div class="Text_Normal">It can be very useful to have TextTest run lots of longer
 tests (say) overnight and provide the results in an email or
-HTML report rather than have one of the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>">interactive
+HTML report or on your CI server rather than have one of the 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>">interactive
 user interfaces</A> present. That is the purpose of &ldquo;batch
 mode&rdquo;. To select batch mode, provide the command line
 option &ldquo;-b &lt;batch_session&gt;&rdquo; or fill in the
 &ldquo;Run Batch Mode Session&rdquo; tab under &ldquo;How to
 Run&rdquo; in the static GUI. In general, you will probably want
 to start such batch runs via a script, for example using crontab
-on UNIX.</div>
+on UNIX. TextTest can also produce results
+in a format compatible with JUnit, which means popular CI servers
+(for example Hudson) can display them in the same way as unit test results.</div>
 
 <div class="Text_Normal">The batch mode &ldquo;session&rdquo; is simply an identifier
 that defines a particular sort of batch run. Most of the batch
@@ -90,6 +93,33 @@ defaults are provided. On UNIX, the SMTP server defaults to
 &ldquo;localhost&rdquo; and both sender and recipient addresses
 default to &ldquo;$USER@localhost&rdquo;, so it is generally
 only necessary to configure the recipients.</div>
+
+<div class="Text_Header"><A NAME="batch_junit_format"></A><A NAME="batch_junit_folder"></A>
+Producing results in JUnit format for display in CI server</div>
+<div class="Text_Normal">
+Many teams use a CI server and keep up-to-date information about test status available
+to all developers at all times. In order to integrate texttest with these systems, 
+ there is an option &ldquo;batch_junit_format&rdquo;
+which allows you to generate
+texttest results in the same format that JUnit uses.  
+Most CI servers will understand 
+this format, and this makes it easy to plug TextTest into existing build systems. 
+The drawback of the JUnit format results is that some information is lost compared with the other formats. You will
+likely want to have the email as well. The CI server will give a basic indication
+that something is wrong, which you then investigate by looking at the email and/or
+reconnecting to the failed tests.
+</div>
+<div class="Text_Normal"> If you set &ldquo;batch_junit_format&rdquo; in your config file, then
+texttest will produce a folder "junitformat" in the run directory (under TEXTTEST_SANDBOX),
+and under there a subfolder for each application's test results.
+Each folder contains one xml file per test. Ant has a task "junitreport" that can collect 
+all the xml files for one application together and produce a composite xml file and html report.
+There is an additional option &ldquo;batch_junit_folder&rdquo;
+which allows you to specify a different folder, (instead of "junitformat"), where the xml files should be written.
+</div> 
+<div class="Text_Normal">Note: if you 
+are using TextTest with Java, you may want to look at <this new page> for more tips.
+</div> 
 
 <div class="Text_Header"><A NAME="batch_result_repository"></A><A NAME="historical_report_location"></A><A NAME="historical_report_page_name"></A><A NAME="historical_report_colours"></A><A NAME="batch.GenerateSummaryPage"></A><A NAME="batch.GenerateGraphs"></A>
 Generating HTML reports</div>
