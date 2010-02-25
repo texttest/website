@@ -69,8 +69,8 @@ view_program:gedit
               <li>ignoring certain changes in a data structure</li>
               <li>more advanced filtering</li>
               <li>using TextTest to "record" what some external program does and later replay those responses</li>
+              <li>using a similar mechanism with a Python standard library module instead of a command-line program</li>
               <li>writing your own fake version of an external program</li>
-              <li>writing your own fake version of a Python standard library module</li>
             </UL>
           </div></li>
 </UL>
@@ -350,8 +350,7 @@ When the test for the build triggering and succeeding is working, you can
 then deliberately introduce a compilation failure and repeat, to create a
 test for the build failing.</div>
 <div class="Text_Normal">
-You should now have 3 repeatable tests, congratulations! Fixing up the
-rest will require writing a bit of python code.
+You should now have 3 repeatable tests, congratulations!
 </div>
 <div class="Text_Header">5.7 Disable and test the email sending</div>
 <div class="Text_Normal">
@@ -361,11 +360,12 @@ they're sent correctly. All the more so if our "real" mail sending is broken and
 we can't see it being sent at all...
 </div>
 <div class="Text_Normal">
-Try creating an "smtplib" module as "importable test data", again as
-described in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>">documentation on "mocking"</A>. You probably want to read
-the automatic_build.py code to see how it will be used. Make it write out
-as much useful information as possible so we really test what email would
-be sent.
+Our test program is written in Python so we can use a feature specific to Python programs
+that can intercept the email-sending module "smtplib" in a similar way to how we handled
+the command-line "hg" program above. See <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>#collect_traffic_py_module">here</A> for documentation of this setting. 
+</div>
+<div class="Text_Normal">
+We can then "record" the email sending and check the email arrives and looks right, and then when running the test check our interaction with the "smtplib" module remains the same as when we recorded it.
 </div>
 <div class="Text_Header">5.8 Simulate the remote build</div>
 <div class="Text_Normal">
