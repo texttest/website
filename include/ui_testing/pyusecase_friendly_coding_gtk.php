@@ -1,10 +1,10 @@
-<div class="Text_Header">Hints on how to write code that PyUseCase can handle</div>
+<div class="Text_Header">Hints on how to write PyGTK code that PyUseCase can handle</div>
 <div class="Text_Normal">
 The ideal of course is that PyUseCase could take your application and just work "out of the box". In many applications, particularly simpler ones, this will hopefully be the case. This page gives you a guide to how you can change your code to make it work with PyUseCase if it doesn't do so out of the box. Naming the occasional widget is inherently necessary to its way of working, while there are also for example cases where PyGTK offers you several routes to the same end, but PyUseCase can only handle one of the alternatives.
 </div>
 <div class="Text_Header">Widget Naming</div>
 <div class="Text_Normal">
-As discussed elsewhere, PyUseCase identifies widgets by Name, Title, Label and Type, in that order of preference. Many widgets simply don't have a Title or a Label attached to them and hence if you don't set names on them, they will be identified by Type, which will not work if you have more than one of them. Besides this, widgets titles and labels may not be unique, or they may change depending on e.g. today's date. It's fair to say that almost every non-trivial application is going to need to set at least some widget names before PyUseCase will work smoothely.</div>
+As discussed elsewhere, PyUseCase identifies widgets by Name, Title, Label and Type, in that order of preference. Many widgets simply don't have a Title or a Label attached to them and hence if you don't set names on them, they will be identified by Type, which will not work if you have more than one of them. Besides this, widget titles and labels may not be unique, or they may change depending on e.g. today's date. It's fair to say that almost every non-trivial application is going to need to set at least some widget names before PyUseCase will work smoothely.</div>
 <div class="Text_Normal">
 If doing so on a gtk.Widget, just set the widget name as normal :
 <?php codeSampleBegin() ?>

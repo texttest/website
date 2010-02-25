@@ -59,8 +59,10 @@ function printLI($n,$realName,$title)
                   <?php  printLI("pyusecase_intro","Basic command-line usage","Using PyUseCase on the command line"); ?>
 	          <?php  printLI("pyusecase_texttest","Usage with TextTest", "Using PyUseCase together with TextTest to create tests"); ?>
                   <?php  printLI("pyusecase_additional","Additional Features", "How to do Application Events, GUI shortcuts and signal recording in PyUseCase"); ?>
-                  <?php  printLI("pyusecase_friendly_coding","PyUseCase-friendly coding", "Tips to developers for how to write code that will create nice tests with PyUseCase"); ?>
-                  <?php  printLI("pyusecase_supported","Supported Widgets", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("pyusecase_friendly_coding_gtk","PyUseCase-friendly coding (PyGTK)", "Tips to developers for how to write code that will create nice tests with PyUseCase and PyGTK"); ?>
+                  <?php  printLI("pyusecase_supported_gtk","Supported Widgets (PyGTK)", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("pyusecase_friendly_coding_tkinter","PyUseCase-friendly coding (Tkinter)", "Tips to developers for how to write code that will create nice tests with PyUseCase and Tkinter"); ?>
+                  <?php  printLI("pyusecase_supported_tkinter","Supported Widgets (Tkinter)", "Tkinter widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
                 </div>
 	      </td>
 	      <td>
