@@ -1,13 +1,10 @@
 <div class="Text_Main_Header">Running TextTest Unattended</div>
 <div class="Text_Description"> A Guide to Batch Mode</div>
 
-<div class="Text_Normal"><BR>
-</div>
-
 <div class="Text_Header"><A NAME="-b"></A>Introduction</div>
 <div class="Text_Normal">It can be very useful to have TextTest run lots of longer
-tests (say) overnight and provide the results in an email or
-HTML report or on your CI server rather than have one of the 
+tests (say) overnight and provide the results in an email, an
+HTML report or on your continuous integration server rather than have one of the 
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>">interactive
 user interfaces</A> present. That is the purpose of &ldquo;batch
 mode&rdquo;. To select batch mode, provide the command line
@@ -17,7 +14,7 @@ Run&rdquo; in the static GUI. In general, you will probably want
 to start such batch runs via a script, for example using crontab
 on UNIX. TextTest can also produce results
 in a format compatible with JUnit, which means popular CI servers
-(for example Hudson) can display them in the same way as unit test results.</div>
+(for example <A class="Text_Link" href="http://hudson-ci.org">Hudson</A>) can display them in the same way as unit test results.</div>
 
 <div class="Text_Normal">The batch mode &ldquo;session&rdquo; is simply an identifier
 that defines a particular sort of batch run. Most of the batch
@@ -95,7 +92,7 @@ default to &ldquo;$USER@localhost&rdquo;, so it is generally
 only necessary to configure the recipients.</div>
 
 <div class="Text_Header"><A NAME="batch_junit_format"></A><A NAME="batch_junit_folder"></A>
-Producing results in JUnit format for display in CI server</div>
+Producing results in JUnit format for display in a continuous integration server</div>
 <div class="Text_Normal">
 Many teams use a CI server and keep up-to-date information about test status available
 to all developers at all times. In order to integrate texttest with these systems, 

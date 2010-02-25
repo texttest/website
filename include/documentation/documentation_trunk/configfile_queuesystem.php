@@ -39,7 +39,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">base_version</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">List</div>
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
@@ -102,6 +102,34 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_filter_file">Generic filter for batch session, more flexible than timelimit</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">batch_junit_folder</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_junit_folder">Which folder to write test results in junit format in batch mode. Only useful together with batch_junit_format</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">batch_junit_format</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">false</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_junit_format">Do we write out results in junit format in batch mode</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -382,6 +410,20 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_py_module">List of Python modules to intercept</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">collect_traffic_use_threads</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">true</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_use_threads">Whether to enable threading, and hence concurrent requests, in traffic mechanism</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

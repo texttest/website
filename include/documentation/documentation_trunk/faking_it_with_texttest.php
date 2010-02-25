@@ -107,8 +107,7 @@ temporary write directory as if it were test data, as above.</div>
 given back to TextTest via a socket. TextTest will then execute
 it, and record to a new definition file called &ldquo;traffic.&lt;app&gt;&rdquo;
 what the command line given was, what was returned on standard
-output and standard error and what the exit status was. 
-</div>
+output and standard error and what the exit status was. </div>
 <div class="Text_Normal">
 Additionally,
 TextTest will scan the command line for arguments that appear to be files or directories (it will
@@ -145,7 +144,7 @@ the environment variables. In this case these environment
 variables with their values will also be sent to TextTest and
 will be part of the information recorded.</div>
 
-<div class="Text_Header"><A NAME="collect_traffic_py_module"></A>
+<div class="Text_Header"><A NAME="collect_traffic_py_module"></A><A NAME="collect_traffic_use_threads"></A>
 Intercepting and replaying Python modules</div>
 <div class="Text_Normal">
 If your system under test is written in Python you can make use of a variation
@@ -162,6 +161,14 @@ record command-line traffic&rdquo; box in the same way as above. TextTest will t
 create its own fake version of the module and place it in the
 sandbox directory as if it were test data, whilst making sure this directory comes
 first in the PYTHONPATH environment variable.
+</div>
+<div class="Text_Normal">
+By default each such request will be handled by a separate thread so that concurrent
+calls can be handled correctly (which is also true of the command-line and network traffic
+interception). Some modules (e.g. Windows COM) however do not appreciate successive calls
+being made from different threads, and in this case it's necessary to enforce a single-threaded
+mode for TextTest's "traffic server". This can be done by setting "collect_traffic_use_threads:false" in your
+config file.
 </div>
 <div class="Text_Header"><A NAME="distributed"></A><A NAME="TEXTTEST_MIM_SERVER"></A>Intercepting and replaying plain-text network messages</div>
 <div class="Text_Normal">The &ldquo;traffic interception&rdquo; mechanism can also be
