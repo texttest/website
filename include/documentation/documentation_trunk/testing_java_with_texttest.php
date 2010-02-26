@@ -1,7 +1,7 @@
 <div class="Text_Main_Header">Testing Java programs with TextTest</div>
 <div class="Text_Description"> Useful tips for Java programmers</div>
 
-<div class="Text_Header"><A NAME="-b"></A>Introduction</div>
+<div class="Text_Header">Introduction</div>
 <div class="Text_Normal">TextTest was originally built to test C, C++ and 
 Python programs, and it isn't always obvious how to use it to test programs
 written in Java. This article hopes to give some pointers.
@@ -22,7 +22,7 @@ which will grey out the executable so you don't actually need to choose a file.<
 If your program is a jar file, just locate it using the "executable" file chooser and leave the "Java Class name"
 blank.
 </div>
-<div class="Text_Header"><A NAME="-b"></A>Setting the Classpath</div>
+<div class="Text_Header">Setting the Classpath</div>
 <div class="Text_Normal">
 If you program is of any size larger than "Hello World", you're
 going to also want to set the classpath. The easiest way to fix this is to put the correct classpath into the $CLASSPATH
@@ -35,7 +35,7 @@ CLASSPATH:c:\workspace\myproject\build\eclipse;c:\workspace\myproject\dep-lib\so
 So now hopefully TextTest will be able to run your java program, and you can use all the usual
 mechanisms to give command line arguments to your program, copy input files into the sandbox directory, and collect output files for comparison.
 </div>
-<div class="Text_Header"><A NAME="-b"></A>A note on System properties</div>
+<div class="Text_Header">A note on System properties</div>
 <div class="Text_Normal">
 Sometimes you want to pass arguments to java itself rather than your program. These
 can be System Properties that your application needs, or things like initial and maximum heap size.
@@ -68,7 +68,7 @@ this near the start of your main method should do the trick:
 <div class="Text_Normal">
 In general Java properties in arbitrary properties files can be set according to the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#properties files">properties file mechanism</A>. 
 </div>
-<div class="Text_Header"><A NAME="-b"></A>Using Ant to set your CLASSPATH</div>
+<div class="Text_Header">Using Ant to set your CLASSPATH</div>
 <div class="Text_Normal">
 Maintaining a classpath by hand in the "environment.myapp" file, 
 and keeping it in sync with your IDE becomes a hassle. This is where
@@ -108,7 +108,7 @@ Then in your ant build.xml you can write something like:
 (${basedir}/texttest is my $TEXTTEST_HOME in this case). Then Ant will generate the environment.myapp file
 for you with the correct classpath.
 </div>
-<div class="Text_Header"><A NAME="-b"></A>Using Ant to run your tests in batch mode</div>
+<div class="Text_Header">Using Ant to run your tests in batch mode</div>
 <div class="Text_Normal"> 
 The next thing you're going to want to do with ant is to get it to run your TextTest tests unattended.
 If you're using a Continuous Integration server like Hudson, you will want it to run your tests there.
@@ -195,7 +195,7 @@ display pretty graphs of the results and links to summaries of failures. I assum
 other CI servers have similar mechanisms.
 </div>
 
-<div class="Text_Header"><A NAME="-b"></A>Using TextTest to run your JUnit tests</div>
+<div class="Text_Header">Using TextTest to run your JUnit tests</div>
 <div class="Text_Normal">
 Sometimes it is useful to have TextTest run all of your tests, including unit tests.
 Sometimes you want to write half of the test in JUnit and have TextTest check the files
