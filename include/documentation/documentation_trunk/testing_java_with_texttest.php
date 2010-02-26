@@ -15,20 +15,12 @@ java com.mycompany.MyClass
 <?php codeSampleEnd() ?>
 
 So you start TextTest with the --new option so you can start creating a new test suite for it.
-TextTest then lets you name the application, say "myapp", decide where to store the tests, and asks you where
-the executable is. First problem. There is no single executable, this is a Java program. 
-Just choose any file on your file system, you can fix this in a moment. (This will hopefully be fixed in the future).
-</div>
+TextTest then lets you name the application, say "myapp", and decide where to store the tests. 
+There is an additional field for a Java class name. Enter "com.mycompany.MyClass" in this field,
+which will grey out the executable so you don't actually need to choose a file.</div>
 <div class="Text_Normal">
-Once TextTest opens, click on the "config" tab, and open "config.myapp". You want to edit the 
-"executable" to be the name of your main class, and add the option "interpreter". Like this:
-<?php codeSampleBegin() ?>
-# config.myapp
-# Full path to the System Under Test
-executable:com.mycompany.MyClass
-interpreter:java
-<?php codeSampleEnd() ?>
-Now TextTest should be able to run your Java program. 
+If your program is a jar file, just locate it using the "executable" file chooser and leave the "Java Class name"
+blank.
 </div>
 <div class="Text_Header"><A NAME="-b"></A>Setting the Classpath</div>
 <div class="Text_Normal">
