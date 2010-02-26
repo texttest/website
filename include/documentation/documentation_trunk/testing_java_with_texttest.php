@@ -199,14 +199,10 @@ other CI servers have similar mechanisms.
 <div class="Text_Normal">
 Sometimes it is useful to have TextTest run all of your tests, including unit tests.
 Sometimes you want to write half of the test in JUnit and have TextTest check the files
-produced. Anyway, it is not hard to get TextTest to run JUnit tests. 
-If you have a JUnit test case com.companyMyTest, you could write in your config file
-something like this:
-<?php codeSampleBegin() ?>
-interpreter:java
-executable:org.junit.runner.JUnitCore
-<?php codeSampleEnd() ?>
-Then have your options file in each TextTest test contain the name of the JUnit test case:
+produced. Anyway, it is not hard to get TextTest to run JUnit tests. Start by creating
+a new test suite with "texttest.py --new", and then write "org.junit.runner.JUnitCore"
+as the Java class name.
+Then have your command line options in each TextTest test contain the name of the JUnit test case:
 <?php codeSampleBegin() ?>
 com.mycompany.MyTest
 <?php codeSampleEnd() ?>
