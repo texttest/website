@@ -417,3 +417,18 @@ you still may have to click away the window manually.
 This option applies to the interactive modes as well but in batch mode
 it is most useful. 
 </div>
+<div class="Text_Header"><A NAME="kill_command"></A>Killing Tests on Windows</div>
+<div class="Text_Normal">Unfortunately there is no easy and generic way
+to kill a process tree (that is a process and all processes started by it)
+which works reliably with all Windows versions. The default
+implementation in texttest is a call to a Windows system function
+which kills the process but no descendants. At least on WinXP
+there is a tool called "taskkill" which allows to kill a complete tree.
+Since the tool may be called differently on other versions of the OS
+or may need different options, the &ldquo;kill_command&rdquo; can be used
+to specify the exact call which is append by the process id. Thus
+to achieve a tree kill on Windows XP try something like
+&ldquo;kill_command:taskkill /F /T /PID&rdquo;, where the /F is for
+force and the /T for tree killing. The option &ldquo;kill_command&rdquo;
+does nothing on posix operating systems.
+</div>
