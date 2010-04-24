@@ -421,14 +421,17 @@ it is most useful.
 <div class="Text_Normal">Unfortunately there is no easy and generic way
 to kill a process tree (that is a process and all processes started by it)
 which works reliably with all Windows versions. The default
-implementation in texttest is a call to a Windows system function
-which kills the process but no descendants. At least on WinXP
-there is a tool called "taskkill" which allows to kill a complete tree.
-Since the tool may be called differently on other versions of the OS
-or may need different options, the &ldquo;kill_command&rdquo; can be used
+implementation in texttest is a call to a Windows system tool called
+"taskkill" which allows to kill a complete tree.
+This tool is available at least on WinXP and successors. The fallback
+(in case a call to taskkill fails) is a system function
+which kills the process but no descendants.
+Since there may be different tools on other versions of the OS
+or taskkill may need different options, the &ldquo;kill_command&rdquo; can be used
 to specify the exact call which is append by the process id. Thus
-to achieve a tree kill on Windows XP try something like
-&ldquo;kill_command:taskkill /F /T /PID&rdquo;, where the /F is for
-force and the /T for tree killing. The option &ldquo;kill_command&rdquo;
+to make thee tree kill on Windows XP less agressive, try something like
+&ldquo;kill_command:taskkill /T /PID&rdquo;, which leaves out the /F is for
+force from the default call but still has the /T for tree killing.
+The option &ldquo;kill_command&rdquo;
 does nothing on posix operating systems.
 </div>
