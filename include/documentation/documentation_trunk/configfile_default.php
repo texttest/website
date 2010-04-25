@@ -574,7 +574,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">builtin : environment, properties, testsuite, options, input, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
+			<div class="Table_Text_Small">builtin : environment, properties, testsuite, options, interpreter_options, input, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
@@ -798,7 +798,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
+			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>incomplete_bg : #8B1A1A<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_colours">Colours to use for historical batch HTML reports</A></div>
@@ -830,6 +830,20 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_page_name">Header for page on which this application should appear</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">historical_report_piechart_summary</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary (String)</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">false</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Generate pie chart summary page rather than default HTML tables.</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -956,6 +970,20 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#interpreter">Program to use as interpreter for the SUT</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">kill_command</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">taskkill /F /T /PID</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#kill_command">Kill command to use on non-posix machines</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1456,7 +1484,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
+			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>incomplete_bg : #8B1A1A<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Alias. See entry for 'historical_report_colours'</div>
