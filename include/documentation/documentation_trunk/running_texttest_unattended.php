@@ -428,10 +428,10 @@ This tool is available at least on WinXP and successors. The fallback
 which kills the process but no descendants.
 Since there may be different tools on other versions of the OS
 or taskkill may need different options, the &ldquo;kill_command&rdquo; can be used
-to specify the exact call which is append by the process id. Thus
-to make thee tree kill on Windows XP less agressive, try something like
-&ldquo;kill_command:taskkill /T /PID&rdquo;, which leaves out the /F is for
-force from the default call but still has the /T for tree killing.
+to specify the exact call : TextTest will append the process ID to what is provided. Thus
+to make the tree kill on Windows XP less aggressive, try something like
+&ldquo;kill_command:taskkill /T /PID&rdquo;, which leaves out the /F meaning
+"force" from the default call but still has the /T for tree killing.
 The option &ldquo;kill_command&rdquo;
-does nothing on posix operating systems.
+does nothing on POSIX-based operating systems.
 </div>
