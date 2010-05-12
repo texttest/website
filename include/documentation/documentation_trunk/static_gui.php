@@ -46,7 +46,8 @@ will have three sub-tabs. The tabs &ldquo;Basic&rdquo; and
 things about how the tests will be run. At the start the default
 options should be sufficient. (Note that the tabs are
 essentially a graphical representation of all command line
-options that can be given to the dynamic GUI) 
+options that can be given to the dynamic GUI. See the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=options_default"; ?>">table</A> which lists them
+all and describes what they do) 
 </div>
 
 <div class="Text_Normal">Once you are happy with these, press &ldquo;Run&rdquo; (on

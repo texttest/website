@@ -1,6 +1,14 @@
 <div class="Text_Main_Header">List of options when submitting test runs</div>
 <div class="Text_Header"><i>(using the queuesystem configuration)</i></div>
 <div class="Text_Normal">
+This table documents both command-line options that can be given to TextTest, and the various
+options in the Selection and Running tabs in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=static_gui"; ?>">Static GUI</A>, which are automatically generated
+from it. Anything marked with "&lt;value&gt;" takes an argument on the command line, and will be
+a text box in the GUI: anything with "&lt;value&gt;,..." takes a comma-separated list of arguments
+on the command line or in its corresponding text box. Anything without that is a "switch", i.e. it
+doesn't take any argument on the command line and will appear as a check button or radio button 
+in the GUI. The "Brief Text" in the final column corresponds to the labels in the Static GUI.
+</div><div class="Text_Normal">
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
@@ -26,13 +34,13 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-a &lt;value&gt;</div>
+			<div class="Table_Text_Small">-a &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Selection</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#-a">Select app names containing &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#-a">Select app names containing &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -70,13 +78,13 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-c &lt;value&gt;</div>
+			<div class="Table_Text_Small">-c &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Basic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#-c">Use checkout &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#-c">Use checkout &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -136,24 +144,24 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-f &lt;value&gt;</div>
+			<div class="Table_Text_Small">-f &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Selection</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-f">Select tests listed in file &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-f">Select tests listed in file &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-fintersect &lt;value&gt;</div>
+			<div class="Table_Text_Small">-fintersect &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-fintersect">Tests in all files &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-fintersect">Tests in all files &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -169,13 +177,13 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-funion &lt;value&gt;</div>
+			<div class="Table_Text_Small">-funion &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">N/A</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-funion">Tests in any of files &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-funion">Tests in any of files &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -422,35 +430,35 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-t &lt;value&gt;</div>
+			<div class="Table_Text_Small">-t &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Selection</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-t">Select test names containing &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-t">Select test names containing &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-ts &lt;value&gt;</div>
+			<div class="Table_Text_Small">-ts &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Selection</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-ts">Select test paths containing &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-ts">Select test paths containing &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-v &lt;value&gt;</div>
+			<div class="Table_Text_Small">-v &lt;value&gt;,...</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Basic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#-v">Run this version &lt;value&gt;</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#-v">Run this version &lt;value&gt;,...</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
