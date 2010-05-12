@@ -144,7 +144,7 @@ the environment variables. In this case these environment
 variables with their values will also be sent to TextTest and
 will be part of the information recorded.</div>
 
-<div class="Text_Header"><A NAME="collect_traffic_py_module"></A><A NAME="collect_traffic_use_threads"></A>
+<div class="Text_Header"><A NAME="collect_traffic_py_module"></A><A NAME="collect_traffic_use_threads"></A><A NAME="collect_traffic_py_attributes"></A>
 Intercepting and replaying Python modules</div>
 <div class="Text_Normal">
 If your system under test is written in Python you can make use of a variation
@@ -160,7 +160,25 @@ Advanced tab under &ldquo;Running&rdquo; and check the &ldquo;(Re-)
 record command-line traffic&rdquo; box in the same way as above. TextTest will then
 create its own fake version of the module and place it in the
 sandbox directory as if it were test data, whilst making sure this directory comes
-first in the PYTHONPATH environment variable.
+first in the PYTHONPATH environment variable.</div>
+<div class="Text_Normal">
+In additional to intercepting entire modules, you can also intercept and replay individual function calls 
+to particular methods. A good example is the current date (datetime.date.today() in Python) so that you
+can test code that depends on it without needing to write any code to fake what it does. For this
+purpose you can use "collect_traffic_py_attributes", which is keyed on individual modules. To intercept
+this call you would therefore do as follows.
+<?php codeSampleBegin() ?>
+collect_traffic_py_module:datetime
+
+[collect_traffic_py_attributes]
+datetime:date.today
+
+<?php codeSampleEnd() ?>
+
+If "collect_traffic_py_attributes" is empty for any given module it is assumed that all calls to it are to
+be intercepted. In the above case, any usage of "datetime" that didn't call "datetime.date.today" would
+just behave as normal.
+
 </div>
 <div class="Text_Normal">
 By default each such request will be handled by a separate thread so that concurrent
