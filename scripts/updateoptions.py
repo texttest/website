@@ -10,6 +10,7 @@ def makeConfigFile(configFileName, configModule):
     # Here so they end up in the write GUI tab in the docs
     configFile.write("use_case_record_mode:GUI\n")
     configFile.write("create_catalogues:true\n")
+    configFile.write("performance_test_machine:any\n")
     configFile.write("partial_copy_test_path:nonsense\n")
     configFile.write("\n")
     configFile.close()
