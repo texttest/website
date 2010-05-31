@@ -73,16 +73,16 @@ Sometimes the values in the dictionary are themselves lists. In this case the sy
 obvious combination with the "list syntax" described above. For example "run_dependent_text" has this form:
 <?php codeSampleBegin() ?>
 [run_dependent_text]
-output:Filter this line
-output:And lines like this
+stdout:Filter this line
+stdout:And lines like this
 <?php codeSampleEnd() ?>
 Such sections do not need special termination if they are followed by other sections. If they are followed
 by ordinary String, Int or List settings though, they must be terminated with [end]. For example,
 combining some previous examples :
 <?php codeSampleBegin() ?>
 [run_dependent_text]
-output:Filter this line
-output:And lines like this
+stdout:Filter this line
+stdout:And lines like this
 # Can also write [end] here too but isn't necessary
 
 [window_size]

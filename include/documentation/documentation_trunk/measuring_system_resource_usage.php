@@ -123,8 +123,8 @@ hh:mm:ss for times. It will then generate a file
 performance file above.</div>
 
 <div class="Text_Normal">The file to be searched is identified primarily by the config
-file entry &ldquo;log_file&rdquo;. This defaults to &ldquo;output&rdquo;,
-i.e. the standard output of the SUT. You may need to search
+file entry &ldquo;log_file&rdquo;. This defaults to the standard output of the SUT, i.e.
+the string "stdout" or "output" depending on your naming scheme. You may need to search
 different files for different entries, in which case the entry
 &ldquo;performance_logfile&rdquo; is of use. This has the same
 form as above, except that the value is the file stem of the

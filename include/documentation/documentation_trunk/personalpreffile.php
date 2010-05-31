@@ -42,7 +42,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : orange<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
+			<div class="Table_Text_Small">clipboard_copy : grey60<BR>clipboard_cut : red<BR>default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : orange<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#file_colours">Colours to use for each file state</A></div>
@@ -182,7 +182,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : orange<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
+			<div class="Table_Text_Small">clipboard_copy : grey60<BR>clipboard_cut : red<BR>default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : orange<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#test_colours">Colours to use for each test state</A></div>

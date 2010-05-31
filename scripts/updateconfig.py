@@ -8,6 +8,8 @@ def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
     configFile.write("config_module:" + configModule)
     configFile.write("\n")
+    configFile.write("filename_convention_scheme:standard")
+    configFile.write("\n")
     configFile.close()
 
 def getConfigData(texttestPath, configModule, osName, script):

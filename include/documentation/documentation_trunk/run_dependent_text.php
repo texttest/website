@@ -20,8 +20,9 @@ that can be performed on your application's output before it is compared with th
 
 <div class="Text_Normal">This is controlled primarily by the config file dictionary
 entry 'run_dependent_text', whose keys corresponding to the
-TextTest name of the file : i.e. the stem of the file name. This could be "output" or
-"errors" for the standard output and error of the application, or it could be the
+TextTest name of the file : i.e. the stem of the file name. This could be "stdout" or
+"stderr" for the standard output and error of the application (alternatively "errors" and "output" using
+the classic naming scheme), or it could be the
 name of a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files";?>">collated file</A> (See also the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">file format documentation</A>
 for more details of this). It should take this form:</div>
 
@@ -58,8 +59,8 @@ For example:</div>
 
 <?php codeSampleBegin() ?>
 [run_dependent_text]
-output:Process ID
-output:[0-9][0-9]:[0-9][0-9]
+stdout:Process ID
+stdout:[0-9][0-9]:[0-9][0-9]
 my_file:Machine name
 <?php codeSampleEnd() ?>
 
@@ -130,9 +131,9 @@ specific to this entry. This is defined as follows:
 <div class="Text_Normal">
 <?php codeSampleBegin() ?>
 [run_dependent_text]
-output:Process ID{WORD 3}
-output:[0-9][0-9]:[0-9][0-9]{LINES 3}
-errors:{LINE 1}
+stdout:Process ID{WORD 3}
+stdout:[0-9][0-9]:[0-9][0-9]{LINES 3}
+stderr:{LINE 1}
 my_file:Machine name{-&gt;}End of Machines Section
 my_file:{INTERNAL writedir}{REPLACE &lt;texttest write dir}
 <?php codeSampleEnd() ?>
@@ -184,14 +185,14 @@ floating point data in your input and only report them as a difference if
 they exceed the tolerance specified, e.g.
 <?php codeSampleBegin() ?>
 [floating_point_tolerance]
-output:0.0101
+stdout:0.0101
 <?php codeSampleEnd() ?>
 will report differences only if two floating point values in the standard output differ
 by more than 0.0101, thus 6.00 will be &ldquo;equal&rdquo; to 6.01.
 The following setting
 <?php codeSampleBegin() ?>
 [relative_float_tolerance]
-output:0.01
+stdout:0.01
 <?php codeSampleEnd() ?>
 will allow for deviations up to 1%, which means 6.00 is still &ldquo;equal&rdquo;
 to 6.01 but 0.51 against 0.52 does not match (which would be tolerated with

@@ -160,8 +160,7 @@ much effort, you can set the &ldquo;auto_sort_test_suites&rdquo;
 config file setting to &ldquo;1&rdquo;. The order in the
 testsuite files will then be ignored and all test suites and
 test cases presented in alphabetical order.</div>
-<div class="Text_Header"><A NAME="log_file"></A>Test Cases</div>
-
+<div class="Text_Header"><A NAME="log_file"></A><A NAME="filename_convention_scheme"></A>Test Cases</div>
 <div class="Text_Normal">A test case is represented in TextTest by a particular
 directory in the file system, and the name of the test case is
 always the same as the name of the directory. Many test
@@ -169,29 +168,37 @@ applications may share the same test case if desired. Any directory referred to
 by a "testsuite" file as described above which does not itself contain a testsuite
 file will be considered to be a test case. "Definition files" may also be placed in the
 test case directory and tell TextTest how to run
-the SUT for this test case. The following files will be taken as
-test definition files:</div>
+the SUT for this test case. </div>
+<div class="Text_Normal">
+Since TextTest 3.18 the default naming scheme has been changed for new test suites. This
+is controlled by the config value "filename_convention_scheme" which will be set to "standard"
+when you create a new test suite as these names were deemed less confusing. It will otherwise 
+remain with the default "classic" scheme which contains the older names to avoid introducing mass
+compulsory migration. The following files will be taken as test definition files:</div>
 <UL>
-<div class="Text_Normal"><li><B><B>options.&lt;app&gt;</B></B>
+<div class="Text_Normal"><li><B>options.&lt;app&gt;</B>
 - This will be interpreted as command line options to be given
 to the system under test. They may now also be used in test suites, see
 section below.
 </div>
-<div class="Text_Normal"><li><B><B>input.&lt;app&gt;</B></B>
+<div class="Text_Normal"><li><B>stdin.&lt;app&gt;</B>
 - This will be redirected to the system under test as standard
-input. 
+input. In the "classic" naming scheme it should be called <B>input.&lt;app&gt;</B>
 </div>
 
-<div class="Text_Normal"><li><B><B>usecase.&lt;app&gt;</B></B><SPAN STYLE="text-decoration: none">
+<div class="Text_Normal"><li><B>usecase.&lt;app&gt;</B>
 - The use case recorder will be configured to replay the system
-under test from this file.</SPAN> 
+under test from this file. 
 </div>
 </UL>
 <div class="Text_Normal">The expected output files from the SUT are also stored in
 this directory: these will be compared with the actual result
 for each test run. By default, the standard output of the system
-under test is redirected to <B><B>output.&lt;app&gt;</B></B>,
-while its standard error is redirected to <B><B>errors.&lt;app&gt;</B></B>.
+under test is redirected to <B>stdout.&lt;app&gt;</B> (output.&lt;app&gt; in
+the classic naming scheme), while its standard error is redirected to <B>stderr.&lt;app&gt;</B>
+(or errors.&lt;app&gt; in the classic scheme).
+</div>
+<div class="Text_Normal">
 Other textual output files can also be collected, and the
 collection of these can be disabled: look <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files"; ?>">here</A> for details of how.</div>
 
@@ -319,7 +326,7 @@ arguments, you would call:</div>
 
 <div class="Text_Normal">
 <?php codeSampleBegin() ?>
-texttest.py -s &ldquo;default.ReplaceText file=errors old=bad new=good&rdquo;
+texttest.py -s &ldquo;default.ReplaceText file=stderr old=bad new=good&rdquo;
 <?php codeSampleEnd() ?>
 </div>
 <div class="Text_Normal">
@@ -338,7 +345,7 @@ basically a search-and-replace mechanism with the advantage that
 you can select tests in the normal ways (in the static GUI or via the command line) 
 and the files relevant to the testsuite will be chosen for you. The above example will
 naturally replace all instances of &ldquo;bad&rdquo; with &ldquo;good&rdquo;
-in all &ldquo;errors&rdquo; result files.</div>
+in all &ldquo;stderr&rdquo; result files.</div>
 
 <div class="Text_Header"><A NAME="default.ExportTests"></A>Transferring tests between
 different test suites</div><div class="Text_Normal">

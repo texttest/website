@@ -180,7 +180,7 @@ your filtered file as before and make sure it looks OK.
 <div class="Text_Normal">
 The edit is rejected in the test above because the test asks for a response on standard input which is not
 provided. So take a new copy, select it and right click on "Definition Files", picking "Create/Import File". 
-Select "input" for standard input, create a new file and type "y" in it. This will provide this response to 
+Select "stdin" for standard input, create a new file and type "y" in it. This will provide this response to 
 standard input. If you run the test
 now the text saying "Not editing the file" will go away.
 </div>

@@ -3,9 +3,9 @@
 				
 <div class="Text_Header">Introduction</div>
 <div class="Text_Normal">By default, the standard output of the system under test will
-be collected to a file called output.&lt;app&gt; and the
-standard error will be collected to a file called errors.&lt;app&gt;
-(see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">guide to files and
+be collected to a file called "stdout.&lt;app&gt;" and the
+standard error will be collected to a file called "stderr.&lt;app&gt;"
+(or "output.&lt;app&gt;" and "errors.&lt;app&gt;" with the classic naming scheme: see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">guide to files and
 directories</A>). Any other files that might be written by the system under test will be ignored. 
 However, it is possible to tell TextTest to "collate" individual files
 and compare them in a similar way to how it compares standard output and standard error.
@@ -74,9 +74,15 @@ possible.</div>
 <div class="Text_Normal">If comparison of a collected file is not desired for any
 reason, it can be added to the config file list entry
 &ldquo;discard_file&rdquo;. The most common usage of this is to
-disable the collection of standard output and/or standard error
-(i.e. by adding &ldquo;errors&rdquo; or &ldquo;output&rdquo; to
-the list).
+disable the collection of standard output and/or standard error, for example
+
+<?php codeSampleBegin() ?>
+discard_file:stdout
+discard_file:stderr
+<?php codeSampleEnd() ?>
+
+(NOTE: you may need to write "output" and "errors" instead of "stdout" and "stderr" if
+your test suite is using the classic naming scheme, which it probably is if it was created with 3.18 or earlier).
 </div>
 
 <div class="Text_Header">Collecting multiple related files at the same time</div>
@@ -219,7 +225,7 @@ in particular Files</div>
 <div class="Text_Normal">
 &lt;severity&gt; here is a number, where 1 is the most severe
 and increasing the number means decreasing the severity. If the
-entry is not present, both &ldquo;output&rdquo; and &ldquo;errors&rdquo;
+entry is not present, both &ldquo;stdout&rdquo; and &ldquo;stderr&rdquo;
 files will be given severity 1, while everything else will have
 severity 99.</div>
 
@@ -236,8 +242,8 @@ severity 99.</div>
 	</div>
 </OL>
 <div class="Text_Normal">As an example, the test below has failed in &ldquo;performance&rdquo;,
-which is a severity 2 file. If the output had also been
+which is a severity 2 file. If the text on standard output had also been
 different, the whole line on the left would be red and the
-details would report &ldquo;output different(+)&rdquo;.</div>
+details would report &ldquo;stdout different(+)&rdquo;.</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>

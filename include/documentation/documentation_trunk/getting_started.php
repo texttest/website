@@ -90,7 +90,8 @@ summary of which files are different in the test.
 <div class="Text_Normal"><IMG src="<?php print $basePath; ?>images/newfiles.png"><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">It collected the standard error and standard output of the
-process into 'errors.hello' and 'output.hello' files. These can
+process into 'stderr.hello' and 'stdout.hello' files (the screenshot above
+was created with an older version with different naming conventions). These can
 be viewed by double-clicking in the file view, or a summary is
 available in the 'Text Info' window. We can see that the text
 'Hello world' appeared on standard output, while nothing was

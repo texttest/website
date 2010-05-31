@@ -182,7 +182,7 @@ as a key here, so you can also for example say:
 <?php codeSampleBegin() ?>
 [test_colours]
 success:pale green
-output different:pink
+stdout different:pink
 [end]
 <?php codeSampleEnd() ?>
 

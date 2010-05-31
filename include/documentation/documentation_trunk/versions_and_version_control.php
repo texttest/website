@@ -116,9 +116,9 @@ different version IDs. To help solve this, the <A class="Text_Link" href="#-s">p
 script</A> &ldquo;comparetest.PrintObsoleteVersions&rdquo; will
 identify such redundancy for you so that you can remove the files. It will
 also warn where versions are equivalent but not redundant. For
-example, if the files output.myapp and output.myapp.2 are
-identical, then output.myapp.2 will be suggested for removal. If
-output.myapp.2 and output.myapp.3 are the same, then only a
+example, if the files stdout.myapp and stdout.myapp.2 are
+identical, then stdout.myapp.2 will be suggested for removal. If
+stdout.myapp.2 and stdout.myapp.3 are the same, then only a
 warning is printed. Previous to TextTest 3.10 this script was called RemoveObsoleteVersions,
 assumed the tests were in CVS and actually performed removals itself. The new version
 is better tested, more generic and less easy to misuse hopefully.

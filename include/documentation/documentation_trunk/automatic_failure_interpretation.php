@@ -1,15 +1,11 @@
-<div class="Text_Main_Header">Automatic Failure Interpretation in TextTest</div>
-
-<div class="Text_Normal"><BR>
-</div>
-				
-				
+<div class="Text_Main_Header">Automatic Failure Interpretation in TextTest</div>				
 <div class="Text_Header">Introduction</div>
-<div class="Text_Normal">There are situations when it saves a fair bit of time to
+<div class="Text_Normal">
+There are situations when it saves a fair bit of time to
 inform TextTest about what your system is likely to log and what
 it means. This means that TextTest can find such patterns
 automatically and instead of just saying &ldquo;differences in
-output&rdquo; can provide you a much more succinct description
+stdout&rdquo; can provide you a much more succinct description
 of what went wrong. TextTest can also automatically try to
 collect information about what happened from the system: for
 example core files that have been dumped on UNIX. This document

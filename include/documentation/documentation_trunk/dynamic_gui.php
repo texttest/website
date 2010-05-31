@@ -96,11 +96,11 @@ the default setting on UNIX does.
 dictionary&rdquo; entries and can thus be configured per file
 type, using just the stems as keys. It is thus easy to plugin
 custom viewers if particular files produced by the system are
-more conveniently viewed that way. For example, this will cause the "output"
+more conveniently viewed that way. For example, this will cause the "stdout"
 files to be viewed with "xemacs" rather than the default "emacs":
 <?php codeSampleBegin() ?>
 [view_program]
-output:xemacs
+stdout:xemacs
 <?php codeSampleEnd() ?>
 </div>
 <div class="Text_Normal">On the Text Info tab you will see a textual preview of all
@@ -166,9 +166,9 @@ This is mainly useful when
 <LI>the information filtered away isn't interesting and
 <LI>the filtering is much simpler to do on the present run than on an arbitrary one
 </OL>
-To enable this for e.g. "output" and "myfile", you set
+To enable this for e.g. "stdout" and "myfile", you set
 <?php codeSampleBegin() ?>
-save_filtered_file_stems:output
+save_filtered_file_stems:stdout
 save_filtered_file_stems:myfile
 <?php codeSampleEnd() ?>
 </div>

@@ -588,7 +588,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">builtin : environment, properties, testsuite, options, interpreter_options, input, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
+			<div class="Table_Text_Small">builtin : environment, properties, testsuite, options, interpreter_options, stdin, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
@@ -700,10 +700,24 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">catalogue : 2<BR>default : 99<BR>errors : 1<BR>output : 1<BR>performance : 2<BR>traffic : 1<BR>usecase : 1</div>
+			<div class="Table_Text_Small">catalogue : 2<BR>default : 99<BR>errors : 1<BR>output : 1<BR>performance : 2<BR>stderr : 1<BR>stdout : 1<BR>traffic : 1<BR>usecase : 1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#failure_severity">Mapping of result files to how serious diffs in them are</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">filename_convention_scheme</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">standard</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#filename_convention_scheme">Naming scheme to use for files for stdin,stdout and stderr</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1050,7 +1064,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">String</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">output</div>
+			<div class="Table_Text_Small">stdout</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#log_file">Result file to search, by default</A></div>
@@ -1341,10 +1355,10 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">slow_motion_replay_speed</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Int</div>
+			<div class="Table_Text_Small">Float</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">3</div>
+			<div class="Table_Text_Small">3.0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#slow_motion_replay_speed">How long in seconds to wait between each GUI action</A></div>
