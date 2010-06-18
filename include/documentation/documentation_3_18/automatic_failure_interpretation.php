@@ -58,9 +58,8 @@ static GUI. Right-click the test or testsuite where the bug should
 apply (for example, if it applies everywhere, select the root
 test suite) and select "Enter Failure Information". (The screenshot
 below is from an earlier version of TextTest but the contents of the old Bugs
-tab is the same as what the dialog will show)</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/reportbug.JPG" NAME="graphics1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
-
+tab is similar to what the dialog will show)</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/reportbug.JPG" NAME="graphics1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">Here we imagine that when our application logs &ldquo;after
 &lt;n&gt; seconds&rdquo; this implies it has gone into a delay
@@ -70,18 +69,18 @@ text to give and a short description. This creates a special
 file <B><B>knownbugs.&lt;app&gt;</B></B> in the test or suite's 
 directory, which has a format that is easy to edit in a normal editor.</div>
 <div class="Text_Normal">If we then run the test and it produces the indicated text,
-we then get a nice summary instead of the usual complete file
+we then get a nice summary as well as the usual complete file
 differences. Note it has used our &ldquo;brief description&rdquo;
-
 given above in the Details column of the test tree view, while
 the full description appears in the Text Info window at the
-bottom right.</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/knownbug.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+bottom right. (Here I've run two copies of the text to show what tests failing with 
+knownbugs look like in the test tree when not selected)</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/knownbug.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">
 Ordinarily, you will search for some text that will be produced in a certain file, as
 given by the "file to search in" entry. This will search the unfiltered version of the file
-(not the diff produced in the Text Info window). This can be inverted via the check box at the bottom,
+(not the diff produced in the Text Info window). This can be inverted via the relevant check box,
 so that the bug is triggered when the text is not present.
 </div>
 <div class="Text_Normal">
