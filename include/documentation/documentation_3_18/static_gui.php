@@ -4,12 +4,10 @@
 <div class="Text_Header"><A NAME="-gx"></A><A NAME="-new"></A>How to start the Static GUI</div>
 <div class="Text_Normal">The static GUI is started by default unless you specified
 otherwise in your config file. If you did, it can be started via the command line option "-gx".</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/static.JPG" NAME="Graphic3"  BORDER=0><BR CLEAR=LEFT><BR><BR>
-
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/static.png" NAME="Graphic3"  BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">The initial left window is a tree view of all the tests in the test suite. 
-These will be default by grey, this screenshot is taken on an older version of TextTest. This view
-can be manipulated either with the mouse or via the Selection tab on the right: many actions apply
+This view can be manipulated either with the mouse or via the Selection tab on the right: many actions apply
 to the currently selected tests.
 </div>
 <div class="Text_Normal">If you select a test, the right window shows the files
