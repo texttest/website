@@ -239,5 +239,5 @@ severity 99.</div>
 which is a severity 2 file. If the output had also been
 different, the whole line on the left would be red and the
 details would report &ldquo;output different(+)&rdquo;.</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/perftest.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/perftest.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT>
 </div>
