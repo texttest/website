@@ -52,40 +52,43 @@ issue again.</div>
 <div class="Text_Normal">The easiest way to do this is by using the dialog in the
 static GUI. Right-click the test or testsuite where the bug should
 apply (for example, if it applies everywhere, select the root
-test suite) and select "Enter Failure Information". (The screenshot
-below is from an earlier version of TextTest but the contents of the old Bugs
-tab is the same as what the dialog will show)</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/reportbug.JPG" NAME="graphics1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
-
+test suite) and select "Enter Failure Information". We can then fill in the
+dialog as shown :
+</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/reportbug.png" NAME="graphics1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">Here we imagine that when our application logs &ldquo;after
 &lt;n&gt; seconds&rdquo; this implies it has gone into a delay
-that isn't appropriate. So we fill in the dialog appropriately
-with the text to match, and some description information, a full
-text to give and a short description. This creates a special
+that isn't appropriate. So we fill in what text it should look for, which file
+it should look in, and then in the bottom section provide some description information, 
+a full text to give and a short description. This creates a special
 file <B><B>knownbugs.&lt;app&gt;</B></B> in the test or suite's 
-directory, which has a format that is easy to edit in a normal editor.</div>
+directory, which has a format that is easy to edit in a normal editor.
+</div>
 <div class="Text_Normal">If we then run the test and it produces the indicated text,
-we then get a nice summary instead of the usual complete file
+we then get a nice summary as well as the usual complete file
 differences. Note it has used our &ldquo;brief description&rdquo;
-
 given above in the Details column of the test tree view, while
 the full description appears in the Text Info window at the
-bottom right.</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/knownbug.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR><BR>
+bottom right. (Here I've run two copies of the text to show what tests failing with 
+knownbugs look like in the test tree when not selected)
+</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/knownbug.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">
 Ordinarily, you will search for some text that will be produced in a certain file, as
 given by the "file to search in" entry. This will search the unfiltered version of the file
-(not the diff produced in the Text Info window). This can be inverted via the check box at the bottom,
-so that the bug is triggered when the text is not present.
+(not the diff produced in the Text Info window). This can be inverted via the check box in the top
+section, so that the bug is triggered when the text is not present.
 </div>
 <div class="Text_Normal">
-There is also a special entry 'free_text' in the "file to search in" drop-down list. This
-works by checking the actual result, more or less what appears in the Text Info window.
+In addition to searching in specific files, you can also select "brief text/details" or "full difference
+report" for the matching. This will look in (respectively) the text that appears in the Details column
+or the text in the bottom right window, i.e. the actual difference report.
 Note however that it isn't generally possible to match on the first line of this text,
 which is an additional explanatory line added by the GUI and not part of the state of the
-test. This line will be different in the case of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">running in batch mode</A>, which is why it isn't a good idea for TextTest
+test. This line will be different in the case of 
+<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">running in batch mode</A>, which is why it isn't a good idea for TextTest
 to use it for matching. 
 </div><div class="Text_Normal">
 When the tests are run, TextTest wll then find all such "knownbugs" files, using its 
