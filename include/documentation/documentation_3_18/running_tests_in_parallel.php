@@ -39,8 +39,8 @@ the grid will be used, otherwise they will be run locally. This is configured vi
 <div class="Text_Normal">As soon as each test finishes, the test will go green or red,
 and results will be presented. Unlike the default configuration,
 the tests will not naturally finish in order. Here is a sample
-screenshot, from a very old version of TextTest using SGE:</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/parallel.JPG" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>Some
+screenshot, from an old version of TextTest using SGE:</div>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/parallel.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>Some
 tests have finished and gone green, but others are still running
 and hence yellow. TextTest reports their state in the grid
 engine (&ldquo;RUN&rdquo;) followed by the machine each is
