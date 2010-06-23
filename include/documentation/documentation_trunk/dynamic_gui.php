@@ -5,7 +5,7 @@
 <div class="Text_Normal">The dynamic GUI is selected on the command line via the &ldquo;-g&rdquo;
 option. Alternatively, it is started by clicking &ldquo;Run&rdquo;
 in the static GUI toolbar.</div>
-<div class="Text_Header"><img src="<?php print $basePath; ?>images/ttdyn.jpg" NAME="Graphic1"  BORDER=0><BR CLEAR=LEFT><BR><BR>
+<div class="Text_Header"><img src="<?php print $basePath; ?>images/ttdyn.png" NAME="Graphic1"  BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 
 <div class="Text_Header"><A NAME="auto_collapse_successful"></A>The Test Tree View</div>
