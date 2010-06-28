@@ -4,11 +4,12 @@
 $pathToOldDocs="http://texttest.carmen.se/old_version/TextTest/docs";
 
 //Current release here
-$current_release = "3.18";
+$current_release = "3.19";
 
 //List of all versions
 $all_releases = array();
 array_push($all_releases, "trunk");
+array_push($all_releases, "3.19");
 array_push($all_releases, "3.18");
 array_push($all_releases, "3.17");
 array_push($all_releases, "3.16");
