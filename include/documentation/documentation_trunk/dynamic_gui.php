@@ -8,13 +8,19 @@ in the static GUI toolbar.</div>
 <div class="Text_Header"><img src="<?php print $basePath; ?>images/ttdyn.png" NAME="Graphic1"  BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 
-<div class="Text_Header"><A NAME="auto_collapse_successful"></A>The Test Tree View</div>
+<div class="Text_Header"><A NAME="auto_collapse_successful"></A><A NAME="-stop"></A>The Test Tree View</div>
 <div class="Text_Normal">The initial left window is a tree view of all the tests that
 are being run. These are colour-coded: white tests have not
 started yet, yellow tests are currently in progress, green tests
 are reckoned to have succeeded while red tests are reckoned to
 have failed. By clicking the rows in this view details of what
 happened to a particular test can be examined.</div>
+<div class="Text_Normal">
+Ordinarily, TextTest will run each test in order until all tests have
+been completed, successfully or otherwise. You can however request that
+it stops after the first test that fails, by selecting "Stop after first
+failure" in the static GUI running tab, or "-stop" on the command line.
+</div>
 <div class="Text_Normal">When whole test suites become complete and all tests in them
 have succeeded, the dynamic GUI will automatically collapse the
 tree view for that suite and simply identify that line by the
