@@ -60,8 +60,7 @@ By clicking this red-line in the test view we get the view
 below. The contents of the new files can be seen in textual
 format in the &ldquo;Text Info&rdquo; window by single-clicking them (as shown), 
 or viewed by double-clicking them if they are too large. The "usecase.bugs" file provides
-a description of what we did, while the "output.bugs" file provides PyUseCase's
-auto-generated description of what the GUI looked like while we were doing it.
+a description of what we did, while the "stdout.bugs" file ("output.bugs" in the screenshot) provides PyUseCase's auto-generated description of what the GUI looked like while we were doing it.
 </div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/guitest.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
