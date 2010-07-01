@@ -9,13 +9,12 @@ The download is fairly large as it includes TextTest's tests for itself, which a
 <div class="Text_Header">Compulsory dependencies</div>
 <OL>
 <div class="Text_Normal"><LI><A class="Text_Link" HREF="http://www.python.org/download/">Python</A>. 
-You will need at least version 2.4 on UNIX and at least version 2.5.1 on Windows. Python 2.6 is now
-being tested against, although Python 2.6.1 and 2.6.0 have bugs that affect TextTest on Windows, 
-which are fixed in 2.6.2. Note that most Linux installations come with Python
+You will need at least version 2.4 on UNIX and at least version 2.5.1 on Windows. 
+Note that most Linux installations come with Python
 pre-installed.</div>
 <div class="Text_Normal"><LI><A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK</A>.
 TextTest's GUI makes use of PyGTK, which is a thin wrapper around the C GUI library GTK. You will need
-at least GTK 2.10 and an equivalent version of PyGTK. All development is currently being done against GTK 2.12, although nightly tests are run against the current latest version (GTK 2.18) and GTK 2.10. 
+at least GTK 2.10 and an equivalent version of PyGTK. All development is currently being done against GTK 2.18 and PyGTK 2.16.
 </div>
 <div class="Text_Normal">
 Note that most Linux installations include a PyGTK package and some (e.g. Ubuntu) have it installed by default.
