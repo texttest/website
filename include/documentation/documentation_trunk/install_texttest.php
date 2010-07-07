@@ -9,12 +9,10 @@ The download is fairly large as it includes TextTest's tests for itself, which a
 <div class="Text_Header">Compulsory dependencies</div>
 <OL>
 <div class="Text_Normal"><LI><A class="Text_Link" HREF="http://www.python.org/download/">Python</A>. 
-You will need at least version 2.4 on UNIX and at least version 2.5.1 on Windows. 
-Note that most Linux installations come with Python
-pre-installed.</div>
+You will need at least version 2.6. Note that most Linux installations come with Python pre-installed.</div>
 <div class="Text_Normal"><LI><A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK</A>.
 TextTest's GUI makes use of PyGTK, which is a thin wrapper around the C GUI library GTK. You will need
-at least GTK 2.10 and an equivalent version of PyGTK. All development is currently being done against GTK 2.18 and PyGTK 2.16.
+at least GTK 2.18 and an equivalent version of PyGTK. All development is currently being done against GTK 2.18 and PyGTK 2.16.
 </div>
 <div class="Text_Normal">
 Note that most Linux installations include a PyGTK package and some (e.g. Ubuntu) have it installed by default.
@@ -22,7 +20,9 @@ To test whether your Python installation already includes PyGTK, type 'import gt
 such as Red Hat or SuSE, it's difficult to put a newer GTK in place than the default. In this case you should
 refer to the instructions under doc/Upgrade_PyGTK_Enterprise_Linux in the TextTest download. </div>
 <div class="Text_Normal">
-On <u>Windows</u>, the summary for how to install is that you should get the GTK 2.18 bundle from <A class="Text_Link" HREF="http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.18/gtk+-bundle_2.18.7-20100213_win32.zip">here</A>, unzip it somewhere (avoid locations with spaces in their names, I find "C:\Gtk" works just fine for me!), add its "bin" subdirectory to your PATH and then run the three installers at the top of the <A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK downloads</A> page. In general neither TextTest nor PyGTK handle paths with spaces in their names well: both are ports of software written on UNIX so you're well advised to steer clear of "Program Files" and "Documents and Settings", whatever your Windows best-practice manual may tell you...
+On <u>Windows</u>, the summary for how to install is that you should get the GTK 2.18 bundle from <A class="Text_Link" HREF="http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.18/gtk+-bundle_2.18.7-20100213_win32.zip">here</A>, unzip it somewhere (avoid locations with spaces in their names, I find "C:\Gtk" works just fine for me!), add its "bin" subdirectory to your PATH and then run the three installers at the top of the <A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK downloads</A> page. In general neither TextTest nor PyGTK handle paths with spaces in their names well: both are ports of software written on UNIX so you're well advised to steer clear of "Program Files" and "Documents and Settings", whatever your Windows best-practice manual may tell you...</div>
+<div class="Text_Normal">
+On the <u>Mac</u>, some hints can be found on the <A class="Text_Link" HREF="http://faq.pygtk.org/index.py?req=show&file=faq01.019.htp">PyGTK FAQ</A>. Basically PyGTK doesn't build natively for the Mac so you should install Apple's Xll server. This implies installing the Developer Tools, XQuartz and then Macports, before getting PyGTK by executing "port install py26-gtk". Note that this may take quite some time to complete.
 </div>
 <div class="Text_Normal"><LI><B><U>Tkdiff and diff</U></B>. You will need a decent graphical difference tool on your
 PATH, along with a textual version for reports. We recommend 'tkdiff' and 'diff' respectively which are present on most UNIX
@@ -34,6 +34,9 @@ could distribute it here. Note that the installer won't affect
 your path though, so you'll need to set PATH in autoexec.bat or
 similar to include wherever it's installed (typcially something
 like C:\Program Files\tkdiff)</div>
+<div class="Text_Normal">
+On the Mac you can get it via Macports in a similar way to PyGTK, i.e. "port install tkdiff".
+</div>
 <div class="Text_Normal"><LI><B><U>Emacs and notepad</U></B>. TextTest also makes use of a generic editor for viewing files. This defaults to "emacs" on UNIX systems and "notepad" on Windows, which are both likely to be pre-installed. Your UNIX installation will certainly have a package for "emacs" if not. It's easy to change these to use other editors if desired via the "view_program" configuration setting.</div>
 </OL>
 
