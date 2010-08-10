@@ -329,19 +329,26 @@ In this case it's necessary to enforce a single-threaded mode for TextTest's "tr
 setting "collect_traffic_use_threads:false" in your config file which will force the traffic server to operate
 everything on a single thread. With any moderately complex Python module interception it's usually a good idea to set this.
 </div>
-<div class="Text_Header"><A NAME="distributed"></A><A NAME="TEXTTEST_MIM_SERVER"></A>Intercepting and replaying plain-text network messages</div>
+<div class="Text_Header"><A NAME="distributed"></A><A NAME="collect_traffic_client_server"></A><A NAME="TEXTTEST_MIM_SERVER"></A>Intercepting and replaying plain-text network messages</div>
 <div class="Text_Normal">The &ldquo;traffic interception&rdquo; mechanism can also be
-used for this purpose. Here it is less a matter of configuring
-TextTest and more of configuring your own application. As above,
-TextTest considers itself to be recording such traffic when the
+used for this purpose. This is enabled by setting 
+<?php codeSampleBegin() ?>
+collect_traffic_client_server:true
+<?php codeSampleEnd() ?>
+in your config file. Though in this case you'll also need to make some changes
+to your system under test.
+</div>
+<div class="Text_Normal">
+As above, TextTest considers itself to be recording such traffic when the
 &ldquo;(Re-) record traffic&rdquo; switch is enabled, and
 replaying such traffic when a &ldquo;traffic.&lt;app&gt;&rdquo;
-
 file already exists. In these circumstances it sets up its own
 &ldquo;traffic server&rdquo; and sets the environment variable
 TEXTTEST_MIM_SERVER (MIM stands for &ldquo;Man in the Middle&rdquo;)
-to &lt;host:port&gt; for this place.</div>
-<div class="Text_Normal">On testing a client-server system you probably need to write
+to &lt;host:port&gt; for this place.
+</div>
+<div class="Text_Normal">
+On testing a client-server system you probably need to write
 a wrapper script that can for example start server, start client
 connecting to server, close client, shutdown server. To use this
 traffic-recording mechanism you should modify this script such

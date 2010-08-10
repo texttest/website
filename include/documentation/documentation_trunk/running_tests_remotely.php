@@ -44,3 +44,14 @@ program that can copy files to remote systems, for example "scp", "rsync" or "ps
 arguments for these programs are also provided via the "remote_program_options" config file
 entry as above.
 </div> 
+<div class="Text_Header"><A NAME="view_file_on_remote_machine"></A>Viewing files locally and remotely</div>
+<div class="Text_Normal">
+The dynamic GUI has a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui";?>#view_program">number of ways</A> to view the files produced by the tests. With the tests being run remotely on potentially a different file system, it can become
+an interesting question whether the viewing programs should be started on the remote machine or the local machine.
+On the one hand the files may not be reachable from the local machine, but on the other hand viewing programs may not be installed on the remote machine.
+</div><div class="Text_Normal">
+When <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=dynamic_gui";?>#follow_program">following files</A> produced by remotely run tests, TextTest will always run the "follow_program" ("tail" on UNIX or "baretail" on Windows) by default on the remote machine, as this is supposed to respond quickly to changes and it is therefore better if it doesn't have to wait for the file server
+before responding. When viewing files normally, it will by default run the viewer on the local machine. This can however be
+configured, for example for files which can only be viewed remotely, using the config file setting "view_file_on_remote_machine",
+which can be keyed on file types in a similar way to "view_program" which it configures.
+</div>

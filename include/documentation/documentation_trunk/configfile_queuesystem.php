@@ -386,6 +386,20 @@ of the "Type" column in this table.
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">collect_traffic_client_server</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">false</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_client_server">Whether to intercept client-server traffic sent by the SUT</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">collect_traffic_environment</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -1753,7 +1767,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#view_file_on_remote_machine">Do we try to start viewing programs on the test execution machine?</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#view_file_on_remote_machine">Do we try to start viewing programs on the test execution machine?</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
