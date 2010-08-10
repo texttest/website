@@ -48,14 +48,11 @@ running on in brackets.
 </div><div class="Text_Normal">
 Internally, TextTest submits itself to the grid engine and runs a slave process
 remotely, which runs the test in question and communicates the
-result back to the master process via a socket. It does not ordinarily do
-any polling of the grid engine to see what is happening. This means that
-if the slave process crashes remotely without reporting in (for example
-because of hardware trouble, or because its files aren't mounted on the remote
-machine) the test will still be regarded as pending and no error message will be shown.
-If there is no active grid engine job and TextTest is still showing "PEND", it's
-a good idea to kill the test, which will then poll the grid engine and search for
-error log files from the job concerned, and can probably establish what happened to it.
+result back to the master process via a socket. The master process
+will also poll the grid engine periodically (every 15 seconds) to find out what 
+is happening to its tests, to be able to pick up internal grid engine states like
+suspension and also to be able to report if a job dies without reporting in (for
+example because of hardware problems or because Python cannot be found remotely)
 </div>
 <div class="Text_Header">Tables for the queuesystem module</div>
 <div class="Text_Normal">As this functionality works with a different configuration

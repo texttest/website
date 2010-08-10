@@ -44,14 +44,11 @@ running on in brackets.
 </div><div class="Text_Normal">
 Internally, TextTest submits itself to the grid engine and runs a slave process
 remotely, which runs the test in question and communicates the
-result back to the master process via a socket. It does not ordinarily do
-any polling of the grid engine to see what is happening. This means that
-if the slave process crashes remotely without reporting in (for example
-because of hardware trouble, or because its files aren't mounted on the remote
-machine) the test will still be regarded as pending and no error message will be shown.
-If there is no active grid engine job and TextTest is still showing "PEND", it's
-a good idea to kill the test, which will then poll the grid engine and search for
-error log files from the job concerned, and can probably establish what happened to it.
+result back to the master process via a socket. The master process
+will also poll the grid engine periodically (every 15 seconds) to find out what 
+is happening to its tests, to be able to pick up internal grid engine states like
+suspension and also to be able to report if a job dies without reporting in (for
+example because of hardware problems or because Python cannot be found remotely)
 </div>
 <div class="Text_Header">Tables for the queuesystem module</div>
 <div class="Text_Normal">As this functionality works with a different configuration
@@ -247,10 +244,11 @@ works here. In this case TextTest will ask the queue system for
 all machines that have been used, and only if they are all
 performance machines will performance be compared.</div>
 				
-<div class="Text_Header"><A NAME="QUEUE_SYSTEM_SUBMIT_ARGS"></A><A NAME="TEXTTEST_SLAVE_CMD"></A>Additional environment variables for the slave process </div>
+<div class="Text_Header"><A NAME="QUEUE_SYSTEM_SUBMIT_ARGS"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A>Additional environment variables for the slave process </div>
 <div class="Text_Normal">
 You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "QUEUE_SYSTEM_SUBMIT_ARGS" in your environment file. </div>
 <div class="Text_Normal">
-You can configure the TextTest program that is run by the slave process via the environment variable "TEXTTEST_SLAVE_CMD", which defaults to just running "texttest.py". The main point of this is if you need a startup script to find the right version of Python on the remote machine, for example, or if you want to plug in developer tools like profilers and coverage analysers. It is also used internally in the TextTest HTML reports to provide a correct command-line suggestion for starting TextTest.
+You can configure the TextTest program that is run by the slave process via the environment variable "TEXTTEST_SLAVE_CMD", which defaults to just running "texttest.py". The main point of this is if you need a startup script to find the right version of Python on the remote machine, for example, or if you want to plug in developer tools like profilers and coverage analysers. It is also used internally in the TextTest HTML reports to provide a correct command-line suggestion for starting TextTest.</div>
+<div class="Text_Normal">
+You can also configure the amount of time to wait before the polling of the grid engine (described above) starts, via the variable TEXTTEST_QS_POLL_WAIT. Note it does not affect the intervals between polls, which is hardcoded at 15 seconds currently. By default it waits 5 seconds before starting. This option is mostly useful when testing and debugging.
 </div>
-
