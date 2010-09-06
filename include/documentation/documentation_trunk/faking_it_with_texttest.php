@@ -294,13 +294,11 @@ If the exception is itself defined in the intercepted module, it will be referre
 In additional to intercepting entire Python modules, you can also intercept and replay individual function calls. 
 A good example is the current date (datetime.date.today() in Python) so that you
 can test code that depends on it without needing to write any code to fake what it does. For this
-purpose you can use "collect_traffic_py_attributes", which is keyed on individual modules. To intercept
-this call you would therefore do as follows.
+purpose you can use "collect_traffic_py_attributes". To intercept
+this call you would therefore do as follows. (Note that this format is changed since TextTest 3.19, when it was
+originally introduced. Also note that it now works on Windows, which it didn't in 3.19)
 <?php codeSampleBegin() ?>
-collect_traffic_py_module:datetime
-
-[collect_traffic_py_attributes]
-datetime:date.today
+collect_traffic_py_attributes:datetime.date.today
 <?php codeSampleEnd() ?>
 This would produce a traffic file that looked something like
 <?php codeSampleBegin() ?>
@@ -310,8 +308,6 @@ This would produce a traffic file that looked something like
 and all other usage of the datetime module would not be intercepted. It would create you a test that behaved
 as though "today" was always 12th May 2010, saving you the trouble of figuring out how to fake it or how
 to manage test data that needed to refer to dates within a certain timeframe of it. 
-(It's worth noting in passing that this particular example won't work on Windows as "datetime" is a builtin
-module on Windows, see above)
 </div>
 <div class="Text_Normal">
 If "collect_traffic_py_attributes" is empty for any given module it is assumed that all calls to it are to

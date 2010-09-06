@@ -417,13 +417,13 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">collect_traffic_py_attributes</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary (List)</div>
+			<div class="Table_Text_Small">List</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_py_attributes">List of Python attributes to intercept per intercepted module.</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_py_attributes">List of Python attributes to intercept</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

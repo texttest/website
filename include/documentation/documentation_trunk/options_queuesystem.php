@@ -411,7 +411,7 @@ in the GUI. The "Brief Text" in the final column corresponds to the labels in th
 			<div class="Table_Text_Small">-rectraffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Advanced</div>
+			<div class="Table_Text_Small">Basic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#-rectraffic">(Re-)record command-line or client-server traffic</A></div>

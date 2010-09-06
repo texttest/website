@@ -245,10 +245,10 @@ or via the "Name this Run" field in the Running /Advanced tab in the static GUI.
 <div class="Text_Normal">
 If the run is named in this way, the window header will be changed, the Run Info updated and when you try
 to quit a warning dialog will appear to make sure you haven't made a mistake.</div>
-<div class="Text_Header"><A NAME="TEXTTEST_DYNAMIC_GUI_INTERPRETER"></A><A NAME="TEXTTEST_SUBPROCESS_INTERPRETER"></A>Plugging in python developer tools</div>
+<div class="Text_Header"><A NAME="TEXTTEST_DYNAMIC_GUI_INTERPRETER"></A>Plugging in python developer tools</div>
 <div class="Text_Normal">
 There is an environment variable TEXTTEST_DYNAMIC_GUI_INTERPRETER which is a hook to provide additional arguments
 to Python when starting the dynamic GUI from the static GUI. This is mostly useful for development, for
-example to plug in a coverage tool or profiler. There is also a variable TEXTTEST_SUBPROCESS_INTERPRETER which applies to other
-subprocesses started by TextTest for the same purpose, currently the traffic server and the virtual display starter programs.
+example to plug in PyUseCase in the self-tests. It's no longer necessary to use this to measure coverage, which 
+works via a Python interpreter startup hook now.
 </div>
