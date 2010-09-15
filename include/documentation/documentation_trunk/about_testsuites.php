@@ -83,33 +83,17 @@ look for just one particular application, specify &quot;-a
 &lt;app&gt;&quot; on the command line. You can also specify several
 applications by using a comma-separated list, i.e. "-a &lt;app1&gt;,&lt;app2&gt;"</div>
 
-<div class="Text_Header"><A NAME="executable"></A><A NAME="interpreter"></A><A NAME="import_config_file"></A>
-The Config File for a Test Application</div>
+<div class="Text_Header">Config Files</div>
 <div class="Text_Normal">This file basically consists of key, value pairs, where the
 keys are &ldquo;properties&rdquo; with names predefined by
 TextTest. The full list of these entries is dependent on your configuration module, 
 and is documented here in the form of tables for the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">default</A> and <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_queuesystem"; ?>">queuesystem</A> configurations, as well as the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile"; ?>">personal config file</A>. The file itself has a  <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">specific format</A>, which you will need to become familiar with.
 </div>
 <div class="Text_Normal">
- The most important of these is the entry &quot;executable&quot; (formerly known as &quot;binary&quot),
-which defines the path to the SUT and without which nothing much
-will happen. This should be an absolute path, although
-environment variables may be included. </div>
+One such file must be present at the top level of your test suite, to define the "application under test" as understood by TextTest - see the previous paragraph. However it is also possible (since TextTest 3.20) to override some of the settings for individual tests and test suites by creating additional config files in those locations. For those tests, the config settings from the top level will be used unless overwritten by a locally defined file.</div>
 <div class="Text_Normal">
-There are a couple of circumstances under which relative paths will be accepted. One is
-if the same name is also included as a data file using one of the "*_test_path" settings: this
-allows you to vary the executable used. It can also be the name of a Java
-class that will be found on the Java class path, provided you
-set &ldquo;interpreter&rdquo; to &ldquo;java&rdquo; (below). 
+Not every setting in the configuration documentation can be overridden here: some are reserved for being changed only at the application level. Unfortunately we don't currently have a full list of which ones these are - the best thing to do is try it out and report errors if you feel something "ought" to work in a test when it doesn't.
 </div>
-
-<div class="Text_Normal">The entry &ldquo;interpreter&rdquo; allows you to specify a
-program to use as interpreter for the SUT, in the case that it
-is a script rather than a binary. To some extent TextTest will
-try to infer this from the file extension (e.g. set it to
-&ldquo;python&rdquo; if the file ends in &ldquo;.py&rdquo;,
-&ldquo;java&rdquo; if it ends in &ldquo;.jar&rdquo;), but it is
-sometimes necessary to specify it explicitly.</div>
 <div class="Text_Normal">It is also possible to have a personalised config file which
 accepts all the same settings as the normal config file, and
 will override anything provided there. This is particularly
@@ -118,6 +102,29 @@ preferences</A>. On UNIX, provide a file called &ldquo;.texttest&rdquo;
 in your home directory. On Windows, put a file called
 &ldquo;.texttest&rdquo; somewhere, and point the environment
 variable TEXTTEST_PERSONAL_CONFIG at that location.</div>
+<div class="Text_Header"><A NAME="executable"></A><A NAME="interpreter"></A>
+Defining how to run the System under Test</div>
+<div class="Text_Normal">
+The first entry that must be defined is "executable" (formerly known as "binary"),
+which defines the path to the SUT and without which nothing much
+will happen. This should be an absolute path, although
+environment variables may be included. If you create your application via the initial creation dialog,
+you locate this file via the GUI and the setting is created for you.</div>
+<div class="Text_Normal">
+There are a couple of circumstances under which relative paths will be accepted. One is
+if the same name is also included as a data file using one of the "*_test_path" settings: this
+allows you to vary the executable used. It can also be the name of a Java
+class that will be found on the Java class path, provided you
+set &ldquo;interpreter&rdquo; to &ldquo;java&rdquo; (below). 
+</div>
+<div class="Text_Normal">The entry &ldquo;interpreter&rdquo; allows you to specify a
+program to use as interpreter for the SUT, in the case that it
+is a script rather than a binary. To some extent TextTest will
+try to infer this from the file extension (e.g. set it to
+&ldquo;python&rdquo; if the file ends in &ldquo;.py&rdquo;,
+&ldquo;java&rdquo; if it ends in &ldquo;.jar&rdquo;), but it is
+sometimes necessary to specify it explicitly.</div>
+<div class="Text_Header"><A NAME="import_config_file"></A>Sharing config file settings between applications</div>
 <div class="Text_Normal">Sometimes it can be very useful to share configuration
 settings between several related applications. In that case you
 can use the &ldquo;import_config_file&rdquo; entry to identify
