@@ -73,19 +73,29 @@ which TextTest offers direct help with 3:
 	out.</div>
 </OL>
 <div class="Text_Header"><A NAME="test_data"></A>Executable and importable test data</div>
-<div class="Text_Normal">When TextTest creates the t<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">emporary
-write directory </A>on running the test, and populates it with
+<div class="Text_Normal">When TextTest creates the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">sandbox directory</A> on running the test, and populates it with
 test data, it also makes sure to insert that directory at the
 start of the PATH, PYTHONPATH and CLASSPATH variables. That
 makes it possible to provide executable programs that will be
-run instead of their real versions via the normal t<A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#link_test_path">est
-data mechanism</A> (&ldquo;link_test_path&rdquo;). Likewise, you
+run instead of their real versions via the normal <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>#link_test_path">test
+data mechanism</A> (&ldquo;link_test_path&rdquo;). Then you just need to place such executable test data
+in the appropriate place in the permanent test structure, just
+as you would with more passive test data.
+</div>
+<div class="Text_Normal"> Likewise, you
 can provide a Python module or a Java class, which will then be
 imported instead of the real version at the appropriate moment.
-Then you just need to place such executable/importable test data
-in the appropriate place in the permanent test structure, just
-as you would with more passive test data.</div>
-
+</div>
+<div class="Text_Normal">
+For Python programs, though, there is an alternative, which is usually preferable. This is to provide a file
+called "testcustomize.py". The idea of this is to be similar to Python's "sitecustomize.py",
+i.e. to provide some Python code that will be called on interpreter startup just for that
+test or test suites (it can be provided anywhere in the hierarchy, like anything else). The advantages of this
+is that it's easy to change the behaviour of several modules from a single location, it's
+easier to "monkey patch" individual functions rather than entire modules, and because it
+isn't dependent on PYTHONPATH, it works to manipulate also the behaviour of builtin modules.
+(But note also the Python interception mechanism, see below)
+</div>
 <div class="Text_Header"><A NAME="collect_traffic"></A><A NAME="-rectraffic"></A>
 Intercepting and replaying command line programs</div>
 <div class="Text_Normal">The above mechanism for executable programs is powerful but
