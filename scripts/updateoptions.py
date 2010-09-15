@@ -6,6 +6,7 @@ from tableshared import updateTable
 
 def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
+    configFile.write("executable:<must be set>\n")
     configFile.write("config_module:" + configModule + "\n")
     # Here so they end up in the write GUI tab in the docs
     configFile.write("use_case_record_mode:GUI\n")

@@ -6,6 +6,7 @@ from tableshared import updateTable
 
 def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
+    configFile.write("executable:<must be set>\n")
     configFile.write("config_module:" + configModule + "\n")
     configFile.write("\n")
     configFile.close()

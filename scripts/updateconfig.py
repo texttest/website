@@ -6,10 +6,9 @@ from tableshared import updateTable
 
 def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
-    configFile.write("config_module:" + configModule)
-    configFile.write("\n")
-    configFile.write("filename_convention_scheme:standard")
-    configFile.write("\n")
+    configFile.write("executable:<must be set>\n")
+    configFile.write("config_module:" + configModule + "\n")
+    configFile.write("filename_convention_scheme:standard\n")
     configFile.close()
 
 def getConfigData(texttestPath, configModule, osName, script):
