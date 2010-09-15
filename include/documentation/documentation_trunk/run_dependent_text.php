@@ -124,8 +124,11 @@ specific to this entry. This is defined as follows:
 	temporary directory where the test is run. These will then
 	produce different text every time. This syntax is mostly to
 	save you the bother of producing an exact regular expression to
-	match these paths.</div>
-
+	match these paths. It does not currently work if your temporary path (i.e. $HOME/.texttest/tmp
+        if you haven't overridden it) contains spaces, with the single exception of "Documents and Settings"
+        because this is now the default "HOME" location on Windows. If you get trouble, set $TEXTTEST_TMP
+        to a path that doesn't contain spaces.
+        </div>
 </UL>
 <div class="Text_Normal">For example:</div>
 <div class="Text_Normal">
