@@ -98,7 +98,7 @@ interception mechanism.</div>
 <div class="Text_Normal">To enable this, add the name of the program concerned to the
 config file entry &ldquo;collect_traffic&rdquo;. For each
 test for which you want to mock out this program, go to the
-Advanced tab under &ldquo;Running&rdquo; and check the &ldquo;(Re-)
+&ldquo;Running&rdquo; tab and check the &ldquo;(Re-)
 record command-line traffic&rdquo; box. TextTest will then
 create its own fake version of the program and place it in the
 temporary write directory as if it were test data, as above.</div>
@@ -223,7 +223,7 @@ In a similar way, if your program changes the current working directory for the 
 <?php codeSampleEnd() ?>
 Again this isn't what is executed internally: it is a representation only to allow easy comparison with future calls.
 </div>
-<div class="Text_Header"><A NAME="collect_traffic_py_module"></A>
+<div class="Text_Header"><A NAME="collect_traffic_python"></A>
 Intercepting and replaying Python modules</div>
 <div class="Text_Normal">
 If your system under test is written in Python you can make use of a variation
@@ -233,14 +233,16 @@ modules in a similar way to that described above. Examples would be things like
 always available where you want to run the tests, or which may cause undesirable
 global side effects.</div>
 <div class="Text_Normal">To enable this, add the name of the module concerned to the
-config file entry &ldquo;collect_traffic_py_module&rdquo;. For each
+config file entry &ldquo;collect_traffic_python&rdquo;. For each
 test for which you want to mock out this program, go to the
-Advanced tab under &ldquo;Running&rdquo; and check the &ldquo;(Re-)
+&ldquo;Running&rdquo; tab and check the &ldquo;(Re-)
 record command-line traffic&rdquo; box in the same way as above. TextTest will then
-create its own fake version of the module and place it in the
-sandbox directory as if it were test data, whilst making sure this directory comes
-first in the PYTHONPATH environment variable. (Note that this will therefore not work
-on builtin modules which aren't sensitive to PYTHONPATH)
+create its own "sitecustomize.py" file which will be loaded when your program starts,
+and manipulate "sys.meta_path" so that its own version of the modules given will be loaded
+instead of the real ones. These will then communicate with the traffic server in a similar
+way to the "collect_traffic" mechanism. (Note that this works internally a bit differently
+to how it did in versions prior to 3.20 : and it now works for builtin modules as it isn't
+based on changing PYTHONPATH)
 </div>
 <div class="Text_Normal">
 For example, suppose our Python script is designed to send an email under certain circumstances.
@@ -251,7 +253,7 @@ then monitor future changes to that interaction.
 <div class="Text_Normal">
 We start by intercepting the Python module for sending email in our config file:
 <?php codeSampleBegin() ?>
-collect_traffic_py_module:smtplib
+collect_traffic_python:smtplib
 <?php codeSampleEnd() ?>
 We then run with the "record" flag set and check that an appopriate-looking email arrives. We also get a traffic file as before, looking something like this:
 <?php codeSampleBegin() ?>
@@ -289,16 +291,16 @@ If the exception is itself defined in the intercepted module, it will be referre
 <?php codeSampleEnd() ?>
 </div>
 
-<div class="Text_Header"><A NAME="collect_traffic_py_attributes"></A>Intercepting individual Python calls</div>
+<div class="Text_Header">Intercepting individual Python calls</div>
 <div class="Text_Normal">
 In additional to intercepting entire Python modules, you can also intercept and replay individual function calls. 
 A good example is the current date (datetime.date.today() in Python) so that you
-can test code that depends on it without needing to write any code to fake what it does. For this
-purpose you can use "collect_traffic_py_attributes". To intercept
+can test code that depends on it without needing to write any code to fake what it does. You do this in the same
+way as above, i.e. using "collect_traffic_python". To intercept
 this call you would therefore do as follows. (Note that this format is changed since TextTest 3.19, when it was
 originally introduced. Also note that it now works on Windows, which it didn't in 3.19)
 <?php codeSampleBegin() ?>
-collect_traffic_py_attributes:datetime.date.today
+collect_traffic_python:datetime.date.today
 <?php codeSampleEnd() ?>
 This would produce a traffic file that looked something like
 <?php codeSampleBegin() ?>
@@ -310,9 +312,13 @@ as though "today" was always 12th May 2010, saving you the trouble of figuring o
 to manage test data that needed to refer to dates within a certain timeframe of it. 
 </div>
 <div class="Text_Normal">
-If "collect_traffic_py_attributes" is empty for any given module it is assumed that all calls to it are to
-be intercepted. In the above case, any usage of "datetime" that didn't call "datetime.date.today" would
-just behave as normal.
+Note that any usage of the "datetime" module other than calls to "datetime.date.today" would
+just behave as normal and not be intercepted.
+</div>
+<div class="Text_Normal">
+Note also that it does not currently work to provide the name for a bound method here: it must be a module-level
+function or attribute, static method or class name that is intercepted. Bound methods will hopefully be supported 
+in future.
 </div>
 <div class="Text_Header"><A NAME="collect_traffic_use_threads"></A>A note on threading and interception</div>
 <div class="Text_Normal">

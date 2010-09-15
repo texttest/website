@@ -252,7 +252,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">String</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
+			<div class="Table_Text_Small">&lt;must be set&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Alias. See entry for 'executable'</div>
@@ -423,7 +423,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_py_attributes">List of Python attributes to intercept</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'collect_traffic_python'</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -437,7 +437,21 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_py_module">List of Python modules to intercept</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'collect_traffic_python'</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">collect_traffic_python</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_python">List of Python modules and attributes to intercept</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -616,7 +630,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">builtin : environment, properties, testsuite, options, interpreter_options, stdin, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
+			<div class="Table_Text_Small">builtin : config, environment, properties, testsuite, options, interpreter_options, stdin, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
@@ -658,7 +672,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">String</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
+			<div class="Table_Text_Small">&lt;must be set&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=about_testsuites#executable">Full path to the System Under Test</A></div>
@@ -1376,6 +1390,48 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_module">Which queue system (grid engine) software to use. ("SGE" or "LSF")</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">queue_system_processes</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Int</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">1</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_processes">Number of processes the grid engine should reserve for tests</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">queue_system_resource</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_resource">Grid engine resources required to locate test execution machines</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">queue_system_submit_args</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_submit_args">Additional arguments to provide to grid engine submission command</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

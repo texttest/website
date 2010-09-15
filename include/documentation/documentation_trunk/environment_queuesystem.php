@@ -234,10 +234,10 @@
 			<div class="Table_Text_Small">QUEUE_SYSTEM_PROCESSES</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">1</div>
+			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#QUEUE_SYSTEM_PROCESSES">Number of processes the test needs to run</A></div>
+			<div class="Table_Text_Small">Deprecated. See "queue_system_processes" in config file docs</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -248,7 +248,7 @@
 			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#QUEUE_SYSTEM_RESOURCE">Grid engine resources required for the test</A></div>
+			<div class="Table_Text_Small">Deprecated. See "queue_system_resource" in config file docs</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -259,7 +259,7 @@
 			<div class="Table_Text_Small"></div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#QUEUE_SYSTEM_SUBMIT_ARGS">Extra arguments to provide on submission to grid engine</A></div>
+			<div class="Table_Text_Small">Deprecated. See "queue_system_submit_args" in config file docs</div>
 		</TD>
 	</TR>
 </TABLE>
