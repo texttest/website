@@ -90,7 +90,12 @@ which is an additional explanatory line added by the GUI and not part of the sta
 test. This line will be different in the case of 
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">running in batch mode</A>, which is why it isn't a good idea for TextTest
 to use it for matching. 
-</div><div class="Text_Normal">
+</div>
+<div class="Text_Normal">
+There is now also a control to trigger reruns when known bugs are found, which is useful for intermittent problems. In that case the test will simply be restarted, up to a maximum of the number of times you give. When running with a grid engine, the tests will not
+necessarily be rerun on the same machine so it is also a way to circumvent temporary hardware issues in that case. 
+</div>
+<div class="Text_Normal">
 When the tests are run, TextTest wll then find all such "knownbugs" files, using its 
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
 and prioritising files in the hierarchy</A>. All information from all such files will be used,

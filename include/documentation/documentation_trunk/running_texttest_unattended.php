@@ -279,7 +279,7 @@ is a more specialised version of <A class="Text_Link" href="<?php print "index.p
 <div class="Text_Normal">
 If you wish to select the tests that will be run by a batch run without actually running it,
 e.g. to load them into the GUI or to run them not in batch mode, you can use the command line
-option "-bx &lt;batch session name&gt;" to achieve this. This has the affect of looking up
+option "-bx &lt;batch session name&gt;" to achieve this. This has the effect of looking up
 and applying the settings configured for "batch_timelimit", "batch_extra_version" and "batch_filter_file".
 </div>
 <div class="Text_Normal">If the entry &ldquo;batch_use_version_filtering&rdquo; is set

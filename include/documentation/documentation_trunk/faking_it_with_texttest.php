@@ -221,7 +221,8 @@ which will also affect the traffic file. It will now instead start with the line
 <?php codeSampleBegin() ?>
 <-CMD:env 'CVSROOT=/path/to/cvs' cvs update -dP /path/to/my/checkout
 <?php codeSampleEnd() ?>
-providing a means to make sure our program is providing it to the CVS call correctly.</div>
+providing a means to make sure our program is providing it to the CVS call correctly. If environment variables were unset by the SUT this would also be recorded via "--unset" options to "env".
+</div>
 <div class="Text_Normal">
 (Note that this command isn't actually what TextTest executes, which of course would not work on Windows, it is just a representation of what it does which coincides with a legal UNIX command line. This mechanism is portable.)
 </div>
