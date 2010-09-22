@@ -118,7 +118,7 @@ which allows you to specify a different folder, (instead of "junitformat"), wher
 are using TextTest with Java, you may want to look at <this new page> for more tips.
 </div> 
 
-<div class="Text_Header"><A NAME="batch_result_repository"></A><A NAME="historical_report_location"></A><A NAME="historical_report_page_name"></A><A NAME="historical_report_colours"></A><A NAME="batch.GenerateSummaryPage"></A><A NAME="batch.GenerateGraphs"></A>
+<div class="Text_Header"><A NAME="batch_result_repository"></A><A NAME="historical_report_location"></A><A NAME="historical_report_page_name"></A><A NAME="historical_report_colours"></A><A NAME="historical_report_piechart_summary"></A><A NAME="batch.GenerateSummaryPage"></A><A NAME="batch.GenerateGraphs"></A>
 Generating HTML reports</div>
 <div class="Text_Normal">For more flexibility in viewing and analysing a lot of
 results, as well as being able to easily monitor the behaviour
@@ -153,9 +153,12 @@ is determined by the file "summary_template.html" which will be copied to your r
 the first time you build the pages. This can then be edited to e.g. add other relevant information
 and links to your dashboard page.</div>
 <div class="Text_Normal">
-At the top of each application page is a clickable graph that shows a summary of the test behaviour 
-over time. These graphs can also be generated alone by using "-s batch.GenerateGraphs batch=&lt;batch_session&gt;".
+If you install "Matplotlib" (version 0.98 or later), a clickable graph that shows a summary of the test behaviour 
+over time will be added at the top of the page. These graphs can also be generated alone 
+by using "-s batch.GenerateGraphs batch=&lt;batch_session&gt;".
 Graphs generated in this way will currently include all runs which exist in the HTML pages.
+You can also then set "historical_report_piechart_summary" to "true" which will cause the
+little result summary tables to be replaced by Matplotlib pie charts if you think that looks nicer.
 </div>
 <div class="Text_Normal"> 
 Sometimes though it can be useful to have several applications directly on the same page, especially

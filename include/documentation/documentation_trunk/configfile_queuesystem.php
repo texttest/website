@@ -414,20 +414,6 @@ of the "Type" column in this table.
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">collect_traffic_py_attributes</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">List</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Alias. See entry for 'collect_traffic_python'</div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">collect_traffic_py_module</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -452,6 +438,20 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_python">List of Python modules and attributes to intercept</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">collect_traffic_python_ignore_callers</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_python_ignore_callers">List of Python modules from where calls to intercepted items should be ignored</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -913,7 +913,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">false</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Generate pie chart summary page rather than default HTML tables.</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_piechart_summary">Generate pie chart summary page rather than default HTML tables.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1852,6 +1852,20 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#virtual_display_extra_args">(UNIX) Extra arguments (e.g. bitdepth) to supply to virtual display server (Xvfb)</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">virtual_display_hide_windows</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">true</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#virtual_display_hide_windows">(Windows) Whether to emulate the virtual display handling on Windows by hiding the SUT's windows</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

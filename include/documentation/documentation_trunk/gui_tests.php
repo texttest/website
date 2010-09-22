@@ -99,20 +99,28 @@ we can minimise changes in the tests themselves.</div>
 </div><div class="Text_Normal"><I>
 PyUseCase identifies widgets by name, title, label and type, in that order. Obviously here we are identfiying the main tree view by its type alone, which will break down as soon as the UI contains another one. Likewise, the title of our window might vary from run to run. For robustness it's therefore often necessary to assign widget names in your code, at which point this file should be updated with "Name=Bug tree view" instead of "Type=TreeView".</I>
 </div>
-<div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="USECASE_REPLAY_DELAY"></A><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_extra_args"></A>
-Running a Test</div>
+<div class="Text_Header">Running a Test</div>
 <div class="Text_Normal">Clearly, there is no need to run it once in order to collect
 the output as we did with &ldquo;hello world&rdquo;: this is
 built into the &ldquo;Record use-case&rdquo; operation.
 Currently, if we run the test, the GUI will pop up and the
-actions will be performed as fast as possible. 
+actions will be performed as fast as possible. </div>
+<div class="Text_Normal">
+If you have many GUI tests, it naturally becomes somewhat annoying
+if hundreds of windows keep popping up all the time, it makes it difficult
+to use your computer for anything else while the tests are running. This
+can be mitigated by running the tests on a different desktop or e.g. against
+a VNC server. TextTest however also has builtin means to do this and save
+you the trouble. These mechanisms are platform specific and are described below.
 </div>
-
-<div class="Text_Normal">On UNIX, TextTest will try to stop
-the SUT's GUIs from popping up, by using the virtual display server Xvfb 
-(a standard UNIX tool). For each run of the tests it will start such
+<div class="Text_Header"><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_extra_args"></A>Hiding the SUT's windows (UNIX)</div>
+<div class="Text_Normal">All that is required for this to work is for the standard
+UNIX tool "Xvfb" to be installed. For each run of the tests it will start such
 a server, point the SUT's DISPLAY variable at it and close the server
-at the end of the test. Ordinarily, it will run it like this
+at the end of the test. This mechanism makes it possible to run GUI tests in parallel
+using e.g. SGE as no displays are shared between tests.</div>
+<div class="Text_Normal">
+Ordinarily, it will run it like this
 <?php codeSampleBegin() ?>
 Xvfb -ac -audit 2 :&lt;display number&gt;
 <?php codeSampleEnd() ?>
@@ -133,24 +141,38 @@ via the config entry &ldquo;virtual_display_machine&rdquo;. This will
 cause TextTest to start the Xvfb process on that machine if it isn't
 possible to do so locally.
 </div>
-<div class="Text_Normal">On Windows, target GUIs are started with
-the Windows flag to hide them, so a similar effect occurs. However, note 
+<div class="Text_Header"><A NAME="virtual_display_hide_windows"></A>Hiding the SUT's windows (Windows)</div>
+<div class="Text_Normal">On Windows, the SUT is started with
+the Windows flag to hide it, so a similar effect occurs. However, note 
 that this operation is not recursive, so any dialogs, extra windows etc. 
-that get started will (unfortunately) appear anyway. 
+that get started will (unfortunately) appear anyway. </div>
+<div class="Text_Normal">
+Occasionally, hiding the GUI like this seems to cause problems. Tk-based
+GUIs seem to ignore the flag anyway while e.g. wxPython GUIs seem to seize
+up sometimes. To disable the window hiding altogether, you can set
+<?php codeSampleBegin() ?>
+virtual_display_hide_windows:false
+<?php codeSampleEnd() ?>
 </div>
-
+<div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="USECASE_REPLAY_DELAY"></A>Slow Motion Replay</div>
 <div class="Text_Normal">We might want to examine the behaviour of the GUI for a test.
-To do this, we set a default speed in the config file, using the
-config file setting 'slow_motion_replay_speed:&lt;delay&gt;',
-where &lt;delay&gt; is the number of seconds we want it to pause
-between each GUI action. (This is translated to the environment variable
-USECASE_REPLAY_DELAY which is forwarded to the system under test, or
-the "delay" property if JUseCase is being used). For a particular run, we then select
-&ldquo;slow motion replay mode&rdquo;, from the &ldquo;how to
-run&rdquo; tab in the static GUI. This will force the GUI to pop
-up for this run, whatever is set in the virtual_display_machine
-entry.</div>
-<div class="Text_Normal">In summary, our config file should look something like this:</div>
+To do this, we set a default speed in seconds, for example
+<?php codeSampleBegin() ?>
+slow_motion_replay_speed:2
+<?php codeSampleEnd() ?>
+and then select "Run with slow motion replay" from the "Running" tab in the static GUI
+when we run the test. This will cause the replay to wait 2 seconds between replaying each GUI action.
+It will also cause the above window-hiding mechanisms to be disabled, naturally.
+</div>
+<div class="Text_Normal">
+This is translated to the environment variable USECASE_REPLAY_DELAY which is 
+forwarded to the system under test. PyUseCase and nUseCase both use this variable.
+In the case of Java and JUseCase it is translated to the "delay" Java property.
+Naturally for other tools a small wrapper script can be used to translate this into
+whatever the tool requires.
+</div>
+<div class="Text_Header">A sample config file for GUI testing</div>
+<div class="Text_Normal">In summary, our config file could look something like this:</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/guiconfig.png" NAME="Graphic4" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 
 </div>

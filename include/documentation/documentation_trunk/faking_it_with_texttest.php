@@ -108,9 +108,8 @@ interception mechanism.</div>
 <div class="Text_Normal">To enable this, add the name of the program concerned to the
 config file entry &ldquo;collect_traffic&rdquo;. For each
 test for which you want to mock out this program, go to the
-&ldquo;Running&rdquo; tab and check the &ldquo;(Re-)
-record command-line traffic&rdquo; box. TextTest will then
-create its own fake version of the program and place it in the
+&ldquo;Running&rdquo; tab and select "Record All" for the "Traffic Files" radio button. TextTest 
+will then create its own fake version of the program and place it in the
 temporary write directory as if it were test data, as above.</div>
 
 <div class="Text_Normal">When called, this program will send the command line it was
@@ -245,8 +244,8 @@ global side effects.</div>
 <div class="Text_Normal">To enable this, add the name of the module concerned to the
 config file entry &ldquo;collect_traffic_python&rdquo;. For each
 test for which you want to mock out this program, go to the
-&ldquo;Running&rdquo; tab and check the &ldquo;(Re-)
-record command-line traffic&rdquo; box in the same way as above. TextTest will then
+&ldquo;Running&rdquo; tab and select "Record All" for the "Traffic Files"
+radio button as above. TextTest will then
 create its own "sitecustomize.py" file which will be loaded when your program starts,
 and manipulate "sys.meta_path" so that its own version of the modules given will be loaded
 instead of the real ones. These will then communicate with the traffic server in a similar
@@ -330,6 +329,32 @@ Note also that it does not currently work to provide the name for a bound method
 function or attribute, static method or class name that is intercepted. Bound methods will hopefully be supported 
 in future.
 </div>
+<div class="Text_Header"><A NAME="collect_traffic_python_ignore_callers"></A>Only recording when calls are made 
+from particular modules and packages</div>
+<div class="Text_Normal">
+If you intercept something quite low-level, such as "os.getpid" you run into the issue that this may well be called
+by the standard library itself, or by development tools like
+PyUseCase or coverage.py. This obviously leads to far more calls being intercepted and recorded than you actually want.
+</div>
+<div class="Text_Normal">
+TextTest therefore makes sure that any calls made by the standard library or by its own interceptor programs are not intercepted and
+recorded. This does mean that you need to intercept exactly the right thing. For example it will not work to
+intercept "subprocess.Popen" if your program actually calls "subprocess.call", even though the latter calls the
+former internally.
+</div>
+<div class="Text_Normal">
+To tell it to block calls made from other places, you use the config file setting "collect_traffic_python_ignore_callers",
+which is a list of modules or directories from where calls should not be intercepted. For example, this will intercept
+"os.getpid" except when it is called from any module in a directory called "coverage" or from the "usecase" module,
+assuming our tests might use PyUseCase and coverage.py to extract information.
+
+<?php codeSampleBegin() ?>
+collect_traffic_python:os.getpid
+
+collect_traffic_python_ignore_callers:coverage
+collect_traffic_python_ignore_callers:usecase
+<?php codeSampleEnd() ?>
+</div>
 <div class="Text_Header"><A NAME="collect_traffic_use_threads"></A>A note on threading and interception</div>
 <div class="Text_Normal">
 By default each such request will be handled by a separate thread internally in TextTest's "traffic server"
@@ -352,7 +377,7 @@ to your system under test.
 </div>
 <div class="Text_Normal">
 As above, TextTest considers itself to be recording such traffic when the
-&ldquo;(Re-) record traffic&rdquo; switch is enabled, and
+"Traffic Files" switch is set to "Record", and
 replaying such traffic when a &ldquo;traffic.&lt;app&gt;&rdquo;
 file already exists. In these circumstances it sets up its own
 &ldquo;traffic server&rdquo; and sets the environment variable
