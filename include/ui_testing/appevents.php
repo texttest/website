@@ -82,3 +82,6 @@ if he is writing a Java GUI and using JUseCase. Either way, the recorded use cas
 
 <div class="Text_Normal"><img src="include/ui_testing/images/appeventrep.JPG" NAME="Graphic5" ALIGN=LEFT WIDTH=495 HEIGHT=249 BORDER=0><BR CLEAR=LEFT><BR>
 </div>
+<div class="Text_Normal">
+To see how this works in practice, look at the <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_appevents">relevant PyUseCase documentation</A>.
+</div>

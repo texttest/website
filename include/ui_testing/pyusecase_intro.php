@@ -100,5 +100,5 @@ The basic idea is that GUI changes will cause changes in this file but not in th
 </div>
 <div class="Text_Header">What now?</div>
 <div class="Text_Normal">
-This is OK for demonstration purposes but reasonably limited on its own. For testing you probably want to try to <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_texttest">use it in combination with TextTest</A>. Also, you can examine the <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_additional">extra features</A> such as synchronisation support via "application events", macro recording with "GUI shortcuts", and recording and playing back received signals.
+This is OK for demonstration purposes but reasonably limited on its own. For testing you probably want to try to <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_texttest">use it in combination with TextTest</A>. Also, you can examine the extra features such as synchronisation support via <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_appevents">Application Events</A>, macro recording with <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_shortcuts">GUI shortcuts</A>, and recording and playing back <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_signals">received signals</A>.
 </div>

@@ -62,4 +62,6 @@ pressing 'Save All' would have it universally present.
 <div class="Text_Normal">If you now need to change the login screen in any way, you
 can do it by just re-recording (or hand-editing) the shortcut
 file and no tests will need to be changed.</div>
-				
+<div class="Text_Normal">
+To see how this works in practice, look at the <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_shortcuts">relevant PyUseCase documentation</A>.
+</div>
