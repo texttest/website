@@ -297,13 +297,16 @@ Exceptions are also handled seamlessly. For example, if the SMTP server above co
 <?php codeSampleEnd() ?>
 If the exception is itself defined in the intercepted module, it will be referred in a similar way to the SMTP object above, i.e.
 <?php codeSampleBegin() ?>
-->RET:raise Instance('MyException', 'myexception1')
+->RET:raise Instance('MyException(exceptions.IOError)', 'myexception1')
 <?php codeSampleEnd() ?>
+Unlike in TextTest 3.20 and previous, base classes of intercepted classes (here 'exceptions.IOError') 
+are listed explicitly in the traffic files. (Previously any intercepted exception type was just assumed to inherit directly
+from exceptions.Exception.)
 </div>
 
 <div class="Text_Header">Intercepting individual Python calls</div>
 <div class="Text_Normal">
-In additional to intercepting entire Python modules, you can also intercept and replay individual function calls. 
+In addition to intercepting entire Python modules, you can also intercept and replay individual function calls. 
 A good example is the current date (datetime.date.today() in Python) so that you
 can test code that depends on it without needing to write any code to fake what it does. You do this in the same
 way as above, i.e. using "collect_traffic_python". To intercept

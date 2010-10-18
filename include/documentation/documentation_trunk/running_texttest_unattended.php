@@ -87,10 +87,9 @@ to login with that username and the password defined by "smtp_server_password"
 before attempting to send mail.</div>
 <div class="Text_Normal">All of these will need to be configured on Windows as no
 defaults are provided. On UNIX, the SMTP server defaults to
-&ldquo;localhost&rdquo; and both sender and recipient addresses
-default to &ldquo;$USER@localhost&rdquo;, so it is generally
+&ldquo;localhost&rdquo; and the sender address defaults to 
+&ldquo;$USER@localhost&rdquo;, so it is generally
 only necessary to configure the recipients.</div>
-
 <div class="Text_Header"><A NAME="batch_junit_format"></A><A NAME="batch_junit_folder"></A>
 Producing results in JUnit format for display in a continuous integration server</div>
 <div class="Text_Normal">

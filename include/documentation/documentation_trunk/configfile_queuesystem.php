@@ -154,10 +154,10 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">$USER@localhost</div>
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_recipients">Addresses to send mail to in batch mode</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_recipients">Comma-separated addresses to send mail to in batch mode</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
