@@ -229,13 +229,10 @@ collection of these can be disabled: look <A class="Text_Link" href="<?php print
 <div class="Text_Normal">TextTest assumes that high-level information of interest to
 it will be logged to one particular result file. This file is
 indicated by the &ldquo;log_file&rdquo; config file entry and
-defaults to &ldquo;output&rdquo; (i.e. the standard output of
-the SUT). Many different features of TextTest will look here for
+defaults to "stdout" or "output" depending on naming scheme 
+(i.e. the standard output of the SUT). Many different features of TextTest will look here for
 information to extract of one sort or another. 
 </div>
-<div class="Text_Normal">All of these files are in whatever format is expected or
-produced by the SUT: TextTest does not itself look at their
-contents.</div>
 <div class="Text_Header"><A NAME="extra_search_directory"></A>Finding and prioritising files in a test suite</div>
 <div class="Text_Normal">By now the idea should be emerging that TextTest
 follows the principle of "Convention over Configuration", and uses particular names
