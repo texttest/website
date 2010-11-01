@@ -208,7 +208,7 @@ ignored. If a directory is ignored, so are its contents.</div>
 shown in the static GUI (which will behave as if they didn't
 exist) and changes in them will not appear in the catalogue
 file, if there is one. If you are using
-&ldquo;partial_copy_:test_path&rdquo;, that means they will also
+&ldquo;partial_copy_test_path&rdquo;, that means they will also
 not be copied, ever: changes there are regarded as
 uninteresting. It is thus a very bad idea to use this setting in
 conjunction with partially copied structures, if there is any
