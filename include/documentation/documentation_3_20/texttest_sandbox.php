@@ -263,9 +263,9 @@ from the current working directory for its log configuration. In practice though
 this is likely to be inconvenient for uses other than testing, so you'll probably want
 to use an environment variable or Java property to point it out. This is done as follows:
 </div>
-<div class="Text_Small_Header">Example configuration (log4py)</div> 
+<div class="Text_Small_Header">Example configuration (environment variable)</div> 
 <div class="Text_Normal">Assumes the SUT
-locates the log4py configuration file via the environment variable
+locates the log configuration file via the environment variable
  $DIAG_INPUT_FILE.</div>
 <div class="Text_Normal">
 
@@ -276,7 +276,7 @@ logging:DIAG_INPUT_FILE
 <?php codeSampleEnd() ?>
 
 </div>
-<div class="Text_Small_Header">Example 2 (log4j)</div>
+<div class="Text_Small_Header">Example 2 (Java property / log4j)</div>
 <div class="Text_Normal"> Assumes the SUT reads the local
 properties file log4jconf.properties, which will contain the
 property &ldquo;diag_input&rdquo;.
@@ -326,8 +326,8 @@ make it easy to use them in your program when testing it.</div>
 <div class="Text_Normal">We recommend you look at the log4x family of tools, for
 example <A class="Text_Link" href="http://logging.apache.org/log4j/docs/">log4j</A>
 
-(Java) <A class="Text_Link" href="http://www.its4you.at/english/log4py.html">log4py</A>
-(Python) and <A class="Text_Link" href="http://log4cpp.sourceforge.net/">log4cpp</A>
-(C++). However, it should be possible to plug in a wide variety
+(Java) and <A class="Text_Link" href="http://log4cpp.sourceforge.net/">log4cpp</A>
+(C++). Python has its own builtin "logging" module which works in a similar way.
+However, it should be possible to plug in a wide variety
 of logging frameworks, provided they support the features that
 TextTest assumes, as described above.</div>
