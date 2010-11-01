@@ -43,27 +43,12 @@ For example, you want to call your program like this:
 <?php codeSampleBegin() ?>
 java -Xms256m -Xmx1024m -DmailServerPort=1642 com.mycompany.MyClass
 <?php codeSampleEnd() ?>
-Currently TextTest has no really good way to let you do this. (There is an enhancement request
-for this). There are two workarounds. One is to specify "java" as the executable in the 
-config file, and have the whole of the rest of the command line in your options.myapp files. 
-This works and gives you maximum flexibility, but may render some TextTest features, such as the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>#-c">checkout mechanism</A> impossible to use.
-</div>
-<div class="Text_Normal">
-If it's just the System Properties you're interested in, you can put them in an ordinary properties
-file and change your application code to alternatively read them in from there. A call to a bit of code like
-this near the start of your main method should do the trick:
+The way to do this is using an "interpreter_options.myapp" file containing
 <?php codeSampleBegin() ?>
-    public static void loadProperties() throws IOException {
-        URL url = ClassLoader.getSystemResource("com/mycompany/myfile.properties");
-        if (url != null) {
-                // property file values will override existing system properties
-                Properties p = new Properties(System.getProperties());
-                p.load(url.openStream());
-                // set the updated system properties
-                System.setProperties(p);
-        }
-    }
+-Xms256m -Xmx1024m -DmailServerPort=1642
 <?php codeSampleEnd() ?>
+These can then be varied throughout the test suite structure as described in the 
+<A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#extra_search_directory">test suite guide</A>.
 </div>
 <div class="Text_Normal">
 In general Java properties in arbitrary properties files can be set according to the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#properties files">properties file mechanism</A>. 

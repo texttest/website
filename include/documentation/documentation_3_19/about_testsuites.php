@@ -186,7 +186,7 @@ when you create a new test suite as these names were deemed less confusing. It w
 remain with the default "classic" scheme which contains the older names to avoid introducing mass
 compulsory migration. The following files will be taken as test definition files:</div>
 <UL>
-<div class="Text_Normal"><li><B>options.&lt;app&gt;</B>
+<div class="Text_Normal"><li><B>environment.&lt;app&gt;</B>
 - This will be interpreted as environment variables to be set for
  the system under test.
 </div>
@@ -197,6 +197,9 @@ section below.
 </div>
 <div class="Text_Normal"><li><B>interpreter_options.&lt;app&gt;</B>
 - This will be interpreted as command line options to be given to the interpreter program.
+</div>
+<div class="Text_Normal"><li><B>knownbugs.&lt;app&gt;</B>
+- This will be interpreted as automatic failure interpretation information.
 </div>
 <div class="Text_Normal"><li><B>stdin.&lt;app&gt;</B>
 - This will be redirected to the system under test as standard

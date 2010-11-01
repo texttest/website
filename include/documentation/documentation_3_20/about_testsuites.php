@@ -123,7 +123,10 @@ is a script rather than a binary. To some extent TextTest will
 try to infer this from the file extension (e.g. set it to
 &ldquo;python&rdquo; if the file ends in &ldquo;.py&rdquo;,
 &ldquo;java&rdquo; if it ends in &ldquo;.jar&rdquo;), but it is
-sometimes necessary to specify it explicitly.</div>
+sometimes necessary to specify it explicitly.</div><div class="Text_Normal">
+Arguments can be provided to the interpreter program via
+the "interpreter_options" files, see below.
+</div>
 <div class="Text_Header"><A NAME="import_config_file"></A>Sharing config file settings between applications</div>
 <div class="Text_Normal">Sometimes it can be very useful to share configuration
 settings between several related applications. In that case you
@@ -183,21 +186,35 @@ when you create a new test suite as these names were deemed less confusing. It w
 remain with the default "classic" scheme which contains the older names to avoid introducing mass
 compulsory migration. The following files will be taken as test definition files:</div>
 <UL>
+<div class="Text_Normal"><li><B>environment.&lt;app&gt;</B>
+- This will be interpreted as environment variables to be set for
+ the system under test.
+</div>
 <div class="Text_Normal"><li><B>options.&lt;app&gt;</B>
 - This will be interpreted as command line options to be given
 to the system under test. They may now also be used in test suites, see
 section below.
 </div>
+<div class="Text_Normal"><li><B>interpreter_options.&lt;app&gt;</B>
+- This will be interpreted as command line options to be given to the interpreter program.
+</div>
+<div class="Text_Normal"><li><B>knownbugs.&lt;app&gt;</B>
+- This will be interpreted as automatic failure interpretation information.
+</div>
 <div class="Text_Normal"><li><B>stdin.&lt;app&gt;</B>
 - This will be redirected to the system under test as standard
 input. In the "classic" naming scheme it should be called <B>input.&lt;app&gt;</B>
 </div>
-
+<div class="Text_Normal"><li><B>traffic.&lt;app&gt;</B>
+- These are used to capture interaction with third party products in TextTest's mock functionality.
+</div>
 <div class="Text_Normal"><li><B>usecase.&lt;app&gt;</B>
 - The use case recorder will be configured to replay the system
 under test from this file. 
 </div>
-</UL>
+</UL><div class="Text_Normal">Naturally you should avoid using these reserved names for any other
+purpose, such as test data files. TextTest will try to warn you if you do.
+</div>
 <div class="Text_Normal">The expected output files from the SUT are also stored in
 this directory: these will be compared with the actual result
 for each test run. By default, the standard output of the system
@@ -264,6 +281,10 @@ to the order of the arguments. TextTest will however attempt to insert optional 
 before positional arguments as best it can, but it isn't always possible to tell which is which as TextTest
 has no understanding of what arguments the SUT actually accepts. In the case of "-foo 1", the "1" could be an argument
 to the "-foo" option or it could be a separate positional argument. TextTest will assume the former in this case.
+</div>
+<div class="Text_Normal">
+In a similar way command-line options can be provided to the interpreter program using files named "interpreter_options".
+For example these might be JVM options to a Java program.
 </div>
 <div class="Text_Header"><A name="environment files"></A>Using Environment Files to set Environment Variables</div>
 <div class="Text_Normal">Any test suite or test case can tell TextTest to set
