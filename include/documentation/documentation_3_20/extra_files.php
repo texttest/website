@@ -12,46 +12,35 @@ and compare them in a similar way to how it compares standard output and standar
 It is also possible to tell it to create an additional file which will list all files that were created, edited
 or deleted by the system under test (a "catalogue" file), in case comparing every single file is overkill. 
 </div>
-<div class="Text_Normal">
-</div>
-
 <div class="Text_Header"><A NAME="collate_file"></A><A NAME="discard_file"></A>
 Telling TextTest to collect additional files</div>
 <div class="Text_Normal">This can be done by specifying the config file entry
-&ldquo;collate_file&rdquo;. This entry is a dictionary and so
-takes the following form : 
+"collate_file". This entry is a dictionary of lists: on the left hand side you make
+up a name which TextTest will use to identify the file, and on the right-hand side you
+tell it how to find the file. For example
 </div>
-
 <div class="Text_Normal">
 <?php codeSampleBegin() ?>
 [collate_file]
-&lt;texttest_name&gt;:&lt;source_file_path&gt;
-&lt;texttest_name&gt;:&lt;another_source_file&gt;
+edited_file:file.txt
+file_from_subdir:subdir/*.dump
 <?php codeSampleEnd() ?>
 </div>
-
 <div class="Text_Normal">
-where &lt;source_file_path&gt;</i> is some file your application
-writes and &lt;texttest_name&gt; is what you want it to be
-called by TextTest. 
+This will cause TextTest to look for "file.txt" in your <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">sandbox directory</A> and if it is found and has been edited by the test, copy it to "edited_file.&lt;app&gt;" and use it as part of the test baseline in future. It will also look for any file matching the UNIX path expansion "subdir/*.dump" (again relative to the sandbox) and copy it to "file_from_subdir.&lt;app&gt;" in a similar way.
 </div>
 
 
-<div class="Text_Normal">If you plan to do this, make sure you read the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">document
-describing how the TextTest temporary directory works</A> first.
-&lt;source_file_path&gt; here should in principle never be an
-absolute path : it should be relative (implicitly to the
-temporary directory described above). This is because your tests
-will otherwise have global side effects &ndash; making them
+<div class="Text_Normal">
+The paths identified on the right hand side here should in principle never be
+absolute paths : they should be relative, implicitly to the sandbox directory. 
+This is because your tests will otherwise have global side effects - making them
 harder to understand and more prone to occasional failure,
 particularly if run more than once simultaneously.</div>
 
 <div class="Text_Normal">Note that this ordering can seem counter-intuitive, in effect
-you are asking TextTest to copy the text file located at
-&lt;source_file_path&gt; to &lt;texttest_name&gt;.&lt;app&gt; in
-the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory of that test</A>,
-where it will be picked up and compared. You might expect the
-source to be named before the target, but many different config
+you are asking TextTest to copy the text file on the right to the location identified 
+on the left. You might expect the source to be named before the target, but many different config
 dictionary entries use these TextTest names for result files as
 keys so this one works the same for consistency. </div>
 <div class="Text_Normal">
@@ -59,18 +48,18 @@ Note also that TextTest will only collate files that were created or
 modified by the test run. Unchanged files will not be picked up even if they
 match a source pattern.
 </div>
-<div class="Text_Normal">Standard UNIX file pattern matching (globbing)
+<div class="Text_Normal">As in the example, standard UNIX file pattern matching (globbing)
 may be used in the path to the source file. This simply means that the
-exact name of the file that will be produced may vary, but
-whatever file matches the pattern will be copied and given the
-same name each time by TextTest. If multiple files are found by this method, the first one
+exact name of the file that will be produced may vary, but whatever file matches the 
+pattern will be copied and given the same name each time by TextTest. If multiple files 
+are found by this method, the first one
 alphabetically will be used. See below for how to collate multiple files at once.</div>
 <div class="Text_Normal">
 It's also possible to provide multiple patterns or
 names to look in for this situation, where the names of
 the produced files vary in such a way that writing a pattern isn't
-possible.</div>
-
+possible. The <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats";?>">standard syntax</A> for a config file list is used.
+</div>
 <div class="Text_Normal">If comparison of a collected file is not desired for any
 reason, it can be added to the config file list entry
 &ldquo;discard_file&rdquo;. The most common usage of this is to

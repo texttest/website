@@ -23,20 +23,24 @@ entry 'run_dependent_text', whose keys corresponding to the
 TextTest name of the file : i.e. the stem of the file name. This could be "stdout" or
 "stderr" for the standard output and error of the application (alternatively "errors" and "output" using
 the classic naming scheme), or it could be the
-name of a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files";?>">collated file</A> (See also the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>">file format documentation</A>
-for more details of this). It should take this form:</div>
-
+name of a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=extra_files";?>">collated file</A> (See also the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats";?>">file format documentation</A>
+for more details of this). The values are lists of strings or regular expressions to search for. For example:</div>
 <div class="Text_Normal">
-
 <?php codeSampleBegin() ?>
 [run_dependent_text]
-&lt;texttest_name&gt;:&lt;run_dependent_pattern1&gt;
-&lt;texttest_name&gt;:&lt;run_dependent_pattern2&gt;
+stdout:Process ID
+stdout:[0-9][0-9]:[0-9][0-9]
+my_file:Machine name
 <?php codeSampleEnd() ?>
 </div>
-
 <div class="Text_Normal">
-
+This will cause all lines that contain the string &ldquo;Process
+ID&rdquo; or match the given regular expression on the second line to be filtered
+out from the standard output. Likewise, the collated file
+"my_file" will be stripped of lines containing the string "Machine
+name". 
+</div>
+<div class="Text_Normal">
 The patterns provided may contain regular expressions. Any line
 in the file which matches the expression, or contains the text
 provided, will be filtered out in its entirety from the
@@ -52,28 +56,6 @@ Therefore a regular expression containing only "." characters,
 such as "..." to mean any three characters, will not be recognised by TextTest and will be interpreted
 as three literal dots.
 </div>
-<div class="Text_Normal">
-
-For example:</div>
-<div class="Text_Normal">
-
-<?php codeSampleBegin() ?>
-[run_dependent_text]
-stdout:Process ID
-stdout:[0-9][0-9]:[0-9][0-9]
-my_file:Machine name
-<?php codeSampleEnd() ?>
-
-
-</div>
-<div class="Text_Normal">
-This will cause all lines that contain the string &ldquo;Process
-ID&rdquo; or match the given regular expression to be filtered
-out from the standard output. Likewise, the collated file
-my_file will be stripped of lines containing the string &ldquo;Machine
-name&rdquo;. 
-</div>
-
 <div class="Text_Header">Filtering out multiple lines and parts of lines</div>
 <div class="Text_Normal">Various extensions are available, using a special syntax
 specific to this entry. This is defined as follows: 
@@ -124,8 +106,10 @@ specific to this entry. This is defined as follows:
 	temporary directory where the test is run. These will then
 	produce different text every time. This syntax is mostly to
 	save you the bother of producing an exact regular expression to
-	match these paths.</div>
-
+	match these paths. It does not currently work if your temporary path (i.e. $HOME/.texttest/tmp
+        if you haven't overridden it) contains spaces. If you get trouble, set $TEXTTEST_TMP
+        to a path that doesn't contain spaces.
+        </div>
 </UL>
 <div class="Text_Normal">For example:</div>
 <div class="Text_Normal">
