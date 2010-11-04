@@ -516,5 +516,16 @@ in the GUI. The "Brief Text" in the final column corresponds to the labels in th
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=troubleshooting#-xw">Write self-diagnostics to &lt;value&gt;</A></div>
 		</TD>
 	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">-zen</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">N/A</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#-zen">Make console output coloured, for use e.g. with ZenTest</A></div>
+		</TD>
+	</TR>
 </TABLE>
 </div>

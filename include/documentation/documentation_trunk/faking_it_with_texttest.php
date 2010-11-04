@@ -1,10 +1,5 @@
 <div class="Text_Main_Header">Faking it with TextTest</div>
-<div class="Text_Description"> How to avoid running your whole system for real</div>
-
-<div class="Text_Normal"><BR>
-
-</div>
-				
+<div class="Text_Description"> How to avoid running your whole system for real</div>				
 				
 <div class="Text_Header">Introduction</div>
 <div class="Text_Normal">TextTest is about testing at the system level, and it is
@@ -281,7 +276,7 @@ I love you all!
 ->RET:{}
 <-PYT:smtp1.quit()
 <?php codeSampleEnd() ?>
-This provides the full email interaction and contents. The "PYT" communications represent calls made to the module by the system, while the "RET" ones are the responses provided. When a basic Python object, like a string or a list, is returned, it is referred to via its textual representation, i.e. via "repr". When an object is returned, as in when we construct a smtplib.SMTP object here, it is assigned a numeric name ("smtp1" here) and is referred to in the response as "Instance('SMTP', 'smtp1')". All future interaction with such an object is also intercepted as shown here.
+This provides the full email interaction and contents. The "PYT" communications represent calls made to the module by the system, while the "RET" ones are the responses provided. When a basic Python object, like a string or a list, is returned, it is referred to via its textual representation, i.e. via "repr". It is by default assumed that it will work to reconstruct the object using "eval" (see the section below on what to do when this isn't true). When an object is returned, as in when we construct a smtplib.SMTP object here, it is assigned a numeric name ("smtp1" here) and is referred to in the response as "Instance('SMTP', 'smtp1')". All future interaction with such an object is also intercepted as shown here.
 </div>
 <div class="Text_Normal">
 Naturally we can then run this test and just verify that the smtplib interaction is the same, or make judgements on differences in the contents of the email, without needing to actually send emails for real every time. As before, it is also easy to simulate conditions by editing the file by hand. An added bonus here is that it is of course not very difficult to transform this file into a valid Python script, which can be very useful for extracting simple example code from your own code when you are unsure of how you are supposed to call a third-party library correctly.
@@ -358,6 +353,35 @@ collect_traffic_python:os.getpid
 collect_traffic_python_ignore_callers:coverage
 collect_traffic_python_ignore_callers:usecase
 <?php codeSampleEnd() ?>
+</div>
+<div class="Text_Header"><A NAME="collect_traffic_alter_response"></A>Handling objects that don't comply with the repr-eval convention</div>
+<div class="Text_Normal">
+This mechanism will only work out of the box sending objects for which eval(repr(x)) will reconstruct x. This is a convention followed in Python for all basic objects, but you may run into objects where it isn't followed. For example, you might try to intercept "os.stat", and end up with a traffic file like this:
+<?php codeSampleBegin() ?>
+<-PYT:os.stat("/tmp/myfile")
+->RET:posix.stat_result(st_mode=33204, st_ino=29463754, st_dev=19L, 
+                        st_nlink=1, st_uid=293, st_gid=13, st_size=72883, 
+                        st_atime=1274110664, st_mtime=1187778284, 
+                        st_ctime=1187778284)
+<?php codeSampleEnd() ?>
+but also with an exception in your code, because the string in the return value cannot be passed to "eval".</div>
+<div class="Text_Normal">
+All the information we need is there to reconstruct the object though, so we can tell TextTest to alter it for us. We do this via the "collect_traffic_alter_response" setting. This has a similar format to "run_dependent_text". So we say something like:
+<?php codeSampleBegin() ?>
+# Make it work on Windows also!
+collect_traffic_alter_response:posix{REPLACE os}
+# Double-up the brackets
+collect_traffic_alter_response:\((.*)\){REPLACE ((\1))}
+# Drop the keyword syntax
+collect_traffic_alter_response:st_[a-z]*={REPLACE }
+<?php codeSampleEnd() ?>
+With that lot in place, we will now get instead
+<?php codeSampleBegin() ?>
+<-PYT:os.stat("/tmp/myfile")
+->RET:os.stat_result((33204, 29463754, 19L, 1, 293, 13, 72883, 
+                      1274110664, 1187778284, 1187778284))
+<?php codeSampleEnd() ?>
+which will duly work correctly in eval() and all will be well.
 </div>
 <div class="Text_Header"><A NAME="collect_traffic_use_threads"></A>A note on threading and interception</div>
 <div class="Text_Normal">

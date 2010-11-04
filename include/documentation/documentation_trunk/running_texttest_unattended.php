@@ -26,11 +26,15 @@ batch mode config file settings that start with &ldquo;batch_&rdquo;
 with the batch session names as keys, it is recommended to read
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file
 format documentation</A> for what this means.</div>
-
+<div class="Text_Header"><A NAME="-zen"></A>The console output and how to make it colourful</div>
+<div class="Text_Normal">
+None of the reports described are enabled by default, so it's possible to just use batch mode runs and monitor their console output. This is particularly useful in continuous testing environments such as <A class="Text_Link" href="http://www.zenspider.com/ZSS/Products/ZenTest">ZenTest</A>. However, with everything being black and white it can be hard to notice when tests succeed and fail. You can therefore provide the "-zen" option on the command line which will produce green and red console output when appropriate. This works on both POSIX and Windows, albeit in totally different ways internally.
+</div>
 <div class="Text_Header"><A NAME="-name"></A><A NAME="batch_recipients"></A><A NAME="batch_mail_on_failure_only"></A><A NAME="batch_sender"></A><A NAME="smtp_server"></A><A NAME="smtp_server_username"></A><A NAME="smtp_server_password"></A><A NAME="max_width_text_difference"></A><A NAME="full_name"></A>
 The email report and where it is sent</div>
-<div class="Text_Normal">TextTest batch mode generates an email report. For a
-multiple-developer project it is often useful to direct such
+<div class="Text_Normal">
+If you set "batch_recipients" to a valid email address, TextTest batch mode generates an email report. 
+For a multiple-developer project it is often useful to direct such
 reports to a newsgroup, providing everyone the chance to see at
 a glance what works and what doesn't. This will then generally
 look something like this (example newsgroup viewed in mozilla):</div>
