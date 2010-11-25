@@ -1,7 +1,7 @@
 <div class="Text_Header">PyGTK Widgets and signals supported for record/replay</div>
 <div class="Text_Normal">The following lists the PyGTK widget types and the associated signals on them which 
 PyUseCase 3.4.1 is currently capable of recording and replaying. Any type derived from the listed
-types is also supported.
+types is also supported. Note also that a handful of widgets in the "hildon" extension for Nokia's Maemo smartphone platform will also work without the need to do anything differently, although this support is only at the proof of concept stage currently.
 </div>
 <div class="Text_Normal"><table border=1 cellpadding=1 cellspacing=1>
 <tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtkbutton.html>gtk.Button</a></td><td><div class="Table_Text_Normal">clicked</div></td></tr>
