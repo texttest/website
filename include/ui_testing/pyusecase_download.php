@@ -6,11 +6,11 @@
    <div class="Text_Header">Latest release</div>
    <div class="Text_Normal">
      Releases may be downloaded from the
-    <a class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge project pages</a>. We aim to make a couple of releases a year here, with attendant bugfix releases when required.
+    <a class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge project pages</a>. They can also be installed directly from Python's packaging system via "easy_install pyusecase" or "pip install pyusecase". We aim to make a couple of releases a year, with attendant bugfix releases when required.
    </div>
    <div class="Text_Header">Installation</div>
    <div class="Text_Normal">
-     There are two possibilities: either you can go to the "lib" directory and run "python setup.py install". On Windows this will probably install it somewhere like "C:\Python26\Scripts", which you should then add to your PATH variable. On UNIX you can also leave it where it is, in which case you'll probably want to add its "bin" directory to your PATH for convenience.
+     There are two possibilities (if you didn't run pip or easy_install already). You can go to the "source" directory and run "python setup.py install". On Windows this will probably install it somewhere like "C:\Python26\Scripts", which you should then add to your PATH variable. On UNIX you can also leave it where it is, in which case you'll probably want to add its "source/bin" directory to your PATH for convenience.
    </div>
    <div class="Text_Header">Latest development version from source control</div>
    <div class="Text_Normal">
