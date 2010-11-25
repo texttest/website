@@ -1,6 +1,6 @@
 <div class="Text_Header">Using the shortcut mechanism</div>
 <div class="Text_Normal">If you want to make <a class="Text_Link" href="index.php?page=ui_testing&n=shortcuts">shortcuts</A>
-available to your users and test writers, the basic mechanism is to import the "gtkusecase"
+available to your users and test writers, the basic mechanism is to import the "usecase"
 module and call the "createShortcutBar" method. The signature of this method is as follows:
 <?php codeSampleBegin() ?>
 def createShortcutBar(uiMapFiles=[])
@@ -15,7 +15,7 @@ which helps separate out the UI mapping for different parts of your application 
 only load the currently relevant parts.
 </div>
 <div class="Text_Normal">
-The gtkusecase.createShortcutBar method will return a gtk.HBox. 
+The usecase.createShortcutBar method (gtkusecase.createShortcutBar prior to 3.4.1) will return a gtk.HBox. 
 This is, by convention, added to a GUI at the
 bottom. It will contain buttons for creating a new shortcut, and
 for all existing shortcuts found.</div>

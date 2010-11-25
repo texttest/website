@@ -16,7 +16,7 @@ try to do likewise.
 Here's a (very stupid) example for PyGTK:
 <?php codeSampleBegin() ?>
 
-from gtkusecase.simulator.baseevents import SignalEvent
+from usecase.gtktoolkit.simulator.baseevents import SignalEvent
 import gtk
 
 class MyButtonEvent(SignalEvent):

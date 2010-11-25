@@ -1,6 +1,6 @@
 <div class="Text_Header">PyGTK Widgets and signals supported for record/replay</div>
 <div class="Text_Normal">The following lists the PyGTK widget types and the associated signals on them which 
-PyUseCase 3.4 is currently capable of recording and replaying. Any type derived from the listed
+PyUseCase 3.4.1 is currently capable of recording and replaying. Any type derived from the listed
 types is also supported.
 </div>
 <div class="Text_Normal"><table border=1 cellpadding=1 cellspacing=1>
@@ -14,7 +14,6 @@ types is also supported.
 <tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtkfilechooser.html>gtk.FileChooser</a></td><td><div class="Table_Text_Normal">current-folder-changed , current-name-changed , selection-changed</div></td></tr>
 <tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtkmenuitem.html>gtk.MenuItem</a></td><td><div class="Table_Text_Normal">activate</div></td></tr>
 <tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtknotebook.html>gtk.Notebook</a></td><td><div class="Table_Text_Normal">switch-page</div></td></tr>
-<tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtkpaned.html>gtk.Paned</a></td><td><div class="Table_Text_Normal">notify::position</div></td></tr>
 <tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtktextview.html>gtk.TextView</a></td><td><div class="Table_Text_Normal">changed</div></td></tr>
 <tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtktogglebutton.html>gtk.ToggleButton</a></td><td><div class="Table_Text_Normal">toggled</div></td></tr>
 <tr><td><a class="Text_Link" href=http://library.gnome.org/devel/pygtk/stable/class-gtktoggletoolbutton.html>gtk.ToggleToolButton</a></td><td><div class="Table_Text_Normal">toggled</div></td></tr>
@@ -26,7 +25,7 @@ types is also supported.
 </table></div>
 <div class="Text_Header">PyGTK Widgets supported for automatic logging</div>
 <div class="Text_Normal">
-The following lists the PyGTK widget types whose status and changes PyUseCase 3.4 is 
+The following lists the PyGTK widget types whose status and changes PyUseCase 3.4.1 is 
 currently capable of monitoring and logging. Any type derived from the listed types 
 is also supported but will only have features of the listed type described.
 </div>
