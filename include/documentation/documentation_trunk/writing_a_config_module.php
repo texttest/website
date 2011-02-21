@@ -24,7 +24,8 @@ tools for your application, or to take advantage of locally
 installed software. It also provides a way for you to add your
 own experimental features to TextTest without making it
 difficult to upgrade. Naturally, doing this involves writing
-code in Python.</div>
+code in Python.
+</div>
 <div class="Text_Normal">In order to use a configuration other than the default one,
 specify the &quot;config_module&quot; entry in your config file.
 What this configuration will do is of course up to the person
@@ -32,6 +33,11 @@ who wrote it, and hence in order to find this information out
 for a particular application, run &quot;texttest -a &lt;app&gt;
 -help&quot;. This provides a means for configurations to explain
 how they differ from the default one.</div>
+<div class="Text_Normal">
+If you write such a configuration module, the only requirement is that TextTest can import it,
+so it must be placed somewhere on PYTHONPATH. An additional trick is that you can place it in the root of your
+test suite in a directory called "texttest_config_modules", where it will also be picked up.
+</div>
 <div class="Text_Normal">A configuration can both extend the range of command line
 options available, and the config file entries that will be
 interpreted and acted upon. Occasionally, they have defined new
@@ -40,7 +46,9 @@ sorts of files that define test cases and test suites, besides
 then be useful to have the static GUI display them as such, so
 there is a config file entry &ldquo;definition_file_stems&rdquo;
 to allow this to be configured. They can be keyed with "regenerate" if they
-will also be produced by the program, like the default configuration's traffic and usecase files. Unix-style file expansions may be used to indicate a range of possible stems.</div>
+will also be produced by the program, like the default configuration's traffic and usecase files. 
+Unix-style file expansions may be used to indicate a range of possible stems.
+</div>
 <div class="Text_Normal">TextTest comes with 2 configurations to choose from -
 &quot;default&quot; which should work anywhere, and
 &quot;<A class="Text_Link" href="index.php?page=<?php echo $version; ?>&n=running_tests_in_parallel">queuesystem</A>&quot;
@@ -55,17 +63,7 @@ Modules</div>
 can extend the user interface to interface with some particular tool or environment. This is
 controlled by the config file entry &ldquo;interactive_action_module&rdquo;, which will
 default to the value of &ldquo;config_module&rdquo; with a "_gui" suffix added, if it is not 
-explicitly defined. Your starting point for these modules is therefore the default_gui.py module.
+explicitly defined. Your starting point for these modules is therefore the default_gui/__init__.py module.
 </div>
-<div class="Text_Normal">
-The CVS plugin is the only such module provided with the download apart from the default, this 
-can be enabled by setting
-
-<?php codeSampleBegin() ?>
-interactive_action_module:cvs
-<?php codeSampleEnd() ?>
-which will provide an extra menu for checking CVS information for your tests.
-</div>
-
 <div class="Text_Normal"><FONT COLOR="#ff0000">To be continued: with documentation of
 the configuration module API...</FONT></div>

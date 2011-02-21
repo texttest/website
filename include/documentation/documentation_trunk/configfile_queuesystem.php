@@ -381,21 +381,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">asynchronous : &lt;empty&gt;<BR>default : &lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic">List of command-line programs to intercept</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">collect_traffic_alter_response</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">List</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_alter_response">List of textual transformations to perform on response traffic</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic">Deprecated. Use CaptureMock.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -409,7 +395,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">false</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_client_server">Whether to intercept client-server traffic sent by the SUT</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_client_server">Deprecated. Use CaptureMock.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -423,7 +409,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_environment">Mapping of collected programs to environment variables they care about</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_environment">Deprecated. Use CaptureMock.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -451,7 +437,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_python">List of Python modules and attributes to intercept</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_python">Deprecated. Use CaptureMock.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -465,7 +451,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_python_ignore_callers">List of Python modules from where calls to intercepted items should be ignored</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_python_ignore_callers">Deprecated. Use CaptureMock.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -479,7 +465,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">true</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_use_threads">Whether to enable threading, and hence concurrent requests, in traffic mechanism</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=faking_it_with_texttest#collect_traffic_use_threads">Deprecated. Use CaptureMock.</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -644,7 +630,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">builtin : config, environment, properties, testsuite, options, interpreter_options, stdin, knownbugs<BR>default : &lt;empty&gt;<BR>regenerate : usecase, traffic</div>
+			<div class="Table_Text_Small">builtin : config, environment, properties, testsuite, options, interpreter_options, stdin, knownbugs, proxy_options<BR>default : &lt;empty&gt;<BR>regenerate : usecase</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
@@ -756,7 +742,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (Int)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">catalogue : 2<BR>default : 99<BR>errors : 1<BR>output : 1<BR>performance : 2<BR>stderr : 1<BR>stdout : 1<BR>traffic : 1<BR>usecase : 1</div>
+			<div class="Table_Text_Small">catalogue : 2<BR>default : 99<BR>errors : 1<BR>output : 1<BR>performance : 2<BR>stderr : 1<BR>stdout : 1<BR>usecase : 1</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#failure_severity">Mapping of result files to how serious diffs in them are</A></div>
@@ -1418,6 +1404,34 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_processes">Number of processes the grid engine should reserve for tests</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">queue_system_proxy_executable</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Executable to run as a proxy for the real test program</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">queue_system_proxy_resource</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Grid engine resources required to locate machine to run proxy process</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
