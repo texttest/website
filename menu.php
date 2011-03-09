@@ -19,14 +19,14 @@
             <div class="Menu_Header_Link"><a  href="index.php?page=about">About</a></div>
         </td>
         <td>  
-            <div class="Menu_Header_Link"> <a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>">Documentation</a></div>
+            <div class="Menu_Header_Link"> <a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>">TextTest/docs</a></div>
             
         </td> 
         <td>
-            <div class="Menu_Header_Link"><a  href="index.php?page=ui_testing">GUIs/xUseCase</a></div>
+            <div class="Menu_Header_Link"><a  href="index.php?page=ui_testing">PyUseCase</a></div>
         </td>
         <td>
-             <div class="Menu_Header_Link"> <a href="index.php?page=publications">Publications</a></div>
+             <div class="Menu_Header_Link"> <a href="index.php?page=capturemock">CaptureMock</a></div>
           
         </td>
         <td>

@@ -14,7 +14,7 @@
    </div>
    <div class="Text_Header">Latest development version from source control</div>
    <div class="Text_Normal">
-     There about 100 automated acceptance tests for PyUseCase, using TextTest, and we aim to keep 
+     There about 200 automated acceptance tests for PyUseCase, using TextTest, and we aim to keep 
      the contents of source control stable and usable at all times. Anyone wishing to make changes 
      should obviously get hold of this version also.
      The code is hosted on Launchpad and can be browsed online <a class="Text_Link" href="https://code.launchpad.net/~geoff.bache/pyusecase/trunk">here</A>. </div>
