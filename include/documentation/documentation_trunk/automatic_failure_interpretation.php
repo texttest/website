@@ -101,7 +101,7 @@ When the tests are run, TextTest wll then find all such "knownbugs" files, using
 and prioritising files in the hierarchy</A>. All information from all such files will be used,
 the files do not overwrite each other as versioned files used to up to version 3.10.</A>
 </div>
-<div class="Text_Header"><A NAME="bug_system_location"></A>Extracting information from bug systems (particularly Bugzilla or Jira)</div>
+<div class="Text_Header"><A NAME="bug_system_location"></A>Extracting information from bug systems (particularly Bugzilla, Jira or Trac)</div>
 <div class="Text_Normal">If you have a bug-tracking system with an API of some sort, 
 you can probably get it to talk to TextTest without
 very much effort. Instead of providing textual descriptions you
@@ -115,7 +115,7 @@ been closed.</div>
 <div class="Text_Normal">
 To set this up, you need to give TextTest the URL to your bug system, 
 using the config file entry "bug_system_location". The key should be the name of
-the bug system, currently one of "bugzilla", "bugzillav2" or "jira". For example, if you use 
+the bug system, currently one of "bugzilla", "bugzillav2", "trac" or "jira". For example, if you use 
 bugzilla version 3 and later you might add this in your config file:</div>
 <div class="Text_Normal">
 <?php codeSampleBegin() ?>
@@ -159,6 +159,15 @@ jira:the_password
 <div class="Text_Normal">
 These kind of settings are often useful to put in a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui"; ?>#-vanilla">site-specific config file</A>.
 </div>
+<div class="Text_Header"><A NAME="bug_system_username"></A><A NAME="bug_system_password"></A>Extracting information from Trac</div>
+<div class="Text_Normal">If you use <A class="Text_Link" href="http://trac.edgewall.org">Trac</A> to
+track your bugs, you can do something similar. Simply set the location of your Trac installation as below. 
+</div>
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+[bug_system_location]
+trac:http://trac.edgewall.org/demo-0.11
+<?php codeSampleEnd() ?></div>
 <div class="Text_Header">Extracting information from other bug systems</div>
 <div class="Text_Normal">If you use some other bug tracker with an API, 
 it should be fairly easy to copy the "bugzilla.py" or "jira.py" module from the TextTest
