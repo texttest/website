@@ -630,7 +630,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">builtin : config, environment, properties, testsuite, options, interpreter_options, stdin, knownbugs, proxy_options<BR>default : &lt;empty&gt;<BR>regenerate : usecase</div>
+			<div class="Table_Text_Small">builtin : config, environment, testsuite, options, interpreter_options, stdin, knownbugs, proxy_options<BR>default : &lt;empty&gt;<BR>regenerate : usecase</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=writing_a_config_module#definition_file_stems">files to be shown as definition files by the static GUI</A></div>
@@ -1656,20 +1656,6 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#test_data_ignore">Elements under test data structures which should not be viewed or change-monitored</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">test_data_properties</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary (String)</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#test_data_properties">Write the contents of test_data_environment to the given Java properties file</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

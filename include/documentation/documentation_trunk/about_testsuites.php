@@ -306,32 +306,6 @@ MY_ENV_VAR:{CLEAR}
 which will remove any setting of MY_ENV_VAR set by suites higher up the hierarchy,
 or from the shell from which TextTest was started. 
 </div>
-<div class="Text_Header"><A name="properties files"></A>Using Properties Files to set Java Properties</div>
-<div class="Text_Normal">In Java, environment variables are not used so much and
-instead applications are generally configured via properties files. You can provide
-these files in much the same way as environment files described above. This is
-a file called <B>properties.&lt;app&gt;</B> or just
-<B>properties</B>. This file has a dictionary-like format, with the section names 
-identifying names of individual properties files,
-the keys as the names of the properties and the values as entries. Naturally these files
-are also found and prioritised via the mechanism described above, and settings will be
-overridden appropriately: it should never be necessary to repeat anything. For example: 
-<?php codeSampleBegin() ?>
-[myprops]
-prop1:val1
-prop2:val2
-[end]
-<?php codeSampleEnd() ?>
-
-This will create a file "myprops.properties" in the sandbox directory (which will be the
-current working directory when the test runs), containing 
-
-<?php codeSampleBegin() ?>
-prop1 = val1
-prop2 = val2
-<?php codeSampleEnd() ?>
-
-</div>
 <div class="Text_Header"><A NAME="-s"></A><A NAME="default.ReplaceText"></A>Analysing and updating the test suite
 directory structure</div>
 <div class="Text_Normal">When a large test suite has been created, you often want to

@@ -131,8 +131,8 @@ TextTest to ignore the catalogue file and copy everything again
 if the file-changing properties of the test change : check the
 &ldquo;Ignore catalogue when isolating data&rdquo; box
 (-ignorecat on the command line)</div>
-<div class="Text_Header"><A NAME="test_data_environment"></A><A NAME="test_data_properties"></A>Associating environment
-variables (and Java properties) with test data</div>
+<div class="Text_Header"><A NAME="test_data_environment"></A>Associating environment
+variables with test data</div>
 <div class="Text_Normal">Applications will often reference their test data structures
 via environment variables. When these structures are isolated by
 TextTest as described above, it can be helpful to update the
@@ -181,13 +181,6 @@ these cases the environment variables will be set even if no
 data is found. The assumption is that the system under test
 might in that case want to create such data in an equivalent
 position.</SPAN></div>
-<div class="Text_Normal">In Java, the environment isn't readily
-available and Java programs generally use the properties mechanism
-instead. If test data should be identified in a properties file,
-you should use the test_data_environment variable as above to
-provide the name of the property itself and the "test_data_properties"
-variable to provide the name of the properties file in which it should
-appear.</div>
 <div class="Text_Header"><A NAME="test_data_ignore"></A>Ignoring parts of test data
 directory structures</div>
 <div class="Text_Normal">If you specify a directory as test data, via any of the three
@@ -273,24 +266,6 @@ locates the log configuration file via the environment variable
 [test_data_environment]
 logging:DIAG_INPUT_FILE
 [end]
-<?php codeSampleEnd() ?>
-
-</div>
-<div class="Text_Small_Header">Example 2 (Java property / log4j)</div>
-<div class="Text_Normal"> Assumes the SUT reads the local
-properties file log4jconf.properties, which will contain the
-property &ldquo;diag_input&rdquo;.
-This in turn will be used to determine where to read the actual
-log4j properties file.</div>
-
-<div class="Text_Normal">
-
-<?php codeSampleBegin() ?>
-[test_data_environment]
-logging:diag_input
-
-[test_data_properties]
-logging:log4j.properties
 <?php codeSampleEnd() ?>
 
 </div>

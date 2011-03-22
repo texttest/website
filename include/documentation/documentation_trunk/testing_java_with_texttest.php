@@ -50,9 +50,6 @@ The way to do this is using an "interpreter_options.myapp" file containing
 These can then be varied throughout the test suite structure as described in the 
 <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#extra_search_directory">test suite guide</A>.
 </div>
-<div class="Text_Normal">
-In general Java properties in arbitrary properties files can be set according to the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>#properties files">properties file mechanism</A>. 
-</div>
 <div class="Text_Header">Using Ant to set your CLASSPATH</div>
 <div class="Text_Normal">
 Maintaining a classpath by hand in the "environment.myapp" file, 
