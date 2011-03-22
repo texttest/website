@@ -11,7 +11,7 @@ disable some part of the system, or fake some behaviour that
 cannot easily be triggered for real in a repeatable way. This is
 referred to as &ldquo;mocking out&rdquo; a subsystem for testing
 purposes.</div>
-<div class="Text_Header"><A NAME="capturemock"></A>><A NAME="-rectraffic"></A><A NAME="collect_traffic"></A><A NAME="collect_traffic_python"></A><A NAME="collect_traffic_environment"></A><A NAME="collect_traffic_client_server"></A><A NAME="collect_traffic_python_ignore_callers"></A><A NAME="collect_traffic_use_threads"></A>CaptureMock</div>
+<div class="Text_Header"><A NAME="capturemock"></A><A NAME="-rectraffic"></A><A NAME="collect_traffic"></A><A NAME="collect_traffic_python"></A><A NAME="collect_traffic_environment"></A><A NAME="collect_traffic_client_server"></A><A NAME="collect_traffic_python_ignore_callers"></A><A NAME="collect_traffic_use_threads"></A>CaptureMock</div>
 <div class="Text_Normal">
 TextTest has built-in integration with <A class="Text_Link" HREF="index.php?page=capturemock">CaptureMock</A>, which was indeed part of TextTest up until the 3.20 release and was designed to work with it. CaptureMock can help you capture and replay interactions with command-line programs, Python modules and functions, and also synchronous plain-text messaging over a network. See its own documentation on this site for more details, particularly <A class="Text_Link" HREF="index.php?page=capturemock&n=texttest">here</A> for how to use it from TextTest.
 </div>
