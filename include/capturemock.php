@@ -56,7 +56,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("codedtests","Usage from Python test tools","Using CaptureMock from unittest/py.test/nose etc."); ?>
                   <?php  printLI("python_basic","Basic usage", "Basic usage with examples of how to intercept a whole module or a single function"); ?>
                   <?php  printLI("transform_output","Transforming the mock files", "Transforming what is recorded, for determinism or to make replay possible"); ?>
-                  <?php  printLI("callstack_filter","Callstack filtering", "Disabling recording when something is called from particular places in the code"); ?>
+                  <?php  printLI("filtering","Filtering what is recorded", "Disabling recording when something is called repeatedly, or from particular places in the code"); ?>
                 </div>
 	      </td>
 	      <td>
