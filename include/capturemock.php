@@ -49,6 +49,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("motivation","Motivation","Motivation for CaptureMock"); ?>  
                   <?php  printLI("download","Download and install","Get the latest stable release of CaptureMock from SourceForge, or the latest code from Launchpad"); ?>
                   <?php  printLI("texttest","Usage with TextTest", "Using CaptureMock together with TextTest"); ?>
+                  <?php  printLI("rcfiles","Configuration Files", "CaptureMock's RC files and their format"); ?>
 	        </div>
 	      </td>
 	      <td>
