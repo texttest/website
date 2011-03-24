@@ -4,13 +4,10 @@
   <td>
    <div class="Text_Main_Header">Downloading and installing CaptureMock</div>
    <div class="Text_Header">Latest release</div>
-   <div class="Text_Normal">
-     <FONT COLOR="#ff0000">The first release of CaptureMock will happen on or before 28th March 2011. This may not be possible yet! Getting it from source control is already possible.</FONT>
-</div>
 <div class="Text_Normal">
 
      Releases may be downloaded from the
-    <a class="Text_Link" href="http://sourceforge.net/projects/capturemock">SourceForge project pages</a>. They can also be installed directly from Python's packaging system via "easy_install capturemock" or "pip install capturemock". We aim to make a couple of releases a year, with attendant bugfix releases when required.
+    <a class="Text_Link" href="https://launchpad.net/capturemock">Launchpad project pages</a>. They can also be installed directly from Python's packaging system via "easy_install capturemock" or "pip install capturemock". We aim to make a few releases a year, with attendant bugfix releases when required.
    </div>
    <div class="Text_Header">Installation</div>
    <div class="Text_Normal">
