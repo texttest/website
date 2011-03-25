@@ -242,7 +242,25 @@ SGE docs!), this is specified via the config file entry
 works here. In this case TextTest will ask the queue system for
 all machines that have been used, and only if they are all
 performance machines will performance be compared.</div>
-				
+<div class="Text_Header"><A NAME="queue_system_proxy_executable"></A><A NAME="queue_system_proxy_resource"></A>Configuring a proxy process to run on a different machine (e.g. to set up a database)</div>
+<div class="Text_Normal">
+Sometimes certain hosts are reserved as database hosts, while many more may be used to run tests. In this case it is useful to set up a "proxy" which can perform the database setup and then start the real test process also via the grid. This is done by setting the "queue_system_proxy_executable" setting to point out the script which can perform this setup. The machines where it may run can be identified via resources, using "queue_system_proxy_resource", which works in the same way as "queue_system_resource".
+</div>
+<div class="Text_Normal">
+This proxy program will be given the command to use to run the real test via the environment variable "TEXTTEST_SUBMIT_COMMAND_ARGS", which will be in Python list format. It is therefore obviously easiest to write your proxy in Python. The basic plan is to do whatever needs doing, set up the database and then start the test as instructed by TextTest. For example:
+<?php codeSampleBegin() ?>
+#!/usr/bin/env python
+
+import os, subprocess
+
+# Do whatever we need to do, setup database etc.
+...
+
+commandArgs = eval(os.getenv("TEXTTEST_SUBMIT_COMMAND_ARGS"))
+subprocess.call(commandArgs)
+<?php codeSampleEnd() ?>
+ 
+</div>	
 <div class="Text_Header"><A NAME="queue_system_submit_args"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A>Additional configuration for the slave process </div>
 <div class="Text_Normal">
 You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "queue_system_submit_args" in your config file(s). </div>

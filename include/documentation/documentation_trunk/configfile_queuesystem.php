@@ -1417,7 +1417,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Executable to run as a proxy for the real test program</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_proxy_executable">Executable to run as a proxy for the real test program</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1431,7 +1431,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Grid engine resources required to locate machine to run proxy process</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_proxy_resource">Grid engine resources required to locate machine to run proxy process</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
