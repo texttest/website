@@ -111,7 +111,7 @@
   
       </div>
       </div>
-           <?php printOldVersions($texttest_version,$all_releases); ?>  
+           <?php printOldVersions($texttest_version,$all_releases_direct_links); ?>  
       <br>
 	<?php 
 	  checkGET();
