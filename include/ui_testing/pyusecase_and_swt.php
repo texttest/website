@@ -47,7 +47,7 @@ The hope is to find a unique way of identifying the widget based on this informa
 <div class="Text_Normal">
 The mechanism for this is inherited from SWTBot, and works in the same way as if you were using that tool alone. You simply add a call like this in your code:
 <?php codeSampleBegin() ?>
-widget.setData("org.eclipse.swtbot.widget.key", "My Widget")
+widget.setData("org.eclipse.swtbot.widget.key", "My Widget");
 <?php codeSampleEnd() ?>
 </div>
 <div class="Text_Header"><A name="appevents"></A>Application events</div>
