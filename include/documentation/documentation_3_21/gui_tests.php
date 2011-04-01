@@ -10,18 +10,15 @@ example. This is also Exercise 4 in the course material so if you want to follow
 suggested you download it from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>. 
 Unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory. Much
 of what is said here should apply to any use case recorder,
-though. Text in italics is background information only. Naturally you need to install PyUseCase 3.x
-or newer from <A class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge</A> also
-before this will work.
+though. Text in italics is background information only. Naturally you need to install <A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_download">PyUseCase</A> also before this will work.
 </div>
-<div class="Text_Normal"><I>For Java GUIs, look at <A class="Text_Link" href="http://jusecase.sourceforge.net/">JUseCase</A>. If you are using Microsoft's .net, use <A class="Text_Link" href="http://nusecase.sourceforge.net/">NUseCase</A>.
-If you use another GUI toolkit &ndash; write your own use case recorder and tell me about it!</I>
+<div class="Text_Normal"><I>PyUseCase also supports Tkinter, wxPython, SWT and Eclipse RCP GUIs, and a project is underway to support Swing also. If you are using Microsoft's .net, <A class="Text_Link" href="http://nusecase.sourceforge.net/">NUseCase</A> is built on similar ideas. If you use another GUI toolkit - write your own use case recorder and tell me about it!</I>
 </div>
 
 <div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A><A NAME="USECASE_RECORD_SCRIPT"></A><A NAME="USECASE_REPLAY_SCRIPT"></A>
 Creating an Application</div>
 <div class="Text_Normal">First, create an initial application by running "texttest.py --new" as described in
-the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello world&rdquo;</A>. The main difference is that you should select "PyUseCase 3.x" from the GUI testing options! The application creation dialog should look something like this just before you press "OK":
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello world&rdquo;</A>. The main difference is that you should select "PyGTK GUI with PyUseCase 3.x" from the GUI testing options! The application creation dialog should look something like this just before you press "OK":
 </div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/createguiapp.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
