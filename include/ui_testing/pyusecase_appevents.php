@@ -5,9 +5,12 @@ for an explanation of what an Application Event is: the basic idea is to support
 synchronisation by recording and reading of "waits")></I>
 </div>
 <div class="Text_Normal">
-The implementation in PyUseCase consists chiefly of calling the method
-"usecase.applicationEvent" from your code at the relevant places. The signature
-of this method is as follows:
+The implementation in PyUseCase, for the three Python toolkits supported, consists 
+of calling the method "usecase.applicationEvent" from your code at the relevant places. 
+For Eclipse RCP, only a name can currently be provided, 
+<A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_and_swt#appevents">see here</A> for its mechanism. </div>
+<div class="Text_Normal">
+The signature of the method is as follows:
 
 <?php codeSampleBegin() ?>
 def applicationEvent(self, name, category=None, supercedeCategories=[], timeDelay=0.001)
@@ -15,7 +18,8 @@ def applicationEvent(self, name, category=None, supercedeCategories=[], timeDela
 
 but for normal purposes you can just set a name and ignore the other parameters. This
 name will then be placed after "wait for " in the usecase files when the event is recorded,
-so choose something that makes sense in that context, e.g. "data to be loaded".</div>
+so choose something that makes sense in that context, e.g. "data to be loaded". 
+</div>
 <div class="Text_Normal">
 The next most usual thing to need is a category, which is also a string.
 Application events in the same category overwrite each other so

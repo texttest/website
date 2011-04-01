@@ -1,6 +1,6 @@
-<div class="Text_Header">Hints on how to write PyGTK code that PyUseCase can handle</div>
+<div class="Text_Main_Header">Using PyUseCase on PyGTK apps</div>
 <div class="Text_Normal">
-The ideal of course is that PyUseCase could take your application and just work "out of the box". In many applications, particularly simpler ones, this will hopefully be the case. This page gives you a guide to how you can change your code to make it work with PyUseCase if it doesn't do so out of the box. Naming the occasional widget is inherently necessary to its way of working, while there are also for example cases where PyGTK offers you several routes to the same end, but PyUseCase can only handle one of the alternatives.
+This page gives some hints on how to change your application in cases where things don't work "out of the box". Widget naming is inherent to its way of working, while care is needed if you block default signal handlers to avoid also blocking out PyUseCase's recorder.
 </div>
 <div class="Text_Header">Widget Naming</div>
 <div class="Text_Normal">
@@ -32,8 +32,4 @@ Calling widget.unparent() outside of its intended context (i.e. the implementati
 widget.get_parent().remove(widget)
 <?php codeSampleEnd() ?>
 instead. This is what PyGTK intends you to do anyway so shouldn't be controversial.
-</div>
-<div class="Text_Header">Running Dialogs</div>
-<div class="Text_Normal">
-In versions prior to 3.4 it was necessary to change your code because gtk.Dialog.run was not supported. This is no longer the case.
 </div>

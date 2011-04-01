@@ -1,7 +1,4 @@
 <div class="Text_Header">Frequently raised objections to Use-case Recording</div>
-				
-		
-				
 <OL>
 <div class="Text_Small_Header"><li><I>Surely record/playback has been discredited by
 now?</I></div><div class="Text_Normal"> Traditional
@@ -37,25 +34,21 @@ something in terms of the mechanics of what happened. This
 means that, rather than a domain language script, you get
 something that is pretty tied to how the current GUI looks
 which will probably need redoing if the GUI changes very much
-(The days when tests broke just due to moving a button across
-the screen are probably over &ndash; but changing widget will
-still generally break things, for example)
 </div>
 <div class="Text_Normal">
-With PyUseCase 3.0 you can skip this process if you want, by providing the
+With PyUseCase you can skip this process if you want, by providing the
 "-x" on the command line. We do not really recomment this for more than trivial
 playing around though. It might speed you up a bit at the start but
-your tests will be much less readable and much less maintainable.
+your tests will be much less readable and much less maintainable in the long run.
 </div>
 <div class="Text_Normal">
 For example JUseCase and nUseCase still require instrumenting the code
-to provide these names. This of course raises the barrier to usage, but automating
-this is not a trivial piece of work. Component monitoring changes seem daunting but
-are not as laborious as they seem, generally. In practice, you will need to change your
-code anyway for testability to accommodate a record/playback tool of any sort, because 
-widgets often need to identified uniquely by tools and that means setting names for them.
-This is equally true of PyUseCase 3.0 which no longer requires specific instrumentation 
-for widget  monitoring but where setting widget names is still often needed.</div>
+to provide these names. This of course raises the barrier to usage, and creates a hard
+dependency, which means you have to be a bit more determined to use them. Component monitoring 
+changes seem daunting but are not as laborious as they seem, generally. Our experience
+is that the gain of domain-language tests is worth this pain, though it can be hard to see that
+beforehand. 
+</div>
 <div class="Text_Normal">
 In general, being prepared to change your code a bit to accommodate a test tool can
 greatly smoothe the way to having a good test suite, rather than insisting that everything

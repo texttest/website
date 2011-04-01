@@ -54,9 +54,14 @@
   language. GUI changes then mean that this single mapping needs to be updated,
   but the tests can remain untouched, continuing to describe what needs
   to be done on the conceptual level. This mapping takes the form of an
-  external file in PyUseCase 3.0 and the forthcoming JUseCase 3.0, while
-  in older versions it takes the form of instrumentation in the application 
-  code.
+  external file in PyUseCase, administered via a small GUI which prompts you
+  to enter new names for any actions that have not been seen before whenever 
+  appropriate.
+</div>
+<div class="Text_Normal">
+  In the other usecase recorders JUseCase and nUseCase (and in PyUseCase 2.x and earlier)
+  it takes the form of instrumentation in the application code, which is of course
+  somewhat more laborious to set up.
 </div>
 <div class="Text_Header">Checking the behaviour via logs and TextTest</div>
 <div class="Text_Normal">
@@ -72,7 +77,7 @@
 <div class="Text_Normal">
   This discussion isn't on the TextTest site for nothing. If we can only get
   our application to produce a log of what the GUI looks like we can check
-  what it does by monitoring the contents of that log using TextTest. PyUseCase 3.0 does
+  what it does by monitoring the contents of that log using TextTest. PyUseCase does
   this for you: it generates an ASCII-art type log of the current GUI appearance and monitors
   changes to it. The application can supplement it with its own logging as it wishes. With 
   other use-case recorders the application needs to build its own log for this purpose

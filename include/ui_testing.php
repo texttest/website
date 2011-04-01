@@ -40,7 +40,7 @@ function printLI($n,$realName,$title)
             <tr>
               <td width=220><div class="Table_Text_Header">Introduction</div></td>
               <td width=220><div class="Table_Text_Header">PyUseCase Docs</div></td>
-              <td width=200><div class="Table_Text_Header">PyGTK-specific</div></td>
+              <td width=200><div class="Table_Text_Header">Toolkit specific</div></td>
             </tr>
             
 	    <tr>
@@ -52,9 +52,8 @@ function printLI($n,$realName,$title)
 	          <?php  printLI("appevents","Application Events", "Multi-threaded simulation with Application Events"); ?>
                   <?php  printLI("shortcuts","GUI shortcuts", "Test refactoring and macro recording with GUI shortcuts"); ?>
                   <br><br><div class="Table_Text_Header">Other tools</div>
-                  <li> <A class="Text_Link" href="http://jusecase.sourceforge.net">JUseCase for Java</A>
+                  <li> <A class="Text_Link" href="http://jusecase.sourceforge.net">JUseCase for Swing (inactive)</A>
                   <li> <A class="Text_Link" href="http://sourceforge.net/projects/nusecase">nUseCase for .net</A>
-                  <li> <A class="Text_Link" href="index.php?page=<?php echo convertToDocFormat($current_release); ?>">TextTest</A>	          
 	        </div>
 	      </td>
 	      <td>
@@ -70,14 +69,15 @@ function printLI($n,$realName,$title)
 	      </td>
 	      <td>
 	        <div class="Table_Text_Normal">
-                  <?php  printLI("pyusecase_friendly_coding_gtk","PyUseCase-friendly coding", "Tips to developers for how to write code that will create nice tests with PyUseCase and PyGTK"); ?>
-                  <?php  printLI("pyusecase_supported_gtk","Supported Widgets", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
-                  <br><br><div class="Table_Text_Header">Tkinter-specific</div>
-	          <?php  printLI("pyusecase_friendly_coding_tkinter","PyUseCase-friendly coding", "Tips to developers for how to write code that will create nice tests with PyUseCase and Tkinter"); ?>
-                  <?php  printLI("pyusecase_supported_tkinter","Supported Widgets", "Tkinter widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
-                  <br><br><div class="Table_Text_Header">wxPython-specific</div>
-                  <?php  printLI("pyusecase_friendly_coding_wx","PyUseCase-friendly coding", "Tips to developers for how to write code that will create nice tests with PyUseCase and wxPython"); ?>
-                  <?php  printLI("pyusecase_supported_wx","Supported Widgets", "wxPython widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("pyusecase_and_gtk","PyGTK", "Documentation specific to using PyUseCase with PyGTK apps"); ?>
+                  <?php  printLI("pyusecase_and_tkinter","Tkinter", "Documentation specific to using PyUseCase with Tkinter apps"); ?>
+	          <?php  printLI("pyusecase_and_wx","wxPython", "Documentation specific to using PyUseCase with wxPython"); ?>
+                  <?php  printLI("pyusecase_and_swt","SWT/Eclipse RCP", "Documentation specific to using PyUseCase with SWT/Eclipse RCP apps"); ?>
+                  <br><br><div class="Table_Text_Header">Supported widgets</div>
+                  <?php  printLI("pyusecase_supported_gtk", "PyGTK", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("pyusecase_supported_tkinter","Tkinter", "Tkinter widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("pyusecase_supported_wx","wxPython", "wxPython widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("pyusecase_supported_swt","SWT/Eclipse RCP", "SWT/Eclipse RCP widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
 	        </div>
 	      </td>
 		      

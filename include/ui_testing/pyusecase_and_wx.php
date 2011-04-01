@@ -1,4 +1,4 @@
-<div class="Text_Header">Hints on how to write wxPython code that PyUseCase can handle</div>
+<div class="Text_Main_Header">Using PyUseCase on wxPython apps</div>
 <div class="Text_Normal">
 wxPython support is currently very much alpha status and isn't really mature enough yet to have generated many known issues in this area. Naming the occasional widget is however inherently necessary to its way of working, as with PyGTK and Tkinter.
 </div>

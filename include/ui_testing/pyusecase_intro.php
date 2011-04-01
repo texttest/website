@@ -3,7 +3,10 @@
 </div>
 <div class="Text_Normal">
 To see what PyUseCase does, try running it with the "videostore.py"
-demonstration GUI in the "examples" directory in the download.
+demonstration PyGTK GUI in the "examples" directory in the download.
+This ought to work if you've followed the instructions, because PyUseCase's own GUI uses PyGTK
+so you should have installed it!</div>
+<div class="Text_Normal">
 (It might also be an idea to run videostore.py on its own first,
 so you can separate what PyUseCase does from what it does)
 You can record a usecase by doing
@@ -75,7 +78,7 @@ pyusecase -p usecase.txt -d 2 videostore.py
 <?php codeSampleEnd() ?>
 which will wait 2 seconds between each action.
 </div>
-<div class="Text_Header">The UI map file</div>
+<div class="Text_Header"><A name="ui_map_file"></A>The UI map file</div>
 <div class="Text_Normal">
 Naturally the information we entered in the dialog has been stored in a file, the "UI map file"
 , for us. By default this will have ended up in your home directory under "usecases/ui_map.conf".
@@ -96,7 +99,7 @@ clicked = add movie
 delete-event = close
 <?php codeSampleEnd() ?>
 
-The basic idea is that GUI changes will cause changes in this file but not in the "usecases" themselves. PyUseCase identifies widgets by name, title, label and type, in that order. Obviously here we are identfiying the "Add" button by its Label, which will break down if the UI contains anything else labelled "Add". Likewise, the title of our window might vary from run to run. For robustness it's therefore sometimes necessary to assign widget names in your code, at which point this file should be updated with "Name=The Add Movie Button" instead of "Label=Add".
+The basic idea is that GUI changes will cause changes in this file but not in the "usecases" themselves. PyUseCase identifies widgets by name, title, label and type, in that order (tooltips and View IDs are also used in Eclipse RCP). Obviously here we are identfiying the "Add" button by its Label, which will break down if the UI contains anything else labelled "Add". Likewise, the title of our window might vary from run to run. For robustness it's therefore sometimes necessary to assign widget names in your code, at which point this file should be updated with "Name=The Add Movie Button" instead of "Label=Add".
 </div>
 <div class="Text_Header">What now?</div>
 <div class="Text_Normal">
