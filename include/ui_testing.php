@@ -47,6 +47,7 @@ function printLI($n,$realName,$title)
 	      <td>
 	        <div class="Table_Text_Normal">
                   <?php  printLI("xusecase","The xUseCase idea","Driving a GUI with a Use-Case Recorder"); ?>  
+                  <?php  printLI("pyusecase_screencast","Screencast (Eclipse RCP)","Testing RCP Mail with TextTest and PyUseCase"); ?>  
                   <?php  printLI("problems","FAQ","Frequently asked questions relating to the xUseCase as a concept"); ?>  
                   <br><br><div class="Table_Text_Header">xUseCase Concepts</div>
 	          <?php  printLI("appevents","Application Events", "Multi-threaded simulation with Application Events"); ?>
