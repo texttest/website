@@ -68,7 +68,7 @@ that is started. When the dynamic GUI is closed, the contents of
 whatever it wrote on standard error will be displayed in a
 message box by the static GUI, as well as in a file in this
 directory.</div>
-<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="partial_copy_test_path"></A><A NAME="copy_test_path_merge"></A><A NAME="-ignorecat"></A>
+<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="copy_test_path_merge"></A><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
 Populating the temporary directory with test data files (for
 reading or editing)</div>
 <div class="Text_Normal">Sometimes the system under test needs to read some file
@@ -109,7 +109,9 @@ from all the ones on its path, picking the files from the most specific director
 appear in several of them. This is useful in case most of the directories contain
 the same files but you need to make small tweaks to individual files in the directory structure.
 </div>
-<div class="Text_Normal">On UNIX, there is another option. Sometimes an application
+<div class="Text_Header"><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
+Making "partial copies" of large data structures (UNIX only)</div>
+<div class="Text_Normal">Sometimes an application
 may need to read from a very large directory structure, and
 potentially edit some files in it. Copying the whole structure
 for each test run is possible but time consuming. It's better to
@@ -122,7 +124,6 @@ copied, and the catalogue records which files are created,
 edited and deleted. The next time, the structure will be copied
 and linked as determined by what is in the catalogue file. 
 </div>
-
 <div class="Text_Normal">If any use is made of symbolic links to the master data, it
 is generally recommended to make the entire &ldquo;master copy&rdquo;
 of the data readonly, in case bugs in the application would
@@ -130,7 +131,21 @@ cause it to corrupt the test data. It is possible to tell
 TextTest to ignore the catalogue file and copy everything again
 if the file-changing properties of the test change : check the
 &ldquo;Ignore catalogue when isolating data&rdquo; box
-(-ignorecat on the command line)</div>
+(-ignorecat on the command line)</div
+<div class="Text_Header"><A NAME="copy_test_path_script"></A>Configuring the copy operation</div>
+<div class="Text_Normal">
+It is also possible to take control over the copying operation and insert your own script to do it,
+by making use of the "copy_test_path_script" setting.
+<?php codeSampleBegin() ?>
+copy_test_path:my_data
+
+[copy_test_path_script]
+my_data:/path/to/script.sh
+<?php codeSampleEnd() ?>
+The script in question will accept two arguments, the source file and the destination. It is called instead of
+(not as well as) the default copy operation, so often consists of performing the copy and then making some 
+adjustments to the copied data.
+</div>
 <div class="Text_Header"><A NAME="test_data_environment"></A>Associating environment
 variables with test data</div>
 <div class="Text_Normal">Applications will often reference their test data structures
