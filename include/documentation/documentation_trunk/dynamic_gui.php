@@ -182,14 +182,19 @@ save_filtered_file_stems:myfile
 <div class="Text_Normal">By doing "Save As...", you get a dialog up with
 further configuration options. You can configure which version the results are saved as (look
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>">here
-</A> for a description of versions). By default, they
-will be saved as the version that you ran the dynamic GUI as.
-There is a drop-down list so that you can select other versions
-if you want to, which will generally include the current version
-and all versions more general than it. Sometimes you don't want
+</A> for a description of versions). </div>
+<div class="Text_Normal">
+By default, they
+will overwrite whatever file they have compared with, irrespective of what version markers it has, and will not
+have any version suffix if they are new files. This is signified by the default "&lt;existing version&gt;" option,
+and is also the behaviour of "Save". There is also the special option "&lt;full version&gt;" which will save the tests
+with whatever version they were run with (this corresponds to the default behaviour with TextTest 3.20 and earlier). 
+</div>
+<div class="Text_Normal">
+Sometimes you don't want
 results to be saved for particular versions, this can be
 configured via the &ldquo;unsaveable_version&rdquo; entry which
-will cause these versions not to appear in the list or be selected as default in future.</div>
+will cause these versions not to appear in the list in future, or be used when saving with "&lt;full version&gt;".</div>
 <div class="Text_Normal">
 You can also specify a version identifier to back up the old results as, for which there
 is a text field in the "Save As..." dialog. This is particularly useful when your project
