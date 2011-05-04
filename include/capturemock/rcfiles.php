@@ -37,7 +37,7 @@ ignore_callers = usecase,coverage
 alterations = pythonbug1820
 
 [locale.getdefaultlocale]
-show_repeated_calls = False
+check_repeated_calls = False
 
 # Return values from os.stat and os.lstat aren't repr-eval friendly, see Python bug 1820
 [pythonbug1820]
@@ -56,7 +56,7 @@ These entries are documented as follows. All lists are comma-separated, i.e. ent
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=python_basic">intercepts (under [python])</A> - list of Python modules or attributes to intercept
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=transform_output">alterations</A> - list of transformations (section header names) to perform on the recorded output
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=filtering">ignore_callers</A> - list of Python modules from where no interception should be performed.
-<LI><A class="Text_Link" HREF="index.php?page=capturemock&n=filtering">show_repeated_calls</A> - Whether to record the number of times a function is called (True) or assume it always returns the same thing (False). Default True.
+<LI><A class="Text_Link" HREF="index.php?page=capturemock&n=filtering">check_repeated_calls</A> - Whether to record the number of times a function is called (True) or assume it always returns the same thing (False). Default True.
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=transform_output">match_pattern</A> - Regular expression or string to search for when applying the alteration named in the section header.
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=transform_output">replacement</A> - What to replace the thing matched by "match_pattern" with.
 </UL>
