@@ -1,21 +1,29 @@
 <div class="Text_Main_Header">Using PyUseCase with SWT/Eclipse RCP</div>
-<div class="Text_Header">Installation</div>
+<div class="Text_Header">Supported platforms</div>
+<div class="Text_Normal">
+It is tested regularly and works fully on Linux and Windows. It currently does not work under Cocoa on the Mac: the reason is that the SWTBot headless test runner, on which it depends, runs the UI in a non-main thread which Cocoa does not support. The suggested workaround from the SWTBot project is to use Carbon instead.
+</div>
+<div class="Text_Header">Installing PyUseCase and Jython</div>
 <div class="Text_Normal">
 (Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_download">general ones</A> : please read there first)</div>
 <div class="Text_Normal">
-As SWT is a Java technology, the first observation is that you will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install PyUseCase under it in a similar way to that described for installing it under Python. Contrary to expectations you need to do this <I>as well as</I> installing it into an ordinary Python installation. The reason is that its UI makes use of PyGTK which only works under ordinary Python, whereas the part that talks to Java obviously need to run under Jython.</div>
+As SWT is a Java technology, the first observation is that you will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install PyUseCase under it in a similar way to that described for installing it under Python. The easiest way is to download the tarball from <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge</A>, unpack it, and run "jython setup.py install". (You can also use "pip", but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip"). It is usually then convenient to add your Jython installation to your PATH, so that PyUseCase can be run without typing the full path.
+</div>
+<div class="Text_Normal">
+Contrary to expectations you need to do this <I>as well as</I> installing it into an ordinary Python installation. The reason is that its UI makes use of PyGTK which only works under ordinary Python, whereas the part that talks to Java obviously need to run under Jython.</div>
 <div class="Text_Normal">
 An install under Python will also install the UI program ("usecase_name_chooser") while an install under Jython will not. If you install centrally it thus makes sense to do the Python install first and then the Jython install.
 </div>
+<div class="Text_Header">Installing SWTBot</div>
 <div class="Text_Normal">
 PyUseCase support for SWT and Eclipse RCP is based on the tool <A class="Text_Link" HREF="http://www.eclipse.org/swtbot/downloads.php">SWTBot</A> which you will also need to install. For plain SWT it is sufficient to install it "normally", i.e. as recommended by the SWTBot project on their site. Installing it as for RCP (below) will also work.
 </div>
 <div class="Text_Normal"> 
-For Eclipse RCP apps, it is necessary to install an additional "bridge" module so PyUseCase and SWTBot can work together. This is known as org.eclipse.swtbot.testscript, but is currently maintained by the PyUseCase project (though in theory it could be used by anyone attempting to use a dynamic language with SWTBot). The recommended way to do this is to use the "p2 director" to install it under your product. For Eclipse 3.6, use
+For Eclipse RCP apps, it is necessary to install an additional "bridge" module so PyUseCase and SWTBot can work together. This is known as org.eclipse.swtbot.testscript, but is currently maintained by the PyUseCase project (though in theory it could be used by anyone attempting to use a dynamic language with SWTBot). The recommended way to do this is to use the "p2 director" to install it under your product. For Eclipse 3.6, use a command as shown below. (<b>NOTE!</b> In reality, do not use linebreaks between the different repositories, it is formatted like this below just to prevent an excessively wide display.)
 <?php codeSampleBegin() ?>
 eclipse \
 -application org.eclipse.equinox.p2.director \
--repository http://www.texttest.org/swtbot_testscript/3.6,
+-repository http://texttest.carmen.se/swtbot_testscript/3.6,
 http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site/,
 http://download.eclipse.org/eclipse/updates/3.6 \
 -installIU org.eclipse.swtbot.testscript \
@@ -27,11 +35,10 @@ http://download.eclipse.org/eclipse/updates/3.6 \
 <?php codeSampleEnd() ?>
 For Eclipse 3.5, use the same command, except for the repository paths
 <?php codeSampleBegin() ?>
--repository http://www.texttest.org/swtbot_testscript/3.5,
+-repository http://texttest.carmen.se/swtbot_testscript/3.5,
 http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site/,
 http://download.eclipse.org/eclipse/updates/3.5 \
 <?php codeSampleEnd() ?>
-<b>NOTE!</b> In reality, do not use linebreaks between the different repositories, it is formatted like this above just to prevent an excessively wide display.
 </div>
 <div class="Text_Header">Widget Naming</div>
 <div class="Text_Normal">
