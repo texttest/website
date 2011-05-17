@@ -143,7 +143,8 @@ messages as normal.
 <div class="Text_Header"><A NAME="binary_file"></A>Binary Files</div>
 <div class="Text_Normal">Binary files should be identified as such by listing them
 in the &ldquo;binary_file&rdquo; config file entry - this ensures that TextTest will check
-whether they are identical but no attempt will be made to filter them or run a difference tool on them. 
+whether they are identical but no attempt will be made to filter them or run a difference tool on them. Also
+previews of them will not be shown in the TextTest GUI as this will likely not show anything useful. 
 If they differ, it's then up to the user to examine both files using whatever tools they have available to them.
 </div>
 
