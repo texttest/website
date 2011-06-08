@@ -58,6 +58,8 @@ function printLI($n,$realName,$title)
                   <?php  printLI("python_basic","Basic usage", "Basic usage with examples of how to intercept a whole module or a single function"); ?>
                   <?php  printLI("transform_output","Transforming the mock files", "Transforming what is recorded, for determinism or to make replay possible"); ?>
                   <?php  printLI("filtering","Filtering what is recorded", "Disabling recording when something is called repeatedly, or from particular places in the code"); ?>
+                  <br><br><div class="Table_Text_Header">Other languages</div>
+                   <?php  printLI("custom_client","Writing a custom client", "Using CaptureMock from languages other than Python by writing a custom client"); ?>
                 </div>
 	      </td>
 	      <td>
