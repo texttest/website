@@ -28,5 +28,5 @@ It isn't normally a good choice for unit testing, unless the units being tested 
 </div>
 <div class="Text_Header">What can be intercepted and mocked out?</div> 
 <div class="Text_Normal">
-It can currently capture the results of <A class="Text_Link" HREF="index.php?page=capturemock&n=cmdline_basic">system calls</A>, <A class="Text_Link" HREF="index.php?page=capturemock&n=network_messaging">synchronous messaging over a network</A> and also <A class="Text_Link" HREF="index.php?page=capturemock&n=python_basic">Python modules and function calls</A>. 
+It can currently capture the results of <A class="Text_Link" HREF="index.php?page=capturemock&n=cmdline_basic">system calls</A>, <A class="Text_Link" HREF="index.php?page=capturemock&n=network_messaging">synchronous messaging over a network</A> and also <A class="Text_Link" HREF="index.php?page=capturemock&n=python_basic">Python modules and function calls</A>. You can also use it for code written in languages other than Python, by <A class="Text_Link" HREF="index.php?page=capturemock&n=custom_client">writing your own custom client</A>.
 </div>
