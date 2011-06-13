@@ -79,6 +79,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("pyusecase_supported_tkinter","Tkinter", "Tkinter widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
                   <?php  printLI("pyusecase_supported_wx","wxPython", "wxPython widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
                   <?php  printLI("pyusecase_supported_swt","SWT/Eclipse RCP", "SWT/Eclipse RCP widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("pyusecase_supported_swing","Swing (unreleased)", "Swing widgets supported by development version of PyUseCase, for record/playback and auto-logging"); ?>
 	        </div>
 	      </td>
 		      
