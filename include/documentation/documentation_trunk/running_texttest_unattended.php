@@ -151,14 +151,14 @@ By default, each application will be shown on a separate page named after that a
 An index page ("dashboard") will be created at the top level which will link to all the application
 pages and briefly indicate how many tests are succeeding and how many are failing. This index
 page is automatically generated when running with the "-coll" flag, but can also be regenerated
-alone : using "-s batch.GenerateSummaryPage batch=&lt;batch_session&gt;". The form of the page
+alone : using -s batch.GenerateSummaryPage -b &lt;batch_session&gt;. The form of the page
 is determined by the file "summary_template.html" which will be copied to your repository
 the first time you build the pages. This can then be edited to e.g. add other relevant information
 and links to your dashboard page.</div>
 <div class="Text_Normal">
 If you install "Matplotlib" (version 0.98 or later), a clickable graph that shows a summary of the test behaviour 
 over time will be added at the top of the page. These graphs can also be generated alone 
-by using "-s batch.GenerateGraphs batch=&lt;batch_session&gt;".
+by using -s batch.GenerateGraphs -b &lt;batch_session&gt;.
 Graphs generated in this way will currently include all runs which exist in the HTML pages.
 You can also then set "historical_report_piechart_summary" to "true" which will cause the
 little result summary tables to be replaced by Matplotlib pie charts if you think that looks nicer.
@@ -241,8 +241,9 @@ Archiving old data from the HTML reports</div>
 After a while, very old test results in the repository cease
 to be interesting and can safely be archived. This is done via
 the script batch.ArchiveRepository, with arguments 'after' and
-'before' for the time period to archive (and 'session' for the
-batch session to do it on, defaults to all known sessions). The
+'before' for the time period to archive (The
+batch session to do it on is provided in the normal way via -b on the command line, 
+ it defaults to all known sessions if none is provided). The
 dates should be in the same format as the dates on the pages,
 e.g. 21Jan2005. This should be less critical now if you aren't
 generating an "All" page, which otherwise can take an extremely
