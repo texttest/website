@@ -121,7 +121,17 @@ the string "stdout" or "output" depending on your naming scheme. You may need to
 different files for different entries, in which case the entry
 &ldquo;performance_logfile&rdquo; is of use. This has the same
 form as above, except that the value is the file stem of the
-file you wish to extract the information from.</div>
+file you wish to extract the information from. Since TextTest 3.22 it will also work to refer
+to a file (by filename or UNIX file expansion) that has not necessarily been collated to form
+part of the test comparison. For example, this will get CPU time information from standard output
+and memory information from a file that matches the expansion given.
+<?php codeSampleBegin() ?>
+[performance_logfile]
+cputime:stdout
+memory:logs/*/memory.log
+[end]
+<?php codeSampleEnd() ?>
+</div>
 <div class="Text_Normal">If you choose the
  system_resource_id &ldquo;memory&rdquo;, the number will be interpreted as a
 memory value in megabytes. Otherwise it will be assumed to be a time in seconds. These
