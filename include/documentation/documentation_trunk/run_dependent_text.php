@@ -66,6 +66,10 @@ specific to this entry. This is defined as follows:
 	match with &lt;pattern&gt;, instead of removing the single line
 	containing the pattern, remove &lt;number_of_lines&gt;. The
 	count includes the line matched, so {LINES 1} has no effect.</div>
+	<div class="Text_Normal"><li><SPAN STYLE="text-decoration: none"><b><I>&lt;pattern&gt;{PREVLINES
+	&lt;number_of_lines&gt;}</I></b></SPAN> - On encountering a
+	match with &lt;pattern&gt;, remove &lt;number_of_lines&gt; lines of text <I>before</I> the match. The
+	count does not include the line matched, unlike the {LINES x} matcher above.</div>
 
 	<div class="Text_Normal"><li><b><I>{LINE &lt;line_number&gt;}</I></b> - Remove the
 	entire line &lt;line_number&gt;, counting from the top of the
