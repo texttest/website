@@ -39,3 +39,6 @@ With that lot in place, we will now get instead
 which will duly work correctly in eval() and all will be well. The match pattern can be an ordinary string or regular expression,
 and the replacement string may use back references, as in the "posixmodule" example.
 </div>
+<div class="Text_Normal">
+This may be defined in a section for particular traffic types ("os.stat" in this case), in the "python" section as in the example above, or in the "general" section. In the last case it will also be applied on traffic received from <A class="Text_Link" HREF="index.php?page=capturemock&n=custom_client">custom clients</A>.
+</div>
