@@ -73,7 +73,7 @@ into a design. However, the parts of the API that enable
 assertions to be written do not aid this process, they are
 simply extracting information from arbitrary parts of the
 system, very possibly making it available where it wouldn't be
-otherwise. See the <A class="Text_Link" href= "index.php?page=about&n=problems">Frequently
+otherwise. See the <A class="Text_Link" href= "index.php?page=ui_testing&n=problems">Frequently
 Asked Questions page for xUseCase</A> for further discussion of
 this issue.</div>
 
