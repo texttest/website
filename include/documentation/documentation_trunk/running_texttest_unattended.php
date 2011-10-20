@@ -143,7 +143,7 @@ which will rebuild all the reports from scratch based on what is in the reposito
 </div>
 <div class="Text_Normal">The easiest way to get a handle on what this looks like is to
 look at this <A class="Text_Link" target="_blank" href="include/documentation/<?php echo $version; ?>/htmlreport_example/index.html">small example</A>. Each day's results correspond to a column, while each test has a row. The
-results can be explored by clicking around. Note the new (in 3.22) toolbar at the top, which allows you to hide or show tests in a particular category: this uses the most recent result for each test.</div>
+results can be explored by clicking around. Note the new (in 3.22) toolbar at the top, which allows you to hide or show tests. The text box allows you to show only tests containing a certain string or regular expression. The coloured toggle buttons allow you to hide tests in a particular category: this uses the most recent result for each test. You can also hold down control and click them to show only that category.</div>
 <div class="Text_Normal">
 For a real such page in active use,
 check out the <a href="index.php?page=nightjob" class="Text_Link">nightly runs of TextTest's self tests</A> page, which is updated every day with the latest status.</div>
