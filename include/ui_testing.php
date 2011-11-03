@@ -74,6 +74,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("pyusecase_and_tkinter","Tkinter", "Documentation specific to using PyUseCase with Tkinter apps"); ?>
 	          <?php  printLI("pyusecase_and_wx","wxPython", "Documentation specific to using PyUseCase with wxPython"); ?>
                   <?php  printLI("pyusecase_and_swt","SWT/Eclipse RCP", "Documentation specific to using PyUseCase with SWT/Eclipse RCP apps"); ?>
+                  <?php  printLI("pyusecase_and_swing","Swing (unreleased)", "Documentation specific to using PyUseCase with Java Swing apps"); ?>
                   <br><br><div class="Table_Text_Header">Supported widgets</div>
                   <?php  printLI("pyusecase_supported_gtk", "PyGTK", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
                   <?php  printLI("pyusecase_supported_tkinter","Tkinter", "Tkinter widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
