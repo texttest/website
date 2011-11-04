@@ -29,6 +29,7 @@ environment = USECASE_RECORD_SCRIPT,USECASE_REPLAY_SCRIPT
 
 [general]
 server_multithreaded = True
+use_exact_matching = False
 
 ### Python interception
 [python]
@@ -52,6 +53,7 @@ These entries are documented as follows. All lists are comma-separated, i.e. ent
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=cmdline_basic">intercepts (under [command line])</A> - list of command-line programs to intercept
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=environment">environment</A> - list of environment variables to track for the program named in the section header 
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=file_capture">asynchronous</A> - whether the program named in the section header will cause files to be written after it has exited (default False)
+<LI><A class="Text_Link" HREF="index.php?page=capturemock&n=codedtests">use_exact_matching</A> - Whether to fail as soon as anything is slightly different (True) or try to find a likely candidate when replaying (False). Default False.
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=cmdline_basic">server_multithreaded</A> - whether the CaptureMock server should handle requests concurrently (default True) 
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=python_basic">intercepts (under [python])</A> - list of Python modules or attributes to intercept
 <LI><A class="Text_Link" HREF="index.php?page=capturemock&n=transform_output">alterations</A> - list of transformations (section header names) to perform on the recorded output

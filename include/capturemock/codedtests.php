@@ -59,5 +59,12 @@ def test_send_another_email():
 <div class="Text_Normal">
 If CaptureMock is running in replay mode and detects that different calls have been made, it will raise a CaptureMockReplayError exception. This includes a message suggesting that you may wish to re-record the stored mock file.</div>
 <div class="Text_Normal">
-The newly created "replay" file will be saved in the "capturemock" directory as &lt;test_name&gt;.mock.tmp, so you can also compare it with the saved mock, and if the changes are trivial and correct, use it overwrite the saved mock also. It uses a best-fit algorithm to try and match up the responses with the closest matching call, so it may manage to do the right thing even when the calls have changed.
+The newly created "replay" file will be saved in the "capturemock" directory as &lt;test_name&gt;.mock.tmp, so you can also compare it with the saved mock, and if the changes are trivial and correct, use it overwrite the saved mock also. It uses a best-fit algorithm to try and match up the responses with the closest matching call, so it may manage to do the right thing even when the calls have changed.</div>
+<div class="Text_Normal">
+On occasions you want a tighter control and a stricter failure set up, in which case the best-fit algorithm may not be what you want. You can disable it by doing as follows in your rc file:
+<?php codeSampleBegin() ?>
+[general]
+use_exact_matching:True
+<?php codeSampleEnd() ?>
+
 </div>
