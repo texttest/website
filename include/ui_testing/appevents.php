@@ -18,17 +18,17 @@
   and error-prone: it can easily be forgotten, and the required
   length of sleep is hard to get right. 
 </div>
-<div class="Text_Normal">Use-case recorders handle this situation by introducing the
+<div class="Text_Normal">StoryText handles this situation by introducing the
   notion of an `application event': the application can simply
-  notify the use-case recorder when a significant event has
+  notify StoryText when a significant event has
   occurred that is worth waiting for. At places in the code where
-  such events occur, the programmer adds calls to xUseCase, which
-  will then record a `wait
+  such events occur, the programmer adds calls to StoryText (in Python code) or
+  generates an event (in Java code), which will then record a `wait
   for &lt;name of application event&gt;' command to the usecase it is recording.
   During replay it will simply not replay any further events until the application
   reaches the same point, i.e. when the same call is made. A single simple call
   can therefore be used for both purposes.</div>
-<div class="Text_Normal">So, xUseCase recording with application events looks like
+<div class="Text_Normal">So, StoryText recording with application events looks like
   this:</div>
 <div class="Text_Normal"><img src="include/ui_testing/images/xusecaserec.jpg" NAME="Graphic1" ALIGN=LEFT WIDTH=500 HEIGHT=152 BORDER=0><BR CLEAR=LEFT>Replaying,
 					with application events, looks like this:
@@ -52,14 +52,20 @@
   to fail. To solve this, the programmer finds the point in his application
   directly after the loading is completed and inserts the following code :
 <?php codeSampleBegin(); ?>
-import usecase
-usecase.applicationEvent('data to be loaded')
+import storytext
+storytext.applicationEvent('data to be loaded')
 <?php codeSampleEnd(); ?>
-if he writing a Python GUI and using PyUseCase or
+if they are writing a Python GUI or
 <?php codeSampleBegin(); ?>
-ScriptEngine.instance().applicationEvent('data to be loaded');
+import org.eclipse.swt.widgets.Event;
+
+Event event = new Event();
+event.text = "data to be loaded";
+someWidget.notifyListeners(1234, event);
 <?php codeSampleEnd(); ?>
-if he is writing a Java GUI and using JUseCase. Either way, the recorded use case will now look like this:</div>
+if they are writing an SWT/Eclipse RCP GUI in Java. (There is a third form for 
+<a href="index.php?page=ui_testing&n=storytext_and_swing">Swing GUIs</A>)
+Either way, the recorded use case will now look like this:</div>
 <div class="Text_Normal">
 <?php codeSampleBegin(); ?>
 <I>load movie data into list</I>
@@ -83,5 +89,5 @@ if he is writing a Java GUI and using JUseCase. Either way, the recorded use cas
 <div class="Text_Normal"><img src="include/ui_testing/images/appeventrep.JPG" NAME="Graphic5" ALIGN=LEFT WIDTH=495 HEIGHT=249 BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">
-To see how this works in practice, look at the <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_appevents">relevant PyUseCase documentation</A>.
+To see how this works in practice, look at the <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_appevents">relevant StoryText documentation</A>.
 </div>

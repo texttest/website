@@ -56,7 +56,7 @@ this way.</div>
 the tools.</div>
 <div class="Text_Header"><a name="interactive_tools"></a>Rich-client GUIs</div>
 <div class="Text_Normal">Here our candidate tool is <A class="Text_Link" HREF="index.php?page=ui_testing&n=xusecase">TextTest
-with PyUseCase or JUseCase</A>. Suddenly there are more
+with StoryText or JUseCase</A>. Suddenly there are more
 alternatives, both that try to make use of the GUI and that
 bypass it and call into the system via an API instead. I have
 picked out four that I regard as especially interesting.</div>

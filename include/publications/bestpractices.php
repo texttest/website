@@ -6,7 +6,7 @@ different aspects of acceptance testing in a fairly high-level
 and tool-independent way. Running the workshop were myself,
 Brian Swan (author of Exactor) and Rick Mugridge (author of
 FitLibrary and a newly published book on acceptance testing).
-What unites TextTest+xUseCase, Exactor and Fit+FitLibrary is the
+What unites TextTest+StoryText, Exactor and Fit+FitLibrary is the
 aim to support writing tests in the language of the business
 domain : something most of the myriad other tools out there are
 not concentrating on. The following text is something that all

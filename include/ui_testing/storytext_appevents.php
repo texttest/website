@@ -5,10 +5,10 @@ for an explanation of what an Application Event is: the basic idea is to support
 synchronisation by recording and reading of "waits")></I>
 </div>
 <div class="Text_Normal">
-The implementation in PyUseCase, for the three Python toolkits supported, consists 
+The implementation in StoryText, for the three Python toolkits supported, consists 
 of calling the method "usecase.applicationEvent" from your code at the relevant places. 
 For Eclipse RCP, only a name can currently be provided, 
-<A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_and_swt#appevents">see here</A> for its mechanism. </div>
+<A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swt#appevents">see here</A> for its mechanism. </div>
 <div class="Text_Normal">
 The signature of the method is as follows:
 
@@ -58,5 +58,5 @@ event will supercede). This should only be needed in rare circumstances.
 The "timeDelay" parameter only affects replay and essentially introduces a sleep in the replayer:
 i.e. it indicates that replay should proceed a certain time after the current event. It is
 obviously a fairly crude tool and should be used sparingly, but this is basically how
-you insert a "sleep" using PyUseCase if there is nothing else you can do.
+you insert a "sleep" using StoryText if there is nothing else you can do.
 </div>

@@ -1,6 +1,6 @@
-<div class="Text_Header">Using PyUseCase for testing, together with TextTest</div>
+<div class="Text_Header">Using StoryText for testing, together with TextTest</div>
 <div class="Text_Normal">
-PyUseCase may be useful on its own without using TextText, for demonstration purposes
+StoryText may be useful on its own without using TextText, for demonstration purposes
 or for a limited form of testing, but it was created essentially to enable GUI testing
 with TextTest, which is why it generates you a log rather than providing you with an API
 for writing assertions.

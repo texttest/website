@@ -1,6 +1,6 @@
-<div class="Text_Main_Header">Testing a GUI with TextTest and a Use Case Recorder</div>
+<div class="Text_Main_Header">Testing a GUI with TextTest and StoryText</div>
 
-<div class="Text_Normal">This is a step-by-step guide to testing a GUI with texttest.
+<div class="Text_Normal">This is a step-by-step guide to testing a GUI with TextTest.
 It assumes you have read and followed the instructions in the
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=install_texttest"; ?>">installation guide</A>. There is a fair amount of overlap with the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">document for getting started testing a non-GUI program</A>, so it can be
 helpful to read that first.</div>
@@ -8,23 +8,21 @@ helpful to read that first.</div>
 <div class="Text_Normal">We will use a simple PyGTK GUI as an
 example. This is also Exercise 4 in the course material so if you want to follow this it's 
 suggested you download it from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>. 
-Unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory. Much
-of what is said here should apply to any use case recorder,
-though. Text in italics is background information only. Naturally you need to install <A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_download">PyUseCase</A> also before this will work.
+Unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory. 
+Text in italics is background information only. Naturally you need to install <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">StoryText</A> also before this will work.
 </div>
-<div class="Text_Normal"><I>PyUseCase also supports Tkinter, wxPython, SWT and Eclipse RCP GUIs, and a project is underway to support Swing also. If you are using Microsoft's .net, <A class="Text_Link" href="http://nusecase.sourceforge.net/">NUseCase</A> is built on similar ideas. If you use another GUI toolkit - write your own use case recorder and tell me about it!</I>
+<div class="Text_Normal"><I>StoryText also supports Tkinter, wxPython, SWT, Swing and Eclipse RCP GUIs. If you are using Microsoft's .net, <A class="Text_Link" href="http://nusecase.sourceforge.net/">NUseCase</A> is built on similar ideas. If you use another GUI toolkit, much of the groundwork is already done for the 5 toolkits listed above and new contributions are most welcome!</I>
 </div>
-
 <div class="Text_Header"><A NAME="use_case_recorder"></A><A NAME="use_case_record_mode"></A><A NAME="USECASE_RECORD_SCRIPT"></A><A NAME="USECASE_REPLAY_SCRIPT"></A>
 Creating an Application</div>
 <div class="Text_Normal">First, create an initial application by running "texttest.py --new" as described in
-the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello world&rdquo;</A>. The main difference is that you should select "PyGTK GUI with PyUseCase 3.x" from the GUI testing options! The application creation dialog should look something like this just before you press "OK":
+the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=getting_started"; ?>">guide for testing &ldquo;hello world&rdquo;</A>. The main difference is that you should select "PyGTK GUI with StoryText 3.x" from the GUI testing options! The application creation dialog should look something like this just before you press "OK":
 </div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/createguiapp.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal"><I>
 The GUI-testing options drop-down list tries to cover all the bases, and will set the "use_case_record_mode" and "use_case_recorder" config file settings in your config file as necessary. If you choose "Other embedded use-case recorder", TextTest will set the environment variables USECASE_RECORD_SCRIPT and USECASE_REPLAY_SCRIPT to the relevant locations, which are
-the variables PyUseCase reads from when deciding the relevant files to read and write. 
+the variables StoryText reads from when deciding the relevant files to read and write. 
 Other GUI simulation tools can of course easily be wrapped by a script that would read
 the above variables and translate them into the format the simulation tool
 expects.</I>
@@ -39,15 +37,15 @@ use case that will be performed with the GUI. To do this, we select
 &ldquo;Record Use-Case&rdquo; from the Actions menu
 (or press "F9"). This will fire up the record dialog, where we can just click OK. This will now 
 start an instance of the dynamic GUI, as with running tests. 
-This in turn fires up our PyGTK bug system GUI with PyUseCase in record mode. We simply
+This in turn fires up our PyGTK bug system GUI with StoryText in record mode. We simply
 perform the actions that constitute the use case (in this case select some rows, click some of
 the toggle buttons at the bottom and sort some columns), and then close
 this GUI.</div>
 <div class="Text_Normal">
-When we close the GUI, PyUseCase informs us that we have performed some actions it does not yet have names for. So it produces a dialog for us to fill in with appropriate names. We try to decipher which rows correspond to which things we did based on the widget types, identifiers and descriptions of the actions performed that it gives us. This information then goes into our "UI map file", while the names themselves form the "usecase" on which the test is based, which you can see previewed in the lower window as you type. For example, we might choose some names something like this.<I>
-(If you leave any item blank, PyUseCase concludes that you are not interested in this event and will not record it in the future)</I>
+When we close the GUI, StoryText informs us that we have performed some actions it does not yet have names for. So it produces a dialog for us to fill in with appropriate names. We try to decipher which rows correspond to which things we did based on the widget types, identifiers and descriptions of the actions performed that it gives us. This information then goes into our "UI map file", while the names themselves form the "usecase" on which the test is based, which you can see previewed in the lower window as you type. For example, we might choose some names something like this.<I>
+(If you leave any item blank, StoryText concludes that you are not interested in this event and will not record it in the future)</I>
 </div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/pyusecase_dialog.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/storytext_dialog.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal"></div>
 <div class="Text_Normal">The dynamic GUI will then turn the
@@ -56,19 +54,19 @@ By clicking this red-line in the test view we get the view
 below. The contents of the new files can be seen in textual
 format in the &ldquo;Text Info&rdquo; window by single-clicking them (as shown), 
 or viewed by double-clicking them if they are too large. The "usecase.bugs" file provides
-a description of what we did, while the "stdout.bugs" file provides PyUseCase's auto-generated description of what the GUI looked like while we were doing it.
+a description of what we did, while the "stdout.bugs" file provides StoryText's auto-generated description of what the GUI looked like while we were doing it.
 </div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/guitest.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">If we made a mistake recording, we should simply quit the
-dynamic GUI at this point and repeat the procedure (the names we entered for PyUseCase
+dynamic GUI at this point and repeat the procedure (the names we entered for StoryText
 will still be kept). If we are happy with the recording we should save the results: press the
 save button with the test selected.</div>
 <div class="Text_Normal">Unless we disabled this from the
 &ldquo;Record&rdquo; dialog at the start, TextTest will then
 automatically restart it in replay mode, in order to collect the
 output files. This operation is done invisibly as it is assumed
-to always work &ndash; but (for example) PyUseCase produces
+to always work &ndash; but (for example) StoryText produces
 different text when replaying than when recording, and it is
 that text we are interested in. It can be configured to also
 happen via the dynamic GUI &ndash; this is useful if you don't
@@ -80,20 +78,20 @@ should look like this:</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/guitest_static.png" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">Note that the "definition file" is
-now the usecase file recorded by PyUseCase. Naturally there
+now the usecase file recorded by StoryText. Naturally there
 could be command line options as well if desired. This is much
 the same as the final result of the &ldquo;hello world&rdquo;
 set up.</div>
 <div class="Text_Normal">
 If we visit the "Config" tab to the right we will now found both
-a TextTest config file and a PyUseCase config file "ui_map.conf",
-under "pyusecase_files". If you fire this up by double-clicking it,
+a TextTest config file and a StoryText config file "ui_map.conf",
+under "storytext_files". If you fire this up by double-clicking it,
 you can see that it essentially contains the information you entered
 before. When the GUI changes we will need to edit this file, but hopefully
 we can minimise changes in the tests themselves.</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/uimap.png" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div><div class="Text_Normal"><I>
-PyUseCase identifies widgets by name, title, label and type, in that order. Obviously here we are identfiying the main tree view by its type alone, which will break down as soon as the UI contains another one. Likewise, the title of our window might vary from run to run. For robustness it's therefore often necessary to assign widget names in your code, at which point this file should be updated with "Name=Bug tree view" instead of "Type=TreeView".</I>
+StoryText identifies widgets by name, title, label and type, in that order. Obviously here we are identfiying the main tree view by its type alone, which will break down as soon as the UI contains another one. Likewise, the title of our window might vary from run to run. For robustness it's therefore often necessary to assign widget names in your code, at which point this file should be updated with "Name=Bug tree view" instead of "Type=TreeView".</I>
 </div>
 <div class="Text_Header">Running a Test</div>
 <div class="Text_Normal">Clearly, there is no need to run it once in order to collect
@@ -162,7 +160,7 @@ It will also cause the above window-hiding mechanisms to be disabled, naturally.
 </div>
 <div class="Text_Normal">
 This is translated to the environment variable USECASE_REPLAY_DELAY which is 
-forwarded to the system under test. PyUseCase and nUseCase both use this variable.
+forwarded to the system under test. StoryText and nUseCase both use this variable.
 In the case of Java and JUseCase it is translated to the "delay" Java property.
 Naturally for other tools a small wrapper script can be used to translate this into
 whatever the tool requires.

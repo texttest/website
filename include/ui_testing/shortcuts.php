@@ -1,5 +1,5 @@
 <div class="Text_Header">Test Refactoring and Macro Recording with GUI shortcuts </div>
-<div class="Text_Normal">Naturally, a use-case recorder can provide GUI simulations
+<div class="Text_Normal">Naturally, StoryText can provide GUI simulations
 for purposes other than tests. It can record a sequence of GUI
 clicks for any purpose. There are two main benefits to be
 achieved from this.</div>
@@ -36,7 +36,7 @@ saving them all would have it universally present.
 can do it by just editing the shortcut
 file and no tests will need to be changed.</div>
 <div class="Text_Normal">
-To see how this works in practice, look at the <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_shortcuts">relevant PyUseCase documentation</A>.
+To see how this works in practice, look at the <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_shortcuts">relevant StoryText documentation</A>.
 </div>
 <div class="Text_Header">Macro Recording by system users</div>
 <div class="Text_Normal">The record/playback layer is available at any time to any
@@ -64,5 +64,5 @@ he wishes to repeat what he did. This will save him time and
 repetitive work.
 </div>
 <div class="Text_Normal">
-There is <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_shortcuts">support for this in PyUseCase</A>, but only for PyGTK apps currently.
+There is <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_shortcuts">support for this in StoryText</A>, but only for PyGTK apps currently.
 </div>

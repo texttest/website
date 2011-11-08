@@ -36,7 +36,7 @@ something that is pretty tied to how the current GUI looks
 which will probably need redoing if the GUI changes very much
 </div>
 <div class="Text_Normal">
-With PyUseCase you can skip this process if you want, by providing the
+With StoryText you can skip this process if you want, by providing the
 "-x" on the command line. We do not really recomment this for more than trivial
 playing around though. It might speed you up a bit at the start but
 your tests will be much less readable and much less maintainable in the long run.

@@ -1,25 +1,25 @@
 <div class="Text_Header">Recording a basic usecase</div>
-<div class="Text_Normal">Naturally the first step is to <a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_download">download and install PyUseCase</a>.
+<div class="Text_Normal">Naturally the first step is to <a class="Text_Link" href="index.php?page=ui_testing&n=storytext_download">download and install StoryText</a>.
 </div>
 <div class="Text_Normal">
-To see what PyUseCase does, try running it with the "videostore.py"
+To see what StoryText does, try running it with the "videostore.py"
 demonstration PyGTK GUI in the "examples" directory in the download.
-This ought to work if you've followed the instructions, because PyUseCase's own GUI uses PyGTK
+This ought to work if you've followed the instructions, because StoryText's own GUI uses PyGTK
 so you should have installed it!</div>
 <div class="Text_Normal">
 (It might also be an idea to run videostore.py on its own first,
-so you can separate what PyUseCase does from what it does)
+so you can separate what StoryText does from what it does)
 You can record a usecase by doing
 <?php codeSampleBegin() ?>
-pyusecase -r usecase.txt videostore.py
+storytext -r usecase.txt videostore.py
 <?php codeSampleEnd() ?>
-This brings up the Video Store in record mode and PyUseCase
+This brings up the Video Store in record mode and StoryText
 writes its auto-generated log of what the GUI looks like to the console
 as you go along. As a suggestion, add a movie called "Star Wars" like this :</div>
 <div class="Text_Normal"><img src="include/ui_testing/images/videostore.png" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT>
 </div>
 <div class="Text_Normal">
-and then exit. This results in PyUseCase's own dialog coming
+and then exit. This results in StoryText's own dialog coming
 up and requesting that you enter "usecase names" for the things
 you just did. It gives you the type of the widget, how it identifies it
 and a description of the action that was performed on it, and 
@@ -38,7 +38,7 @@ you accept it:
 Now we are done, and the usecase as shown in the preview window is saved to our "usecase.txt" file.
 We can now play it back via:
 <?php codeSampleBegin() ?>
-pyusecase -p usecase.txt videostore.py
+storytext -p usecase.txt videostore.py
 <?php codeSampleEnd() ?>
 which goes by extremely fast but helpfully describes the GUI changes on the console for us,
 somewhat more compactly than when we were recording as it e.g. makes text edits in one go. It
@@ -71,10 +71,10 @@ Updated : Movie Tree with columns: Movie Name
 <?php codeSampleEnd() ?>
 As you can see, this consists of an initial description of the window appearance
 (compare with the screenshot above) and then a series of "event created with arguments"
-lines which indicate what PyUseCase has done, followed by the updates to the UI that resulted.
+lines which indicate what StoryText has done, followed by the updates to the UI that resulted.
 To see the usecase executing at a more sensible pace so you watch the UI changes, set a delay like this:
 <?php codeSampleBegin() ?>
-pyusecase -p usecase.txt -d 2 videostore.py
+storytext -p usecase.txt -d 2 videostore.py
 <?php codeSampleEnd() ?>
 which will wait 2 seconds between each action.
 </div>
@@ -99,9 +99,9 @@ clicked = add movie
 delete-event = close
 <?php codeSampleEnd() ?>
 
-The basic idea is that GUI changes will cause changes in this file but not in the "usecases" themselves. PyUseCase identifies widgets by name, title, label and type, in that order (tooltips and View IDs are also used in Eclipse RCP). Obviously here we are identfiying the "Add" button by its Label, which will break down if the UI contains anything else labelled "Add". Likewise, the title of our window might vary from run to run. For robustness it's therefore sometimes necessary to assign widget names in your code, at which point this file should be updated with "Name=The Add Movie Button" instead of "Label=Add".
+The basic idea is that GUI changes will cause changes in this file but not in the "usecases" themselves. StoryText identifies widgets by name, title, label and type, in that order (tooltips and View IDs are also used in Eclipse RCP). Obviously here we are identfiying the "Add" button by its Label, which will break down if the UI contains anything else labelled "Add". Likewise, the title of our window might vary from run to run. For robustness it's therefore sometimes necessary to assign widget names in your code, at which point this file should be updated with "Name=The Add Movie Button" instead of "Label=Add".
 </div>
 <div class="Text_Header">What now?</div>
 <div class="Text_Normal">
-This is OK for demonstration purposes but reasonably limited on its own. For testing you probably want to try to <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_texttest">use it in combination with TextTest</A>. Also, you can examine the extra features such as synchronisation support via <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_appevents">Application Events</A>, macro recording with <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_shortcuts">GUI shortcuts</A>, and recording and playing back <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_signals">received signals</A>.
+This is OK for demonstration purposes but reasonably limited on its own. For testing you probably want to try to <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_texttest">use it in combination with TextTest</A>. Also, you can examine the extra features such as synchronisation support via <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_appevents">Application Events</A>, macro recording with <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_shortcuts">GUI shortcuts</A>, and recording and playing back <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_signals">received signals</A>.
 </div>

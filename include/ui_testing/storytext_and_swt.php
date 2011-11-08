@@ -1,13 +1,13 @@
-<div class="Text_Main_Header">Using PyUseCase with SWT/Eclipse RCP</div>
+<div class="Text_Main_Header">Using StoryText with SWT/Eclipse RCP</div>
 <div class="Text_Header">Supported platforms</div>
 <div class="Text_Normal">
 It is tested regularly and works fully on Linux and Windows. It currently does not work under Cocoa on the Mac: the reason is that the SWTBot headless test runner, on which it depends, runs the UI in a non-main thread which Cocoa does not support. The suggested workaround from the SWTBot project is to use Carbon instead.
 </div>
-<div class="Text_Header">Installing PyUseCase and Jython</div>
+<div class="Text_Header">Installing StoryText and Jython</div>
 <div class="Text_Normal">
-(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_download">general ones</A> : please read there first)</div>
+(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">general ones</A> : please read there first)</div>
 <div class="Text_Normal">
-As SWT is a Java technology, the first observation is that you will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install PyUseCase under it in a similar way to that described for installing it under Python. The easiest way is to download the tarball from <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge</A>, unpack it, and run "jython setup.py install". (You can also use "pip", but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip"). It is usually then convenient to add your Jython installation to your PATH, so that PyUseCase can be run without typing the full path.
+As SWT is a Java technology, the first observation is that you will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install StoryText under it in a similar way to that described for installing it under Python. The easiest way is to download the tarball from <A class="Text_Link" HREF="http://sourceforge.net/projects/storytext">sourceforge</A>, unpack it, and run "jython setup.py install". (You can also use "pip", but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip"). It is usually then convenient to add your Jython installation to your PATH, so that StoryText can be run without typing the full path.
 </div>
 <div class="Text_Normal">
 Contrary to expectations you need to do this <I>as well as</I> installing it into an ordinary Python installation. The reason is that its UI makes use of PyGTK which only works under ordinary Python, whereas the part that talks to Java obviously need to run under Jython.</div>
@@ -16,10 +16,10 @@ An install under Python will also install the UI program ("usecase_name_chooser"
 </div>
 <div class="Text_Header">Installing SWTBot</div>
 <div class="Text_Normal">
-PyUseCase support for SWT and Eclipse RCP is based on the tool <A class="Text_Link" HREF="http://www.eclipse.org/swtbot/downloads.php">SWTBot</A> which you will also need to install. For plain SWT it is sufficient to install it "normally", i.e. as recommended by the SWTBot project on their site. Installing it as for RCP (below) will also work.
+StoryText support for SWT and Eclipse RCP is based on the tool <A class="Text_Link" HREF="http://www.eclipse.org/swtbot/downloads.php">SWTBot</A> which you will also need to install. For plain SWT it is sufficient to install it "normally", i.e. as recommended by the SWTBot project on their site. Installing it as for RCP (below) will also work.
 </div>
 <div class="Text_Normal"> 
-For Eclipse RCP apps, it is necessary to install an additional "bridge" module so PyUseCase and SWTBot can work together. This is known as org.eclipse.swtbot.testscript, but is currently maintained by the PyUseCase project (though in theory it could be used by anyone attempting to use a dynamic language with SWTBot). The recommended way to do this is to use the "p2 director" to install it under your product. For Eclipse 3.6, use a command as shown below. (<b>NOTE!</b> In reality, do not use linebreaks between the different repositories, it is formatted like this below just to prevent an excessively wide display.)
+For Eclipse RCP apps, it is necessary to install an additional "bridge" module so StoryText and SWTBot can work together. This is known as org.eclipse.swtbot.testscript, but is currently maintained by the StoryText project (though in theory it could be used by anyone attempting to use a dynamic language with SWTBot). The recommended way to do this is to use the "p2 director" to install it under your product. For Eclipse 3.6, use a command as shown below. (<b>NOTE!</b> In reality, do not use linebreaks between the different repositories, it is formatted like this below just to prevent an excessively wide display.)
 <?php codeSampleBegin() ?>
 eclipse \
 -application org.eclipse.equinox.p2.director \
@@ -42,7 +42,7 @@ http://download.eclipse.org/eclipse/updates/3.5 \
 </div>
 <div class="Text_Header">Widget Naming</div>
 <div class="Text_Normal">
-PyUseCase has various ways to identify widgets in an SWT app. These are, in order of preference
+StoryText has various ways to identify widgets in an SWT app. These are, in order of preference
 <UL>
 <LI>The text on the widget, if it isn't editable
 <LI>The text on any Label immediately preceding the widget in its parent container
@@ -50,7 +50,7 @@ PyUseCase has various ways to identify widgets in an SWT app. These are, in orde
 <LI>The ID of the View in which the widget appears (RCP only)
 <LI>The type of the widget
 </UL>
-The hope is to find a unique way of identifying the widget based on this information, so that it can be referenced in the <A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_intro#ui_map_file">UI map file</A>. There will however exist some cases where this isn't sufficient to identify a widget, for example if the widget is only identified by type, or the text isn't unique, or it changes depending on e.g. today's date. In these cases the widget needs to be named explicitly in the code, and it's fair to say that most non-trivial applications will need to name at least some widgets before PyUseCase will work smoothely.</div>
+The hope is to find a unique way of identifying the widget based on this information, so that it can be referenced in the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_intro#ui_map_file">UI map file</A>. There will however exist some cases where this isn't sufficient to identify a widget, for example if the widget is only identified by type, or the text isn't unique, or it changes depending on e.g. today's date. In these cases the widget needs to be named explicitly in the code, and it's fair to say that most non-trivial applications will need to name at least some widgets before StoryText will work smoothely.</div>
 <div class="Text_Normal">
 The mechanism for this is inherited from SWTBot, and works in the same way as if you were using that tool alone. You simply add a call like this in your code:
 <?php codeSampleBegin() ?>
@@ -63,7 +63,7 @@ for an explanation of what an Application Event is: the basic idea is to support
 synchronisation by recording and reading of "waits")></I>
 </div>
 <div class="Text_Normal">
-From a Java app, it isn't very easy to import a Python module and call the code there directly, so there is a different interface to the one described <A class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_appevents">here</A> for the Python toolkits. The basic idea is to do as follows:
+From a Java app, it isn't very easy to import a Python module and call the code there directly, so there is a different interface to the one described <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_appevents">here</A> for the Python toolkits. The basic idea is to do as follows:
 <?php codeSampleBegin() ?>
 Event event = new Event();
 event.text = "completion of background process";
@@ -79,5 +79,5 @@ If several such events follow each other, they will overwrite each other, i.e. o
 <div class="Text_Header">Jobs in Eclipse RCP</div>
 <div class="Text_Normal">
 Eclipse has its own "job" mechanism defined in the package "org.eclipse.core.runtime.jobs" and many background tasks use that mechanism.
-PyUseCase will in this case add its own job listeners and will generate application events automatically when a user-defined Job completes, so no instrumentation of the type described above is needed in this case.
+StoryText will in this case add its own job listeners and will generate application events automatically when a user-defined Job completes, so no instrumentation of the type described above is needed in this case.
 </div>

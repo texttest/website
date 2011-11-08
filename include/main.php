@@ -10,7 +10,7 @@
    and using the text output produced as a means of controlling the
    behaviour of that application.</div>
    <div class="Text_Normal">
-   Also on this site are PyUseCase and CaptureMock, which aid in GUI testing
+   Also on this site are StoryText and CaptureMock, which aid in GUI testing
    and mocking respectively. They do not depend on TextTest in any way but are
    well suited to being used together with it.
    </div> 
@@ -24,7 +24,7 @@
 
       </tr>
      <tr valign=top>
-       <td width=50><div class="Text_Normal" ><a href="index.php?page=ui_testing" class="Text_Link">PyUseCase</a></td><td><div class="Text_Normal">Domain-language GUI testing for PyGTK, Tkinter, wxPython and SWT/Eclipse RCP</div></td>
+       <td width=50><div class="Text_Normal" ><a href="index.php?page=ui_testing" class="Text_Link">StoryText</a></td><td><div class="Text_Normal">Formerly "PyUseCase". Domain-language GUI testing for PyGTK, Tkinter, wxPython, Swing and SWT/Eclipse RCP</div></td>
       </tr>
      <tr valign=top>
        <td width=50><div class="Text_Normal" ><a href="index.php?page=capturemock" class="Text_Link">CaptureMock</a></td><td><div class="Text_Normal">Capture-replay mocking for Python, command-line programs, and synchronous messaging</div></td>

@@ -23,7 +23,7 @@
             
         </td> 
         <td>
-            <div class="Menu_Header_Link"><a  href="index.php?page=ui_testing">PyUseCase</a></div>
+            <div class="Menu_Header_Link"><a  href="index.php?page=ui_testing">StoryText</a></div>
         </td>
         <td>
              <div class="Menu_Header_Link"> <a href="index.php?page=capturemock">CaptureMock</a></div>

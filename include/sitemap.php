@@ -12,7 +12,7 @@
 <a class="Text_Link" href="index.php?page=publications">Publications</a><br>
 <a class="Text_Link" href="index.php?page=siteinfo">Site info</a><br>
 <a class="Text_Link" href="index.php?page=sitemap">Site map (this page)</a><br>
-<a class="Text_Link" href="index.php?page=ui_testing">Testing GUIs with TextTest and xUseCase</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing">Testing GUIs with TextTest and StoryText</a><br>
 <br><B>Pages under concepts</B>
 <div class="Text_Normal">
 <a class="Text_Link" href="index.php?page=about&n=about_acceptance_testing">What is Acceptance Testing?</a><br>
@@ -331,13 +331,13 @@
 <div class="Text_Normal">
 <a class="Text_Link" href="index.php?page=ui_testing&n=appevents">Multi-threaded simulation using Application Events</a><br>
 <a class="Text_Link" href="index.php?page=ui_testing&n=problems">Frequently raised objections to Use-case Recording</a><br>
-<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_additional">Adding application events for synchronisation</a><br>
-<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_download">Downloading and installing PyUseCase</a><br>
-<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_intro">Recording a basic usecase</a><br>
-<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_supported">PyGTK Widgets and signals supported for record/replay</a><br>
-<a class="Text_Link" href="index.php?page=ui_testing&n=pyusecase_texttest">Using PyUseCase for testing, together with TextTest</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=storytext_additional">Adding application events for synchronisation</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=storytext_download">Downloading and installing StoryText</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=storytext_intro">Recording a basic usecase</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=storytext_supported">PyGTK Widgets and signals supported for record/replay</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=storytext_texttest">Using StoryText for testing, together with TextTest</a><br>
 <a class="Text_Link" href="index.php?page=ui_testing&n=shortcuts">Test Refactoring and Macro Recording with GUI shortcuts </a><br>
-<a class="Text_Link" href="index.php?page=ui_testing&n=xusecase">Maintainable GUI testing with a Use Case Recorder</a><br>
+<a class="Text_Link" href="index.php?page=ui_testing&n=storytext">Maintainable GUI testing with a Use Case Recorder</a><br>
 </div>
 </div>
 </table></td></tr></table>

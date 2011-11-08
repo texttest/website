@@ -63,7 +63,7 @@ provide, which can consist any or all of:</div>
 	should be set 
 	</div>
 	<LI><div class="Text_Normal">A sequence of 'use-case' actions to be performed on a GUI
-	(see <A class="Text_Link" HREF="index.php?page=ui_testing">Use-case Recorders</A>) 
+	(see <A class="Text_Link" HREF="index.php?page=ui_testing">StoryText</A>) 
 	</div>
 </UL>
 <div class="Text_Normal">The application needs to write a log file describing what is
@@ -73,12 +73,9 @@ it.
 </div>
 <div class="Text_Normal">For people wanting to test a GUI (custom or Web) you will need
 some scripting approach to that GUI so that tests can be run
-without needing somebody to click the buttons. We recommend
-<A class="Text_Link" HREF="index.php?page=ui_testing">Use-case Recorders</A> and have
-some tools that can help you... it's probably good to understand
-these before trying to understand TextTest in more detail.</div>
-
-			</TD>  
+without needing somebody to click the buttons. For Python and Java GUIs we have the tool
+<A class="Text_Link" HREF="index.php?page=ui_testing">StoryText</A>, which is especially
+designed to work with TextTest.</div>
   </td>
  </tr>
 </table>

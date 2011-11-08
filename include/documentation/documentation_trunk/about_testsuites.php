@@ -209,8 +209,7 @@ input. In the "classic" naming scheme it should be called <B>input.&lt;app&gt;</
 - These are used to capture interaction with third party products in TextTest's mock functionality.
 </div>
 <div class="Text_Normal"><li><B>usecase.&lt;app&gt;</B>
-- The use case recorder will be configured to replay the system
-under test from this file. 
+- e.g. StoryText will be configured to replay the system under test from this file. 
 </div>
 </UL><div class="Text_Normal">Naturally you should avoid using these reserved names for any other
 purpose, such as test data files. TextTest will try to warn you if you do.

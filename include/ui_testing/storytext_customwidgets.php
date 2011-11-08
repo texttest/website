@@ -1,5 +1,5 @@
 <div class="Text_Header">Plugging in support for Custom Widgets</div>			
-<div class="Text_Normal">PyUseCase naturally only provides support for widgets supported
+<div class="Text_Normal">StoryText naturally only provides support for widgets supported
 by the generic frameworks. If your application makes use of custom widgets you will need
 to write Python code to tell it what to do with them.
 </div>
@@ -44,7 +44,7 @@ record such a click.
 </div>
 <div class="Text_Normal">
 Meanwhile an additional event monitoring has been
-set up for rows being inserted in tree views, which PyUseCase will ordinarily
+set up for rows being inserted in tree views, which StoryText will ordinarily
 ignore as it's done by the program itself rather than the user. </div>
 <div class="Text_Normal">
 If all you need to do is listen to and generate a signal, just inherit
@@ -53,6 +53,6 @@ the gtk.Model rather than the widget itself we also had to adjust how
 to monitor it)
 </div>
 <div class="Text_Normal">
-Basically, adding support for custom widgets is much like extending PyUseCase 
+Basically, adding support for custom widgets is much like extending StoryText 
 itself, beyond the basic hook mechanism above to connect it.
 </div>

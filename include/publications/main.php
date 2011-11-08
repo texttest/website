@@ -82,7 +82,7 @@
     Best Practice for XP Acceptance Testing&rdquo;</I>, jointly
     with Rick Mugridge, author of FitLibrary and Brian Swan, author
     of Exactor. As part of the first one I presented TextTest and
-    xUseCase, essentially summarising the material on this site. As
+    StoryText, essentially summarising the material on this site. As
     part of the second one I presented an overview of
     record/playback tools and approaches.
  </div>

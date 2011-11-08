@@ -64,7 +64,7 @@ page)</div>
 <div class="Text_Small_Header"><li>But I want to drive my
 high-level design with high-level tests.</div><div class="Text_Normal"> You can still
 do this without difficulties and have your assertions done via
-logs. This potentially means you won't want to use <A class="Text_Link" href= "index.php?page=ui_testing">xUseCase</A>
+logs. This potentially means you won't want to use <A class="Text_Link" href= "index.php?page=ui_testing">StoryText</A>
 to test GUIs, but there is no reason not to use TextTest for
 that reason. It has been shown (by Rick Mugridge) that
 acceptance tests can be used as a means to enable <A class="Text_Link" href= "http://domaindrivendesign.org/">domain-driven
@@ -74,7 +74,7 @@ assertions to be written do not aid this process, they are
 simply extracting information from arbitrary parts of the
 system, very possibly making it available where it wouldn't be
 otherwise. See the <A class="Text_Link" href= "index.php?page=ui_testing&n=problems">Frequently
-Asked Questions page for xUseCase</A> for further discussion of
+Asked Questions page for StoryText</A> for further discussion of
 this issue.</div>
 
 <div class="Text_Header"></div>

@@ -251,16 +251,16 @@ It's not so nice that we've had to copy the same information to two different fi
 separate file and "import" it into your config files. Look at "import_config_file" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A> for information on how to do this.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The PyGTK GUI</div>
-<div class="Text_Header">4.0 Download and install PyUseCase version 3 or newer if you don't have it yet</div>
+<div class="Text_Header">4.0 Download and install StoryText version 3 or newer if you don't have it yet</div>
 <div class="Text_Normal">
-Instructions for how to do this can be found <A class="Text_Link" HREF="index.php?page=ui_testing&n=pyusecase_download">here</A>.
+Instructions for how to do this can be found <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">here</A>.
 </div>
 <div class="Text_Header">4.1 Try out an amazing new bug system</div>
 <div class="Text_Normal">
 There is a small toy "bug system" in the exercise directory. It is downloaded from the PyGTK tutorial and
-is not "primed" for PyUseCase or anything. Fire it up and click around it a bit, you can hide and show
+is not "primed" for StoryText or anything. Fire it up and click around it a bit, you can hide and show
 the bugs in various categories and also sort the columns by clicking them, but you can't do much else...</div>
-<div class="Text_Header">4.2 Create a test with the help of PyUseCase</div>
+<div class="Text_Header">4.2 Create a test with the help of StoryText</div>
 <div class="Text_Normal">
 From this point you can pretty much follow the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=gui_tests"; ?>">GUI-testing tutorial</A>, which is designed to work with this example. Try to create some different tests and examine the "usecase" files and the "output" files in each one, and also the UI map file as it develops. 
 </div>

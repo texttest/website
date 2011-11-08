@@ -254,6 +254,6 @@ to quit a warning dialog will appear to make sure you haven't made a mistake.</d
 <div class="Text_Normal">
 There is an environment variable TEXTTEST_DYNAMIC_GUI_INTERPRETER which is a hook to provide additional arguments
 to Python when starting the dynamic GUI from the static GUI. This is mostly useful for development, for
-example to plug in PyUseCase in the self-tests. It's no longer necessary to use this to measure coverage, which 
+example to plug in StoryText in the self-tests. It's no longer necessary to use this to measure coverage, which 
 works via a Python interpreter startup hook now.
 </div>

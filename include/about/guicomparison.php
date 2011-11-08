@@ -6,7 +6,7 @@
 			</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=ui_testing">TextTest/xUseCase</A></div>
+			<div class="Table_Text_Normal"><A class="Text_Link" href= "index.php?page=ui_testing">TextTest/StoryText</A></div>
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://exactor.sourceforge.net/">Exactor</A></div>
@@ -129,7 +129,7 @@
 			<div class="Table_Text_Normal">Code changes required to get started</div>
 		</TD>
 		<TD>
-			<div class="Table_Text_Normal">calls to xUseCase, logging of relevant behaviour</div>
+			<div class="Table_Text_Normal">calls to StoryText, logging of relevant behaviour</div>
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal">creation of a test API</div>
@@ -175,7 +175,7 @@
 		</TD>
 		<TD>
 			<div class="Table_Text_Normal"><A class="Text_Link" href= "http://jusecase.sourceforge.net">Java (Swing
-			only) </A>, <A class="Text_Link" href= "index.php?page=ui_testing&n=pyusecase">Python (PyGTK
+			only) </A>, <A class="Text_Link" href= "index.php?page=ui_testing&n=storytext">Python (PyGTK
 			only)</A></div>
 		</TD>
 		<TD>

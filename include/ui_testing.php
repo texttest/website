@@ -30,7 +30,7 @@ function printLI($n,$realName,$title)
 <table class="Table_Normal">
  <tr>
   <td>
-    <div class="Text_Main_Header">Testing GUIs with TextTest and xUseCase</div>
+    <div class="Text_Main_Header">Testing GUIs with TextTest and StoryText</div>
     <div class="Text_Normal">
     <table border=0 bgcolor="#000000" cellspacing=1>
       <tr valign=top>
@@ -39,17 +39,17 @@ function printLI($n,$realName,$title)
           <table border=0 class="documentation_table">
             <tr>
               <td width=220><div class="Table_Text_Header">Introduction</div></td>
-              <td width=220><div class="Table_Text_Header">PyUseCase Docs</div></td>
+              <td width=220><div class="Table_Text_Header">StoryText Docs</div></td>
               <td width=200><div class="Table_Text_Header">Toolkit specific</div></td>
             </tr>
             
 	    <tr>
 	      <td>
 	        <div class="Table_Text_Normal">
-                  <?php  printLI("xusecase","The xUseCase idea","Driving a GUI with a Use-Case Recorder"); ?>  
-                  <?php  printLI("pyusecase_screencast","Screencast (Eclipse RCP)","Testing RCP Mail with TextTest and PyUseCase"); ?>  
-                  <?php  printLI("problems","FAQ","Frequently asked questions relating to the xUseCase as a concept"); ?>  
-                  <br><br><div class="Table_Text_Header">xUseCase Concepts</div>
+                  <?php  printLI("storytext","The StoryText idea","Concepts behind the StoryText tool, formerly known as PyUseCase"); ?>  
+                  <?php  printLI("storytext_screencast","Screencast (Eclipse RCP)","Testing RCP Mail with TextTest and StoryText"); ?>  
+                  <?php  printLI("problems","FAQ","Frequently asked questions relating to the StoryText as a concept"); ?>  
+                  <br><br><div class="Table_Text_Header">StoryText Concepts</div>
 	          <?php  printLI("appevents","Application Events", "Multi-threaded simulation with Application Events"); ?>
                   <?php  printLI("shortcuts","GUI shortcuts", "Test refactoring and macro recording with GUI shortcuts"); ?>
                   <br><br><div class="Table_Text_Header">Other tools</div>
@@ -59,28 +59,28 @@ function printLI($n,$realName,$title)
 	      </td>
 	      <td>
 	        <div class="Table_Text_Normal">
-                  <?php  printLI("pyusecase_download","Download and install","Get the latest stable release of PyUseCase from SourceForge, or the latest code from Launchpad"); ?>
-                  <?php  printLI("pyusecase_intro","Basic command-line usage","Using PyUseCase on the command line"); ?>
-	          <?php  printLI("pyusecase_texttest","Usage with TextTest", "Using PyUseCase together with TextTest to create tests"); ?>
-                  <?php  printLI("pyusecase_customwidgets","Custom Widgets", "How to tell PyUseCase how to handle any custom widgets you may have"); ?>
-                  <?php  printLI("pyusecase_appevents","Application Events", "Multi-threaded simultation with Application Events in PyUseCase"); ?>
-                  <?php  printLI("pyusecase_shortcuts","GUI shortcuts", "Test refactoring and macro recording with GUI shortcuts in PyUseCase"); ?>
-                  <?php  printLI("pyusecase_signals", "Signals on UNIX", "Recording and playing back UNIX signals received by the process"); ?>
+                  <?php  printLI("storytext_download","Download and install","Get the latest stable release of StoryText from SourceForge, or the latest code from Launchpad"); ?>
+                  <?php  printLI("storytext_intro","Basic command-line usage","Using StoryText on the command line"); ?>
+	          <?php  printLI("storytext_texttest","Usage with TextTest", "Using StoryText together with TextTest to create tests"); ?>
+                  <?php  printLI("storytext_customwidgets","Custom Widgets", "How to tell StoryText how to handle any custom widgets you may have"); ?>
+                  <?php  printLI("storytext_appevents","Application Events", "Multi-threaded simultation with Application Events in StoryText"); ?>
+                  <?php  printLI("storytext_shortcuts","GUI shortcuts", "Test refactoring and macro recording with GUI shortcuts in StoryText"); ?>
+                  <?php  printLI("storytext_signals", "Signals on UNIX", "Recording and playing back UNIX signals received by the process"); ?>
                 </div>
 	      </td>
 	      <td>
 	        <div class="Table_Text_Normal">
-                  <?php  printLI("pyusecase_and_gtk","PyGTK", "Documentation specific to using PyUseCase with PyGTK apps"); ?>
-                  <?php  printLI("pyusecase_and_tkinter","Tkinter", "Documentation specific to using PyUseCase with Tkinter apps"); ?>
-	          <?php  printLI("pyusecase_and_wx","wxPython", "Documentation specific to using PyUseCase with wxPython"); ?>
-                  <?php  printLI("pyusecase_and_swt","SWT/Eclipse RCP", "Documentation specific to using PyUseCase with SWT/Eclipse RCP apps"); ?>
-                  <?php  printLI("pyusecase_and_swing","Swing (unreleased)", "Documentation specific to using PyUseCase with Java Swing apps"); ?>
+                  <?php  printLI("storytext_and_gtk","PyGTK", "Documentation specific to using StoryText with PyGTK apps"); ?>
+                  <?php  printLI("storytext_and_tkinter","Tkinter", "Documentation specific to using StoryText with Tkinter apps"); ?>
+	          <?php  printLI("storytext_and_wx","wxPython", "Documentation specific to using StoryText with wxPython"); ?>
+                  <?php  printLI("storytext_and_swt","SWT/Eclipse RCP", "Documentation specific to using StoryText with SWT/Eclipse RCP apps"); ?>
+                  <?php  printLI("storytext_and_swing","Swing (unreleased)", "Documentation specific to using StoryText with Java Swing apps"); ?>
                   <br><br><div class="Table_Text_Header">Supported widgets</div>
-                  <?php  printLI("pyusecase_supported_gtk", "PyGTK", "PyGTK widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
-                  <?php  printLI("pyusecase_supported_tkinter","Tkinter", "Tkinter widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
-                  <?php  printLI("pyusecase_supported_wx","wxPython", "wxPython widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
-                  <?php  printLI("pyusecase_supported_swt","SWT/Eclipse RCP", "SWT/Eclipse RCP widgets supported by current version of PyUseCase, for record/playback and auto-logging"); ?>
-                  <?php  printLI("pyusecase_supported_swing","Swing (unreleased)", "Swing widgets supported by development version of PyUseCase, for record/playback and auto-logging"); ?>
+                  <?php  printLI("storytext_supported_gtk", "PyGTK", "PyGTK widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
+                  <?php  printLI("storytext_supported_tkinter","Tkinter", "Tkinter widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
+                  <?php  printLI("storytext_supported_wx","wxPython", "wxPython widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
+                  <?php  printLI("storytext_supported_swt","SWT/Eclipse RCP", "SWT/Eclipse RCP widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
+                  <?php  printLI("storytext_supported_swing","Swing (unreleased)", "Swing widgets supported by development version of StoryText, for record/playback and auto-logging"); ?>
 	        </div>
 	      </td>
 		      
@@ -93,7 +93,7 @@ function printLI($n,$realName,$title)
     </div>   
     <?php 
        if ($path == "not_set") include_404_page();
-       elseif  ($path == "no_needed") include_file ('include/ui_testing/xusecase.php');
+       elseif  ($path == "no_needed") include_file ('include/ui_testing/storytext.php');
        else include_file($path); 
        ?>
 				
