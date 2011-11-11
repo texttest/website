@@ -1,6 +1,6 @@
 <div class="Text_Header">PyGTK Widgets and signals supported for record/replay</div>
 <div class="Text_Normal">The following lists the PyGTK widget types and the associated signals on them which 
-StoryText 3.5 is currently capable of recording and replaying. Any type derived from the listed
+StoryText 3.6 is currently capable of recording and replaying. Any type derived from the listed
 types is also supported. Note also that a handful of widgets in the "hildon" extension for Nokia's Maemo smartphone platform will also work without the need to do anything differently, although this support is only at the proof of concept stage currently.
 </div>
 <div class="Text_Normal"><table border=1 cellpadding=1 cellspacing=1>
@@ -25,7 +25,7 @@ types is also supported. Note also that a handful of widgets in the "hildon" ext
 </table></div>
 <div class="Text_Header">PyGTK Widgets supported for automatic logging</div>
 <div class="Text_Normal">
-The following lists the PyGTK widget types whose status and changes StoryText 3.5 is 
+The following lists the PyGTK widget types whose status and changes StoryText 3.6 is 
 currently capable of monitoring and logging. Any type derived from the listed types 
 is also supported but will only have features of the listed type described.
 </div>
