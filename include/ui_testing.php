@@ -74,13 +74,13 @@ function printLI($n,$realName,$title)
                   <?php  printLI("storytext_and_tkinter","Tkinter", "Documentation specific to using StoryText with Tkinter apps"); ?>
 	          <?php  printLI("storytext_and_wx","wxPython", "Documentation specific to using StoryText with wxPython"); ?>
                   <?php  printLI("storytext_and_swt","SWT/Eclipse RCP", "Documentation specific to using StoryText with SWT/Eclipse RCP apps"); ?>
-                  <?php  printLI("storytext_and_swing","Swing (unreleased)", "Documentation specific to using StoryText with Java Swing apps"); ?>
+                  <?php  printLI("storytext_and_swing","Swing", "Documentation specific to using StoryText with Java Swing apps"); ?>
                   <br><br><div class="Table_Text_Header">Supported widgets</div>
                   <?php  printLI("storytext_supported_gtk", "PyGTK", "PyGTK widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
                   <?php  printLI("storytext_supported_tkinter","Tkinter", "Tkinter widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
                   <?php  printLI("storytext_supported_wx","wxPython", "wxPython widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
                   <?php  printLI("storytext_supported_swt","SWT/Eclipse RCP", "SWT/Eclipse RCP widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
-                  <?php  printLI("storytext_supported_swing","Swing (unreleased)", "Swing widgets supported by development version of StoryText, for record/playback and auto-logging"); ?>
+                  <?php  printLI("storytext_supported_swing","Swing", "Swing widgets supported by development version of StoryText, for record/playback and auto-logging"); ?>
 	        </div>
 	      </td>
 		      

@@ -6,7 +6,7 @@
    <div class="Text_Header">Latest release</div>
    <div class="Text_Normal">
      Releases may be downloaded from the
-    <a class="Text_Link" href="http://sourceforge.net/projects/storytext">SourceForge project pages</a>. They can also be installed directly from Python's packaging system via "easy_install storytext" or "pip install storytext". We aim to make a couple of releases a year, with attendant bugfix releases when required.
+    <a class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge project pages</a>. They can also be installed directly from Python's packaging system via "easy_install storytext" or "pip install storytext". We aim to make a couple of releases a year, with attendant bugfix releases when required.
    </div>
    <div class="Text_Header">Installation</div>
    <div class="Text_Normal">
@@ -20,7 +20,7 @@
    </div>
    <div class="Text_Header">Latest development version from source control</div>
    <div class="Text_Normal">
-     There about 200 automated acceptance tests for StoryText, using TextTest, and we aim to keep 
+     There about 350 automated acceptance tests for StoryText, using TextTest, and we aim to keep 
      the contents of source control stable and usable at all times. Anyone wishing to make changes 
      should obviously get hold of this version also.
      The code is hosted on Launchpad and can be browsed online <a class="Text_Link" href="https://code.launchpad.net/~geoff.bache/storytext/trunk">here</A>. </div>
