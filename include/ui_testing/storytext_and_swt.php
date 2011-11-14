@@ -5,7 +5,9 @@ It is tested regularly and works fully on Linux and Windows. It currently does n
 </div>
 <div class="Text_Header">Installing StoryText and Jython</div>
 <div class="Text_Normal">
-(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">general ones</A> : please read there first)</div>
+(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">general 
+ones</A> : please read there first. Also note that this first part is unnecessary if you use the Windows Installer. The Windows 
+installer does not include SWTBot though so please see that section)</div>
 <div class="Text_Normal">
 As SWT is a Java technology, the first observation is that you will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install StoryText under it in a similar way to that described for installing it under Python. The easiest way is to download the tarball from <A class="Text_Link" HREF="http://sourceforge.net/projects/storytext">sourceforge</A>, unpack it, and run "jython setup.py install". (You can also use "pip", but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip"). It is usually then convenient to add your Jython installation to your PATH, so that StoryText can be run without typing the full path.
 </div>
@@ -16,7 +18,8 @@ An install under Python will also install the UI program ("usecase_name_chooser"
 </div>
 <div class="Text_Header">Installing SWTBot</div>
 <div class="Text_Normal">
-StoryText support for SWT and Eclipse RCP is based on the tool <A class="Text_Link" HREF="http://www.eclipse.org/swtbot/downloads.php">SWTBot</A> which you will also need to install. For plain SWT it is sufficient to install it "normally", i.e. as recommended by the SWTBot project on their site. Installing it as for RCP (below) will also work.
+StoryText support for SWT and Eclipse RCP is based on the tool <A class="Text_Link" HREF="http://www.eclipse.org/swtbot/downloads.php">SWTBot</A> which you will also need to install. For plain SWT it is sufficient to install it "normally", 
+i.e. as recommended by the SWTBot project on their site. Installing it as for RCP (below) will also work.
 </div>
 <div class="Text_Normal"> 
 For Eclipse RCP apps, it is necessary to install an additional "bridge" module so StoryText and SWTBot can work together. This is known as org.eclipse.swtbot.testscript, but is currently maintained by the StoryText project (though in theory it could be used by anyone attempting to use a dynamic language with SWTBot). The recommended way to do this is to use the "p2 director" to install it under your product. For Eclipse 3.6, use a command as shown below. (<b>NOTE!</b> In reality, do not use linebreaks between the different repositories, it is formatted like this below just to prevent an excessively wide display.)
@@ -33,6 +36,9 @@ http://download.eclipse.org/eclipse/updates/3.6 \
 -profile profile \
 -noSplash
 <?php codeSampleEnd() ?>
+For newer versions of Eclipse, please adjust the above command to the versions. We have no 3.7 repository
+for the "testscript" module, but the 3.6 one should work. Note that "helios" in the second repository
+needs to be switched for e.g. "indigo".
 For Eclipse 3.5, use the same command, except for the repository paths
 <?php codeSampleBegin() ?>
 -repository http://texttest.carmen.se/swtbot_testscript/3.5,

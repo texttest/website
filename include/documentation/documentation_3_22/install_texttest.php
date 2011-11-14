@@ -4,7 +4,12 @@
 from the <A class="Text_Link" HREF="http://sf.net/projects/texttest">sourceforge
 project page.</A>. You can then unzip this anywhere and run it from that location.
 The download is fairly large as it includes TextTest's tests for itself, which are
- useful as a tool for understanding features by example. 
+ useful as a tool for understanding features by example.</div>
+<div class="Text_Normal">
+On Windows, there is now a Windows installer there. This will install everything you need
+and set TEXTTEST_HOME (see below) to C:\tests. As this change doesn't take effect until
+you log out and log in again, it's suggested you do that for the moment. The Windows instructions below
+are in case you need to install the component parts at all.
 </div>
 <div class="Text_Header">Compulsory dependencies</div>
 <OL>

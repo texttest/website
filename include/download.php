@@ -7,7 +7,9 @@
    <div class="Text_Header">Latest release</div>
    <div class="Text_Normal">
      Releases may be downloaded from the
-    <a class="Text_Link" href="http://sourceforge.net/project/showfiles.php?group_id=80138">SourceForge download site</a>. We aim to make a couple of releases a year here, with attendant bugfix releases when required.
+    <a class="Text_Link" href="http://sourceforge.net/project/showfiles.php?group_id=80138">SourceForge download site</a>. 
+    We aim to make a couple of releases a year here, with attendant bugfix releases when required. See
+    <A class="Text_Link" HREF="<?php print "index.php?page=documentation_trunk&n=install_texttest"; ?>">the installation guide</A> for more details. 
    </div>
    <div class="Text_Header">Latest development version from source control</div>
    <div class="Text_Normal">

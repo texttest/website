@@ -6,7 +6,10 @@
    <div class="Text_Header">Latest release</div>
    <div class="Text_Normal">
      Releases may be downloaded from the
-    <a class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge project pages</a>. They can also be installed directly from Python's packaging system via "easy_install storytext" or "pip install storytext". We aim to make a couple of releases a year, with attendant bugfix releases when required.
+    <a class="Text_Link" href="http://sourceforge.net/projects/pyusecase">SourceForge project pages</a>. There is now
+    a Windows installer there which will also install TextTest if required. Releases can also be 
+    installed directly from Python's packaging system via "easy_install storytext" or "pip install storytext". 
+    We aim to make a couple of releases a year, with attendant bugfix releases when required.
    </div>
    <div class="Text_Header">Installation</div>
    <div class="Text_Normal">

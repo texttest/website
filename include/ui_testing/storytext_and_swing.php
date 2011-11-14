@@ -5,7 +5,9 @@ It is tested regularly and works fully on Linux and Windows. Status on the Mac i
 </div>
 <div class="Text_Header">Installing StoryText and Jython</div>
 <div class="Text_Normal">
-(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">general ones</A> : please read there first)</div>
+(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">general 
+ones</A> : please read there first. Also note that this first part is unnecessary if you use the Windows Installer. The Windows 
+installer does not include SwingLibrary though so please see that section)</div>
 <div class="Text_Normal">
 You will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install StoryText under it in a similar way to that described for installing it under Python. The easiest way is to download the tarball from <A class="Text_Link" HREF="http://sourceforge.net/projects/storytext">sourceforge</A>, unpack it, and run "jython setup.py install". (You can also use "pip", but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip"). It is usually then convenient to add your Jython installation to your PATH, so that StoryText can be run without typing the full path.
 </div>
