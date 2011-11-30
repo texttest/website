@@ -20,6 +20,17 @@ An install under Python will also install the UI program ("usecase_name_chooser"
 <div class="Text_Normal">
 StoryText support for Swing is based on the tool <A class="Text_Link" HREF="https://github.com/robotframework/SwingLibrary/downloads">SwingLibrary</A>, which has been developed as part of RobotFramework. You should download the jar file (at least version 1.2) from the linked site and add it to your CLASSPATH environment variable, either globally, or via a <A class="Text_Link" HREF="index.php?page=documentation_trunk&n=about_testsuites#environment files">TextTest environment file</A> (if using TextTest, obviously).
 </div>
+<div class="Text_Header">Trying things out</div>
+<div class="Text_Normal">
+RobotFramework SwingLibrary contains an example application which you can try out, as well as the PyGTK one described <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_intro">here</A>. To record a usecase for it, do this (having first added the SwingLibrary jar to your CLASSPATH)
+<?php codeSampleBegin() ?>
+storytext -i javaswing -r usecase.txt \
+  org.robotframework.swing.testapp.examplesut.TodoListApplication
+<?php codeSampleEnd() ?>
+(Note that StoryText does not understand jar files directly currently. If your app is a jar file, find out the name of its main-class from the manifest file, add the jar to your classpath, and use the main-class name as above.)</div>
+<div class="Text_Normal">
+From there, you can follow the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_intro">intro</A> in a similar way to if you were using the PyGTK example.
+</div>
 <div class="Text_Header">Widget Naming</div>
 <div class="Text_Normal">
 StoryText has various ways to identify widgets in a Swing app. These are, in order of preference

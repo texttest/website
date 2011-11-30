@@ -5,9 +5,10 @@
 To see what StoryText does, try running it with the "videostore.py"
 demonstration PyGTK GUI in the "examples" directory in the download.
 This ought to work if you've followed the instructions, because StoryText's own GUI uses PyGTK
-so you should have installed it!</div>
+so you should have installed it! (Note there is now also a <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swing">Java Swing example</A> also, Swing users might like to try to use that instead.)
+</div>
 <div class="Text_Normal">
-(It might also be an idea to run videostore.py on its own first,
+(It might also be an idea to run the example application (here videostore.py) on its own first,
 so you can separate what StoryText does from what it does)
 You can record a usecase by doing
 <?php codeSampleBegin() ?>
@@ -81,9 +82,9 @@ which will wait 2 seconds between each action.
 <div class="Text_Header"><A name="ui_map_file"></A>The UI map file</div>
 <div class="Text_Normal">
 Naturally the information we entered in the dialog has been stored in a file, the "UI map file"
-, for us. By default this will have ended up in your home directory under "usecases/ui_map.conf".
+, for us. By default this will have ended up in your home directory under ".storytext/ui_map.conf".
 You can control the location of this either by providing its full path via "-m" on the command
-line, or by setting the environment variable USECASE_HOME, which points out the directory
+line, or by setting the environment variable STORYTEXT_HOME, which points out the directory
 where it will be written.
 </div>
 <div class="Text_Normal">
