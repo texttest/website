@@ -29,7 +29,7 @@
      Note that anyone wishing to test Java GUIs (SWT/Eclipse RCP or Swing) will also need to install Jython and SWTBot or SwingLibrary
      respectively.
      See the instructions for <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swt">SWT/EclipseRCP</A> 
-     or <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swing">Swing</A>for more details. 
+     or <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swing">Swing</A> for more details. 
    </div>
    <div class="Text_Header">Latest development version from source control</div>
    <div class="Text_Normal">
