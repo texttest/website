@@ -111,10 +111,36 @@ take the word immediately following it and try to interpret it
 as a number (note that you need to provide the whole string up
 to the word beforehand, not just a part of it as for
 &ldquo;run_dependent_text&rdquo;). It will also parse the format
-hh:mm:ss for times. It will then generate a file
+hh:mm:ss for times. </div>
+<div class="Text_Normal">
+A more general form of this is also possible since TextTest 3.23. You can identify where
+in the string the number is found by using a regular expression group, identified using brackets. 
+TextTest will then iterate through all the groups in the match and take the first one which seems to
+match its expected format.
+</div>
+<div class="Text_Normal">
+In either case, it will then generate a file
 &lt;system_resource_id&gt;.&lt;app&gt; in a similar way to the
 performance file above.</div>
-
+<div class="Text_Normal">
+For example, support we have this information logged to our file:
+<?php codeSampleBegin() ?>
+...
+Time taken to load: 40 seconds
+300 MB of memory were consumed.
+...
+<?php codeSampleEnd() ?>
+We can then keep track of performance and memory by adding this to our config file:
+<?php codeSampleBegin() ?>
+[performance_logfile_extractor]
+load_time:Time taken to load:
+memory:([0-9]*) MB of memory
+<?php codeSampleEnd() ?>
+The first case assumes the number appears immediately after the string given, the second that appears in the regular expression group 
+at the start. Note that in the first case, if the second colon were omitted, this would not work, as the number must be the next thing 
+after the string provided if no groups are given.
+</div>
+<div class="Text_Header">Identifying which file to search in</div>
 <div class="Text_Normal">The file to be searched is identified primarily by the config
 file entry &ldquo;log_file&rdquo;. This defaults to the standard output of the SUT, i.e.
 the string "stdout" or "output" depending on your naming scheme. You may need to search
@@ -132,6 +158,7 @@ memory:logs/*/memory.log
 [end]
 <?php codeSampleEnd() ?>
 </div>
+<div class="Text_Header">Choosing a system resource id and units</div>
 <div class="Text_Normal">If you choose the
  system_resource_id &ldquo;memory&rdquo;, the number will be interpreted as a
 memory value in megabytes. Otherwise it will be assumed to be a time in seconds. These
@@ -155,6 +182,7 @@ is probably to look in the
 table of config file settings</A> and examine
 the default values for "cputime" and "memory").
 </div>
+<div class="Text_Header">Generating data from existing files</div>
 <div class="Text_Normal">When you have just enabled such resource usage extraction,
 you generally want to automatically extract the current values
 from your existing result files for all tests, creating the
