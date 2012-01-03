@@ -102,7 +102,7 @@ preferences</A>. On UNIX, provide a file called &ldquo;.texttest&rdquo;
 in your home directory. On Windows, put a file called
 &ldquo;.texttest&rdquo; somewhere, and point the environment
 variable TEXTTEST_PERSONAL_CONFIG at that location.</div>
-<div class="Text_Header"><A NAME="executable"></A><A NAME="interpreter"></A>
+<div class="Text_Header"><A NAME="executable"></A><A NAME="interpreter"></A><A NAME="interpreters"></A>
 Defining how to run the System under Test</div>
 <div class="Text_Normal">
 The first entry that must be defined is "executable" (formerly known as "binary"),
@@ -123,9 +123,32 @@ is a script rather than a binary. To some extent TextTest will
 try to infer this from the file extension (e.g. set it to
 &ldquo;python&rdquo; if the file ends in &ldquo;.py&rdquo;,
 &ldquo;java&rdquo; if it ends in &ldquo;.jar&rdquo;), but it is
-sometimes necessary to specify it explicitly.</div><div class="Text_Normal">
+sometimes necessary to specify it explicitly.
+</div><div class="Text_Normal">
 Arguments can be provided to the interpreter program via
 the "interpreter_options" files, see below.
+</div>
+<div class="Text_Normal">
+It is now also possible to chain several interpreter programs together. This can be done using the "interpreters" section 
+in the config file. For example, suppose we want a command line of the form:
+<?php codeSampleBegin() ?>
+python -u /path/to/coverage -x /path/to/storytext -i tkinter /path/to/executable -a -b -c 
+<?php codeSampleEnd() ?>
+
+We can configure this in the config file like this
+<?php codeSampleBegin() ?>
+executable:/path/to/executable
+
+[interpreters]
+python:python
+coverage:/path/to/coverage
+storytext:/path/to/storytext
+[end]
+<?php codeSampleEnd() ?>
+
+and each of these programs can have its options configured separately using the keys from the config file. I.e.
+I can create a file "python_options.&lt;app&gt;" containing "-u", a file "coverage_options.&lt;app&gt;" containing "-x"
+and so on. It's then easy to use the test suite structure to vary these option lists independently of each other. 
 </div>
 <div class="Text_Header"><A NAME="import_config_file"></A>Sharing config file settings between applications</div>
 <div class="Text_Normal">Sometimes it can be very useful to share configuration

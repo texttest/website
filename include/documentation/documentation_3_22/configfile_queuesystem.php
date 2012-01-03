@@ -1075,10 +1075,10 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">kill_timeout</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Int</div>
+			<div class="Table_Text_Small">Float</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">0</div>
+			<div class="Table_Text_Small">0.0</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#kill_timeout">Number of (wall clock) seconds to wait before killing the test</A></div>
