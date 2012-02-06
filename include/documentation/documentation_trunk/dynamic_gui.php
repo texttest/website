@@ -47,6 +47,11 @@ for example. This can be configured using the config file dictionary setting
 "text_diff_program_filters", which is keyed on diff programs and identifies lines from
 their output that should be <I>preserved</I> in the output.
 </div>
+<div class="Text_Normal">
+If a group is named e.g. "Group 2*3", that means TextTest is guaranteeing that the diff is the
+same as the diff for group 2, repeated three times. Diffs that repeat are a common feature, for
+example when a log statement is added to a program.
+</div>
 <div class="Text_Normal">The status tab also doubles as a way of selecting and hiding whole
 categories of tests at once. Clicking the lines will select all
 such tests in the test tree view. Unchecking the check boxes on

@@ -328,6 +328,26 @@ MY_ENV_VAR:{CLEAR}
 which will remove any setting of MY_ENV_VAR set by suites higher up the hierarchy,
 or from the shell from which TextTest was started. 
 </div>
+<div class="Text_Header"><A NAME="extra_test_process_postfix"></A>Setting up multiple runs of the SUT</div>
+<div class="Text_Normal">
+Ordinarily, a test case will your "system under test" program (defined by the "executable" setting) once. Sometimes it is useful
+to run it twice. If it writes to a database, for example, you might want to start it a second time to verify using the system 
+that the database write has worked correctly. (As an alternative to creating a textual dump of the database).
+</div>
+<div class="Text_Normal">
+This can be done using the config setting "extra_test_process_postfix". This setting is a list of postfixes which should be interpreted 
+as instructions to run the system additional times, if files with them exist. For example, I could write
+<?php codeSampleBegin() ?>
+extra_test_process_postfix:_db_check
+<?php codeSampleEnd() ?>
+in my config file, and then in any tests I wished, I could create a file named "options_db_check.&lt;app&gt;", which would instruct 
+TextTest to run it once using the options in the file named "options.&lt;app&gt;" and once using these options and also the ones in 
+options_db_check.&lt;app&gt;. If they should be run the same way, the new file may of course be empty.
+</div>
+<div class="Text_Normal">
+For GUI testing, a similar thing can be done with the "usecase" files, except that in this case, an additional switch will also
+appear in the "Record" dialog, allowing you to request multiple runs of the system when recording.
+</div>
 <div class="Text_Header"><A NAME="-s"></A><A NAME="default.ReplaceText"></A>Analysing and updating the test suite
 directory structure</div>
 <div class="Text_Normal">When a large test suite has been created, you often want to
