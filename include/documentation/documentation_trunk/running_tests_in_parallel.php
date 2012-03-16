@@ -261,7 +261,10 @@ subprocess.call(commandArgs)
 <?php codeSampleEnd() ?>
  
 </div>	
-<div class="Text_Header"><A NAME="queue_system_submit_args"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A>Additional configuration for the slave process </div>
+<div class="Text_Header"><A NAME="-xs"></A><A NAME="queue_system_submit_args"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A>Additional configuration for the slave process </div>
+<div class="Text_Normal">
+From TextTest 3.23 enabling self-diagnostics also in the slave process requires using a separate flag "-xs" (alternatively a separate checkbox in the UI). It is no longer automatically inferred when self-diagnostics are requested with "-x". These diagnostics will then be written to subdirectories of the location where the master writes its logs, named after the slave job names.
+</div>
 <div class="Text_Normal">
 You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "queue_system_submit_args" in your config file(s). </div>
 <div class="Text_Normal">

@@ -507,6 +507,17 @@ in the GUI. The "Brief Text" in the final column corresponds to the labels in th
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">-xs</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Advanced</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#-xs">Enable self-diagnostics in slave processes</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">-xw &lt;value&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
