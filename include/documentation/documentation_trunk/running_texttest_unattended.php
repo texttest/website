@@ -439,21 +439,26 @@ you still may have to click away the window manually.
 This option applies to the interactive modes as well but in batch mode
 it is most useful. 
 </div>
-<div class="Text_Header"><A NAME="kill_command"></A>Killing Tests on Windows</div>
-<div class="Text_Normal">Unfortunately there is no easy and generic way
-to kill a process tree (that is a process and all processes started by it)
-which works reliably with all Windows versions. The default
-implementation in texttest is a call to a Windows system tool called
-"taskkill" which allows to kill a complete tree.
-This tool is available at least on WinXP and successors. The fallback
-(in case a call to taskkill fails) is a system function
-which kills the process but no descendants.
-Since there may be different tools on other versions of the OS
-or taskkill may need different options, the &ldquo;kill_command&rdquo; can be used
-to specify the exact call : TextTest will append the process ID to what is provided. Thus
-to make the tree kill on Windows XP less aggressive, try something like
-&ldquo;kill_command:taskkill /T /PID&rdquo;, which leaves out the /F meaning
-"force" from the default call but still has the /T for tree killing.
-The option &ldquo;kill_command&rdquo;
-does nothing on POSIX-based operating systems.
+<div class="Text_Header"><A NAME="kill_command"></A>Configuring how TextTest terminates test processes</div>
+<div class="Text_Normal">By default, TextTest will attempt to kill the entire process tree 
+(that is a process and all processes started by it). On POSIX platforms this will send signals directly to the
+processes, while on Windows it will call a Windows system tool called
+"taskkill" which allows to kill a complete tree. This tool is available at least on WinXP and successors. 
+If "taskkill" is not found, the fallback is a system function which kills the process but no descendants.
+</div>
+<div class="Text_Normal">
+To configure how this is done, you can set "kill_command" in your config file. The command you provide will be
+called once with a single argument, the process ID. For example
+<?php codeSampleBegin() ?>
+kill_command:kill -s INT
+<?php codeSampleEnd() ?>
+is a common usage on POSIX, where a single SIGINT is sent to the process, which in this case is probably a wrapper script.
+That can then trap the signal, maybe print some statistics, terminate server processes in the right order, and so on.
+</div>
+<div class="Text_Normal">
+On Windows, an example which makes the tree kill on Windows XP less aggressive, would be to try something like
+<?php codeSampleBegin() ?>
+kill_command:taskkill /T /PID 
+<?php codeSampleEnd() ?>
+which leaves out the /F meaning "force" from the default call but still has the /T for tree killing.
 </div>

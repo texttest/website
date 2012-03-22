@@ -1106,10 +1106,10 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">String</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">taskkill /F /T /PID</div>
+			<div class="Table_Text_Small">&lt;empty&gt; (UNIX)<BR>taskkill /F /T /PID (Windows)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#kill_command">Kill command to use on non-posix machines</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#kill_command">Custom command (if any) for killing test processes</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
