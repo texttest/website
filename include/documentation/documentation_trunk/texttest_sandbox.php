@@ -68,7 +68,7 @@ that is started. When the dynamic GUI is closed, the contents of
 whatever it wrote on standard error will be displayed in a
 message box by the static GUI, as well as in a file in this
 directory.</div>
-<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="copy_test_path_merge"></A><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
+<div class="Text_Header"><A NAME="link_test_path"></A><A NAME="copy_test_path"></A><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
 Populating the temporary directory with test data files (for
 reading or editing)</div>
 <div class="Text_Normal">Sometimes the system under test needs to read some file
@@ -101,13 +101,28 @@ side effects. You can do this using the &ldquo;copy_test_path&rdquo;
 config file entry, which will find files or directories to copy
 in the same way as link_test_path, and indeed is equivalent to
 link_test_path on Windows.</div>
+<div class="Text_Header"><A NAME="copy_test_path_merge"></A>Merging test data files and directories with each other</div>
 <div class="Text_Normal">
-If the test data is a directory, copy_test_path will treat each directory as a separate
-unit, i.e. it will take the entire directory from the most specific place in the hierarchy.
-By specifying "copy_test_path_merge" instead, you can cause it to form an amalgamated directory
-from all the ones on its path, picking the files from the most specific directory in case they
+Sometimes it can be useful to have test data files and data structures stored in tests that can be merged with more general
+versions higher up the hierarchy. This avoids having to copy information and maintain multiple copies. This can be achieved
+by using 
+<?php codeSampleBegin() ?>
+copy_test_path_merge:my_file_or_dirname
+<?php codeSampleEnd() ?>
+If my_file_or_dirname refers to a file here, this means that all versions of the file in the test hierarchy will be found and
+an amalgamated file created in the test sandbox that consists of all them appended together, with the most "general" at the top and
+the most test-specific at the bottom. This can for example be used for "settings" files.
+</div>
+<div class="Text_Normal">
+If it instead refers to a directory, an amalgamated directory will be created from all of the ones in the test hierarchy, picking 
+the files from the most test-specific directory in case they
 appear in several of them. This is useful in case most of the directories contain
-the same files but you need to make small tweaks to individual files in the directory structure.
+the same files but you need to make small tweaks to individual files in the directory structure. (Note that in this case it will not amalgamate the 
+files themselves to each other if there are several of them - as data directory structures do not normally want this in our experience)
+</div>
+<div class="Text_Normal">
+To constrast the directory behaviour, using copy_test_path will treat each directory as a separate
+unit, i.e. it will take the entire directory from the most specific place in the hierarchy.
 </div>
 <div class="Text_Header"><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
 Making "partial copies" of large data structures (UNIX only)</div>
@@ -131,7 +146,7 @@ cause it to corrupt the test data. It is possible to tell
 TextTest to ignore the catalogue file and copy everything again
 if the file-changing properties of the test change : check the
 &ldquo;Ignore catalogue when isolating data&rdquo; box
-(-ignorecat on the command line)</div
+(-ignorecat on the command line)</div>
 <div class="Text_Header"><A NAME="copy_test_path_script"></A>Configuring the copy operation</div>
 <div class="Text_Normal">
 It is also possible to take control over the copying operation and insert your own script to do it,
