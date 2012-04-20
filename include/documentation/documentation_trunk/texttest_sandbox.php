@@ -121,7 +121,7 @@ the same files but you need to make small tweaks to individual files in the dire
 files themselves to each other if there are several of them - as data directory structures do not normally want this in our experience)
 </div>
 <div class="Text_Normal">
-To constrast the directory behaviour, using copy_test_path will treat each directory as a separate
+To constrast the directory behaviour, using "copy_test_path" instead will treat each directory as a separate
 unit, i.e. it will take the entire directory from the most specific place in the hierarchy.
 </div>
 <div class="Text_Header"><A NAME="partial_copy_test_path"></A><A NAME="-ignorecat"></A>
