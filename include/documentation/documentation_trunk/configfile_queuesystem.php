@@ -792,6 +792,20 @@ of the "Type" column in this table.
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">file_split_pattern</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Dictionary (String)</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#file_split_pattern">Pattern to use for splitting result files</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">filename_convention_scheme</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">

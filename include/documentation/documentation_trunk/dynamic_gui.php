@@ -28,7 +28,8 @@ number of tests that were successful. This aids the user in
 seeing which tests need his attention. If this behaviour is
 found to be undesirable for any reason, it can be disabled by
 setting the config file value 'auto_collapse_successful' to 0.</div>
-<div class="Text_Header"><A NAME="hide_test_category"></A><A NAME="text_diff_program_filters"></A>The Status tab</div>
+
+<div class="Text_Header"><A NAME="hide_test_category"></A><A NAME="text_diff_program_filters"></A>The Status tab and grouping similar failures</div>
 <div class="Text_Normal">The initial right window is a summary of how many tests are
 in a given state and is continually updated as they change. When
 they complete, if they fail they are sorted into categories of
@@ -71,6 +72,38 @@ To refer to the various categories, you can use any name that appears in the sta
 or you can use the keys from for
 example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A>.</div>
+<div class="Text_Header"><A NAME="file_split_pattern"></A>Splitting the result files - grouping and saving only parts of files </div>
+<div class="Text_Normal">
+The grouping described above is mostly good enough when your system has only changed one thing at once. It's clearly good development 
+and testing practice to avoid changing many things before testing but sometimes it may be unavoidable, for whatever reason.
+</div>
+<div class="Text_Normal">
+In this case finer-grained information can be useful, by allowing viewing, grouping and saving of parts of files. This is done with the 
+"Split Result Files" action in the test popup and Actions menu.</div>
+<div class="Text_Normal">
+It will be greyed out unless you tell it how to split your files. You should find a suitable marker in your result files which delineate
+different "sections" of the file. For example, when GUI testing with StoryText, each action in the GUI generates its own section in the 
+output file, so we might want to split on these sections. We do this via:
+<?php codeSampleBegin() ?>
+[file_split_pattern]
+stdout:'(.*)' event created with arguments
+<?php codeSampleEnd() ?>
+This implies that when doing "Split Result Files" on the "stdout" file, each line that matches the given regexp will be taken as part
+of a new "section". The 'group' indicated by the brackets will determine how the section files are named. You must provide such a group.
+</div>
+<div class="Text_Normal">
+On doing "Split result files", the file in question will be split and the various "subfiles" appear in the File View. These will then
+be compared as normal and grouped in the Status tab. This allows further identification of repeating patterns, even in files which may
+contain other differences.
+</div>
+<div class="Text_Normal">
+Saving any of the "subfiles" will result in the main file being reconstituted with the saved version of that section and the previously
+stored version of all the other sections.
+</div>
+<div class="Text_Normal">
+Note that the split is just a convenience for viewing and saving results, it does not affect how the results are stored and will 
+not affect any future runs of the tests.
+</div>
 <div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="TEXTTEST_FOLLOW_FILE_TITLE"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="max_file_size"></A>
 Viewing Tests</div>
 <div class="Text_Normal">When tests are selected via either of the above means, a new
