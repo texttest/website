@@ -232,5 +232,85 @@ provided, detailing the various entries and how they relate to the dialog:
     <div class="Table_Text_Normal">search_file:free_text</div>
   </TD>
   </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check box "Trigger even if other files differ"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">ignore_other_errors:1</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check box "Trigger even if file to search would otherwise compare as equal"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">trigger_on_success:1</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Enter &lt;text&gt; in "Version to report for" field</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">version:&lt;text&gt;</div>
+  </TD>
+  </TR>  
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Enter &lt;text&gt; in "Trigger only when run on machines" field</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">execution_hosts:&lt;text&gt;</div>
+  </TD>
+  </TR>  
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Select &lt;system&gt; from "Extract info from bug_system" combo box</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">bug_system:&lt;system&gt;</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Enter &lt;id&gt; in "Bug ID" field</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">bug_id:&lt;id&gt;</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Enter &lt;text&gt; in "Full description" field</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">full_description:&lt;text&gt;</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Enter &lt;text&gt; in "Few-word summary" field</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">brief_description:&lt;text&gt;</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check box "Report as 'internal error' rather than 'known bug'"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">internal_error:1</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Choose &lt;number&gt; for "Number of times to try to rerun the test" field</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">rerun_count:&lt;number&gt;</div>
+  </TD>
+  </TR>
 </TABLE>
 </div>
