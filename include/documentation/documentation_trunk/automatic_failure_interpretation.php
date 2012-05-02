@@ -182,6 +182,7 @@ back to the project if you do this.
 The above dialog will generate a knownbugs.&lt;app&gt; file from the information entered into the dialog. When updating tests it can 
 sometimes be useful to just change these files directly rather than using the dialog again. For this reason, the following table is 
 provided, detailing the various entries and how they relate to the dialog:
+<br><br>
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
   <TR VALIGN=TOP>
     <TD bgcolor="#FFFFFF">
@@ -198,5 +199,38 @@ provided, detailing the various entries and how they relate to the dialog:
   <TD bgcolor="#FFFFFF">
     <div class="Table_Text_Normal">search_string:&lt;text&gt;</div>
   </TD>
+  </TR>    
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check box "Trigger if given text is NOT present"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">trigger_on_absence:1</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Select &lt;file_stem&gt; from "File to search in" combo box</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">search_file:&lt;file_stem&gt;</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check radio button "Brief text/details"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">search_file:brief_text</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check radio button "Full difference report"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">search_file:free_text</div>
+  </TD>
+  </TR>
 </TABLE>
 </div>
