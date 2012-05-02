@@ -177,3 +177,19 @@ system field when reporting the bug, it will load this module
 and extract the relevant information. Naturally it's appreciated if you submit your changes
 back to the project if you do this.
 </div>
+<div class="Text_Header">Knownbugs file format</div>
+<div class="Text_Normal">
+The above dialog will generate a knownbugs.&lt;app&gt; file from the information entered into the dialog. When updating tests it can 
+sometimes be useful to just change these files directly rather than using the dialog again. For this reason, the following table is 
+provided, detailing the various entries and how they relate to the dialog:
+<TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Normal">Knownbugs file line</div>
+		</TD>
+                <TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Normal">Corresponding action in GUI</div>
+		</TD>
+        </TR>
+</TABLE>
+</div>
