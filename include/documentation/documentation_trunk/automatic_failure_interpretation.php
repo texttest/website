@@ -195,7 +195,7 @@ brief_description:Delay bug
 <?php codeSampleEnd() ?>
 
 The following table details everything that can be done in the "Enter Failure Information" dialog, and the entry in the reported bug 
-section in the knownbugs file that would correspond to it.
+section in the knownbugs file that would correspond to it. The order here corresponds to the order of controls in the dialog.
 <br><br>
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
   <TR VALIGN=TOP>
