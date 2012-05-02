@@ -183,13 +183,20 @@ The above dialog will generate a knownbugs.&lt;app&gt; file from the information
 sometimes be useful to just change these files directly rather than using the dialog again. For this reason, the following table is 
 provided, detailing the various entries and how they relate to the dialog:
 <TABLE bgcolor="#666666" cellpadding=1 cellspacing=1>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Normal">Knownbugs file line</div>
-		</TD>
-                <TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Normal">Corresponding action in GUI</div>
-		</TD>
-        </TR>
+  <TR VALIGN=TOP>
+    <TD bgcolor="#FFFFFF">
+      <div class="Table_Text_Header">Failure Information dialog action</div>
+    </TD>
+    <TD bgcolor="#FFFFFF">
+      <div class="Table_Text_Header">Knownbugs file line</div>
+    </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Enter &lt;text&gt; in "Text or regexp to match" field</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">search_string:&lt;text&gt;</div>
+  </TD>
 </TABLE>
 </div>
