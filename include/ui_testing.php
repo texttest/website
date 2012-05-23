@@ -73,7 +73,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("storytext_and_gtk","PyGTK", "Documentation specific to using StoryText with PyGTK apps"); ?>
                   <?php  printLI("storytext_and_tkinter","Tkinter", "Documentation specific to using StoryText with Tkinter apps"); ?>
 	          <?php  printLI("storytext_and_wx","wxPython", "Documentation specific to using StoryText with wxPython"); ?>
-                  <?php  printLI("storytext_and_swt","SWT/Eclipse RCP", "Documentation specific to using StoryText with SWT/Eclipse RCP apps"); ?>
+                  <?php  printLI("storytext_and_swt","SWT/Eclipse RCP/GEF", "Documentation specific to using StoryText with SWT/Eclipse RCP/GEF apps"); ?>
                   <?php  printLI("storytext_and_swing","Swing", "Documentation specific to using StoryText with Java Swing apps"); ?>
                   <br><br><div class="Table_Text_Header">Supported widgets</div>
                   <?php  printLI("storytext_supported_gtk", "PyGTK", "PyGTK widgets supported by current version of StoryText, for record/playback and auto-logging"); ?>
