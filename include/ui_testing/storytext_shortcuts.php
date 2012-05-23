@@ -35,6 +35,31 @@ don't need to do anything to change the usecases themselves. This is because Tex
 <div class="Text_Normal">
 Our usecase is then more readable and concise, and we only have to change in one place if we should change what steps are involved in logging in.
 </div>
+<div class="Text_Header">Parametrizing shortcuts</div>
+<div class="Text_Normal">
+Sometimes it's useful to be able to vary data using the same shortcut. This is supported in StoryText 3.7 and newer.
+For example, we might want to be able to vary the login name above. This is done by using '$' characters in the shortcut file name and the contents. In this case we would rename "login_as_test.shortcut"
+to "login_as_$.shortcut" and change the contents to
+<?php codeSampleBegin() ?>
+set username to $
+set password to testpass
+confirm login details
+<?php codeSampleEnd() ?>
+If we also wanted to vary the password, we just use more $ characters. These are then cycled through in order when matching them in the file.
+Now our shortcut file can be called "login_as_$_with_password_$.shortcut", and the contents can be
+<?php codeSampleBegin() ?>
+set username to $
+set password to $
+confirm login details
+<?php codeSampleEnd() ?>
+In this case the usecase also changes and becomes
+<?php codeSampleBegin() ?>
+login as test with password testpass
+set movie name to Star Wars
+add movie
+close
+<?php codeSampleEnd() ?>
+</div>
 <div class="Text_Header">Using the "shortcut bar" UI (PyGTK apps only)</div>
 <div class="Text_Normal">
 The PyGTK version of StoryText also comes with a small PyGTK "toolbar" for controlling and 
