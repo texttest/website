@@ -52,7 +52,7 @@ http://download.eclipse.org/eclipse/updates/3.5 \
 Installation should be as above, except the "-installIU" argument needs to be changed so that it uses
 "org.eclipse.swtbot.gef.testscript" instead.</div>
 <div class="Text_Normal">
-It's reasonably likely that you will need to write your own customwidgetevents.py (see section on custom widgets) to be able
+It's reasonably likely that you will need to write your own customwidgetevents.py (see <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_customwidgets">section on custom widgets</A>) to be able
 to use StoryText effectively on a GEF application. The reason is that the GEF EditParts (figures) are by their nature hard to 
 describe and index in a good way generically. For example the drag+drop support will record pixel positions and it's
 likely you'll want to tweak this to be able to record and playback something from your domain.
