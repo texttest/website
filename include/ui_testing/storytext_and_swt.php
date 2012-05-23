@@ -1,7 +1,8 @@
-<div class="Text_Main_Header">Using StoryText with SWT/Eclipse RCP</div>
+<div class="Text_Main_Header">Using StoryText with SWT/Eclipse RCP/GEF</div>
 <div class="Text_Header">Supported platforms</div>
 <div class="Text_Normal">
 It is tested regularly and works fully on Linux and Windows. It currently does not work under Cocoa on the Mac: the reason is that the SWTBot headless test runner, on which it depends, runs the UI in a non-main thread which Cocoa does not support. The suggested workaround from the SWTBot project is to use Carbon instead.
+GEF support is new in version 3.7 and is less mature than ordinary SWT/Eclipse RCP support.
 </div>
 <div class="Text_Header">Installing StoryText and Jython</div>
 <div class="Text_Normal">
@@ -45,6 +46,20 @@ For Eclipse 3.5, use the same command, except for the repository paths
 http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site/,
 http://download.eclipse.org/eclipse/updates/3.5 \
 <?php codeSampleEnd() ?>
+</div>
+<div class="Text_Header">Usage with GEF applications (from StoryText 3.7)</div>
+<div class="Text_Normal">
+Installation should be as above, except the "-installIU" argument needs to be changed so that it uses
+"org.eclipse.swtbot.gef.testscript" instead.</div>
+<div class="Text_Normal">
+It's reasonably likely that you will need to write your own customwidgetevents.py (see section on custom widgets) to be able
+to use StoryText effectively on a GEF application. The reason is that the GEF EditParts (figures) are by their nature hard to 
+describe and index in a good way generically. For example the drag+drop support will record pixel positions and it's
+likely you'll want to tweak this to be able to record and playback something from your domain.
+</div>
+<div class="Text_Normal">
+Supported operations over and above the normal SWT ones are essentially selecting the figures and dragging and dropping them,
+and of course describing their appearance (including coloured regions etc). Also using context menus attached to them should work. 
 </div>
 <div class="Text_Header">Widget Naming</div>
 <div class="Text_Normal">

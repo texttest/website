@@ -1,13 +1,13 @@
 <div class="Text_Header">SWT Widgets and event types supported for record/replay</div>
 <div class="Text_Normal">The following lists the SWT widget types and the associated event types on them which 
-StoryText 3.6 is currently capable of recording and replaying. Any type derived from the listed
+StoryText 3.7 is currently capable of recording and replaying. Any type derived from the listed
 types is also supported.
 </div>
 <div class="Text_Normal"><table border=1 cellpadding=1 cellspacing=1>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CTabFolder.html>org.eclipse.swt.custom.CTabFolder</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CTabItem.html>org.eclipse.swt.custom.CTabItem</a></td><td><div class="Table_Text_Normal">Dispose</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Button.html>org.eclipse.swt.widgets.Button</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
-<tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Combo.html>org.eclipse.swt.widgets.Combo</a></td><td><div class="Table_Text_Normal">Modify</div></td></tr>
+<tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Combo.html>org.eclipse.swt.widgets.Combo</a></td><td><div class="Table_Text_Normal">Activate , Modify</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/DateTime.html>org.eclipse.swt.widgets.DateTime</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html>org.eclipse.swt.widgets.ExpandBar</a></td><td><div class="Table_Text_Normal">Collapse , Expand</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Link.html>org.eclipse.swt.widgets.Link</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
@@ -15,13 +15,15 @@ types is also supported.
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/MenuItem.html>org.eclipse.swt.widgets.MenuItem</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Shell.html>org.eclipse.swt.widgets.Shell</a></td><td><div class="Table_Text_Normal">Close , Resize</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/TabFolder.html>org.eclipse.swt.widgets.TabFolder</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
-<tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Text.html>org.eclipse.swt.widgets.Text</a></td><td><div class="Table_Text_Normal">Modify</div></td></tr>
+<tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Table.html>org.eclipse.swt.widgets.Table</a></td><td><div class="Table_Text_Normal">MouseDown , Selection</div></td></tr>
+<tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/TableColumn.html>org.eclipse.swt.widgets.TableColumn</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
+<tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Text.html>org.eclipse.swt.widgets.Text</a></td><td><div class="Table_Text_Normal">Activate , Modify</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ToolItem.html>org.eclipse.swt.widgets.ToolItem</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Tree.html>org.eclipse.swt.widgets.Tree</a></td><td><div class="Table_Text_Normal">Collapse , DefaultSelection , Expand , Selection</div></td></tr>
 </table></div>
 <div class="Text_Header">SWT Widgets supported for automatic logging</div>
 <div class="Text_Normal">
-The following lists the SWT widget types whose status and changes StoryText 3.6 is 
+The following lists the SWT widget types whose status and changes StoryText 3.7 is 
 currently capable of monitoring and logging. Any type derived from the listed types 
 is also supported but will only have features of the listed type described.
 </div>
