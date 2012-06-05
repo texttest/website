@@ -107,8 +107,8 @@ the files do not overwrite each other as versioned files used to up to version 3
 <div class="Text_Header">Searching for previously reported bugs</div>
 <div class="Text_Normal">
 Sometimes you end up in a situation where a test fails with a previously identified bug that has been reported on some other test.
-TextTest can help you find such bugs, via the GUI's "Find Failure Information" option. This will give you a list of all reported bugs in 
-the test suite and you can choose which one you want to apply to the bug in question.
+TextTest can help you find such bugs, via the dynamic GUI's "Find Failure Information" option. This will give you a list of all reported bugs in 
+the test suite which match the selected test(s) and you can choose which one you want to apply, if any.
 </div>
 <div class="Text_Header"><A NAME="bug_system_location"></A>Extracting information from bug systems (particularly Bugzilla, Jira or Trac)</div>
 <div class="Text_Normal">If you have a bug-tracking system with an API of some sort, 
