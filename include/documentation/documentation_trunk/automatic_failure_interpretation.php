@@ -50,9 +50,12 @@ case, telling TextTest about it can prevent lots of people
 examining lots of failed tests in order to discover the same
 issue again.</div>
 <div class="Text_Normal">The easiest way to do this is by using the dialog in the
-static GUI. Right-click the test or testsuite where the bug should
-apply (for example, if it applies everywhere, select the root
-test suite) and select "Enter Failure Information". We can then fill in the
+GUI. Right-click the test(s) or testsuite where the bug should
+apply and select "Enter Failure Information". This can (since TextTest 3.23) be done in the either
+the dynamic or static GUI : the dynamic GUI can also provide immediate feedback if the selected test matches the information given.
+</div>
+<div class="Text_Normal">
+We can then fill in the
 dialog as shown :
 </div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/reportbug.png" NAME="graphics1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
@@ -100,6 +103,12 @@ When the tests are run, TextTest wll then find all such "knownbugs" files, using
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
 and prioritising files in the hierarchy</A>. All information from all such files will be used,
 the files do not overwrite each other as versioned files used to up to version 3.10.</A>
+</div>
+<div class="Text_Header">Searching for previously reported bugs</div>
+<div class="Text_Normal">
+Sometimes you end up in a situation where a test fails with a previously identified bug that has been reported on some other test.
+TextTest can help you find such bugs, via the GUI's "Find Failure Information" option. This will give you a list of all reported bugs in 
+the test suite and you can choose which one you want to apply to the bug in question.
 </div>
 <div class="Text_Header"><A NAME="bug_system_location"></A>Extracting information from bug systems (particularly Bugzilla, Jira or Trac)</div>
 <div class="Text_Normal">If you have a bug-tracking system with an API of some sort, 

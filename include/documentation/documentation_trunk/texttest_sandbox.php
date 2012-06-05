@@ -247,8 +247,7 @@ results that you wish to use again, either as the default result
 or as a version.</div>
 <div class="Text_Normal">It is also possible to run TextTest in &ldquo;keeptmp&rdquo;
 mode. This means that the temporary directory structure of the
-run is not removed when texttest exits. This does not try to
-clean up previous runs, as it did up until version 3.10.
+run is not removed when texttest exits. 
 </div>
 <div class="Text_Normal">Running in <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>">batch mode</A> automatically
 selects &ldquo;keeptmp&rdquo; mode for the temporary
@@ -256,6 +255,11 @@ directories. It may also be requested explicitly using the
 &ldquo;-keeptmp&rdquo; option on the command line, or checking
 the &ldquo;keep temporary write directories&rdquo; box in the
 &ldquo;side effects&rdquo; tab from the static GUI.</div>
+<div class="Text_Normal">
+Another option in batch mode is to provide "-keeptmp 0" which will remove all the temporary files at the end of the run exactly as in 
+interactive mode. This is not normally desirable because it precludes the possibility to "reconnect" to the run and view the results in 
+the GUI, or to do any detailed examination of any failures.
+</div>
 <div class="Text_Header">Example: configuring application logging by using log4x-style configuration files as test data</div>
 <div class="Text_Normal">Up to TextTest 3.10 there was a separate mechanism for plugging in
 log4x-style configuration files. As TextTest 3.11 can handle application and version-specific suffices

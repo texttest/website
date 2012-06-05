@@ -1414,7 +1414,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">String</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">rsh</div>
+			<div class="Table_Text_Small">ssh</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_shell_program">Program to use for running commands remotely</A></div>
