@@ -50,7 +50,23 @@ http://download.eclipse.org/eclipse/updates/3.5 \
 <div class="Text_Header">Usage with GEF applications (from StoryText 3.7)</div>
 <div class="Text_Normal">
 Installation should be as above, except the "-installIU" argument needs to be changed so that it uses
-"org.eclipse.swtbot.gef.testscript" instead.</div>
+"org.eclipse.swtbot.gef.testscript" instead, and a suitable GEF repository provided. I.e. something like this:</div>
+<?php codeSampleBegin() ?>
+eclipse \
+-application org.eclipse.equinox.p2.director \
+-repository http://texttest.carmen.se/swtbot_testscript/3.6,
+http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site/,
+http://download.eclipse.org/tools/gef/updates-pre-3_8/releases/,
+http://download.eclipse.org/eclipse/updates/3.6 \
+-installIU org.eclipse.swtbot.gef.testscript \
+-consoleLog \
+-debug \
+-destination &lt;path_to_your_product&gt; \
+-profile profile \
+-noSplash
+
+<?php codeSampleEnd() ?>
+
 <div class="Text_Normal">
 It's reasonably likely that you will need to write your own customwidgetevents.py (see <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_customwidgets">section on custom widgets</A>) to be able
 to use StoryText effectively on a GEF application. The reason is that the GEF EditParts (figures) are by their nature hard to 
