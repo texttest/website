@@ -2,7 +2,7 @@
 <div class="Text_Description">  The &ldquo;queuesystem&rdquo;
 configuration</div>
 <div class="Text_Header"><A NAME="-l"></A><A NAME="queue_system_max_capacity"></A>On a single machine - making use of multiple cores</div>
-Since TextTest 3.23, if you run it on a multicore machine, it will run as many tests in parallel as you have cores on the machine.
+<div class="Text_Normal">Since TextTest 3.23, if you run it on a multicore machine, it will run as many tests in parallel as you have cores on the machine.
 In terms of the configuration this means that the "queuesystem" configuration module is automatically enabled. To disable it and run one 
 test at a time, you can set
 <?php codeSampleBegin() ?>
