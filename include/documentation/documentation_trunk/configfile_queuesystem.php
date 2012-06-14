@@ -1431,7 +1431,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;number of cores&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_max_capacity">Maximum possible number of parallel similar jobs in the available grid</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_max_capacity">Maximum possible number of parallel tests to run</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -1459,7 +1459,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">local</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_module">Which queue system (grid engine) software to use. ("local", "SGE" or "LSF")</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#queue_system_module">Which queue system (grid engine) set-up to use. ("local", "SGE" or "LSF")</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
