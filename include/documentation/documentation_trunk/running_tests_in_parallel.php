@@ -1,9 +1,20 @@
-<div class="Text_Main_Header">Running tests in parallel on a grid</div>
+<div class="Text_Main_Header">Running tests in parallel</div>
 <div class="Text_Description">  The &ldquo;queuesystem&rdquo;
 configuration</div>
-				
-<div class="Text_Header"><A NAME="queue_system_module"></A><A NAME="-l"></A><A NAME="queue_system_min_test_count"></A>Introduction</div>
-
+<div class="Text_Header"><A NAME="-l"></A><A NAME="queue_system_max_capacity"></A>On a single machine - making use of multiple cores</div>
+Since TextTest 3.23, if you run it on a multicore machine, it will run as many tests in parallel as you have cores on the machine.
+In terms of the configuration this means that the "queuesystem" configuration module is automatically enabled. To disable it and run one 
+test at a time, you can set
+<?php codeSampleBegin() ?>
+config_module:default
+<?php codeSampleEnd() ?>
+in your config file. To steer how many tests will be run simultaneously, you can set "queue_system_max_capacity" in your config file also.
+</div>
+<div class="Text_Normal">As soon as each test finishes, the test will go green or red,
+and results will be presented. Unlike the default configuration,
+the tests will not naturally finish in order. 
+</div>
+<div class="Text_Header"><A NAME="queue_system_module"></A><A NAME="queue_system_min_test_count"></A>Multiple machines and Grid Engines</div>
 <div class="Text_Normal">When you have more than one machine at your disposal for
 testing purposes, it is very beneficial to be able to utilise
 all of them from the same test run. &ldquo;Grid Engine&rdquo;
@@ -14,14 +25,15 @@ with somebody waiting on the results.</div>
 <div class="Text_Normal">TextTest's queuesystem configuration is enabled by setting
 the config file entry &ldquo;config_module&rdquo; to
 &ldquo;queuesystem&rdquo;. It operates against an abstract grid
-engine, which is basically a Python API. Two implementations of
-this are provided, for the free open source grid engine <A class="Text_Link" href="http://gridengine.sunsource.net/">SGE
-</A>(which sadly doesn't work on Windows) and Platform
+engine, which is basically a Python API. Three implementations of
+this are provided, where the default is "local", which runs in parallel on the local machine as described above.
+There is also one for the free open source grid engine <A class="Text_Link" href="http://www.gridengine.org/">SGE
+</A>. Note that since Oracle bought Sun there are various descendants of the original SGE available, some Open Source,
+some with commercial support. See the "SGE" link above for more details. The final option is Platform
 Computing's <A class="Text_Link" href="http://www.platform.com/Products/Platform.LSF.Family/Platform.LSF/">LSF</A>
-
-(which does, but costs money). You choose between these by
+(which is in theory more Windows-friendly, but costs money). You choose between these by
 setting the config file entry &ldquo;queue_system_module&rdquo;
-to &ldquo;SGE&rdquo; or &ldquo;LSF&rdquo;: it defaults to &ldquo;SGE&rdquo;.</div>
+to &ldquo;SGE&rdquo; or &ldquo;LSF&rdquo;.</div>
 <div class="Text_Normal">By default, it will submit all tests to the grid engine. It
 is still possible to run tests locally as with the default
 configuration, from the command line you can provide "-l".</div>
@@ -32,9 +44,7 @@ the grid will be used, otherwise they will be run locally. This is configured vi
 "queue_system_min_test_count", which defaults to 0 and hence the same as the "Always" option.
 </div>
 
-<div class="Text_Normal">As soon as each test finishes, the test will go green or red,
-and results will be presented. Unlike the default configuration,
-the tests will not naturally finish in order. Here is a sample
+Here is a sample
 screenshot, from an old version of TextTest using SGE:</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/parallel.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>Some
 tests have finished and gone green, but others are still running
@@ -120,7 +130,7 @@ to request <U>all</U> of the resources as specified below:</div>
 	below).</div>
 
 </OL>
-<div class="Text_Header"><A NAME="queue_system_max_capacity"></A>Throughput and capacity</div>
+<div class="Text_Header">Throughput and capacity</div>
 <div class="Text_Normal">When tests complete, TextTest will keep the remote test process
 alive and try to reuse it for a test with compatible resource requirements. This bypasses
 the time needed to submit tests to the queue system and wait for them to be scheduled,
