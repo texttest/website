@@ -92,7 +92,10 @@ def getConfigRows(*args):
     for key in allEntries:
         value, doc = configData[key]
         typeName = getType(value, allTypes)
-        outputVal = getOutputValue(value)
+        if key == "queue_system_max_capacity":
+            outputVal = "&lt;number of cores&gt;"
+        else:
+            outputVal = getOutputValue(value)
         configRows.append([ key, typeName, str(outputVal), doc ] )
     return configRows
 
