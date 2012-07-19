@@ -14,6 +14,8 @@ def makeConfigFile(configFileName, configModule):
     configFile.write("create_catalogues:true\n")
     configFile.write("performance_test_machine:any\n")
     configFile.write("partial_copy_test_path:nonsense\n")
+    if configModule == "queuesystem":
+        configFile.write("queue_system_module:sge\n")
     configFile.write("\n")
     configFile.close()
     
