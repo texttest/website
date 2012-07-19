@@ -107,7 +107,7 @@ can be mitigated by running the tests on a different desktop or e.g. against
 a VNC server. TextTest however also has builtin means to do this and save
 you the trouble. These mechanisms are platform specific and are described below.
 </div>
-<div class="Text_Header"><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_extra_args"></A>Hiding the SUT's windows (UNIX)</div>
+<div class="Text_Header"><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_count"></A><A NAME="virtual_display_extra_args"></A>Hiding the SUT's windows (UNIX)</div>
 <div class="Text_Normal">All that is required for this to work is for the standard
 UNIX tool "Xvfb" to be installed. For each run of the tests it will start such
 a server, point the SUT's DISPLAY variable at it and close the server
@@ -120,6 +120,12 @@ Xvfb -ac -audit 2 :&lt;display number&gt;
 <?php codeSampleEnd() ?>
 but you can supply additional arguments via the setting "virtual_display_extra_args"
 which will appended before the display number.
+</div>
+<div class="Text_Normal">
+If your test involves running multiple GUIs at the same time it's usually a good idea to make sure they run on different
+virtual displays. For this you can use the setting "virtual_display_count". This will set the DISPLAY variable as normal
+and will then also set DISPLAY2, DISPLAY3 etc to different Xvfb instances. It's expected you will then have a wrapper
+script to point the right process at the right display.
 </div>
 <div class="Text_Normal">
 It will use its own process ID (modulo 32768) as the display number to guarantee 
