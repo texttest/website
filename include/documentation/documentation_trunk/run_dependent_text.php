@@ -92,6 +92,10 @@ specific to this entry. This is defined as follows:
 	include groups (indicated by parantheses) which can then be
 	referred to in the REPLACE text as \1, \2 etc.</div>
 
+        <div class="Text_Normal"><li><SPAN STYLE="text-decoration: none"><b><I>&lt;pattern&gt;{MATCH
+	&lt;match_number&gt;}</I></b></SPAN> - On encountering the
+	&lt;match_number&gt;th instance of &lt;pattern&gt;, remove the line
+	containing the pattern.</div>
 	<div class="Text_Normal"><li><b><I>&lt;pattern1&gt;{-&gt;}&lt;pattern2&gt;</I></b>
 	- On encountering a match with &lt;pattern1&gt;, all lines are
 	filtered out until &lt;pattern2&gt; is matched. Neither the
