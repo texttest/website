@@ -150,7 +150,8 @@ entry &ldquo;historical_report_location&rdquo; to another
 directory. Both of these are composite dictionaries as described
 above so both can be varied per batch session. In order to
 actually generate the report, run with the -coll flag (see below)
-which will rebuild all the reports from scratch based on what is in the repository. 
+which will rebuild all the reports from scratch based on what is in the repository 
+and even in archived files if used in combination with the -collarchive flag (see below). 
 </div>
 <div class="Text_Normal">The easiest way to get a handle on what this looks like is to
 look at this <A class="Text_Link" target="_blank" href="include/documentation/<?php echo $version; ?>/htmlreport_example/index.html">small example</A>. Each day's results correspond to a column, while each test has a row. The
@@ -313,7 +314,7 @@ set up separate nightjob runs for each application.
 selection filters</A> selected on the command line or from the
 static GUI. As described there, only tests which satisfy <b>all</b>
 filters present will be selected.</div>
-<div class="Text_Header"><A NAME="batch_use_collection"></A><A NAME="batch_collect_compulsory_version"></A><A NAME="batch_collect_max_age_days"></A><A NAME="batch.CollectFiles"></A><A NAME="-coll"></A>
+<div class="Text_Header"><A NAME="batch_use_collection"></A><A NAME="batch_collect_compulsory_version"></A><A NAME="batch_collect_max_age_days"></A><A NAME="batch.CollectFiles"></A><A NAME="-coll"><A NAME="-collarchive"></A>
 Collecting multiple emails into a single one</div>
 <div class="Text_Normal">When many versions of the system under test are active, and
 many different hardware platforms are used, you may want to test
@@ -332,6 +333,10 @@ line. This will also build the HTML report described above, if that
 is enabled. To build only the email report or only the HTML report,
 you can also run with "-coll mail" or "-coll web" respectively. (The older
 plugin script "batch.CollectFiles" will still work but is now deprecated)
+</div>
+<div class="Text_Normal">In order to generate webpages from archived data back to a given date, 
+you can use "-collarchive date". It should always be used together with the "-coll web" option.
+I.e. texttest -a myapp -b myjob -coll web -collarchive 22Jan2012
 </div>
 <div class="Text_Normal">
 TextTest will then search for all such intermediate files
