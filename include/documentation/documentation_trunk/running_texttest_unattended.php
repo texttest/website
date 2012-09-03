@@ -94,7 +94,7 @@ defaults are provided. On UNIX, the SMTP server defaults to
 &ldquo;localhost&rdquo; and the sender address defaults to 
 &ldquo;$USER@localhost&rdquo;, so it is generally
 only necessary to configure the recipients.</div>
-<div class="Text_Header"><A NAME="batch_junit_format"></A><A NAME="batch_junit_folder"></A><A NAME="batch_junit_performance"></A>
+<div class="Text_Header"><A NAME="batch_junit_format"></A><A NAME="batch_junit_folder"></A>
 Producing results in JUnit format for display in a continuous integration server</div>
 <div class="Text_Normal">
 Many teams use a CI server and keep up-to-date information about test status available
@@ -121,13 +121,12 @@ which allows you to specify a different folder, (instead of "junitformat"), wher
 The Junit XML files have a space for the time used by the test. By default, this will be filled with the contents of the "performance" 
 file, if this is collected (see <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">here</A>
 for details if how this works). Sometimes, however, you might want some other time value extracted from a log file placed in this field,
-in which case you should set the "batch_junit_performance" field accordingly for the batch run in question. So if you collect the resource
-"my_cpu_usage", you ensure this ends up in the Junit XML file for "my_batch_run" by doing
+in which case you should set the "default_performance_stem" field accordingly. So if you collect the resource
+"my_cpu_usage", you ensure this ends up in the Junit XML file by doing
 <?php codeSampleBegin() ?>
-[batch_junit_performance]
-my_batch_run:my_cpu_usage
+default_performance_stem:my_cpu_usage
 <?php codeSampleEnd() ?>
- 
+(This replace batch_junit_performance from TextTest 3.23 and earlier)
 </div> 
 <div class="Text_Normal">Note: if you 
 are using TextTest with Java, you may want to look at <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=testing_java_with_texttest"; ?>">this page</A> for more tips.

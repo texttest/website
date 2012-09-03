@@ -89,6 +89,17 @@ in the GUI. The "Brief Text" in the final column corresponds to the labels in th
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">-collarchive</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">N/A</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Collect results for batch mode session using data in the archive, back to the given date</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">-con</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">

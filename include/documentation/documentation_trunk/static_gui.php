@@ -135,10 +135,12 @@ may be used in the text string to search for, while UNIX-style file expansions
 may be used for the file name (note, these are different syntaxes!)
 </div>
 <div class="Text_Normal">If <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">system resource usage testing
-is enabled for CPU time</A>, you can select tests based on how
-much CPU time they are expected to consume. This is done via the
-&ldquo;Execution Time&rdquo; filter (-r on the command line). A
-single number will be interpreted as a maximum CPU time to
+is enabled</A>, you can select tests based on how
+much time they are expected to consume. 
+By default this will use the total CPU time ("performance" files) but this can be configured via the "default_performance_stem" setting. </div>
+<div class="Text_Normal">
+Selecting based on time is done via the &ldquo;Execution Time&rdquo; filter (-r on the command line). A
+single number will be interpreted as a maximum time to
 select. Two comma-separated numbers will be interpreted as a
 minimum and a maximum. All times are in minutes. In addition,
 you can use the format mm:ss, rather than needing to convert

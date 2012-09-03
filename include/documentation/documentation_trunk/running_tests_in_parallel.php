@@ -178,12 +178,14 @@ performance machines only&rdquo; box from the static GUI
 the grid engine requests that the test only run on such
 machines.</div>
 
-<div class="Text_Normal">It is also possible to say (for CPU time testing only) that
+<div class="Text_Normal">It is also possible to say that
 once tests take a certain amount of time they should always be
 run on performance machines only (it is assumed that the
 performance of the longest tests is generally the most
 interesting.) This can be done via the setting
-min_time_for_performance_force.</div>
+"min_time_for_performance_force". The time measures used are those indicated
+by the setting "default_performance_stem", which if not set defaults to the total CPU time used)
+</div>
 <div class="Text_Normal">There is also an additional mechanism for specifying the
 performance machines, which on SGE has to be used instead. The
 config file setting 'performance_test_resource' allows you to

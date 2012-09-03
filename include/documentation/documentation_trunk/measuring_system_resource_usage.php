@@ -63,7 +63,7 @@ typing.</div>
 <div class="Text_Normal">Running the test on any machine outside the list will still
 work, but no performance-related information will be generated
 or compared. It is also possible to disable collecting
-performance-related information: use the &ldquo;-noperf&rdquo;
+/performance-related information: use the &ldquo;-noperf&rdquo;
 flag on the command line, or select &ldquo;Disable any
 performance testing&rdquo; from the static GUI's &ldquo;How to
 Run&rdquo; tab.</div>
@@ -181,6 +181,24 @@ is probably to look in the
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">
 table of config file settings</A> and examine
 the default values for "cputime" and "memory").
+</div>
+<div class="Text_Header">Choosing the default performance measure</div><A NAME="default_performance_stem"></A>
+<div class="Text_Normal">
+Having set up such collection, it's probably a good idea to set (e.g. from the example above)
+<?php codeSampleBegin() ?>
+default_performance_stem:load_time
+<?php codeSampleEnd() ?>
+so that TextTest can use this measure with various other forms of performance-related functionality (which will otherwise use
+the total CPU time if measured, i.e. the "performance" files described above).
+</div>
+<div class="Text_Normal">
+The functionality affected is
+<ol>
+<li>Which measure is displayed in the Text Info panel in the GUI when a test is selected
+<li>Which measure is used in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=static_gui"; ?>#-r"> GUI's Selection tab and equivalent command line settings</A> (all the fields related to selection via performance)
+<li>Which measure is used in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_junit_format">time field of junit-format batch results</A> 
+<li>Which measure is used for <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=running_tests_in_parallel"; ?>#min_time_for_performance_force"> "min_time_for_performance_force", if using parallel testing</A>.
+</ol>
 </div>
 <div class="Text_Header">Generating data from existing files</div>
 <div class="Text_Normal">When you have just enabled such resource usage extraction,

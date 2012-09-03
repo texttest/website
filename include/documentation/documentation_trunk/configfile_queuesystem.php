@@ -137,13 +137,13 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">batch_junit_performance</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">CompositeDictionary (String)</div>
+			<div class="Table_Text_Small">String</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
 			<div class="Table_Text_Small">performance</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_junit_performance">Which performance statistic to use in the Junit XML report. Only useful together with batch_junit_format</A></div>
+			<div class="Table_Text_Small">Alias. See entry for 'default_performance_stem'</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -624,6 +624,20 @@ of the "Type" column in this table.
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">default_performance_stem</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">String</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">performance</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=measuring_system_resource_usage#default_performance_stem">Which performance statistic to use when selecting tests by performance, placing performance in Junit XML reports etc</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">default_queue</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -924,7 +938,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>incomplete_bg : #8B1A1A<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
+			<div class="Table_Text_Small">changes_header_bg : #E2E2FF<BR>column_header_bg : gray1<BR>failure_bg : #FF3118<BR>incomplete_bg : #8B1A1A<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#historical_report_colours">Colours to use for historical batch HTML reports</A></div>
@@ -1764,7 +1778,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">column_header_bg : gray1<BR>failure_bg : #FF3118<BR>incomplete_bg : #8B1A1A<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
+			<div class="Table_Text_Small">changes_header_bg : #E2E2FF<BR>column_header_bg : gray1<BR>failure_bg : #FF3118<BR>incomplete_bg : #8B1A1A<BR>knownbug_bg : #FF9900<BR>memory_bg : pink<BR>no_results_bg : gray2<BR>performance_bg : #FFC6A5<BR>performance_fg : red6<BR>row_header_bg : #FFFFCC<BR>run_friday_fg : black<BR>run_monday_fg : black<BR>run_saturday_fg : black<BR>run_sunday_fg : black<BR>run_thursday_fg : black<BR>run_tuesday_fg : black<BR>run_wednesday_fg : black<BR>success_bg : #CEEFBD<BR>test_default_fg : black</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Alias. See entry for 'historical_report_colours'</div>
