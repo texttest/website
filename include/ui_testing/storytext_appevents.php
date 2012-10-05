@@ -7,8 +7,9 @@ synchronisation by recording and reading of "waits")></I>
 <div class="Text_Normal">
 The implementation in StoryText, for the three Python toolkits supported, consists 
 of calling the method "usecase.applicationEvent" from your code at the relevant places. 
-For Eclipse RCP, only a name can currently be provided, 
-<A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swt#appevents">see here</A> for its mechanism. </div>
+For Java GUIs, only a name can currently be provided, please refer to the formats for
+<A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swt#appevents">SWT</A> and
+<A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_and_swing#appevents">Swing</A> for their mechanisms. </div>
 <div class="Text_Normal">
 The signature of the method is as follows:
 

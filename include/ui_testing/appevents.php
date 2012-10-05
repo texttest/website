@@ -3,23 +3,36 @@
 <div class="Text_Normal">A typical GUI application has the requirement of instant
   response to its user at all times. It cannot just lock up while
   some background processing (e.g. loading in a large amount of
-  data) is done. This means that a large number of GUIs have
-  multiple threads, and any acceptance testing approach for GUIs
-  must therefore consider how to handle this problem.</div>
+  data) is done. Many applications therefore do significant work in the background.</div>
 
-<div class="Text_Normal">When we replay a test without human intervention, it may well
+<div class="Text_Normal">
+  When we replay a test without human intervention, it may well
   be necessary to wait for things to happen before proceeding.
   Otherwise the test will fail because further use case actions
-  rely on data loaded in a separate thread being present. In this
-  case a traditional record/replay tool is basically stuck: it
-  knows nothing of application intent and all it can do is ask the
-  test writer to hand-insert 'sleep' statements into the script
-  after recording it. Needless to say, this is both inefficient
-  and error-prone: it can easily be forgotten, and the required
-  length of sleep is hard to get right. 
+  rely on data loaded in a separate thread being present. Sometimes the control
+  we want to use is not available until the background processing is complete, 
+  in this case we can simply wait until it is, but this is not always the case.
 </div>
-<div class="Text_Normal">StoryText handles this situation by introducing the
-  notion of an `application event': the application can simply
+<div class="Text_Normal">
+  In this case a traditional recording tool can do one of three things:
+  <ol>
+    <li>It can insert a sleep based on how long the user waited
+    <li>It can record waits for everything that ever changes in the GUI
+    <li>It can rely on the user fixing up the recorded script somehow after the fact.
+  </ol>
+  None of which are very good, because
+  <ol>
+    <li>With sleeps, you typically need 10 times the time you expect for reliability. This means you either get very slow tests or very unreliable ones.
+    <li>If you wait for everything that ever changes, 99% of it is irrelevant and clogs up the script with stuff that is waiting to break.
+    <li>This requires that the user both know it is necessary and know what to do, and have the skills to do this in a reliable way.
+  </ol>
+</div>
+<div class="Text_Normal">StoryText handles this situation by involving the development team and instrumenting the code.
+  By relatively simply instrumentation we can fix the synchronisation for all tests past, present and future, and we can
+  make the waiting robust by talking in semantic terms instead of for example waiting for progress bars to appear and then disappear.
+</div>
+<div class="Text_Normal">
+  We therefore introduce the notion of an `application event': the application can simply
   notify StoryText when a significant event has
   occurred that is worth waiting for. At places in the code where
   such events occur, the programmer adds calls to StoryText (in Python code) or
@@ -48,8 +61,9 @@
   loads a large amount of data from a database and displays it on
   the screen. Unless there is a way of telling the replayer when
   this has completed, it would perhaps try to select `Die Hard'
-  before that item was present in the list, causing the simulation
-  to fail. To solve this, the programmer finds the point in his application
+  as soon as that item was present in the list, and the subsequent test may
+  assume that all the data was present to get the right answer. To solve this, 
+  the programmer finds the point in his application
   directly after the loading is completed and inserts the following code :
 <?php codeSampleBegin(); ?>
 import storytext
