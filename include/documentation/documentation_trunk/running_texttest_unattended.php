@@ -192,6 +192,22 @@ file dictionary setting &ldquo;historical_report_colours&rdquo;. To
 see how to set this, look at the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A> and pattern match on the default value. Note that you can now configure the run header colours per day of the week
 if you wish to highlight runs made, for example, at the weekend when more tests may be run.</div>
+<div class="Text_Header"><A NAME="batch_jenkins_marked_artefacts"></A>HTML report integration with Jenkins</div>
+<div class="Text_Normal">
+If you start your tests from the continuous integration software <A class="Text_Link" HREF="http://jenkins-ci.org/">Jenkins</A>, TextTest will notice this and will try to establish what has 
+changed in Jenkins since the last build. The resulting HTML report will then have an additional row marked "Changes", which will create links with the names of people who have committed
+changes, linking directly to the Jenkins pages with the changes. If you are also using <A class="Text_Link" HREF="http://www.atlassian.com/software/jira/overview">Jira</A>  for bug tracking it will
+also identify bug IDs in the commit messages and link those directly also.
+</div>
+<div class="Text_Normal">
+You can also tell it to highlight changes in particular artefacts produced as part of the Jenkins build, in case these are imported from outside the Jenkins build periodically and so changes in them
+aren't picked up via normal means. You then set, for example
+<?php codeSampleBegin() ?>
+[batch_jenkins_marked_artefacts]
+MyComponent:.*-mycomponent-.*
+<?php codeSampleEnd() ?>
+This will cause the plugin to check if an artefact matching the regexp ".*-mycomponent-.*" has been changed, and if it has, add a message "MyComponent was updated" to the Changes row.
+</div> 
 <div class="Text_Header"><A NAME="historical_report_resource_pages"></A><A NAME="historical_report_resource_page_tables"></A>Producing performance/memory versions of the HTML report </div>
 <div class="Text_Normal">
 If you're making use of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">TextTest's performance and memory testing features</A> it can be useful to have this information displayed in a similar table. These are two ways to generate them. As a one-off, you can run TextTest with arguments like e.g. -coll web.performance or -coll web.memory instead of just -coll web. To generate them regularly it is usually more convenient to set the config setting "historical_report_resource_pages". For example:
