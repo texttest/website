@@ -10,11 +10,11 @@
   be necessary to wait for things to happen before proceeding.
   Otherwise the test will fail because further use case actions
   rely on data loaded in a separate thread being present. Sometimes the control
-  we want to use is not available until the background processing is complete, 
+  we want to use is not available until the background processing is complete -
   in this case we can simply wait until it is, but this is not always the case.
 </div>
 <div class="Text_Normal">
-  In this case a traditional recording tool can do one of three things:
+  In this situation a traditional recording tool can do one of three things:
   <ol>
     <li>It can insert a sleep based on how long the user waited
     <li>It can record waits for everything that ever changes in the GUI
@@ -28,7 +28,7 @@
   </ol>
 </div>
 <div class="Text_Normal">StoryText handles this situation by involving the development team and instrumenting the code.
-  By relatively simply instrumentation we can fix the synchronisation for all tests past, present and future, and we can
+  By relatively simple instrumentation we can fix the synchronisation for all tests past, present and future, and we can
   make the waiting robust by talking in semantic terms instead of for example waiting for progress bars to appear and then disappear.
 </div>
 <div class="Text_Normal">
