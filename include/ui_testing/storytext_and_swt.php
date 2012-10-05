@@ -1,21 +1,26 @@
 <div class="Text_Main_Header">Using StoryText with SWT/Eclipse RCP/GEF</div>
 <div class="Text_Header">Supported platforms</div>
 <div class="Text_Normal">
-It is tested regularly and works fully on Linux and Windows. It currently does not work under Cocoa on the Mac: the reason is that the SWTBot headless test runner, on which it depends, runs the UI in a non-main thread which Cocoa does not support. The suggested workaround from the SWTBot project is to use Carbon instead.
-GEF support is new in version 3.7 and is less mature than ordinary SWT/Eclipse RCP support.
+It is tested regularly and works fully on Linux and Windows. It currently does not work under Cocoa on the Mac: the reason is that the SWTBot headless test runner, on which it depends, runs the UI in a non-main thread which Cocoa does not support. The suggested workaround from the SWTBot project is to use Carbon instead. However, there are also serious GTK bugs for the Mac, which will hinder the use of TextTest and the StoryText editor, so in general, Mac support is not in a very good place right now.
+</div>
+<div class="Text_Normal">
+GEF support is maturing in version 3.8 but is still less mature than ordinary SWT/Eclipse RCP support, you will likely have to write your own custom plugin to get the most out of it.
 </div>
 <div class="Text_Header">Installing StoryText and Jython</div>
 <div class="Text_Normal">
-(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">general 
-ones</A> : please read there first. Also note that this first part is unnecessary if you use the Windows Installer. The Windows 
-installer does not include SWTBot though so please see that section)</div>
 <div class="Text_Normal">
-As SWT is a Java technology, the first observation is that you will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install StoryText under it in a similar way to that described for installing it under Python. Note that currently StoryText for Eclipse RCP does not work with Jython 2.5.2, you are therefore advised to use 2.5.1 for the moment there. The easiest way is to download the tarball from <A class="Text_Link" HREF="http://sourceforge.net/projects/storytext">sourceforge</A>, unpack it, and run "jython setup.py install". (You can also use "pip", but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip"). It is usually then convenient to add your Jython installation to your PATH, so that StoryText can be run without typing the full path.
+On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. 
 </div>
 <div class="Text_Normal">
-Contrary to expectations you need to do this <I>as well as</I> installing it into an ordinary Python installation. The reason is that its UI makes use of PyGTK which only works under ordinary Python, whereas the part that talks to Java obviously need to run under Jython.</div>
-<div class="Text_Normal">
-An install under Python will also install the UI program ("usecase_name_chooser") while an install under Jython will not. If you install centrally it thus makes sense to do the Python install first and then the Jython install.
+On Linux, you probably already have Python and PyGTK, so you will need to do the following:
+<ol>
+<li>Install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A>.<b>NOTE!</b>, if using Eclipse RCP, you must use Jython 2.5.1, there are problems with newer versions.
+<li>Download and unpack the tarball from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>
+<li>From its source directory, run first "python setup.py install" and then "jython setup.py install"
+<li>Ensure the bin directory of both your installations created above is added to your PATH, with the Jython one coming first.
+<li>Test this from the command line: "which storytext" should return the one in your Jython installation, while "which storytext_editor" should return the one in your Python installation.
+</ol>
+(You can also use "pip" to install StoryText directly from PyPI without downloading the tarball, but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip")
 </div>
 <div class="Text_Header">Installing SWTBot</div>
 <div class="Text_Normal">

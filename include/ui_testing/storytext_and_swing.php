@@ -3,7 +3,7 @@
 <div class="Text_Normal">
 It is tested regularly and works fully on Linux and Windows. Status on the Mac is at best problematic, there are serious Mac-specific bugs in recent versions of GTK, which will hinder the use of the editor and of TextTest.
 </div>
-<div class="Text_Header">Installing StoryText and Jython</div>
+<div class="Text_Header">Installing StoryText</div>
 <div class="Text_Normal">
 On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. 
 </div>
