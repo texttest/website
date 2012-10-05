@@ -206,7 +206,7 @@ aren't picked up via normal means. You then set, for example
 [batch_jenkins_marked_artefacts]
 MyComponent:.*-mycomponent-.*
 <?php codeSampleEnd() ?>
-This will cause the plugin to check if an artefact matching the regexp ".*-mycomponent-.*" has been changed, and if it has, add a message "MyComponent was updated" to the Changes row.
+This will cause the plugin to check if an artefact matching the regular expression ".*-mycomponent-.*" has been changed, and if it has, add a message "MyComponent was updated" to the Changes row.
 </div> 
 <div class="Text_Header"><A NAME="historical_report_resource_pages"></A><A NAME="historical_report_resource_page_tables"></A>Producing performance/memory versions of the HTML report </div>
 <div class="Text_Normal">
