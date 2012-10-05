@@ -8,7 +8,7 @@ GEF support is maturing in version 3.8 but is still less mature than ordinary SW
 </div>
 <div class="Text_Header">Installing StoryText and Jython</div>
 <div class="Text_Normal">
-On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. 
+On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. This installer will also install TextTest.
 </div>
 <div class="Text_Normal">
 On Linux, you probably already have Python and PyGTK, so you will need to do the following:

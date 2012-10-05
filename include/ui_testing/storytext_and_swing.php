@@ -5,7 +5,7 @@ It is tested regularly and works fully on Linux and Windows. Status on the Mac i
 </div>
 <div class="Text_Header">Installing StoryText</div>
 <div class="Text_Normal">
-On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. 
+On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. This installer will also install TextTest.
 </div>
 <div class="Text_Normal">
 On Linux, you probably already have Python and PyGTK, so you will need to do the following:
