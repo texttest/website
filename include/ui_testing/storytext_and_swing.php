@@ -9,12 +9,15 @@ On Windows, you should install Java if you haven't already done so, and then run
 </div>
 <div class="Text_Normal">
 On Linux, you probably already have Python and PyGTK, so you will need to do the following:
-1) Install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A>
-2) Download and unpack the tarball from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>
-3) From its source directory, run first "python setup.py install" and then "jython setup.py install"
-4) Ensure the bin directory of both your installations created above is added to your PATH, with the Jython one coming first.
-5) Test this from the command line: "which storytext" should return the one in your Jython installation, while "which storytext_editor" should return the one in your Python installation.
+<ol>
+<li>Install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A>
+<li>Download and unpack the tarball from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>
+<li>From its source directory, run first "python setup.py install" and then "jython setup.py install"
+<li>Ensure the bin directory of both your installations created above is added to your PATH, with the Jython one coming first.
+<li>Test this from the command line: "which storytext" should return the one in your Jython installation, while "which storytext_editor" should return the one in your Python installation.
+</ol>
 (You can also use "pip" to install StoryText directly from PyPI without downloading the tarball, but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip")
+</div>
 <div class="Text_Header">Handling RobotFramework SwingLibrary</div>
 <div class="Text_Normal">
 StoryText support for Swing is based on the tool <A class="Text_Link" HREF="https://github.com/robotframework/SwingLibrary/downloads">SwingLibrary</A>, which has been developed as part of RobotFramework. Since StoryText 3.8 this is now packaged with the StoryText download. If running StoryText alone you will however need to add it to your CLASSPATH environment variable, it can be found under lib/storytext/javaswingtoolkit. If using StoryText with TextTest (recommended) it will work this out for you.
