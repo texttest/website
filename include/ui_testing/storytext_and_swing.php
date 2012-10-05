@@ -1,24 +1,23 @@
 <div class="Text_Main_Header">Using StoryText with Java Swing UIs</div>
 <div class="Text_Header">Supported platforms</div>
 <div class="Text_Normal">
-It is tested regularly and works fully on Linux and Windows. Status on the Mac is currently unknown but no issues are anticipated.
+It is tested regularly and works fully on Linux and Windows. Status on the Mac is at best problematic, there are serious Mac-specific bugs in recent versions of GTK, which will hinder the use of the editor and of TextTest.
 </div>
 <div class="Text_Header">Installing StoryText and Jython</div>
 <div class="Text_Normal">
-(Note that these instructions are in addition to the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">general 
-ones</A> : please read there first. Also note that this first part is unnecessary if you use the Windows Installer. The Windows 
-installer does not include SwingLibrary though so please see that section)</div>
-<div class="Text_Normal">
-You will need to install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A> and install StoryText under it in a similar way to that described for installing it under Python. The easiest way is to download the tarball from <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge</A>, unpack it, and run "jython setup.py install". (You can also use "pip", but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip"). It is usually then convenient to add your Jython installation to your PATH, so that StoryText can be run without typing the full path.
+On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. 
 </div>
 <div class="Text_Normal">
-Contrary to expectations you need to do this <I>as well as</I> installing it into an ordinary Python installation. The reason is that its UI makes use of PyGTK which only works under ordinary Python, whereas the part that talks to Java obviously need to run under Jython.</div>
+On Linux, you probably already have Python and PyGTK, so you will need to do the following:
+1) Install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A>
+2) Download and unpack the tarball from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>
+3) From its source directory, run first "python setup.py install" and then "jython setup.py install"
+4) Ensure the bin directory of both your installations created above is added to your PATH, with the Jython one coming first.
+5) Test this from the command line: "which storytext" should return the one in your Jython installation, while "which storytext_editor" should return the one in your Python installation.
+(You can also use "pip" to install StoryText directly from PyPI without downloading the tarball, but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip")
+<div class="Text_Header">Handling RobotFramework SwingLibrary</div>
 <div class="Text_Normal">
-An install under Python will also install the UI program ("usecase_name_chooser") while an install under Jython will not. If you install centrally it thus makes sense to do the Python install first and then the Jython install.
-</div>
-<div class="Text_Header">Installing RobotFramework SwingLibrary</div>
-<div class="Text_Normal">
-StoryText support for Swing is based on the tool <A class="Text_Link" HREF="https://github.com/robotframework/SwingLibrary/downloads">SwingLibrary</A>, which has been developed as part of RobotFramework. You should download the jar file (at least version 1.2) from the linked site and add it to your CLASSPATH environment variable, either globally, or via a <A class="Text_Link" HREF="index.php?page=documentation_trunk&n=about_testsuites#environment files">TextTest environment file</A> (if using TextTest, obviously).
+StoryText support for Swing is based on the tool <A class="Text_Link" HREF="https://github.com/robotframework/SwingLibrary/downloads">SwingLibrary</A>, which has been developed as part of RobotFramework. Since StoryText 3.8 this is now packaged with the StoryText download. If running StoryText alone you will however need to add it to your CLASSPATH environment variable, it can be found under lib/storytext/javaswingtoolkit. If using StoryText with TextTest (recommended) it will work this out for you.
 </div>
 <div class="Text_Header">Trying things out</div>
 <div class="Text_Normal">
@@ -27,7 +26,7 @@ RobotFramework SwingLibrary contains an example application which you can try ou
 storytext -i javaswing -r usecase.txt \
   org.robotframework.swing.testapp.examplesut.TodoListApplication
 <?php codeSampleEnd() ?>
-(Note that StoryText does not understand jar files directly currently. If your app is a jar file, find out the name of its main-class from the manifest file, add the jar to your classpath, and use the main-class name as above.)</div>
+(Note that StoryText does not understand jar files directly currently. If your app is a jar file, find out the name of its main-class from the manifest file, add the jar to your classpath, and use the main-class name as above. If using TextTest you can just select the jar file and it will do this for you, since TextTest 3.24)</div>
 <div class="Text_Normal">
 From there, you can follow the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_intro">intro</A> in a similar way to if you were using the PyGTK example.
 </div>

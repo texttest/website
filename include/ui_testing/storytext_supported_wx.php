@@ -1,6 +1,6 @@
 <div class="Text_Header">wxPython Widgets and actions supported for record/replay</div>
 <div class="Text_Normal">The following lists the wxPython widget types and the associated actions on them which 
-StoryText 3.7 is currently capable of recording and replaying. Any type derived from the listed
+StoryText 3.8 is currently capable of recording and replaying. Any type derived from the listed
 types is also supported.
 </div>
 <div class="Text_Normal"><table border=1 cellpadding=1 cellspacing=1>
@@ -15,7 +15,7 @@ types is also supported.
 </table></div>
 <div class="Text_Header">wxPython Widgets supported for automatic logging</div>
 <div class="Text_Normal">
-The following lists the wxPython widget types whose status and changes StoryText 3.7 is 
+The following lists the wxPython widget types whose status and changes StoryText 3.8 is 
 currently capable of monitoring and logging. Any type derived from the listed types 
 is also supported but will only have features of the listed type described.
 </div>

@@ -1,9 +1,10 @@
 <div class="Text_Header">SWT Widgets and event types supported for record/replay</div>
 <div class="Text_Normal">The following lists the SWT widget types and the associated event types on them which 
-StoryText 3.7 is currently capable of recording and replaying. Any type derived from the listed
+StoryText 3.8 is currently capable of recording and replaying. Any type derived from the listed
 types is also supported.
 </div>
 <div class="Text_Normal"><table border=1 cellpadding=1 cellspacing=1>
+<tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CCombo.html>org.eclipse.swt.custom.CCombo</a></td><td><div class="Table_Text_Normal">Activate , Modify , Selection</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CTabFolder.html>org.eclipse.swt.custom.CTabFolder</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CTabItem.html>org.eclipse.swt.custom.CTabItem</a></td><td><div class="Table_Text_Normal">Dispose</div></td></tr>
 <tr><td><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Button.html>org.eclipse.swt.widgets.Button</a></td><td><div class="Table_Text_Normal">Selection</div></td></tr>
@@ -23,12 +24,13 @@ types is also supported.
 </table></div>
 <div class="Text_Header">SWT Widgets supported for automatic logging</div>
 <div class="Text_Normal">
-The following lists the SWT widget types whose status and changes StoryText 3.7 is 
+The following lists the SWT widget types whose status and changes StoryText 3.8 is 
 currently capable of monitoring and logging. Any type derived from the listed types 
 is also supported but will only have features of the listed type described.
 </div>
 <div class="Text_Normal">
 <li><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/browser/Browser.html>org.eclipse.swt.browser.Browser</a>
+<li><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CCombo.html>org.eclipse.swt.custom.CCombo</a>
 <li><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CLabel.html>org.eclipse.swt.custom.CLabel</a>
 <li><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/CTabFolder.html>org.eclipse.swt.custom.CTabFolder</a>
 <li><a class="Text_Link" href=http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Button.html>org.eclipse.swt.widgets.Button</a>
