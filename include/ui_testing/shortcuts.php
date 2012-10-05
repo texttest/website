@@ -39,13 +39,8 @@ file and no tests will need to be changed.</div>
 To see how this works in practice, look at the <A class="Text_Link" href="index.php?page=ui_testing&n=storytext_shortcuts">relevant StoryText documentation</A>.
 </div>
 <div class="Text_Header">Macro Recording by system users</div>
-<div class="Text_Normal">The record/playback layer is available at any time to any
-user of the system &ndash; it does not require starting a
-special tool in order to make use of it. This raises the
-possibility that individual users can personally tweak the user
-interface and eliminate repetitive actions by making use of the
-record/playback capabilities.</div>
-<div class="Text_Normal">Most people have at one time or another ended up using a GUI
+<div class="Text_Normal">
+Most people have at one time or another ended up using a GUI
 in a repetitive way. They generally do not need all of its
 capabilities, and may have to make 5 or so clicks just to reach
 the screen they usually work with. Or for example, who hasn't at

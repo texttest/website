@@ -4,8 +4,9 @@ by the generic frameworks. If your application makes use of custom widgets you w
 to write Python code to tell it what to do with them.
 </div>
 <div class="Text_Normal">The basic idea is to
-provide a file called customwidgetevents.py and put it on your
-PYTHONPATH somewhere. You then provide a member called "customEventTypes",
+provide a file called customwidgetevents.py and set the PYTHONPATH
+environment variable to include the directory where it is. (For Java GUIs you need to
+set JYTHONPATH instead). You then provide a member called "customEventTypes",
 which is a list of pairs of widget types and lists of event classes that can be
 applied on them. You then define these event classes in a similar way to the way
 they are defined for the standard widgets, and the best approach in the absence
