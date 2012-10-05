@@ -4,10 +4,9 @@
 It is tested regularly and works fully on Linux and Windows. It currently does not work under Cocoa on the Mac: the reason is that the SWTBot headless test runner, on which it depends, runs the UI in a non-main thread which Cocoa does not support. The suggested workaround from the SWTBot project is to use Carbon instead. However, there are also serious GTK bugs for the Mac, which will hinder the use of TextTest and the StoryText editor, so in general, Mac support is not in a very good place right now.
 </div>
 <div class="Text_Normal">
-GEF support is maturing in version 3.8 but is still less mature than ordinary SWT/Eclipse RCP support, you will likely have to write your own custom plugin to get the most out of it.
+GEF support is maturing in version 3.8 but is still less mature than ordinary SWT/Eclipse RCP support.
 </div>
 <div class="Text_Header">Installing StoryText and Jython</div>
-<div class="Text_Normal">
 <div class="Text_Normal">
 On Windows, you should install Java if you haven't already done so, and then run the Windows installer from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>. Note you will need to be connected to the internet while running this installer. 
 </div>
