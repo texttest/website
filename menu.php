@@ -2,7 +2,7 @@
   <tr valign="top" height="50">
 	 <td align="right">
            <form method="get" action="http://www.google.com/search">
-             <input type="hidden" name="sitesearch" value="texttest.carmen.se" />
+             <input type="hidden" name="sitesearch" value="texttest.sourceforge.net" />
              <input type="text"   name="q" size="15" maxlength="255" value="" />
              <input type="submit" value="Search Site" />
            </form>
