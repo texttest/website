@@ -268,7 +268,7 @@ It can be useful to separate these things, particularly when using a grid engine
 do not need to be visible anywhere else, so they can be directed to a local "tmp" disk. The result files, meanwhile, should be visible to the machine where
 TextTest is running, and may want to be archived etc.</div>
 <div class="Text_Normal">
-In this case you can either set "default_texttest_local_tmp" in your config file, or set the environment variable TEXTTEST_LOCAL_TMP, to an appropriate location. A common choice on posix systems is
+In this case you can either set "default_texttest_local_tmp" in your config file, or set the environment variable TEXTTEST_LOCAL_TMP, to an appropriate location. A common choice on POSIX systems is
 <?php codeSampleBegin() ?>
 default_texttest_local_tmp:/tmp/$USER
 <?php codeSampleEnd() ?>
@@ -279,7 +279,7 @@ The "sandbox" used for running the test (current working directory, and the loca
 Writing logfiles to the current working directory and naming them with your application suffix, as suggested elsewhere, will thus not work in this setup, because the current working directory is the 
 local sandbox, which is not the same as the log directory in this setup. 
 You either need to add them to [collate_file], in which case you won't see them until the test finishes, or use $TEXTTEST_LOG_DIR in your log configuration file. If your logging framework does not
-expand environment variables (some don't) use copy_test_path_script as described above, and provide a script that copies the file while expanding its variables. 
+expand environment variables (some don't) use "copy_test_path_script" as described above, and provide a script that copies the file while expanding its variables. 
 </div>
 <div class="Text_Header">Example: configuring application logging by using log4x-style configuration files as test data</div>
 <div class="Text_Normal">Up to TextTest 3.10 there was a separate mechanism for plugging in
