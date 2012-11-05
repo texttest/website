@@ -47,6 +47,17 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_LOCAL_TMP</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Config value 'default_texttest_local_tmp'</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#TEXTTEST_LOCAL_TMP">Location of temporary files on local disk from test runs. Defaults to value of TEXTTEST_TMP</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_PATH</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -145,6 +156,14 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#TEXTTEST_FOLLOW_FILE_TITLE">Title of the window when following file progress</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_LOG_DIR</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#TEXTTEST_LOG_DIR">Full path to where TextTest will write the SUT's log files</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

@@ -159,7 +159,8 @@ my_data:/path/to/script.sh
 <?php codeSampleEnd() ?>
 The script in question will accept two arguments, the source file and the destination. It is called instead of
 (not as well as) the default copy operation, so often consists of performing the copy and then making some 
-adjustments to the copied data.
+adjustments to the copied data. From TextTest 3.25 it is also possible to refer to environment variables set
+in your environment files from within this script (e.g. TEXTTEST_SANDBOX, TEXTTEST_LOG_DIR)
 </div>
 <div class="Text_Header"><A NAME="test_data_environment"></A>Associating environment
 variables with test data</div>
@@ -259,6 +260,26 @@ the &ldquo;keep temporary write directories&rdquo; box in the
 Another option in batch mode is to provide "-keeptmp 0" which will remove all the temporary files at the end of the run exactly as in 
 interactive mode. This is not normally desirable because it precludes the possibility to "reconnect" to the run and view the results in 
 the GUI, or to do any detailed examination of any failures.
+</div>
+<div class="Text_Header"><A NAME="default_texttest_local_tmp"></A><A NAME="TEXTTEST_LOCAL_TMP"></A><A NAME="TEXTTEST_LOG_DIR"></A>Separating the location where the log files are written from the test run location</div>
+<div class="Text_Normal">
+Ordinarily the TextTest sandbox is used both as a place to store the log files the test writes, and where it manipulates test data and writes its own files.
+It can be useful to separate these things, particularly when using a grid engine to run tests in parallel. The test data and the application's own files
+do not need to be visible anywhere else, so they can be directed to a local "tmp" disk. The log files, meanwhile, should be visible to the machine where
+TextTest is running, and may want to be archived etc.</div>
+<div class="Text_Normal">
+In this case you can either set "default_texttest_local_tmp" in your config file, or set the environment variable TEXTTEST_LOCAL_TMP, to an appropriate location. A common choice on posix systems is
+<?php codeSampleBegin() ?>
+default_texttest_local_tmp:/tmp/$USER
+<?php codeSampleEnd() ?>
+The "sandbox" used for running the test (current working directory, and the location of $TEXTTEST_SANDBOX) will then be under this local location. But stdout and stderr files will be written to the "normal" location 
+under TEXTTEST_TMP, and any collated files will be written there. A new environment variable, TEXTTEST_LOG_DIR, points out this location where logs are written.
+</div>
+<div class="Text_Normal">
+Writing logfiles to the current working directory and naming them with your application suffix, as suggested elsewhere, will thus not work in this setup, because the current working directory is the 
+local sandbox, not the log file location. 
+You either need to add them to [collate_file], in which case you won't see them until the test finishes, or use $TEXTTEST_LOG_DIR in your log configuration file. If your logging framework does not
+expand environment variables (some don't) use copy_test_path_script as described above, and provide a script that copies the file while expanding its variables. 
 </div>
 <div class="Text_Header">Example: configuring application logging by using log4x-style configuration files as test data</div>
 <div class="Text_Normal">Up to TextTest 3.10 there was a separate mechanism for plugging in
