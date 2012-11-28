@@ -15,6 +15,11 @@ different category of logging, that is, what function of texttest to
 enable logging for.
 <LI>Pass the "-x" argument when invoking texttest, to enable
 internal logging (diagnostics). Or check the "Enable self-diagnostics" box from the Running/Advanced tab in the static GUI.
+<LI>If you are set up to run tests in parallel via a grid, think very hard about whether you need to do so to troubleshoot the current problem.
+It will be simpler and easier to run the test locally (use the -l flag) in this case. If the problem only arises when running via the grid,
+be aware that the "-x" flag only enables logging from the master TextTest process. To enable it in the slaves, the TextTest process run on the 
+test execution machine, you also need the "-xs" flag (there is a corresponding check box in the Running/Advanced tab also). These diagnostics
+will then be writted to subdirectories of the "log" directory, named after the processes in question.
 <LI>Execute texttest and read the log file
 
 </OL>
