@@ -6,8 +6,9 @@
    
    <div class="Text_Normal">
      
-     <p>All TextTest support issues should go via the <A class="Text_Link" HREF="https://lists.sourceforge.net/lists/listinfo/texttest-users">texttest-users mailing list</A></p>. Negotiations are ongoing to open a public bugtracker, details will appear here when this is ready.
-     <p>The lead developer is Geoff Bache, while these pages are maintained by Henning Thornblad. In both cases "firstname.lastname@jeppesen.com" will reach us.</p>
+     <p>All TextTest support issues should go via the <A class="Text_Link" HREF="https://lists.sourceforge.net/lists/listinfo/texttest-users">texttest-users mailing list</A></p>. 
+     <p>The bugtracker can be found at <A class="Text_Link" HREF="https://bugs.launchpad.net/texttest">Launchpad</A></p>
+     <p>The developers are Geoff Bache and Daniel Galdames. In both cases "firstname.lastname@jeppesen.com" will reach us.</p>
    </div>
 
    </div>
