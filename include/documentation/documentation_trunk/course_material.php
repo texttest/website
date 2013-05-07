@@ -303,6 +303,7 @@ Copy the test you have created, and edit the copied usecase file to remove the s
 "Show GUI" button checked. It will create the contact and then record anything else you do. Search for the contact and verify it
 gets selected. Enter the new usecase names and save the usecase file as before. This time you need to run the test by hand to collect
 the correct information in the stdout file.
+</div>
 <div class="Text_Header">4.4 Refactor the "usecase language"</div>
 <div class="Text_Normal">
 This latest test now has a rather mechanical description of what is happening. It would be useful to raise the abstraction level and get
