@@ -47,14 +47,15 @@ view_program:gedit
               <li>sharing configuration between applications</li>
             </UL>
           </div></li>
-        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise4">Exercise 4: The PyGTK GUI</A> <i>(Difficulty: Easy)</i></div>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise4">Exercise 4: The Eclipse/SWT GUI</A> <i>(Difficulty: Medium)</i></div>
           <div class="Text_Normal">
-            There is a simple PyGTK GUI you can test here. This is probably not very hard but is an opportunity for those who
-            are interested to explore how TextTest "ideally" would interact with a GUI. 
+            There is a simple Eclipse-SWT based GUI you can test here. This is intended to teach the basics of GUI testing with TextTest. 
             This will teach you
             <UL>
               <li>how to use TextTest's record facilities</li>
               <li>creating a "domain-specific language" for GUI testing</li>
+              <li>refactoring this language by creating 'shortcuts'</li>
+              <li>filtering the generated GUI output at the widget level</li>
             </UL>
           </div></li>
         <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise5">Exercise 5: The Continuous Integration script</A> <i>(Difficulty: Hard - at least the later steps are)</i></div>
@@ -250,27 +251,87 @@ unless you explcitly name the run (-name on the command line)
 It's not so nice that we've had to copy the same information to two different files. Try to extract it out to a
 separate file and "import" it into your config files. Look at "import_config_file" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A> for information on how to do this.
 </div>
-<div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The PyGTK GUI</div>
-<div class="Text_Header">4.0 Download and install StoryText version 3 or newer if you don't have it yet</div>
+<div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The SWT/Eclipse GUI</div>
+<div class="Text_Header">4.0 Download and install StoryText version 3.6 or newer if you don't have it yet</div>
 <div class="Text_Normal">
 Instructions for how to do this can be found <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">here</A>.
 </div>
-<div class="Text_Header">4.1 Try out an amazing new bug system</div>
+<div class="Text_Header">4.1 Try out the SWT Address Book</div>
 <div class="Text_Normal">
-There is a small toy "bug system" in the exercise directory. It is downloaded from the PyGTK tutorial and
-is not "primed" for StoryText or anything. Fire it up and click around it a bit, you can hide and show
-the bugs in various categories and also sort the columns by clicking them, but you can't do much else...</div>
-<div class="Text_Header">4.2 Create a test suite and start recording some some tests</div>
+From the command line, type
+<?php codeSampleBegin() ?>
+java AddressBook
+<?php codeSampleEnd() ?>
+This is an Eclipse/SWT example application which allows you to create an address book with contacts in it. Play around a little
+with it so you know what you're about to test.</div>
 <div class="Text_Normal">
-From this point you can pretty much follow the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=gui_tests"; ?>">GUI-testing tutorial</A>, which is designed to work with this example. Try to create some different tests and examine the "usecase" files and the "output" files in each one, and also the UI map file as it develops. 
+Note that the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=gui_tests"; ?>">
+GUI-testing tutorial</A> has a large overlap with this, although based around a different app. If anything here is unclear
+it may help to look at that for more detailed descriptions and screenshots.
 </div>
-<div class="Text_Header">4.3 Open a usecase file and Create a shortcut with the help of StoryText editor</div>
+<div class="Text_Header">4.2 Create your first test that creates a contact in the address book</div>
 <div class="Text_Normal">
-Select two or more consecutive actions and right click. Select "Create shortcut" from the context menu. 
+Start
+<?php codeSampleBegin() ?>
+texttest --new
+<?php codeSampleEnd() ?>
+
+again and fill in the initial dialog. Fill in "AddressBook" as the Java Class name and select SWT for the GUI testing option.
 </div>
-<div class="Text_Header">4.4 Suppose that some widget name has changed and we need to change our mapping</div>
 <div class="Text_Normal">
-From StoryText editor expand some node in the tree and right click on a leaf action. Select "Update UI map file" from the context menu and chage the widget description.
+Then, create a test as before, and do "Record Use-Case" on it. Create a contact in the address book, fill in some data (you don't 
+need to fill in all the fields) and close the Address book. When you do this, you will be prompted to enter "use-case names" for
+the actions you have performed, and maybe to adjust how they map to the GUI. Fill in this dialog with suitable names.
+</div>
+<div class="Text_Normal">
+If you made a mistake recording, you should just press Quit at this point. If you like what you created, press Save and then Quit.
+The test will then be replayed in the background and the expected behaviour collected. When it is done, open the stdout file and 
+examine it so you can see what is being compared. Visit the config tab also and view the UI map file (ui_map.conf) which is what 
+has been created by the usecase name entry dialog.
+</div>
+<div class="Text_Header">4.2 Run the test, with and without the GUI showing</div>
+<div class="Text_Normal">
+If you press "Run" now, the test will run without the GUI showing, using the virtual display program "Xvfb". Xvfb produces warnings
+on some Linux systems, which you might need to add run_dependent_text for as in Exercise 2. To see the test execute in the GUI, check 
+the "Show GUI" option, and increase the "Replay pause" setting a bit so it goes slowly enough to view it. 
+</div>
+<div class="Text_Header">4.3 Create a new test, via a "partial recording"</div>
+<div class="Text_Normal">
+This time we want to test the search functionality. We could just create our contact again, but that would be a pain, and we might
+make the data in it subtly different by mistake. So instead of recording from scratch, we will start from part of the previous test.
+Copy the test you have created, and edit the copied usecase file to remove the step that closes the GUI. Then run the test with the
+"Show GUI" button checked. It will create the contact and then record anything else you do. Search for the contact and verify it
+gets selected. Enter the new usecase names and save the usecase file as before. This time you need to run the test by hand to collect
+the correct information in the stdout file.
+<div class="Text_Header">4.4 Refactor the "usecase language"</div>
+<div class="Text_Normal">
+This latest test now has a rather mechanical description of what is happening. It would be useful to raise the abstraction level and get
+a very succinct description. This would also allow us to easily create tests containing more contacts.
+</div>
+<div class="Text_Normal">
+Double-click the usecase file in this latest test. This brings up the StoryText Editor dialog. Select all the steps that consist of 
+creating the contact, right-click and press "Create shortcut". 
+</div>
+<div class="Text_Normal">
+It will suggest a very long name, referring to all the data you entered. Change it to something sensible and see how the contents evolve
+in the preview window below. Note that if you delete any of the data references this data will be hardcoded: if you leave them in 
+they will be treated as variables.
+</div>
+<div class="Text_Normal">
+You can also create a shortcut for the search function.
+</div>
+<div class="Text_Normal">
+When you close the StoryText editor, TextTest will ask to insert the created shortcuts into other tests. Answer Yes to this and it should 
+insert into the test we created first.
+</div>
+<div class="Text_Header">4.5 Create a test that creates two contacts and then sorts them, swapping the order</div>
+<div class="Text_Normal">
+Hint: do a partial recording again. Write the second contact by hand using the shortcut that is now there to vary the data.
+</div>
+<div class="Text_Header">4.6 Get the first test to ignore the menu contents</div>
+<div class="Text_Normal">
+StoryText assumes everything is important until you tell it otherwise. Under "Definition Files", create a "storytext_options" file 
+containing the string "-X Menu". This should mean that this test will not care about menu changes in future.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise5"></A>Exercise 5: The Continuous Integration Script</div>
 <div class="Text_Header">5.0 Install Mercurial and GCC if necessary</div>
