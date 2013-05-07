@@ -260,9 +260,17 @@ Instructions for how to do this can be found <A class="Text_Link" HREF="index.ph
 There is a small toy "bug system" in the exercise directory. It is downloaded from the PyGTK tutorial and
 is not "primed" for StoryText or anything. Fire it up and click around it a bit, you can hide and show
 the bugs in various categories and also sort the columns by clicking them, but you can't do much else...</div>
-<div class="Text_Header">4.2 Create a test with the help of StoryText</div>
+<div class="Text_Header">4.2 Create a test suite and start recording some some tests</div>
 <div class="Text_Normal">
 From this point you can pretty much follow the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=gui_tests"; ?>">GUI-testing tutorial</A>, which is designed to work with this example. Try to create some different tests and examine the "usecase" files and the "output" files in each one, and also the UI map file as it develops. 
+</div>
+<div class="Text_Header">4.3 Open a usecase file and Create a shortcut with the help of StoryText editor</div>
+<div class="Text_Normal">
+Select two or more consecutive actions and right click. Select "Create shortcut" from the context menu. 
+</div>
+<div class="Text_Header">4.4 Suppose that some widget name has changed and we need to change our mapping</div>
+<div class="Text_Normal">
+From StoryText editor expand some node in the tree and right click on a leaf action. Select "Update UI map file" from the context menu and chage the widget description.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise5"></A>Exercise 5: The Continuous Integration Script</div>
 <div class="Text_Header">5.0 Install Mercurial and GCC if necessary</div>
