@@ -277,6 +277,7 @@ texttest --new
 <?php codeSampleEnd() ?>
 
 again and fill in the initial dialog. Fill in "AddressBook" as the Java Class name and select SWT for the GUI testing option.
+<b>Do not</b> try to locate the AddressBook program as you may have done with other programs in previous exercises!
 </div>
 <div class="Text_Normal">
 Then, create a test as before, and do "Record Use-Case" on it. Create a contact in the address book, fill in some data (you don't 
