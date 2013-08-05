@@ -115,7 +115,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">&lt;empty&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Path to the built files in the archive, in case Jenkins fingerprints need double-checking</div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch_jenkins_archive_file_pattern">Path to the built files in the archive, in case Jenkins fingerprints need double-checking</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
