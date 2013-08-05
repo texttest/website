@@ -110,7 +110,7 @@ you the trouble. These mechanisms are platform specific and are described below.
 <div class="Text_Normal">
 In either case, to disable these mechanisms and show the GUI, for example to check visually what is happening
 or to record additional actions, you can check "Show GUI and record extra actions" 
-in the Running/Basic tab from the static GUI or (use the -gui flag on the command line).
+in the Running/Basic tab from the static GUI (or use the -gui flag on the command line).
 </div>
 <div class="Text_Header"><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_count"></A><A NAME="virtual_display_extra_args"></A>Hiding the SUT's windows (UNIX)</div>
 <div class="Text_Normal">All that is required for this to work is for the standard
