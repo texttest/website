@@ -192,7 +192,7 @@ file dictionary setting &ldquo;historical_report_colours&rdquo;. To
 see how to set this, look at the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A> and pattern match on the default value. Note that you can now configure the run header colours per day of the week
 if you wish to highlight runs made, for example, at the weekend when more tests may be run.</div>
-<div class="Text_Header"><A NAME="batch_jenkins_marked_artefacts"></A>HTML report integration with Jenkins</div>
+<div class="Text_Header"><A NAME="batch_jenkins_marked_artefacts"></A><A NAME="batch_jenkins_archive_file_pattern"></A>HTML report integration with Jenkins</div>
 <div class="Text_Normal">
 If you start your tests from the continuous integration software <A class="Text_Link" HREF="http://jenkins-ci.org/">Jenkins</A>, TextTest will notice this and will try to establish what has 
 changed in Jenkins since the last build. The resulting HTML report will then have an additional row marked "Changes", which will create links with the names of people who have committed
@@ -204,9 +204,15 @@ You can also tell it to highlight changes in particular artefacts produced as pa
 aren't picked up via normal means. You then set, for example
 <?php codeSampleBegin() ?>
 [batch_jenkins_marked_artefacts]
-MyComponent:.*-mycomponent-.*
+nightjob:mypackage.mycomponent
 <?php codeSampleEnd() ?>
-This will cause the plugin to check if an artefact matching the regular expression ".*-mycomponent-.*" has been changed, and if it has, add a message "MyComponent was updated" to the Changes row.
+This will cause the plugin to check if the artefact mypackage.mycomponent has been changed, and if it has, add a message "mypackage.mycomponent was updated" to the Changes row.
+Like all other batch settings this can be configured based on the batch session ID.</div>
+<div class="Text_Normal">
+A new and rather experimental feature is to double-check Jenkins' fingerprint data. When simultaneous builds are enabled the 
+fingerprints are sometimes wrong, as they are only based on the latest file for a particular component when the build is made.
+You can achieve this by setting "batch_jenkins_archive_file_pattern" to a path: this will then look in the workspace for the artefacts
+matching the archived version of a particular build and try to highlight when these differ from what Jenkins thinks they are.
 </div> 
 <div class="Text_Header"><A NAME="historical_report_resource_pages"></A><A NAME="historical_report_resource_page_tables"></A>Producing performance/memory versions of the HTML report </div>
 <div class="Text_Normal">
