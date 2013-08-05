@@ -171,8 +171,3 @@ In the case of Java and JUseCase it is translated to the "delay" Java property.
 Naturally for other tools a small wrapper script can be used to translate this into
 whatever the tool requires.
 </div>
-<div class="Text_Header">A sample config file for GUI testing</div>
-<div class="Text_Normal">In summary, our config file could look something like this:</div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/guiconfig.png" NAME="Graphic4" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
-
-</div>
