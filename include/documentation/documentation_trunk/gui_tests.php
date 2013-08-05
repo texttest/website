@@ -93,7 +93,7 @@ we can minimise changes in the tests themselves.</div>
 </div><div class="Text_Normal"><I>
 StoryText identifies widgets by name, title, label and type, in that order. Obviously here we are identfiying the main tree view by its type alone, which will break down as soon as the UI contains another one. Likewise, the title of our window might vary from run to run. For robustness it's therefore often necessary to assign widget names in your code, at which point this file should be updated with "Name=Bug tree view" instead of "Type=TreeView".</I>
 </div>
-<div class="Text_Header">Running a Test</div>
+<div class="Text_Header"><A NAME="-gui"></A>Running a Test</div>
 <div class="Text_Normal">Clearly, there is no need to run it once in order to collect
 the output as we did with &ldquo;hello world&rdquo;: this is
 built into the &ldquo;Record use-case&rdquo; operation.
@@ -106,6 +106,11 @@ to use your computer for anything else while the tests are running. This
 can be mitigated by running the tests on a different desktop or e.g. against
 a VNC server. TextTest however also has builtin means to do this and save
 you the trouble. These mechanisms are platform specific and are described below.
+</div>
+<div class="Text_Normal">
+In either case, to disable these mechanisms and show the GUI, for example to check visually what is happening
+or to record additional actions, you can check "Show GUI and record extra actions" 
+in the Running/Basic tab from the static GUI or (use the -gui flag on the command line).
 </div>
 <div class="Text_Header"><A NAME="TEXTTEST_XVFB_WAIT"></A><A NAME="virtual_display_machine"></A><A NAME="virtual_display_count"></A><A NAME="virtual_display_extra_args"></A>Hiding the SUT's windows (UNIX)</div>
 <div class="Text_Normal">All that is required for this to work is for the standard
@@ -154,15 +159,10 @@ up sometimes. To disable the window hiding altogether, you can set
 virtual_display_hide_windows:false
 <?php codeSampleEnd() ?>
 </div>
-<div class="Text_Header"><A NAME="-actrep"></A><A NAME="slow_motion_replay_speed"></A><A NAME="USECASE_REPLAY_DELAY"></A>Slow Motion Replay</div>
-<div class="Text_Normal">We might want to examine the behaviour of the GUI for a test.
-To do this, we set a default speed in seconds, for example
-<?php codeSampleBegin() ?>
-slow_motion_replay_speed:2
-<?php codeSampleEnd() ?>
-and then select "Run with slow motion replay" from the "Running" tab in the static GUI
-when we run the test. This will cause the replay to wait 2 seconds between replaying each GUI action.
-It will also cause the above window-hiding mechanisms to be disabled, naturally.
+<div class="Text_Header"><A NAME="-delay"></A><A NAME="USECASE_REPLAY_DELAY"></A>Adding a delay between actions</div>
+<div class="Text_Normal">We might want to examine the behaviour of the GUI for a test, or look for timing issues, by introducing a delay.
+This can be set from the Running /Basic tab, the entry named "Replay pause" in the static GUI when we run the test (or "-delay" on 
+the command line)
 </div>
 <div class="Text_Normal">
 This is translated to the environment variable USECASE_REPLAY_DELAY which is 

@@ -45,17 +45,6 @@ in the GUI. The "Brief Text" in the final column corresponds to the labels in th
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">-actrep</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Basic</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#-actrep">Run with slow motion replay</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">-b &lt;value&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -144,6 +133,17 @@ in the GUI. The "Brief Text" in the final column corresponds to the labels in th
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">-delay &lt;value&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Basic</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#-delay">Replay pause (sec) &lt;value&gt;</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">-desc &lt;value&gt;</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -228,6 +228,17 @@ in the GUI. The "Brief Text" in the final column corresponds to the labels in th
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=static_gui#-grepfile">Select test-file to search &lt;value&gt;</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">-gui</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Basic</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#-gui">Show GUI and record any extra actions</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
