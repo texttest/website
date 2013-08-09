@@ -1,4 +1,7 @@
-<div class="Text_Header">Full list of StoryText command line options (output of storytext --help)</div>
+<div class="Text_Header">Full list of StoryText command line options</div>
+<div class="Text_Description">(the output of 'storytext --help')</div>
+<div class="Text_Normal">
+
 <pre>
 Options:
   --version             show program's version number and exit
@@ -80,3 +83,5 @@ Options:
                         required
 
 </pre>
+
+</div>
