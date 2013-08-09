@@ -72,6 +72,20 @@
      You can also make other locally-relevant configuration changes for the tests in that file.
    </div>
    <div class="Text_Normal">
+     Note that StoryText is only runnable directly from its source tree when used on Python GUIs on Linux now. On Windows, or with 
+     Java GUIs, it will need to be installed using a command like 'python setup.py install' or 'jython setup.py install' respectively.
+     Doing this after every edit is something of a pain, so we suggest making use of <A class="Text_Link" HREF="http://www.virtualenv.org">virtualenv</A>
+     You can then create yourself a new clean installation and install a link to your source location there, and edits will
+     automatically be used. For example, to set up a jython development environment on Linux, you might do
+     <?php codeSampleBegin() ?>
+       jython virtualenv.py ~/.local/jython
+       export PATH=~/.local/jython/bin:$PATH
+       pip install -e <path_to_storytext_source>
+     <?php codeSampleEnd() ?>
+
+     You can then set your tests to run the location ~/.local/jython, and you won't need to run the install command all the time.
+   </div>
+   <div class="Text_Normal">
      We make every effort to ensure that the self-tests are always green. If they fail on the current source for you, the first 
      thing to do is to check their <A class="Text_Link" HREF="index.php?page=nightjob">status in the nightjob</A>. This page is 
      updated nightly with the result of test runs on Linux and Windows using different GTK versions. If something is failing you 
