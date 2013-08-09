@@ -74,13 +74,13 @@
    <div class="Text_Normal">
      Note that StoryText is only runnable directly from its source tree when used on Python GUIs on Linux now. On Windows, or with 
      Java GUIs, it will need to be installed using a command like 'python setup.py install' or 'jython setup.py install' respectively.
-     Doing this after every edit is something of a pain, so we suggest making use of <A class="Text_Link" HREF="http://www.virtualenv.org">virtualenv</A>
+     Doing this after every edit is something of a pain, so we suggest making use of <A class="Text_Link" HREF="http://www.virtualenv.org">virtualenv</A>.
      You can then create yourself a new clean installation and install a link to your source location there, and edits will
      automatically be used. For example, to set up a jython development environment on Linux, you might do
      <?php codeSampleBegin() ?>
-       jython virtualenv.py ~/.local/jython
-       export PATH=~/.local/jython/bin:$PATH
-       pip install -e <path_to_storytext_source>
+$ jython virtualenv.py ~/.local/jython
+$ export PATH=~/.local/jython/bin:$PATH
+$ pip install -e &lt;path_to_storytext_source&gt;
      <?php codeSampleEnd() ?>
 
      You can then set your tests to run the location ~/.local/jython, and you won't need to run the install command all the time.
