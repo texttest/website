@@ -174,8 +174,8 @@ whatever the tool requires.
 <div class="Text_Header"><A NAME="-screenshot"></A><A NAME="USECASE_REPLAY_SCREENSHOTS"></A>Generating screenshots between actions</div>
 <div class="Text_Normal">An easier way to examine the behaviour of the GUI without the possibility to intervene is to generate 
 screenshots after every replayed action in the test. This can be set from the Running /Basic tab, by checking the check box named "Generate a screenshot after each replayed action" 
-in the static GUI" before pressing "Run" (or by using "-screenshot" on the command line) 
-the command line)</div>
+in the static GUI before pressing "Run" (or by using "-screenshot" on the command line).
+</div>
 <div class="Text_Normal">
 This is translated to the environment variable USECASE_REPLAY_SCREENSHOTS which is 
 forwarded to the system under test. StoryText uses this variable directly.
