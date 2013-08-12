@@ -208,6 +208,14 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">USECASE_REPLAY_SCREENSHOTS</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=gui_tests#USECASE_REPLAY_SCREENSHOTS">Whether to take screenshots between each action in GUI tests</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">USECASE_REPLAY_SCRIPT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
