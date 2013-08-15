@@ -182,3 +182,10 @@ forwarded to the system under test. StoryText uses this variable directly.
 Naturally for other GUI-replay tools a small wrapper script can be used to translate this into
 whatever the tool requires.
 </div>
+<div class="Text_Header"><A NAME="default.FilterUIMapFile"></A>Cleaning out old unused StoryText data</div>
+<div class="Text_Normal">
+After a while it's easy to accumulate unused entries in the "UI map file", which it can be useful to find automatically
+and clean out. You can do this by running "texttest -s default.FilterUIMapFile". Be warned this script edits the UI map file
+in place, so it's good to back it up if you don't have version control! It will also list unused StoryText shortcuts,
+so that you can remove those if desired.
+</div>

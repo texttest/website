@@ -274,7 +274,7 @@ Weekend:saturday
 Weekend:sunday
 <?php codeSampleEnd() ?>
 </div>
-<div class="Text_Header"><A NAME="batch.ArchiveRepository"></A>
+<div class="Text_Header"><A NAME="batch.ArchiveRepository"></A><A NAME="batch.ArchiveHTML"></A>
 Archiving old data from the HTML reports</div>
 <div class="Text_Normal">
 After a while, very old test results in the repository cease
@@ -284,14 +284,35 @@ the script batch.ArchiveRepository, with arguments 'after' and
 batch session to do it on is provided in the normal way via -b on the command line, 
  it defaults to all known sessions if none is provided). The
 dates should be in the same format as the dates on the pages,
-e.g. 21Jan2005. This should be less critical now if you aren't
-generating an "All" page, which otherwise can take an extremely
-long time to generate with a year's data in it, but even so just
-searching for the files can take a while if there are a lot of them.
-It doesn't actually delete things but moves them to an &lt;app&gt;_history
-subdirectory of the location specified by "batch_result_repository", where
-they will not be picked up by report generation script and may be restored
-if desired.
+e.g. 21Jan2005. The generation only uses files from the last month by default, 
+but even so just searching for the files can take a while if there are a lot of them.
+</div>
+<div class="Text_Normal">
+It doesn't actually delete things but creates a tarball in the location specified by 
+"batch_result_repository", named by the date provided. By  generating using the "-collarchive"
+flag (see above) you can include this data when generating the pages afresh.
+</div>
+<div class="Text_Normal">
+If you have specified a weekday-specific page using "historical_report_subpage_weekdays" (see above)
+it can be useful to keep a longer time period for those weekdays, so that this page is not unduly truncated.
+This can be done with the parameter "weekday_pages_before", with the same format as above. So for example 
+if on March 1st you decide to keep all data for February but only the weekday pages for January, you would specify
+
+<?php codeSampleBegin() ?>
+texttest -s "batch.ArchiveRepository before=01Feb2013 weekday_pages_before=01Jan2013"
+<?php codeSampleEnd() ?>
+
+</div>
+<div class="Text_Normal">
+It is also possible to archive the actual HTML pages, as well as the stored test results. It takes a lot
+longer for there to be so many of these that it's a problem (a year or even two of data is no problem), 
+but even so it has been known to be useful to archive them after 10 years or so...
+</div>
+<div class="Text_Normal">
+This is done at the granularity of 1 month, using the script batch.ArchiveHTML, for example:
+<?php codeSampleBegin() ?>
+texttest -s "batch.ArchiveHTML before=Jan2012"
+<?php codeSampleEnd() ?>
 </div>
 <div class="Text_Header"><A NAME="batch_timelimit"></A><A NAME="batch_filter_file"></A><A NAME="batch_use_version_filtering"></A><A NAME="batch_version"></A><A NAME="batch_extra_version"></A><A NAME="-bx"></A>
 
