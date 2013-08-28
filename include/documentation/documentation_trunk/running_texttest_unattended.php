@@ -200,6 +200,19 @@ changes, linking directly to the Jenkins pages with the changes. If you are also
 also identify bug IDs in the commit messages and link those directly also.
 </div>
 <div class="Text_Normal">
+This functionality relies on <A class="Text_Link" HREF="https://wiki.jenkins-ci.org/display/JENKINS/Fingerprint">Jenkins fingerprinting</A>,
+which you need to enable. Another complication is that the fingerprints for a job are written only after it and all its post-steps have exited,
+so to generate the report with correct changes information from the same job requires starting TextTest in the background and decoupling
+it from Jenkins. You do this as follows, from within the Jenkins job:
+
+<?php codeSampleBegin() ?>
+export BUILD_ID=none # Stops Jenkins from killing this process when the job exits
+texttest -coll web -b &lt;batch_session&gt; &amp;
+<?php codeSampleEnd() ?>
+
+</div>
+
+<div class="Text_Normal">
 You can also tell it to highlight changes in particular artefacts produced as part of the Jenkins build, in case these are imported from outside the Jenkins build periodically and so changes in them
 aren't picked up via normal means. You then set, for example
 <?php codeSampleBegin() ?>
