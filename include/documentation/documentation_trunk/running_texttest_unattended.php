@@ -28,7 +28,7 @@ batch mode config file settings that start with &ldquo;batch_&rdquo;
 with the batch session names as keys, it is recommended to read
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file
 format documentation</A> for what this means.</div>
-<div class="Text_Header">>Exit Codes</div>
+<div class="Text_Header">Exit Codes</div>
 <div class="Text_Normal">
 TextTest will return an exit code of 0 if all tests succeed or have <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">known bugs</A>.
 If any tests fail (have differences) it will return an exit code of 1. If any tests have <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">performance or memory differences</A>,
