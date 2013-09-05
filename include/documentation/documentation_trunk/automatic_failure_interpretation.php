@@ -81,8 +81,11 @@ knownbugs look like in the test tree when not selected)
 <div class="Text_Normal">
 Ordinarily, you will search for some text that will be produced in a certain file, as
 given by the "file to search in" entry. This will search the unfiltered version of the file
-(not the diff produced in the Text Info window). This can be inverted via the check box in the top
-section, so that the bug is triggered when the text is not present.
+(not the diff produced in the Text Info window). This can be inverted via the radio buttons in the top
+section, so that the bug is triggered when the text is not present. It can also be converted to a check
+for an exact match, which is mostly useful for small diffs in the "full difference report" (see below)
+where things have been removed and you don't want to trigger the bug if there are other differences, like
+the test not having even got to that point.
 </div>
 <div class="Text_Normal">
 In addition to searching in specific files, you can also select "brief text/details" or "full difference

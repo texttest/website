@@ -2,8 +2,8 @@
 <div class="Text_Description"> A Guide to Batch Mode</div>
 
 <div class="Text_Header"><A NAME="-b"></A>Introduction</div>
-<div class="Text_Normal">It can be very useful to have TextTest run lots of longer
-tests (say) overnight and provide the results in an email, an
+<div class="Text_Normal">It can be very useful to have TextTest run unattended and regularly 
+and provide the results in an email, an
 HTML report or on your continuous integration server rather than have one of the 
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=guide_to_texttest_ui"; ?>">interactive
 user interfaces</A> present. That is the purpose of &ldquo;batch
@@ -12,9 +12,11 @@ option &ldquo;-b &lt;batch_session&gt;&rdquo; or fill in the
 &ldquo;Run Batch Mode Session&rdquo; tab under &ldquo;How to
 Run&rdquo; in the static GUI. In general, you will probably want
 to start such batch runs via a script, for example using crontab
-on UNIX. TextTest can also produce results
+on UNIX, or from a continuous integration server. TextTest can also produce results
 in a format compatible with JUnit, which means popular CI servers
-(for example <A class="Text_Link" href="http://hudson-ci.org">Hudson</A>) can display them in the same way as unit test results.</div>
+(for example <A class="Text_Link" href="http://jenkins-ci.org">Jenkins</A>) can display them in the same 
+way as unit test results. As seen later, TextTest now also integrates directly with Jenkins and can provide
+information from it in its batch report</div>
 
 <div class="Text_Normal">The batch mode &ldquo;session&rdquo; is simply an identifier
 that defines a particular sort of batch run. Most of the batch
@@ -26,6 +28,14 @@ batch mode config file settings that start with &ldquo;batch_&rdquo;
 with the batch session names as keys, it is recommended to read
 the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats"; ?>">file
 format documentation</A> for what this means.</div>
+<div class="Text_Header">>Exit Codes</div>
+<div class="Text_Normal">
+TextTest will return an exit code of 0 if all tests succeed or have <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">known bugs</A>.
+If any tests fail (have differences) it will return an exit code of 1. If any tests have <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">performance or memory differences</A>,
+but none have "failed properly", then it will return an exit code of 2.</div>
+<div class="Text_Normal">
+These codes will be interpreted directly by CI servers, and you can also easily write a wrapper script to take appropriate actions.
+</div>
 <div class="Text_Header"><A NAME="-zen"></A>The console output and how to make it colourful</div>
 <div class="Text_Normal">
 None of the reports described are enabled by default, so it's possible to just use batch mode runs and monitor their console output. This is particularly useful in continuous testing environments such as <A class="Text_Link" href="http://www.zenspider.com/ZSS/Products/ZenTest">ZenTest</A>. However, with everything being black and white it can be hard to notice when tests succeed and fail. You can therefore provide the "-zen" option on the command line which will produce green and red console output when appropriate. This works on both POSIX and Windows, albeit in totally different ways internally.
@@ -74,9 +84,11 @@ In addition, it can be useful to configure the maximum width of
 lines allowed: some newsgroups have maximum line length limits
 and you don't want test reports bouncing. This can be done via
 the config file entry &ldquo;max_width_text_difference&rdquo;.</div>
-<div class="Text_Normal">You can also configured it so that mail is only sent
+<div class="Text_Normal">You can also configure it so that mail is only sent
 if at least one test fails, set the config file entry &ldquo;batch_mail_on_failure_only&rdquo;
-to "true". By default mail will always be sent irrespective of what happens.
+to "true". By default mail will always be sent irrespective of what happens. This uses
+the same criteria as that which sets the exit code to 0: i.e. mail will also not be
+sent if there are only succeeded tests and <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">known bugs</A>.
 </div>
 <div class="Text_Normal">Where the mail is sent to is controlled by the config file
 entry &ldquo;batch_recipients&rdquo;. This can be configured per
