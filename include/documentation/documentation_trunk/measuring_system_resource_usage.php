@@ -222,7 +222,7 @@ is no more than a certain figure.
 </div>
 <div class="Text_Normal">
 There is also an entry
-&ldquo;minimum_performance_for_test&rdquo;, which can be used to
+&ldquo;performance_test_minimum&rdquo;, which can be used to
 say, for example, that a test must run for at least 5
 CPU-seconds before it is worth comparing it.</div>
 <div class="Text_Normal">
