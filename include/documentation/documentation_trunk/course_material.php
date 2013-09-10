@@ -382,7 +382,7 @@ more interesting if the tests still have some failures sometimes, so you can sab
 <div class="Text_Normal">
 You can then generate an additional page with just the various performance and memory data on it. As there aren't many tests it makes
 sense to try and make sure this is on the same page. You can look up the config file settings for "historical_report_resource_pages" 
-in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=config_default"; ?>">configuration file references</A>
+in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">configuration file references</A>
 to work out how to do this. 
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise8"></A>Exercise 8: The Continuous Integration Script</div>
