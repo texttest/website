@@ -60,13 +60,18 @@ which indicates that performance should be tested on any machine
 for this system resource id. Note that it may be very useful to
 use the key &ldquo;default&rdquo; here, to save lots of repeated
 typing.</div>
+<div class="Text_Normal">
+A common move is therefore to set
+<?php codeSampleBegin() ?>
+[performance_test_machine]
+default:any
+<?php codeSampleEnd() ?>
+which has the dual effect of disabling machine-based checks for all kinds of
+performance testing, and enabling the builtin CPU time measurement, see below.
+</div>
 <div class="Text_Normal">Running the test on any machine outside the list will still
 work, but no performance-related information will be generated
-or compared. It is also possible to disable collecting
-/performance-related information: use the &ldquo;-noperf&rdquo;
-flag on the command line, or select &ldquo;Disable any
-performance testing&rdquo; from the static GUI's &ldquo;How to
-Run&rdquo; tab.</div>
+or compared.</div>
 
 <div class="Text_Header"><A NAME="cputime_include_system_time"></A>Measuring CPU time
 consumption directly with TextTest (UNIX only)</div>

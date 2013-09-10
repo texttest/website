@@ -47,7 +47,7 @@ view_program:gedit
               <li>sharing configuration between applications</li>
             </UL>
           </div></li>
-        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise4">Exercise 4: The Eclipse/SWT GUI</A> <i>(Difficulty: Medium)</i></div>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise6">Exercise 6: The Eclipse/SWT GUI</A> <i>(Difficulty: Medium)</i></div>
           <div class="Text_Normal">
             There is a simple Eclipse-SWT based GUI you can test here. This is intended to teach the basics of GUI testing with TextTest. 
             This will teach you
@@ -58,7 +58,18 @@ view_program:gedit
               <li>filtering the generated GUI output at the widget level</li>
             </UL>
           </div></li>
-        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise5">Exercise 5: The Continuous Integration script</A> <i>(Difficulty: Hard - at least the later steps are)</i></div>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise7">Exercise 7: Testing performance and memory</A> <i>(Difficulty: Medium)</i></div>
+          <div class="Text_Normal">
+            There is a small test suite here with a program which can be used for trying out the features in TextTest for
+            managing system resources. This will teach you
+            <UL>
+              <li>how to measure CPU time consumed using the builtin integration with GNU "time"</li>
+              <li>extracting reported performance and memory numbers from the output</li>
+              <li>configuring how they are compared using the threshold config settings</li>
+              <li>integrating this data into your batch report</li>
+            </UL>
+          </div></li>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise8">Exercise 8: The Continuous Integration script</A> <i>(Difficulty: Hard - at least the later steps are)</i></div>
           <div class="Text_Normal">
             This is based on a real program that updates some code from source control, tries to compile it remotely and sends an 
             email if it fails. The earlier part recaps a fair amount of what was done in Exercise 2 in a different context 
@@ -251,12 +262,12 @@ unless you explcitly name the run (-name on the command line)
 It's not so nice that we've had to copy the same information to two different files. Try to extract it out to a
 separate file and "import" it into your config files. Look at "import_config_file" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A> for information on how to do this.
 </div>
-<div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The SWT/Eclipse GUI</div>
-<div class="Text_Header">4.0 Download and install StoryText version 3.6 or newer if you don't have it yet</div>
+<div class="Text_Main_Header"><A NAME="Exercise6"></A>Exercise 6: The SWT/Eclipse GUI</div>
+<div class="Text_Header">6.0 Download and install StoryText version 3.6 or newer if you don't have it yet</div>
 <div class="Text_Normal">
 Instructions for how to do this can be found <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">here</A>.
 </div>
-<div class="Text_Header">4.1 Try out the SWT Address Book</div>
+<div class="Text_Header">6.1 Try out the SWT Address Book</div>
 <div class="Text_Normal">
 From the command line, type
 <?php codeSampleBegin() ?>
@@ -269,7 +280,7 @@ Note that the <A class="Text_Link" HREF="<?php print "index.php?page=".$version.
 GUI-testing tutorial</A> has a large overlap with this, although based around a different app. If anything here is unclear
 it may help to look at that for more detailed descriptions and screenshots.
 </div>
-<div class="Text_Header">4.2 Create your first test that creates a contact in the address book</div>
+<div class="Text_Header">6.2 Create your first test that creates a contact in the address book</div>
 <div class="Text_Normal">
 Start
 <?php codeSampleBegin() ?>
@@ -290,13 +301,13 @@ The test will then be replayed in the background and the expected behaviour coll
 examine it so you can see what is being compared. Visit the config tab also and view the UI map file (ui_map.conf) which is what 
 has been created by the usecase name entry dialog.
 </div>
-<div class="Text_Header">4.2 Run the test, with and without the GUI showing</div>
+<div class="Text_Header">6.2 Run the test, with and without the GUI showing</div>
 <div class="Text_Normal">
 If you press "Run" now, the test will run without the GUI showing, using the virtual display program "Xvfb". Xvfb produces warnings
 on some Linux systems, which you might need to add run_dependent_text for as in Exercise 2. To see the test execute in the GUI, check 
 the "Show GUI" option, and increase the "Replay pause" setting a bit so it goes slowly enough to view it. 
 </div>
-<div class="Text_Header">4.3 Create a new test, via a "partial recording"</div>
+<div class="Text_Header">6.3 Create a new test, via a "partial recording"</div>
 <div class="Text_Normal">
 This time we want to test the search functionality. We could just create our contact again, but that would be a pain, and we might
 make the data in it subtly different by mistake. So instead of recording from scratch, we will start from part of the previous test.
@@ -305,7 +316,7 @@ Copy the test you have created, and edit the copied usecase file to remove the s
 gets selected. Enter the new usecase names and save the usecase file as before. This time you need to run the test by hand to collect
 the correct information in the stdout file.
 </div>
-<div class="Text_Header">4.4 Refactor the "usecase language"</div>
+<div class="Text_Header">6.4 Refactor the "usecase language"</div>
 <div class="Text_Normal">
 This latest test now has a rather mechanical description of what is happening. It would be useful to raise the abstraction level and get
 a very succinct description. This would also allow us to easily create tests containing more contacts.
@@ -326,35 +337,73 @@ You can also create a shortcut for the search function.
 When you close the StoryText editor, TextTest will ask to insert the created shortcuts into other tests. Answer Yes to this and it should 
 insert into the test we created first.
 </div>
-<div class="Text_Header">4.5 Create a test that creates two contacts and then sorts them, swapping the order</div>
+<div class="Text_Header">6.5 Create a test that creates two contacts and then sorts them, swapping the order</div>
 <div class="Text_Normal">
 Hint: do a partial recording again. Write the second contact by hand using the shortcut that is now there to vary the data.
 </div>
-<div class="Text_Header">4.6 Get the first test to ignore the menu contents</div>
+<div class="Text_Header">6.6 Get the first test to ignore the menu contents</div>
 <div class="Text_Normal">
 StoryText assumes everything is important until you tell it otherwise. Under "Definition Files", create a "storytext_options" file 
 containing the string "-X Menu". This should mean that this test will not care about menu changes in future.
 </div>
-<div class="Text_Main_Header"><A NAME="Exercise5"></A>Exercise 5: The Continuous Integration Script</div>
-<div class="Text_Header">5.0 Install Mercurial and GCC if necessary</div>
+<div class="Text_Main_Header"><A NAME="Exercise7"></A>Exercise 7: Performance and Memory Testing</div>
+<div class="Text_Header">7.0 Start and run the pre-made tests for this program</div>
+This can be done via
+<?php codeSampleBegin() ?>
+texttest -a cpumem
+<?php codeSampleEnd() ?>
+There are three tests, which take a random amount of time to execute and report some other timing and memory usage in their standard 
+output. They should succeed as they define some filterings which prevent the varying resource usage from failing the tests.
+</div>
+<div class="Text_Header">7.1 Enable TextTest's built in measurement of CPU time consumed</div>
+<div class="Text_Normal">
+See <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">the docs</A> for how to
+do this.
+</div>
+<div class="Text_Header">7.2 Try to stabilise the results by setting the minimum and tolerance thresholds</div>
+<div class="Text_Normal">
+The second test runs nearly instantaneously, so you should set a minimum using "performance_test_minimum" to prevent this
+test being included in the performance runs. The others vary somewhat, set the tolerance ("performance_variation_%") accordingly
+until they're reliably green. Try not to overdo it, obviously 1000% tolerance will work but it won't be very useful in practice!
+</div>
+<div class="Text_Header">7.3 Configure TextTest to extract the memory and 'database load' time from the stdout</div>
+<div class="Text_Normal">
+This involves using the setting "performance_logfile_extractor". When you have results, try to set tolerances accordingly as above
+until the tests are reliably green. Note it is possible to saved the average of the stored and received performances, by doing
+"Save As" and then checking the relevant option. This helps make sure the stored performance is in the middle of the range of 
+performances, which allows you to have a lower tolerance than if it's at one end of the range.
+</div>
+<div class="Text_Header">7.4 Create an HTML report of these results, with performance subpages</div>
+<div class="Text_Normal">
+Do something similar to what you did in Exercise 3 for these tests. Run two or three named runs to gather some data. The data is
+more interesting if the tests still have some failures sometimes, so you can sabotage the tolerance a bit if you like!
+</div>
+<div class="Text_Normal">
+You can then generate an additional page with just the various performance and memory data on it. As there aren't many tests it makes
+sense to try and make sure this is on the same page. You can look up the config file settings for "historical_report_resource_pages" 
+in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=config_default"; ?>">configuration file references</A>
+to work out how to do this. 
+</div>
+<div class="Text_Main_Header"><A NAME="Exercise8"></A>Exercise 8: The Continuous Integration Script</div>
+<div class="Text_Header">8.0 Install Mercurial and GCC if necessary</div>
 <div class="Text_Normal">
 This exercise assumes you have the <A class="Text_Link" HREF="http://mercurial.selenic.com">Mercurial version-control system</A> and the <A class="Text_Link" HREF="http://gcc.gnu.org">GCC C compiler</A> installed. If you don't you need to get them.
 </div>
-<div class="Text_Header">5.1 Introduction</div>
+<div class="Text_Header">8.1 Introduction</div>
 <div class="Text_Normal">
 In the directory for exercise 5, under scripts/automatic_build.py you will find a small "continuous integration"
 script. The basic idea is to update some code (in fact a C hello world program) from Mercurial source control, if 
 there are changes trigger a build on several machines in parallel, and send an email if any of them fail.
 The aim of the exercise is to create repeatable TextTest tests for this apparently hard-to-test script without 
 even making any changes to it...</div>
-<div class="Text_Header">5.2 Try out the script</div>
+<div class="Text_Header">8.2 Try out the script</div>
 <div class="Text_Normal">
 Go to the ex5_ci_script directory and run "scripts/automatic_build.py". 
 (It expects to be run from this directory) There are no updates from source control, 
 so it does not do anything. Note however that it created a timestamped directory under "logs"
 containing a file showing what the source control did.
 </div>
-<div class="Text_Header">5.3 Write a test for this behaviour</div>
+<div class="Text_Header">8.3 Write a test for this behaviour</div>
 <div class="Text_Normal">
 Run texttest.py --new, select the script above, and create a test for no changes, as done before. 
 The script tries to update "source" from "repo" so you'll need to add both of these as test data
@@ -364,7 +413,7 @@ to make changes there.</div>
 It will however fail if you run it again, because it tells you about its
 log directory which is timestamped. Filter it in the same way as you did with exercise 2.
 </div>
-<div class="Text_Header">5.4 Make the test check the contents of the logs</div>
+<div class="Text_Header">8.4 Make the test check the contents of the logs</div>
 <div class="Text_Normal">
 The test is now repeatable, but it tells us it's writing some logs,
 which we can't see. Let's make sure they're sensible. Set
@@ -381,7 +430,7 @@ part of the baseline for the test. You'll need to use a file expansion this time
 that directories beginning with "." do not match the simple expansion "*", so you'll need
 to provide part of the name also.
 </div>
-<div class="Text_Header">5.5 Make the test independent of the current state of the Mercurial repository</div>
+<div class="Text_Header">8.5 Make the test independent of the current state of the Mercurial repository</div>
 <div class="Text_Normal">
 There is one problem still: the test still relies on the Mercurial
 checkout ("source") being up to date. You should capture this state somehow so that 
@@ -393,7 +442,7 @@ sandbox directory too, but we did that in exercise 2 also.</div>
 <div class="Text_Normal">
 We now have a perfect test for no changes in source control!
 </div>
-<div class="Text_Header">5.6 Create a test that actually triggers a build</div>
+<div class="Text_Header">8.6 Create a test that actually triggers a build</div>
 <div class="Text_Normal">
 Investigate what the script does in these circumstances outside of TextTest first, 
 so you understand what you're testing. Go to the shell in the exercise directory.
@@ -410,7 +459,7 @@ run and the updates performed on the copy, so the test can be run repeatedly
 without needing to do more checkins.
 </div>
 <div class="Text_Normal">
-If you've handled Mercurial correctly in step 5.5 you should be able to
+If you've handled Mercurial correctly in step 8.5 you should be able to
 capture the current Mercurial behaviour and protect your tests from future
 changes in the repository also. Note that TextTest also captures the file
 edit made by Mercurial and replays it, even when you run the test without
@@ -423,7 +472,7 @@ test for the build failing.</div>
 <div class="Text_Normal">
 You should now have 3 repeatable tests, congratulations!
 </div>
-<div class="Text_Header">5.7 Disable and test the email sending</div>
+<div class="Text_Header">8.7 Disable and test the email sending</div>
 <div class="Text_Normal">
 Each time you run the tests where builds fail it tries to send an email. We probably 
 don't want to be sending these emails for real, but we do want to check that 
@@ -438,7 +487,7 @@ the command-line "hg" program above. See <A class="Text_Link" HREF="<?php print 
 <div class="Text_Normal">
 We can then "record" the email sending and check the email arrives and looks right, and then when running the test check our interaction with the "smtplib" module remains the same as when we recorded it.
 </div>
-<div class="Text_Header">5.8 Simulate the remote build</div>
+<div class="Text_Header">8.8 Simulate the remote build</div>
 <div class="Text_Normal">
 The remote build is always failing: it's trying to reach a machine that 
 doesn't exist with ssh.
