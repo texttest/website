@@ -348,6 +348,7 @@ containing the string "-X Menu". This should mean that this test will not care a
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise7"></A>Exercise 7: Performance and Memory Testing</div>
 <div class="Text_Header">7.0 Start and run the pre-made tests for this program</div>
+<div class="Text_Normal">
 This can be done via
 <?php codeSampleBegin() ?>
 texttest -a cpumem
