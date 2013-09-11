@@ -325,7 +325,7 @@ texttest -a lesson3
 <div class="Text_Header">4.2 Select each test, fill in the blanks, and make it green</div>
 <div class="Text_Normal">
 This works in much the same way as Exercise 2. The tests under "Filtering" are running "grep -E -v" as their system under test,
-which simulates many filtering regular expression usage in TextTest. Replace the underscores in the "options" files with a regular
+which simulates filtering with regular expressions in TextTest. Replace the underscores in the "options" files with a regular
 expression which will filter away the relevant lines and make the test green. Do not Save or change anything else! Read
 the descriptions of the tests for further hints, in the bottom right pane.
 </div>
