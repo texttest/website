@@ -315,7 +315,7 @@ It's not so nice that we've had to copy the same information to two different fi
 separate file and "import" it into your config files. Look at "import_config_file" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A> for information on how to do this.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The Regular Expression Koans</div>
-<div class="Text_Header">4.1 Start TextTest with the Regular Expression Koans tests loaded</div>
+<div class="Text_Header">4.1 Start TextTest with the relevant tests loaded</div>
 <div class="Text_Normal">
 You can do this via
 <?php codeSampleBegin() ?>
@@ -334,16 +334,14 @@ The tests under "Replacing" use TextTest's "run_dependent_text" filtering, encou
 replace clause in the config files with something appropriate, you can see the result in the output, and practice with back references
 that are very useful for replacement.
 </div>
-<div class="Text_Normal">
-After you have got each test working, discuss briefly with your partner what you learnt about TextTest from it.
-</div>
 <div class="Text_Header">4.3 Experiment with "Replace Text in Files"</div>
 <div class="Text_Normal">
 Output from TextTest tests frequently changes in predictable ways. Then it can be very useful to update lots of stored behaviour
 and configuration with a single regular expression replacement. 
 </div>
 <div class="Text_Normal">
-Play around with this feature a bit and try to change the test results. Note that each row is treated independently so it's possible
+Play around with this feature a bit (from the Actions menu) and try to change the test results. 
+Note that each row is treated independently so it's possible
 to replace multiple lines, and also to remove and add lines. Try this out, and experiment with the back references you just learned about also. The feature will perform the replacement in a dynamic GUI run so nothing will be changed permanently unless you do Save there.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise6"></A>Exercise 6: The SWT/Eclipse GUI</div>
