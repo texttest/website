@@ -4,10 +4,18 @@
 <div class="Text_Normal">
 This document assumes you have already installed TextTest as described in the Installation Guide. To do these exercises, start by downloading the "systems under test" and test data from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>. Unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory.</div>
 <div class="Text_Normal">
-For each exercise there is a subdirectory of "tests" containing the program you are to test and any test-data : you should use TextTest to create tests under that directory in each case. Exercise 3 is the exception: it has no directory because the point is to modify the tests you have made in the other exercises.
+  For each exercise there is a subdirectory of "tests" containing the program you are to test and any test-data. Some exercises 
+  use TextTest to create tests under that directory, others start with a existing suite and make it work or improve it. 
+  Exercise 3 is the exception: it has no directory because the point is to modify the tests you have made in the other exercises.
 </div>
 <div class="Text_Normal">
-There are a total of 5 exercises. It is suggested to start with exercise 1 and then Exercise 2 which covers most of the things a normal testsuite is likely to run into. The others are mostly useful for when you wish to use the features that they are aimed at exploring.</div>
+  There are a total of 8 exercises. It is suggested to start with Exercise 1 and then Exercise 2 which covers most of the things a normal testsuite is likely to run into. The others are mostly useful for when you wish to use the features that they are aimed at exploring.
+</div>
+<div class="Text_Normal">
+Note that Exercise 2 comes in two versions that cover mostly the same functionality. The suggested version now is the "TextTest Koans"
+which involves fixing up an existing test suite by filling in "blanks" in various files, and works more by experiment and trial and error
+than by following detailed instructions. The original version is more like the other exercises and involves building up the test suite from scratch, with detailed instructions.
+</div>
 <div class="Text_Normal">
 You can also download <A class="Text_Link" HREF="files/texttest_course_solutions.zip">my own solutions</A> to these exercises in case you get stuck or just prefer to browse a solution rather than try to create one yourself...
 </div>
@@ -26,7 +34,20 @@ view_program:gedit
             It purely involves clicking around in the GUI, and is the standard "Getting Started" tutorial above.
             Remember to choose the ex1_hello directory as subdirectory in the initial creation screen.
           </div></li>
-        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise2">Exercise 2: Search/Replace Script</A> <i>(Difficulty: Medium)</i></div>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise2">Exercise 2: TextTest Koans</A> <i>(Difficulty: Medium)</i></div>
+          <div class="Text_Normal">
+            This is a new, slightly experimental approach that builds on trying things out rather than following detailed instructions. It is inspired by the <A class="Text_Link" HREF="http://rubykoans.com/">Ruby Koans</A> and made in collaboration with the author of the
+<A class="Text_Link" HREF="https://github.com/approvals/ApprovalTests.Net.Koans">Approval Tests Koans</A> (thanks to Llewellyn Falco).
+It will teach you
+            <UL>
+              <li>command-line options, environment variables and standard input</li>
+              <li>how to handle test data</li>
+              <li>how to filter run-dependent output from the program</li>
+              <li>how to monitor changes in different files</li>
+              <li>hierarchical organisation of information in TextTest</li>
+            </UL>
+          </div></li>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise2_orig">Exercise 2 (original version): Search/Replace Script</A> <i>(Difficulty: Medium)</i></div>
           <div class="Text_Normal">
             This is a fairly basic Python script that provides a simple command-line interface to searching and replacing text 
             across multiple files. It will teach you
@@ -45,6 +66,16 @@ view_program:gedit
             <UL>
               <li>configuring unattended runs of your tests</li>
               <li>sharing configuration between applications</li>
+            </UL>
+          </div></li>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise4">Exercise 4: Regular Expressions Koans</A> <i>(Difficulty: Medium)</i></div>
+          <div class="Text_Normal">
+            This exercise is also in a Koans style (see exercise 2 above) and involves purely learning and practicing Regular Expressions,
+            which are used for text manipulation in many areas of TextTest. Being effective with them will make you more effective with 
+            TextTest. This will teach you:
+            <UL>
+              <li>All the various common tricks involved in making a regular expression</li>
+              <li>Using regular expressions for replacement</li>
             </UL>
           </div></li>
         <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise6">Exercise 6: The Eclipse/SWT GUI</A> <i>(Difficulty: Medium)</i></div>
@@ -87,8 +118,27 @@ view_program:gedit
           </div></li>
 </UL>
 
-<div class="Text_Main_Header"><A NAME="Exercise2"></A>Exercise 2: The Search/Replace Script</div>
-<div class="Text_Header">2.1 Try out the script</div>
+<div class="Text_Main_Header"><A NAME="Exercise2"></A>Exercise 2 (new version): The TextTest Koans</div>
+<div class="Text_Header">2.1 Start TextTest with the Koans tests loaded</div>
+<div class="Text_Normal">
+You can do this via
+<?php codeSampleBegin() ?>
+texttest -a lesson1,lesson2
+<?php codeSampleEnd() ?>
+<div class="Text_Header">2.2 Select each test, fill in the blanks, and make it green</div>
+<div class="Text_Normal">
+The aim of the Koans exercise is to select each test in turn, and make them all succeed by filling in the blanks. 
+Each of them contain, in one of their files, something looking like "__fill in this blank__" or just "____", 
+replace these with the correct content to make the test work. Many of them contain additional hints in their 
+Description, look at the bottom right pane when the test is selected.</div>
+<div class="Text_Normal">
+After you have got each test working, discuss briefly with your partner what you learnt about TextTest from it.
+</div>
+<div class="Text_Normal">
+(NOTE: The first two tests do not have any blanks, they just get you used to running a test and saving a test. Pressing "Save" to make any test after the second one green is cheating!) 
+</div>
+<div class="Text_Main_Header"><A NAME="Exercise2_orig"></A>Exercise 2 (original version): The Search/Replace Script</div>
+<div class="Text_Header">2o.1 Try out the script</div>
 <div class="Text_Normal">
 Change directory to "tests/ex2_searchreplace". Here you will find the script "searchreplace.py" and a 
 file "file.txt" which is meant as test data. Start by trying it out a bit so you understand what it does 
@@ -109,7 +159,7 @@ y
 gewoia : cat file.txt
 foo
 <?php codeSampleEnd() ?></div>
-<div class="Text_Header">2.2 Start Texttest and tell it about the application</div>
+<div class="Text_Header">2o.2 Start Texttest and tell it about the application</div>
 <div class="Text_Normal">
 It's probably easiest to close the TextTest static GUI from "Hello World" and 
 restart it with
@@ -124,12 +174,12 @@ Hello World tests still loaded if you prefer.
 Select the script, choose the "ex2_searchreplace" directory as subdirectory, choose a suitable extension as you
 did for Hello World (don't choose "txt" as that will cause confusion with "file.txt").
 </div>
-<div class="Text_Header">2.3 Create an "empty" test</div>
+<div class="Text_Header">2o.3 Create an "empty" test</div>
 <div class="Text_Normal">
 The easiest test to specify is one that contains no arguments. Create a test as for Hello 
 World. You should get some kind of "Usage" error from the script. Save this behaviour as correct.
 </div>
-<div class="Text_Header">2.4 Create a test with the right number of arguments</div>
+<div class="Text_Header">2o.4 Create a test with the right number of arguments</div>
 <div class="Text_Normal">
 This time enter e.g. "foo bar file.txt" (if you changed the file as in my example above)
 in the "Command Line Options" field in the "Add Test" dialog box. (Or copy the test,
@@ -157,7 +207,7 @@ you do without needing to rerun the test every time, by pressing "F5" (Recompute
 rerun the filtering on an existing test run. The filtered versions of the files can be viewed by right-clicking
 on the files also.
 </div>
-<div class="Text_Header">2.5 Create a test which finds a file but does not change it</div>
+<div class="Text_Header">2o.5 Create a test which finds a file but does not change it</div>
 <div class="Text_Normal">
 You may wonder why the last test didn't try to update "file.txt". The reason
 is that TextTest doesn't yet know that this file is supposed to be test data.
@@ -188,7 +238,7 @@ filter for this path as many applications need to filter it. Look for "INTERNAL"
 try to replace the path with something so we're still verifying that the correct file is being edited. View
 your filtered file as before and make sure it looks OK.
 </div>
-<div class="Text_Header">2.6 Create a test which actually edits the file</div>
+<div class="Text_Header">2o.6 Create a test which actually edits the file</div>
 <div class="Text_Normal">
 The edit is rejected in the test above because the test asks for a response on standard input which is not
 provided. So take a new copy, select it and right click on "Definition Files", picking "Create/Import File". 
@@ -215,7 +265,7 @@ Hopefully our new test will tell us that file.txt is being edited. Save it.
 That's good, but we still can't see the new text in the file itself. To do this, refer to
 the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=extra_files"; ?>">docs section on "tests that write files"</A> for how to do this using "collate_file".
 </div>
-<div class="Text_Header">2.7 Reduce duplication</div>
+<div class="Text_Header">2o.7 Reduce duplication</div>
 <div class="Text_Normal">
 You've hopefully got 3 or 4 tests that work now. You may well have several identical files for different
 tests. Of course, this isn't a problem for this size of testsuite but can become a major pain when you've got
@@ -261,6 +311,37 @@ unless you explcitly name the run (-name on the command line)
 <div class="Text_Normal">
 It's not so nice that we've had to copy the same information to two different files. Try to extract it out to a
 separate file and "import" it into your config files. Look at "import_config_file" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A> for information on how to do this.
+</div>
+<div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The Regular Expression Koans</div>
+<div class="Text_Header">4.1 Start TextTest with the Regular Expression Koans tests loaded</div>
+<div class="Text_Normal">
+You can do this via
+<?php codeSampleBegin() ?>
+texttest -a lesson3
+<?php codeSampleEnd() ?>
+<div class="Text_Header">4.2 Select each test, fill in the blanks, and make it green</div>
+<div class="Text_Normal">
+This works in much the same way as Exercise 2. The tests under "Filtering" are running "grep -E -v" as their system under test,
+which simulates many filtering regular expression usage in TextTest. Replace the underscores in the "options" files with a regular
+expression which will filter away the relevant lines and make the test green. Do not Save or change anything else! Read
+the descriptions of the tests for further hints, in the bottom right pane.
+</div>
+<div class="Text_Normal">
+The tests under "Replacing" use TextTest's "run_dependent_text" filtering, encountered in Exercise 2. By replacing the blank in the
+replace clause in the config files with something appropriate, you can see the result in the output, and practice with back references
+that are very useful for replacement.
+</div>
+<div class="Text_Normal">
+After you have got each test working, discuss briefly with your partner what you learnt about TextTest from it.
+</div>
+<div class="Text_Header">4.3 Experiment with "Replace Text in Files"</div>
+<div class="Text_Normal">
+Output from TextTest tests frequently changes in predictable ways. Then it can be very useful to update lots of stored behaviour
+and configuration with a single regular expression replacement. 
+</div>
+<div class="Text_Normal">
+Play around with this feature a bit and try to change the test results. Note that each row is treated independently so it's possible
+to replace multiple lines, and also to remove and add lines. Try this out, and experiment with the back references you just learned about also. The feature will perform the replacement in a dynamic GUI run so nothing will be changed permanently unless you do Save there.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise6"></A>Exercise 6: The SWT/Eclipse GUI</div>
 <div class="Text_Header">6.0 Download and install StoryText version 3.6 or newer if you don't have it yet</div>
