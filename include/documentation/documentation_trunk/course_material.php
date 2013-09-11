@@ -76,6 +76,7 @@ It will teach you
             <UL>
               <li>All the various common tricks involved in making a regular expression</li>
               <li>Using regular expressions for replacement</li>
+              <li>Using TextTest's 'Replace Text in Files' feature</li>
             </UL>
           </div></li>
         <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise6">Exercise 6: The Eclipse/SWT GUI</A> <i>(Difficulty: Medium)</i></div>
@@ -125,6 +126,7 @@ You can do this via
 <?php codeSampleBegin() ?>
 texttest -a lesson1,lesson2
 <?php codeSampleEnd() ?>
+</div>
 <div class="Text_Header">2.2 Select each test, fill in the blanks, and make it green</div>
 <div class="Text_Normal">
 The aim of the Koans exercise is to select each test in turn, and make them all succeed by filling in the blanks. 
@@ -319,6 +321,7 @@ You can do this via
 <?php codeSampleBegin() ?>
 texttest -a lesson3
 <?php codeSampleEnd() ?>
+</div>
 <div class="Text_Header">4.2 Select each test, fill in the blanks, and make it green</div>
 <div class="Text_Normal">
 This works in much the same way as Exercise 2. The tests under "Filtering" are running "grep -E -v" as their system under test,
