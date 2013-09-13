@@ -87,6 +87,8 @@ It will teach you
               <li>how to report bugs from the GUI</li>
               <li>linking failures to bug-tracking systems(Jira)</li>
               <li>linking failures to a textual description</li>
+              <li>finding previously mapped known bugs</li>
+              <li>using known bugs to trigger test reruns</li>
             </UL>
           </div></li>
         <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise6">Exercise 6: The Eclipse/SWT GUI</A> <i>(Difficulty: Medium)</i></div>
