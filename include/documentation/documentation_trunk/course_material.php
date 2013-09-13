@@ -452,7 +452,7 @@ rerun. So set the rerun count to 2 or 3 also.
 </div>
 <div class="Text_Header">5.13 Rerun "Test5" 10 times and check it succeeds</div>
 <div class="Text_Normal">
-If you run Test5 10 times again you should now get 10 green. Some of them will see "after 1 rerun" in their details column
+If you run Test5 10 times again you should now get 10 green. Some of them will say "after 1 rerun" in their details column
 if you expand them in the test tree.
 If you want to actually view how the known bug looks you can comment the rerun line out from the knownbugs file and rerun. 
 </div>
