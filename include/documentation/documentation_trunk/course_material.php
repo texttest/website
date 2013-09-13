@@ -363,57 +363,94 @@ At the end you should get a bug ID like SANDBOX-XXX which will be used later.
 <div class="Text_Header">5.2 Start TextTest with</div>
 <div class="Text_Normal">
 <?php codeSampleBegin() ?>
-texttest.py -a kb
+texttest -a kb
 <?php codeSampleEnd() ?> 
 </div>
 <div class="Text_Header">5.3 Run the test suite "using_jira" from the static GUI</div>
 <div class="Text_Normal">
-There is a couple of tests failing and one going green. Look at the diffs to see what could have gone wrong.
+There is a couple of tests failing and one going green. Look at the differences to see what could have gone wrong.
 </div>
 <div class="Text_Header">5.4 Linking failures to Jira - One file differs</div>
 <div class="Text_Normal">
-Right-click the first failed test, "Test2", from the dynamic GUI and select "Enter Failure Information". In the appearing dialog,  enter
-a suitable value for "Text or regexp to match" text field. On "Extract info from bug system" select "Jira" and enter the bug ID created
-in 5.1. After closing the dialog a new file "knownbugs.kw" is created in the test's directory. Information about knownbugs file format
-can be found <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">here</A>.
+Right-click the first failed test, "Test2", from the dynamic GUI and select "Enter Failure Information". In the dialog that comes up, enter
+a suitable value for the "Text or regexp to match" text field (note that by default, it will search the "stdout" file for this text). 
+In "Extract info from bug system" select "Jira" and enter the bug ID created in 5.1. 
+If you do this correctly, the test will change status to "Known bug" and go "half-green", i.e. green in the first column and red in the 
+second. This indicates to future people running it that the failure is known and that they don't need to worry about it. 
+Jira information is shown now in the "Details" column of the test tree view and in the Text Info window at the 
+bottom right of the dynamic GUI.
 </div>
 <div class="Text_Header">5.5 Linking failures to Jira - Many files differ</div>
 <div class="Text_Normal">
-Select Test3 and repeat the same steps as you did in 5.4 but in this case check the box "trigger even if other files differ" and perhaps
-you would need to change the text to match and/or use another "Trigger if" ratio button than the default.
+Select Test3 and repeat the same steps as you did in 5.4. Adjust the text and the file to search as desired to match this new behaviour.
+Note that in this case the check box "trigger even if other files differ" is checked, take a look at the tooltip for an explanation.
+If you uncheck it the bug will not match, because several files differ in this case.
 </div>
-<div class="Text_Header">5.6 Rerun the test suite</div>
+<div class="Text_Header">5.6 Close the dynamic GUI and look at the "knownbugs.kb" files</div>
 <div class="Text_Normal">
-At this point the bug should be triggered on both test cases. Jira information is showed now in the "Details" column of the test tree view
-and in the Text Info window at the bottom right of the dinamic GUI.
+If you select Test2 and Test3 in the static GUI a new file "knownbugs.kb" has been created there.
+Double-click one and see what has been created.
+Information about knownbugs file format can be found 
+<A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">here</A>.
+It is often convenient to adjust the contents directly in the files.
 </div>
-<div class="Text_Header">5.7 Fix the Jira</div>
+<div class="Text_Header">5.6 Run "Test4" now and map it to the bug you already reported</div>
+<div class="Text_Normal">
+This test's behaviour is familiar, we have another test (Test2) with the same behaviour.
+Rather than report the same info again, we find the existing mapping and apply it to this test.
+Right-click on it and choose "Find Failure Information". Select the bug you reported and
+leave "Apply to whole suite" as the default.
+</div>
+<div class="Text_Header">5.7 Click on the root suite and check the "knownbugs.kb" file is now there</div>
+<div class="Text_Normal">
+TextTest's hierarchical structure allows for file placement to determine which infomation applies to which
+tests. By simply moving the file here it now applies to all the tests.
+</div>
+<div class="Text_Header">5.8 Fix the Jira</div>
 <div class="Text_Normal">
 Log in to Jira and resolve the issue.
 </div>
-<div class="Text_Header">5.8 Rerun the test suite</div>
+<div class="Text_Header">5.9 Rerun the test suite</div>
 <div class="Text_Normal">
-Test2 and Test3 are red again. Perhaps you should talk with developers to fix it again:)
+Note that all the bugs that previously had known bugs are now "fully red" again. 
+TextTest checks status in Jira, and if bugs are marked fixed, it complains
+and demands action. Check the status tab, they are now referred to as "internal error".
 </div>
-<div class="Text_Header">5.9 Redoing Jira reference as comment</div>
+<div class="Text_Header">5.10 Redo the Jira reference as comment</div>
 <div class="Text_Normal">
-On Test2, create a new known bug by using "Enter failure information" dialog. Be sure that "Extract info from bug system" field is "<none>" and
-clear "bug ID" field if any. Enter suitable text in "Full description" and "Few-word summary" fields at the bottom of the dialog.
+Sometimes you get this situation when the bug has been fixed, but this fix is not available in your environment because it isn't
+released yet. In this situation we need to stop TextTest failing and replace the Jira reference with a comment.
+Select the root suite in the static GUI, right-click and choose Enter Failure information. Put the same text matching from Test2 in,
+but make sure that "Extract info from bug system" field is "<none>" and
+clear the "bug ID" field if any. Enter suitable text in "Full description" and "Few-word summary" fields at the bottom of the dialog
+instead.
 </div>
 <div class="Text_Normal">
-Open the knownbugs file in a text editor and remove the section refering the previous reported bug. Rerun the test and preview the results.
+Open the knownbugs file in a text editor and remove the section refering the previous reported bug. 
+Rerun the tests and preview the results. Test2 and Test4 show your comment now instead of the Jira number and are back to "half-red".
 </div>
-<div class="Text_Header">5.10 Linking failures to textual description - Brief text</div>
+<div class="Text_Header">5.11 Run "Test5" and try to report an appropriate known bug</div>
 <div class="Text_Normal">
-Run test Test4 and review the results. Create a new known bug by using "Enter failure information" dialog. Fill in "Text/regexp to match" based on the text showed
-in "Details" column of the test tree in the dynamic GUI. Select "Brief text/details" ratio button located at "search in" section. This time don't link to Jira but 
-to textual description instead by entering suitable text in "Full description" and "Few-word summary". Rerun the test. The text you entered in "Few word summary" 
-is showed now in the "Details" column of the test tree view and in the Text Info window at the bottom right of the dinamic GUI.
+Run test Test5 and review the results. This test is known to be indeterministic, in that a key output line is sometimes missing.
+So run 10 copies of it (running tab) to see this effect.
 </div>
-<div class="Text_Header">5.11 Linking failures to textual description - Full reference report</div>
 <div class="Text_Normal">
-Use Test5 and repeat the same steps as you did in 5.10 but this this time using text based on the information showed in dynamic GUI's bottom right window. Select
-"Full difference report" ratio button. Rerun the test and confirm that the bug is triggered.
+We could match this in a few ways
+<ol><li> use the "NOT present" switch at the top
+<li> match using the "Full difference report", and paste text directly from the preview window
+<li> as (2) but provide the entire report and use "Exactly as given". 
+</ol>
+Text that is missing is hazardous and needs to be treated with care: after all, it could be missing because of a crash on startup
+rather than for the issue we're thinking about now.The first two options are prone to this. Note that the whole of the full difference
+report includes the entire bottom right pane contents EXCEPT the first line, which is additional explaining text!
+</div>
+<div class="Text_Normal">
+If we assume the problem is in the environment, rather than something that can be fixed in the system, it can be useful to trigger a 
+rerun. So set the rerun count to 2 or 3 also.
+</div>
+<div class="Text_Normal">
+If you run Test5 10 times again you should now get 10 green. Some of them will see "succeeded after 1 rerun" if you examine them.
+If you want to actually view how the known bug looks you can comment the rerun line out from the knownbugs file afterwards. 
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise6"></A>Exercise 6: The SWT/Eclipse GUI</div>
 <div class="Text_Header">6.0 Download and install StoryText version 3.6 or newer if you don't have it yet</div>
