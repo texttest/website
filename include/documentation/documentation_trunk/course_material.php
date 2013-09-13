@@ -394,29 +394,29 @@ Information about knownbugs file format can be found
 <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">here</A>.
 It is often convenient to adjust the contents directly in the files.
 </div>
-<div class="Text_Header">5.6 Run "Test4" now and map it to the bug you already reported</div>
+<div class="Text_Header">5.7 Run "Test4" now and map it to the bug you already reported</div>
 <div class="Text_Normal">
 This test's behaviour is familiar, we have another test (Test2) with the same behaviour.
 Rather than report the same info again, we find the existing mapping and apply it to this test.
 Right-click on it and choose "Find Failure Information". Select the bug you reported and
 leave "Apply to whole suite" as the default.
 </div>
-<div class="Text_Header">5.7 Click on the root suite and check the "knownbugs.kb" file is now there</div>
+<div class="Text_Header">5.8 Click on the root suite and check the "knownbugs.kb" file is now there</div>
 <div class="Text_Normal">
 TextTest's hierarchical structure allows for file placement to determine which infomation applies to which
 tests. By simply moving the file here it now applies to all the tests.
 </div>
-<div class="Text_Header">5.8 Fix the Jira</div>
+<div class="Text_Header">5.9 Fix the Jira</div>
 <div class="Text_Normal">
 Log in to Jira and resolve the issue.
 </div>
-<div class="Text_Header">5.9 Rerun the test suite</div>
+<div class="Text_Header">5.10 Rerun the test suite</div>
 <div class="Text_Normal">
 Note that all the bugs that previously had known bugs are now "fully red" again. 
 TextTest checks status in Jira, and if bugs are marked fixed, it complains
 and demands action. Check the status tab, they are now referred to as "internal error".
 </div>
-<div class="Text_Header">5.10 Redo the Jira reference as comment</div>
+<div class="Text_Header">5.11 Redo the Jira reference as comment</div>
 <div class="Text_Normal">
 Sometimes you get this situation when the bug has been fixed, but this fix is not available in your environment because it isn't
 released yet. In this situation we need to stop TextTest failing and replace the Jira reference with a comment.
@@ -429,10 +429,10 @@ instead.
 Open the knownbugs file in a text editor and remove the section refering the previous reported bug. 
 Rerun the tests and preview the results. Test2 and Test4 show your comment now instead of the Jira number and are back to "half-red".
 </div>
-<div class="Text_Header">5.11 Run "Test5" and try to report an appropriate known bug</div>
+<div class="Text_Header">5.12 Run "Test5" and try to report an appropriate known bug</div>
 <div class="Text_Normal">
 Run test Test5 and review the results. This test is known to be indeterministic, in that a key output line is sometimes missing.
-So run 10 copies of it (running tab) to see this effect.
+So run 10 copies of it (use the "Times to Run" field in the Running tab) to see this effect.
 </div>
 <div class="Text_Normal">
 We could match this in a few ways
@@ -448,6 +448,7 @@ report includes the entire bottom right pane contents EXCEPT the first line, whi
 If we assume the problem is in the environment, rather than something that can be fixed in the system, it can be useful to trigger a 
 rerun. So set the rerun count to 2 or 3 also.
 </div>
+<div class="Text_Header">5.13 Rerun "Test5" 10 times and check it succeeds</div>
 <div class="Text_Normal">
 If you run Test5 10 times again you should now get 10 green. Some of them will see "succeeded after 1 rerun" if you examine them.
 If you want to actually view how the known bug looks you can comment the rerun line out from the knownbugs file afterwards. 
