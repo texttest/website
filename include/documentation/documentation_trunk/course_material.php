@@ -390,7 +390,7 @@ If you uncheck it the bug will not match, because several files differ in this c
 <div class="Text_Normal">
 If you select Test2 and Test3 in the static GUI a new file "knownbugs.kb" has been created there.
 Double-click one and see what has been created.
-Information about knownbugs file format can be found 
+Information about the knownbugs file format can be found 
 <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">here</A>.
 It is often convenient to adjust the contents directly in the files.
 </div>
@@ -403,7 +403,7 @@ leave "Apply to whole suite" as the default.
 </div>
 <div class="Text_Header">5.8 Click on the root suite and check the "knownbugs.kb" file is now there</div>
 <div class="Text_Normal">
-TextTest's hierarchical structure allows for file placement to determine which infomation applies to which
+TextTest's hierarchical structure allows for file placement to determine which information applies to which
 tests. By simply moving the file here it now applies to all the tests.
 </div>
 <div class="Text_Header">5.9 Fix the Jira</div>
@@ -421,12 +421,12 @@ and demands action. Check the status tab, they are now referred to as "internal 
 Sometimes you get this situation when the bug has been fixed, but this fix is not available in your environment because it isn't
 released yet. In this situation we need to stop TextTest failing and replace the Jira reference with a comment.
 Select the root suite in the static GUI, right-click and choose Enter Failure information. Put the same text matching from Test2 in,
-but make sure that "Extract info from bug system" field is "<none>" and
-clear the "bug ID" field if any. Enter suitable text in "Full description" and "Few-word summary" fields at the bottom of the dialog
+but make sure that "Extract info from bug system" field is "&lt;none&gt;" and
+clear the "bug ID" field. Enter suitable text in the "Full description" and "Few-word summary" fields at the bottom of the dialog
 instead.
 </div>
 <div class="Text_Normal">
-Open the knownbugs file in a text editor and remove the section refering the previous reported bug. 
+Open the knownbugs.kb file in a text editor and remove the section referring to the previous reported bug. 
 Rerun the tests and preview the results. Test2 and Test4 show your comment now instead of the Jira number and are back to "half-red".
 </div>
 <div class="Text_Header">5.12 Run "Test5" and try to report an appropriate known bug</div>
