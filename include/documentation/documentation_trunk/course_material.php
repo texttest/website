@@ -433,7 +433,7 @@ Rerun the tests and preview the results. Test2 and Test4 show your comment now i
 </div>
 <div class="Text_Header">5.12 Run "Test5" and try to report an appropriate known bug</div>
 <div class="Text_Normal">
-Run test Test5 and review the results. This test is known to be indeterministic, in that a key output line is sometimes missing.
+This test is known to be indeterministic, in that a key output line is sometimes missing.
 So run 10 copies of it (use the "Times to Run" field in the Running tab) to see this effect.
 </div>
 <div class="Text_Normal">
@@ -452,8 +452,9 @@ rerun. So set the rerun count to 2 or 3 also.
 </div>
 <div class="Text_Header">5.13 Rerun "Test5" 10 times and check it succeeds</div>
 <div class="Text_Normal">
-If you run Test5 10 times again you should now get 10 green. Some of them will see "succeeded after 1 rerun" if you examine them.
-If you want to actually view how the known bug looks you can comment the rerun line out from the knownbugs file afterwards. 
+If you run Test5 10 times again you should now get 10 green. Some of them will see "after 1 rerun" in their details column
+if you expand them in the test tree.
+If you want to actually view how the known bug looks you can comment the rerun line out from the knownbugs file and rerun. 
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise6"></A>Exercise 6: The SWT/Eclipse GUI</div>
 <div class="Text_Header">6.0 Download and install StoryText version 3.6 or newer if you don't have it yet</div>
