@@ -375,7 +375,7 @@ There is a couple of tests failing and one going green. Look at the diffs to see
 Right-click the first failed test, "Test2", from the dynamic GUI and select "Enter Failure Information". In the appearing dialog,  enter
 a suitable value for "Text or regexp to match" text field. On "Extract info from bug system" select "Jira" and enter the bug ID created
 in 5.1. After closing the dialog a new file "knownbugs.kw" is created in the test's directory. Information about knownbugs file format
-can be found <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n="automatic_failure_interpretation">here</A>.
+can be found <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">here</A>.
 </div>
 <div class="Text_Header">5.5 Linking failures to Jira - Many files differ</div>
 <div class="Text_Normal">
