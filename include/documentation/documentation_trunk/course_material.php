@@ -79,6 +79,16 @@ It will teach you
               <li>Using TextTest's 'Replace Text in Files' feature</li>
             </UL>
           </div></li>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise5">Exercise 5: Known bugs</A> <i>(Difficulty: Easy)</i></div>
+          <div class="Text_Normal">
+            There is a simple program and a test suite which is intended to be used for trying out TextTest's known bugs mechanism.
+            This will teach you
+            <UL>
+              <li>how to report bugs from the GUI</li>
+              <li>linking failures to bug-tracking systems(Jira)</li>
+              <li>linking failures to a textual description</li>
+            </UL>
+          </div></li>
         <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise6">Exercise 6: The Eclipse/SWT GUI</A> <i>(Difficulty: Medium)</i></div>
           <div class="Text_Normal">
             There is a simple Eclipse-SWT based GUI you can test here. This is intended to teach the basics of GUI testing with TextTest. 
@@ -343,6 +353,67 @@ and configuration with a single regular expression replacement.
 Play around with this feature a bit (from the Actions menu) and try to change the test results. 
 Note that each row is treated independently so it's possible
 to replace multiple lines, and also to remove and add lines. Try this out, and experiment with the back references you just learned about also. The feature will perform the replacement in a dynamic GUI run so nothing will be changed permanently unless you do Save there.
+</div>
+<div class="Text_Main_Header"><A NAME="Exercise5"></A>Exercise 5: Known bugs</div>
+<div class="Text_Header">5.1 Create new Jira</div>
+<div class="Text_Normal">
+Log in to Jira and create a new issue using "Product Development Sandbox" as the project and filling in all the required fields.
+At the end you should get a bug ID like SANDBOX-XXX which will be used later. 
+</div>
+<div class="Text_Header">5.2 Start TextTest with</div>
+<div class="Text_Normal">
+<?php codeSampleBegin() ?>
+texttest.py -a kb
+<?php codeSampleEnd() ?> 
+</div>
+<div class="Text_Header">5.3 Run the test suite "using_jira" from the static GUI</div>
+<div class="Text_Normal">
+There is a couple of tests failing and one going green. Look at the diffs to see what could have gone wrong.
+</div>
+<div class="Text_Header">5.4 Linking failures to Jira - One file differs</div>
+<div class="Text_Normal">
+Right-click the first failed test, "Test2", from the dynamic GUI and select "Enter Failure Information". In the appearing dialog,  enter
+a suitable value for "Text or regexp to match" text field. On "Extract info from bug system" select "Jira" and enter the bug ID created
+in 5.1. After closing the dialog a new file "knownbugs.kw" is created in the test's directory. Information about knownbugs file format
+can be found <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n="automatic_failure_interpretation">here</A>.
+</div>
+<div class="Text_Header">5.5 Linking failures to Jira - Many files differ</div>
+<div class="Text_Normal">
+Select Test3 and repeat the same steps as you did in 5.4 but in this case check the box "trigger even if other files differ" and perhaps
+you would need to change the text to match and/or use another "Trigger if" ratio button than the default.
+</div>
+<div class="Text_Header">5.6 Rerun the test suite</div>
+<div class="Text_Normal">
+At this point the bug should be triggered on both test cases. Jira information is showed now in the "Details" column of the test tree view
+and in the Text Info window at the bottom right of the dinamic GUI.
+</div>
+<div class="Text_Header">5.7 Fix the Jira</div>
+<div class="Text_Normal">
+Log in to Jira and resolve the issue.
+</div>
+<div class="Text_Header">5.8 Rerun the test suite</div>
+<div class="Text_Normal">
+Test2 and Test3 are red again. Perhaps you should talk with developers to fix it again:)
+</div>
+<div class="Text_Header">5.9 Redoing Jira reference as comment</div>
+<div class="Text_Normal">
+On Test2, create a new known bug by using "Enter failure information" dialog. Be sure that "Extract info from bug system" field is "<none>" and
+clear "bug ID" field if any. Enter suitable text in "Full description" and "Few-word summary" fields at the bottom of the dialog.
+</div>
+<div class="Text_Normal">
+Open the knownbugs file in a text editor and remove the section refering the previous reported bug. Rerun the test and preview the results.
+</div>
+<div class="Text_Header">5.10 Linking failures to textual description - Brief text</div>
+<div class="Text_Normal">
+Run test Test4 and review the results. Create a new known bug by using "Enter failure information" dialog. Fill in "Text/regexp to match" based on the text showed
+in "Details" column of the test tree in the dynamic GUI. Select "Brief text/details" ratio button located at "search in" section. This time don't link to Jira but 
+to textual description instead by entering suitable text in "Full description" and "Few-word summary". Rerun the test. The text you entered in "Few word summary" 
+is showed now in the "Details" column of the test tree view and in the Text Info window at the bottom right of the dinamic GUI.
+</div>
+<div class="Text_Header">5.11 Linking failures to textual description - Full reference report</div>
+<div class="Text_Normal">
+Use Test5 and repeat the same steps as you did in 5.10 but this this time using text based on the information showed in dynamic GUI's bottom right window. Select
+"Full difference report" ratio button. Rerun the test and confirm that the bug is triggered.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise6"></A>Exercise 6: The SWT/Eclipse GUI</div>
 <div class="Text_Header">6.0 Download and install StoryText version 3.6 or newer if you don't have it yet</div>
