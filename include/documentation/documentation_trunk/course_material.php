@@ -587,14 +587,14 @@ This exercise assumes you have the <A class="Text_Link" HREF="http://mercurial.s
 </div>
 <div class="Text_Header">8.1 Introduction</div>
 <div class="Text_Normal">
-In the directory for exercise 5, under scripts/automatic_build.py you will find a small "continuous integration"
+In the directory for exercise 8, under scripts/automatic_build.py you will find a small "continuous integration"
 script. The basic idea is to update some code (in fact a C hello world program) from Mercurial source control, if 
 there are changes trigger a build on several machines in parallel, and send an email if any of them fail.
 The aim of the exercise is to create repeatable TextTest tests for this apparently hard-to-test script without 
 even making any changes to it...</div>
 <div class="Text_Header">8.2 Try out the script</div>
 <div class="Text_Normal">
-Go to the ex5_ci_script directory and run "scripts/automatic_build.py". 
+Go to the ex8_ci_script directory and run "scripts/automatic_build.py". 
 (It expects to be run from this directory) There are no updates from source control, 
 so it does not do anything. Note however that it created a timestamped directory under "logs"
 containing a file showing what the source control did.
