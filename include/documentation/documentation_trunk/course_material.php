@@ -629,10 +629,10 @@ to provide part of the name also.
 <div class="Text_Header">8.5 Make the test independent of the current state of the Mercurial repository</div>
 <div class="Text_Normal">
 There is one problem still: the test still relies on the Mercurial
-checkout ("source") being up to date. You should capture this state somehow so that 
+checkout ("source") being up to date. You should capture this state using CaptureMock so that 
 the test doesn't fail if further checkins are made using Mercurial. Read the
-<A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>">documentation on "mocking"</A> for guidance: the "intercepting and
-replaying..." mechanism is probably most appropriate here. Record the interaction 
+<A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>">documentation on "mocking"</A> for guidance: the
+paragraph on CaptureMock contains a link to how to enable it. Record the interaction 
 with the "hg" program and check it looks sensible. You'll need to filter the
 sandbox directory too, but we did that in exercise 2 also.</div>
 <div class="Text_Normal">
@@ -678,7 +678,7 @@ we can't see it being sent at all...
 <div class="Text_Normal">
 Our test program is written in Python so we can use a feature specific to Python programs
 that can intercept the email-sending module "smtplib" in a similar way to how we handled
-the command-line "hg" program above. See <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>#collect_traffic_py_module">here</A> for documentation of this setting. 
+the command-line "hg" program above. See <A class="Text_Link" HREF="index.php?page=capturemock&n=python_basic">here</A> for how to enable Python interception using CaptureMock. 
 </div>
 <div class="Text_Normal">
 We can then "record" the email sending and check the email arrives and looks right, and then when running the test check our interaction with the "smtplib" module remains the same as when we recorded it.
