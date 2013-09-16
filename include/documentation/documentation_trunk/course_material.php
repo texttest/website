@@ -320,11 +320,11 @@ write their results on the same page given that they're quite small. </div>
 Note you will need to add configuration
 entries to all your "config" files, though you probably won't need the TextTest GUI. Note also that by default
 runs are identified by date, so once you have a page with a single column, further runs won't appear there
-unless you explcitly name the run (-name on the command line)
+unless you explicitly name the run (-name on the command line)
 </div>
 <div class="Text_Header">3.3 Extract out the shared configuration</div>
 <div class="Text_Normal">
-It's not so nice that we've had to copy the same information to two different files. Try to extract it out to a
+It's not so nice that we've had to copy the same information to several different files. Try to extract it out to a
 separate file and "import" it into your config files. Look at "import_config_file" in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">TextTest configuration reference</A> for information on how to do this.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise4"></A>Exercise 4: The Regular Expression Koans</div>
