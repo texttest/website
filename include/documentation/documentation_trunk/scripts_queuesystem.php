@@ -28,14 +28,6 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD  bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">batch.CollectFiles</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_texttest_unattended#batch.CollectFiles">Collect and send all batch reports that have been written to intermediate files</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD  bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">batch.GenerateGraphs</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
