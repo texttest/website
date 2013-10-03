@@ -580,7 +580,7 @@ sense to try and make sure this is on the same page. You can look up the config 
 in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">configuration file references</A>
 to work out how to do this. 
 </div>
-<div class="Text_Main_Header"><A NAME="Exercise8"></A>Exercise 8: The Continuous Integration Script</div>
+<div class="Text_Main_Header"><A NAME="Exercise8"></A>Exercise 8: CaptureMock/The Continuous Integration Script</div>
 <div class="Text_Header">8.0 Install Mercurial and GCC if necessary</div>
 <div class="Text_Normal">
 This exercise assumes you have the <A class="Text_Link" HREF="http://mercurial.selenic.com">Mercurial version-control system</A> and the <A class="Text_Link" HREF="http://gcc.gnu.org">GCC C compiler</A> installed. If you don't you need to get them.
@@ -601,7 +601,8 @@ containing a file showing what the source control did.
 </div>
 <div class="Text_Header">8.3 Write a test for this behaviour</div>
 <div class="Text_Normal">
-Run texttest --new, select the script above and make sure you choose "ex8_ci_script" in the subdirectory field, 
+Run texttest --new, select the script above, check the box to enable CaptureMock and make sure you choose 
+"ex8_ci_script" in the subdirectory field, 
 otherwise it won't find the test data which is there! Create a test for no changes, as done before. 
 The script tries to update "source" from "repo" so you'll need to add both of these as test data
 as you did in exercise 2. "repo" can be linked with "link_test_path" as we don't expect the script
@@ -633,9 +634,8 @@ to provide part of the name also.
 There is one problem still: the test still relies on the Mercurial
 checkout ("source") being up to date. You should capture this state using CaptureMock so that 
 the test doesn't fail if further checkins are made using Mercurial. Read the
-<A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=faking_it_with_texttest"; ?>">documentation on "mocking"</A> for guidance: the
-paragraph on CaptureMock contains a link to how to enable it. Record the interaction 
-with the "hg" program and check it looks sensible. You'll need to filter the
+<A class="Text_Link" HREF="index.php?page=capturemock&n=texttest">CaptureMock documentation</A> 
+for guidance. You should record the interaction with the "hg" program and check it looks sensible. You'll need to filter the
 sandbox directory too, but we did that in exercise 2 also.</div>
 <div class="Text_Normal">
 We now have a perfect test for no changes in source control!
