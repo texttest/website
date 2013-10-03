@@ -601,10 +601,12 @@ containing a file showing what the source control did.
 </div>
 <div class="Text_Header">8.3 Write a test for this behaviour</div>
 <div class="Text_Normal">
-Run texttest.py --new, select the script above, and create a test for no changes, as done before. 
+Run texttest --new, select the script above and make sure you choose "ex8_ci_script" in the subdirectory field, 
+otherwise it won't find the test data which is there! Create a test for no changes, as done before. 
 The script tries to update "source" from "repo" so you'll need to add both of these as test data
 as you did in exercise 2. "repo" can be linked with "link_test_path" as we don't expect the script
-to make changes there.</div>
+to make changes there.
+</div>
 <div class="Text_Normal">
 It will however fail if you run it again, because it tells you about its
 log directory which is timestamped. Filter it in the same way as you did with exercise 2.
@@ -644,7 +646,7 @@ Investigate what the script does in these circumstances outside of TextTest firs
 so you understand what you're testing. Go to the shell in the exercise directory.
 As we've seen, the script uses Mercurial ("hg") to update the directory "source" from the directory
 "repo". So trigger a change and see what happens. Make an edit in
-repo/main.c, check it in via "hg commit -m 'change' repo", and then rerun
+repo/main.c, check it in via "hg commit -m 'change' -u 'me' repo", and then rerun
 scripts/automatic_build.py. The local build should succeed, the remote
 one should fail (can't reach "my_other_machine" / SSH isn't installed) and an email should be delivered 
 (though as we saw in exercise 3 this may not work, depending on your machine setup).</div>
@@ -676,12 +678,16 @@ they're sent correctly. All the more so if our "real" mail sending is broken and
 we can't see it being sent at all...
 </div>
 <div class="Text_Normal">
-Our test program is written in Python so we can use a feature specific to Python programs
-that can intercept the email-sending module "smtplib" in a similar way to how we handled
-the command-line "hg" program above. See <A class="Text_Link" HREF="index.php?page=capturemock&n=python_basic">here</A> for how to enable Python interception using CaptureMock. 
+  Our test program is written in Python so we can use a feature specific to Python programs
+  that can intercept the email-sending module "smtplib" in a similar way to how we handled
+  the command-line "hg" program above. See <A class="Text_Link" HREF="index.php?page=capturemock&n=python_basic">here</A> 
+  for how to enable Python interception using CaptureMock. 
 </div>
 <div class="Text_Normal">
-We can then "record" the email sending and check the email arrives and looks right, and then when running the test check our interaction with the "smtplib" module remains the same as when we recorded it.
+  We want to "record" the email sending now, but we don't want to have to set up the Mercurial repositories and re-record the 
+  Mercurial interactions again. So this time we choose "Mixed Mode" from the Running tab, which will replay what we have and
+  record what we don't have. In this way we can check the email arrives and looks right, and then when running the test check our 
+  interaction with the "smtplib" module remains the same as when we recorded it.
 </div>
 <div class="Text_Header">8.8 Simulate the remote build</div>
 <div class="Text_Normal">
