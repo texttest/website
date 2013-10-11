@@ -59,9 +59,9 @@ It will teach you
               <li>hierarchical organisation of information in TextTest</li>
             </UL>
           </div></li>
-        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise3">Exercise 3: Setting up a nightjob</A> <i>(Difficulty: Easy)</i></div>
+        <li><div class="Text_Normal"><A class="Text_Link" HREF="#Exercise3">Exercise 3: Setting up unattended test runs</A> <i>(Difficulty: Easy)</i></div>
           <div class="Text_Normal">
-            This does not involve writing any tests, but involves configuring a nightjob to produce you an email/HTML report of
+            This does not involve writing any tests, but involves configuring a "continuous integration" setup to produce you an HTML report of
             whatever tests you've already got. This will teach you
             <UL>
               <li>configuring unattended runs of your tests</li>
@@ -295,32 +295,32 @@ Your last two tests could move to a suite containing "file.txt", for example. Yo
 file at the root suite level and clear them in the single test that doesn't want any command line options (search for "Options Files"
 in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>">Test Suite Guide</A> for assistance).
 </div>
-<div class="Text_Main_Header"><A NAME="Exercise3"></A>Exercise 3: Setting up a nightjob</div>
+<div class="Text_Main_Header"><A NAME="Exercise3"></A>Exercise 3: Setting up unattended test runs</div>
 <div class="Text_Header">3.1 Run all pre-existing tests in batch mode</div>
 <div class="Text_Normal">
 Start by running, e.g.
 <?php codeSampleBegin() ?>
-texttest.py -b nightjob
+texttest.py -b continuous -zen
 <?php codeSampleEnd() ?>
-which will run all the tests from the other exercises from the command line. 
-This can be configured to send a textual report via email, if email sending is configured locally.
-Rather than setting up email, you can see what this looks like
-by setting "batch_use_collection:true" in the relevant config files, run it again, and look under 
-~/.texttest/tmp/nightjob*. There will be a file starting with "batchreport" which contains what
-the email would contain (The point of this setting is ordinarily to collect
-several such reports together before mailing a joint one somewhere) 
+which will run all the tests from the other exercises from the command line. The -zen flag gives you coloured console output so you can
+more easily see when tests succeed and fail. 
 </div>
 <div class="Text_Header">3.2 Get yourself a web page</div>
 <div class="Text_Normal">
-The text report is basic : it only shows one run at once and isn't very navigable. Read
- the information about <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_result_repository">generating HTML reports</A> and try to produce one that
+This logfile-only report isn't very useful on its own. The main way to view unattended runs is via the HTML report now. 
+Read the information about <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_result_repository">generating HTML reports</A> and try to produce one that
 looks something like the example linked there. You might also want to try to make sure all your applications
-write their results on the same page given that they're quite small. </div>
+write their results on the same page given that they're quite small. 
+</div>
 <div class="Text_Normal">
 Note you will need to add configuration
 entries to all your "config" files, though you probably won't need the TextTest GUI. Note also that by default
 runs are identified by date, so once you have a page with a single column, further runs won't appear there
 unless you explicitly name the run (-name on the command line)
+</div>
+<div class="Text_Normal">
+(Besides a colourful logfile and the HTML report, other options involve a basic plain-text report sent by email, or output results as XML
+so that tools like Jenkins can display them in their own format. But we're not doing those today)
 </div>
 <div class="Text_Header">3.3 Extract out the shared configuration</div>
 <div class="Text_Normal">
