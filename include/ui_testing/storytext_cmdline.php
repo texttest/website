@@ -62,13 +62,18 @@ Options:
   -s, --supported       list which PyGTK widgets and signals are currently
                         supported 'out-of-the-box'
   -S, --screenshot      Take screenshots of the GUI after each action. Only
-                        works in SWT/Eclipse currently
+                        works in SWT/Eclipse currently. Also enabled via the
+                        environment variable USECASE_REPLAY_SCREENSHOTS.
   -t SECONDS, --timeout=SECONDS
                         amount of time to wait for application events before
                         giving up and trying to proceed.
   -T TESTSCRIPTPLUGINID, --testscriptpluginid=TESTSCRIPTPLUGINID
                         determines the testscript plugin id for an eclipse RCP
                         application, i.e. 'org.eclipse.swtbot.gef.testscript'
+  -w MIN_FIELD_WIDTHS, --min-field-widths=MIN_FIELD_WIDTHS
+                        Set a minimum width for certain fields. Useful for
+                        when table columns have indeterministic width, due to
+                        e.g. date formats
   -x, --disable_usecase_names
                         Disable the entering of usecase names when
                         unrecognised actions are recorded. Recommended only
@@ -77,7 +82,18 @@ Options:
                         read and hard to maintain.
   -X EXCLUDE_DESCRIBE, --exclude-describe=EXCLUDE_DESCRIBE
                         Exclude the listed widget class names from being
-                        described in the describer
+                        described in the describer.  Refer to online
+                        documentation at
+                        http://www.texttest.org/index.php?page=ui_testing,
+                        under 'Supported Widgets' for your toolkit.  Use any
+                        value from the lower list, i.e. the one for automatic
+                        logging, without the module names. An example would be
+                        '-X Menu,ToolBar,Browser' for SWT/Eclipse RCP, or '-X
+                        MenuBar,Toolbar,TreeView' for PyGTK. Also allow syntax
+                        like '-X Menu!File', to exclude all menus except those
+                        called 'File'.  On Windows, '-X MenuNOTFile' is a
+                        temporary alternative to this, working around a Jython
+                        bug.
   --insert-shortcuts    Re-record the replay script to the record script
                         without running anything, inserting shortcuts as
                         required

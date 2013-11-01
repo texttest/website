@@ -88,8 +88,10 @@ StoryText has various ways to identify widgets in an SWT app. These are, in orde
 <LI>The text on the widget, if it isn't editable
 <LI>The text on any Label immediately preceding the widget in its parent container
 <LI>The tooltip on the widget
+<LI>The title of the dialog where the widget appears
+<LI>The ID of the JFace Action associated with the widget, if any (the result of widget.getData().getAction().getId())
 <LI>The ID of the View in which the widget appears (RCP only)
-<LI>The type of the widget
+<LI>The type of the widget (class name)
 </UL>
 The hope is to find a unique way of identifying the widget based on this information, so that it can be referenced in the <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_intro#ui_map_file">UI map file</A>. There will however exist some cases where this isn't sufficient to identify a widget, for example if the widget is only identified by type, or the text isn't unique, or it changes depending on e.g. today's date. In these cases the widget needs to be named explicitly in the code, and it's fair to say that most non-trivial applications will need to name at least some widgets before StoryText will work smoothely.</div>
 <div class="Text_Normal">
@@ -115,10 +117,19 @@ widget.notifyListeners(1234, event);
 The name provided in "event.text" will then be placed after "wait for " in the usecase files when the event is recorded,
 so choose something that makes sense in that context, e.g. "data to be loaded". </div>
 <div class="Text_Normal">
-If several such events follow each other, they will overwrite each other, i.e. only the last one will be recorded.
+If several such events follow each other, they will overwrite each other, i.e. only the last one will be recorded. To avoid this, you can
+set a category for the event, by inserting a line like
+<?php codeSampleBegin() ?>
+event.data = "background category";
+<?php codeSampleEnd() ?>
+in which case only events in the same category will overwrite each other, while those in different categories will be treated as 
+independent and StoryText will wait for all, in any order, before proceeding. Application event categories are discussed more 
+<A class="Text_Link" href="index.php?page=ui_testing&n=appevents">on the general page for application events</A>.
 </div>
 <div class="Text_Header">Jobs in Eclipse RCP</div>
 <div class="Text_Normal">
 Eclipse has its own "job" mechanism defined in the package "org.eclipse.core.runtime.jobs" and many background tasks use that mechanism.
-StoryText will in this case add its own job listeners and will generate application events automatically when a user-defined Job completes, so no instrumentation of the type described above is needed in this case.
+StoryText will in this case add its own job listeners and will generate application events automatically when a user-defined Job completes, so no instrumentation of the type described above is needed in this case.</div>
+<div class="Text_Normal">
+By default StoryText will keep track of all jobs where isSystem() returns False. You can also set the environment variable "STORYTEXT_SYSTEM_JOB_NAMES", to tell it which system jobs should be monitored also.
 </div>

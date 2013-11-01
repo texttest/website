@@ -56,6 +56,8 @@ don't need to do anything to change the usecases themselves. This is because Tex
 </div>
 <div class="Text_Normal">
 Our usecase is then more readable and concise, and we only have to change in one place if we should change what steps are involved in logging in.
+We can continue to apply this process recursively, so that shortcuts can contain other shortcuts. This is properly supported from 
+StoryText 3.10 onwards.
 </div>
 <div class="Text_Header">Behind the scenes</div>
 <div class="Text_Normal">

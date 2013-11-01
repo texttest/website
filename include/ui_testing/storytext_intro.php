@@ -25,9 +25,17 @@ up and requesting that you enter "usecase names" for the things
 you just did. It gives you the type of the widget, how it identifies it
 and a description of the action that was performed on it, and 
 you can hopefully figure out which row corresponds to which action you did
-and name the actions in a suitably high-level language. The current usecase 
-that will be recorded is previewed in the window at the
-bottom as you type to assist you in this process. </div>
+and name the actions in a suitably high-level language. 
+The current usecase that will be recorded is previewed in the window at the
+bottom as you type to assist you in this process. 
+</div>
+<div class="Text_Normal">
+Since StoryText 3.10 you will be presented with a choice of properties of the widget
+to use for identification, in a drop-down box as shown below. The default will generally
+be the most specific option which does not include specifying the widget type. Most of the
+time leaving the default in is fine, but sometimes you might want to use a different property
+or combination of them for some reason. 
+</div>
 <div class="Text_Normal">
 Any actions that we don't name will be treated as uninteresting and will
 not be recorded. Here is the dialog as it might be filled out just before 
