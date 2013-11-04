@@ -228,7 +228,15 @@ section in the knownbugs file that would correspond to it. The order here corres
   </TR>    
   <TR>
   <TD bgcolor="#FFFFFF">
-    <div class="Table_Text_Normal">Check box "Trigger if given text is NOT present"</div>
+    <div class="Table_Text_Normal">Uncheck box "Enable regular expressions"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">use_regexp:0</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check radio button "NOT present"</div>
   </TD>
   <TD bgcolor="#FFFFFF">
     <div class="Table_Text_Normal">trigger_on_absence:1</div>
@@ -236,10 +244,10 @@ section in the knownbugs file that would correspond to it. The order here corres
   </TR>
   <TR>
   <TD bgcolor="#FFFFFF">
-    <div class="Table_Text_Normal">Select &lt;file_stem&gt; from "File to search in" combo box</div>
+    <div class="Table_Text_Normal">Check radio button "Exactly as given"</div>
   </TD>
   <TD bgcolor="#FFFFFF">
-    <div class="Table_Text_Normal">search_file:&lt;file_stem&gt;</div>
+    <div class="Table_Text_Normal">trigger_on_identical:1</div>
   </TD>
   </TR>
   <TR>
@@ -256,6 +264,14 @@ section in the knownbugs file that would correspond to it. The order here corres
   </TD>
   <TD bgcolor="#FFFFFF">
     <div class="Table_Text_Normal">search_file:free_text</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Select &lt;file_stem&gt; from "File to search in" combo box</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">search_file:&lt;file_stem&gt;</div>
   </TD>
   </TR>
   <TR>
@@ -339,4 +355,26 @@ section in the knownbugs file that would correspond to it. The order here corres
   </TD>
   </TR>
 </TABLE>
+<div class="Text_Header">Advanced knownbug configuration (requires hand-hacking knownbugs files currently)</div>
+<div class="Text_Normal">
+There are also a couple of possible entries in knownbugs file sections that don't have an equivalent in the creation dialog yet.
+If you have several known bugs that might trigger at the same time it can be useful to set priorities between them.
+The default prioritisation assigns priority 10 to "internal errors", priority 20 to reported bugs in bug systems, and priority 30
+to those with only a textual description. (Lower numbers mean higher priority!). To change this, just add e.g. "priority:5" in the
+relevant section.
+</div>
+<div class="Text_Normal">
+You can also write your own trigger in Python to do anything at all. This is often useful for checking exceptional environment 
+conditions that might cause failures, e.g. some server being down. In this case you add "custom_trigger:pythonmodule.pythonFunction"
+and make sure your "pythonmodule" can be found on PYTHONPATH. The signature of pythonFunction should then be
+<?php codeSampleBegin() ?>
+def pythonFunction(execHosts, tmpDir):
+   ...
+<?php codeSampleEnd() ?>
+where execHosts is a list of all the machines where the test ran (usually one element only) and tmpDir is the location of the TextTest
+sandbox, which can be used to check other test files or to write your own temporary files.
+
+</div>
+
+
 </div>
