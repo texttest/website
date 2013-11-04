@@ -355,6 +355,7 @@ section in the knownbugs file that would correspond to it. The order here corres
   </TD>
   </TR>
 </TABLE>
+</div>
 <div class="Text_Header">Advanced knownbug configuration (requires hand-hacking knownbugs files currently)</div>
 <div class="Text_Normal">
 There are also a couple of possible entries in knownbugs file sections that don't have an equivalent in the creation dialog yet.
@@ -372,9 +373,8 @@ def pythonFunction(execHosts, tmpDir):
    ...
 <?php codeSampleEnd() ?>
 where execHosts is a list of all the machines where the test ran (usually one element only) and tmpDir is the location of the TextTest
-sandbox, which can be used to check other test files or to write your own temporary files.
-
+sandbox, which can be used to check other test files or to write your own temporary files. The bug will be triggered if the function 
+returns True and the other triggers in the bug also apply.
 </div>
-
 
 </div>
