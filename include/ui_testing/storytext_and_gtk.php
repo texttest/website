@@ -24,8 +24,10 @@ For Pixbufs, it's used to improve the descriptions of images in the autogenerate
 Care is needed in this area to avoid also blocking StoryText from recording that signal, as StoryText's recorder is in a signal handler which is added after your application's handler. </div>
 <div class="Text_Normal">
 There are two elements for how to do this:
-1) call widget.stop_emission(signal_name) or widget.emit_stop_by_name(signal_name)
-2) return True from your handler
+<OL>
+<LI>call widget.stop_emission(signal_name) or widget.emit_stop_by_name(signal_name)
+<LI>return True from your handler
+</OL>
 One of these prevents the signal from propagating to later handlers, while the other prevents it from propagating to parent handlers. In practice either one of these alone may work in specific cases, but it's usually advisable to do both.
 </div>
 <div class="Text_Normal">
