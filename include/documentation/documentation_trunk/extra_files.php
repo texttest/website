@@ -12,7 +12,7 @@ and compare them in a similar way to how it compares standard output and standar
 It is also possible to tell it to create an additional file which will list all files that were created, edited
 or deleted by the system under test (a "catalogue" file), in case comparing every single file is overkill. 
 </div>
-<div class="Text_Header"><A NAME="collate_file"></A><A NAME="discard_file"></A>
+<div class="Text_Header"><A NAME="collate_file"></A>
 Telling TextTest to collect additional files</div>
 <div class="Text_Normal">This can be done by specifying the config file entry
 "collate_file". This entry is a dictionary of lists: on the left hand side you make
@@ -60,6 +60,7 @@ names to look in for this situation, where the names of
 the produced files vary in such a way that writing a pattern isn't
 possible. The <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=file_formats";?>">standard syntax</A> for a config file list is used.
 </div>
+<div class="Text_Header"><A NAME="discard_file"></A><A NAME="discard_file_text"></A>Discarding files that have been collected</div>
 <div class="Text_Normal">If comparison of a collected file is not desired for any
 reason, it can be added to the config file list entry
 &ldquo;discard_file&rdquo;. The most common usage of this is to
@@ -72,6 +73,23 @@ discard_file:stderr
 
 (NOTE: you may need to write "output" and "errors" instead of "stdout" and "stderr" if
 your test suite is using the classic naming scheme, which it probably is if it was created with 3.18 or earlier).
+</div>
+<div class="Text_Normal">
+It can also be used to discard files that were produced by "collate_file".
+</div>
+<div class="Text_Normal">
+It's also possible to conditionally discard files based on the text in them. This is useful for example if
+a file contains an intermittent exception which has been determined to be unimportant. Here you can use
+"discard_file_text", as follows:
+<?php codeSampleBegin() ?>
+[discard_file_text]
+exception_file:some intermittent exception text
+<?php codeSampleEnd() ?>
+
+This means that if the collated file "exception_file" contains the text "some intermittent exception text", the entire file
+will be discarded and not included in the comparison. This is different from filtering it with "run_dependent_text",
+where you can only discard line-wise and can never remove the file entirely (though you can reduce it to an empty file by removing
+everything).
 </div>
 
 <div class="Text_Header">Collecting multiple related files at the same time</div>

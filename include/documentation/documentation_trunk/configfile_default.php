@@ -736,6 +736,20 @@ of the "Type" column in this table.
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">discard_file_text</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">CompositeDictionary (List)</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#discard_file_text">List of generated result files which should not be compared if they contain the given patterns</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">executable</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -1470,7 +1484,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -azLp<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -q -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
+			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -e 'ssh -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10' -av --copy-unsafe-links --exclude-from=/carm/proj/texttest/geoff/Testing/TextTest/etc/rsync_exclude_patterns<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -q -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_program_options">Default options to use for particular remote shell programs</A></div>
