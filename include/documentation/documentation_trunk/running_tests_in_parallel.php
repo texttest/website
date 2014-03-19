@@ -254,6 +254,17 @@ SGE docs!), this is specified via the config file entry
 works here. In this case TextTest will ask the queue system for
 all machines that have been used, and only if they are all
 performance machines will performance be compared.</div>
+<div class="Text_Header"><A NAME="queue_system_core_file_location"></A>Avoiding race conditions on shared file systems</div>
+<div class="Text_Normal">
+Jobs in queue systems need to have some location as their current working directory, which is also where core files are written if
+the job receives one of the signals above. To avoid race conditions TextTest will by default use the location 
+"$TEXTTEST_TMP/grid_core_files" for this purpose, which after the first run will always exist.
+</div>
+<div class="Text_Normal">
+If you generate TEXTTEST_TMP automatically, e.g. under a Maven target directory, you may find this won't work. In that case this
+can be set to some other global location, using the config setting "queue_system_core_file_location". It is also probably a good idea
+then to periodically clean this location. 
+</div>
 <div class="Text_Header"><A NAME="queue_system_proxy_executable"></A><A NAME="queue_system_proxy_resource"></A>Configuring a proxy process to run on a different machine (e.g. to set up a database)</div>
 <div class="Text_Normal">
 Sometimes certain hosts are reserved as database hosts, while many more may be used to run tests. In this case it is useful to set up a "proxy" which can perform the database setup and then start the real test process also via the grid. This is done by setting the "queue_system_proxy_executable" setting to point out the script which can perform this setup. The machines where it may run can be identified via resources, using "queue_system_proxy_resource", which works in the same way as "queue_system_resource".
