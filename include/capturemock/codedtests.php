@@ -1,6 +1,10 @@
 <div class="Text_Main_Header">Using CaptureMock from Python test tools</div> 
 <div class="Text_Description">Tests coded using unittest,py.test, nose etc.</div> 
 <div class="Text_Normal">
+(For more advanced examples of CaptureMock usage in this environment, please see
+<A class="Text_Link" HREF="https://github.com/msabramo/capturemock_examples">Marc Abramowitz's examples page</A>.)
+</div>
+<div class="Text_Normal">
 Usage of capturemock for individual tests is defined by using the "@capturemock" decorator.
 For example:
 <?php codeSampleBegin() ?>
