@@ -101,6 +101,23 @@ side effects. You can do this using the &ldquo;copy_test_path&rdquo;
 config file entry, which will find files or directories to copy
 in the same way as link_test_path, and indeed is equivalent to
 link_test_path on Windows.</div>
+<div class="Text_Header"><A NAME="test_data_require"></A>Requiring test data to exist</div>
+<div class="Text_Normal">
+Note that TextTest will not insist on such test data existing for every test just because you have specified something in
+"link_test_path" or "copy_test_path". If you want to be given an error message if a particular test data type is not present
+for some reason, use the config setting "test_data_require". (Sometimes the SUT will not work at all without certain data available, 
+then it can be useful for the tool to know this)
+</div>
+<div class="Text_Normal">
+So to insist on the read-only data my_file existing, you can write
+<?php codeSampleBegin() ?>
+link_test_path:my_file
+
+test_data_require:my_file
+
+<?php codeSampleEnd() ?>
+</div>
+
 <div class="Text_Header"><A NAME="copy_test_path_merge"></A>Merging test data files and directories with each other</div>
 <div class="Text_Normal">
 Sometimes it can be useful to have test data files and data structures stored in tests that can be merged with more general

@@ -1484,7 +1484,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -e 'ssh -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10' -av --copy-unsafe-links --exclude-from=/carm/proj/texttest/geoff/Testing/TextTest/etc/rsync_exclude_patterns<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -q -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
+			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -e 'ssh -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10' -av --copy-unsafe-links --delete --exclude-from=/carm/proj/texttest/geoff/Testing/TextTest/etc/rsync_exclude_patterns<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -q -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_program_options">Default options to use for particular remote shell programs</A></div>
@@ -1628,6 +1628,20 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#test_data_ignore">Elements under test data structures which should not be viewed or change-monitored</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">test_data_require</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">&lt;empty&gt;</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=texttest_sandbox#test_data_require">Test data names that are required to exist for the SUT to work</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
