@@ -109,12 +109,11 @@ for some reason, use the config setting "test_data_require". (Sometimes the SUT 
 then it can be useful for the tool to know this)
 </div>
 <div class="Text_Normal">
-So to insist on the read-only data my_file existing, you can write
+So to insist on the read-only data file "my_file" existing, you can write
 <?php codeSampleBegin() ?>
 link_test_path:my_file
 
 test_data_require:my_file
-
 <?php codeSampleEnd() ?>
 </div>
 
