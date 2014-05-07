@@ -101,7 +101,7 @@ widget.setData("org.eclipse.swtbot.widget.key", "My Widget");
 <?php codeSampleEnd() ?>
 </div>
 <div class="Text_Header">Variations of replayer events</div>
-<div>
+<div class="Text_Normal">
 For entering text into widgets, the instruction "Modify" is normally recorded into the UI map file.
 When replayed this will "set" the text directly, which is similar to pasting it in with the mouse.
 </div>
