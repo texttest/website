@@ -13,13 +13,13 @@ On Windows, you should install Java if you haven't already done so, and then run
 <div class="Text_Normal">
 On Linux, you probably already have Python and PyGTK, so you will need to do the following:
 <ol>
-<li>Install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A>.<b>NOTE!</b>, if using Eclipse RCP, you must use Jython 2.5.1, there are problems with newer versions.
+<li>Install <A class="Text_Link" HREF="http://www.jython.org/download.html">Jython</A>.
 <li>Download and unpack the tarball from the <A class="Text_Link" HREF="http://sourceforge.net/projects/pyusecase">sourceforge page</A>
 <li>From its source directory, run first "python setup.py install" and then "jython setup.py install"
 <li>Ensure the bin directory of both your installations created above is added to your PATH, with the Jython one coming first.
 <li>Test this from the command line: "which storytext" should return the one in your Jython installation, while "which storytext_editor" should return the one in your Python installation.
 </ol>
-(You can also use "pip" to install StoryText directly from PyPI without downloading the tarball, but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip")
+(You can also use "pip" to install StoryText directly from PyPI without downloading the tarball, but then you have to install pip under Jython or use "virtualenv" to create a separate jython environment containing "pip". Note also that earlier restrictions in StoryText to use Jython 2.5.1 with RCP applications have now been lifted, the latest Jython release should work just fine since 3.11)
 </div>
 <div class="Text_Header">Installing SWTBot</div>
 <div class="Text_Normal">
@@ -99,6 +99,21 @@ The mechanism for this is inherited from SWTBot, and works in the same way as if
 <?php codeSampleBegin() ?>
 widget.setData("org.eclipse.swtbot.widget.key", "My Widget");
 <?php codeSampleEnd() ?>
+</div>
+<div class="Text_Header">Variations of replayer events</div>
+For entering text into widgets, the instruction "Modify" is normally recorded into the UI map file.
+When replayed this will "set" the text directly, which is similar to pasting it in with the mouse.
+</div>
+<div class="Text_Normal">
+Sometimes you actually want to use the keyboard to type text in directly, for example to trigger responses
+in the application that only apply if keypresses are actually detected. In this case you can find the relevant
+entries in the UI map file and manually change "Modify" to "Modify.typed". (Note that this
+can lead to trouble with keyboard layouts and is often not a good idea if you need to type "unusual" characters.)
+</div>
+<div class="Text_Normal">
+In a similar way you can change "ActivatePart" to "ActivatePart.clicked" when activating views in an RCP application.
+Normally this is done programmatically, but you can change it to actually seize the mouse pointer and click the mouse
+on the relevant tab. Sometimes this distinction can be important.
 </div>
 <div class="Text_Header"><A name="appevents"></A>Application events</div>
 <div class="Text_Normal">(See <A class="Text_Link" href="index.php?page=ui_testing&n=appevents">here</A>
