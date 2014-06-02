@@ -497,8 +497,12 @@ useful to &ldquo;reconnect&rdquo; the GUI as if a batch run had
 been run using it. To do this, select &ldquo;Reconnect&rdquo;
 from the Actions menu in the Static GUI, which will bring up a 
 dialog where you can browse your file system to find the files 
-for the run (or provide the &ldquo;-reconnect &lt;directory&gt;&rdquo; 
-option on the command line to the dynamic GUI or console interface). 
+for the run. These files are the "sandbox" directories and will be located
+under the lcoation specified as the TEXTTEST_TMP environment variable for the batch run itself,
+which defaults to ~/.texttest if you don't set it. They should not be confused with the
+"batch_result_repository" location, used only for the HTML report.
+(You can also provide the &ldquo;-reconnect &lt;directory&gt;&rdquo; 
+option on the command line to the dynamic GUI ("-g") or console interface ("-con")). 
 </div>
 <div class="Text_Normal">There are essentially two ways to select previous runs. Either
 you explicitly select the run directory (it will be called something like "hello.version.13Aug171624.9856"),
