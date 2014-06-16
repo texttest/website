@@ -141,28 +141,17 @@ fingerprints are sometimes wrong, as they are only based on the latest file for 
 You can achieve this by setting "batch_jenkins_archive_file_pattern" to a path: this will then look in the workspace for the artefacts
 matching the archived version of a particular build and try to highlight when these differ from what Jenkins thinks they are.
 </div> 
-<div class="Text_Header"><A NAME="historical_report_resource_pages"></A><A NAME="historical_report_resource_page_tables"></A>Producing performance/memory versions of the HTML report </div>
+<div class="Text_Header"><A NAME="historical_report_resources"></A>Showing detailed performance/memory information in the HTML report</div>
 <div class="Text_Normal">
-If you're making use of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">TextTest's performance and memory testing features</A> it can be useful to have this information displayed in a similar table. These are two ways to generate them. As a one-off, you can run TextTest with arguments like e.g. -coll web.performance or -coll web.memory instead of just -coll web. To generate them regularly it is usually more convenient to set the config setting "historical_report_resource_pages". For example:
+If you're making use of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">TextTest's performance and memory testing features</A> it can be useful to have this information displayed directly in the table also. To do this you can set the config setting "historical_report_resources". For example:
 <?php codeSampleBegin() ?>
-[historical_report_resource_pages]
+[historical_report_resources]
 nightjob:performance
 nightjob:memory
 <?php codeSampleEnd() ?>
-would cause the performance and memory pages to be generated also every time TextTest was run with the ordinary "-coll" argument (with "-b nightjob" in this case, of course). These reports will then appear in a subdirectory of the location of the ordinary report named "performance" or "memory" respectively. </div>
+would cause an additional row for performance and an additional row for memory to be generated for every test that had such information (with "-b nightjob" in this case, of course).</div>
 <div class="Text_Normal">
-The main difference with the standard report is that the colours correspond only to when the relevant resource has changed significantly, and "N/A" will be shown for tests which did not measure that resource. The text in the cells will be the measured memory or performance (rather than the difference).</div>
-<div class="Text_Normal">
-By default each resource will end up in a separate such report. It is possible however to get several different resources end up in the same report, by using the setting "historical_report_resource_page_tables". For example:
-<?php codeSampleBegin() ?>
-[historical_report_resource_pages]
-nightjob:performance_and_memory
-
-[historical_report_resource_page_tables]
-performance_and_memory:performance
-performance_and_memory:memory
-<?php codeSampleEnd() ?>
-would cause both performance and memory tables to appear in a single report called "performance_and_memory".
+Such rows can be noticed as the data in the cells is right-justified rather than left-justified, and there is no "row header" cell. The text will show the different in that measurement, even if it was not sufficient to fail the test. This replaces the earlier separate reports for this which existed in TextTest 3.26 etc.
 </div>
 <div class="Text_Header"><A NAME="historical_report_subpages"></A><A NAME="historical_report_subpage_cutoff"></A><A NAME="historical_report_subpage_weekdays"></A>Configuring which subpages are produced in the HTML report</div>
 <div class="Text_Normal">
