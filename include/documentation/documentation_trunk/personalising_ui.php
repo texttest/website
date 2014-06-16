@@ -138,7 +138,7 @@ run_this_version:linux
 <?php codeSampleEnd() ?>
 </div>
 <div class="Text_Normal">
-This will cause the dynamic GUI saving tab not to automatically
+This will cause the "Approve As..." dialog not to automatically
 check the box for &quot;Show differences where present&quot;, as
 in the example above. It will also cause the static GUI to
 include the version &quot;linux&quot; in a drop-down list for

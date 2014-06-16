@@ -51,20 +51,20 @@ Interface</div>
 or if &ldquo;default_interface&rdquo; is set to &ldquo;console&rdquo;.
 It is simpler and much more restricted than the GUIs.</div>
 <div class="Text_Normal">Essentially, it will run each test in turn, and if it fails,
-will ask whether you wish to view the differences, save it, or
+will ask whether you wish to view the differences, approve it, or
 continue. Viewing the differences will write a (truncated) text
 version of all file differences to the standard output, and will
 start the graphical difference viewer on the file specified by
 the config file entry &ldquo;log_file&rdquo; (the standard
-output of the SUT, by default). Saving works much like from the
-dynamic GUI, except that there is no possibility to save single
+output of the SUT, by default). Approving works much like from the
+dynamic GUI, except that there is no possibility to approve single
 files or multiple tests at the same time (but see below).
 Continuing will do nothing and leave everything in place.</div>
 
 <div class="Text_Normal">There are a couple of command-line options relevant to the
-console interface only, both related to saving. Specifying &ldquo;-o&rdquo;
+console interface only, both related to approving. Specifying &ldquo;-o&rdquo;
 will cause all files judged different to be overwritten (the
-equivalent of the GUI &ldquo;Save&rdquo; button applied to all
+equivalent of the GUI &ldquo;Approve&rdquo; button applied to all
 tests, except you have to decide before the run starts). The
 &ldquo;-n&rdquo; option will cause all files regarded as the
 same to be updated: a way of updating the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">run

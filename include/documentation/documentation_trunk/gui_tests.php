@@ -72,8 +72,8 @@ a description of what we did, while the "stdout.bugs" file provides StoryText's 
 </div>
 <div class="Text_Normal">If we made a mistake recording, we should simply quit the
 dynamic GUI at this point and repeat the procedure (the names we entered for StoryText
-will still be kept). If we are happy with the recording we should save the results: press the
-save button with the test selected.</div>
+will still be kept). If we are happy with the recording we should approve the results: press the
+approve button with the test selected.</div>
 <div class="Text_Normal">Unless we disabled this from the
 &ldquo;Record&rdquo; dialog at the start, TextTest will then
 automatically restart it in replay mode, in order to collect the

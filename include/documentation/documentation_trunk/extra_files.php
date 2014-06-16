@@ -168,19 +168,19 @@ If they differ, it's then up to the user to examine both files using whatever to
 
 <div class="Text_Header">New Files and Missing Files</div>
 
-<div class="Text_Normal">If standard results have not already been collected for a
+<div class="Text_Normal">If approved results have not already been collected for a
 particular file produced when a test is run (as they won't be when you've just enabled the mechanism above) 
 , the file is reported under &ldquo;New Files&rdquo; and should be checked
-carefully by hand and saved if correct. New files appearing is
+carefully by hand and approved if correct. New files appearing is
 also sufficient reason to fail a test, so every test should fail
 the first time unless the expected results are imported
 externally. The standard output and standard error are also treated this way. 
 </div>
 <div class="Text_Normal">In the same way, if files are not produced that are present
-and expected in the standard results, these will be reported
+and expected in the approved results, these will be reported
 under &ldquo;Missing Files&rdquo; and the test will fail.
 Saving such a result will cause the missing files to be removed
-from the standard results.</div>
+from the approved results.</div>
 
 <div class="Text_Header"><A NAME="create_catalogues"></A><A NAME="catalogue_process_string"></A>
 Generating a catalogue of file/process changes</div>

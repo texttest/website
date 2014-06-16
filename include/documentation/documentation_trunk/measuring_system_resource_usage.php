@@ -256,11 +256,11 @@ This means that percentages will use the more immediately intuitive "percentage 
 and "performance_variation_%" is also interpreted in this way, which means that a test can succeed when making
 a change but fail when reverting it. This setting should therefore be used with care.
 </div>
-<div class="Text_Header">Saving System Resource Usage Files</div>
-<div class="Text_Normal">When saving tests where differences in performance
-have been reported, it is possible to save an average of the old performance
+<div class="Text_Header">Approving System Resource Usage Files</div>
+<div class="Text_Normal">When approving tests where differences in performance
+have been reported, it is possible to approve an average of the old performance
 figure and the new one, to prevent too much oscillation. To do this, fire up 
-the "Save As..." dialog, and select &ldquo;Average Performance&rdquo; from
+the "Approve As..." dialog, and select &ldquo;Average Performance&rdquo; from
 the radio button at the bottom of the dialog. 
 </div>
 <div class="Text_Normal">Below is what you will see in the dynamic GUI when you run

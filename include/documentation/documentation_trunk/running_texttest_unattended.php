@@ -481,7 +481,7 @@ batch session names as described above.
 the User Interfaces to batch results</div>
 <div class="Text_Normal">Batch mode's email report is all very well, but alone it
 doesn't give you the power of the GUI to view results in detail
-or to save them if that would be appropriate. It can be very
+or to approve them if that would be appropriate. It can be very
 useful to &ldquo;reconnect&rdquo; the GUI as if a batch run had
 been run using it. To do this, select &ldquo;Reconnect&rdquo;
 from the Actions menu in the Static GUI, which will bring up a 

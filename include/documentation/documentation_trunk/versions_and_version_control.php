@@ -35,7 +35,7 @@ in a test suite which has a relevant version suffix will be preferred to a file 
 has no such suffix but is found in the test case. (In TextTest 3.10 and earlier
 test-specific files were preferred to version-specific files). 
 </div>
-<div class="Text_Normal">It is possible to save 
+<div class="Text_Normal">It is possible to approve 
 test results with a version identifier, so that they will be used for 
 comparison next time that version is run. So particular tests can
 have version-specific results while others are shared between all versions.

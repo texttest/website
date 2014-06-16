@@ -61,7 +61,7 @@ This creates a test and automatically views it:</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/emptytest.png" NAME="Graphic3" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">We now have an 'empty test' under the root test suite (called
-'Basic' above). As can be seen, there are no 'standard files'
+'Basic' above). As can be seen, there are no 'approved files'
 yet, because we have not yet said what the test should produce.
 We could create these files by hand, but the easiest way is to
 run the test and see what happens. 
@@ -83,7 +83,7 @@ more details.</I></div>
 <div class="Text_Normal"> We click the &ldquo;Run&rdquo;
 button on the toolbar to run the selected tests. This starts the
 "dynamic GUI" in a new window, which performs test runs. The test
-fails, because no standard results are yet defined. On the left
+fails, because no approved results are yet defined. On the left
 we see a tree view similar to the one above, on the right a
 summary of which files are different in the test.
 </div>
@@ -95,29 +95,29 @@ be viewed by double-clicking in the file view, or a summary is
 available in the 'Text Info' window. We can see that the text
 'Hello world' appeared on standard output, while nothing was
 written to standard error. We like this behaviour, so we click
-'Save' on the toolbar.</div>
+'Approve' on the toolbar.</div>
 
 <div class="Text_Normal"><I>The temporary files have been written to a directory
 underneath the 'texttest temporary directory'. This root
 directory defaults to the value of $HOME/.texttest/tmp (on Windows $HOME is formed
 from a combination of $HOMEDRIVE and $HOMEPATH). It can be altered via the environment
-variable TEXTTEST_TMP. When the test is saved, these files are
+variable TEXTTEST_TMP. When the test is approved, these files are
 copied to the test directory created above. For more details,
 see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">Guide to TextTest's Temporary
 Directory</A>.</I></div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/saved.png" NAME="Graphic5" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">Now the test goes green and the produced files are saved as
-the standard versions. By default, TextTest assumes that
-succeeded and saved tests are not interesting and hence
+the approved versions. By default, TextTest assumes that
+succeeded and approved tests are not interesting and hence
 collapses the suite containing it and removes the Test tab
 again, showing instead the Status tab which summarises the status of all the tests. We can now
 exit the dynamic GUI, pressing 'Quit'. When we look in the
 static GUI, which has been there all along, we now see this.</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/newtest.png" NAME="Graphic6" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
-<div class="Text_Normal">The files produced by the dynamic GUI run have been saved as
-'Standard Files' and will now be used as comparison in the next
+<div class="Text_Normal">The files produced by the dynamic GUI run have been stored as
+'Approved Files' and will now be used as comparison in the next
 test run (which we would expect to go green immediately).</div>
 
 <div class="Text_Header">What next?</div>

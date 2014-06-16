@@ -14,7 +14,7 @@ to have tests which just fail all the time so TextTest needs to be told about
 such "run-dependent text", so it can compare a filtered version of the SUT output
 which is deterministic. This document describes the various filtering operations
 that can be performed on your application's output before it is compared with the
-"Standard Result".
+"Approved Result".
 </div>
 <div class="Text_Header"><A NAME="run_dependent_text"></A>Filtering out Run-dependent Text</div>
 
@@ -150,7 +150,7 @@ forcing the filtering to occur</div>
 multiple operating systems. TextTest's test suite for itself is
 one such example. The main problem you run into is that
 different operating systems use different characters for the end
-of lines, so that a &ldquo;standard result&rdquo; file from UNIX
+of lines, so that an "approved file" from UNIX
 and a generated file from a test run on Windows will compare as
 different.</div>
 <div class="Text_Normal">To fix this, set the &ldquo;home_operating_system&rdquo;

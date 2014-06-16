@@ -259,7 +259,7 @@ the last case the directory would grow without limit.</div>
 when TextTest terminates?</div>
 <div class="Text_Normal">When you quit the GUI (or the console interface terminates),
 the temporary directory associated with the run is by default
-automatically removed. It is thus important to save any test
+automatically removed. It is thus important to approve any test
 results that you wish to use again, either as the default result
 or as a version.</div>
 <div class="Text_Normal">It is also possible to run TextTest in &ldquo;keeptmp&rdquo;

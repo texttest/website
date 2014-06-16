@@ -149,7 +149,7 @@ Description, look at the bottom right pane when the test is selected.</div>
 After you have got each test working, discuss briefly with your partner what you learnt about TextTest from it.
 </div>
 <div class="Text_Normal">
-(NOTE: The first two tests do not have any blanks, they just get you used to running a test and saving a test. Pressing "Save" to make any test after the second one green is cheating!) 
+(NOTE: The first two tests do not have any blanks, they just get you used to running a test and approving a test. Pressing "Approve" to make any test after the second one green is cheating!) 
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise2_orig"></A>Exercise 2 (original version): The Search/Replace Script</div>
 <div class="Text_Header">2o.1 Try out the script</div>
@@ -191,7 +191,7 @@ did for Hello World (don't choose "txt" as that will cause confusion with "file.
 <div class="Text_Header">2o.3 Create an "empty" test</div>
 <div class="Text_Normal">
 The easiest test to specify is one that contains no arguments. Create a test as for Hello 
-World. You should get some kind of "Usage" error from the script. Save this behaviour as correct.
+World. You should get some kind of "Usage" error from the script. Approve this behaviour as correct.
 </div>
 <div class="Text_Header">2o.4 Create a test with the right number of arguments</div>
 <div class="Text_Normal">
@@ -200,7 +200,7 @@ in the "Command Line Options" field in the "Add Test" dialog box. (Or copy the t
 right click "Definition" files and add an "options" file with the same contents). Either
 way, you get a test containing an "options" file. If you run it you will get different
 text, probably the first two lines of the "trial" output from above. It won't actually
-do any replacement yet (bear with it until the next step). Save the behaviour.
+do any replacement yet (bear with it until the next step). Approve the behaviour.
 </div>
 <div class="Text_Normal">
 Run the test again. Note that it fails, because it records the current time which has now
@@ -269,11 +269,11 @@ on all the files it's producing. This will affect all 4 tests so you should run 
 You should get 4 rows all saying "catalogue new". On the right you have a status summary which is worth getting
 to know. There should be a row saying "Group 1: 3". This is TextTest's way of saying these 3 tests have changed 
 in the same way. Click on this row and it will select the tests in the test view. If you view the "Test" tab
-you can see that the first three tests are now saying that no files were changed, as we expect. You can now save 
+you can see that the first three tests are now saying that no files were changed, as we expect. You can now approve 
 them without needing to examine each one individually.
 </div>
 <div class="Text_Normal">
-Hopefully our new test will tell us that file.txt is being edited. Save it.
+Hopefully our new test will tell us that file.txt is being edited. Approve it.
 </div>
 <div class="Text_Normal">
 That's good, but we still can't see the new text in the file itself. To do this, refer to
@@ -339,7 +339,7 @@ texttest -a lesson3
 <div class="Text_Normal">
 This works in much the same way as Exercise 2. The tests under "Filtering" are running "grep -E -v" as their system under test,
 which simulates filtering with regular expressions in TextTest. Replace the underscores in the "options" files with a regular
-expression which will filter away the relevant lines and make the test green. Do not Save or change anything else! Read
+expression which will filter away the relevant lines and make the test green. Do not Approve or change anything else! Read
 the descriptions of the tests for further hints, in the bottom right pane.
 </div>
 <div class="Text_Normal">
@@ -355,7 +355,7 @@ and configuration with a single regular expression replacement.
 <div class="Text_Normal">
 Play around with this feature a bit (from the Actions menu) and try to change the test results. 
 Note that each row is treated independently so it's possible
-to replace multiple lines, and also to remove and add lines. Try this out, and experiment with the back references you just learned about also. The feature will perform the replacement in a dynamic GUI run so nothing will be changed permanently unless you do Save there.
+to replace multiple lines, and also to remove and add lines. Try this out, and experiment with the back references you just learned about also. The feature will perform the replacement in a dynamic GUI run so nothing will be changed permanently unless you do Approve there.
 </div>
 <div class="Text_Main_Header"><A NAME="Exercise5"></A>Exercise 5: Known bugs</div>
 <div class="Text_Header">5.1 Create new Jira</div>
@@ -491,7 +491,7 @@ need to fill in all the fields) and close the Address book. When you do this, yo
 the actions you have performed, and maybe to adjust how they map to the GUI. Fill in this dialog with suitable names.
 </div>
 <div class="Text_Normal">
-If you made a mistake recording, you should just press Quit at this point. If you like what you created, press Save and then Quit.
+If you made a mistake recording, you should just press Quit at this point. If you like what you created, press Approve and then Quit.
 The test will then be replayed in the background and the expected behaviour collected. When it is done, open the stdout file and 
 examine it so you can see what is being compared. Visit the config tab also and view the UI map file (ui_map.conf) which is what 
 has been created by the usecase name entry dialog.
@@ -508,7 +508,7 @@ This time we want to test the search functionality. We could just create our con
 make the data in it subtly different by mistake. So instead of recording from scratch, we will start from part of the previous test.
 Copy the test you have created, and edit the copied usecase file to remove the step that closes the GUI. Then run the test with the
 "Show GUI" button checked. It will create the contact and then record anything else you do. Search for the contact and verify it
-gets selected. Enter the new usecase names and save the usecase file as before. This time you need to run the test by hand to collect
+gets selected. Enter the new usecase names and approve the usecase file as before. This time you need to run the test by hand to collect
 the correct information in the stdout file.
 </div>
 <div class="Text_Header">6.4 Refactor the "usecase language"</div>
@@ -565,8 +565,8 @@ until they're reliably green. Try not to overdo it, obviously 1000% tolerance wi
 <div class="Text_Header">7.3 Configure TextTest to extract the memory and 'database load' time from the stdout</div>
 <div class="Text_Normal">
 This involves using the setting "performance_logfile_extractor". When you have results, try to set tolerances accordingly as above
-until the tests are reliably green. Note it is possible to saved the average of the stored and received performances, by doing
-"Save As" and then checking the relevant option. This helps make sure the stored performance is in the middle of the range of 
+until the tests are reliably green. Note it is possible to store the average of the stored and received performances, by doing
+"Approve As" and then checking the relevant option. This helps make sure the stored performance is in the middle of the range of 
 performances, which allows you to have a lower tolerance than if it's at one end of the range.
 </div>
 <div class="Text_Header">7.4 Create an HTML report of these results, with performance subpages</div>

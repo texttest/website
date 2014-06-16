@@ -72,13 +72,13 @@ To refer to the various categories, you can use any name that appears in the sta
 or you can use the keys from for
 example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
 file table</A>.</div>
-<div class="Text_Header"><A NAME="file_split_pattern"></A>Splitting the result files - grouping and saving only parts of files </div>
+<div class="Text_Header"><A NAME="file_split_pattern"></A>Splitting the result files - grouping and approving only parts of files </div>
 <div class="Text_Normal">
 The grouping described above is mostly good enough when your system has only changed one thing at once. It's clearly good development 
 and testing practice to avoid changing many things before testing but sometimes it may be unavoidable, for whatever reason.
 </div>
 <div class="Text_Normal">
-In this case finer-grained information can be useful, by allowing viewing, grouping and saving of parts of files. This is done with the 
+In this case finer-grained information can be useful, by allowing viewing, grouping and approving of parts of files. This is done with the 
 "Split Result Files" action in the test popup and Actions menu.</div>
 <div class="Text_Normal">
 It will be greyed out unless you tell it how to split your files. You should find a suitable marker in your result files which delineate
@@ -97,11 +97,11 @@ be compared as normal and grouped in the Status tab. This allows further identif
 contain other differences.
 </div>
 <div class="Text_Normal">
-Saving any of the "subfiles" will result in the main file being reconstituted with the saved version of that section and the previously
+Approving any of the "subfiles" will result in the main file being reconstituted with the approved version of that section and the previously
 stored version of all the other sections.
 </div>
 <div class="Text_Normal">
-Note that the split is just a convenience for viewing and saving results, it does not affect how the results are stored and will 
+Note that the split is just a convenience for viewing and approving results, it does not affect how the results are stored and will 
 not affect any future runs of the tests.
 </div>
 <div class="Text_Header"><A NAME="diff_program"></A><A NAME="follow_program"></A><A NAME="follow_file_by_default"></A><A NAME="TEXTTEST_FOLLOW_FILE_TITLE"></A><A NAME="view_program"></A><A NAME="text_diff_program"></A><A NAME="lines_of_text_difference"></A><A NAME="failure_display_priority"></A><A NAME="max_file_size"></A>
@@ -180,30 +180,30 @@ limit for tools not explicitly listed. If a file exceeds
 this size for "diff", no diff report will be displayed in the Text Info tab, and if you try and view such a file
 from the GUI you will get a warning that the file is very large before it will be loaded.</div>
 <div class="Text_Header"><A NAME="unsaveable_version"></A><A NAME="save_filtered_file_stems"></A><A NAME="-ignorefilters"></A>
-Saving Test Results</div>
+Approving Test Results</div>
 <div class="Text_Normal">When tests fail, you can examine the differences as above,
 and sometimes you will decide that the change in behaviour is in
-fact desirable. In this case, you should &ldquo;Save&rdquo; the
+fact desirable. In this case, you should "Approve" the
 test, or group of tests. This operation will overwrite the
-permanent &ldquo;standard&rdquo; files with the &ldquo;temporary&rdquo;
-files produced by this run. 
+permanent "approved" files with the "temporary"
+files produced by this run. It was known as "Save" up until TextTest 3.26.
 </div>
-<div class="Text_Normal">To achieve this, the dynamic GUI has a &ldquo;Save&rdquo;
-button in the toolbar and the File menu, and also a &ldquo;Save As...&rdquo; action
+<div class="Text_Normal">To achieve this, the dynamic GUI has an &ldquo;Approve&rdquo;
+button in the toolbar and the File menu, and also an &ldquo;Approve As...&rdquo; action
 in the File menu. Select the tests you wish to
-save from the left-hand test window by single-clicking, and
+approve from the left-hand test window by single-clicking, and
 using Ctrl+left click to select further tests. (Press Ctrl-A to
-select all tests) On pressing &ldquo;Save&rdquo; (or Ctrl+S),
-all selected tests will be saved.</div>
+select all tests) On pressing &ldquo;Approve&rdquo; (or Ctrl+S),
+all selected tests will have their stored (approved) results overwritten.</div>
 
-<div class="Text_Normal">On saving a test, by default all files registered as
-different will be saved. You can however save only some of the
-files by selecting the files you wish to save from the file view
+<div class="Text_Normal">On approving a test, by default all files registered as
+different will be saved. You can however approve only some of the
+files by selecting the files you wish to approve from the file view
 (under the Test tab) in much the way you select multiple tests
 in the tree view window.</div>
 
 <div class="Text_Normal">TextTest will normally save the files exactly as the system
-under test created them, and then perform its <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">filtering</A> on them again before each test run. You can however tell it to save the filtered output as the new standard result,
+under test created them, and then perform its <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">filtering</A> on them again before each test run. You can however tell it to save the filtered output as the new approved result,
 by setting the configuration setting "save_filtered_file_stems".
 This is mainly useful when
 <OL>
@@ -217,25 +217,25 @@ save_filtered_file_stems:myfile
 <?php codeSampleEnd() ?>
 </div>
 
-<div class="Text_Normal">By doing "Save As...", you get a dialog up with
-further configuration options. You can configure which version the results are saved as (look
+<div class="Text_Normal">By doing "Approve As...", you get a dialog up with
+further configuration options. You can configure which version the results are stored as (look
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=versions_and_version_control"; ?>">here
 </A> for a description of versions). </div>
 <div class="Text_Normal">
 By default, they
 will overwrite whatever file they have compared with, irrespective of what version markers it has, and will not
 have any version suffix if they are new files. This is signified by the default "&lt;existing version&gt;" option,
-and is also the behaviour of "Save". There is also the special option "&lt;full version&gt;" which will save the tests
+and is also the behaviour of "Approve". There is also the special option "&lt;full version&gt;" which will store the tests
 with whatever version they were run with (this corresponds to the default behaviour with TextTest 3.20 and earlier). 
 </div>
 <div class="Text_Normal">
 Sometimes you don't want
 results to be saved for particular versions, this can be
 configured via the &ldquo;unsaveable_version&rdquo; entry which
-will cause these versions not to appear in the list in future, or be used when saving with "&lt;full version&gt;".</div>
+will cause these versions not to appear in the list in future, or be used when approving with "&lt;full version&gt;".</div>
 <div class="Text_Normal">
 You can also specify a version identifier to back up the old results as, for which there
-is a text field in the "Save As..." dialog. This is particularly useful when your project
+is a text field in the "Approve As..." dialog. This is particularly useful when your project
 has made a release and you have a separate version of the tests for that release.
 </div>
 <div class="Text_Normal">You can also overwrite all the files, even if they were
@@ -244,17 +244,17 @@ compared files also&rdquo;: this is a way to re-generate the
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text"; ?>">run-dependent text</A>
 for all files in a failing test. Note that this only works on tests where at least some files were different, it won't work on tests that
 are considered to have succeeded. To systematically regenerate run-dependent text, run with the "--ignorefilters" flag
-(or check the box in the Advanced tab in the static GUI) which will cause tests to fail and hence make the process of saving
+(or check the box in the Advanced tab in the static GUI) which will cause tests to fail and hence make the process of approving
 run-dependent text much more visible.</div>
 <div class="Text_Header">Recomputing Test Results</div>
 <div class="Text_Normal">There are several occasions on which it can be useful to trigger a recomputation
-of the test results. Sometimes other versions of the tests are simply saved, which changes files shared between several
-versions. Sometimes the standard files for the tests are changed externally, via something like
+of the test results. Sometimes other versions of the tests are simply approved, which changes files shared between several
+versions. Sometimes the approved files for the tests are changed externally, via something like
 a version control update. The filtering settings in the config files might also be changed, and hence
 a recomputation could be triggered to see if the test now succeeds with the new filtering rules. For
 these reasons there exists a "Recompute Status" action in the Actions menu.
 </div>
-<div class="Text_Normal">Each time tests are selected or saved in the dynamic GUI, TextTest will
+<div class="Text_Normal">Each time tests are selected or approved in the dynamic GUI, TextTest will
 check the file modification times to see if a recomputation seems to be necessary. If it is, a small refresh
 icon will be shown to the right of that test in the test tree view. It isn't necessary for such an icon
 to be shown in order to perform "Recompute Status" but in most cases it won't have any effect.
@@ -262,7 +262,7 @@ to be shown in order to perform "Recompute Status" but in most cases it won't ha
 <div class="Text_Normal">It's also possible to run this action on a test that has not yet completed. In this
 case it will perform a filtering on the test files produced so far, which gives you the possibility to view them
 and check if the test is clearly going to fail. It will also attempt to estimate how far the test has progressed,
-by comparing the size of the standard files to the size of the temporary files produced so far.
+by comparing the size of the approved files to the size of the temporary files produced so far.
 </div>
 <div class="Text_Header">Marking tests</div>
 <div class="Text_Normal">Sometimes you have a lot of tests failing for different reasons.
