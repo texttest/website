@@ -151,7 +151,7 @@ nightjob:memory
 <?php codeSampleEnd() ?>
 would cause an additional row for performance and an additional row for memory to be generated for every test that had such information (with "-b nightjob" in this case, of course).</div>
 <div class="Text_Normal">
-Such rows can be noticed as the data in the cells is right-justified rather than left-justified, and there is no "row header" cell. The text will show the different in that measurement, even if it was not sufficient to fail the test. This replaces the earlier separate reports for this which existed in TextTest 3.26 etc.
+Such rows can be noticed as the data in the cells is right-justified rather than left-justified, and there is no "row header" cell. The text will show the difference in that measurement, even if it was not sufficient to fail the test. This replaces the earlier separate reports for this which existed in TextTest 3.26 etc.
 </div>
 <div class="Text_Header"><A NAME="historical_report_subpages"></A><A NAME="historical_report_subpage_cutoff"></A><A NAME="historical_report_subpage_weekdays"></A>Configuring which subpages are produced in the HTML report</div>
 <div class="Text_Normal">
