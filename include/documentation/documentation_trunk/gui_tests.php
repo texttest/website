@@ -6,7 +6,7 @@ It assumes you have read and followed the instructions in the
 helpful to read that first.</div>
 
 <div class="Text_Normal">We will use a simple PyGTK GUI as an
-example. This is a basic version of Exercise 6 in the course material, which you download it from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>. 
+example. This is a basic version of <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=course_material#Exercise6"; ?>">Exercise 6 in the course material</A>, whose material can be downloaded from <A class="Text_Link" HREF="files/texttest_course.zip">here</A>. 
 Unzip it and then set the environment variable TEXTTEST_HOME to point at its "tests" directory. 
 Text in italics is background information only. Naturally you need to install <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">StoryText</A> also before this will work.
 </div>
