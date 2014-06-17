@@ -70,8 +70,7 @@ configured using the config file list entry &ldquo;hide_test_category&rdquo;
 (a common usage is to hide all successful tests automatically).
 To refer to the various categories, you can use any name that appears in the status tab,
 or you can use the keys from for
-example the &ldquo;test_colours&rdquo; entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=configfile_default";?>">config
-file table</A>.</div>
+example the "test_colours" entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile";?>">personal preferences table</A>.</div>
 <div class="Text_Header"><A NAME="file_split_pattern"></A>Splitting the result files - grouping and approving only parts of files </div>
 <div class="Text_Normal">
 The grouping described above is mostly good enough when your system has only changed one thing at once. It's clearly good development 
