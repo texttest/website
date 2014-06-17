@@ -1,5 +1,8 @@
 <div class="Text_Main_Header">Install Texttest</div>
-
+<div class="Text_Normal">
+(We have started work on a <A class="Text_Link" HREF="http://texttest.readthedocs.org/en/latest/installation.html">new installation guide</A>, which will hopefully form
+the core of a new version of this website in the future. Particularly the instructions for Mac there are more complete and probably more up-to-date than these.)
+</div>
 <div class="Text_Normal">The first part is clearly to download TextTest itself
 from the <A class="Text_Link" HREF="http://sf.net/projects/texttest">sourceforge
 project page.</A>. You can then unzip this anywhere and run it from that location.
@@ -27,7 +30,7 @@ refer to the instructions under doc/Upgrade_PyGTK_Enterprise_Linux in the TextTe
 <div class="Text_Normal">
 On <u>Windows</u>, the summary for how to install is that you should get the GTK 2.18 bundle from <A class="Text_Link" HREF="http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.18/gtk+-bundle_2.18.7-20100213_win32.zip">here</A>, unzip it somewhere (avoid locations with spaces in their names, I find "C:\Gtk" works just fine for me!), add its "bin" subdirectory to your PATH and then run the three installers at the top of the <A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK downloads</A> page. In general neither TextTest nor PyGTK handle paths with spaces in their names well: both are ports of software written on UNIX so you're well advised to steer clear of "Program Files" and "Documents and Settings", whatever your Windows best-practice manual may tell you...</div>
 <div class="Text_Normal">
-On the <u>Mac</u>, some hints can be found on the <A class="Text_Link" HREF="http://faq.pygtk.org/index.py?req=show&file=faq01.019.htp">PyGTK FAQ</A>. Basically PyGTK doesn't build natively for the Mac so you should install Apple's Xll server. This implies installing the Developer Tools, XQuartz and then Macports, before getting PyGTK by executing "port install py26-gtk". Note that this may take quite some time to complete.
+On the <u>Mac</u>, some hints can be found on the <A class="Text_Link" HREF="http://faq.pygtk.org/index.py?req=show&file=faq01.019.htp">PyGTK FAQ</A>. Basically PyGTK doesn't build natively for the Mac so you should install Apple's Xll server. This implies installing the Developer Tools, XQuartz and then Macports, before getting PyGTK by executing "port install py27-pygtk". Note that this may take quite some time to complete.
 </div>
 <div class="Text_Normal"><LI><B><U>Tkdiff and diff</U></B>. You will need a decent graphical difference tool on your
 PATH, along with a textual version for reports. We recommend 'tkdiff' and 'diff' respectively which are present on most UNIX
