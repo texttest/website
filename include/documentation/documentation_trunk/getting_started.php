@@ -105,7 +105,7 @@ variable TEXTTEST_TMP. When the test is approved, these files are
 copied to the test directory created above. For more details,
 see the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">Guide to TextTest's Temporary
 Directory</A>.</I></div>
-<div class="Text_Normal"><img src="<?php print $basePath; ?>images/saved.png" NAME="Graphic5" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
+<div class="Text_Normal"><img src="<?php print $basePath; ?>images/approved.png" NAME="Graphic5" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 <div class="Text_Normal">Now the test goes green and the produced files are saved as
 the approved versions. By default, TextTest assumes that
