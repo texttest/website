@@ -57,28 +57,6 @@
                       <td bgcolor="#CEEFBD"><h3>TEXTTEST_PRIVATE%</h3></td>
                 </tr></table></td>
               </tr>
-              <tr>
-                <td><h3>StoryText</h3></td>
-                <td><table border="1" class="version_link"><tr>
-                      <td><h3><a href="nightjob/coverage_storytext/index.html">Public Tests</a></h3></td>
-                      <td bgcolor="#CEEFBD"><h3>STORYTEXT_PUBLIC%</h3></td>
-                </tr></table></td>
-                <td><table border="1" class="version_link"><tr>
-                      <td><h3><a href="nightjob/coverage_storytext_with_texttest_tests/index.html">+TextTest Tests</a></h3></td>
-                      <td bgcolor="#CEEFBD"><h3>STORYTEXT_TEXTTEST%</h3></td>
-                </tr></table></td>
-              </tr>
-              <tr>
-                <td><h3>CaptureMock</h3></td>
-                <td><table border="1" class="version_link"><tr>
-                      <td><h3><a href="nightjob/coverage_capturemock/index.html">Public Tests</a></h3></td>
-                      <td bgcolor="#CEEFBD"><h3>CAPTUREMOCK_PUBLIC%</h3></td>
-                </tr></table></td>
-                <td><table border="1" class="version_link"><tr>
-                      <td><h3><a href="nightjob/coverage_capturemock_with_texttest_tests/index.html">+TextTest Tests</a></h3></td>
-                      <td bgcolor="#CEEFBD"><h3>CAPTUREMOCK_TEXTTEST%</h3></td>
-                </tr></table></td>
-              </tr>
             </table>
           </td>
         </tr>
@@ -87,7 +65,7 @@
       <div class="Text_Normal">
         Additionally, we also measure code coverage on these tests. As well as the public tests for TextTest whose results are listed there are about 200 private tests that make use of domain-specific configuration modules, and we also measure coverage of the core modules with these tests included, which is of course generally a bit higher. This allows you to tell the difference between untested code and code which can't be tested outside Jeppesen. (Jeppesen fund development of TextTest if you hadn't gathered...)</div>
       <div class="Text_Normal">
-        For StoryText, we also measure coverage including the TextTest tests, as TextTest's own testing uses StoryText and has been the major driver for developing it so far. Historically, a large amount of its testing has been done via TextTest's suite of tests.
+        We've discontinued measuring coverage on StoryText and CaptureMock for the moment, as both have significant challenges where gathering accurate results was concerned.
       </div>
     </td>
   </tr>
