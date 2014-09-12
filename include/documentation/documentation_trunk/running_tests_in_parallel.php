@@ -284,12 +284,18 @@ subprocess.call(commandArgs)
 <?php codeSampleEnd() ?>
  
 </div>	
-<div class="Text_Header"><A NAME="-xs"></A><A NAME="queue_system_submit_args"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A>Additional configuration for the slave process </div>
+<div class="Text_Header"><A NAME="-xs"></A><A NAME="queue_system_submit_args"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A>Additional configuration for the slave process (such as forwarding external environment variables)</div>
 <div class="Text_Normal">
 From TextTest 3.23 enabling self-diagnostics also in the slave process requires using a separate flag "-xs" (alternatively a separate checkbox in the UI). It is no longer automatically inferred when self-diagnostics are requested with "-x". These diagnostics will then be written to subdirectories of the location where the master writes its logs, named after the slave job names.
 </div>
 <div class="Text_Normal">
-You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "queue_system_submit_args" in your config file(s). </div>
+You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "queue_system_submit_args" in your config file(s). A very common usage of this is to make environment variables set outside of TextTest available for the tests, on the slave machine. To forward an environment variable
+"ENVVAR" using SGE, you can use
+<?php codeSampleBegin() ?>
+queue_system_submit_args:-v ENVVAR
+<?php codeSampleEnd() ?>
+Note that it isn't necessary to do this for environment variables set in TextTest's own environment files.
+</div>
 <div class="Text_Normal">
 You can configure the TextTest program that is run by the slave process via the environment variable "TEXTTEST_SLAVE_CMD", which defaults to just running "texttest.py". The main point of this is if you need a startup script to find the right version of Python on the remote machine, for example, or if you want to plug in developer tools like profilers and coverage analysers. It is also used internally in the TextTest HTML reports to provide a correct command-line suggestion for starting TextTest.</div>
 <div class="Text_Normal">
