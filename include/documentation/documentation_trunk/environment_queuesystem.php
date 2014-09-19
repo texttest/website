@@ -91,13 +91,35 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_QS_POLL_INTERVAL</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">0.5</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_QS_POLL_INTERVAL">Amount of time to wait between checks for exit/completion when polling grid/cloud</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_QS_POLL_SUBSEQUENT_WAIT</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">15</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_QS_POLL_SUBSEQUENT_WAIT">Amount of time to wait before subsequent polling of grid/cloud</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_QS_POLL_WAIT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">5</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_QS_POLL_WAIT">Amount of time to wait before initiating polling of SGE</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_QS_POLL_WAIT">Amount of time to wait before initiating polling of grid/cloud</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -105,7 +127,7 @@
 			<div class="Table_Text_Small">TEXTTEST_SLAVE_CMD</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">&lt;source directory&gt;/bin/texttest.py</div>
+			<div class="Table_Text_Small">&lt;source directory&gt;/bin/texttest</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_SLAVE_CMD">TextTest start-script for starting subsequent processes</A></div>

@@ -94,7 +94,7 @@
 			<div class="Table_Text_Small">TEXTTEST_SLAVE_CMD</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">&lt;source directory&gt;/bin/texttest.py</div>
+			<div class="Table_Text_Small">&lt;source directory&gt;/bin/texttest</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_in_parallel#TEXTTEST_SLAVE_CMD">TextTest start-script for starting subsequent processes</A></div>

@@ -284,20 +284,31 @@ subprocess.call(commandArgs)
 <?php codeSampleEnd() ?>
  
 </div>	
-<div class="Text_Header"><A NAME="-xs"></A><A NAME="queue_system_submit_args"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A>Additional configuration for the slave process (such as forwarding external environment variables)</div>
+<div class="Text_Header"><A NAME="queue_system_environment"></A>Forwarding external environment variables to the slave process</div>
+<div class="Text_Normal">
+TextTest will make sure the program runs with the environment variables specified in your "environment files", but it does not forward environment variables
+set externally by default. Sometimes it's useful to be able to set something externally and have TextTest forward it to your grid engine of choice.
+In that case you can list such variables in "queue_system_environment", and TextTest will transfer whatever value they have in the master process's environment. i.e.
+<?php codeSampleBegin() ?>
+queue_system_environment:ENVVAR1
+queue_system_environment:ENVVAR2
+...
+<?php codeSampleEnd() ?>
+etc. This format is independent of which grid engine you are using, and is preferred to using queue_system_submit_args (see below)
+</div>	
+<div class="Text_Header"><A NAME="-xs"></A><A NAME="queue_system_submit_args"></A><A NAME="TEXTTEST_SLAVE_CMD"></A><A NAME="TEXTTEST_QS_POLL_WAIT"></A><A NAME="TEXTTEST_QS_POLL_SUBSEQUENT_WAIT"></A><A NAME="TEXTTEST_QS_POLL_INTERVAL"></A>Additional configuration for the slave process (such as forwarding external environment variables)</div>
 <div class="Text_Normal">
 From TextTest 3.23 enabling self-diagnostics also in the slave process requires using a separate flag "-xs" (alternatively a separate checkbox in the UI). It is no longer automatically inferred when self-diagnostics are requested with "-x". These diagnostics will then be written to subdirectories of the location where the master writes its logs, named after the slave job names.
 </div>
 <div class="Text_Normal">
-You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "queue_system_submit_args" in your config file(s). A very common usage of this is to make environment variables set outside of TextTest available for the tests, on the slave machine. To forward an environment variable
-"ENVVAR" using SGE, you can use
+You can provide additional arguments on the command line to the grid engine submission program ("qsub" in SGE or "bsub" in LSF) by specifying the variable "queue_system_submit_args" in your config file(s). For example, to forward an environment variable "ENVVAR" using SGE, you can use
 <?php codeSampleBegin() ?>
 queue_system_submit_args:-v ENVVAR
 <?php codeSampleEnd() ?>
-Note that it isn't necessary to do this for environment variables set in TextTest's own environment files.
+Note that since TextTest 3.27 the recommended way to do this is to use queue_system_environment, above.
 </div>
 <div class="Text_Normal">
 You can configure the TextTest program that is run by the slave process via the environment variable "TEXTTEST_SLAVE_CMD", which defaults to just running "texttest.py". The main point of this is if you need a startup script to find the right version of Python on the remote machine, for example, or if you want to plug in developer tools like profilers and coverage analysers. It is also used internally in the TextTest HTML reports to provide a correct command-line suggestion for starting TextTest.</div>
 <div class="Text_Normal">
-You can also configure the amount of time to wait before the polling of the grid engine (described above) starts, via the variable TEXTTEST_QS_POLL_WAIT. Note it does not affect the intervals between polls, which is hardcoded at 15 seconds currently. By default it waits 5 seconds before starting. This option is mostly useful when testing and debugging.
+You can also configure the amount of time to wait before the polling of the grid engine (described above) starts, via the variable TEXTTEST_QS_POLL_WAIT. By default it waits 5 seconds before starting. The intervals between polls is controlled by the variable TEXTTEST_QS_POLL_SUBSEQUENT_WAIT, which defaults to 15 seconds currently. The granularity (how frequently to check for completion and/or exiting while waiting) can be configured by TEXTTEST_QS_POLL_INTERVAL, which defaults to 0.5 seconds. These options are mostly useful when testing and debugging.
 </div>

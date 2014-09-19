@@ -406,7 +406,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (List)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>stacktrace : interpretcore.py (UNIX)<BR>&lt;empty&gt; (Windows)</div>
+			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>stacktrace : interpretcore (UNIX)<BR>&lt;empty&gt; (Windows)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=extra_files#collate_script">Mapping of result file names to scripts which turn them into suitable text</A></div>
@@ -1484,7 +1484,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -e 'ssh -x -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10' -av --copy-unsafe-links --delete --exclude-from=/carm/proj/texttest/geoff/Testing/TextTest/etc/rsync_exclude_patterns<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -q -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
+			<div class="Table_Text_Small">default : &lt;empty&gt;<BR>rsync : -e 'ssh -x -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10' -av --copy-unsafe-links --delete --exclude-from=&lt;source library&gt;/etc/rsync_exclude_patterns<BR>scp : -Crp -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10<BR>ssh : -q -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=10</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=running_tests_remotely#remote_program_options">Default options to use for particular remote shell programs</A></div>
