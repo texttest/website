@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys,os, types
+import sys,os, types, subprocess
 from glob import glob
 from tableshared import updateTable
 
@@ -15,11 +15,12 @@ def getConfigData(texttestPath, configModule, osName, script):
     configData = {}
     makeConfigFile("config.appidentifier", configModule)
     os.environ["TEXTTEST_PERSONAL_CONFIG"] = "STOOPID"
-    os.environ["FAKE_OS"] = osName
     os.environ["USER"] = "$USER"
-    ttCommand = texttestPath + " --vanilla -a appidentifier -d . -s " + script
-    for line in os.popen(ttCommand).readlines():
-        if line.find("|") == -1:
+    ttArgs = [ texttestPath, "--vanilla", "-a", "appidentifier", "-d", ".", "-s", script + " os=" + osName ]
+    proc = subprocess.Popen(ttArgs, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    out = proc.communicate()[0]
+    for line in out.splitlines():
+        if "|" not in line:
             continue
 
         key, value, doc = line.strip().split("|")

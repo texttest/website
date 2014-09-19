@@ -64,6 +64,8 @@ def handleTable(contents, dataMatrix):
     labels = findLabels()
     print contents[:tableStart]
     rowSize = rowTemplate.count("<TD")
+    if not dataMatrix:
+        return []
     for index, row in enumerate(dataMatrix):
         if len(row) != rowSize:
             break
