@@ -2,9 +2,12 @@
 <div class="Text_Description">  The &ldquo;queuesystem&rdquo;
 configuration</div>
 <div class="Text_Header"><A NAME="-l"></A><A NAME="queue_system_max_capacity"></A>On a single machine - making use of multiple cores</div>
-<div class="Text_Normal">Since TextTest 3.23, if you run it on a multicore machine, it will run as many tests in parallel as you have cores on the machine.
-In terms of the configuration this means that the "queuesystem" configuration module is automatically enabled. To disable it and run one 
-test at a time, you can set
+<div class="Text_Normal">If you run TextTest on a multicore machine, it will run as many tests in parallel as you have cores on the machine.
+In terms of the configuration this means that the "queuesystem" configuration module is automatically enabled. You can also run tests sequentially,
+using the "Run tests sequentially" checkbox on the static GUI's running tab, or the "-l" flag on the command line. 
+</div>
+<div class="Text_Normal">
+To disable this configuration and hence always run one test at a time, you can set
 <?php codeSampleBegin() ?>
 config_module:default
 <?php codeSampleEnd() ?>
@@ -14,34 +17,88 @@ in your config file. To steer how many tests will be run simultaneously, you can
 and results will be presented. Unlike the default configuration,
 the tests will not naturally finish in order. 
 </div>
-<div class="Text_Header"><A NAME="queue_system_module"></A><A NAME="queue_system_min_test_count"></A>Multiple machines and Grid Engines</div>
+<div class="Text_Header">Multiple machines - Grid Engines and Virtual Private Clouds</div>
 <div class="Text_Normal">When you have more than one machine at your disposal for
 testing purposes, it is very beneficial to be able to utilise
-all of them from the same test run. &ldquo;Grid Engine&rdquo;
-software allows you to do this, so that tests can run in
-parallel across a network. This greatly speeds up testing,
+all of them from the same test run. This greatly speeds up testing,
 naturally, and means far more tests (or longer tests) can be run
-with somebody waiting on the results.</div>
-<div class="Text_Normal">TextTest's queuesystem configuration is enabled by setting
-the config file entry &ldquo;config_module&rdquo; to
-&ldquo;queuesystem&rdquo;. It operates against an abstract grid
-engine, which is basically a Python API. Three implementations of
-this are provided, where the default is "local", which runs in parallel on the local machine as described above.
-There is also one for the free open source grid engine <A class="Text_Link" href="http://www.gridengine.org/">SGE
-</A>. Note that since Oracle bought Sun there are various descendants of the original SGE available, some Open Source,
-some with commercial support. See the "SGE" link above for more details. The final option is Platform
-Computing's <A class="Text_Link" href="http://www.platform.com/Products/Platform.LSF.Family/Platform.LSF/">LSF</A>
-(which is in theory more Windows-friendly, but costs money). You choose between these by
-setting the config file entry &ldquo;queue_system_module&rdquo;
-to &ldquo;SGE&rdquo; or &ldquo;LSF&rdquo;.</div>
-<div class="Text_Normal">By default, it will submit all tests to the grid engine. It
-is still possible to run tests locally as with the default
-configuration, from the command line you can provide "-l".</div>
+with somebody waiting on the results. 
+</div>
 <div class="Text_Normal">
-From the Static GUI there are 3 options for the "Use grid" option. "Always" and "Never" speak for themselves.
-The default is however to have some threshold based on the number of tests to submit: if more tests are used,
-the grid will be used, otherwise they will be run locally. This is configured via the config file setting 
-"queue_system_min_test_count", which defaults to 0 and hence the same as the "Always" option.
+There are two basic setups here. The older "Grid Engine" setup presumes access to testing resources within your network, a shared file system
+on that network using something like NFS, and "Grid Engine" software installed and configured on it. The "cloud" setup (new in TextTest 3.27) 
+presumes an account with a cloud provider (Amazon), and also a Virtual Private Cloud setup, so that the instances in the cloud can see your
+network also and can hence push results there when needed. 
+</div>
+<div class="Text_Header"><A NAME="queue_system_module"></A>Using a Grid Engine</div>
+<div class="Text_Normal">Three implementations of this are provided, though it is fairly straightforward to implement new ones if needed.
+The first is for the free open source grid engine <A class="Text_Link" href="http://gridengine.org/blog/2011/11/23/what-now/">SGE
+</A>. Note that since Oracle bought Sun there are various descendants of the original SGE available, some Open Source,
+some with commercial support. See the "SGE" link above for more details. The next is IBM's 
+<A class="Text_Link" href="http://www-03.ibm.com/systems/platformcomputing/products/lsf">LSF</A>
+(which is in theory more Windows-friendly, but costs money). Finally there is support for <A class="Text_Link" href="http://research.cs.wisc.edu/htcondor/HTCondor">HTCondor</A>, 
+although this should be regarded as somewhat experimental. You choose between these by
+setting the config file entry &ldquo;queue_system_module&rdquo;
+to "SGE", "LSF", or "condor".</div>
+<div class="Text_Normal">
+Acquiring machines and setting up NFS and the grid engine may be quite a large task though, and unless they already exist in your network it's probably
+a good idea to look into using a cloud instead. This will spread the cost out more, and also make it easier to adjust usage up and down over time.
+</div>
+<div class="Text_Header">Using a (Virtual Private) Cloud</div>
+<div class="Text_Normal">
+Right now there is only support for Amazon's EC2 cloud. This can be selected by setting "queue_system_module" to "ec2cloud". It relies on the 
+Python library "boto", which you will need to install, for example via "easy_install boto". As stated above you will also need a setup where the EC2
+instances can access your own machines, which implies setting up a Virtual Private Cloud.
+</div>
+<div class="Text_Normal">
+TextTest currently assumes all your EC2 instances are in the default region, and that your AWS credentials are available. These can be configured via
+boto's configuration files, either in ~/.boto or in /etc/boto.cfg. They should contain something like:
+
+<?php codeSampleBegin() ?>
+[Credentials]
+aws_access_key_id = ABCSDSBFDFDBFDFBF
+aws_secret_access_key = sdgsdDda87/sdgsd76r7sdgdJSAH/SGSDjds7
+
+[Boto]
+ec2_region_name = eu-west-1
+cloudwatch_region_endpoint = monitoring.eu-west-1.amazonaws.com
+ec2_region_endpoint = ec2.eu-west-1.amazonaws.com
+cloudwatch_region_name = eu-west-1
+<?php codeSampleEnd() ?>
+ 
+It will make use of the "remote_shell_program" setting (default "ssh") to log in to the EC2 instances. This obviously needs to be possible without typing
+in a password every time: it is suggested that you make use of an ssh-agent. To test if TextTest will be able to work correctly, set up your ssh-agent and then 
+log in with
+
+<?php codeSampleBegin() ?>
+my_machine$ ssh -A ec2-user@&lt;ip&gt;
+ec2-user@%lt;ip&gt;$ ssh my_machine
+<?php codeSampleEnd() ?>
+
+i.e. it must be possible to log in and to then log in in reverse, each time without a password of course.
+</div>
+<div class="Text_Normal">
+It will also make use of the "remote_copy_program" setting (default "rsync") in order to synchronise files back and forth between the master machine and the
+EC2 instance. Where possible, test runs will push their own results back to the master rather than waiting for the master to pull them.
+</div>
+<div class="Text_Normal">
+By default it will make use of any instances it can find in the default region. You will usually need to restrict this somehow. This is done by adding
+appropriate EC2 tags to the instances, which are then requested via "queue_system_resource" (see below).
+</div>
+<div class="Text_Header"><A NAME="queue_system_min_test_count"></A>General usage patterns</div>
+<div class="Text_Normal">In both of these cases, it will by default submit all tests to the grid engine/cloud. This can
+be overridden by using the "Use Grid" (or "Use Cloud") radio buttons on the static GUI's running tab. </div>
+<div class="Text_Normal">
+By default there are just two options, "Always" and "Never". As there is usually a small time penalty for using the grid or the cloud,
+it can however be useful to configure it only submit when more than a handful of tests are requested. To do this, you can e.g. set
+
+<?php codeSampleBegin() ?>
+queue_system_min_test_count:3
+<?php codeSampleEnd() ?>
+
+In this case there would be a third radio button option , "If enough tests", which is selected by default. The behaviour is then
+to run locally if only one or two tests are requested. The "-l" optionon the command line
+also works here, and can also take a numerical argument, where "-l 0" corresponds to "Always", "-l 1" to "Never" and "-l 2" to "If enough tests".
 </div>
 <div class="Text_Normal">
 Here is a sample
