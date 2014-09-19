@@ -134,9 +134,8 @@ to request <U>all</U> of the resources as specified below:</div>
 <div class="Text_Normal">When tests complete, TextTest will keep the remote test process
 alive and try to reuse it for a test with compatible resource requirements. This bypasses
 the time needed to submit tests to the queue system and wait for them to be scheduled,
-and reduces network traffic. This improvement in TextTest 3.10 should be able to
-improve throughput considerably, particularly where a large number of short tests need to
-be run.
+and reduces network traffic. This can improve throughput considerably, particularly where 
+a large number of short tests need to be run.
 </div><div class="Text_Normal">By default, until all tests have been dispatched, TextTest
 will reuse remote jobs in this way, but will also continually submit new jobs at the same time. 
 You can probably improve the throughput further by telling it the maximum number of parallel 
@@ -151,7 +150,7 @@ All of the settings for <A class="Text_Link" href="<?php print "index.php?page="
 </div>
 <div class="Text_Header"><A NAME="-keepslave"></A>Cleaning of temporary files</div>
 <div class="Text_Normal">As the queuesystem configuration is often used for very
-large test suites, from TextTest 3.10 it will start to try and clean up temporary
+large test suites, it will start to try and clean up temporary
 files before the GUI is closed. Otherwise closing the GUI can appear to take a very
 long time. </div>
 <div class="Text_Normal">
