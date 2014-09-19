@@ -46,9 +46,9 @@ a good idea to look into using a cloud instead. This will spread the cost out mo
 </div>
 <div class="Text_Header">Using a (Virtual Private) Cloud</div>
 <div class="Text_Normal">
-Right now there is only support for Amazon's EC2 cloud. This can be selected by setting "queue_system_module" to "ec2cloud". It relies on the 
-Python library "boto", which you will need to install, for example via "easy_install boto". As stated above you will also need a setup where the EC2
-instances can access your own machines, which implies setting up a Virtual Private Cloud.
+Right now there is only support for <A class="Text_Link" href="http://aws.amazon.com/ec2">Amazon's EC2 cloud</A>. This can be selected by setting "queue_system_module" to "ec2cloud". 
+It relies on the Python library <A class="Text_Link" href="http://boto.readthedocs.org/en/latest">boto</A>, which you will need to install, for example via "easy_install boto". 
+As stated above you will also need a setup where the EC2 instances can access your own machines, which implies setting up a Virtual Private Cloud.
 </div>
 <div class="Text_Normal">
 It expects you to have set up the instances you wish to use outside of TextTest. These instances should have TextTest installed (just run 'sudo easy_install texttest'
@@ -58,8 +58,9 @@ locations are writeable by the "ec2-user" user on your instances. It's probably 
 </div>
 <div class="Text_Normal">
 TextTest will start any instances that are stopped, if necessary, but it will not stop them again when it is finished. The reason is that EC2 charges every time an instance
-is stopped and started, and test usage often entails running tests several times in a row. It's therefore fairly essential to configure up a CloudWatch alarm for each of your 
-instances, that will stop them if they have been idle for a while. Here's some sample code that will set up such an alarm, that will stop after 2 hours where CPU utilization
+is stopped and started, and test usage often entails running tests several times in a row. It's therefore fairly essential to configure up a 
+<A class="Text_Link" HREF="http://aws.amazon.com/cloudwatch">CloudWatch</A> alarm for each of your instances, that will stop them if they have been idle for a while. 
+Here's some sample code that will set up such an alarm, that will stop after 2 hours where CPU utilization
 has been under a certain threshold (here 5% divided by the number of cores).
 
 <?php codeSampleBegin() ?>
