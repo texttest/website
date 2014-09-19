@@ -59,17 +59,22 @@ locations are writeable by the "ec2-user" user on your instances. It's probably 
 <div class="Text_Normal">
 TextTest will start any instances that are stopped, if necessary, but it will not stop them again when it is finished. The reason is that EC2 charges every time an instance
 is stopped and started, and test usage often entails running tests several times in a row. It's therefore fairly essential to configure up a CloudWatch alarm for each of your 
-instances, that will stop them if they have been idle for a while. Here's some sample code that will set up such an alarm.
+instances, that will stop them if they have been idle for a while. Here's some sample code that will set up such an alarm, that will stop after 2 hours where CPU utilization
+has been under a certain threshold (here 5% divided by the number of cores).
 
 <?php codeSampleBegin() ?>
 def addAlarm(instId, cores, regionName):
     cwConn = boto.ec2.cloudwatch.connect_to_region(regionName)
     threshold = 5.0 / cores
-    alarm = boto.ec2.cloudwatch.alarm.MetricAlarm(name="stop-" + instId, metric="CPUUtilization", 
+    action = 'arn:aws:automate:' + regionName + ':ec2:stop'
+    alarm = boto.ec2.cloudwatch.alarm.MetricAlarm(name="stop-" + instId, 
+                                                  metric="CPUUtilization", 
                                                   namespace="AWS/EC2",
-                                                  statistic="Maximum", comparison="<", threshold=threshold, 
-                                                  period=60, evaluation_periods=120, dimensions={"InstanceId" : instId},
-                                                  alarm_actions=['arn:aws:automate:' + regionName + ':ec2:stop'])
+                                                  statistic="Maximum", 
+                                                  comparison="<", threshold=threshold, 
+                                                  period=60, evaluation_periods=120, 
+                                                  dimensions={"InstanceId" : instId},
+                                                  alarm_actions=[action])
     cwConn.put_metric_alarm(alarm)
 
 <?php codeSampleEnd() ?>
