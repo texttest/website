@@ -43,7 +43,7 @@ The default is however to have some threshold based on the number of tests to su
 the grid will be used, otherwise they will be run locally. This is configured via the config file setting 
 "queue_system_min_test_count", which defaults to 0 and hence the same as the "Always" option.
 </div>
-
+<div class="Text_Normal">
 Here is a sample
 screenshot, from an old version of TextTest using SGE:</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/parallel.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>Some
