@@ -36,7 +36,7 @@ The first is for the free open source grid engine <A class="Text_Link" href="htt
 </A>. Note that since Oracle bought Sun there are various descendants of the original SGE available, some Open Source,
 some with commercial support. See the "SGE" link above for more details. The next is IBM's 
 <A class="Text_Link" href="http://www-03.ibm.com/systems/platformcomputing/products/lsf">LSF</A>
-(which is in theory more Windows-friendly, but costs money). Finally there is support for <A class="Text_Link" href="http://research.cs.wisc.edu/htcondor/HTCondor">HTCondor</A>, 
+(which is in theory more Windows-friendly, but costs money). Finally there is support for <A class="Text_Link" href="http://research.cs.wisc.edu/htcondor">HTCondor</A>, 
 although this should be regarded as somewhat experimental. You choose between these by
 setting the config file entry &ldquo;queue_system_module&rdquo;
 to "SGE", "LSF", or "condor".</div>
@@ -49,6 +49,35 @@ a good idea to look into using a cloud instead. This will spread the cost out mo
 Right now there is only support for Amazon's EC2 cloud. This can be selected by setting "queue_system_module" to "ec2cloud". It relies on the 
 Python library "boto", which you will need to install, for example via "easy_install boto". As stated above you will also need a setup where the EC2
 instances can access your own machines, which implies setting up a Virtual Private Cloud.
+</div>
+<div class="Text_Normal">
+It expects you to have set up the instances you wish to use outside of TextTest. These instances should have TextTest installed (just run 'sudo easy_install texttest'
+on them) and obviously any packages that your system under test will require. Also, TextTest does not maintain any mapping of paths between your system
+and the EC2 instances, it assumes they will always be the same. Therefore you'll need to make sure that everywhere you use on your system, equivalent
+locations are writeable by the "ec2-user" user on your instances. It's probably best to have some kind of "instance launching" script that can ensure this.
+</div>
+<div class="Text_Normal">
+TextTest will start any instances that are stopped, if necessary, but it will not stop them again when it is finished. The reason is that EC2 charges every time an instance
+is stopped and started, and test usage often entails running tests several times in a row. It's therefore fairly essential to configure up a CloudWatch alarm for each of your 
+instances, that will stop them if they have been idle for a while. Here's some sample code that will set up such an alarm.
+
+<?php codeSampleBegin() ?>
+def addAlarm(instId, cores, regionName):
+    cwConn = boto.ec2.cloudwatch.connect_to_region(regionName)
+    threshold = 5.0 / cores
+    alarm = boto.ec2.cloudwatch.alarm.MetricAlarm(name="stop-" + instId, metric="CPUUtilization", 
+                                                  namespace="AWS/EC2",
+                                                  statistic="Maximum", comparison="<", threshold=threshold, 
+                                                  period=60, evaluation_periods=120, dimensions={"InstanceId" : instId},
+                                                  alarm_actions=['arn:aws:automate:' + regionName + ':ec2:stop'])
+    cwConn.put_metric_alarm(alarm)
+
+<?php codeSampleEnd() ?>
+
+While TextTest is using the instances, it will add a "TextTest user" tag to them to provide a primitive kind of locking and stop others using them.
+It will also disable all Cloudwatch alarms, to prevent Cloudwatch from closing down an instance when it's in use. When tests are finished,
+it removes these tags and re-enables the alarms.
+
 </div>
 <div class="Text_Normal">
 TextTest currently assumes all your EC2 instances are in the default region, and that your AWS credentials are available. These can be configured via
@@ -72,7 +101,7 @@ log in with
 
 <?php codeSampleBegin() ?>
 my_machine$ ssh -A ec2-user@&lt;ip&gt;
-ec2-user@%lt;ip&gt;$ ssh my_machine
+ec2-user@&lt;ip&gt;$ ssh my_machine
 <?php codeSampleEnd() ?>
 
 i.e. it must be possible to log in and to then log in in reverse, each time without a password of course.
@@ -90,14 +119,14 @@ appropriate EC2 tags to the instances, which are then requested via "queue_syste
 be overridden by using the "Use Grid" (or "Use Cloud") radio buttons on the static GUI's running tab. </div>
 <div class="Text_Normal">
 By default there are just two options, "Always" and "Never". As there is usually a small time penalty for using the grid or the cloud,
-it can however be useful to configure it only submit when more than a handful of tests are requested. To do this, you can e.g. set
+it can however be useful to configure it to only submit when more than a handful of tests are requested. To do this, you can e.g. set
 
 <?php codeSampleBegin() ?>
 queue_system_min_test_count:3
 <?php codeSampleEnd() ?>
 
 In this case there would be a third radio button option , "If enough tests", which is selected by default. The behaviour is then
-to run locally if only one or two tests are requested. The "-l" optionon the command line
+to run locally if only one or two tests are requested. The "-l" option on the command line
 also works here, and can also take a numerical argument, where "-l 0" corresponds to "Always", "-l 1" to "Never" and "-l 2" to "If enough tests".
 </div>
 <div class="Text_Normal">
