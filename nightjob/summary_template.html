@@ -38,34 +38,8 @@
       <div class="Text_Normal"> 
         Naturally we make every effort to ensure that these are always green, but there are currently a small number that contain race conditions and fail about one time in ten. By following the links above, you can check in the nightjob history to see how frequently a test has failed in the past and hence how indeterministic it is.  
       </div>
-      <div class="Text_Main_Header">Coverage status</div> 
-      <div class="Text_Normal"> 
-      <table border="1" frame="void">
-        <tr>
-          <td>
-            <!--App order=TextTest-->
-            <!--Version order=unix,windows-->
-            <table border="0">
-              <tr>
-                <td><h3>TextTest</h3></td>
-                <td><table border="1" class="version_link"><tr>
-                      <td><h3><a href="nightjob/coverage/index.html">Public Tests</a></h3></td>
-                      <td bgcolor="#CEEFBD"><h3>TEXTTEST_PUBLIC%</h3></td>
-                </tr></table></td>
-                <td><table border="1" class="version_link"><tr>
-                      <td><h3><a href="nightjob/coverage_with_jeppesen_tests/index.html">+Private Tests</a></h3></td>
-                      <td bgcolor="#CEEFBD"><h3>TEXTTEST_PRIVATE%</h3></td>
-                </tr></table></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-      </div> 
       <div class="Text_Normal">
-        Additionally, we also measure code coverage on these tests. As well as the public tests for TextTest whose results are listed there are about 200 private tests that make use of domain-specific configuration modules, and we also measure coverage of the core modules with these tests included, which is of course generally a bit higher. This allows you to tell the difference between untested code and code which can't be tested outside Jeppesen. (Jeppesen fund development of TextTest if you hadn't gathered...)</div>
-      <div class="Text_Normal">
-        We've discontinued measuring coverage on StoryText and CaptureMock for the moment, as both have significant challenges where gathering accurate results was concerned.
+        We've discontinued measuring coverage for the moment, as it seemed to be more effort than it was worth at this mature stage of the product.
       </div>
     </td>
   </tr>
