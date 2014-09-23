@@ -25,7 +25,7 @@ if (isset ($argv))
  <head>
   <title> Texttest.org </title>
     <link rel=STYLESHEET href="stylefile.css" TYPE="text/css">
-    <link href="images/logo.ico" type="image/ico" rel="icon">
+    <link href="images/texttest-icon-dynamic.png" type="image/png" rel="icon">
   </head>                                                    
 
   <body background="images/back.png">
