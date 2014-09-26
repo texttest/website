@@ -136,12 +136,11 @@ to run locally if only one or two tests are requested. The "-l" option on the co
 also works here, and can also take a numerical argument, where "-l 0" corresponds to "Always", "-l 1" to "Never" and "-l 2" to "If enough tests".
 </div>
 <div class="Text_Normal">
-Here is a sample
-screenshot, from an old version of TextTest using SGE:</div>
+Here is a sample screenshot, running TextTest's 1600 acceptance tests in the cloud, which normally takes about 90 seconds using
+48 CPUs:</div>
 <div class="Text_Normal"><img src="<?php print $basePath; ?>images/parallel.png" NAME="Graphic1" ALIGN=LEFT BORDER=0><BR CLEAR=LEFT><BR>Some
 tests have finished and gone green, but others are still running
-and hence yellow. TextTest reports their state in the grid
-engine (&ldquo;RUN&rdquo;) followed by the machine each is
+and hence yellow. TextTest reports their state in the cloud ("RUN") followed by the cloud instance each is
 running on in brackets. 
 </div><div class="Text_Normal">
 Internally, TextTest submits <I>itself</I> to the grid engine and runs a slave process
