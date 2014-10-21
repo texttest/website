@@ -8,32 +8,30 @@ in the static GUI toolbar.</div>
 <div class="Text_Header"><img src="<?php print $basePath; ?>images/ttdyn.png" NAME="Graphic1"  BORDER=0><BR CLEAR=LEFT><BR>
 </div>
 
-<div class="Text_Header"><A NAME="auto_collapse_successful"></A><A NAME="-stop"></A>The Test Tree View</div>
+<div class="Text_Header"><A NAME="-stop"></A>The Test Tree View</div>
 <div class="Text_Normal">The initial left window is a tree view of all the tests that
 are being run. These are colour-coded: white tests have not
 started yet, yellow tests are currently in progress, green tests
 are reckoned to have succeeded while red tests are reckoned to
 have failed. By clicking the rows in this view details of what
-happened to a particular test can be examined.</div>
+happened to a particular test can be examined.
+</div>
+<div class="Text_Normal">
+Ordinarily only failed tests will appear in this Test Tree view by default. You
+can configure this via the config file and the status tab, see next paragraph.
+</div>
 <div class="Text_Normal">
 Ordinarily, TextTest will run each test in order until all tests have
 been completed, successfully or otherwise. You can however request that
 it stops after the first test that fails, by selecting "Stop after first
 failure" in the static GUI running tab, or "-stop" on the command line.
 </div>
-<div class="Text_Normal">When whole test suites become complete and all tests in them
-have succeeded, the dynamic GUI will automatically collapse the
-tree view for that suite and simply identify that line by the
-number of tests that were successful. This aids the user in
-seeing which tests need his attention. If this behaviour is
-found to be undesirable for any reason, it can be disabled by
-setting the config file value 'auto_collapse_successful' to 0.</div>
-
-<div class="Text_Header"><A NAME="hide_test_category"></A><A NAME="text_diff_program_filters"></A>The Status tab and grouping similar failures</div>
-<div class="Text_Normal">The initial right window is a summary of how many tests are
+<div class="Text_Header"><A NAME="hide_test_category"></A><A NAME="show_test_category"></A><A NAME="text_diff_program_filters"></A>The Status tab and grouping similar failures</div>
+<div class="Text_Normal">
+The initial right window is a summary of how many tests are
 in a given state and is continually updated as they change. When
 they complete, if they fail they are sorted into categories of
-which files differed underneath the &ldquo;Failed&rdquo;. Note
+which files differed underneath the "Failed" category. Note
 that as several files can differ in the same test this doesn't
 necessarily add up to the total number of failed tests.</div>
 <div class="Text_Normal">
@@ -66,8 +64,8 @@ until you uncheck all the files where it was different. In this
 example there is only one file anyway. 
 </div>
 <div class="Text_Normal">Note that whether categories are visible by default can be
-configured using the config file list entry &ldquo;hide_test_category&rdquo;
-(a common usage is to hide all successful tests automatically).
+configured using the config file list entries "hide_test_category" and "show_test_category".
+By default everything under "Failed" is shown, and everything else is hidden.
 To refer to the various categories, you can use any name that appears in the status tab,
 or you can use the keys from for
 example the "test_colours" entry in the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalpreffile";?>">personal preferences table</A>.</div>
@@ -293,4 +291,9 @@ There is an environment variable TEXTTEST_DYNAMIC_GUI_INTERPRETER which is a hoo
 to Python when starting the dynamic GUI from the static GUI. This is mostly useful for development, for
 example to plug in StoryText in the self-tests. It's no longer necessary to use this to measure coverage, which 
 works via a Python interpreter startup hook now.
+</div>
+<div class="Text_Header"><A NAME="retro_icons"></A>TextTest's icons</div>
+<div class="Text_Normal">
+In TextTest 3.27 the icons were redesigned. Naturally there are always conservative people who don't like such change.
+If you are one of them, you can get the pre-3.27 icons back by adding the setting "retro_icons:1" to your personal config file.
 </div>

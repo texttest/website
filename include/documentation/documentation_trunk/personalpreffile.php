@@ -22,27 +22,13 @@ of the "Type" column in this table.
 	</TR>	
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">auto_collapse_successful</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Int</div>
-		</TD>
-		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">1</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#auto_collapse_successful">Automatically collapse successful test suites?</A></div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">file_colours</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">clipboard_copy : grey60<BR>clipboard_cut : red<BR>default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : orange<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
+			<div class="Table_Text_Small">bug : orange<BR>clipboard_copy : grey60<BR>clipboard_cut : red<BR>default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : lightblue<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#file_colours">Colours to use for each file state</A></div>
@@ -126,7 +112,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">List</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">&lt;empty&gt;</div>
+			<div class="Table_Text_Small">cancelled</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#hide_test_category">Categories of tests which should not appear in the dynamic GUI test view</A></div>
@@ -144,6 +130,34 @@ of the "Type" column in this table.
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#query_kill_processes">Ask about whether to kill these processes when exiting texttest.</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">retro_icons</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Int</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">0</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#retro_icons">Use the old TextTest icons in the dynamic and static GUIs</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">show_test_category</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">List</div>
+		</TD>
+		<TD bgcolor="#FFFFFF"> 
+			<div class="Table_Text_Small">failed</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=dynamic_gui#show_test_category">Categories of tests which should appear in the dynamic GUI test view</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -182,7 +196,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">CompositeDictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">clipboard_copy : grey60<BR>clipboard_cut : red<BR>default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : orange<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
+			<div class="Table_Text_Small">bug : orange<BR>clipboard_copy : grey60<BR>clipboard_cut : red<BR>default : salmon<BR>failure : salmon<BR>final_filter : LightGoldenrod1<BR>initial_filter : LightGoldenrod1<BR>marked : lightblue<BR>not_started : white<BR>pending : grey80<BR>running : LightGoldenrod1<BR>static : grey90<BR>success : DarkSeaGreen2</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#test_colours">Colours to use for each test state</A></div>
