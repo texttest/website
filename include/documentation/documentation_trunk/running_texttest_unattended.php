@@ -190,13 +190,19 @@ Weekend:saturday
 Weekend:sunday
 <?php codeSampleEnd() ?>
 </div>
-<div class="Text_Header"><A NAME="batch.ArchiveRepository"></A><A NAME="batch.ArchiveHTML"></A>
-Archiving old data from the HTML reports</div>
+<div class="Text_Header"><A NAME="-manualarchive"></A><A NAME="batch.ArchiveRepository"></A><A NAME="batch.ArchiveHTML"></A>
+Data mining old test results, and archiving them by hand</div>
 <div class="Text_Normal">
-After a while, very old test results in the repository cease
-to be interesting and can safely be archived. This is done via
-the script batch.ArchiveRepository, with arguments 'after' and
-'before' for the time period to archive (The
+Until TextTest 3.27 test results were kept forever, unless they were explicitly archived. Now
+all data files are automatically deleted by default unless you say otherwise.
+</div>
+<div class="Text_Normal">
+To keep older results and take over the job of archiving them (otherwise website generation will eventually become extremely
+slow, as the repository will grow without limit), you now need to supply the flag "-manualarchive" alongside "-coll".
+</div>
+<div class="Text_Normal">
+Then you will need to run the script "batch.ArchiveRepository" from time to time, to achieve this.
+It has arguments 'after' and 'before' for the time period to archive (The
 batch session to do it on is provided in the normal way via -b on the command line, 
  it defaults to all known sessions if none is provided). The
 dates should be in the same format as the dates on the pages,
@@ -207,6 +213,10 @@ but even so just searching for the files can take a while if there are a lot of 
 It doesn't actually delete things but creates a tarball in the location specified by 
 "batch_result_repository", named by the date provided. By  generating using the "-collarchive"
 flag (see above) you can include this data when generating the pages afresh.
+</div>
+<div class="Text_Normal">
+You can also specify individual named runs to remove, for example if you made a mistake when kicking off a run
+which has written to the repository. This is done via e.g. -s "batch.ArchiveRepository name=MyRun"
 </div>
 <div class="Text_Normal">
 If you have specified a weekday-specific page using "historical_report_subpage_weekdays" (see above)
