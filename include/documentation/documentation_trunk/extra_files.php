@@ -53,7 +53,9 @@ may be used in the path to the source file. This simply means that the
 exact name of the file that will be produced may vary, but whatever file matches the 
 pattern will be copied and given the same name each time by TextTest. If multiple files 
 are found by this method, the first one
-alphabetically will be used. See below for how to collate multiple files at once.</div>
+alphabetically will be used : since TextTest 3.28 this will now generate a warning, to allow
+you to identify the desired file more carefully, collate all the files at once, or combine them
+via a script. See below for details of how to do these things.</div>
 <div class="Text_Normal">
 It's also possible to provide multiple patterns or
 names to look in for this situation, where the names of
@@ -117,8 +119,7 @@ Any left-over matches will simply be thrown away. If there are more asterisks on
 patterns on the right-hand-side, any remaining ones will be replaced by the string "WILDCARD", which is intended
 as a warning that the pattern isn't quite right.
 </div>
-<div class="Text_Normal">The restrictions on patterns and the assumptions of common stems which were present in TextTest
-versions up to 3.15 have now been removed. Pretty much any (sensible) pattern should now work. The following
+<div class="Text_Normal">The following
 is for example a quick way to collate all files and preserve their names:
 <?php codeSampleBegin() ?>
 [collate_file]
@@ -131,14 +132,37 @@ Running an arbitrary script on the collected files</div>
 <div class="Text_Normal">If the file you refer to via "collate_file"
 is not plain-text or needs to be pre-processed
 before it can easily be compared, you can tell TextTest to run
-an arbitrary script on the file. This script should take a
-single argument (the file name to read) and should write its
+an arbitrary script on the file(s) matched by the pattern provided. This script should take the file names to read
+as arguments and should write its
 output to the standard output. You do this by specifying the
 composite dictionary entry &ldquo;collate_script&rdquo;, which
 has the same form as &ldquo;collate_file&rdquo; except the value
 should be the name of the script to run. &ldquo;collate_script&rdquo; has
 no effect unless &ldquo;collate_file&rdquo; is also specified for the
 same file.</div>
+<div class="Text_Normal">
+For example, to concatenate all the matched files on linux, you could do as follows:
+
+<?php codeSampleBegin() ?>
+[collate_file]
+dumped_data:data*.dump
+
+[collate_script]
+dumped_data:cat
+<?php codeSampleEnd() ?>
+
+which would result in data1.dump and data2.dump being concatenated into the file dumped_data.&lt;app&gt; and compared in the test.
+To produce a formatted version of an XML file, you might do as follows:
+
+<?php codeSampleBegin() ?>
+[collate_file]
+xmlfile:myfile.xml
+
+[collate_script]
+xmlfile:xmllint --format
+<?php codeSampleEnd() ?>
+
+</div>
 <div class="Text_Normal">
 There are several ways that TextTest can find the script. Obviously
 a full absolute path will work. If a relative path is given, TextTest will also look in its
