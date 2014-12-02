@@ -135,18 +135,15 @@ developers making changes to the test suite do not disturb each
 other. Using the history provided by version-control software
 can also be very useful to track the behaviour of your
 application over time.</div>
-<div class="Text_Normal">TextTest does not integrate directly with any version control
-software right now, but it does have a concept of a &ldquo;checkout&rdquo;
-
+<div class="Text_Normal">TextTest has a concept of a "checkout"
 which aids in using it. In a version-controlled environment, you
 want to be able to specify the path to the SUT as a relative
 path, so that different developers can test their own code in
 their own user space, and they can also painlessly run each
-others code or maintain several checkouts of the system..</div>
-<div class="Text_Normal">It is expected that TextTest test suites will want to be
-version-controlled, and hence an easy means of switching between
-different &quot;checkouts&quot; of the version-control system is
-needed. A checkout is different to a version in that all
+others code or maintain several checkouts of the system.
+</div>
+<div class="Text_Normal">
+A checkout is different to a version in that all
 checkouts are expected to produce the same results, and making
 sure that last night's central checkout does the same as a
 developer's local code is an essential part of verifying
@@ -173,22 +170,27 @@ users have named the directories in their space.
 TEXTTEST_CHECKOUT will be set to the first existing path found
 in this way.</div>
 
-<div class="Text_Normal">The &ldquo;short name&rdquo; can be used in these paths as
+<div class="Text_Normal">
+The "short name" can be used in these paths as
 $TEXTTEST_CHECKOUT_NAME. In previous versions of TextTest, the
-rule has been to concatenate the &ldquo;short name&rdquo; with
-the path given by &ldquo;checkout_location&rdquo;, which for
+rule has been to concatenate the "short name" with
+the path given by "checkout_location", which for
 backwards compatibility is still the behaviour if the
-checkout_location doesn't depend on $TEXTTEST_CHECKOUT_NAME.</div>
-<div class="Text_Normal">To change the checkout on the command line, use the -c
-option, or from the static GUI, fill in the &ldquo;Use checkout&rdquo;
-text box under the &ldquo;Running/Basic&rdquo; tabs. If the value
-provided is a relative path, it will be used as the &ldquo;short
-name&rdquo; and combined with the corresponding value of
-&quot;checkout_location&quot; as described above. If it is an
+checkout_location doesn't depend on $TEXTTEST_CHECKOUT_NAME.
+</div>
+<div class="Text_Normal">
+To change the checkout on the command line, use the -c
+option, or from the static GUI, fill in the "Use checkout"
+text box under the "Running/Basic" tabs. If the value
+provided is a relative path, it will be used as the "short
+name" and combined with the corresponding value of
+"checkout_location" as described above. If it is an
 absolute path, it will be used as is and the config file
 settings ignored. You can also provide a comma-separated list of checkouts,
 which will run several system instances against the same tests, much
-as if they were separate versions.</div>
+as if they were separate versions. If no other settings for the checkout
+are found, TextTest will use the current working directory, as it does with TEXTTEST_HOME.
+</div>
 <div class="Text_Header">Version control integration (Git/Mercurial/Bazaar/CVS)</div>
 <div class="Text_Normal">If you use Git, Bazaar, Mercurial or CVS to version-control your tests,
 you can view log, diff, status and annotation information directly

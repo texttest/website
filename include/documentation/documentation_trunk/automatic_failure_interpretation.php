@@ -99,7 +99,8 @@ to use it for matching.
 </div>
 <div class="Text_Normal">
 There is now also a control to trigger reruns when known bugs are found, which is useful for intermittent problems. In that case the test will simply be restarted, up to a maximum of the number of times you give. When running with a grid engine, the tests will not
-necessarily be rerun on the same machine so it is also a way to circumvent temporary hardware issues in that case. 
+necessarily be rerun on the same machine so it is also a way to circumvent temporary hardware issues in that case. The check box beneath it "Skip known bug reporting" allows for
+this mechanism to be used only to trigger reruns: in this case the test will not be reported any differently if the reruns continue to produce the same result.
 </div>
 <div class="Text_Normal">
 When the tests are run, TextTest wll then find all such "knownbugs" files, using its 
