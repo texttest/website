@@ -256,6 +256,15 @@ providing the &quot;-keepslave&quot; option on the command line, or the equivale
 switch from the Running/Advanced tab in the static GUI, in case you want to examine
 the filtering of a succesful test for example.
 </div>
+<div class="Text_Header"><A NAME="queue_system_max_reruns"></A>Known Bug reruns when running in parallel</div>
+<div class="Text_Normal">The <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=automatic_failure_interpretation"; ?>">automatic failure interpretation</A> 
+(or "known bugs") feature allows you to trigger reruns of tests when known issues occur. When running with the cloud or the grid, this means that the rerun
+may be triggered on a different instance somewhere else (which might be useful if the problem was with the instance for example).
+</div>
+<div class="Text_Normal">
+There is a parameter to limit this, "queue_system_max_reruns". This prevents excessive amounts of rerunning that might result if this feature was used too much.
+By default only 100 reruns per test suite will be allowed, irrespective of how many tests are originally run.
+</div>
 <div class="Text_Header"><A NAME="performance_test_resource"></A><A NAME="min_time_for_performance_force"></A><A NAME="-perf"></A>
 Collecting system resource usage when running in parallel</div>
 <div class="Text_Normal">The queuesystem configuration also provides some improvements
