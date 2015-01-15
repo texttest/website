@@ -32,6 +32,9 @@
         <td>
            <div class="Menu_Header_Link"> <a href="index.php?page=download">Download</a></div>
         </td> 
+       <<td>
+           <div class="Menu_Header_Link"> <a href="index.php?page=develop">Develop</a></div>
+        </td> 
        </tr>
       </table>
     </td>
