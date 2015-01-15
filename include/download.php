@@ -8,7 +8,7 @@
    <div class="Text_Normal">
      On Windows, download the Windows installer from the 
      <a class="Text_Link" href="http://sourceforge.net/project/showfiles.php?group_id=80138">SourceForge download site</a>.
-     On POSIX systems, install TextTest directly from Python's packaging system via "sudo pip install capturemock" or "sudo easy_install capturemock". 
+     On POSIX systems, install TextTest directly from Python's packaging system via "sudo pip install texttest" or "sudo easy_install texttest". 
      A tarball may also be downloaded from the SourceForge site above.
 </div>
 <div class="Text_Normal">
