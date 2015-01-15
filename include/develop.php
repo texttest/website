@@ -28,10 +28,10 @@ We make every effort to ensure that the self-tests are always green, but there a
    </div>
 <div class="Text_Header">Very high-level TextTest design overview</div>
 <div class="Text_Normal">
-  TextTest consists of a <I>core framework</I> and <I>configuration modules</I>. These are intended to be fairly separate. 2 configuration modules, are provided by default, "default" and "queuesystem". The "default" configuration runs tests in sequence on the local machine, while "queuesystem" supports parallelism, either locally, via grid software or clouds.
+  TextTest consists of a <u>core framework</u> and <u>configuration modules</u>. These are intended to be fairly separate. 2 configuration modules, are provided by default, "default" and "queuesystem". The "default" configuration runs tests in sequence on the local machine, while "queuesystem" supports parallelism, either locally, via grid software or clouds.
 </div>
 <div class="Text_Normal">
-The core framework mostly represents the data model and the framework abstractions. This code is largely contained in the "engine" and "testmodel" modules and is where TextTest starts. The key abstraction classes in the data model are testmodel.Application, testmodel.TestCase and testmodel.TestSuite, the last 2 deriving from a base class. These concepts are explained in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>">test suite guide</A>. </div>
+The core framework mostly represents the data model and the framework abstractions. This code is largely contained in the <i>engine</i> and <i>testmodel</i> modules and is where TextTest starts. The key abstraction classes in the data model are <i>testmodel</i>.<b>Application</b>, testmodel.<b>TestCase</b> and testmodel.<b>TestSuite</b>, the last 2 deriving from a base class. These concepts are explained in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>">test suite guide</A>. </div>
 <div class="Text_Normal">
 An Application owns a configObject, which is a single instance of the configuration being used. This is found from the <A class="Text_Link" HREF="index.php?page=documentation_trunk&n=writing_a_config_module#config_module">"config_module"</A> setting, which points out a module name: the "getConfig()" method is then called on that module. testmodel.Application forwards all method calls it doesn't understand to this configObject, and indeed make two attempts to call, once with and once without itself as the first argument.
 </div>
