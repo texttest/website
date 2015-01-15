@@ -27,10 +27,12 @@
    <div class="Text_Normal">
      To get hold of the latest version, you will need to install the <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>, 
      as well as the other dependencies listed in the <A class="Text_Link" HREF="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=install_texttest">installation guide</A>. 
-     You can then just do "bzr branch lp:texttest" to get the latest code and run "texttest.py" from the relevant "bin" directory.
+     You can then just do "bzr branch lp:texttest" to get the latest code.
    </div>
    <div class="Text_Normal">
-     You can also install it, either centrally or into a Python virtual environment, by running "python setup.py install", as with any other Python program.
+     On a POSIX-based system, you can just run this code directly from the source tree, by running "bin/texttest".
+     On Windows you need to install it, either centrally or into a Python virtual environment, by running "python setup.py install", as with any other Python program.
+     This has its advantages on any system, especially if developing, where you can also do "pip install -e" to install a link which means that source code changes are reflected immediately.
    </div>
   </td>
  </tr>
