@@ -65,6 +65,7 @@ if (isset ($argv))
 		     if ($_GET["page"]=="main")  include_file ('include/main.php');
 		     elseif ($_GET["page"]=="news")  include_file('include/news.php');
 		     elseif ($_GET["page"]=="download")  include_file('include/download.php');
+		     elseif ($_GET["page"]=="develop")  include_file('include/develop.php');
 		     elseif ($_GET["page"]=="contact")              include_file('include/contact.php');
 		     elseif ($_GET["page"]=="publications")         include_file('include/publications.php');
 		     elseif ($_GET["page"]=="siteinfo")             include_file('include/siteinfo.php');
