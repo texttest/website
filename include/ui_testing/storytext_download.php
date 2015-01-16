@@ -32,7 +32,7 @@
    </div>
    <div class="Text_Header">Latest development version from source control</div>
    <div class="Text_Normal">
-     There about 350 automated acceptance tests for StoryText, using TextTest, and we aim to keep 
+     There about 550 automated acceptance tests for StoryText, using TextTest, and we aim to keep 
      the contents of source control stable and usable at all times. Anyone wishing to make changes 
      should obviously get hold of this version also.
      The code is hosted on Launchpad and can be browsed online 
@@ -42,6 +42,20 @@
      <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>. 
      You can then just do "bzr branch lp:storytext" to get the latest code.
    </div>
+   <div class="Text_Normal">
+     Note that StoryText is only runnable directly from its source tree when used on Python GUIs on Linux now. On Windows, or with 
+     Java GUIs, it will need to be installed using a command like 'python setup.py install' or 'jython setup.py install' respectively.
+     We'd suggest making use of <A class="Text_Link" HREF="http://www.virtualenv.org">virtualenv</A> for this in order to avoid needing
+     to use the default Python or Jython installation.
+     For example, to set up a Jython installation on Linux, you might do
+<?php codeSampleBegin() ?>
+$ jython virtualenv.py ~/.local/jython2.5.3
+$ export PATH=~/.local/jython2.5.3/bin:$PATH
+$ cd &lt;path_to_storytext_source&gt;
+$ ~/.local/jython2.5.3/bin/jython setup.py install
+<?php codeSampleEnd() ?>
+   </div>
+   
   </td>
  </tr>
 </table>
