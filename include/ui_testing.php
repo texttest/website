@@ -67,6 +67,7 @@ function printLI($n,$realName,$title)
                   <?php  printLI("storytext_appevents","Application Events", "Multi-threaded simultation with Application Events in StoryText"); ?>
                   <?php  printLI("storytext_shortcuts","GUI shortcuts", "Test refactoring and macro recording with GUI shortcuts in StoryText"); ?>
                   <?php  printLI("storytext_signals", "Signals on UNIX", "Recording and playing back UNIX signals received by the process"); ?>
+                  <?php  printLI("storytext_develop","Developing StoryText", "Instructions for how to run the tests and a one-page design overview"); ?>
                 </div>
 	      </td>
 	      <td>
