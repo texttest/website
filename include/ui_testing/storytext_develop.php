@@ -61,6 +61,28 @@ $ pip install -e &lt;path_to_storytext_source&gt;
      The source for this website can also be retrieved from "lp:~geoff.bache/texttest/website-trunk" if you find errors in the 
      documentation, or your changes require extra documentation.
    </div>
+   <div class="Text_Header">Very high-level StoryText design overview</div>
+   <div class="Text_Normal">
+     Conceptually, StoryText consists of a <b>Replayer</b>, a <b>Recorder</b> and a <b>Describer</b>. An effort has been made to keep these
+     distinct from each other and not excessively interdependent. Organisationally, it consists of generic code that does not know about GUIs, 
+     (most of the base package), code that depends on GUIs but not on any particular toolkit (the <i>guishared</i> module) and then the various
+     toolkit specific code, in the respective subpackages. StoryText is not normally used on non-GUI programs, but as it handles 
+     <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_signals">signals on POSIX</A>
+     and <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_appevents">application events (waiting)</A>, it is useful to keep these 
+     parts separate, not least to be able to test them without involving GUIs.
+   </div>
+   <div class="Text_Normal">
+     The <u>Replayer</u> and <u>Recorder</u> work with "events", which are instances of subclasses of <i>definitions</i>.<b>UserEvent</b>. This concept
+     encapsulates a kind of event that can occur, and each "toolkit" package will generally have a <i>simulator</i> module that defines a number of subclasses
+     of this. Each of these define a <i>generate</i> method with the code to simulate (replay) this event. Often this will forward to a third party tool 
+     (RobotFramework SwingLibrary for Swing, SWTBot for Eclipse, i.e. SWT, RCP or GEF). They also define a <i>connectRecord</i> method, called to attach a 
+     listener as appropriate to listen for the event occurring. In this way the nuts and bolts of recording and replaying are usually defined in these <b>UserEvent</b>
+     subclasses, while the <i>replayer</i>.<b>Replayer</b> and <i>recorder</i>.<b>Recorder</b> define the basic framework of how this works in general.
+   </div>
+   <div class="Text_Normal">
+     The <b>ScriptEngine</b> class is something that the various toolkits override. It provides a static mapping <i>eventTypes</i>, which maps each widget type in the
+     GUI toolkit to the corresponding <b>UserEvent</b>s. It also provides the ability to override how the system under test is started, and to hook in basic documentation.
+   </div>
   </td>
  </tr>
 </table>
