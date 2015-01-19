@@ -3,7 +3,7 @@
  <tr>
   <td>
    <div class="Text_Main_Header">Developing StoryText</div>
-   <div class="Text_Header">Contributing to StoryText: setting up development and running the tests</div>
+   <div class="Text_Header">Overview</div>
    <div class="Text_Normal">
      StoryText is a work in progress and it doesn't support everything you could ever do in the various GUI toolkits. 
      It supports what its users have needed so far, and there is a complete list of what is currently supported here for 
@@ -13,10 +13,15 @@
      <a class="Text_Link" href="index.php?page=ui_testing&n=storytext_supported_swt">SWT/Eclipse RCP</A> and
      <a class="Text_Link" href="index.php?page=ui_testing&n=storytext_supported_swing">Swing</A> respectively. 
      You are therefore reasonably likely to find that some widget in your application isn't supported, and you are of course 
-     encouraged to submit any changes you make back here. Adding functionality isn't just a matter of writing code: new code also 
-     needs to be tested and documented before it's complete. You should therefore get the latest version of the tests also, 
-     this is done via "bzr branch lp:/~geoff.bache/storytext/selftest-trunk". You can then run your changes against these tests 
-     and add new tests if you add new functionality.
+     encouraged to submit any changes you make back here. 
+   </div>
+   <div class="Text_Header">Checking out the latest version of the code</div>
+   <div class="Text_Normal">
+     The code is hosted in Bazaar on Launchpad. Some instructions for checking it out are on <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">the download page</A>. 
+   </div>   
+   <div class="Text_Header">Running the self-tests</div>
+   <div class="Text_Normal">
+     Check out the self-tests via "bzr branch lp:/~geoff.bache/storytext/selftest-trunk". 
    </div>
    <div class="Text_Normal">
      The self-tests expect you to set TEXTTEST_HOME to the parent directory of your branch, they can then live alongside other 
@@ -49,7 +54,7 @@ $ pip install -e &lt;path_to_storytext_source&gt;
      We make every effort to ensure that the self-tests are always green. If they fail on the current source for you, the first 
      thing to do is to check their <A class="Text_Link" HREF="index.php?page=nightjob">status in the nightjob</A>. This page is 
      updated nightly with the result of test runs on Linux and Windows using different GTK versions. If something is failing you 
-     can check in the nightjob history to see if it is also failing there. (Coverage information is also available there)
+     can check in the nightjob history to see if it is also failing there.
    </div>
    <div class="Text_Header">Editing the documentation</div>
    <div class="Text_Normal">
