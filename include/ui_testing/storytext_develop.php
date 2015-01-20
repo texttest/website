@@ -83,6 +83,23 @@ $ pip install -e &lt;path_to_storytext_source&gt;
      The <b>ScriptEngine</b> class is something that the various toolkits override. It provides a static mapping <i>eventTypes</i>, which maps each widget type in the
      GUI toolkit to the corresponding <b>UserEvent</b>s. It also provides the ability to override how the system under test is started, and to hook in basic documentation.
    </div>
+   <div class="Text_Normal">
+     The <u>Replayer</u> operates in different ways in different toolkits. For the Python GUI support (PyGTK, Tkinter and wxPython) the replayer does its work in idle 
+     handlers rather than in a separate thread. A separate thread is used for Java Swing and for plain SWT. The Eclipse RCP support has a moderately complicated callback
+     mechanism, including some Java code so that the replayer can be started in a separate thread within the Eclipse structures and triggered from within Java. A difficulty 
+     with this code has been the ease with which classloader problems occur, as Eclipse and Jython do not seem to play well together in this area.
+     </div>
+   <div class="Text_Normal">
+     The <u>Describer</u> generally works by traversing the widget hierarchy, checking the type of widgets it finds against the ones it knows about, and building an appropriate
+     method name (a widget of type "Button" will cause <i>getButtonDescription</i> to be called). Most of the toolkits disable the describer when recording: the widgets that have
+     state are stored in a mapping <i>widgetsWithState</i> and these are checked after each action is replayed, with changes being described if anything has changed. Only the older
+     PyGTK tries to handle the Describer via listeners, and to enable it also when recording.
+   </div>
+   <div class="Text_Normal">
+     <u>Customization</u> involves creating a file called "customwidgetevents.py" and placing it somewhere on PYTHONPATH or JYTHONPATH as appropriate. This will then be imported,
+     and any <b>UserEvent</b> subclasses defined in a module level variable called <i>customEventTypes</i> will be added in addition to those defined in <b>ScriptEngine</b>.<i>eventTypes</i>,
+     above. More detail about this mechanism can be found <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_customwidgets">on the page about custom widgets</A>.
+   </div>
   </td>
  </tr>
 </table>
