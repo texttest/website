@@ -300,7 +300,7 @@ in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=abo
 <div class="Text_Normal">
 Start by running, e.g.
 <?php codeSampleBegin() ?>
-texttest.py -b continuous -zen
+texttest -a lesson1,lesson2 -b continuous -zen
 <?php codeSampleEnd() ?>
 which will run all the tests from the other exercises from the command line. The -zen flag gives you coloured console output so you can
 more easily see when tests succeed and fail. 
@@ -309,8 +309,7 @@ more easily see when tests succeed and fail.
 <div class="Text_Normal">
 This logfile-only report isn't very useful on its own. The main way to view unattended runs is via the HTML report now. 
 Read the information about <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=running_texttest_unattended"; ?>#batch_result_repository">generating HTML reports</A> and try to produce one that
-looks something like the example linked there. You might also want to try to make sure all your applications
-write their results on the same page given that they're quite small. 
+looks something like the example linked there.  
 </div>
 <div class="Text_Normal">
 Note you will need to add configuration
