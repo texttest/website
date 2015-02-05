@@ -318,6 +318,10 @@ runs are identified by date, so once you have a page with a single column, furth
 unless you explicitly name the run (-name on the command line)
 </div>
 <div class="Text_Normal">
+When you have generated the HTML report, view it in Firefox. The comment plugin feature will be disabled as you're viewing 
+it via file:// instead of http.
+</div>
+<div class="Text_Normal">
 (Besides a colourful logfile and the HTML report, other options involve a basic plain-text report sent by email, or output results as XML
 so that tools like Jenkins can display them in their own format. But we're not doing those today)
 </div>
@@ -359,7 +363,9 @@ to replace multiple lines, and also to remove and add lines. Try this out, and e
 <div class="Text_Main_Header"><A NAME="Exercise5"></A>Exercise 5: Known bugs</div>
 <div class="Text_Header">5.1 Create new Jira</div>
 <div class="Text_Normal">
-Log in to Jira and create a new issue using "Product Development Sandbox" as the project and filling in all the required fields.
+Log in to Jira and create a new issue using "Product Development Sandbox" as the project and filling in 
+all the required fields. Assign it explicitly to yourself to avoid annoying the project owner! If you
+can't remember your Jira password, ask the teacher to create a Jira for you.
 At the end you should get a bug ID like SANDBOX-XXX which will be used later. 
 </div>
 <div class="Text_Header">5.2 Start TextTest with</div>
@@ -410,7 +416,7 @@ tests. By simply moving the file here it now applies to all the tests.
 </div>
 <div class="Text_Header">5.9 Fix the Jira</div>
 <div class="Text_Normal">
-Log in to Jira and resolve the issue.
+Log in to Jira and resolve the issue. Or ask the teacher to resolve it for you.
 </div>
 <div class="Text_Header">5.10 Rerun the test suite</div>
 <div class="Text_Normal">
