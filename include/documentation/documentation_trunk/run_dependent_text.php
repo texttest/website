@@ -128,7 +128,7 @@ stdout:Process ID{WORD 3}
 stdout:[0-9][0-9]:[0-9][0-9]{LINES 3}
 stderr:{LINE 1}
 my_file:Machine name{-&gt;}End of Machines Section
-my_file:{INTERNAL writedir}{REPLACE &lt;texttest write dir}
+my_file:{INTERNAL writedir}{REPLACE &lt;texttest write dir&gt;}
 <?php codeSampleEnd() ?>
 
 </div><div class="Text_Header">

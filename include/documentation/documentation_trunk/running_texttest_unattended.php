@@ -67,11 +67,25 @@ be used as an identifier, which will limit you to one run per day.
 <div class="Text_Normal">
 For the location of the actual reports, set the config file
 entry &ldquo;historical_report_location&rdquo; to another
-directory. Both of these are composite dictionaries as described
-above so both can be varied per batch session. In order to
-actually generate the report, you will need an additional TextTest run with the -coll flag (see below)
+directory. It is useful if this location can be accessed via http, as more features will then be enabled when the page is 
+viewed.
+</div>
+<div class="Text_Normal">
+ </div>
+<div class="Text_Normal">
+So in summary, you need to add two configuration options, that look like this:
+<?php codeSampleBegin() ?>
+[batch_result_repository]
+&lt;batch_session&gt;:/path/to/repository
+
+[historical_report_location]
+&lt;batch_session&gt;:/path/to/html/location
+
+<?php codeSampleEnd() ?>
+
+In order to actually generate the report, you will need an additional TextTest run with the -coll flag (see next section for an example)
 which will not run any tests but will instead rebuild all the reports from scratch based on what is in the repository 
-and even in archived files (see below)
+and even in archived files (see below).
 </div>
 <div class="Text_Normal">
 By default, each application will be shown on a separate page named after that application.
