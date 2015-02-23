@@ -574,14 +574,14 @@ until the tests are reliably green. Note it is possible to store the average of 
 "Approve As" and then checking the relevant option. This helps make sure the stored performance is in the middle of the range of 
 performances, which allows you to have a lower tolerance than if it's at one end of the range.
 </div>
-<div class="Text_Header">7.4 Create an HTML report of these results, with performance subpages</div>
+<div class="Text_Header">7.4 Create an HTML report of these results, with performance information listed separately in the tables</div>
 <div class="Text_Normal">
 Do something similar to what you did in Exercise 3 for these tests. Run two or three named runs to gather some data. The data is
 more interesting if the tests still have some failures sometimes, so you can sabotage the tolerance a bit if you like!
 </div>
 <div class="Text_Normal">
-You can then generate an additional page with just the various performance and memory data on it. As there aren't many tests it makes
-sense to try and make sure this is on the same page. You can look up the config file settings for "historical_report_resource_pages" 
+You can then configure it to show the various performance and memory data on additional sub-rows for each test. You can look up the config 
+file settings for "historical_report_resources" 
 in the <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=configfile_default"; ?>">configuration file references</A>
 to work out how to do this. 
 </div>
