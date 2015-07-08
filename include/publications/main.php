@@ -1,8 +1,6 @@
 <div class="Text_Main_Header">Publications, Presentations & Events</div>
-   <div class="Text_Normal">The following presentations and papers can be downloaded:</div>
+   <div class="Text_Normal">The following presentations and papers can be downloaded. They are here mostly for reference, most are very old by now.</div>
    <UL>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/textbased_testing.pdf">TextTest presentation from Agile2008 (&ldquo;Text-based Acceptance Testing...&rdquo;)</A></div>
-     <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/usecase_recording.pdf">UI testing presentation from Agile2008 (&ldquo;Use-case recording...&rdquo;)</A></div>
      <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="index.php?page=publications&n=bestpractices">Best Practice Workshop discussion from XP2005 conference</A></div>
      <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/ooffice.zip">XP2005 and Europython2005 presentations (OpenOffice format)</A></div>
      <LI> <div class="Text_Normal"><a class="Text_Link"  HREF="files/powerpoint.zip">Same presentations (Powerpoint format)</A></div> 
