@@ -10,9 +10,9 @@
 </div>
 <div class="Text_Header">Linux</div>
 <div class="Text_Normal">
-	Most Linux distributions come with Python pre-installed. TextTest can be installed by fetching it using the included pip installer, via "pip install texttest", either into
+	Most Linux distributions come with Python pre-installed. Since TextTest 4.0 a recent version of Python 3 is needed (>=3.6). TextTest can be installed by fetching it using the included pip installer, via "pip install texttest", either into
 	the default Python or into a "virtualenv" if you'd prefer to keep it isolated.
-	In order to use the TextTest GUI it is also necessary to install PyGI/PyGObject, the successor to PyGTK which TextTest uses. There are some guides <a href="https://pygobject.readthedocs.io/en/latest/getting_started.html#ubuntu-getting-started">here</a> for how to do that on various forms of Linux.
+	In order to use the TextTest GUI it is also necessary to install PyGI/PyGObject, the successor to PyGTK which TextTest 4.0 now uses. There are some guides <a href="https://pygobject.readthedocs.io/en/latest/getting_started.html#ubuntu-getting-started">here</a> for how to do that on various forms of Linux.
 	As above, you will need a graphical difference tool and a text editor, which default to "tkdiff" and "emacs" respectively. Either install these tools or
 	create a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui";?>">personal config file</A>, and set "diff_program" or "view_program" respectively. 
 </div>   
