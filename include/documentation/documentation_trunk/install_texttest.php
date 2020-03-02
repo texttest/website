@@ -1,53 +1,29 @@
 <div class="Text_Main_Header">Install Texttest</div>
+<div class="Text_Header">Windows</div>
 <div class="Text_Normal">
-(We have started work on a <A class="Text_Link" HREF="http://texttest.readthedocs.org/en/latest/installation.html">new installation guide</A>, which will hopefully form
-the core of a new version of this website in the future. Particularly the instructions for Mac there are more complete and probably more up-to-date than these.)
+	Download and run the Windows installer from the <A class="Text_Link" HREF="http://sf.net/projects/texttest">sourceforge project page.</A>
+	Since TextTest 4.0 this now installs everything under "Program Files" and does not affect existing Python installations, etc. It is also packaged with <a href="https://sourceforge.net/projects/meld-installer/">Meld</a> instead of <a href="https://osdn.net/projects/sfnet_tkdiff/downloads/tkdiff/4.2/TkDiff-4.2-Setup.exe/">tkdiff</a>
+	as the default graphical difference tool. For backwards compatibility tkdiff will however be used by default if such an installation is found. 
+	It will use "Notepad++", "Wordpad" or "Notepad" in that order by default for editing files, depending on which of these it finds installed.
+	Both of these tools can be configured via the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui";?>">personal config file</A>, by setting "diff_program" or "view_program" respectively. 
+	The installer will set the environment variable TEXTTEST_HOME (see below) to C:\tests, so all tests will be created there. As this change doesn't take effect until you log out and log in again, it's suggested you do that for the moment (or set it to some other desired value before starting TextTest).
 </div>
-<div class="Text_Normal">The first part is clearly to download TextTest itself
-from the <A class="Text_Link" HREF="http://sf.net/projects/texttest">sourceforge
-project page.</A>. You can then unzip this anywhere and run it from that location.
-The download is fairly large as it includes TextTest's tests for itself, which are
- useful as a tool for understanding features by example.</div>
+<div class="Text_Header">Linux</div>
 <div class="Text_Normal">
-On Windows, there is now a Windows installer there. This will install everything you need
-and set TEXTTEST_HOME (see below) to C:\tests. As this change doesn't take effect until
-you log out and log in again, it's suggested you do that for the moment. The Windows instructions below
-are in case you need to install the component parts at all.
+	Most Linux distributions come with Python pre-installed. TextTest can be installed by fetching it using the included pip installer, via "pip install texttest", either into
+	the default Python or into a "virtualenv" if you'd prefer to keep it isolated.
+	In order to use the TextTest GUI it is also necessary to install PyGI/PyGObject, the successor to PyGTK which TextTest uses. There are some guides <a href="https://pygobject.readthedocs.io/en/latest/getting_started.html#ubuntu-getting-started">here</a> for how to do that on various forms of Linux.
+	As above, you will need a graphical difference tool and a text editor, which default to "tkdiff" and "emacs" respectively. Either install these tools or
+	create a <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui";?>">personal config file</A>, and set "diff_program" or "view_program" respectively. 
+</div>   
+<div class="Text_Header">Mac</div>
+<div class="Text_Normal">
+	Install <a href="https://brew.sh/">Homebrew</a>, and then use it to install a recent version of Python (>=3.6). From there the instructions on Linux largely apply, there is a MacOS section for how to install PyGObject using Homebrew.
+</div>   
+<div class="Text_Header">Source package</div>
+<div class="Text_Normal">
+	The <A class="Text_Link" HREF="http://sf.net/projects/texttest">sourceforge project page.</A> has a default download for non-Windows platforms that is pretty much a source package. While it's possible to run TextTest from there we believe it will nearly always be more convenient to follow the instructions above instead.
 </div>
-<div class="Text_Header">Compulsory dependencies</div>
-<OL>
-<div class="Text_Normal"><LI><A class="Text_Link" HREF="http://www.python.org/download/">Python</A>. 
-You will need at least version 2.6. Note that most Linux installations come with Python pre-installed.</div>
-<div class="Text_Normal"><LI><A name="PyGTK"></A><A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK</A>.
-TextTest's GUI makes use of PyGTK, which is a thin wrapper around the C GUI library GTK. You will need
-at least GTK 2.18 and an equivalent version of PyGTK. All development is currently being done against GTK 2.18 and PyGTK 2.16.
-</div>
-<div class="Text_Normal">
-Note that most Linux installations include a PyGTK package and some (e.g. Ubuntu) have it installed by default.
-To test whether your Python installation already includes PyGTK, type 'import gtk' into a python prompt. No response means you do. However, this can be a curse as well as a blessing, because if you have an older "enterprise" linux platform
-such as Red Hat or SuSE, it's difficult to put a newer GTK in place than the default. In this case you should
-refer to the instructions under doc/Upgrade_PyGTK_Enterprise_Linux in the TextTest download. </div>
-<div class="Text_Normal">
-On <u>Windows</u>, the summary for how to install is that you should get the GTK 2.18 bundle from <A class="Text_Link" HREF="http://ftp.gnome.org/pub/gnome/binaries/win32/gtk+/2.18/gtk+-bundle_2.18.7-20100213_win32.zip">here</A>, unzip it somewhere (avoid locations with spaces in their names, I find "C:\Gtk" works just fine for me!), add its "bin" subdirectory to your PATH and then run the three installers at the top of the <A class="Text_Link" HREF="http://www.pygtk.org/downloads.html">PyGTK downloads</A> page. In general neither TextTest nor PyGTK handle paths with spaces in their names well: both are ports of software written on UNIX so you're well advised to steer clear of "Program Files" and "Documents and Settings", whatever your Windows best-practice manual may tell you...</div>
-<div class="Text_Normal">
-On the <u>Mac</u>, some hints can be found on the <A class="Text_Link" HREF="http://faq.pygtk.org/index.py?req=show&file=faq01.019.htp">PyGTK FAQ</A>. Basically PyGTK doesn't build natively for the Mac so you should install Apple's Xll server. This implies installing the Developer Tools, XQuartz and then Macports, before getting PyGTK by executing "port install py27-pygtk". Note that this may take quite some time to complete.
-</div>
-<div class="Text_Normal"><LI><B><U>Tkdiff and diff</U></B>. You will need a decent graphical difference tool on your
-PATH, along with a textual version for reports. We recommend 'tkdiff' and 'diff' respectively which are present on most UNIX
-systems and are TextTest's defaults. If you're on UNIX and tkdiff isn't there, download from <A class="Text_Link" HREF="http://sourceforge.net/projects/tkdiff/">tkdiff's
-project page on sourceforge</A>.</div>
-<div class="Text_Normal">On Windows, Patrick Finnegan sent me a very nice <A class="Text_Link" HREF="files/tkdiffInstall.zip">Windows
-installer for tkdiff and diff </A>and kindly agreed that I
-could distribute it here. Note that the installer won't affect
-your path though, so you'll need to set PATH in autoexec.bat or
-similar to include wherever it's installed (typcially something
-like C:\Program Files\tkdiff)</div>
-<div class="Text_Normal">
-On the Mac you can get it via Macports in a similar way to PyGTK, i.e. "port install tkdiff".
-</div>
-<div class="Text_Normal"><LI><B><U>Emacs and notepad</U></B>. TextTest also makes use of a generic editor for viewing files. This defaults to "emacs" on UNIX systems and "notepad" on Windows, which are both likely to be pre-installed. Your UNIX installation will certainly have a package for "emacs" if not. It's easy to change these to use other editors if desired via the "view_program" configuration setting.</div>
-</OL>
-
 <div class="Text_Header">Things you might want to install...</div>
 <div class="Text_Normal">For viewing test files while they are running, there is a
 menu option to display a window with live updates of the file.
@@ -67,8 +43,5 @@ TEXTTEST_HOME. This is the first thing determined by TextTest on
 being called and not much will happen if it isn't set.</div>
 <div class="Text_Normal">You are strongly recommended to pick an existing root directory for all
 your tests and set TEXTTEST_HOME to this directory in some
-persistent way (for example your shell starter script on UNIX or
-autoexec.bat on Windows). In this way you will not need to think
-about it more than once. 
+persistent way. In this way you will not need to think about it more than once. 
 </div>
-	
