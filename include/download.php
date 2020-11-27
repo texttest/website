@@ -23,11 +23,10 @@
    <div class="Text_Normal">
      Due to over 1000 automated acceptance tests for itself, written in itself, the contents of source control
      are almost always quite usable. Anyone wishing to make changes should obviously get hold of this version also.
-     The code is hosted on Launchpad and can be browsed online <a class="Text_Link" href="https://code.launchpad.net/~geoff.bache/texttest/trunk">here</A>. </div>
+     The code is now hosted on Github and can be browsed online <a class="Text_Link" href="https://github.com/texttest/texttest">here</A>. </div>
    <div class="Text_Normal">
-     To get hold of the latest version, you will need to install the <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>, 
+     To get hold of the latest version, you will need to install the <a class="Text_Link" href="https://git-scm.com/downloads">Git version control tool</A>, 
      as well as the other dependencies listed in the <A class="Text_Link" HREF="index.php?page=<?php echo convertToDocFormat($current_release); ?>&n=install_texttest">installation guide</A>. 
-     You can then just do "bzr branch lp:texttest" to get the latest code.
    </div>
    <div class="Text_Normal">
      On a POSIX-based system, you can just run this code directly from the source tree, by running "bin/texttest".

@@ -35,12 +35,10 @@
      There about 550 automated acceptance tests for StoryText, using TextTest, and we aim to keep 
      the contents of source control stable and usable at all times. Anyone wishing to make changes 
      should obviously get hold of this version also.
-     The code is hosted on Launchpad and can be browsed online 
-     <a class="Text_Link" href="https://code.launchpad.net/~geoff.bache/storytext/trunk">here</A>. </div>
+     The code is hosted on Github and can be browsed online <a class="Text_Link" href="https://github.com/texttest/storytext">here</A>. 
+   </div>
    <div class="Text_Normal">
-     To get hold of the latest version, you will need to install the 
-     <a class="Text_Link" href="http://bazaar-vcs.org">Bazaar version control tool</A>. 
-     You can then just do "bzr branch lp:storytext" to get the latest code.
+    To get hold of the latest version, you will need to install the <a class="Text_Link" href="https://git-scm.com/downloads">Git version control tool</A>.
    </div>
    <div class="Text_Normal">
      Note that StoryText is only runnable directly from its source tree when used on Python GUIs on Linux now. On Windows, or with 

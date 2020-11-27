@@ -59,7 +59,7 @@ function printLI($n,$realName,$title)
 	      </td>
 	      <td>
 	        <div class="Table_Text_Normal">
-                  <?php  printLI("storytext_download","Download and install","Get the latest stable release of StoryText from SourceForge, or the latest code from Launchpad"); ?>
+                  <?php  printLI("storytext_download","Download and install","Get the latest stable release of StoryText from SourceForge, or the latest code from Github"); ?>
                   <?php  printLI("storytext_intro","Basic command-line usage","Using StoryText on the command line"); ?>
 	          <?php  printLI("storytext_texttest","Usage with TextTest", "Using StoryText together with TextTest to create tests"); ?>
                   <?php  printLI("storytext_cmdline","Command line options", "The output of 'storytext --help'"); ?>

@@ -17,11 +17,11 @@
    </div>
    <div class="Text_Header">Checking out the latest version of the code</div>
    <div class="Text_Normal">
-     The code is hosted in Bazaar on Launchpad. Some instructions for checking it out are on <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">the download page</A>. 
+     The code is hosted in Github. Some instructions for checking it out are on <A class="Text_Link" HREF="index.php?page=ui_testing&n=storytext_download">the download page</A>. 
    </div>   
    <div class="Text_Header">Running the self-tests</div>
    <div class="Text_Normal">
-     Check out the self-tests via "bzr branch lp:/~geoff.bache/storytext/selftest-trunk". 
+     Check out the self-tests from <a class="Text_Link" href="https://github.com/texttest/storytext-selftest">here</A>.". 
    </div>
    <div class="Text_Normal">
      The self-tests expect you to set TEXTTEST_HOME to the parent directory of your branch, they can then live alongside other 
@@ -34,7 +34,7 @@
      The tests assume that the source to be tested can be found in the location $TEXTTEST_HOME/../StoryText. If you put them 
      somewhere else you'll need to tell it this. This is controlled by the setting in the file default_site/site_configfile in the 
      tests: you can either edit this locally or preferably, copy the file to site/site_configfile and edit it there, where it will 
-     be read instead of the default_site location. This also means it won't show up as a change when you check status in Bazaar. 
+     be read instead of the default_site location. This also means it won't show up as a change when you check status in Git. 
      You can also make other locally-relevant configuration changes for the tests in that file.
    </div>
    <div class="Text_Normal">
@@ -58,7 +58,7 @@ $ pip install -e &lt;path_to_storytext_source&gt;
    </div>
    <div class="Text_Header">Editing the documentation</div>
    <div class="Text_Normal">
-     The source for this website can also be retrieved from "lp:~geoff.bache/texttest/website-trunk" if you find errors in the 
+     The source for this website can also be retrieved from <a class="Text_Link" href="https://github.com/texttest/website">here</A> if you find errors in the 
      documentation, or your changes require extra documentation.
    </div>
    <div class="Text_Header">Very high-level StoryText design overview</div>

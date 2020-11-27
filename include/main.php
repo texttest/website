@@ -21,7 +21,9 @@
       </tr>
       <tr valign=top>
        <td width=50><div class="Text_Normal" ><a href="index.php?page=<?php echo convertToDocFormat($current_release); ?>" class="Text_Link">TextTest</a></td><td><div class="Text_Normal">TextTest Tutorials and Reference</div></td>
-
+      </tr>
+      <tr valign=top>
+       <td width=50><div class="Text_Normal" ><a href="https://github.com/texttest/texttest" class="Text_Link">Github page</a></td><td><div class="Text_Normal">Get the latest code or report an issue</div></td>
       </tr>
      <tr valign=top>
        <td width=50><div class="Text_Normal" ><a href="index.php?page=ui_testing" class="Text_Link">StoryText</a></td><td><div class="Text_Normal">Formerly "PyUseCase". Domain-language GUI testing for PyGTK, Tkinter, wxPython, Swing and SWT/Eclipse RCP</div></td>

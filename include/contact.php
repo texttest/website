@@ -7,7 +7,7 @@
    <div class="Text_Normal">
      
      <p>All TextTest support issues should go via the <A class="Text_Link" HREF="https://lists.sourceforge.net/lists/listinfo/texttest-users">texttest-users mailing list</A>.</p>
-     <p>The bugtracker can be found at <A class="Text_Link" HREF="https://bugs.launchpad.net/texttest">Launchpad</A></p>
+     <p>The bugtracker can be found at <A class="Text_Link" HREF="https://github.com/texttest/texttest/issues">Github</A></p>
    </div>
 
    </div>
