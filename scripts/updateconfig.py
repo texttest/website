@@ -39,6 +39,10 @@ def getValue(val):
             defValue = ret.get("default")
             if isinstance(defValue, str) and os.path.isabs(defValue):
                 ret["default"] = os.path.basename(defValue).replace(".exe", "")
+            elif os.name == "nt":
+                for key, value in ret.items():
+                    if isinstance(value, str) and "source library" in value:
+                        ret[key] = value.replace("\\", "/")
         return ret
     except:
         return val
