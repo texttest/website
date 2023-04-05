@@ -52,7 +52,7 @@ def getLabelsFromLine(line):
 
 def docOutput(doc, key, labels):
     keyTitle = key.split()[0]
-    if labels.has_key(keyTitle):
+    if keyTitle in labels:
         return "<A class=\"Text_Link_Small\" HREF=\"" + labels[keyTitle] + "\">" + doc + "</A>"
     else:
         return doc
@@ -62,7 +62,7 @@ def handleTable(contents, dataMatrix):
     rowTemplate = getRowTemplate(contents, templateStart, templateEnd)
     tableStart = getTableStart(contents)
     labels = findLabels()
-    print contents[:tableStart]
+    print(contents[:tableStart])
     rowSize = rowTemplate.count("<TD")
     if not dataMatrix:
         return []
@@ -74,7 +74,7 @@ def handleTable(contents, dataMatrix):
         thisRow = rowTemplate
         for colId in range(len(row)):
             thisRow = thisRow.replace("$" + str(colId + 1), row[colId])
-        print thisRow
+        print(thisRow)
     sys.stdout.write(contents[templateEnd + 1:])
     return dataMatrix[index:]
 
@@ -96,4 +96,4 @@ def updateTable(file, dataMatrix):
 if __name__ == "__main__":
     labels = findLabels()
     for key in sorted(labels.keys()):
-        print key, labels[key]
+        print(key, labels[key])

@@ -22,7 +22,7 @@ def getOptionData(texttestPath, configModule):
         if line.find("|") == -1:
             continue
         rowInfo = line.strip().split("|")
-        optionRows.append(map(correctAngleBrackets, rowInfo))
+        optionRows.append(list(map(correctAngleBrackets, rowInfo)))
     for fileName in glob("*.app"):
         os.remove(fileName)
     return optionRows

@@ -74,21 +74,21 @@ def splitURL(URL):
 def print404(URL,targetURL,onLine):
     global incorrectLinks
     incorrectLinks += 1
-    print "404!!!"
-    print "  Link:" + URL
-    print "  Found in:" + targetURL
-    print "  On line:" ,onLine
-    print ""
+    print("404!!!")
+    print("  Link:" + URL)
+    print("  Found in:" + targetURL)
+    print("  On line:" ,onLine)
+    print("")
 
 def printLastUpdatedError(targetURL,onLine,line):
     global ERROR_IN_LAST_UPDATED,missingLastUpdated
     missingLastUpdated += 1
-    print "Error in Last update function!!!"
-    print "  Found in:" + targetURL
-    print "  On line:" ,onLine
+    print("Error in Last update function!!!")
+    print("  Found in:" + targetURL)
+    print("  On line:" ,onLine)
     #Remove Error string and the comment tags sorrunding the reason (the "<!--" and "-->")
-    print "  Reason:", line.replace(ERROR_IN_LAST_UPDATED,"").replace("-->","").replace("<!--","")
-    print ""
+    print("  Reason:", line.replace(ERROR_IN_LAST_UPDATED,"").replace("-->","").replace("<!--",""))
+    print("")
 
 def check(URL,targetURL):
     global ERROR_STRING, ERROR_IN_LAST_UPDATED, incorrectImgTags, missingImgFile ,multiLineLinks, checkedLinks, knownIncorrectLinks
@@ -113,20 +113,20 @@ def check(URL,targetURL):
                 currentLine = currentLine[currentLine.index('src="') + 5 :]
                 imgFile = currentLine[:currentLine.index('"')]
                 if not os.path.exists(imgFile):
-                    print "Found missing image"
-                    print "  File Path:" + imgFile
-                    print "  Located in: " + URL
-                    print "  Found on line:" + line
-                    print ("  (line number:" + str(nr) + ")")
-                    print ""
+                    print("Found missing image")
+                    print("  File Path:" + imgFile)
+                    print("  Located in: " + URL)
+                    print("  Found on line:" + line)
+                    print(("  (line number:" + str(nr) + ")"))
+                    print("")
                     missingImgFile += 1
                 currentLine = currentLine[currentLine.index('>') + 1 :]
             else:
-                print "Found incomplete image tag"
-                print "  Located in: " + URL
-                print "  Starting on line:" + line
-                print ("  (line number:" + str(nr) + ")")
-                print ""
+                print("Found incomplete image tag")
+                print("  Located in: " + URL)
+                print("  Starting on line:" + line)
+                print(("  (line number:" + str(nr) + ")"))
+                print("")
                 incorrectImgTags += 1
 
                 #Stops while loop (else unpredictable future)
@@ -153,14 +153,14 @@ def check(URL,targetURL):
                     currentLine.replace('href="' + link + hashLine + '"',"")
             else:
                 multiLineLinks += 1
-                print "Found multiline link! (or link incorrectly terminated)"
-                print "  Located in: " + URL
-                print "  Starting on line:" + line
-                print ("  (line number:" + str(nr) + ")")
-                print ""
+                print("Found multiline link! (or link incorrectly terminated)")
+                print("  Located in: " + URL)
+                print("  Starting on line:" + line)
+                print(("  (line number:" + str(nr) + ")"))
+                print("")
     return True
 
-print "Checking Internal PHP links, images and key functions\n"
+print("Checking Internal PHP links, images and key functions\n")
 sys.stdout.flush()
 
 #This should be a string only found on your 404 page
@@ -188,14 +188,14 @@ missingLastUpdated = 0
 os.chdir("..");
 check("index.php","index.php")
 
-print "Complete..."
-print "  * Found:", missingLastUpdated ,   "error in last updated"
-print "  * Found:", incorrectImgTags, "incorrect image tags"
-print "  * Found:", missingImgFile,   "missing images"
-print ""
-print "  * Found:", incorrectLinks,   "incorrect links"
-print "  * Found:", multiLineLinks,   "multiline links"
-print ""
+print("Complete...")
+print("  * Found:", missingLastUpdated ,   "error in last updated")
+print("  * Found:", incorrectImgTags, "incorrect image tags")
+print("  * Found:", missingImgFile,   "missing images")
+print("")
+print("  * Found:", incorrectLinks,   "incorrect links")
+print("  * Found:", multiLineLinks,   "multiline links")
+print("")
 
 
  

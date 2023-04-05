@@ -7,6 +7,7 @@ from tableshared import updateTable
 def makeConfigFile(configFileName, configModule):
     configFile = open(configFileName, "w")
     configFile.write("executable:<must be set>\n")
+    configFile.write("diff_program:tkdiff\n")
     configFile.write("config_module:" + configModule + "\n")
     configFile.write("filename_convention_scheme:standard\n")
     configFile.close()
@@ -17,7 +18,7 @@ def getConfigData(texttestPath, configModule, osName, script):
     os.environ["TEXTTEST_PERSONAL_CONFIG"] = "STOOPID"
     os.environ["USER"] = "$USER"
     ttArgs = [ texttestPath, "--vanilla", "-a", "appidentifier", "-d", ".", "-s", script + " os=" + osName ]
-    proc = subprocess.Popen(ttArgs, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    proc = subprocess.Popen(ttArgs, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, encoding="ascii")
     out = proc.communicate()[0]
     for line in out.splitlines():
         if "|" not in line:
@@ -33,26 +34,28 @@ def getValue(val):
     if val == "any": # This is a built-in function in Python 2.5 and a standard name in TextTest!
         return val
     try:
-        return eval(val)
+        ret = eval(val)
+        if isinstance(ret, dict) and "default" in ret and os.path.isabs(ret.get("default")):
+            ret["default"] = os.path.basename(ret["default"]).replace(".exe", "")
+        return ret
     except:
         return val
 
-def getType(val, allTypes):
-    for typeName in allTypes:
-        typeObj = eval("types." + typeName)
-        if type(val) == typeObj:
-            typeToUse = typeName.replace("Type", "")
-            if typeToUse == "Dictionary":
-                if val.has_key("default"):
-                    typeToUse = "CompositeDictionary"
-                    subType = getType(val["default"], allTypes)
-                elif len(val) > 0:
-                    subType = getType(val.values()[0], allTypes)
-                else:
-                    subType = "String"
-                return typeToUse + " (" + subType + ")"
-            else:
-                return typeToUse
+def getType(val):
+    typeNames = { "Str": "String", "Dict": "Dictionary"}
+    rawType = type(val).__name__.capitalize()
+    typeToUse = typeNames.get(rawType, rawType)
+    if typeToUse == "Dictionary":
+        if "default" in val:
+            typeToUse = "CompositeDictionary"
+            subType = getType(val["default"])
+        elif len(val) > 0:
+            subType = getType(list(val.values())[0])
+        else:
+            subType = "String"
+        return typeToUse + " (" + subType + ")"
+    else:
+        return typeToUse
 
 def getOutputValue(val):
     empty = "&lt;empty&gt;"
@@ -62,23 +65,23 @@ def getOutputValue(val):
     except TypeError:
         pass
 
-    if type(val) == types.ListType:
+    if type(val) == list:
         return ", ".join(val)
 
-    if type(val) == types.DictType:
+    if type(val) == dict:
         if len(val) == 1:
-            if val.has_key(""):
+            if "" in val:
                 return empty
-            if val.has_key("default"):
+            if "default" in val:
                 return getOutputValue(val["default"])
         retVals = []
-        for key, val in val.items():
+        for key, val in list(val.items()):
             retVals.append(key + " : " + str(getOutputValue(val)))
         retVals.sort()
         return "<BR>".join(retVals)
     if val == "APPIDENTIFIER":
         return "&lt;app&gt; (capitalised)"
-    if type(val) == types.StringType:
+    if type(val) == str:
         return val.replace("<", "&lt;").replace(">", "&gt;")
     else:
         return val
@@ -86,13 +89,11 @@ def getOutputValue(val):
 def getConfigRows(*args):
     configRows = []
     configData = getConfigData(*args)
-    allEntries = configData.keys()
+    allEntries = list(configData.keys())
     allEntries.sort()
-    allTypes = dir(types)
-    allTypes.reverse()
     for key in allEntries:
         value, doc = configData[key]
-        typeName = getType(value, allTypes)
+        typeName = getType(value)
         if key == "queue_system_max_capacity":
             outputVal = "&lt;number of cores&gt;"
         else:

@@ -86,10 +86,10 @@ def findAndHTML(path,level=""):
                 sitemap.write(towrite)
     sitemap.write('</div>\n')
 
-print "Running Generate Sitemap Script..."
-print ""
+print("Running Generate Sitemap Script...")
+print("")
 findAndHTML(os.getcwd())
 sitemap.write('</table></td></tr></table>\n')
 sitemap.close()
-print "Finished, Please check the generated sitemap at: index.php?page=sitemap"
+print("Finished, Please check the generated sitemap at: index.php?page=sitemap")
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys, shutil, os, urllib2, re
+import sys, shutil, os, urllib.request, urllib.error, urllib.parse, re
 from glob import glob
 
 def get_location():
@@ -22,8 +22,8 @@ def make_empty(dest):
 def build_page(page_name, version, dest):
     urlRoot = "index.php?page=documentation_" + version.replace(".", "_") + "&n="
     url = "http://texttest.carmen.se/" + urlRoot + page_name
-    print "Reading from", url, "..."
-    reader = urllib2.urlopen(url)
+    print("Reading from", url, "...")
+    reader = urllib.request.urlopen(url)
     text = reader.read()
     text = text.replace(get_doc_relpath(version) + "/images", "images")
     pattern = urlRoot.replace("?", "\\?") + "([a-z_]*)"
@@ -31,7 +31,7 @@ def build_page(page_name, version, dest):
     fileName = os.path.join(dest, page_name + ".html")
     f = open(fileName, "w")
     f.write(toWrite)
-    print "Written to file", fileName
+    print("Written to file", fileName)
     f.close()
 
 def copy_basic_files(location, dest):
@@ -57,6 +57,6 @@ def make_docs(version, dest):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print "Usage : make_offline_docs.py <version> <dest>"
+        print("Usage : make_offline_docs.py <version> <dest>")
     else:
         make_docs(sys.argv[1], sys.argv[2])
