@@ -35,8 +35,10 @@ def getValue(val):
         return val
     try:
         ret = eval(val)
-        if isinstance(ret, dict) and "default" in ret and os.path.isabs(ret.get("default")):
-            ret["default"] = os.path.basename(ret["default"]).replace(".exe", "")
+        if isinstance(ret, dict):
+            defValue = ret.get("default")
+            if isinstance(defValue, str) and os.path.isabs(defValue):
+                ret["default"] = os.path.basename(defValue).replace(".exe", "")
         return ret
     except:
         return val
