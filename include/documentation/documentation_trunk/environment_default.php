@@ -136,6 +136,54 @@
 	</TR>	
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_MODE</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_RCFILES</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_RECORD</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_RECORD_EDIT_DIR</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_REPLAY</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_REPLAY_EDIT_DIR</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_CHECKOUT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -148,6 +196,14 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#TEXTTEST_CHECKOUT_NAME">Local name of the checkout directory</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_DB_SETUP</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Environment variable set when "database setup run" selected in the UI</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>

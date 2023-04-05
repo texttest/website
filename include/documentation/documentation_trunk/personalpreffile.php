@@ -42,7 +42,7 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">Dictionary (String)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">add_test : &lt;control&gt;n<BR>approve : &lt;control&gt;s<BR>approve_as : &lt;control&gt;&lt;alt&gt;s<BR>copy : &lt;control&gt;c<BR>cut : &lt;control&gt;x<BR>enter_failure_information : &lt;control&gt;i<BR>filter : &lt;control&gt;f<BR>kill : &lt;control&gt;Delete<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>move_up : &lt;control&gt;Page_Up<BR>paste : &lt;control&gt;v<BR>quit : &lt;control&gt;q<BR>recompute_status : F5<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>record_use-case : F9<BR>refresh : F5<BR>remove_tests : &lt;control&gt;Delete<BR>rename_test : &lt;control&gt;m<BR>rerun : &lt;control&gt;r<BR>reset : &lt;control&gt;e<BR>run : &lt;control&gt;r<BR>save_selection : &lt;control&gt;d<BR>select : &lt;control&gt;&lt;alt&gt;f<BR>unmark : &lt;control&gt;&lt;shift&gt;u</div>
+			<div class="Table_Text_Small">add_test : &lt;control&gt;n<BR>approve : &lt;control&gt;s<BR>approve_as : &lt;control&gt;&lt;alt&gt;s<BR>copy : &lt;control&gt;c<BR>cut : &lt;control&gt;x<BR>enter_failure_information : &lt;control&gt;i<BR>filter : &lt;control&gt;&lt;shift&gt;f<BR>kill : &lt;control&gt;Delete<BR>load_selection : &lt;control&gt;&lt;shift&gt;o<BR>mark : &lt;control&gt;&lt;shift&gt;m<BR>move_down : &lt;control&gt;Page_Down<BR>move_to_first : &lt;control&gt;Home<BR>move_to_last : &lt;control&gt;End<BR>move_up : &lt;control&gt;Page_Up<BR>paste : &lt;control&gt;v<BR>quit : &lt;control&gt;q<BR>recompute_status : F5<BR>reconnect : &lt;control&gt;&lt;shift&gt;r<BR>record_use-case : F9<BR>refresh : F5<BR>remove_tests : &lt;control&gt;Delete<BR>rename_test : &lt;control&gt;m<BR>rerun : &lt;control&gt;r<BR>reset : &lt;control&gt;e<BR>run : &lt;control&gt;r<BR>save_selection : &lt;control&gt;d<BR>select : &lt;control&gt;&lt;alt&gt;f<BR>unmark : &lt;control&gt;&lt;shift&gt;u</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#gui_accelerators">Custom action accelerators.</A></div>
@@ -182,10 +182,10 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">Int</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">0</div>
+			<div class="Table_Text_Small">100</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#static_collapse_suites">Whether or not the static GUI will show everything collapsed</A></div>
+			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#static_collapse_suites">Starting at this level the static GUI will show the suites collapsed</A></div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -207,10 +207,10 @@ of the "Type" column in this table.
 			<div class="Table_Text_Small">window_size</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Dictionary (String)</div>
+			<div class="Table_Text_Small">Dictionary (Float)</div>
 		</TD>
 		<TD bgcolor="#FFFFFF"> 
-			<div class="Table_Text_Small">height_pixels : &lt;not set&gt;<BR>height_screen : 0.833333333333<BR>horizontal_separator_position : 0.46<BR>maximize : 0<BR>vertical_separator_position : 0.5<BR>width_pixels : &lt;not set&gt;<BR>width_screen : 0.6</div>
+			<div class="Table_Text_Small">height_pixels : &lt;not set&gt;<BR>height_screen : 0.8333333333333334<BR>horizontal_separator_position : 0.46<BR>maximize : 0<BR>vertical_separator_position : 0.5<BR>width_pixels : &lt;not set&gt;<BR>width_screen : 0.6</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=personalising_ui#window_size">To set the initial size of the dynamic/static GUI.</A></div>

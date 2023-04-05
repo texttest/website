@@ -92,6 +92,14 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD  bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">default.WriteDividedSelections</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">divide the test suite into equally sized selections, for parallel testing without communication possibilities</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD  bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">performance.PerformanceStatistics</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">

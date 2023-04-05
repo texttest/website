@@ -301,31 +301,34 @@ set up separate nightjob runs for each application.
 selection filters</A> selected on the command line or from the
 static GUI. As described there, only tests which satisfy <b>all</b>
 filters present will be selected.</div>
-<div class="Text_Header"><A NAME="batch_junit_format"></A><A NAME="batch_junit_folder"></A>
-Producing results in JUnit format for display in a continuous integration server</div>
+<div class="Text_Header"><A NAME="batch_external_format"></A><A NAME="batch_external_folder"></A>
+Producing results in external formats for display in a continuous integration server or IDE</div>
 <div class="Text_Normal">
 Many teams use a CI server and keep up-to-date information about test status available
 to all developers at all times. In order to integrate texttest with these systems, 
- there is an option &ldquo;batch_junit_format&rdquo;
-which allows you to generate
-texttest results in the same format that JUnit uses.  
-Most CI servers will understand 
-this format, and this makes it easy to plug TextTest into existing build systems. 
-The drawback of the JUnit format results is that some information is lost compared with the other formats. You will
-likely want to have the email as well. The CI server will give a basic indication
-that something is wrong, which you then investigate by looking at the email and/or
-reconnecting to the failed tests.
-</div>
-<div class="Text_Normal"> If you set &ldquo;batch_junit_format&rdquo; in your config file, then
-texttest will produce a folder "junitformat" in the run directory (under TEXTTEST_SANDBOX),
-and under there a subfolder for each application's test results.
-Each folder contains one xml file per test. Ant has a task "junitreport" that can collect 
-all the xml files for one application together and produce a composite xml file and html report.
-There is an additional option &ldquo;batch_junit_folder&rdquo;
-which allows you to specify a different folder, (instead of "junitformat"), where the xml files should be written.
+ there is an option &ldquo;batch_external_format&rdquo;
+which allows you to generate texttest results in various formats.
+Since TextTest 4.3 it can be set to "trx" to generate Visual Studio's trx format, or to "jetbrains"
+to generate the XML that is understood by JetBrains IDEs. As before the older "junit" format is still supported,
+and that will be used if "batch_external_format" is set to anything else.
 </div>
 <div class="Text_Normal">
-The Junit XML files have a space for the time used by the test. By default, this will be filled with the contents of the "performance" 
+Most CI servers will understand at least one of these formats, and this makes it easy to plug TextTest into existing build systems. 
+Note that some information is lost compared with TextTest's own reporting, and it is advisable to generate the HTML pages also. 
+The CI server will give a basic indication
+that something is wrong, which you can then investigate reconnecting to the failed tests.
+</div>
+<div class="Text_Normal"> If you set &ldquo;batch_external_format&rdquo; in your config file, then
+texttest will produce a folder named like "junitformat", "trxformat" etc in the run directory (under TEXTTEST_SANDBOX),
+and under there a subfolder for each application's test results.
+Each folder contains one xml file per test. If you then run "texttest -coll" (see elsewhere on this page), these will be
+collected into a single file. (For example Ant also has a task "junitreport" that can collect 
+all the xml files for one application together and produce a composite xml file and html report.)
+There is an additional option &ldquo;batch_external_folder&rdquo;
+which allows you to specify a different folder, (instead of "junitreport" etc), where the xml files should be written.
+</div>
+<div class="Text_Normal">
+Specifically the Junit XML files have a space for the time used by the test. By default, this will be filled with the contents of the "performance" 
 file, if this is collected (see <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">here</A>
 for details if how this works). Sometimes, however, you might want some other time value extracted from a log file placed in this field,
 in which case you should set the "default_performance_stem" field accordingly. So if you collect the resource
@@ -333,7 +336,6 @@ in which case you should set the "default_performance_stem" field accordingly. S
 <?php codeSampleBegin() ?>
 default_performance_stem:my_cpu_usage
 <?php codeSampleEnd() ?>
-(This replace batch_junit_performance from TextTest 3.23 and earlier)
 </div> 
 <div class="Text_Normal">Note: if you 
 are using TextTest with Java, you may want to look at <A class="Text_Link" HREF="<?php print "index.php?page=".$version."&n=testing_java_with_texttest"; ?>">this page</A> for more tips.
@@ -428,7 +430,7 @@ defaults are provided. On UNIX, the SMTP server defaults to
 &ldquo;localhost&rdquo; and the sender address defaults to 
 &ldquo;$USER@localhost&rdquo;, so it is generally
 only necessary to configure the recipients.</div>
-<div class="Text_Header"><A NAME="batch_use_collection"></A><A NAME="batch_collect_compulsory_version"></A><A NAME="batch_collect_max_age_days"></A><A NAME="-coll">
+<div class="Text_Header"><A NAME="batch_use_collection"></A><A NAME="batch_collect_compulsory_version"></A><A NAME="batch_collect_max_age_days"></A><A NAME="-coll"></A>
 Collecting multiple emails into a single one</div>
 <div class="Text_Normal">When many versions of the system under test are active, and
 many different hardware platforms are used, you may want to test

@@ -91,6 +91,17 @@
 	</TR>
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_PICKLE_PROTOCOL</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">2</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Which pickle protocol to use. Useful to set to plain text for self-tests.</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_QS_POLL_INTERVAL</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -169,6 +180,54 @@
 	</TR>	
 	<TR VALIGN=TOP>
 		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_MODE</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_RCFILES</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_RECORD</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_RECORD_EDIT_DIR</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_REPLAY</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_CAPTUREMOCK_REPLAY_EDIT_DIR</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">For use in your test rig. See CaptureMock docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">TEXTTEST_CHECKOUT</div>
 		</TD>
 		<TD bgcolor="#FFFFFF">
@@ -181,6 +240,14 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small"><A class="Text_Link_Small" HREF="index.php?page=<?php echo $version ?>&n=versions_and_version_control#TEXTTEST_CHECKOUT_NAME">Local name of the checkout directory</A></div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">TEXTTEST_DB_SETUP</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Environment variable set when "database setup run" selected in the UI</div>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -276,39 +343,6 @@
 		</TD>
 		<TD bgcolor="#FFFFFF">
 			<div class="Table_Text_Small">Brief text (links to documentation)</div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">QUEUE_SYSTEM_PROCESSES</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"></div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Deprecated. See "queue_system_processes" in config file docs</div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">QUEUE_SYSTEM_RESOURCE</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"></div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Deprecated. See "queue_system_resource" in config file docs</div>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">QUEUE_SYSTEM_SUBMIT_ARGS</div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small"></div>
-		</TD>
-		<TD bgcolor="#FFFFFF">
-			<div class="Table_Text_Small">Deprecated. See "queue_system_submit_args" in config file docs</div>
 		</TD>
 	</TR>
 </TABLE>
