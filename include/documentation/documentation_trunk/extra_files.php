@@ -48,6 +48,19 @@ Note also that TextTest will only collate files that were created or
 modified by the test run. Unchanged files will not be picked up even if they
 match a source pattern.
 </div>
+<div class="Text_Normal"><A NAME="detect_file_changes_by_checksum"></A>
+By default TextTest decides whether a pre-existing file has been modified by comparing its
+modification time before and after the test run. Some programs change a file's contents while
+keeping its old modification time (copying a file with the win32 CopyFile API does this, for example), so
+such edits go unnoticed. If your system under test does this, set the config file entry
+&ldquo;detect_file_changes_by_checksum&rdquo; to true. TextTest will then calculate a checksum (SHA256)
+of each file's contents before and after the run and treat the file as edited if the checksum has changed.
+This applies both to deciding what to collate and to the <A class="Text_Link" href="#create_catalogues">catalogue</A>
+described below. Note that this means reading every relevant file in full before and after each test, which may take noticeable time if there are many large files.
+<?php codeSampleBegin() ?>
+detect_file_changes_by_checksum:true
+<?php codeSampleEnd() ?>
+</div>
 <div class="Text_Normal">As in the example, standard UNIX file pattern matching (globbing)
 may be used in the path to the source file. This simply means that the
 exact name of the file that will be produced may vary, but whatever file matches the 
@@ -78,6 +91,16 @@ your test suite is using the classic naming scheme, which it probably is if it w
 </div>
 <div class="Text_Normal">
 It can also be used to discard files that were produced by "collate_file".
+</div>
+<div class="Text_Normal"><A NAME="discard_file_if_empty"></A>
+Sometimes a file is only interesting when it has something in it. A typical example is standard error,
+which is usually empty but should be compared when the program writes something there. For this, use the config file list entry
+&ldquo;discard_file_if_empty&rdquo;:
+<?php codeSampleBegin() ?>
+discard_file_if_empty:stderr
+<?php codeSampleEnd() ?>
+The file is then discarded if it has zero size or contains only whitespace, but kept and compared as normal if it contains any other text.
+Files that cannot be read as text (for example binary files) are never treated as empty, so they are kept. The same applies to files produced by "collate_file".
 </div>
 <div class="Text_Normal">
 It's also possible to conditionally discard files based on the text in them. This is useful for example if
@@ -216,7 +239,8 @@ catalogue file, which will essentially compare which files
 (under the test's <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=texttest_sandbox"; ?>">temporary directory</A>)
 are present before and after the test has run, and which files
 and directories that were present before have been edited during
-the test run. 
+the test run. Edits are detected by modification time unless
+&ldquo;<A class="Text_Link" href="#detect_file_changes_by_checksum">detect_file_changes_by_checksum</A>&rdquo; is set.
 </div>
 <div class="Text_Normal">It will then report what has been created, what has been
 removed and what has been edited. This is done by setting the

@@ -165,6 +165,29 @@ FirstTest
 ComplicatedTest
 <?php codeSampleEnd() ?>
 Their purpose is also explained more fully in <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites"; ?>">the Test Suite Guide</A>.</div>
+<div class="Text_Header"><A NAME="file_encoding"></A>Character encodings</div>
+<div class="Text_Normal">TextTest's own files (config files, options files, environment files, testsuite files and so on)
+are read using the encoding of the operating system's locale, unless they start with a byte order mark (BOM), in which case
+the encoding the BOM indicates is used. They cannot be controlled by any setting, since the settings are themselves stored in these files.
+</div>
+<div class="Text_Normal">The test's own files, such as the approved results and the results produced by the system under test, are
+read and written using the encoding given by the config file entry &ldquo;file_encoding&rdquo;. This is a
+composite dictionary (see above) from file stems to encoding names, for example
+<?php codeSampleBegin() ?>
+[file_encoding]
+default:utf-8
+legacy_report:cp1252
+<?php codeSampleEnd() ?>
+Any encoding name known to Python can be used. The special value &ldquo;locale&rdquo;, which is the default, means the
+encoding of the operating system's locale: this is typically UTF-8 on Linux and Mac and a "code page" such as cp1252 on Windows.
+Note that TextTest uses the real locale encoding even under Python's "UTF-8 mode", which is on by default from Python 3.15, so upgrading Python does not
+change how your existing test files are read. As for TextTest's own files, a byte order mark at the start of a file takes precedence over this setting.
+</div>
+<div class="Text_Normal">The files recorded by <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=faking_it_with_texttest";?>">CaptureMock</A>
+(&ldquo;externalmocks&rdquo;, &ldquo;pythonmocks&rdquo;, &ldquo;httpmocks&rdquo; and &ldquo;traffic&rdquo;) default to UTF-8, as CaptureMock always writes them in that encoding.
+Files that are filtered (for example by <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=run_dependent_text";?>">run_dependent_text</A>)
+keep the encoding of the original file, while HTML and XML reports produced by TextTest are always written in UTF-8.
+</div>
 <div class="Text_Header">Examples</div>
 <div class="Text_Normal">The TextTest download includes a test suite for itself. It is
 recommended that you look around this (or any other example you

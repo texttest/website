@@ -102,6 +102,12 @@ There is now also a control to trigger reruns when known bugs are found, which i
 necessarily be rerun on the same machine so it is also a way to circumvent temporary hardware issues in that case. The check box beneath it "Skip known bug reporting" allows for
 this mechanism to be used only to trigger reruns: in this case the test will not be reported any differently if the reruns continue to produce the same result.
 </div>
+<div class="Text_Normal"><A NAME="allow_all_reruns_fail"></A>
+Normally, if a rerun count is given and every rerun still triggers the known bug, the test is reported as an "internal error" rather than a "known bug",
+on the grounds that a problem you expected to be intermittent turned out not to be. If the problem is something you accept may happen
+on every attempt, check the box "If all reruns fail, report as 'known bug' anyway rather than 'internal error'". The test will then be reported as a known bug in the usual way
+once the reruns are used up.
+</div>
 <div class="Text_Normal">
 When the tests are run, TextTest wll then find all such "knownbugs" files, using its 
 <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=about_testsuites";?>#extra_search_directory">mechanism for finding
@@ -353,6 +359,22 @@ section in the knownbugs file that would correspond to it. The order here corres
   </TD>
   <TD bgcolor="#FFFFFF">
     <div class="Table_Text_Normal">rerun_count:&lt;number&gt;</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check box "Skip known bug reporting - only use this to trigger reruns"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">rerun_only:1</div>
+  </TD>
+  </TR>
+  <TR>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">Check box "If all reruns fail, report as 'known bug' anyway rather than 'internal error'"</div>
+  </TD>
+  <TD bgcolor="#FFFFFF">
+    <div class="Table_Text_Normal">allow_all_reruns_fail:1</div>
   </TD>
   </TR>
 </TABLE>

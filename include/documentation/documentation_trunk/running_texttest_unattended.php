@@ -155,6 +155,19 @@ fingerprints are sometimes wrong, as they are only based on the latest file for 
 You can achieve this by setting "batch_jenkins_archive_file_pattern" to a path: this will then look in the workspace for the artefacts
 matching the archived version of a particular build and try to highlight when these differ from what Jenkins thinks they are.
 </div> 
+<div class="Text_Header">Other continuous integration systems: Azure DevOps and GitLab CI</div>
+<div class="Text_Normal">
+TextTest also recognises when it is run from <A class="Text_Link" HREF="https://azure.microsoft.com/products/devops/pipelines">Azure DevOps Pipelines</A>
+(the environment variable SYSTEM_TEAMFOUNDATIONSERVERURI is set) or from <A class="Text_Link" HREF="https://docs.gitlab.com/ci/">GitLab CI</A>
+(GITLAB_CI is set). The support here is more limited than for Jenkins: there is no "Changes" row. In all three cases, though:
+<UL>
+<LI>If no run name is given with -name, the build number from the CI system (BUILD_NUMBER, BUILD_BUILDNUMBER or CI_JOB_ID respectively) is appended
+to the date to form the run name, rather than using the date alone.</LI>
+<LI>The column headers in the HTML report get an extra link to the CI job that produced each run (for example "Gitlab Pipeline #1234").</LI>
+<LI>The summary page notes which pipeline or job produced it, with a link to it.</LI>
+</UL>
+No configuration is needed for this, as everything is read from the environment variables the CI system sets.
+</div>
 <div class="Text_Header"><A NAME="historical_report_resources"></A>Showing detailed performance/memory information in the HTML report</div>
 <div class="Text_Normal">
 If you're making use of <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=measuring_system_resource_usage"; ?>">TextTest's performance and memory testing features</A> it can be useful to have this information displayed directly in the table also. To do this you can set the config setting "historical_report_resources". For example:

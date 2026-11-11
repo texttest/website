@@ -345,4 +345,37 @@
 			<div class="Table_Text_Small">Brief text (links to documentation)</div>
 		</TD>
 	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">QUEUE_SYSTEM_PROCESSES</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"></div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Deprecated. See "queue_system_processes" in config file docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">QUEUE_SYSTEM_RESOURCE</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"></div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Deprecated. See "queue_system_resource" in config file docs</div>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">QUEUE_SYSTEM_SUBMIT_ARGS</div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small"></div>
+		</TD>
+		<TD bgcolor="#FFFFFF">
+			<div class="Table_Text_Small">Deprecated. See "queue_system_submit_args" in config file docs</div>
+		</TD>
+	</TR>
 </TABLE>
