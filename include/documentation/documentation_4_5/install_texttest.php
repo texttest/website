@@ -2,11 +2,11 @@
 <div class="Text_Header">Windows</div>
 <div class="Text_Normal">
 	Download and run the Windows installer from the <A class="Text_Link" HREF="http://sf.net/projects/texttest">sourceforge project page.</A>
-	Since TextTest 4.0 this now installs everything under "Program Files" and does not affect existing Python installations, etc. It is also packaged with <a href="https://sourceforge.net/projects/meld-installer/">Meld</a> instead of <a href="https://osdn.net/projects/sfnet_tkdiff/downloads/tkdiff/4.2/TkDiff-4.2-Setup.exe/">tkdiff</a>
-	as the default graphical difference tool. For backwards compatibility tkdiff will however be used by default if such an installation is found. 
-	It will use "Notepad++", "Wordpad" or "Notepad" in that order by default for editing files, depending on which of these it finds installed.
+	Since TextTest 4.0 this is an MSI package which installs everything under "Program Files" and does not affect existing Python installations, etc. It adds that directory to your PATH, so "texttest" (the GUI) and "texttestc" (the console version, for batch mode and scripts) can be run from a command prompt, and it adds Start menu shortcuts for TextTest and Meld.
+	It is packaged with <a href="https://meldmerge.org/">Meld</a> as the graphical difference tool. However, for backwards compatibility TextTest will use <a href="https://osdn.net/projects/sfnet_tkdiff/downloads/tkdiff/4.2/TkDiff-4.2-Setup.exe/">tkdiff</a>, TortoiseMerge (from TortoiseSVN) or TortoiseGitMerge (from TortoiseGit) instead, in that order, if it finds one of them installed under "Program Files".
+	For editing files it will use "Notepad++" or "WordPad", in that order, if it finds them installed, and otherwise "Notepad". (WordPad is no longer included in recent versions of Windows 11, so in practice this is usually Notepad++ if you have it, and Notepad if not.)
 	Both of these tools can be configured via the <A class="Text_Link" href="<?php print "index.php?page=".$version."&n=personalising_ui";?>">personal config file</A>, by setting "diff_program" or "view_program" respectively. 
-	The installer will set the environment variable TEXTTEST_HOME (see below) to C:\tests, so all tests will be created there. As this change doesn't take effect until you log out and log in again, it's suggested you do that for the moment (or set it to some other desired value before starting TextTest).
+	The installer does not set the environment variable TEXTTEST_HOME (see below), so you should set it yourself to the directory where you want to keep your tests, for example C:\tests. You can do this via "Edit environment variables for your account" in the Windows settings, or from a command prompt with "setx TEXTTEST_HOME C:\tests". Either way, it only takes effect in programs started after you set it.
 </div>
 <div class="Text_Header">Linux</div>
 <div class="Text_Normal">
