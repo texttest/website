@@ -7,11 +7,12 @@ In terms of the configuration this means that the "queuesystem" configuration mo
 using the "Run tests sequentially" checkbox on the static GUI's running tab, or the "-l" flag on the command line. 
 </div>
 <div class="Text_Normal">
-To disable this configuration and hence always run one test at a time, you can set
+To steer how many tests will be run simultaneously, you can set "queue_system_max_capacity" in your config file also.
+So if you always want to run one test at a time, you can set
 <?php codeSampleBegin() ?>
-config_module:default
+queue_system_max_capacity:1
 <?php codeSampleEnd() ?>
-in your config file. To steer how many tests will be run simultaneously, you can set "queue_system_max_capacity" in your config file also.
+in your config file. 
 </div>
 <div class="Text_Normal">As soon as each test finishes, the test will go green or red,
 and results will be presented. Unlike the default configuration,
