@@ -34,7 +34,13 @@ The scripts (`updateconfig.py`, `updateoptions.py`, etc., sharing `tableshared.p
 SourceForge project web (`/home/project-web/texttest/htdocs` on `web.sourceforge.net`) stopped running PHP in October 2026 and replaced the site with a wget mirror: `index.php?page=x&n=y` is served from the static file `index.php@page=x&n=y.html`. Uploading `.php` files does nothing. To deploy:
 
 - Run `py -3 scripts/make_static_site.py [--php path\to\php.exe]` (needs a PHP CLI). It crawls the site through PHP's built-in server and writes every page to `static_site/` (gitignored), with links rewritten the same way and "Last updated" taken from git commit dates.
-- Upload the `.html` files from `static_site/` to the htdocs root. Images, CSS and `files/` are referenced by their existing relative paths.
+- Upload the `.html` files from `static_site/` to the htdocs root. Images, CSS and `files/` are referenced by their existing relative paths. Use rsync (available in WSL) rather than sftp, which is slow for hundreds of small files: `-c` compares contents, so only pages that actually changed are sent. Commit doc changes before generating, otherwise their "Last updated" becomes today's date on every run. Add `-n` for a dry run. Never add `--delete`: it would remove `images/`, `files/`, the nightjob page and everything else not generated.
+
+  Run from the repository root (on Windows, prefix with `wsl`, which keeps the current directory), replacing `<sf_username>` with your SourceForge username:
+
+  ```
+  rsync -rvzc static_site/ <sf_username>@web.sourceforge.net:/home/project-web/texttest/htdocs/
+  ```
 - `index.php@page=nightjob.html` is deliberately not generated: its content came from a server-side nightly job, not git, so the server's copy is the only one.
 
 ## Other scripts
