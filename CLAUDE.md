@@ -29,6 +29,14 @@ These files under each docs directory are generated from a real TextTest install
 
 The scripts (`updateconfig.py`, `updateoptions.py`, etc., sharing `tableshared.py`) run TextTest with `-s` to dump the settings. They keep the page text above the table and reuse the last `<TR>` as the row template. In the description column, each key gets a link to wherever a doc page contains an anchor of exactly the form `<A NAME="key">` (the match on `<A NAME=` is case-sensitive). So when you document a config option, environment variable or command-line option, add that anchor in the prose and then regenerate the tables (see `ReadMe.txt`).
 
+## Deploying (static, since SourceForge dropped PHP)
+
+SourceForge project web (`/home/project-web/texttest/htdocs` on `web.sourceforge.net`) stopped running PHP in October 2026 and replaced the site with a wget mirror: `index.php?page=x&n=y` is served from the static file `index.php@page=x&n=y.html`. Uploading `.php` files does nothing. To deploy:
+
+- Run `py -3 scripts/make_static_site.py [--php path\to\php.exe]` (needs a PHP CLI). It crawls the site through PHP's built-in server and writes every page to `static_site/` (gitignored), with links rewritten the same way and "Last updated" taken from git commit dates.
+- Upload the `.html` files from `static_site/` to the htdocs root. Images, CSS and `files/` are referenced by their existing relative paths.
+- `index.php@page=nightjob.html` is deliberately not generated: its content came from a server-side nightly job, not git, so the server's copy is the only one.
+
 ## Other scripts
 
 - `scripts/generate_sitemap.py` rebuilds `include/sitemap.php` from page headers. Run it from the `scripts/` directory.
